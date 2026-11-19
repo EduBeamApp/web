@@ -1,6 +1,7 @@
 {
   "meta": {
-    "description": "Free 2D structural analysis online – beams, frames and trusses solved instantly in your browser."
+    "description": "Free 2D structural analysis online – beams, frames and trusses solved instantly in your browser.",
+    "imageAlt": "EduBeam, free 2D structural analysis online: the app with a frame and its bending moment diagram"
   },
   "nav": {
     "guide": "Guide",

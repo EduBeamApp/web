@@ -1,6 +1,7 @@
 {
   "meta": {
-    "description": "Calcul des structures 2D gratuit en ligne : poutres, portiques et treillis résolus instantanément dans votre navigateur."
+    "description": "Calcul des structures 2D gratuit en ligne : poutres, portiques et treillis résolus instantanément dans votre navigateur.",
+    "imageAlt": "EduBeam, calcul de structures 2D gratuit en ligne : l’application avec un portique et son diagramme des moments fléchissants"
   },
   "nav": {
     "guide": "Guide",

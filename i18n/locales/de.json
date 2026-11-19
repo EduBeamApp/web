@@ -1,6 +1,7 @@
 {
   "meta": {
-    "description": "Kostenlose 2D-Statik online – Balken, Rahmen und Fachwerke, sofort im Browser berechnet."
+    "description": "Kostenlose 2D-Statik online – Balken, Rahmen und Fachwerke, sofort im Browser berechnet.",
+    "imageAlt": "EduBeam, kostenlose 2D-Tragwerksberechnung online: die App mit einem Rahmen und seiner Momentenlinie"
   },
   "nav": {
     "guide": "Anleitung",

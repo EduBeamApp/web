@@ -1,6 +1,7 @@
 {
   "meta": {
-    "description": "Statický výpočet 2D konstrukcí online a zdarma – nosníky, rámy a příhradové konstrukce vyřešené okamžitě v prohlížeči."
+    "description": "Statický výpočet 2D konstrukcí online a zdarma – nosníky, rámy a příhradové konstrukce vyřešené okamžitě v prohlížeči.",
+    "imageAlt": "EduBeam, bezplatná 2D statika online: aplikace s rámem a jeho průběhem ohybových momentů"
   },
   "nav": {
     "guide": "Příručka",

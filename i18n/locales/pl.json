@@ -1,6 +1,7 @@
 {
   "meta": {
-    "description": "Darmowa analiza statyczna konstrukcji płaskich w przeglądarce – belki, ramy i kratownice obliczone natychmiast."
+    "description": "Darmowa analiza statyczna konstrukcji płaskich w przeglądarce – belki, ramy i kratownice obliczone natychmiast.",
+    "imageAlt": "EduBeam, darmowa analiza konstrukcji 2D online: aplikacja z ramą i jej wykresem momentów zginających"
   },
   "nav": {
     "guide": "Przewodnik",

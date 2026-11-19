@@ -1,6 +1,7 @@
 {
   "meta": {
-    "description": "Analisis struktur 2D gratis di browser: balok, portal, dan rangka batang langsung dihitung."
+    "description": "Analisis struktur 2D gratis di browser: balok, portal, dan rangka batang langsung dihitung.",
+    "imageAlt": "EduBeam, analisis struktur 2D gratis secara online: aplikasi dengan portal dan diagram momen lenturnya"
   },
   "nav": {
     "guide": "Panduan",

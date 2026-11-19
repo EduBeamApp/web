@@ -1,6 +1,7 @@
 {
   "meta": {
-    "description": "Analisi strutturale 2D gratuita online: travi, telai e travature reticolari risolti all’istante nel browser."
+    "description": "Analisi strutturale 2D gratuita online: travi, telai e travature reticolari risolti all’istante nel browser.",
+    "imageAlt": "EduBeam, analisi strutturale 2D gratuita online: l’app con un telaio e il suo diagramma del momento flettente"
   },
   "nav": {
     "guide": "Guida",

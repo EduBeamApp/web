@@ -1,6 +1,7 @@
 {
   "meta": {
-    "description": "Análisis estructural 2D gratuito en línea: vigas, pórticos y celosías resueltos al instante en el navegador."
+    "description": "Análisis estructural 2D gratuito en línea: vigas, pórticos y celosías resueltos al instante en el navegador.",
+    "imageAlt": "EduBeam, análisis estructural 2D gratuito en línea: la aplicación con un pórtico y su diagrama de momentos flectores"
   },
   "nav": {
     "guide": "Guía",

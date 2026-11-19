@@ -15,7 +15,7 @@ const LANG: Readonly<Record<string, string>> = Object.fromEntries(
 
 export const useSiteHead = (): void => {
   const route = useRoute()
-  const { locale } = useI18n()
+  const { locale, t } = useI18n()
   const { localesOf } = useSitePages()
 
   useHead(() => {
@@ -49,7 +49,7 @@ export const useSiteHead = (): void => {
         { property: 'og:image', content: `${SITE_URL}/og-image.png` },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
-        { property: 'og:image:alt', content: 'EduBeam, free 2D structural analysis online: the app with a frame and its bending moment diagram' },
+        { property: 'og:image:alt', content: t('meta.imageAlt') },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@EdubeamApp' },
       ],

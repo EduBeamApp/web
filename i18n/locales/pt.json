@@ -1,6 +1,7 @@
 {
   "meta": {
-    "description": "Análise estrutural 2D gratuita e online: vigas, pórticos e treliças resolvidos na hora, no seu navegador."
+    "description": "Análise estrutural 2D gratuita e online: vigas, pórticos e treliças resolvidos na hora, no seu navegador.",
+    "imageAlt": "EduBeam, análise estrutural 2D gratuita online: o aplicativo com um pórtico e seu diagrama de momentos fletores"
   },
   "nav": {
     "guide": "Guia",
