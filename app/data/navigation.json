@@ -169,6 +169,8 @@
     "sidebar": [
       {
         "text": "Erste Schritte",
+        "icon": "lucide:flag",
+        "section": "guide",
         "items": [
           {
             "text": "Einführung",
@@ -177,28 +179,13 @@
           {
             "text": "Schnellstart (10 min)",
             "link": "/de/guide/quick-start"
-          },
-          {
-            "text": "Beispiele",
-            "link": "/de/examples/"
           }
         ]
       },
       {
-        "text": "Tutorials",
-        "items": [
-          {
-            "text": "Dreigelenkrahmen",
-            "link": "/de/tutorials/three-hinged-frame"
-          },
-          {
-            "text": "Ebenes Fachwerk",
-            "link": "/de/tutorials/truss"
-          }
-        ]
-      },
-      {
-        "text": "Modellierung",
+        "text": "Modell erstellen",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
         "items": [
           {
             "text": "Benutzeroberfläche",
@@ -223,7 +210,9 @@
         ]
       },
       {
-        "text": "Ergebnisse",
+        "text": "Ergebnisse auswerten",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
         "items": [
           {
             "text": "Ergebnisse & Diagramme",
@@ -236,10 +225,12 @@
         ]
       },
       {
-        "text": "Dateien & Teilen",
+        "text": "Teilen & Lehren",
+        "icon": "lucide:presentation",
+        "section": "guide",
         "items": [
           {
-            "text": "Import, Export & Teilen",
+            "text": "Dateien, Links & Export",
             "link": "/de/essentials/import-export"
           },
           {
@@ -249,7 +240,9 @@
         ]
       },
       {
-        "text": "Referenz",
+        "text": "Hilfe",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
         "items": [
           {
             "text": "Tastatur, Maus & Touch",
@@ -266,22 +259,69 @@
         ]
       },
       {
+        "text": "Tutorials",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Geneigter Träger",
+            "link": "/de/tutorials/inclined-beam"
+          },
+          {
+            "text": "Dreigelenkrahmen",
+            "link": "/de/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Ebenes Fachwerk",
+            "link": "/de/tutorials/truss"
+          },
+          {
+            "text": "Durchlaufträger und Auflagersenkung",
+            "link": "/de/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "Üben",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Übungsaufgaben",
+            "link": "/de/practice"
+          },
+          {
+            "text": "Klausurgenerator",
+            "link": "/de/exam"
+          },
+          {
+            "text": "Beispiele",
+            "link": "/de/examples/"
+          }
+        ]
+      },
+      {
         "text": "Theoriehandbuch",
+        "icon": "lucide:sigma",
+        "section": "theory",
         "items": [
           {
             "text": "Koordinatensystem & Vorzeichenkonventionen",
             "link": "/de/elements/conventions"
           },
           {
-            "text": "Balken",
+            "text": "Balkenelement",
             "link": "/de/elements/beam"
           },
           {
             "text": "Fachwerkstab",
             "link": "/de/elements/truss"
+          },
+          {
+            "text": "Wie EduBeam ein Modell berechnet",
+            "link": "/de/elements/analysis"
           }
-        ],
-        "collapsed": true
+        ]
       }
     ]
   },

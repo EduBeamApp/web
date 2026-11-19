@@ -1,13 +1,16 @@
 {
   "meta": {
-    "description": "Baustatik online – ebene Balken, Rahmen und Fachwerke im Browser."
+    "description": "Kostenlose 2D-Statik online – Balken, Rahmen und Fachwerke, sofort im Browser berechnet."
   },
   "nav": {
     "guide": "Anleitung",
     "tutorials": "Tutorials",
     "examples": "Beispiele",
     "faq": "FAQ",
-    "openApp": "App öffnen"
+    "theory": "Theorie",
+    "openApp": "App öffnen",
+    "libraries": "Bibliotheken",
+    "practice": "Üben"
   },
   "docs": {
     "onThisPage": "Auf dieser Seite",
@@ -20,22 +23,22 @@
   },
   "components": {
     "loadsTitle": "Lastarten im Überblick",
-    "loadsLede": "So sehen die üblichen Lastarten in EduBeam aus. Jede Karte ist ein gelöstes Live-Modell und öffnet sich in der App genau so, wie sie aufgebaut ist.",
+    "loadsLede": "So sehen die üblichen Lastarten in EduBeam aus. Jede Karte zeigt ein live berechnetes Modell, das sich in der App genau so öffnet, wie es hier aufgebaut ist.",
     "openInApp": "In EduBeam öffnen",
     "simplySupportedBeam": "Einfeldträger",
-    "udlBlurb": "Fest- und Loslager unter 12 kN/m: die klassischen Querkraft- und Momentenlinien.",
-    "trapezoidalBlurb": "Eine Last, die im rechten Feld von 4 auf 14 kN/m ansteigt.",
-    "concentratedBlurb": "Eine einzelne Last von 18 kN nach unten in Feldmitte, ohne zusätzlichen Knoten.",
-    "nodalBlurb": "Eine Last von 20 kN am Innenlager, um Auflagerkräfte und Durchbiegungen zu prüfen.",
+    "udlBlurb": "Fest- und Loslager, 12 kN/m Gleichlast: die klassischen Querkraft- und Momentenverläufe.",
+    "trapezoidalBlurb": "Eine Last, die über das rechte Feld von 4 auf 14 kN/m ansteigt.",
+    "concentratedBlurb": "Eine Last von 18 kN im linken Feld, 2 m vom Lager entfernt, ohne Knoten darunter.",
+    "nodalBlurb": "Eine Last von 20 kN am Knoten zwischen den beiden Feldern: Der Momentenverlauf hat darunter einen Knick.",
     "temperatureBlurb": "Ein Temperaturunterschied über die Querschnittshöhe (oben wärmer als unten) und die Krümmung, die er erzeugt.",
     "promoTitle": "Bringen Sie Ihre Rahmen",
     "promoAccent": "in 3D.",
     "promoSubtitle": "Platten, Schalen und Stahlnachweise im Browser",
     "promoCta": "Kostenlos testen",
     "spanLength": "Spannweite",
-    "loadIntensity": "Lastintensität",
+    "loadIntensity": "Lastgröße",
     "loadPosition": "Lastposition",
-    "heroHint": "Verschieben Sie die Last, die Schnittgrößen folgen."
+    "heroHint": "Verschieben Sie die Last. Die Verläufe folgen ihr."
   },
   "common": {
     "deformedShape": "Verformte Form",
@@ -58,19 +61,19 @@
     "items": {
       "welcome": {
         "title": "Statisch unbestimmter Träger",
-        "blurb": "Statisch unbestimmter 3-m-Träger, eingespannt und verschieblich gelagert, unter 10 kN/m Gleichlast."
+        "blurb": "Statisch unbestimmter 3-m-Träger, eingespannt und verschieblich gelagert, unter 10 kN/m Gleichlast."
       },
       "cantilever": {
         "title": "Kragträger",
-        "blurb": "4-m-Kragträger unter einer nach unten wirkenden Knotenlast von 18 kN – mit Krümmung und Durchbiegung am Kragende."
+        "blurb": "4-m-Kragträger unter einer nach unten wirkenden Knotenlast von 18 kN – mit Krümmung und Durchbiegung am Kragende."
       },
       "pratt": {
         "title": "Warren-Fachwerk",
-        "blurb": "Einfaches Warren-Fachwerk mit Knotenlasten von 8 kN – zeigt die Verteilung der Normalkräfte und die Verschiebungen."
+        "blurb": "Einfaches Warren-Fachwerk mit Knotenlasten von 8 kN – zeigt die Verteilung der Normalkräfte und die Verschiebungen."
       },
       "continuous": {
         "title": "Durchlaufträger über drei Felder",
-        "blurb": "Felder 5+6+5 m mit Gleichlast + Einzellast + Gleichlast, um Krümmung und Auflagerverdrehungen zu vergleichen."
+        "blurb": "Felder 5 + 6 + 5 m mit Gleichlast + Einzellast + Gleichlast, um Krümmung und Auflagerverdrehungen zu vergleichen."
       },
       "portal": {
         "title": "Lastfall Portalrahmen",
@@ -78,13 +81,588 @@
       },
       "temperature": {
         "title": "Temperaturlast",
-        "blurb": "Einfeldträger mit 8 m Spannweite unter gleichmäßiger und ungleichmäßiger Temperaturlast."
+        "blurb": "Einfeldträger mit 8 m Spannweite unter gleichmäßiger und ungleichmäßiger Temperaturlast."
       }
     }
   },
   "search": {
     "label": "Suchen",
     "placeholder": "Dokumentation durchsuchen",
-    "noResults": "Keine Treffer für „{query}“"
+    "noResults": "Keine Treffer für „{query}“",
+    "shortcut": "Strg K"
+  },
+  "home": {
+    "seo": {
+      "title": "EduBeam: kostenlose Statikberechnung online",
+      "description": "2D-Statik kostenlos im Browser: Balken, Rahmen und Fachwerke zeichnen, belasten und sofort Verläufe von N, V und M, Auflagerreaktionen und Durchbiegungen sehen."
+    },
+    "hero": {
+      "title": "Balken, Rahmen, Fachwerke.",
+      "lede": "EduBeam ist ein kostenloses Programm zur Berechnung von Balken, Rahmen und Fachwerken. Sie zeichnen das Modell im Browser, und Schnittgrößenverläufe, Auflagerreaktionen und Durchbiegungen werden bei jeder Änderung neu berechnet.",
+      "launch": "EduBeam starten",
+      "guide": "Anleitung lesen",
+      "note": "Kostenlos und Open Source. Ohne Installation, ohne Konto."
+    },
+    "steps": {
+      "title": "Von der Skizze zu den Verläufen in vier Schritten",
+      "lede": "In der Reihenfolge, in der Sie die Aufgabe auch auf Papier lösen würden. Der Schnellstart führt Sie in etwa zehn Minuten durch die Berechnung eines echten Trägers.",
+      "link": "Zum Schnellstart",
+      "items": {
+        "nodes": {
+          "label": "Knoten",
+          "title": "Knoten setzen",
+          "body": "Klicken Sie ins Raster oder geben Sie die Koordinaten ein. Hier sind es die vier Ecken eines Portalrahmens, 6 m breit und 4 m hoch."
+        },
+        "elements": {
+          "label": "Stäbe",
+          "title": "Mit Stäben verbinden",
+          "body": "Verbinden Sie die Knoten mit Balkenelementen und weisen Sie ihnen Material und Querschnitt zu: aus der Bibliothek oder als selbst gezeichnetes Polygon."
+        },
+        "loads": {
+          "label": "Lager und Lasten",
+          "title": "Lagern und belasten",
+          "body": "Festlager an beiden Stützenfüßen, 10 kN/m auf dem Riegel und eine horizontale Kraft von 15 kN an der linken oberen Ecke."
+        },
+        "results": {
+          "label": "Ergebnisse",
+          "title": "Ergebnisse ablesen",
+          "body": "Der Momentenverlauf auf der Zugseite und die Auflagerreaktionen erscheinen, sobald der Rahmen stabil gelagert ist. Die Zahlen sind nicht abgeschrieben: EduBeam hat sie direkt auf dieser Seite berechnet."
+        }
+      }
+    },
+    "examples": {
+      "title": "Ein berechnetes Modell mit einem Klick öffnen",
+      "lede": "Jedes davon wird auf dieser Seite berechnet, mit demselben Solver wie in der App. Öffnen Sie eines in EduBeam und verändern Sie es.",
+      "link": "Alle Beispiele"
+    },
+    "verify": {
+      "title": "Am Lehrbuch geprüft",
+      "lede": "EduBeam berechnet jedes Modell mit der Finite-Elemente-Methode. In den klassischen Fällen liefert es die geschlossene Lösung, bis auf die letzte Stelle. Die rechte Spalte hat Ihr Browser beim Laden dieser Seite berechnet.",
+      "case": "Fall",
+      "formula": "Formel",
+      "hand": "Von Hand",
+      "edubeam": "EduBeam",
+      "link": "Weitere Referenzfälle",
+      "steel": "Stahlprofil IPE 200: E = 210 GPa, I = 1943 cm⁴. Die Schubverformung bleibt unberücksichtigt, wie in den geschlossenen Formeln.",
+      "cases": {
+        "ssMoment": "Einfeldträger, 12 kN/m über 6 m: größtes Moment",
+        "ssDeflection": "Derselbe Träger: größte Durchbiegung",
+        "cantilever": "Kragträger von 4 m, 18 kN am Kragende: Einspannmoment",
+        "fixed": "Beidseitig eingespannt, 10 kN/m über 6 m: Einspannmoment",
+        "propped": "Einseitig eingespannt, 10 kN/m über 6 m: Auflagerkraft am Loslager"
+      }
+    },
+    "teaching": {
+      "title": "Für den Hörsaal gemacht",
+      "lede": "Binden Sie ein Modell in Ihre Folien oder Ihr Skript ein, und alle Studierenden öffnen genau dasselbe.",
+      "link": "Lehren mit EduBeam",
+      "slideCourse": "Baustatik",
+      "slideTitle": "Vorlesung 7: Fachwerke",
+      "slideBody": "Ein Warren-Fachwerk unter drei Knotenlasten von 8 kN. Welche Stäbe sind auf Zug beansprucht?",
+      "shareLabel": "Link zum Modell",
+      "copy": "Kopieren",
+      "copied": "Kopiert",
+      "items": {
+        "share": {
+          "title": "Ein Modell ist ein Link",
+          "body": "Das ganze Modell steckt in der URL. Fügen Sie den Link in eine Aufgabe ein, und das Modell öffnet sich genau so, wie Sie es verlassen haben – auch noch Jahre später."
+        },
+        "embed": {
+          "title": "In Ihren Folien",
+          "body": "Eine schreibgeschützte Ansicht zeigt das berechnete Modell ohne Bearbeitungswerkzeuge – gedacht für eine Folie oder eine Webseite."
+        },
+        "mechanism": {
+          "title": "Erklärt, was nicht stimmt",
+          "body": "Ist ein Tragwerk kinematisch verschieblich, zeigt EduBeam, wie es sich bewegen würde, statt die Berechnung einfach zu verweigern."
+        },
+        "languages": {
+          "title": "Eigene Sprache, eigene Einheiten",
+          "body": "Studierende arbeiten in einer von 18 Sprachen, in SI- oder US-Einheiten und mit den Achsen, die ihr Lehrbuch verwendet."
+        }
+      },
+      "answerTitle": "Lösung: die Stabkräfte",
+      "answerBody": "Zug ist positiv. Der Untergurt ist gezogen, der Obergurt und beide Endpfosten sind gedrückt, und in den inneren Diagonalen wechseln sich Zug und Druck ab.",
+      "prevSlide": "Vorherige Folie",
+      "nextSlide": "Nächste Folie"
+    },
+    "final": {
+      "title": "Zeichnen Sie Ihren ersten Balken.",
+      "lede": "Öffnen Sie EduBeam und wählen Sie „Ersten Balken zeichnen“. Eine kurze geführte Aufgabe bringt Sie vom leeren Bildschirm zu einem gelagerten, belasteten Balken und seinen Verläufen.",
+      "paths": {
+        "quickStart": {
+          "title": "Schnellstart",
+          "body": "Modellieren Sie Schritt für Schritt einen Träger und prüfen Sie ihn von Hand. 10 Minuten."
+        },
+        "examples": {
+          "title": "Beispiele",
+          "body": "Berechnete Modelle zum Öffnen, Verändern und Lernen."
+        },
+        "teaching": {
+          "title": "Lehre",
+          "body": "Links zu Modellen, Folien und Übungen für Ihre Lehrveranstaltung."
+        }
+      }
+    },
+    "model": {
+      "title": "Was Sie modellieren können",
+      "lede": "Ebene Tragwerke, berechnet mit der Finite-Elemente-Methode, mit den Lagern, Lasten und Ergebnissen einer Statikvorlesung.",
+      "supports": {
+        "title": "Lager",
+        "items": {
+          "pin": "Festlager",
+          "roller": "Loslager",
+          "fixed": "Einspannung",
+          "slider": "Parallelführung",
+          "angled": "Unter beliebigem Winkel"
+        },
+        "note": "Dazu vorgegebene Auflagersenkungen und -verdrehungen."
+      },
+      "loads": {
+        "title": "Lasten",
+        "items": {
+          "point": "Einzellast",
+          "uniform": "Gleichlast",
+          "trapezoidal": "Trapezlast",
+          "moment": "Moment",
+          "temperature": "Temperatur"
+        },
+        "note": "An Knoten oder an beliebiger Stelle eines Stabs, in lokalen oder globalen Achsen."
+      },
+      "sections": {
+        "title": "Querschnitte",
+        "items": {
+          "i": "I und H",
+          "hollow": "Hohlprofil",
+          "solid": "Vollquerschnitt",
+          "tube": "Rohr",
+          "polygon": "Eigenes Polygon"
+        },
+        "note": "IPE, HEA, AISC W und HSS aus der Bibliothek oder ein beliebiges selbst gezeichnetes Polygon."
+      },
+      "results": {
+        "title": "Ergebnisse",
+        "note": "Normalkraft, Querkraft, Biegemoment und Verformungsfigur, dazu die Auflagerreaktionen und die Werte an jeder beliebigen Stelle."
+      },
+      "facts": {
+        "elements": {
+          "title": "Timoshenko-Balken",
+          "body": "Schubverformung dort, wo sie eine Rolle spielt; bei schlanken Stäben stimmen die Ergebnisse mit der Euler-Bernoulli-Theorie überein."
+        },
+        "structures": {
+          "title": "Balken, Rahmen, Fachwerke",
+          "body": "In der Ebene, mit Gelenken an jedem beliebigen Stabende."
+        },
+        "sharing": {
+          "title": "Links und Dateien",
+          "body": "Ein ganzes Modell in einem Link oder einer Projektdatei; Zeichnungen als PNG oder SVG, Tabellen als CSV."
+        },
+        "settings": {
+          "title": "18 Sprachen",
+          "body": "SI- oder US-Einheiten, z nach unten oder y nach oben wie im Lehrbuch."
+        }
+      }
+    },
+    "heritage": {
+      "title": "Open Source, mit Wurzeln in der Lehre",
+      "body": "EduBeam führt das ursprüngliche Desktop-EduBeam fort, das am Lehrstuhl für Mechanik der Fakultät für Bauingenieurwesen der ČVUT (Tschechische Technische Universität in Prag) entstanden ist, und öffnet bis heute dessen Sitzungsdateien. Die Webversion ist kostenlos und Open Source, ebenso {'@'}edubeam/fem, der Solver hinter jeder Zahl auf dieser Seite.",
+      "github": "EduBeam auf GitHub",
+      "solver": "{'@'}edubeam/fem auf GitHub",
+      "team": "Wer EduBeam entwickelt"
+    }
+  },
+  "error": {
+    "notFoundTitle": "Seite nicht gefunden",
+    "notFound": "Unter dieser Adresse gibt es keine Seite. Vielleicht wurde sie verschoben, oder der Link enthält einen Tippfehler.",
+    "otherTitle": "Etwas ist schiefgelaufen",
+    "other": "Diese Seite konnte nicht angezeigt werden. Meist hilft es, sie neu zu laden.",
+    "home": "Startseite",
+    "guide": "Anleitung lesen",
+    "message": "Die Lager halten das Tragwerk nicht: Es kann sich noch frei drehen.",
+    "figure": "Ein Träger auf einem einzigen Festlager; das zweite Lager fehlt, und der Träger dreht sich unter seiner Last frei um das Festlager"
+  },
+  "problems": {
+    "families": {
+      "simple": {
+        "name": "Einfeldträger",
+        "skill": "Gleichgewicht am Träger",
+        "hint": "Das Momentengleichgewicht um A liefert die Auflagerkraft in B, die Summe der Vertikalkräfte dann die in A. Das größte Moment liegt dort, wo die Querkraft durch null geht, oder unter einer Einzellast."
+      },
+      "cantilever": {
+        "name": "Kragträger",
+        "skill": "Eine Einspannung",
+        "hint": "Alle Auflagerreaktionen wirken an der Einspannung: Summieren Sie die Vertikalkräfte und bilden Sie dann das Momentengleichgewicht um A. Beim Kragträger liegt das größte Moment an der Einspannung."
+      },
+      "overhang": {
+        "name": "Einfeldträger mit Kragarm",
+        "skill": "Stützmoment am Kragarm",
+        "hint": "Das Momentengleichgewicht um A liefert die Auflagerkraft in B. Vergleichen Sie dann zwei Stellen, an denen das größte Moment liegen kann: im Feld, wo V = 0 ist, und über B, wo der Kragarm ein negatives Moment erzeugt."
+      },
+      "gerber": {
+        "name": "Gerberträger",
+        "skill": "Ein Zwischengelenk",
+        "hint": "Beginnen Sie mit dem Einhängeträger GC: Er liegt auf dem Gelenk G und dem Loslager C auf, und ein Gelenk überträgt kein Moment. Belasten Sie dann den Träger ABG mit der Gelenkkraft und berechnen Sie ihn als Einfeldträger mit Kragarm."
+      },
+      "threeHinged": {
+        "name": "Dreigelenkrahmen",
+        "skill": "Horizontalschub und Mittelgelenk",
+        "hint": "Die Momentengleichgewichte um A und um E liefern die vertikalen Auflagerkräfte. Schneiden Sie dann am Mittelgelenk C, wo M = 0 ist, und bilden Sie für eine Hälfte das Momentengleichgewicht um C: Daraus folgt der Horizontalschub."
+      },
+      "truss": {
+        "name": "Warren-Fachwerk",
+        "skill": "Knotenpunktverfahren und Ritterschnitt",
+        "hint": "Bestimmen Sie die Auflagerkräfte am ganzen Fachwerk. Schneiden Sie dann drei Stäbe durch, darunter den gesuchten, und bilden Sie das Momentengleichgewicht um den Knoten, in dem sich die beiden anderen treffen; bei einer Diagonale summieren Sie stattdessen die Vertikalkräfte."
+      },
+      "continuous": {
+        "name": "Zweifeldträger",
+        "skill": "Einfach statisch unbestimmt",
+        "hint": "Das System ist einfach statisch unbestimmt: Wählen Sie das Stützmoment über B als Unbekannte. Die Dreimomentengleichung mit M = 0 in A und C liefert es direkt; die Auflagerkräfte folgen dann Feld für Feld."
+      },
+      "portal": {
+        "name": "Zweigelenkrahmen",
+        "skill": "Ein biegesteifer Rahmen",
+        "hint": "Das System ist einfach statisch unbestimmt: Wählen Sie die horizontale Auflagerkraft in D als statisch Überzählige. Bestimmen Sie die horizontale Verschiebung von D infolge der Lasten und infolge einer Einheitskraft in D (Prinzip der virtuellen Kräfte, mit den Momentenverläufen) und setzen Sie die Gesamtverschiebung gleich null."
+      }
+    },
+    "statement": {
+      "simple": "Ein Einfeldträger mit {L} m Spannweite liegt in A auf einem Festlager und in B auf einem Loslager. Belastung: {loads}.",
+      "cantilever": "Ein Kragträger von {L} m Länge ist in A eingespannt. Er trägt q = {q} kN/m über die ganze Länge und F = {F} kN am freien Ende B.",
+      "cantileverMoment": "Ein Kragträger von {L} m Länge ist in A eingespannt. Er trägt q = {q} kN/m über die ganze Länge, F = {F} kN am freien Ende B und dort außerdem ein Moment von {M} kNm gegen den Uhrzeigersinn.",
+      "overhang": "Ein Träger mit {L} m Spannweite liegt in A auf einem Festlager und in B auf einem Loslager und kragt {c} m über B hinaus bis C aus. Belastung: q = {q} kN/m im Feld AB und F = {F} kN am Kragende C.",
+      "overhangAll": "Ein Träger mit {L} m Spannweite liegt in A auf einem Festlager und in B auf einem Loslager und kragt {c} m über B hinaus bis C aus. Belastung: q = {q} kN/m über die ganze Länge und F = {F} kN am Kragende C.",
+      "gerber": "Ein Träger mit einem Zwischengelenk G, {g} m rechts von B, liegt in A auf einem Festlager und in B und C auf Loslagern: AB = {L1} m, GC = {L3} m.",
+      "gerberLoad": "Er trägt q = {q} kN/m über die ganze Länge.",
+      "gerberLoadForce": "Er trägt q = {q} kN/m über die ganze Länge und F = {F} kN in der Mitte von AB.",
+      "threeHinged": "Ein Rahmen von {L} m Breite und {H} m Höhe steht in A und E auf Festlagern und hat in C ein Mittelgelenk.",
+      "threeHingedWhole": "Der Riegel trägt q = {q} kN/m über die ganze Länge.",
+      "threeHingedHalf": "Der Riegel trägt q = {q} kN/m auf seiner linken Hälfte.",
+      "threeHingedWholeForce": "Der Riegel trägt q = {q} kN/m über die ganze Länge, und in B wirkt F = {F} kN nach rechts.",
+      "threeHingedHalfForce": "Der Riegel trägt q = {q} kN/m auf seiner linken Hälfte, und in B wirkt F = {F} kN nach rechts.",
+      "truss": "Ein Warren-Fachwerk aus {panels} von je {d} m Länge und {h} m Höhe liegt in A auf einem Festlager und in {end} auf einem Loslager.",
+      "panels": "{n} Feld | {n} Feldern",
+      "trussLoadAll": "In jedem Knoten des Obergurts wirkt eine Last F = {F} kN nach unten.",
+      "trussLoad": "In den Knoten {joints} wirkt jeweils eine Last F = {F} kN nach unten.",
+      "continuous": "Ein Zweifeldträger mit den Spannweiten {L1} m und {L2} m liegt in A auf einem Festlager und in B und C auf Loslagern. Das linke Feld trägt q = {q} kN/m.",
+      "continuousBoth": "Ein Zweifeldträger mit den Spannweiten {L1} m und {L2} m liegt in A auf einem Festlager und in B und C auf Loslagern. Beide Felder tragen q = {q} kN/m.",
+      "portal": "Ein biegesteifer Rahmen von {L} m Breite und {H} m Höhe steht in A und D auf Festlagern. Der Riegel BC trägt q = {q} kN/m.",
+      "portalForce": "Ein biegesteifer Rahmen von {L} m Breite und {H} m Höhe steht in A und D auf Festlagern. Der Riegel BC trägt q = {q} kN/m, und in B wirkt F = {F} kN nach rechts.",
+      "advancedNote": "EI ist konstant. Vernachlässigen Sie die Schubverformung."
+    },
+    "load": {
+      "udlSpan": "q = {q} kN/m über die ganze Spannweite",
+      "pointFromA": "F = {F} kN im Abstand {a} m von A",
+      "momentAtB": "ein Moment von {M} kNm gegen den Uhrzeigersinn in B"
+    },
+    "task": {
+      "beam": "Bestimmen Sie die Auflagerreaktionen und das größte Biegemoment.",
+      "bar": "Bestimmen Sie die Auflagerreaktionen und die Kraft im Stab {bar}."
+    },
+    "answer": {
+      "horizontal": "Horizontale Auflagerkraft in {node}",
+      "vertical": "Vertikale Auflagerkraft in {node}",
+      "fixingMoment": "Einspannmoment in {node}",
+      "bar": "Kraft im Stab {bar}",
+      "largestMoment": "Betragsmäßig größtes Biegemoment"
+    }
+  },
+  "library": {
+    "getStarted": "Erste Schritte",
+    "by": "Von {author}",
+    "fromRepo": "Noch nicht auf npm: Die Zeile oben installiert sie von GitHub.",
+    "comingToNpm": "Bald auf npm. Der Quellcode liegt auf GitHub."
+  },
+  "solver": {
+    "tagline": "Ein Finite-Elemente-Solver für ebene Rahmen, geschrieben in TypeScript.",
+    "seo": {
+      "title": "{'@'}edubeam/fem: FEM-Solver für ebene Rahmen in TypeScript",
+      "description": "Finite-Elemente-Solver für ebene Balken, Rahmen und Fachwerke in TypeScript: Gelenke, Stab- und Temperaturlasten, Auflagersenkungen, Lastfälle, Auflagerreaktionen und exakte Schnittgrößen. Der Rechenkern von EduBeam."
+    },
+    "run": {
+      "title": "Auf dieser Seite berechnet",
+      "lede": "Links der Code, beim Laden der Seite in Ihrem Browser ausgeführt. Rechts die Werte, die er zurückgibt; die Abbildung zeichnet {plot} aus den Ergebnissen desselben Solvers.",
+      "plusShear": "{formula} plus Schubanteil"
+    },
+    "features": {
+      "title": "Funktionsumfang",
+      "analyses": {
+        "title": "Berechnungen",
+        "body": "Lineare Statik mit beliebig vielen Lastfällen. Die Verläufe sind zwischen den Knoten exakt: Es gibt kein Netz, das verfeinert werden müsste."
+      },
+      "elements": {
+        "title": "Elemente",
+        "body": "Ein Timoshenko-Balken mit zwei Knoten in der x-z-Ebene. Mit Gelenken an beiden Enden wird er zum Fachwerkstab."
+      },
+      "loads": {
+        "title": "Lasten",
+        "body": "Knotenkräfte und -momente, Einzel-, Gleich- und Trapezlasten auf Stäben, Temperatur, Auflagersenkungen."
+      },
+      "results": {
+        "title": "Ergebnisse",
+        "body": "N, V und M an jeder Stelle eines Stabs, Biegelinien, Stabendkräfte, Verschiebungen und Auflagerreaktionen."
+      },
+      "reference": "Alle Klassen und Methoden"
+    },
+    "behind": {
+      "title": "Der Solver hinter EduBeam",
+      "body": "Jeden Verlauf, jede Auflagerreaktion und jede Durchbiegung in EduBeam und jede Abbildung auf dieser Website berechnet {name}.",
+      "link": "Zu EduBeam"
+    }
+  },
+  "plot": {
+    "tagline": "Vue-Komponenten, die ebene Tragwerke und ihre Ergebnisse zeichnen, im Stil der Abbildungen dieser Website.",
+    "seo": {
+      "title": "{'@'}edubeam/plot: Tragwerksgrafiken für Vue",
+      "description": "Vue-Komponenten, die ebene Tragwerke, Lasten, Auflagerreaktionen und Verläufe von N, V und M wie im Lehrbuch zeichnen: für Kursseiten, Folien, Übungsblätter und eigenständige SVG-Dateien."
+    },
+    "try": {
+      "title": "Ausprobieren",
+      "lede": "Ein Rahmen, auf dieser Seite berechnet von {'@'}edubeam/fem. Ändern Sie, was gezeichnet wird; der Code passt sich an.",
+      "labelStyle": "Beschriftung",
+      "horizontal": "Horizontal",
+      "axis": "Entlang der Ordinate"
+    },
+    "teaching": {
+      "title": "Für Lehrmaterial gemacht",
+      "lede": "Ein Modell im Code ist eine Abbildung, die nicht veralten kann: Ändern Sie eine Zahl, und Zeichnung, Auflagerreaktionen und Verläufe ziehen mit. Ein Seed (Startwert des Zufallsgenerators) wählt eine neue Aufgabe; derselbe Seed liefert immer dieselbe. Die {practice} und der {exam} dieser Website sind so entstanden.",
+      "practice": "Übungsaufgaben",
+      "exam": "Klausurgenerator"
+    },
+    "uses": {
+      "exercises": {
+        "title": "Übungsaufgaben und Klausuren",
+        "body": "Aus einem Seed eine eigene Aufgabe für jede Studentin und jeden Studenten, mit Lösungsblatt, gedruckt oder als Abbildungen für LaTeX und Word."
+      },
+      "slides": {
+        "title": "Folien und Skripte",
+        "body": "Abbildungen, die sich in Slidev, Vue oder Beamer Klick für Klick aufbauen, live berechnet."
+      },
+      "embedding": {
+        "title": "In Ihren Dokumentationen und Apps",
+        "body": "Vite, VitePress oder Nuxt, auf dem Server gerendert oder aus vorab berechnetem JSON."
+      },
+      "print": {
+        "title": "Dateien für den Druck",
+        "body": "Ein eigenständiges SVG mit festen Farben für Word, LaTeX und Inkscape."
+      }
+    },
+    "features": {
+      "title": "Funktionen",
+      "style": {
+        "title": "Im Stil der Abbildungen",
+        "body": "Stäbe, Lager, Lasten, Auflagerreaktionen und schraffierte Verläufe wie auf dieser Website, mit Kettenbemaßung und benannten unbekannten Auflagerreaktionen für Übungsblätter."
+      },
+      "readable": {
+        "title": "In jeder Größe lesbar",
+        "body": "Text und Linien behalten ihre Pixelgröße; Werte, die sich überlagern würden, werden verschoben oder weggelassen, nie abgeschnitten."
+      },
+      "exact": {
+        "title": "Exakt",
+        "body": "Die Verläufe sind die Polynome des Solvers selbst: Extremwerte werden exakt bestimmt, Sprünge unter Einzellasten als Sprünge gezeichnet."
+      },
+      "fits": {
+        "title": "Passt in jede Seite",
+        "body": "Farben aus Ihrem CSS, hell und dunkel. Wird auf dem Server gerendert und fängt nie das Scrollen ab."
+      },
+      "components": "Alle Props"
+    }
+  },
+  "practice": {
+    "seo": {
+      "title": "Statik üben: Aufgaben mit sofortiger Kontrolle {'|'} EduBeam",
+      "description": "Statik kostenlos üben: Balken, Rahmen und Fachwerke, jedes Mal mit neuen Zahlen. Auflagerreaktionen und größtes Moment oder Stabkraft berechnen, sofort prüfen, dann die Verläufe ansehen.",
+      "ogTitle": "Statik üben: Aufgaben mit sofortiger Kontrolle",
+      "ogDescription": "Balken, Rahmen und Fachwerke, jedes Mal mit neuen Zahlen. Prüfen Sie Auflagerreaktionen und Momente sofort und sehen Sie dann die Verläufe."
+    },
+    "title": "Statik üben",
+    "lede": "Jedes Mal eine neue Aufgabe, mit exakten Lösungen zum Vergleich. Rechnen Sie sie auf Papier, tragen Sie Ihre Ergebnisse ein und sehen Sie sich dann die Verläufe an.",
+    "codes": "Jede Aufgabe hat einen Code, z. B. {code}. Derselbe Code ergibt immer dieselbe Aufgabe: Geben Sie ihn an Mitstudierende weiter, oder öffnen Sie den Code aus Ihrer Lehrveranstaltung.",
+    "announce": "Neue Aufgabe: {structure}, {code}.",
+    "structures": {
+      "title": "Tragwerke",
+      "count": "{picked} von {total}",
+      "legend": "Tragwerke, aus denen „Neue Aufgabe“ wählt",
+      "determinate": "Statisch bestimmt",
+      "indeterminate": "Statisch unbestimmt",
+      "note": "„Neue Aufgabe“ wählt zufällig eines davon aus."
+    },
+    "code": {
+      "label": "Aufgabencode",
+      "placeholder": "Code",
+      "open": "Öffnen",
+      "error": "Das ist kein Aufgabencode. Ein Code besteht aus einem Buchstaben und einer Zahl, z. B. H2048."
+    },
+    "newProblem": "Neue Aufgabe",
+    "copyLink": "Link kopieren",
+    "linkCopied": "Link kopiert",
+    "barForces": "Stabkräfte, Zug positiv",
+    "answers": {
+      "title": "Ihre Ergebnisse",
+      "note": "Die Auflagerreaktionen sind in der Aufgabe in ihrer positiven Richtung eingezeichnet. Wirkt eine davon in die Gegenrichtung, ist ihr Ergebnis negativ.",
+      "field": "{label}, {direction}, in {unit}",
+      "fieldMagnitude": "{label}, in {unit}"
+    },
+    "positive": {
+      "right": "positiv nach rechts",
+      "up": "positiv nach oben",
+      "counterClockwise": "positiv gegen den Uhrzeigersinn",
+      "tension": "Zug positiv",
+      "magnitude": "Betrag"
+    },
+    "mark": {
+      "correct": "richtig",
+      "exact": "exaktes Ergebnis",
+      "sign": "Vorzeichen?",
+      "signLong": "Betrag stimmt, Vorzeichen falsch",
+      "wrong": "nicht richtig"
+    },
+    "verdict": {
+      "allRight": "Alles richtig. Die Verläufe sind jetzt in die Aufgabe eingezeichnet.",
+      "sign": "{right} von {total} richtig. Wo „{sign}“ steht, stimmt der Betrag, aber nicht die Richtung.",
+      "some": "{right} von {total} richtig. Ergebnisse mit bis zu 1 % Abweichung zählen als richtig.",
+      "revealed": "Die exakten Ergebnisse stehen neben Ihren Feldern, und die Verläufe sind in die Aufgabe eingezeichnet."
+    },
+    "check": "Prüfen",
+    "nextProblem": "Nächste Aufgabe",
+    "hint": "Hinweis",
+    "showAnswers": "Lösungen anzeigen",
+    "solved": "Auf diesem Gerät gelöst: {n} Aufgabe. | Auf diesem Gerät gelöst: {n} Aufgaben.",
+    "about": {
+      "answers": {
+        "title": "Woher die Ergebnisse kommen",
+        "body": "Jede Aufgabe berechnet {solver}, der Solver hinter EduBeam, direkt in Ihrem Browser, und {plot} zeichnet sie. Das größte Moment wird exakt bestimmt, nicht von einer abgetasteten Kurve abgelesen."
+      },
+      "signs": {
+        "title": "Vorzeichen und Einheiten",
+        "body": "Die Ergebnisse werden in kN und kNm angegeben. Lasten wirken nach unten, sofern die Aufgabe nichts anderes sagt. Auflagerreaktionen sind positiv nach rechts, nach oben und gegen den Uhrzeigersinn, wie bei jedem Feld angegeben; Stabkräfte sind bei Zug positiv. Die Verläufe folgen der {conventions} von EduBeam.",
+        "conventions": "Vorzeichenkonvention"
+      },
+      "teachers": {
+        "title": "Für Lehrende",
+        "body": "Der {exam} druckt diese Aufgaben als Klausuren, für jede Studentin und jeden Studenten eine eigene Variante, mit Lösungsblatt. Mit dem Aufgabencode können die Studierenden ihre Ergebnisse danach hier selbst prüfen.",
+        "exam": "Klausurgenerator"
+      }
+    }
+  },
+  "exam": {
+    "seo": {
+      "title": "Klausurgenerator Statik: druckfertige Klausuren mit Lösungsblatt {'|'} EduBeam",
+      "description": "Statikklausuren im Browser erstellen: Balken, Rahmen und Fachwerke mit generierten Zahlen, eine eigene Variante für alle Studierenden, Lösungsblatt und SVG-Abbildungen für LaTeX und Word. Kostenlos, ohne Installation.",
+      "ogTitle": "Klausurgenerator Statik: druckfertige Klausuren mit Lösungsblatt",
+      "ogDescription": "Generierte Balken, Rahmen und Fachwerke, eine Variante pro Person, Lösungsblatt und SVG-Abbildungen. Kostenlos, im Browser."
+    },
+    "title": "Klausurgenerator",
+    "lede": "Klausuren mit Statikaufgaben, für jede Studentin und jeden Studenten eine eigene Variante, mit Lösungsblatt. Alles entsteht in Ihrem Browser, nichts wird verschickt; die Einstellungen stehen in der Adresse der Seite, sodass ein Lesezeichen dieselben Klausuren wiederherstellt.",
+    "defaultTitle": "Statikklausur",
+    "settings": {
+      "title": "Titel",
+      "subtitle": "Zweite Zeile",
+      "subtitlePlaceholder": "Lehrveranstaltung, Datum, Bearbeitungszeit",
+      "problems": "Aufgaben",
+      "problem": "Aufgabe {n}",
+      "determinate": "Statisch bestimmt",
+      "indeterminate": "Statisch unbestimmt",
+      "remove": "Aufgabe {n} entfernen",
+      "add": "Aufgabe hinzufügen",
+      "problemsNote": "Jede Variante enthält diese Aufgaben in dieser Reihenfolge, jede mit eigenen Zahlen. Höchstens {max}.",
+      "versions": "Varianten",
+      "versionsNote": "Eine pro Person, höchstens {max}.",
+      "number": "Klausurnummer",
+      "newNumber": "Neu",
+      "newNumberTitle": "Neue Zahlen für alle Aufgaben",
+      "numberNote": "Dieselbe Nummer ergibt immer dieselben Klausuren.",
+      "onPapers": "Auf den Klausurbögen",
+      "nameLine": "Eine Zeile für den Namen",
+      "working": "Platz für den Rechenweg",
+      "key": "Lösungsblatt am Ende",
+      "codes": "Aufgabencodes",
+      "codesNote": "Für Hausaufgaben: Die Studierenden prüfen ihre Ergebnisse auf der Seite {practice}, die auch die Lösung zeigt. Für eine Klausur ausgeschaltet lassen.",
+      "practicePage": "Übungsaufgaben"
+    },
+    "zipNote": "Die .zip-Datei enthält alle Abbildungen und Lösungsblätter als SVG für LaTeX und Word sowie die Ergebnisse als CSV-Tabelle für die Korrektur.",
+    "summary": {
+      "papers": "{n} Klausur | {n} Klausuren",
+      "problems": "{n} Aufgabe | {n} Aufgaben",
+      "plain": "{papers} mit {problems}",
+      "withKey": "{papers} mit {problems} und Lösungsblatt",
+      "withKeys": "{papers} mit {problems} und Lösungsblättern"
+    },
+    "jump": {
+      "label": "Zu einer Klausur springen",
+      "placeholder": "Springen zu …",
+      "papers": "Klausuren",
+      "keys": "Lösungsblätter",
+      "key": "Lösungsblatt, Variante {n}"
+    },
+    "version": "Variante {n}",
+    "download": ".zip herunterladen",
+    "downloadTitle": "Alle Abbildungen und Lösungsblätter als SVG für LaTeX und Word sowie die Ergebnisse als CSV-Tabelle für die Korrektur",
+    "print": "Drucken",
+    "printLong": "Drucken oder als PDF speichern",
+    "paper": {
+      "name": "Name",
+      "rules": "Kräfte in kN, Momente in kNm. Lasten wirken nach unten, sofern die Aufgabe nichts anderes sagt. Die Auflagerreaktionen sind die Kräfte, die die Lager auf das Tragwerk ausüben; sie sind in ihrer positiven Richtung eingezeichnet: nach rechts, nach oben und gegen den Uhrzeigersinn. Ein negatives Ergebnis wirkt in die Gegenrichtung. Stabkräfte sind bei Zug positiv.",
+      "check": "Prüfen Sie Ihre Ergebnisse unter {url}"
+    },
+    "key": {
+      "title": "Lösungsblatt",
+      "version": "{title}, Variante {n}",
+      "exam": "Klausur Nr. {n}"
+    },
+    "tension": "Zug +",
+    "solutionFigure": "{name}: Lösung"
+  },
+  "exerciseGenerator": {
+    "solveIt": "Auf der Seite Übungsaufgaben lösen",
+    "exercise": "Die Aufgabe",
+    "key": "Lösungsblatt",
+    "solution": "Die Lösung dazu",
+    "caption": "In Ihrem Browser erzeugt: Der Seed wählt das Tragwerk und seine Zahlen, {'@'}edubeam/fem berechnet es, {'@'}edubeam/plot zeichnet Aufgabe und Lösung. Ganze Klausuren erstellt der {exam}.",
+    "exam": "Klausurgenerator",
+    "newExercise": "Neue Aufgabe"
+  },
+  "ui": {
+    "menu": "Menü",
+    "darkMode": "Dunkles Farbschema",
+    "lightMode": "Helles Farbschema",
+    "language": "Sprache: {name}",
+    "guideNav": "Anleitung",
+    "copy": "Kopieren",
+    "copied": "Kopiert",
+    "copyCode": "Code kopieren",
+    "docs": "Dokumentation",
+    "elementSketch": "Ein Element in seinen lokalen Achsen"
+  },
+  "heroFigure": {
+    "aria": "Ein Einfeldträger mit Kragarm unter Gleichlast und einer verschiebbaren Einzellast, mit Querkraft- und Momentenverlauf und Biegelinie",
+    "slider": "Position der Einzellast von 20 kN",
+    "loadAt": "bei {x} m",
+    "hint": "Ziehen Sie die Last, oder zeigen Sie auf einen Verlauf, um ihn abzulesen.",
+    "fromA": "{x} m von A",
+    "reactions": "Auflagerkräfte {a} kN in A und {b} kN in B",
+    "sagging": "größtes Feldmoment {m} kNm",
+    "hogging": "Stützmoment über B {m} kNm"
+  },
+  "plotTexts": {
+    "structure": "Tragwerk",
+    "structureWith": "Tragwerk mit {parts}",
+    "layers": {
+      "N": "Normalkraftverlauf",
+      "V": "Querkraftverlauf",
+      "M": "Momentenverlauf",
+      "w": "Verformungsfigur",
+      "reactions": "Auflagerreaktionen",
+      "loads": "Lasten"
+    },
+    "loadHandle": "Position der Last {load}",
+    "loadPosition": "{metres} m vom Balkenanfang",
+    "stack": "Ein Balken mit seinen Lasten",
+    "stackWith": "Ein Balken mit seinen Lasten, darunter: {rows}",
+    "rows": {
+      "N": "Normalkraftverlauf",
+      "V": "Querkraftverlauf",
+      "M": "Momentenverlauf",
+      "w": "Biegelinie"
+    },
+    "temperatureUniform": "ΔT",
+    "temperatureGradient": "ΔTb − ΔTt"
   }
 }

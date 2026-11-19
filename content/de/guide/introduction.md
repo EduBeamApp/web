@@ -1,88 +1,171 @@
 ---
-description: "Was EduBeam ist: kostenlose FEM-Berechnung ebener Stabwerke im Browser. Was es kann und nicht kann, für wen es gedacht ist und wie die Anleitung aufgebaut ist."
+description: "EduBeam berechnet ebene Balken, Rahmen und Fachwerke kostenlos im Browser: was es kann und was nicht, für wen es gedacht ist, Aufbau der Anleitung, Bibliotheken."
+source: site
 ---
 
 # Einführung
 
-[EduBeam]{.edubeam} ist ein kostenloses, browserbasiertes Programm zur **Berechnung ebener Stabtragwerke** – Balken, Rahmen und Fachwerke. Sie zeichnen das Tragwerk, setzen Lager und Lasten, und der Finite-Elemente-Solver rechnet alles neu, sobald Sie etwas ändern. Es gibt keine Schaltfläche *Berechnen*, keine Installation und kein Konto.
+[EduBeam]{.edubeam} ist ein kostenloses Programm zur Berechnung von **Balken, Rahmen und Fachwerken**, das direkt im Browser läuft. Sie zeichnen ein Tragwerk, lagern und belasten es, und der Finite-Elemente-Solver berechnet Schnittgrößenverläufe, Auflagerreaktionen und Durchbiegungen bei jeder Änderung neu. Es gibt keine Schaltfläche *Berechnen*, nichts zu installieren und kein Konto anzulegen.
 
-[Starten Sie EduBeam](https://run.edubeam.app/?lang=de){target="_blank"} in einem neuen Tab und arbeiten Sie den [Schnellstart](/de/guide/quick-start) parallel mit.
+::div{.actions}
+[EduBeam starten ↗](https://run.edubeam.app/?lang=de){target="_blank"} [Schnellstart in 10 Minuten](/de/guide/quick-start)
+::
 
 ![Ein Dreigelenkrahmen in EduBeam: Lasten in Orange, Auflagerreaktionen in Violett, das Biegemoment in Rot und die Verformungsfigur in Grau](/screenshots/de/hero.webp)
 
-## Ihr erster Besuch {#your-first-visit}
-
-Beim ersten Öffnen der App fragt ein Willkommensdialog, wie Sie beginnen möchten und welche Einheiten und Achsen Sie verwenden wollen. Beides können Sie später in den [Einstellungen](/de/essentials/units-settings) ändern.
-
-![Der Willkommensdialog](/screenshots/de/welcome.webp){.shot-lg}
-
-- **Rundgang starten** zeigt nacheinander das Menü, Rückgängig und Wiederholen, die Schaltflächen der Ansicht, die Anzeigeoptionen, Raster und Einheiten sowie die untere Leiste.
-- **Ersten Balken zeichnen** ist eine geführte Aufgabe in sieben Schritten. Sie zeichnen mit der Maus einen Balken, lagern und belasten ihn und lesen die Ergebnisse ab. Eine kleine Karte in der Ecke sagt Ihnen, was als Nächstes zu tun ist.
-- **Beispiel öffnen** öffnet die Galerie mit fertigen Modellen.
-
-Alle drei finden Sie auch im **Menü ☰**, sodass Sie jederzeit darauf zurückkommen können.
-
-![Ersten Balken zeichnen: Die Anleitungskarte bleibt beim Arbeiten in der Ecke](/screenshots/de/first-beam-task.webp)
+:span{#your-first-visit}
 
 ## Was EduBeam kann {#what-it-does}
 
-| Bereich | Möglichkeiten |
-| --- | --- |
-| **Tragwerke** | Ebene (x–z) Balken, Durchlaufträger, Rahmen und Fachwerke aus Knoten und 2D-Timoshenko-Balkenelementen. Endgelenke machen aus jedem Stab einen Fachwerkstab. |
-| **Lager** | Festlager, Loslager, Einspannung, Parallelführung und jede andere Kombination gehaltener Freiheitsgrade `Dx`, `Dz`, `Ry`, ausgewählt über das Symbol. Gedrehte Lager über einen Knotenwinkel. Auflagersenkungen. |
-| **Lasten** | Knotenkräfte und -momente, vorgegebene Verschiebungen, gleichmäßige und trapezförmige Streckenlasten, Einzelkräfte und -momente entlang eines Stabs sowie gleichmäßige Temperaturänderung oder Temperaturgradient. |
-| **Querschnitte** | Material- und Querschnittsbibliotheken (europäisch und US-amerikanisch) sowie ein Polygon-Editor, der für jede Form $A$, $I_y$, $I_z$, $I_{yz}$, Hauptachsen und Trägheitsradien berechnet. |
-| **Ergebnisse** | Verformungsfigur, Normalkraft **N**, Querkraft **V**, Biegemoment **M**, Auflagerreaktionen, Knotenverschiebungen, Stabendkräfte und Elementsteifigkeitsmatrizen. |
-| **Berechnung** | Lineare statische Berechnung mit einem Lastfall. Die Ergebnisse sind für das lineare Modell exakt, eine Netzverfeinerung ist also nicht nötig. Lässt sich ein Tragwerk nicht berechnen, sagt EduBeam, warum, und animiert, wie es sich bewegen kann. |
-| **Dateien** | Projekte als JSON speichern und öffnen, ein ganzes Modell als Link teilen, die Zeichnung als PNG oder SVG und die Ergebnisse als CSV exportieren. Kürzlich ersetzte Modelle werden aufbewahrt, sodass Sie sie zurückholen können. Alles bleibt auf Ihrem Gerät. |
-| **Einheiten** | SI oder US-Einheiten mit einem Klick oder jede Größe einzeln. Achsen wahlweise x nach rechts, z nach unten oder x nach rechts, y nach oben. |
+::card-grid{cols="2"}
+:::card{title="Tragwerke" icon="lucide:triangle" to="/de/essentials/elements"}
+Balken, Durchlaufträger, Rahmen und Fachwerke in der x-z-Ebene, aufgebaut aus Timoshenko-Balkenelementen. Mit Endgelenken wird aus einem Stab ein Fachwerkstab.
+:::
+:::card{title="Lager" icon="lucide:anchor" to="/de/essentials/nodes-supports#supports"}
+Festlager, Loslager, Einspannung, Parallelführung oder jede Kombination der gehaltenen Freiheitsgrade `Dx`, `Dz` und `Ry`, ausgewählt über das Symbol. Dazu schräge Lager und Auflagersenkungen.
+:::
+:::card{title="Lasten" icon="lucide:arrow-down-to-line" to="/de/essentials/loads"}
+Kräfte und Momente an Knoten oder an beliebiger Stelle eines Stabs, Gleich- und Trapezlasten, Temperaturlasten und vorgegebene Verschiebungen.
+:::
+:::card{title="Querschnitte" icon="lucide:shapes" to="/de/essentials/elements#cross-sections"}
+Europäische und US-amerikanische Bibliotheken oder ein beliebiges selbst gezeichnetes Polygon; EduBeam berechnet $A$, $I_y$, $I_z$, $I_{yz}$, Hauptachsen und Trägheitsradien.
+:::
+:::card{title="Ergebnisse" icon="lucide:chart-spline" to="/de/essentials/results"}
+Verläufe von **N**, **V** und **M**, Verformungsfigur, Auflagerreaktionen, Knotenverschiebungen, Stabendkräfte und Elementsteifigkeitsmatrizen.
+:::
+:::card{title="Berechnung" icon="lucide:calculator" to="/de/elements/analysis"}
+Lineare Statik, für das lineare Modell exakt: Es gibt kein Netz, das verfeinert werden müsste. Ist ein Tragwerk kinematisch verschieblich, erklärt EduBeam, warum, und animiert die mögliche Bewegung.
+:::
+:::card{title="Dateien" icon="lucide:folder-open" to="/de/essentials/import-export"}
+Projekte als JSON, ganze Modelle als Links, Zeichnungen als PNG oder SVG, Ergebnisse als CSV. Ersetzte Modelle bleiben erhalten, und nichts verlässt Ihr Gerät.
+:::
+:::card{title="Einheiten" icon="lucide:ruler" to="/de/essentials/units-settings"}
+SI oder US-Einheiten mit einem Klick oder jede Größe einzeln. Die z-Achse nach unten oder, wie im Lehrbuch, die y-Achse nach oben.
+:::
+::
 
 ## Was EduBeam (noch) nicht kann {#what-it-does-not-do-yet}
 
-Die Grenzen vorab zu kennen spart Zeit:
+Wer die Grenzen vorab kennt, spart Zeit:
 
+::div{.limits}
 - **Nur 2D.** Kein Verhalten aus der Ebene heraus, keine räumlichen Rahmen.
 - **Nur lineare Statik.** Keine Theorie II. Ordnung (P–Δ), kein Knicken, keine Dynamik, keine Plastizität.
-- **Ein Lastfall.** Es gibt keine Lastfallkombinationen oder Umhüllenden. Modellieren Sie jeden Fall getrennt und speichern Sie ihn als eigene Datei oder eigenen Link.
-- **Kein Eigengewicht.** Setzen Sie es bei Bedarf als Streckenlast an.
-- **Keine Nachweise.** EduBeam liefert Schnittgrößen und Verformungen; die Bemessung nach Norm bleibt Ihnen überlassen.
+- **Ein Lastfall.** Keine Lastfallkombinationen oder Umhüllenden: Speichern Sie jeden Lastfall als eigene Datei oder eigenen Link.
+- **Kein Eigengewicht.** Setzen Sie es als Streckenlast an.
+- **Keine Nachweise.** EduBeam liefert Schnittgrößen und Verformungen; die Bemessung nach Norm bleibt Ihre Aufgabe.
+::
 
-Wenn Ihnen eine Funktion fehlt, [eröffnen Sie ein Issue](https://github.com/janvorisek/edubeam/issues).
+Wenn Ihnen eine Funktion wichtig ist, die noch fehlt, [melden Sie es auf GitHub](https://github.com/janvorisek/edubeam/issues).
 
 ::elementarium-promo{placement="introduction"}
 ::
 
 ## Für wen ist EduBeam gedacht? {#who-is-it-for}
 
-- **Studierende** der Technischen Mechanik und Baustatik, die sofortige Rückmeldung zu ihren Handrechnungen wollen. Siehe [Ergebnisse von Hand prüfen](/de/guide/verification).
-- **Lehrende**, die zeigen, wie Lager, Gelenke und Lasten die Schnittgrößen verändern – live am Beamer, in einer von 18 Sprachen. Siehe [Lehren mit EduBeam](/de/guide/teaching).
-- **Ingenieurinnen und Ingenieure**, die eine schnelle Plausibilitätsprüfung wollen, bevor sie ein schwereres Desktop-Programm öffnen.
+::card-grid{cols="2"}
+:::card{title="Studierende" icon="lucide:graduation-cap" to="/de/practice"}
+Sofortige Rückmeldung zu Ihren Handrechnungen und Übungsaufgaben, die Ihre Ergebnisse gleich bei der Eingabe prüfen.
+:::
+:::card{title="Lehrende" icon="lucide:presentation" to="/de/guide/teaching"}
+Zeigen Sie live am Beamer und in 18 Sprachen, wie Lager, Gelenke und Lasten die Schnittgrößen verändern, und drucken Sie für jede Studentin und jeden Studenten eine eigene Klausurvariante.
+:::
+:::card{title="Ingenieurinnen und Ingenieure" icon="lucide:hard-hat" to="/de/elements/analysis"}
+Eine schnelle Plausibilitätskontrolle, bevor Sie ein umfangreiches Desktop-Programm öffnen, bei der jeder Rechenschritt dokumentiert ist.
+:::
+:::card{title="Entwicklerinnen und Entwickler" icon="lucide:code-xml" to="#libraries"}
+Der Solver und die Zeichnungen hinter EduBeam als Open-Source-Bibliotheken für Ihren eigenen Code.
+:::
+::
 
-## Aufbau dieser Anleitung {#how-this-guide-is-organised}
+## So finden Sie sich in der Anleitung zurecht {#how-this-guide-is-organised}
 
-1. **Erste Schritte.** Diese Seite, der [10-Minuten-Schnellstart](/de/guide/quick-start) und fertige [Beispiele](/de/examples/).
-2. **Tutorials.** Vollständige Modelle von Anfang bis Ende, von Hand geprüft: ein [Dreigelenkrahmen](/de/tutorials/three-hinged-frame) und ein [ebenes Fachwerk](/de/tutorials/truss).
-3. **Modellierung.** Je eine Seite pro Baustein: [Benutzeroberfläche](/de/essentials/user-interface), [Knoten & Lager](/de/essentials/nodes-supports), [Elemente, Materialien & Querschnitte](/de/essentials/elements), [Lasten](/de/essentials/loads) sowie [Einheiten & Einstellungen](/de/essentials/units-settings).
-4. **Ergebnisse.** Wie Sie [Diagramme und Tabellen lesen](/de/essentials/results) und sie [überprüfen](/de/guide/verification).
-5. **Dateien & Teilen.** [Projekte, Links, Bild- und CSV-Export](/de/essentials/import-export) sowie [Lehren mit EduBeam](/de/guide/teaching).
-6. **Referenz.** [Tastatur, Maus & Touch](/de/reference/shortcuts), [Fehlerbehebung](/de/reference/troubleshooting) und die [FAQ](/de/faq/).
-7. **Theoriehandbuch.** [Vorzeichenkonventionen](/de/elements/conventions) und die Elementformulierungen für den [Balken](/de/elements/beam) und den [Fachwerkstab](/de/elements/truss).
+Die Seitenleiste ordnet die Seiten in diese Gruppen: Die **?**-Schaltflächen in der App öffnen die passende Seite dieser Anleitung in Ihrer Sprache.
 
-Die **?**-Symbole in der App öffnen die passende Seite dieser Anleitung in Ihrer Sprache.
+::card-grid{cols="2"}
+:::card{title="Erste Schritte" icon="lucide:flag" to="/de/guide/quick-start"}
+Diese Seite und der Schnellstart: ein erster Balken in zehn Minuten.
+:::
+:::card{title="Modell erstellen" icon="lucide:pencil-ruler" to="/de/essentials/user-interface"}
+Die Oberfläche, Knoten und Lager, Elemente, Materialien und Querschnitte, Lasten, Einheiten und Einstellungen.
+:::
+:::card{title="Ergebnisse auswerten" icon="lucide:chart-spline" to="/de/essentials/results"}
+Die Verläufe und Ergebnistabellen und wie Sie sie von Hand prüfen.
+:::
+:::card{title="Teilen & Lehren" icon="lucide:share-2" to="/de/essentials/import-export"}
+Projektdateien, Links zum Modell, Bild- und CSV-Export und EduBeam in der Lehre.
+:::
+:::card{title="Tutorials" icon="lucide:triangle" to="/de/tutorials/inclined-beam"}
+Ein geneigter Träger, ein Dreigelenkrahmen, ein ebenes Fachwerk und ein Durchlaufträger mit Auflagersenkung, jeweils Schritt für Schritt aufgebaut und von Hand geprüft.
+:::
+:::card{title="Beispiele" icon="lucide:library" to="/de/examples/"}
+Sechs fertige Modelle, die sich mit einem Klick öffnen, mit Übungsaufgaben und Lösungen.
+:::
+:::card{title="Theoriehandbuch" icon="lucide:sigma" to="/de/elements/conventions"}
+Achsen und Vorzeichenkonventionen, das Balken- und das Fachwerkelement und wie EduBeam ein Modell berechnet.
+:::
+:::card{title="Hilfe" icon="lucide:life-buoy" to="/de/reference/shortcuts"}
+Tastatur, Maus und Touch, Fehlerbehebung und die FAQ.
+:::
+::
+
+## Eigene Werkzeuge bauen {#libraries}
+
+EduBeam baut auf zwei Open-Source-Bibliotheken auf, die auf dieser Website dokumentiert sind. Mit ihnen berechnen Sie Tragwerke in einem Skript, erzeugen für alle Studierenden eine eigene Aufgabe oder zeichnen Abbildungen für Folien und Skripte.
+
+::card-grid{cols="2"}
+:::card{title="@edubeam/fem" icon="lucide:package" to="/de/solver"}
+Der Finite-Elemente-Solver hinter EduBeam, in TypeScript: Ein Balken ist in einem Dutzend Zeilen modelliert, berechnet und ausgewertet, im Browser oder in Node.
+:::
+:::card{title="@edubeam/plot" icon="lucide:spline" to="/de/plot"}
+Vue-3-Komponenten, die ein berechnetes Tragwerk als SVG zeichnen, mit Lasten, Auflagerreaktionen und den Verläufen von N, V und M.
+:::
+::
 
 ## Sprachen {#languages}
 
-Die Oberfläche ist auf English, Bahasa Indonesia, Čeština, Deutsch, Español, Français, Italiano, Polski, Português, Tiếng Việt, Русский, Türkçe, Українська, हिन्दी, 日本語, 한국어, ไทย und 汉语 verfügbar. EduBeam übernimmt die Sprache Ihres Browsers. Ändern Sie sie unter **Einstellungen → Sprache & Region** oder öffnen Sie die App mit dem Parameter `?lang=`, z. B. [run.edubeam.app/?lang=de](https://run.edubeam.app/?lang=de){target="_blank"}.
+EduBeam spricht 18 Sprachen und startet in der Sprache Ihres Browsers. Umschalten können Sie unter **Einstellungen → Sprache & Region**, oder Sie wählen hier eine aus:
+
+::div{.chips}
+- [:icon{name="circle-flags:lang-en"} English](https://run.edubeam.app/?lang=en){target="_blank"}
+- [:icon{name="circle-flags:lang-id"} Bahasa Indonesia](https://run.edubeam.app/?lang=id){target="_blank"}
+- [:icon{name="circle-flags:lang-cs"} Čeština](https://run.edubeam.app/?lang=cs){target="_blank"}
+- [:icon{name="circle-flags:lang-de"} Deutsch](https://run.edubeam.app/?lang=de){target="_blank"}
+- [:icon{name="circle-flags:lang-es"} Español](https://run.edubeam.app/?lang=es){target="_blank"}
+- [:icon{name="circle-flags:lang-fr"} Français](https://run.edubeam.app/?lang=fr){target="_blank"}
+- [:icon{name="circle-flags:lang-it"} Italiano](https://run.edubeam.app/?lang=it){target="_blank"}
+- [:icon{name="circle-flags:lang-pl"} Polski](https://run.edubeam.app/?lang=pl){target="_blank"}
+- [:icon{name="circle-flags:lang-pt-br"} Português](https://run.edubeam.app/?lang=pt){target="_blank"}
+- [:icon{name="circle-flags:lang-vi"} Tiếng Việt](https://run.edubeam.app/?lang=vi){target="_blank"}
+- [:icon{name="circle-flags:lang-ru"} Русский](https://run.edubeam.app/?lang=ru){target="_blank"}
+- [:icon{name="circle-flags:lang-tr"} Türkçe](https://run.edubeam.app/?lang=tr){target="_blank"}
+- [:icon{name="circle-flags:lang-uk"} Українська](https://run.edubeam.app/?lang=uk){target="_blank"}
+- [:icon{name="circle-flags:lang-hi"} हिन्दी](https://run.edubeam.app/?lang=hi){target="_blank"}
+- [:icon{name="circle-flags:lang-ja"} 日本語](https://run.edubeam.app/?lang=ja){target="_blank"}
+- [:icon{name="circle-flags:lang-ko"} 한국어](https://run.edubeam.app/?lang=ko){target="_blank"}
+- [:icon{name="circle-flags:lang-th"} ไทย](https://run.edubeam.app/?lang=th){target="_blank"}
+- [:icon{name="circle-flags:lang-zh"} 中文](https://run.edubeam.app/?lang=cn){target="_blank"}
+::
+
+Auch ein Link kann die Sprache für die Leserin oder den Leser festlegen: `run.edubeam.app/?lang=de` öffnet die App auf Deutsch.
 
 ## Autoren & Danksagung {#authors-credits}
 
-[EduBeam]{.edubeam} wird von [Jan Voříšek](https://github.com/janvorisek) geleitet, dem Maintainer und Produktdesigner der modernen Web-Version. Die Browser-Version wird unabhängig von der ČVUT entwickelt. Das ursprüngliche Desktop-EduBeam für Windows und Linux entwickelten [Bořek Patzák](http://ksm.fsv.cvut.cz/~bp/), [Jan Stránský](https://mech.fsv.cvut.cz/~stransky/en/) und [Vít Šmilauer](https://mech.fsv.cvut.cz/~smilauer/) am Lehrstuhl für Mechanik der [Fakultät für Bauingenieurwesen der ČVUT Prag](https://www.fsv.cvut.cz/en). Der Solver ist die Open-Source-Bibliothek [@edubeam/fem](/solver).
+[EduBeam]{.edubeam} wird von [Jan Voříšek](https://github.com/janvorisek) als unabhängiges Projekt entwickelt. Es tritt in die Fußstapfen des Desktop-EduBeam für Windows und Linux, das [Bořek Patzák](http://ksm.fsv.cvut.cz/~bp/), [Jan Stránský](https://mech.fsv.cvut.cz/~stransky/en/) und [Vít Šmilauer](https://mech.fsv.cvut.cz/~smilauer/) am Lehrstuhl für Mechanik der [Fakultät für Bauingenieurwesen der Tschechischen Technischen Universität in Prag (ČVUT)](https://www.fsv.cvut.cz/en) entwickelt haben, und öffnet bis heute dessen Sitzungsdateien. Der Solver [@edubeam/fem](/de/solver) ist aus der ersten Version von Bořek Patzák hervorgegangen. Die App und der Solver sind beide Open Source unter der GPL-3.0.
 
-::team-members{size="small" :members='[{"avatar":"https://www.github.com/janvorisek.png","name":"Jan Voříšek","title":"Leitender Entwickler & Produktdesigner","links":[{"icon":"github","link":"https://github.com/janvorisek"},{"icon":"twitter","link":"https://twitter.com/janvorisekdev"}]},{"avatar":"https://www.github.com/bpatzak.png","name":"Bořek Patzák","title":"FEM-Solver, Autor der ursprünglichen Anwendung","links":[{"icon":"github","link":"https://github.com/bpatzak"}]}]'}
+::team-members{size="small" :members='[{"avatar":"https://www.github.com/janvorisek.png","name":"Jan Voříšek","title":"Leitender Entwickler & Produktdesigner","links":[{"icon":"github","link":"https://github.com/janvorisek"},{"icon":"twitter","link":"https://twitter.com/janvorisekdev"}]},{"avatar":"https://www.github.com/kelidas.png","name":"Václav Sadílek","title":"Entwickler: Touch-Bedienung, Darstellungsgeschwindigkeit, Lasten und Lager","links":[{"icon":"web","link":"https://www.stm.fce.vutbr.cz/sadilek/"},{"icon":"github","link":"https://github.com/kelidas"}]},{"avatar":"https://www.github.com/bpatzak.png","name":"Bořek Patzák","title":"Ursprüngliches EduBeam und der erste FEM-Solver","links":[{"icon":"github","link":"https://github.com/bpatzak"}]}]'}
 ::
 
 ## Mitmachen {#contribute}
 
-- Melden Sie unklares Verhalten oder Fehler als [GitHub-Issue](https://github.com/janvorisek/edubeam/issues).
-- Verbessern Sie diese Dokumentation oder die Übersetzungen, indem Sie die Dateien in `docs/` bearbeiten und einen Pull Request stellen.
-- Empfehlen Sie EduBeam Kommilitoninnen, Kommilitonen und Kollegen weiter.
+::card-grid{cols="3"}
+:::card{title="Problem melden" icon="lucide:bug" to="https://github.com/janvorisek/edubeam/issues"}
+Etwas ist unklar, falsch oder funktioniert nicht? Ein Issue auf GitHub erreicht das Team.
+:::
+:::card{title="Übersetzung verbessern" icon="lucide:languages" to="https://github.com/janvorisek/edubeam/tree/main/src/locales"}
+Die Texte der App liegen in einer Datei pro Sprache; über einen Pull Request freuen wir uns.
+:::
+:::card{title="Weitersagen" icon="lucide:share-2"}
+Empfehlen Sie EduBeam Ihren Kommilitoninnen und Kommilitonen oder Kolleginnen und Kollegen, oder setzen Sie einen Link zum Modell in Ihr Skript.
+:::
+::
