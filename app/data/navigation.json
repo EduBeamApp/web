@@ -984,6 +984,8 @@
     "sidebar": [
       {
         "text": "入门",
+        "icon": "lucide:flag",
+        "section": "guide",
         "items": [
           {
             "text": "简介",
@@ -992,28 +994,13 @@
           {
             "text": "快速入门（10 分钟）",
             "link": "/zh/guide/quick-start"
-          },
-          {
-            "text": "示例",
-            "link": "/zh/examples/"
-          }
-        ]
-      },
-      {
-        "text": "教程",
-        "items": [
-          {
-            "text": "三铰刚架",
-            "link": "/zh/tutorials/three-hinged-frame"
-          },
-          {
-            "text": "平面桁架",
-            "link": "/zh/tutorials/truss"
           }
         ]
       },
       {
         "text": "建模",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
         "items": [
           {
             "text": "用户界面",
@@ -1038,7 +1025,9 @@
         ]
       },
       {
-        "text": "结果",
+        "text": "查看结果",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
         "items": [
           {
             "text": "结果与内力图",
@@ -1051,10 +1040,12 @@
         ]
       },
       {
-        "text": "文件与分享",
+        "text": "分享与教学",
+        "icon": "lucide:presentation",
+        "section": "guide",
         "items": [
           {
-            "text": "导入、导出与分享",
+            "text": "文件、链接与导出",
             "link": "/zh/essentials/import-export"
           },
           {
@@ -1064,7 +1055,9 @@
         ]
       },
       {
-        "text": "参考",
+        "text": "帮助",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
         "items": [
           {
             "text": "键盘、鼠标与触控",
@@ -1081,7 +1074,51 @@
         ]
       },
       {
+        "text": "教程",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
+        "items": [
+          {
+            "text": "斜梁",
+            "link": "/zh/tutorials/inclined-beam"
+          },
+          {
+            "text": "三铰刚架",
+            "link": "/zh/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "平面桁架",
+            "link": "/zh/tutorials/truss"
+          },
+          {
+            "text": "连续梁与支座沉降",
+            "link": "/zh/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "练习",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "练习题",
+            "link": "/zh/practice"
+          },
+          {
+            "text": "试卷生成器",
+            "link": "/zh/exam"
+          },
+          {
+            "text": "示例",
+            "link": "/zh/examples/"
+          }
+        ]
+      },
+      {
         "text": "理论手册",
+        "icon": "lucide:sigma",
+        "section": "theory",
         "items": [
           {
             "text": "坐标系与符号约定",
@@ -1094,9 +1131,12 @@
           {
             "text": "桁架单元",
             "link": "/zh/elements/truss"
+          },
+          {
+            "text": "EduBeam 如何求解模型",
+            "link": "/zh/elements/analysis"
           }
-        ],
-        "collapsed": true
+        ]
       }
     ]
   },

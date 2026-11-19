@@ -23,10 +23,10 @@ export const localizedPath = (code: string, path: string): string =>
  * name it, and the English page stops standing in for it. In the sitemap's order.
  */
 export const VUE_PAGES = {
-  '/practice': ['en', 'de', 'es', 'fr', 'pt', 'it', 'pl', 'ru', 'uk', 'ja', 'tr', 'ko', 'cs'],
-  '/exam': ['en', 'de', 'es', 'fr', 'pt', 'it', 'pl', 'ru', 'uk', 'ja', 'tr', 'ko', 'cs'],
-  '/solver': ['en', 'de', 'es', 'fr', 'pt', 'it', 'pl', 'ru', 'uk', 'ja', 'tr', 'ko', 'cs'],
-  '/plot': ['en', 'de', 'es', 'fr', 'pt', 'it', 'pl', 'ru', 'uk', 'ja', 'tr', 'ko', 'cs'],
+  '/practice': ['en', 'de', 'es', 'fr', 'pt', 'it', 'pl', 'ru', 'uk', 'ja', 'tr', 'ko', 'zh', 'cs'],
+  '/exam': ['en', 'de', 'es', 'fr', 'pt', 'it', 'pl', 'ru', 'uk', 'ja', 'tr', 'ko', 'zh', 'cs'],
+  '/solver': ['en', 'de', 'es', 'fr', 'pt', 'it', 'pl', 'ru', 'uk', 'ja', 'tr', 'ko', 'zh', 'cs'],
+  '/plot': ['en', 'de', 'es', 'fr', 'pt', 'it', 'pl', 'ru', 'uk', 'ja', 'tr', 'ko', 'zh', 'cs'],
 } as const satisfies Readonly<Record<string, readonly string[]>>
 
 /** The pages above as the page list has them */

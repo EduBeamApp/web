@@ -1,13 +1,16 @@
 {
   "meta": {
-    "description": "免费的在线平面结构分析工具——在浏览器中即时求解梁、刚架和桁架。"
+    "description": "免费的在线平面结构分析工具：在浏览器中即时求解梁、刚架和桁架。"
   },
   "nav": {
     "guide": "指南",
     "tutorials": "教程",
     "examples": "示例",
     "faq": "常见问题",
-    "openApp": "打开应用"
+    "theory": "理论手册",
+    "openApp": "打开应用",
+    "libraries": "库",
+    "practice": "练习题"
   },
   "docs": {
     "onThisPage": "本页目录",
@@ -20,22 +23,22 @@
   },
   "components": {
     "loadsTitle": "荷载类型预览",
-    "loadsLede": "常见荷载类型在 EduBeam 中的样子。每张卡片都是已求解的实时模型，点击即可在应用中按原样打开。",
+    "loadsLede": "EduBeam 中常见荷载类型的样子。每张卡片都是一个实时求解的模型，在应用中打开后与这里的设置完全相同。",
     "openInApp": "在 EduBeam 中打开",
     "simplySupportedBeam": "简支梁",
-    "udlBlurb": "固定铰支座与滑动铰支座上的 12 kN/m 均布荷载：经典的剪力图和弯矩图。",
-    "trapezoidalBlurb": "右跨上从 4 kN/m 增大到 14 kN/m 的荷载。",
-    "concentratedBlurb": "跨中一个向下 18 kN 的集中荷载，无需额外节点。",
-    "nodalBlurb": "中间支座上的 20 kN 荷载，用于检查支座反力和挠度。",
-    "temperatureBlurb": "沿截面高度的温差（上表面比下表面热）及其引起的曲率。",
-    "promoTitle": "将您的框架",
-    "promoAccent": "带入 3D。",
-    "promoSubtitle": "在浏览器中完成楼板、壳体和钢结构验算",
+    "udlBlurb": "一端固定铰支座、一端滑动铰支座的单跨梁，承受 12 kN/m 均布荷载：典型的剪力图和弯矩图。",
+    "trapezoidalBlurb": "右跨上从 4 kN/m 增大到 14 kN/m 的梯形分布荷载。",
+    "concentratedBlurb": "左跨内距支座 2 m 处的 18 kN 集中荷载，作用点处不设节点。",
+    "nodalBlurb": "两跨之间节点上的 20 kN 荷载：弯矩图在该处出现折点。",
+    "temperatureBlurb": "沿截面高度的温差（上缘比下缘温度高）及其引起的曲率。",
+    "promoTitle": "从平面刚架",
+    "promoAccent": "走向三维。",
+    "promoSubtitle": "在浏览器中完成楼板、壳体与钢结构验算",
     "promoCta": "免费试用",
     "spanLength": "跨度",
     "loadIntensity": "荷载集度",
     "loadPosition": "荷载位置",
-    "heroHint": "移动荷载，内力图随之更新。"
+    "heroHint": "移动荷载，内力图随之变化。"
   },
   "common": {
     "deformedShape": "变形图",
@@ -58,7 +61,7 @@
     "items": {
       "welcome": {
         "title": "超静定梁",
-        "blurb": "3 m 一端固定、一端滚动支座的超静定梁，承受 10 kN/m 均布荷载。"
+        "blurb": "3 m 长的超静定梁，一端固定、一端滑动铰支座，承受 10 kN/m 均布荷载。"
       },
       "cantilever": {
         "title": "悬臂梁",
@@ -85,6 +88,585 @@
   "search": {
     "label": "搜索",
     "placeholder": "搜索文档",
-    "noResults": "未找到与“{query}”相关的结果"
+    "noResults": "未找到与“{query}”相关的结果",
+    "shortcut": "Ctrl K"
+  },
+  "home": {
+    "seo": {
+      "title": "EduBeam：免费在线结构分析",
+      "description": "在浏览器中免费进行平面结构分析。绘制梁、刚架和桁架，施加荷载，即可得到 N、V、M 图、支反力和挠度。"
+    },
+    "hero": {
+      "title": "梁、刚架、桁架。",
+      "lede": "EduBeam 是一款免费的结构分析应用，可计算梁、刚架和桁架。在浏览器中绘制模型，每改一处，内力图、支反力和挠度都随之更新。",
+      "launch": "启动 EduBeam",
+      "guide": "阅读指南",
+      "note": "免费开源，无需安装，无需注册。"
+    },
+    "steps": {
+      "title": "从草图到内力图，只需四步",
+      "lede": "顺序与在纸上求解时相同。快速入门会带你完整算一根真实的梁，大约十分钟。",
+      "link": "跟着快速入门做",
+      "items": {
+        "nodes": {
+          "label": "节点",
+          "title": "布置节点",
+          "body": "点击网格或输入坐标。这里是宽 6 m、高 4 m 的门式刚架的四个角点。"
+        },
+        "elements": {
+          "label": "杆件",
+          "title": "用杆件连接节点",
+          "body": "用梁单元连接节点，并指定材料和截面：截面可从截面库中选择，也可以自己绘制多边形。"
+        },
+        "loads": {
+          "label": "支座与荷载",
+          "title": "施加支座与荷载",
+          "body": "两个柱脚设固定铰支座，横梁上作用 10 kN/m 的均布荷载，左上角点作用向右的 15 kN 水平力。"
+        },
+        "results": {
+          "label": "结果",
+          "title": "查看结果",
+          "body": "只要支座足以使刚架稳定，弯矩图（画在受拉侧）和支反力就会立即出现。这些数值由 EduBeam 在本页面上实时算出。"
+        }
+      }
+    },
+    "examples": {
+      "title": "一键打开已求解的模型",
+      "lede": "下面每个模型都由应用所用的同一个求解器在本页面上求解。在 EduBeam 中打开，动手改一改。",
+      "link": "全部示例"
+    },
+    "verify": {
+      "title": "与教材结果核对",
+      "lede": "EduBeam 用有限元法求解每个模型。对于经典算例，它的结果与闭合解完全相同，每一位数字都不差。右侧一列是本页面加载时在你的浏览器中算出的。",
+      "case": "算例",
+      "formula": "闭合解",
+      "hand": "手算",
+      "edubeam": "EduBeam",
+      "link": "更多参考算例",
+      "steel": "钢材 IPE 200：E = 210 GPa，I = 1943 cm⁴。与闭合解的假定一致，不计剪切变形。",
+      "cases": {
+        "ssMoment": "简支梁，跨度 6 m，均布荷载 12 kN/m：最大弯矩",
+        "ssDeflection": "同一根梁：最大挠度",
+        "cantilever": "悬臂梁，长 4 m，自由端作用 18 kN：固定端弯矩",
+        "fixed": "两端固定梁，跨度 6 m，均布荷载 10 kN/m：梁端弯矩",
+        "propped": "一端固定一端简支梁，跨度 6 m，均布荷载 10 kN/m：简支端支反力"
+      }
+    },
+    "teaching": {
+      "title": "为课堂而设计",
+      "lede": "把模型放进幻灯片或讲义，每个学生打开的都是同一个模型。",
+      "link": "用 EduBeam 教学",
+      "slideCourse": "结构力学",
+      "slideTitle": "第 7 讲：桁架",
+      "slideBody": "华伦桁架，三个节点各作用 8 kN 的荷载。哪些杆件受拉？",
+      "shareLabel": "分享链接",
+      "copy": "复制",
+      "copied": "已复制",
+      "items": {
+        "share": {
+          "title": "模型就是一个链接",
+          "body": "整个模型都保存在 URL 中。把链接放进作业，即使多年以后再打开，也和你当初留下的完全一样。"
+        },
+        "embed": {
+          "title": "放进幻灯片",
+          "body": "只读的查看器模式只显示已求解的模型，不带编辑工具，适合放在幻灯片或网页中。"
+        },
+        "mechanism": {
+          "title": "指出问题所在",
+          "body": "结构为几何可变体系（机构）时，EduBeam 不只是拒绝求解，还会演示它会怎样运动。"
+        },
+        "languages": {
+          "title": "学生的语言，学生的单位",
+          "body": "学生可以在 18 种语言中任选一种，使用国际单位制或美制单位，坐标轴与所用教材一致。"
+        }
+      },
+      "answerTitle": "答案：杆件内力",
+      "answerBody": "以受拉为正。下弦杆受拉；上弦杆和两端斜杆受压；内部斜杆拉压交替。",
+      "prevSlide": "上一张幻灯片",
+      "nextSlide": "下一张幻灯片"
+    },
+    "final": {
+      "title": "绘制第一根梁。",
+      "lede": "打开 EduBeam，选择“绘制第一根梁”。简短的引导任务会带你从空白画面开始，建立一根有支座、有荷载的梁，并得到它的内力图。",
+      "paths": {
+        "quickStart": {
+          "title": "快速入门",
+          "body": "一步步建立梁模型，并用手算校核。用时 10 分钟。"
+        },
+        "examples": {
+          "title": "示例",
+          "body": "已求解的模型，可以打开、修改，从中学习。"
+        },
+        "teaching": {
+          "title": "教学",
+          "body": "为你的课程准备分享链接、幻灯片和练习。"
+        }
+      }
+    },
+    "model": {
+      "title": "能建立哪些模型",
+      "lede": "用有限元法求解平面结构，支座、荷载和结果涵盖结构力学课程的内容。",
+      "supports": {
+        "title": "支座",
+        "items": {
+          "pin": "固定铰支座",
+          "roller": "滑动铰支座",
+          "fixed": "固定端",
+          "slider": "滑动固定端",
+          "angled": "任意角度"
+        },
+        "note": "还可施加支座沉降和给定转角。"
+      },
+      "loads": {
+        "title": "荷载",
+        "items": {
+          "point": "集中荷载",
+          "uniform": "均布荷载",
+          "trapezoidal": "梯形分布荷载",
+          "moment": "集中力偶",
+          "temperature": "温度荷载"
+        },
+        "note": "可作用在节点上或杆件上任意位置，按局部或整体坐标轴施加。"
+      },
+      "sections": {
+        "title": "截面",
+        "items": {
+          "i": "工字形与 H 形",
+          "hollow": "矩形空心",
+          "solid": "实心",
+          "tube": "圆管",
+          "polygon": "自绘多边形"
+        },
+        "note": "截面库中有 IPE、HEA、AISC W 和 HSS，也可以自己绘制任意多边形。"
+      },
+      "results": {
+        "title": "结果",
+        "note": "轴力、剪力、弯矩和变形图，以及支反力和任意一点的数值。"
+      },
+      "facts": {
+        "elements": {
+          "title": "Timoshenko 梁",
+          "body": "在需要时计入剪切变形；对于细长杆件，结果与 Euler–Bernoulli 梁理论一致。"
+        },
+        "structures": {
+          "title": "梁、刚架、桁架",
+          "body": "平面结构，任意杆端都可设铰。"
+        },
+        "sharing": {
+          "title": "链接与文件",
+          "body": "整个模型可存为一个链接或一个项目文件；图形导出为 PNG 或 SVG，表格导出为 CSV。"
+        },
+        "settings": {
+          "title": "18 种语言",
+          "body": "国际单位制或美制单位，z 轴向下或教材常用的 y 轴向上。"
+        }
+      }
+    },
+    "heritage": {
+      "title": "开源，源于课堂",
+      "body": "EduBeam 延续了最初的桌面版 EduBeam。桌面版由布拉格捷克理工大学（CTU）土木工程学院力学系开发，它的会话文件至今仍能在 EduBeam 中打开。网页版免费开源，本页面每个数值背后的求解器 {'@'}edubeam/fem 也同样免费开源。",
+      "github": "GitHub 上的 EduBeam",
+      "solver": "GitHub 上的 {'@'}edubeam/fem",
+      "team": "EduBeam 开发团队"
+    }
+  },
+  "error": {
+    "notFoundTitle": "页面不存在",
+    "notFound": "这个地址没有页面。页面可能已经移动，或者链接有拼写错误。",
+    "otherTitle": "出错了",
+    "other": "无法显示此页面。重新加载通常可以解决。",
+    "home": "首页",
+    "guide": "阅读指南",
+    "message": "支座无法固定结构：结构仍可自由转动。",
+    "figure": "一根梁只有一个固定铰支座，缺少第二个支座，在荷载作用下绕铰自由转动"
+  },
+  "problems": {
+    "families": {
+      "simple": {
+        "name": "简支梁",
+        "skill": "梁的平衡",
+        "hint": "对 A 点取矩求 B 处支反力，再由竖向力平衡求 A 处支反力。最大弯矩位于剪力为零的截面，或集中力作用处。"
+      },
+      "cantilever": {
+        "name": "悬臂梁",
+        "skill": "固定端支座",
+        "hint": "支反力全部在固定端：先列竖向力平衡方程，再对 A 点取矩。悬臂梁的最大弯矩在固定端。"
+      },
+      "overhang": {
+        "name": "外伸梁",
+        "skill": "支座处的负弯矩",
+        "hint": "对 A 点取矩求 B 处支反力。然后比较最大弯矩的两个候选位置：跨内 V = 0 处，以及外伸段使梁上缘受拉的 B 支座处。"
+      },
+      "gerber": {
+        "name": "多跨静定梁",
+        "skill": "中间铰",
+        "hint": "先算附属部分 GC：它支承在铰 G 和滑动铰支座 C 上，铰不传递弯矩。再把铰 G 传来的力反向作用在基本部分 ABG 上，按外伸梁求解。"
+      },
+      "threeHinged": {
+        "name": "三铰刚架",
+        "skill": "水平推力与顶铰",
+        "hint": "分别对 A 点和 E 点取矩，求出竖向支反力。再在顶铰 C 处截开（该处 M = 0），取一半为隔离体对 C 点取矩，即得水平推力。"
+      },
+      "truss": {
+        "name": "华伦桁架",
+        "skill": "节点法与截面法",
+        "hint": "先由整体平衡求支反力。再作截面截断三根杆，其中一根为所求杆件，对另两根杆的交点取矩；若所求杆为斜杆，则改列竖向力平衡方程。"
+      },
+      "continuous": {
+        "name": "两跨连续梁",
+        "skill": "一次超静定",
+        "hint": "一次超静定：取 B 支座处的弯矩为未知量。由三弯矩方程（A、C 处 M = 0）可直接求出，再逐跨求支反力。"
+      },
+      "portal": {
+        "name": "门式刚架",
+        "skill": "超静定刚架",
+        "hint": "一次超静定：解除 D 处的水平约束，分别求荷载和 D 处水平单位力作用下 D 点的水平位移（虚功原理，用 M 图计算），令 D 点的总水平位移为零。"
+      }
+    },
+    "statement": {
+      "simple": "跨度 {L} m 的简支梁 AB，A 端为固定铰支座，B 端为滑动铰支座，梁上作用有{loads}。",
+      "cantilever": "长 {L} m 的悬臂梁，A 端为固定端，全长作用均布荷载 q = {q} kN/m，自由端 B 作用集中力 F = {F} kN。",
+      "cantileverMoment": "长 {L} m 的悬臂梁，A 端为固定端，全长作用均布荷载 q = {q} kN/m，自由端 B 作用集中力 F = {F} kN 和大小为 {M} kNm 的逆时针集中力偶。",
+      "overhang": "外伸梁 ABC，A 为固定铰支座，B 为滑动铰支座，跨度 AB = {L} m，外伸段 BC 长 {c} m。AB 跨内作用均布荷载 q = {q} kN/m，外伸端 C 作用集中力 F = {F} kN。",
+      "overhangAll": "外伸梁 ABC，A 为固定铰支座，B 为滑动铰支座，跨度 AB = {L} m，外伸段 BC 长 {c} m。全长 AC 作用均布荷载 q = {q} kN/m，外伸端 C 作用集中力 F = {F} kN。",
+      "gerber": "多跨静定梁，A 为固定铰支座，B、C 为滑动铰支座，中间铰 G 位于 B 右侧 {g} m 处；AB = {L1} m，GC = {L3} m。",
+      "gerberLoad": "全梁作用均布荷载 q = {q} kN/m。",
+      "gerberLoadForce": "全梁作用均布荷载 q = {q} kN/m，AB 跨中作用集中力 F = {F} kN。",
+      "threeHinged": "跨度 {L} m、高 {H} m 的刚架，A、E 处为固定铰支座，C 处为顶铰。",
+      "threeHingedWhole": "横梁全长作用均布荷载 q = {q} kN/m。",
+      "threeHingedHalf": "横梁左半跨作用均布荷载 q = {q} kN/m。",
+      "threeHingedWholeForce": "横梁全长作用均布荷载 q = {q} kN/m，B 点作用水平向右的集中力 F = {F} kN。",
+      "threeHingedHalfForce": "横梁左半跨作用均布荷载 q = {q} kN/m，B 点作用水平向右的集中力 F = {F} kN。",
+      "truss": "华伦桁架共 {panels}，节间长度 {d} m，桁高 {h} m，A 为固定铰支座，{end} 为滑动铰支座。",
+      "panels": "{n} 个节间",
+      "trussLoadAll": "上弦各节点均作用竖直向下的荷载 F = {F} kN。",
+      "trussLoad": "节点 {joints} 各作用竖直向下的荷载 F = {F} kN。",
+      "continuous": "两跨连续梁 ABC，A 为固定铰支座，B、C 为滑动铰支座，两跨跨度分别为 {L1} m 和 {L2} m，左跨作用均布荷载 q = {q} kN/m。",
+      "continuousBoth": "两跨连续梁 ABC，A 为固定铰支座，B、C 为滑动铰支座，两跨跨度分别为 {L1} m 和 {L2} m，两跨均作用均布荷载 q = {q} kN/m。",
+      "portal": "跨度 {L} m、高 {H} m 的刚架，A、D 处为固定铰支座，横梁 BC 上作用均布荷载 q = {q} kN/m。",
+      "portalForce": "跨度 {L} m、高 {H} m 的刚架，A、D 处为固定铰支座，横梁 BC 上作用均布荷载 q = {q} kN/m，B 点作用水平向右的集中力 F = {F} kN。",
+      "advancedNote": "EI 为常数，不计剪切变形。"
+    },
+    "load": {
+      "udlSpan": "满跨 q = {q} kN/m 的均布荷载",
+      "pointFromA": "距 A 点 {a} m 处 F = {F} kN 的集中力",
+      "momentAtB": "作用于 B 端、大小为 {M} kNm 的逆时针集中力偶"
+    },
+    "task": {
+      "beam": "试求支座反力和最大弯矩。",
+      "bar": "试求支座反力和杆 {bar} 的轴力。"
+    },
+    "answer": {
+      "horizontal": "{node} 处水平支反力",
+      "vertical": "{node} 处竖向支反力",
+      "fixingMoment": "{node} 处支座反力矩",
+      "bar": "杆 {bar} 的轴力",
+      "largestMoment": "最大弯矩（绝对值）"
+    },
+    "unit": {
+      "kN": "kN",
+      "kNm": "kNm"
+    }
+  },
+  "library": {
+    "getStarted": "快速入门",
+    "by": "作者：{author}",
+    "fromRepo": "尚未发布到 npm：上面这行命令从 GitHub 安装。",
+    "comingToNpm": "即将发布到 npm。源代码在 GitHub 上。"
+  },
+  "solver": {
+    "tagline": "用 TypeScript 编写的平面刚架有限元求解器。",
+    "seo": {
+      "title": "{'@'}edubeam/fem：TypeScript 编写的平面刚架有限元求解器",
+      "description": "用 TypeScript 编写的平面梁、刚架和桁架有限元求解器：支持铰、杆件荷载、温度荷载、支座沉降和荷载工况，给出支反力和精确内力。EduBeam 背后的计算引擎。"
+    },
+    "run": {
+      "title": "在本页面运行",
+      "lede": "左侧代码在页面加载时已在你的浏览器中运行。右侧数值是它的返回结果，插图也由 {plot} 根据同一求解器的结果绘制。",
+      "plusShear": "{formula} + 剪切变形项"
+    },
+    "features": {
+      "title": "功能",
+      "analyses": {
+        "title": "分析",
+        "body": "线性静力分析，荷载工况数量不限。节点之间的内力图是精确的，无需加密网格。"
+      },
+      "elements": {
+        "title": "单元",
+        "body": "x–z 平面内的两节点 Timoshenko 梁单元。两端铰接即为桁架杆。"
+      },
+      "loads": {
+        "title": "荷载",
+        "body": "节点力和力矩，杆件上的集中荷载、均布荷载和梯形分布荷载，温度荷载，支座沉降。"
+      },
+      "results": {
+        "title": "结果",
+        "body": "杆件任意位置的 N、V、M，变形曲线，单元端力，位移和支反力。"
+      },
+      "reference": "全部类和方法"
+    },
+    "behind": {
+      "title": "EduBeam 背后的求解器",
+      "body": "EduBeam 中的每张内力图、每个支反力和挠度，以及本网站的每幅插图，都由 {name} 计算。",
+      "link": "了解 EduBeam"
+    }
+  },
+  "plot": {
+    "tagline": "绘制平面结构及其计算结果的 Vue 组件，风格与本站插图一致。",
+    "seo": {
+      "title": "{'@'}edubeam/plot：用于 Vue 的结构图组件",
+      "description": "像教材那样绘制平面结构、荷载、支反力和 N、V、M 图的 Vue 组件，可用于课程网页、幻灯片、习题单和独立的 SVG 文件。"
+    },
+    "try": {
+      "title": "动手试试",
+      "lede": "本页面上由 {'@'}edubeam/fem 求解的刚架。修改要绘制的内容，代码随之变化。",
+      "labelStyle": "数值标注方向",
+      "horizontal": "水平",
+      "axis": "沿纵坐标"
+    },
+    "teaching": {
+      "title": "为教学材料而设计",
+      "lede": "用代码写成的模型是一幅不会过时的插图：改一个数，图形、支反力和内力图都随之更新。随机种子（seed）决定生成哪道题，同一个种子总是得到同一道题。本站的{practice}和{exam}都是这样做出来的。",
+      "practice": "结构力学练习题",
+      "exam": "试卷生成器"
+    },
+    "uses": {
+      "exercises": {
+        "title": "习题与测验",
+        "body": "按随机种子为每名学生生成一道题，附参考答案；可直接打印，也可输出为 LaTeX 和 Word 用的插图。"
+      },
+      "slides": {
+        "title": "幻灯片与讲义",
+        "body": "在 Slidev、Vue 或 Beamer 中随点击逐步呈现的插图，实时求解。"
+      },
+      "embedding": {
+        "title": "嵌入文档与应用",
+        "body": "适用于 Vite、VitePress 或 Nuxt，可在服务器端渲染，也可使用预先求解的 JSON。"
+      },
+      "print": {
+        "title": "印刷用文件",
+        "body": "颜色简洁的独立 SVG 文件，适用于 Word、LaTeX 和 Inkscape。"
+      }
+    },
+    "features": {
+      "title": "功能",
+      "style": {
+        "title": "与本站插图风格一致",
+        "body": "杆件、支座、荷载、支反力和带阴影线的内力图，画法与本站相同；还可为习题单绘制连续尺寸标注和带名称的未知支反力。"
+      },
+      "readable": {
+        "title": "任意尺寸都清晰",
+        "body": "文字和线条保持像素大小不变；可能重叠的数值会被移开或省略，绝不会被截断。"
+      },
+      "exact": {
+        "title": "精确",
+        "body": "内力图就是求解器给出的多项式：极值精确求得，集中荷载处的突变画成台阶。"
+      },
+      "fits": {
+        "title": "融入页面",
+        "body": "颜色取自你的 CSS，支持浅色和深色模式。可在服务器端渲染，不会拦截页面滚动。"
+      },
+      "components": "全部属性"
+    }
+  },
+  "practice": {
+    "seo": {
+      "title": "结构力学练习题，即时核对答案 {'|'} EduBeam",
+      "description": "免费的结构力学练习：梁、刚架和桁架，每次都是新数据。求出支反力和最大弯矩或杆件轴力，即时核对答案，再查看内力图。",
+      "ogTitle": "结构力学练习题，即时核对答案",
+      "ogDescription": "梁、刚架和桁架，每次都是新数据。即时核对支反力和弯矩，再查看内力图。"
+    },
+    "title": "结构力学练习题",
+    "lede": "每次一道新题，并附精确答案供你核对。先在纸上求解，输入你的结果，再查看内力图。",
+    "codes": "每道题都有题目编号，例如 {code}。同一编号总是对应同一道题：可以分享给同学，也可以打开老师给你的题目。",
+    "announce": "新题目：{structure}，{code}。",
+    "structures": {
+      "title": "结构类型",
+      "count": "{picked} / {total}",
+      "legend": "“换一道题”从中抽取的结构类型",
+      "determinate": "静定结构",
+      "indeterminate": "超静定结构",
+      "note": "“换一道题”会从中随机选取一种。"
+    },
+    "code": {
+      "label": "题目编号",
+      "placeholder": "编号",
+      "open": "打开",
+      "error": "这不是有效的题目编号。题目编号由一个字母和一个数字组成，例如 H2048。"
+    },
+    "newProblem": "换一道题",
+    "copyLink": "复制链接",
+    "linkCopied": "链接已复制",
+    "barForces": "杆件轴力，以受拉为正",
+    "answers": {
+      "title": "你的答案",
+      "note": "题图中的支反力按其正方向画出。若实际方向相反，答案为负值。",
+      "field": "{label}，{direction}，单位 {unit}",
+      "fieldMagnitude": "{label}，单位 {unit}"
+    },
+    "positive": {
+      "right": "向右为正",
+      "up": "向上为正",
+      "counterClockwise": "逆时针为正",
+      "tension": "受拉为正",
+      "magnitude": "绝对值"
+    },
+    "mark": {
+      "correct": "正确",
+      "exact": "精确答案：",
+      "sign": "符号？",
+      "signLong": "数值正确，符号错误",
+      "wrong": "不正确"
+    },
+    "verdict": {
+      "allRight": "全部正确。内力图已画在题图上。",
+      "sign": "{total} 个答案中答对 {right} 个。标有“{sign}”的答案数值正确，但方向相反。",
+      "some": "{total} 个答案中答对 {right} 个。误差在 1 % 以内即算正确。",
+      "revealed": "精确答案已显示在输入框旁，内力图已画在题图上。"
+    },
+    "check": "核对答案",
+    "nextProblem": "下一题",
+    "hint": "提示",
+    "showAnswers": "显示答案",
+    "solved": "在本设备上已完成 {n} 道题。",
+    "about": {
+      "answers": {
+        "title": "答案从何而来",
+        "body": "每道题都由 EduBeam 背后的求解器 {solver} 在你的浏览器中求解，并由 {plot} 绘图。最大弯矩是精确求得的，而不是从采样曲线上读取的。"
+      },
+      "signs": {
+        "title": "符号与单位",
+        "body": "答案以 kN 和 kNm 为单位。除非题目另有说明，荷载均竖直向下。支反力以向右、向上和逆时针为正，各输入框旁均有标示；杆件轴力以受拉为正。内力图遵循 EduBeam 的{conventions}。",
+        "conventions": "符号约定"
+      },
+      "teachers": {
+        "title": "致教师",
+        "body": "{exam}可以把这些题目生成试卷，每名学生一套不同的试卷，并附参考答案。学生事后可凭题目编号在这里核对自己的答案。",
+        "exam": "试卷生成器"
+      }
+    }
+  },
+  "exam": {
+    "seo": {
+      "title": "结构力学试卷生成器：可打印的试卷与参考答案 {'|'} EduBeam",
+      "description": "在浏览器中生成结构力学测验：梁、刚架和桁架，数据自动生成，每名学生一套不同的试卷，附参考答案和用于 LaTeX 与 Word 的 SVG 插图。免费，无需安装。",
+      "ogTitle": "结构力学试卷生成器：可打印的试卷与参考答案",
+      "ogDescription": "自动生成梁、刚架和桁架题目，每名学生一套试卷，附参考答案和 SVG 插图。免费，在浏览器中使用。"
+    },
+    "title": "试卷生成器",
+    "lede": "生成结构力学试卷，每名学生一套不同的试卷，并附参考答案。所有内容都在你的浏览器中生成，不会发送到任何地方；设置保存在页面地址中，收藏为书签即可再次得到相同的试卷。",
+    "defaultTitle": "结构力学测验",
+    "settings": {
+      "title": "标题",
+      "subtitle": "副标题",
+      "subtitlePlaceholder": "课程、日期、考试时间",
+      "problems": "题目",
+      "problem": "第 {n} 题",
+      "determinate": "静定结构",
+      "indeterminate": "超静定结构",
+      "remove": "删除第 {n} 题",
+      "add": "添加题目",
+      "problemsNote": "每套试卷都包含这些题目，顺序相同，数据各不相同。最多 {max} 道。",
+      "versions": "套数",
+      "versionsNote": "每名学生一套：最多 {max} 套。",
+      "number": "试卷编号",
+      "newNumber": "新编号",
+      "newNumberTitle": "为每道题生成新数据",
+      "numberNote": "同一编号总是生成相同的试卷。",
+      "onPapers": "试卷内容",
+      "nameLine": "姓名栏",
+      "working": "答题空白",
+      "key": "末尾附参考答案",
+      "codes": "题目编号",
+      "codesNote": "用于作业：学生可在{practice}页面上核对答案，该页面也会给出解答。用于测验时不要勾选。",
+      "practicePage": "结构力学练习题"
+    },
+    "zipNote": ".zip 文件包含所有插图和参考答案的 SVG 文件（用于 LaTeX 和 Word），以及供批改用的 CSV 答案表。",
+    "summary": {
+      "papers": "{n} 份试卷",
+      "problems": "{n} 道题",
+      "plain": "{papers}，每份 {problems}",
+      "withKey": "{papers}，每份 {problems}，附参考答案",
+      "withKeys": "{papers}，每份 {problems}，附各套参考答案"
+    },
+    "jump": {
+      "label": "跳转到试卷",
+      "placeholder": "跳转到……",
+      "papers": "试卷",
+      "keys": "参考答案",
+      "key": "第 {n} 套参考答案"
+    },
+    "version": "第 {n} 套",
+    "download": "下载 .zip",
+    "downloadTitle": "所有插图和参考答案的 SVG 文件（用于 LaTeX 和 Word），以及供批改用的 CSV 答案表",
+    "print": "打印",
+    "printLong": "打印或另存为 PDF",
+    "paper": {
+      "name": "姓名",
+      "rules": "力的单位为 kN，力矩的单位为 kNm。除非题目另有说明，荷载均竖直向下。支反力是支座作用在结构上的力，按其正方向画出：向右、向上和逆时针为正。答案为负表示实际方向相反。杆件轴力以受拉为正。",
+      "check": "在 {url} 核对你的答案"
+    },
+    "key": {
+      "title": "参考答案",
+      "version": "{title}，第 {n} 套",
+      "exam": "试卷编号 {n}"
+    },
+    "tension": "受拉 +",
+    "solutionFigure": "{name}：解答"
+  },
+  "exerciseGenerator": {
+    "solveIt": "在结构力学练习题页面上求解",
+    "exercise": "题目",
+    "key": "参考答案",
+    "solution": "解答",
+    "caption": "在你的浏览器中生成：随机种子选定结构及其数据，{'@'}edubeam/fem 求解，{'@'}edubeam/plot 绘制题目和解答。整套试卷可用{exam}生成。",
+    "exam": "试卷生成器",
+    "newExercise": "换一道题"
+  },
+  "ui": {
+    "menu": "菜单",
+    "darkMode": "深色模式",
+    "lightMode": "浅色模式",
+    "language": "语言：{name}",
+    "guideNav": "指南",
+    "copy": "复制",
+    "copied": "已复制",
+    "copyCode": "复制代码",
+    "docs": "文档",
+    "elementSketch": "局部坐标系中的单元"
+  },
+  "heroFigure": {
+    "aria": "外伸梁承受均布荷载和一个可移动的集中荷载，以及它的剪力图、弯矩图和挠度图",
+    "slider": "20 kN 集中荷载的位置",
+    "loadAt": "位于 {x} m 处",
+    "hint": "拖动荷载，或将指针移到内力图上读取数值。",
+    "fromA": "距 A 点 {x} m",
+    "reactions": "支反力 A 处 {a} kN、B 处 {b} kN",
+    "sagging": "最大正弯矩 {m} kNm",
+    "hogging": "B 支座处负弯矩 {m} kNm"
+  },
+  "plotTexts": {
+    "structure": "结构",
+    "structureWith": "结构及其{parts}",
+    "layers": {
+      "N": "轴力图",
+      "V": "剪力图",
+      "M": "弯矩图",
+      "w": "变形图",
+      "reactions": "支反力",
+      "loads": "荷载"
+    },
+    "loadHandle": "荷载 {load} 的位置",
+    "loadPosition": "距梁起点 {metres} m",
+    "stack": "梁及其荷载",
+    "stackWith": "梁及其荷载，下方为{rows}",
+    "rows": {
+      "N": "轴力图",
+      "V": "剪力图",
+      "M": "弯矩图",
+      "w": "挠度图"
+    },
+    "temperatureUniform": "ΔT",
+    "temperatureGradient": "ΔTb − ΔTt"
   }
 }

@@ -1,88 +1,171 @@
 ---
-description: "EduBeam 是什么：一款免费的浏览器端有限元求解器，用于二维梁、框架和桁架。介绍它能做什么、暂不支持什么、适合哪些人，以及本指南的结构。"
+description: "EduBeam 是什么：一款免费的浏览器端有限元求解器，用于二维梁、刚架和桁架。它能做什么、不能做什么、适合谁、本指南如何编排，以及背后的开源库。"
+source: site
 ---
 
 # 简介
 
-[EduBeam]{.edubeam} 是一款免费的、基于浏览器的**平面结构分析**工具，适用于梁、框架和桁架。你画出结构、添加支座和荷载，只要修改任何内容，有限元求解器就会立即重新计算全部结果。没有*求解*按钮，无需安装，也无需注册。
+[EduBeam]{.edubeam} 是一款在浏览器中运行的免费结构分析应用，用来计算**梁、刚架和桁架**。画出结构，加上支座和荷载：每改动一处，有限元求解器就重新计算内力图、支反力和挠度。没有*求解*按钮，无需安装，也无需注册。
 
-在新标签页中[打开 EduBeam](https://run.edubeam.app/?lang=cn){target="_blank"}，然后跟着[快速入门](/zh/guide/quick-start)一起操作。
+::div{.actions}
+[打开 EduBeam ↗](https://run.edubeam.app/?lang=cn){target="_blank"} [快速入门（10 分钟）](/zh/guide/quick-start)
+::
 
 ![EduBeam 中的三铰刚架：荷载为橙色，支反力为紫色，弯矩为红色，变形图为灰色](/screenshots/zh/hero.webp)
 
-## 第一次访问 {#your-first-visit}
+:span{#your-first-visit}
 
-第一次打开应用时，欢迎对话框会询问你希望如何开始，以及要使用哪种单位和坐标轴。两者之后都可以在[设置](/zh/essentials/units-settings)中更改。
+## 能做什么 {#what-it-does}
 
-![欢迎对话框](/screenshots/zh/welcome.webp){.shot-lg}
+::card-grid{cols="2"}
+:::card{title="结构" icon="lucide:triangle" to="/zh/essentials/elements"}
+x–z 平面内的梁、连续梁、刚架和桁架，由 Timoshenko 梁单元组成。设置端部铰接，杆件就成为桁架杆。
+:::
+:::card{title="支座" icon="lucide:anchor" to="/zh/essentials/nodes-supports#supports"}
+固定铰支座、滑动铰支座、固定端、滑动固定端，或 `Dx`、`Dz`、`Ry` 的任意约束组合，按符号选取。还有斜支座和支座沉降。
+:::
+:::card{title="荷载" icon="lucide:arrow-down-to-line" to="/zh/essentials/loads"}
+作用在节点上或杆件任意位置的力和力偶，均布和梯形分布荷载，温度荷载，以及给定位移。
+:::
+:::card{title="截面" icon="lucide:shapes" to="/zh/essentials/elements#cross-sections"}
+欧洲和美国截面库，或自己画的任意多边形，自动计算 $A$、$I_y$、$I_z$、$I_{yz}$、主轴和回转半径。
+:::
+:::card{title="结果" icon="lucide:chart-spline" to="/zh/essentials/results"}
+**N**、**V**、**M** 图，变形图，支反力，节点位移，单元端力和单元刚度矩阵。
+:::
+:::card{title="分析" icon="lucide:calculator" to="/zh/elements/analysis"}
+线性静力分析，对线性模型给出精确解，无需加密网格。结构几何可变时，EduBeam 会说明原因，并用动画显示它如何运动。
+:::
+:::card{title="文件" icon="lucide:folder-open" to="/zh/essentials/import-export"}
+项目存为 JSON，整个模型存为链接，图形导出为 PNG 或 SVG，结果导出为 CSV。被替换的模型会保留下来，数据不会离开你的设备。
+:::
+:::card{title="单位" icon="lucide:ruler" to="/zh/essentials/units-settings"}
+一键切换国际单位制或美制单位，也可逐个单位设置。z 轴向下，或采用教材中的 y 轴向上。
+:::
+::
 
-- **带我看看**依次介绍菜单、撤销与重做、视图按钮、显示选项、网格与单位，以及底部栏。
-- **绘制第一根梁**是一个七步的引导任务。你用鼠标画一根梁，给它加支座、加荷载，并读取结果。角落里的小卡片会提示下一步该做什么。
-- **打开示例**会打开现成模型的示例库。
+## 暂时不能做什么 {#what-it-does-not-do-yet}
 
-这三项也都在 **☰ 菜单**中，随时可以重新进入。
+事先了解这些限制，可以少走弯路：
 
-![绘制第一根梁：操作时引导卡片一直停留在角落](/screenshots/zh/first-beam-task.webp)
+::div{.limits}
+- **仅限二维**。不考虑平面外行为，不能分析三维刚架。
+- **仅限线性静力分析**。不考虑二阶（P–Δ）效应、屈曲、动力和塑性。
+- **只有一个荷载工况**。没有荷载组合和包络图：每个工况各存为一个文件或链接。
+- **不计自重**。请把自重作为分布荷载施加。
+- **不做设计验算**。EduBeam 给出内力和位移，规范验算由你自己完成。
+::
 
-## 功能 {#what-it-does}
-
-| 方面 | 功能 |
-| --- | --- |
-| **结构** | 平面（x–z）梁、连续梁、框架和桁架，由节点和二维 Timoshenko 梁单元组成。端部铰接可把任何杆件变为桁架杆。 |
-| **支座** | 固定铰支座、滑动铰支座、固定端、滑动固定端，以及受约束 `Dx`、`Dz`、`Ry` 的其他任意组合，按符号选取。通过节点角度设置旋转支座。支座沉降。 |
-| **荷载** | 节点力和力矩、位移约束、均布和梯形线荷载、杆件上的集中力和力矩，以及均匀或梯度温度荷载。 |
-| **截面** | 材料库和截面库（欧洲和美国），以及可为任意形状计算 $A$、$I_y$、$I_z$、$I_{yz}$、主轴和回转半径的多边形编辑器。 |
-| **结果** | 变形图、轴力 **N**、剪力 **V**、弯矩 **M**、支反力、节点位移、单元端力以及单元刚度矩阵。 |
-| **分析** | 单一荷载工况的线性静力分析。对线性模型而言结果是精确的，因此无需加密网格。当结构无法求解时，EduBeam 会说明原因，并以动画显示它可能的运动方式。 |
-| **文件** | 以 JSON 保存和打开项目，用链接分享整个模型，把图形导出为 PNG 或 SVG，把结果导出为 CSV。最近被替换的模型会被保留，便于找回。所有数据都留在你的设备上。 |
-| **单位** | 一键切换国际单位制或美制单位，也可逐个物理量单独设置。坐标轴可选 x 向右、z 向下，或 x 向右、y 向上。 |
-
-## 暂不支持的功能 {#what-it-does-not-do-yet}
-
-事先了解限制可以节省时间：
-
-- **仅限二维。** 没有平面外行为，没有三维框架。
-- **仅限线性静力。** 没有二阶（P–Δ）效应，没有屈曲，没有动力分析，没有塑性。
-- **单一荷载工况。** 没有荷载组合或包络。请分别为每个工况建模，并各自保存为文件或分享链接。
-- **没有自重。** 如有需要，请以线荷载的形式施加。
-- **没有设计验算。** EduBeam 给出内力和位移，规范验算需要你自己完成。
-
-如果某个缺失的功能对你很重要，请[提交 issue](https://github.com/janvorisek/edubeam/issues)。
+如果你需要的功能还没有，请[提交 issue](https://github.com/janvorisek/edubeam/issues)。
 
 ::elementarium-promo{placement="introduction"}
 ::
 
-## 适合哪些人？ {#who-is-it-for}
+## 适合谁用 {#who-is-it-for}
 
-- 学习结构力学、希望手算结果立即得到反馈的**学生**。请看[手算校核结果](/zh/guide/verification)。
-- 在投影仪上用 18 种语言中的任意一种，实时演示支座、铰和荷载如何改变内力的**教师**。请看[用 EduBeam 教学](/zh/guide/teaching)。
-- 在打开更重型的桌面软件之前，想快速做一次合理性校核的**工程师**。
+::card-grid{cols="2"}
+:::card{title="学生" icon="lucide:graduation-cap" to="/zh/practice"}
+手算结果立即得到验证，练习题边做边核对答案。
+:::
+:::card{title="教师" icon="lucide:presentation" to="/zh/guide/teaching"}
+在投影仪上现场演示支座、铰和荷载如何改变内力，支持 18 种语言，还能给每名学生打印一份不同的试卷。
+:::
+:::card{title="工程师" icon="lucide:hard-hat" to="/zh/elements/analysis"}
+打开更大型的桌面软件之前，先快速做一次合理性校核，求解的每一步都有文档说明。
+:::
+:::card{title="开发者" icon="lucide:code-xml" to="#libraries"}
+EduBeam 背后的求解器和绘图功能都是开源库，可以用在你自己的代码里。
+:::
+::
 
-## 本指南的结构 {#how-this-guide-is-organised}
+## 如何查阅本指南 {#how-this-guide-is-organised}
 
-1. **入门。** 本页、[10 分钟快速入门](/zh/guide/quick-start)和现成的[示例](/zh/examples/)。
-2. **教程。** 从头到尾的完整模型，并经过手算核对：[三铰刚架](/zh/tutorials/three-hinged-frame)和[平面桁架](/zh/tutorials/truss)。
-3. **建模。** 每个基本组成部分各一页：[用户界面](/zh/essentials/user-interface)、[节点与支座](/zh/essentials/nodes-supports)、[单元、材料与截面](/zh/essentials/elements)、[荷载](/zh/essentials/loads)，以及[单位与设置](/zh/essentials/units-settings)。
-4. **结果。** 如何[阅读内力图和表格](/zh/essentials/results)，以及如何[校核它们](/zh/guide/verification)。
-5. **文件与分享。** [项目、分享链接、图像与 CSV 导出](/zh/essentials/import-export)，以及[用 EduBeam 教学](/zh/guide/teaching)。
-6. **参考。** [键盘、鼠标与触控](/zh/reference/shortcuts)、[疑难解答](/zh/reference/troubleshooting)和[常见问题](/zh/faq/)。
-7. **理论手册。** [符号约定](/zh/elements/conventions)，以及[梁单元](/zh/elements/beam)和[桁架单元](/zh/elements/truss)的单元列式。
+侧边栏把各页分为以下几组。应用中的 **?** 按钮会以你的语言打开本指南中对应的页面。
 
-应用中的 **?** 图标会以你的语言打开本指南中对应的页面。
+::card-grid{cols="2"}
+:::card{title="入门" icon="lucide:flag" to="/zh/guide/quick-start"}
+本页，以及快速入门：10 分钟建好第一根梁。
+:::
+:::card{title="建模" icon="lucide:pencil-ruler" to="/zh/essentials/user-interface"}
+用户界面，节点与支座，单元、材料与截面，荷载，单位与设置。
+:::
+:::card{title="查看结果" icon="lucide:chart-spline" to="/zh/essentials/results"}
+内力图和结果表格，以及如何手算核对。
+:::
+:::card{title="分享与教学" icon="lucide:share-2" to="/zh/essentials/import-export"}
+项目文件、分享链接、图像和 CSV 导出，以及用 EduBeam 教学。
+:::
+:::card{title="教程" icon="lucide:triangle" to="/zh/tutorials/inclined-beam"}
+斜梁、三铰刚架、平面桁架，以及有支座沉降的连续梁，每个都一步步建模并手算核对。
+:::
+:::card{title="示例" icon="lucide:library" to="/zh/examples/"}
+六个一键打开的现成模型，附练习和答案。
+:::
+:::card{title="理论手册" icon="lucide:sigma" to="/zh/elements/conventions"}
+坐标系与符号约定，梁单元，桁架单元，以及 EduBeam 如何求解模型。
+:::
+:::card{title="帮助" icon="lucide:life-buoy" to="/zh/reference/shortcuts"}
+键盘、鼠标与触控，疑难解答，以及常见问题。
+:::
+::
+
+## 打造自己的工具 {#libraries}
+
+EduBeam 建立在两个开源库之上，本网站提供了它们的文档。可以用它们在脚本中求解结构，为每名学生生成不同的习题，或为幻灯片和讲义绘制插图。
+
+::card-grid{cols="2"}
+:::card{title="@edubeam/fem" icon="lucide:package" to="/zh/solver"}
+EduBeam 背后的有限元求解器，用 TypeScript 编写：十几行代码就能建立、求解一根梁并读取结果，在浏览器和 Node 中均可运行。
+:::
+:::card{title="@edubeam/plot" icon="lucide:spline" to="/zh/plot"}
+Vue 3 组件，把已求解的结构连同荷载、支反力以及 N、V、M 图绘制成 SVG。
+:::
+::
 
 ## 语言 {#languages}
 
-界面提供 English、Bahasa Indonesia、Čeština、Deutsch、Español、Français、Italiano、Polski、Português、Tiếng Việt、Русский、Türkçe、Українська、हिन्दी、日本語、한국어、ไทย 和汉语。EduBeam 会根据浏览器选择语言。可在**设置 → 语言与区域**中更改，或用 `?lang=` 参数打开应用，例如 [run.edubeam.app/?lang=cn](https://run.edubeam.app/?lang=cn){target="_blank"}。
+EduBeam 支持 18 种语言，默认使用浏览器的语言。可以在**设置 → 语言与区域**中切换，也可以在这里选择：
+
+::div{.chips}
+- [:icon{name="circle-flags:lang-en"} English](https://run.edubeam.app/?lang=en){target="_blank"}
+- [:icon{name="circle-flags:lang-id"} Bahasa Indonesia](https://run.edubeam.app/?lang=id){target="_blank"}
+- [:icon{name="circle-flags:lang-cs"} Čeština](https://run.edubeam.app/?lang=cs){target="_blank"}
+- [:icon{name="circle-flags:lang-de"} Deutsch](https://run.edubeam.app/?lang=de){target="_blank"}
+- [:icon{name="circle-flags:lang-es"} Español](https://run.edubeam.app/?lang=es){target="_blank"}
+- [:icon{name="circle-flags:lang-fr"} Français](https://run.edubeam.app/?lang=fr){target="_blank"}
+- [:icon{name="circle-flags:lang-it"} Italiano](https://run.edubeam.app/?lang=it){target="_blank"}
+- [:icon{name="circle-flags:lang-pl"} Polski](https://run.edubeam.app/?lang=pl){target="_blank"}
+- [:icon{name="circle-flags:lang-pt-br"} Português](https://run.edubeam.app/?lang=pt){target="_blank"}
+- [:icon{name="circle-flags:lang-vi"} Tiếng Việt](https://run.edubeam.app/?lang=vi){target="_blank"}
+- [:icon{name="circle-flags:lang-ru"} Русский](https://run.edubeam.app/?lang=ru){target="_blank"}
+- [:icon{name="circle-flags:lang-tr"} Türkçe](https://run.edubeam.app/?lang=tr){target="_blank"}
+- [:icon{name="circle-flags:lang-uk"} Українська](https://run.edubeam.app/?lang=uk){target="_blank"}
+- [:icon{name="circle-flags:lang-hi"} हिन्दी](https://run.edubeam.app/?lang=hi){target="_blank"}
+- [:icon{name="circle-flags:lang-ja"} 日本語](https://run.edubeam.app/?lang=ja){target="_blank"}
+- [:icon{name="circle-flags:lang-ko"} 한국어](https://run.edubeam.app/?lang=ko){target="_blank"}
+- [:icon{name="circle-flags:lang-th"} ไทย](https://run.edubeam.app/?lang=th){target="_blank"}
+- [:icon{name="circle-flags:lang-zh"} 中文](https://run.edubeam.app/?lang=cn){target="_blank"}
+::
+
+语言也可以由链接指定：`run.edubeam.app/?lang=cn` 会以中文打开。
 
 ## 作者与致谢 {#authors-credits}
 
-[EduBeam]{.edubeam} 由 [Jan Voříšek](https://github.com/janvorisek) 主导，他是现代网页版的维护者和产品设计师。浏览器版本独立于 CTU 开发。最初的 Windows 和 Linux 桌面版 EduBeam 由 [Bořek Patzák](http://ksm.fsv.cvut.cz/~bp/)、[Jan Stránský](https://mech.fsv.cvut.cz/~stransky/en/) 和 [Vít Šmilauer](https://mech.fsv.cvut.cz/~smilauer/) 在[布拉格捷克理工大学（CTU）土木工程学院](https://www.fsv.cvut.cz/en)力学系开发。求解器是开源的 [@edubeam/fem](/solver) 库。
+[EduBeam]{.edubeam} 由 [Jan Voříšek](https://github.com/janvorisek) 作为独立项目开发。它的前身是 Windows 和 Linux 上的桌面版 EduBeam，由[布拉格捷克理工大学（CTU）土木工程学院](https://www.fsv.cvut.cz/en)力学系的 [Bořek Patzák](http://ksm.fsv.cvut.cz/~bp/)、[Jan Stránský](https://mech.fsv.cvut.cz/~stransky/en/) 和 [Vít Šmilauer](https://mech.fsv.cvut.cz/~smilauer/) 开发；桌面版的会话文件至今仍能在 EduBeam 中打开。求解器 [@edubeam/fem](/zh/solver) 由 Bořek Patzák 的第一版发展而来。应用和求解器都是开源的，采用 GPL-3.0 许可证。
 
-::team-members{size="small" :members='[{"avatar":"https://www.github.com/janvorisek.png","name":"Jan Voříšek","title":"首席开发者与产品设计师","links":[{"icon":"github","link":"https://github.com/janvorisek"},{"icon":"twitter","link":"https://twitter.com/janvorisekdev"}]},{"avatar":"https://www.github.com/bpatzak.png","name":"Bořek Patzák","title":"有限元求解器，原版应用作者","links":[{"icon":"github","link":"https://github.com/bpatzak"}]}]'}
+::team-members{size="small" :members='[{"avatar":"https://www.github.com/janvorisek.png","name":"Jan Voříšek","title":"首席开发者与产品设计师","links":[{"icon":"github","link":"https://github.com/janvorisek"},{"icon":"twitter","link":"https://twitter.com/janvorisekdev"}]},{"avatar":"https://www.github.com/kelidas.png","name":"Václav Sadílek","title":"开发者：触控操作、绘图性能、荷载与支座","links":[{"icon":"web","link":"https://www.stm.fce.vutbr.cz/sadilek/"},{"icon":"github","link":"https://github.com/kelidas"}]},{"avatar":"https://www.github.com/bpatzak.png","name":"Bořek Patzák","title":"最初的 EduBeam 与第一版有限元求解器","links":[{"icon":"github","link":"https://github.com/bpatzak"}]}]'}
 ::
 
 ## 参与贡献 {#contribute}
 
-- 将令人困惑的行为或 bug 作为 [GitHub issue](https://github.com/janvorisek/edubeam/issues) 提交。
-- 编辑 `docs/` 中的文件并提交 pull request，帮助改进本文档或翻译。
-- 把 EduBeam 分享给同学和同事。
+::card-grid{cols="3"}
+:::card{title="报告问题" icon="lucide:bug" to="https://github.com/janvorisek/edubeam/issues"}
+发现哪里看不懂、有错误或不能用？在 GitHub 上提交 issue，开发团队就能看到。
+:::
+:::card{title="改进翻译" icon="lucide:languages" to="https://github.com/janvorisek/edubeam/tree/main/src/locales"}
+应用的界面文字每种语言存为一个文件，欢迎提交 pull request。
+:::
+:::card{title="推荐给他人" icon="lucide:share-2"}
+把 EduBeam 推荐给同学和同事，或把模型链接放进你的讲义。
+:::
+::
