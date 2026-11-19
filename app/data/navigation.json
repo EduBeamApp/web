@@ -1230,6 +1230,8 @@
     "sidebar": [
       {
         "text": "Pierwsze kroki",
+        "icon": "lucide:flag",
+        "section": "guide",
         "items": [
           {
             "text": "Wprowadzenie",
@@ -1238,28 +1240,13 @@
           {
             "text": "Szybki start (10 min)",
             "link": "/pl/guide/quick-start"
-          },
-          {
-            "text": "Przykłady",
-            "link": "/pl/examples/"
-          }
-        ]
-      },
-      {
-        "text": "Samouczki",
-        "items": [
-          {
-            "text": "Rama trójprzegubowa",
-            "link": "/pl/tutorials/three-hinged-frame"
-          },
-          {
-            "text": "Kratownica płaska",
-            "link": "/pl/tutorials/truss"
           }
         ]
       },
       {
         "text": "Modelowanie",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
         "items": [
           {
             "text": "Interfejs użytkownika",
@@ -1285,6 +1272,8 @@
       },
       {
         "text": "Wyniki",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
         "items": [
           {
             "text": "Wyniki i wykresy",
@@ -1297,20 +1286,24 @@
         ]
       },
       {
-        "text": "Pliki i udostępnianie",
+        "text": "Udostępnianie i nauczanie",
+        "icon": "lucide:presentation",
+        "section": "guide",
         "items": [
           {
-            "text": "Import, eksport i udostępnianie",
+            "text": "Pliki, linki i eksport",
             "link": "/pl/essentials/import-export"
           },
           {
-            "text": "Nauczanie z EduBeam",
+            "text": "Nauczanie z EduBeamem",
             "link": "/pl/guide/teaching"
           }
         ]
       },
       {
-        "text": "Informacje dodatkowe",
+        "text": "Pomoc",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
         "items": [
           {
             "text": "Klawiatura, mysz i dotyk",
@@ -1327,22 +1320,69 @@
         ]
       },
       {
-        "text": "Podręcznik teoretyczny",
+        "text": "Samouczki",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
         "items": [
           {
-            "text": "Układ współrzędnych i konwencje znaków",
+            "text": "Belka pochyła",
+            "link": "/pl/tutorials/inclined-beam"
+          },
+          {
+            "text": "Rama trójprzegubowa",
+            "link": "/pl/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Kratownica płaska",
+            "link": "/pl/tutorials/truss"
+          },
+          {
+            "text": "Belka ciągła i osiadanie podpory",
+            "link": "/pl/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "Zadania i przykłady",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Zadania ze statyki",
+            "link": "/pl/practice"
+          },
+          {
+            "text": "Generator kolokwiów",
+            "link": "/pl/exam"
+          },
+          {
+            "text": "Przykłady",
+            "link": "/pl/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Podręcznik teoretyczny",
+        "icon": "lucide:sigma",
+        "section": "theory",
+        "items": [
+          {
+            "text": "Osie i konwencje znaków",
             "link": "/pl/elements/conventions"
           },
           {
-            "text": "Belka",
+            "text": "Element belkowy",
             "link": "/pl/elements/beam"
           },
           {
-            "text": "Kratownica",
+            "text": "Element kratownicy",
             "link": "/pl/elements/truss"
+          },
+          {
+            "text": "Jak EduBeam rozwiązuje model",
+            "link": "/pl/elements/analysis"
           }
-        ],
-        "collapsed": true
+        ]
       }
     ]
   },

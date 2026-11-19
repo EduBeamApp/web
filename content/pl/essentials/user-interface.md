@@ -1,146 +1,160 @@
 ---
-description: "Przewodnik po interfejsie EduBeam: menu główne, widok i opcje wyświetlania, nawigacja i zaznaczanie, zakładki, dolny pasek i okna pływające."
+description: "Mapa interfejsu EduBeamu: pasek aplikacji i menu ☰, widok z przyciskami i opcjami wyświetlania, zaznaczanie i edycja, tabele dolnego paska i wpisywanie wartości."
+source: site
 ---
 
 # Interfejs użytkownika
 
-[EduBeam]{.edubeam} ma trzy strefy: **pasek aplikacji** u góry, **widok** pośrodku, w którym rysujesz, oraz **dolny pasek** z tabelą dla każdego rodzaju obiektów. Gdy wiesz, co gdzie się znajduje, reszta dokumentacji stanie się zrozumiała.
+[EduBeam]{.edubeam} składa się z trzech stref: u góry jest **pasek aplikacji**, pośrodku **widok**, w którym rysujesz, a na dole **dolny pasek** z tabelą dla każdego rodzaju obiektów. Wszystko, co zrobisz w widoku, możesz zrobić także w tabelach – i odwrotnie.
 
 ![Części interfejsu, ponumerowane jak na liście poniżej](/screenshots/pl/ui-overview.webp)
 
-1. **Menu ☰**: otwieranie, zapis, udostępnianie i eksport; przykłady i przewodniki.
-2. **Przyciski paska aplikacji**: Wyczyść model i Udostępnij model.
-3. **Cofnij / Ponów** dla każdej zmiany modelu.
-4. **Przyciski widoku**: wyśrodkowanie, dopasowanie do ekranu i przełącznik opcji wyświetlania.
-5. **Opcje wyświetlania**: które wyniki i części modelu są rysowane.
-6. **Siatka, przyciąganie, celownik i jednostki.**
+1. **Menu ☰**: otwieranie, zapisywanie, udostępnianie i eksport; przykłady i oprowadzanie po aplikacji.
+2. **Wyczyść model** i **Udostępnij model**.
+3. **Cofnij** i **Ponów**.
+4. **Przyciski widoku**: wyśrodkowanie, dopasowanie do ekranu i opcje wyświetlania.
+5. **Opcje wyświetlania**: które wyniki i części modelu są rysowane.
+6. **Siatka, przyciąganie, celownik i jednostki.**
 7. **Zakładki dolnego paska**: Węzły, Elementy, Obciążenia, Materiały, Przekroje, Wyniki.
-8. **Tabela** otwartej zakładki, w której można edytować każdą wartość.
+8. **Tabela** otwartej zakładki, w której możesz edytować każdą wartość.
 
-::callout{type="tip" title="Skorzystaj z przewodnika"}
-**☰ → Oprowadź mnie** pokazuje te części po kolei bezpośrednio w aplikacji.
+::callout{type="tip" title="Daj się oprowadzić"}
+**☰ → Oprowadź mnie** pokazuje te części po kolei, bezpośrednio w aplikacji.
 ::
-
-![Oprowadź mnie, krok z opcjami wyświetlania](/screenshots/pl/tour.webp)
 
 ## Pasek aplikacji {#app-bar}
 
-| Element | Do czego służy |
-| --- | --- |
-| **Menu ☰** | Menu główne, zobacz niżej. |
-| **Wyczyść model** | Po potwierdzeniu usuwa wszystkie węzły, elementy i obciążenia. Dwa pola wyboru usuwają też materiały i przekroje. <kbd>Ctrl</kbd>+<kbd>Z</kbd> przywraca model, a ponadto jest on przechowywany w Ostatnich modelach. |
-| **Udostępnij model** | Otwiera [okno udostępniania](/pl/essentials/import-export#share-a-link) z linkiem zawierającym cały model. |
-| **Co nowego?** | Informacje o wydaniu. Otwierają się też same jeden raz po aktualizacji. |
-| **Dokumentacja** / GitHub | Ta dokumentacja i kod źródłowy. |
+- **☰** otwiera menu główne, opisane niżej.
+- **Wyczyść model** po potwierdzeniu usuwa wszystkie węzły, elementy i obciążenia; zaznacz **Usuń materiały** lub **Usuń przekroje**, aby usunąć także je. <kbd>Ctrl</kbd>+<kbd>Z</kbd> przywraca model, a ponadto model trafia na listę *Ostatnie modele*.
+- **Udostępnij model** otwiera [okno udostępniania](/pl/essentials/import-export#share-a-link) z linkiem, który zawiera cały model.
+- **Co nowego?** pokazuje informacje o wydaniu. Po aktualizacji otwierają się też same, jeden raz.
+- **Dokumentacja** otwiera ten przewodnik, a ikona GitHuba – kod źródłowy.
 
-Na telefonie mieszczą się tylko menu ☰ i Dokumentacja; wszystko inne jest w menu.
+Na telefonie mieszczą się tylko ☰ i **Dokumentacja**; **Wyczyść model** i **Udostępnij model** znajdziesz w menu.
 
 ### Menu ☰ {#the-☰-menu}
 
 ![Menu ☰](/screenshots/pl/ui-app-menu.webp){.shot-xs}
 
-| Pozycja | Do czego służy |
-| --- | --- |
-| **Otwórz projekt** / **Zapisz projekt** | Otwiera lub pobiera plik `project.json` (<kbd>Ctrl</kbd>+<kbd>O</kbd> / <kbd>Ctrl</kbd>+<kbd>S</kbd>). |
-| **Ostatnie modele** | 10 ostatnich modeli, które wyczyściłeś lub zastąpiłeś, gotowych do przywrócenia. |
-| **Eksportuj obraz** | Zapisuje rysunek jako PNG lub SVG albo kopiuje go (<kbd>Ctrl</kbd>+<kbd>P</kbd>). |
-| **Udostępnij model** | To samo co przycisk na pasku aplikacji. |
-| **Przykłady** | Galeria gotowych modeli. |
-| **Narysuj pierwszą belkę** | Prowadzone zadanie w siedmiu krokach. |
-| **Oprowadź mnie** | Przewodnik po interfejsie. |
-| **Wyczyść model** | To samo co przycisk na pasku aplikacji. |
+- **Otwórz projekt** i **Zapisz projekt** otwierają lub pobierają plik `project.json` (<kbd>Ctrl</kbd>+<kbd>O</kbd>, <kbd>Ctrl</kbd>+<kbd>S</kbd>).
+- **Ostatnie modele** przechowują 10 modeli, które ostatnio wyczyściłeś lub zastąpiłeś, i pozwalają je przywrócić.
+- **Eksportuj obraz** zapisuje rysunek jako PNG lub SVG albo kopiuje go do schowka (<kbd>Ctrl</kbd>+<kbd>P</kbd>).
+- **Przykłady** to galeria gotowych modeli; **Narysuj pierwszą belkę** to zadanie z przewodnikiem w siedmiu krokach; **Oprowadź mnie** oprowadza po interfejsie.
+- **Udostępnij model** i **Wyczyść model** działają tak samo jak przyciski na pasku aplikacji.
 
-Na dole menu widać wersję aplikacji i datę jej wydania.
+Na dole menu widać wersję aplikacji i datę jej wydania. Otwieranie, zapisywanie, udostępnianie i eksport opisuje strona [Pliki, linki i eksport](/pl/essentials/import-export).
 
 ## Widok {#viewer}
 
-Płótno to miejsce, w którym rysujesz i analizujesz model. Wszystko inne w aplikacji podąża za tym, co tu zaznaczysz.
+Płótno, na którym rysujesz i oglądasz model. Wyniki przeliczają się po każdej zmianie, więc nie szukaj przycisku *Oblicz* – nie ma go.
 
 ### Przyciski na płótnie {#buttons-on-the-canvas}
 
-- **Lewy górny róg:** **Cofnij** i **Ponów** (<kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd>). Każdą zmianę modelu, w tym dodawanie, edycję, przeciąganie, usuwanie i czyszczenie, można cofnąć.
-- **Prawy górny róg:** **Wyśrodkuj widok** (<kbd>C</kbd>), **Dopasuj do ekranu** (<kbd>F</kbd>) i przycisk ⚙, który pokazuje lub ukrywa opcje wyświetlania. Na ekranach dotykowych jest też **Zaznaczanie prostokątem**.
-- **Prawy dolny róg:** **G** włącza i wyłącza siatkę, **S** włącza i wyłącza przyciąganie do siatki, przycisk celownika pokazuje położenie kursora na linijkach, a **plakietka jednostek** otwiera ustawienia w sekcji *Język i ustawienia regionalne*.
+**Lewy górny róg: Cofnij i Ponów** cofają i ponawiają każdą zmianę modelu: dodanie, edycję, przeciągnięcie, usunięcie, wyczyszczenie (<kbd>Ctrl</kbd>+<kbd>Z</kbd>, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd>).
+
+**Prawy górny róg:**
+
+- **Zaznaczanie prostokątem**, na urządzeniu z ekranem dotykowym: następne przeciągnięcie palcem zaznacza prostokąt.
+- **Wyśrodkuj widok** przesuwa model na środek bez zmiany powiększenia (<kbd>C</kbd>); **Dopasuj do ekranu** dobiera powiększenie tak, aby był widoczny cały model (<kbd>F</kbd>).
+- **⚙** pokazuje lub ukrywa [opcje wyświetlania](#display-options).
+
+**Prawy dolny róg:**
+
+![Przyciski siatki, przyciągania, celownika i jednostek](/screenshots/pl/ui-grid-units.webp){.shot-sm}
+
+- **G** pokazuje lub ukrywa siatkę i linijki (<kbd>G</kbd>); **S** włącza lub wyłącza przyciąganie do siatki (<kbd>S</kbd>).
+- Przycisk **celownika** zaznacza położenie kursora na linijkach (tylko przy pracy myszą).
+- **Plakietka jednostek** otwiera ustawienia w sekcji [Język i ustawienia regionalne](/pl/essentials/units-settings#language-locale).
 
 ### Opcje wyświetlania {#display-options}
 
-![Przyciski widoku i opcje wyświetlania](/screenshots/pl/ui-display-settings.webp){.shot-lg}
+Przycisk ⚙ otwiera dwa rzędy pól wyboru. Pierwszy określa, które wyniki są rysowane na modelu: *Kształt odkształcony*, *N (x)*, *V<sub>z</sub> (x)*, *M<sub>y</sub> (x)* i *Reakcje*; na początku włączone są postać odkształcona, moment zginający i reakcje. Drugi pokazuje lub ukrywa części modelu: *Podpory*, *Obciążenia*, *Etykiety węzłów* i *Etykiety elementów*; na początku wszystkie są włączone.
 
-Dwa rzędy pól wyboru, domyślnie otwarte:
+![Przyciski widoku i opcje wyświetlania](/screenshots/pl/ui-display-settings.webp){.shot-lg}
 
-- **Wyniki:** *Kształt odkształcony*, *N (x)*, *V<sub>z</sub> (x)*, *M<sub>y</sub> (x)*, *Reakcje*. Kształt odkształcony, M i Reakcje są na początku zaznaczone.
-- **Model:** *Podpory*, *Obciążenia*, *Etykiety węzłów*, *Etykiety elementów*.
-
-**Więcej ustawień** otwiera pełne [ustawienia](/pl/essentials/units-settings) w sekcji *Ustawienia widoku*.
+**Więcej ustawień** otwiera [ustawienia widoku](/pl/essentials/units-settings#viewer-settings): rozmiary, kolory i sposób rysowania wykresów. Co pokazuje każdy z wyników, wyjaśnia strona [Wyniki i wykresy](/pl/essentials/results#overlays-in-the-viewer).
 
 ### Nawigacja {#navigating}
 
-| Czynność | Mysz | Dotyk |
+| Czynność | Mysz i klawiatura | Dotyk |
 | --- | --- | --- |
-| Powiększanie | Kółko myszy (w stronę kursora), <kbd>Ctrl</kbd>+<kbd>=</kbd> / <kbd>Ctrl</kbd>+<kbd>-</kbd> | Rozsunięcie / zsunięcie palców |
-| Przesuwanie widoku | Przeciąganie **środkowym lub prawym** przyciskiem (zobacz *Ustawienia → Sterowanie i skróty*) | Przeciąganie jednym palcem |
-| Dopasowanie / wyśrodkowanie | <kbd>F</kbd> / <kbd>C</kbd> lub przyciski w prawym górnym rogu | Przyciski w prawym górnym rogu |
+| Powiększanie | Kółko myszy, w stronę kursora; na gładziku rozsunięcie palców lub przewijanie dwoma palcami | Rozsunięcie lub zsunięcie palców |
+| Przesuwanie | Przeciąganie prawym przyciskiem lub wciśniętym kółkiem; który z nich, wybierasz w sekcji [Sterowanie i skróty](/pl/essentials/units-settings#controls-shortcuts) | Przeciąganie jednym palcem |
+| Dopasowanie, wyśrodkowanie | <kbd>F</kbd>, <kbd>C</kbd> lub przyciski w prawym górnym rogu | Przyciski w prawym górnym rogu |
 
-### Zaznaczanie i edycja {#selecting-and-editing}
+<kbd>Ctrl</kbd>+<kbd>+</kbd> i <kbd>Ctrl</kbd>+<kbd>-</kbd> powiększają i pomniejszają rysunek względem jego środka, przy każdym układzie klawiatury. Nigdy nie skalują całego interfejsu, jak zrobiłoby to powiększenie przeglądarki.
 
-**Kliknij** węzeł, element, obciążenie lub linię wymiarową, aby je zaznaczyć. Obok otworzy się panel ze szczegółami i odpowiednimi akcjami: dodanie obciążenia, ustawienie podpór, edycja, wyświetlenie macierzy sztywności, usunięcie. Kliknięcie węzła przełącza też dolny pasek na zakładkę Węzły.
+### Zaznaczanie i edycja {#selecting-and-editing}
+
+| Aby | Zrób tak |
+| --- | --- |
+| Zaznaczyć jeden obiekt | Kliknij węzeł, element, obciążenie lub linię wymiarową. Obok otworzy się panel z akcjami: dodanie obciążenia, ustawienie podpór, edycja, wyświetlenie macierzy sztywności, usunięcie. Dolny pasek przełączy się na odpowiednią zakładkę. |
+| Zaznaczyć kilka obiektów | Przeciągnij prostokąt po pustym płótnie (na ekranie dotykowym najpierw naciśnij **Zaznaczanie prostokątem**). Zaznaczysz w ten sposób wszystkie węzły wewnątrz prostokąta i wszystkie elementy, których on dotyka, razem z ich obciążeniami i liniami wymiarowymi. <kbd>Ctrl</kbd>+<kbd>A</kbd> zaznacza wszystko. |
+| Usunąć, skopiować, wkleić | <kbd>Delete</kbd>, <kbd>Ctrl</kbd>+<kbd>C</kbd>, <kbd>Ctrl</kbd>+<kbd>V</kbd>. Wklejona kopia podąża za kursorem, dopóki nie klikniesz; możesz też wpisać przesunięcie Δx, Δz w pasku, który się pojawi. |
+| Przesunąć węzeł | Przeciągnij go. Przy włączonym przyciąganiu trafi w punkt siatki; połączone elementy i obciążenia podążają za nim. |
+| Edytować obciążenie | Kliknij je dwukrotnie. |
+| Zobaczyć szczegóły | Najedź kursorem na dowolny obiekt, a pojawi się podpowiedź: przy węźle przemieszczenia i obrót, przy elemencie materiał i przekrój, przy obciążeniu jego wartości. Na ekranie dotykowym stuknij obiekt: to samo pokaże panel. |
+| Otworzyć menu płótna | Kliknij płótno prawym przyciskiem myszy albo dotknij go i przytrzymaj na ekranie dotykowym. |
 
 ::div{.shots}
 
-![Węzeł: dodaj obciążenie, ustaw podpory, zadaj przemieszczenie](/screenshots/pl/ui-node-menu.webp)
+![Panel węzła: dodaj obciążenie, ustaw podpory, zadaj przemieszczenie](/screenshots/pl/ui-node-menu.webp)
 
-![Element: edytuj, dodaj obciążenie, macierz sztywności](/screenshots/pl/ui-element-menu.webp)
+![Po najechaniu kursorem na węzeł widać jego przemieszczenia i obrót](/screenshots/pl/ui-hover.webp)
 
 ::
 
-- **Przeciągnij po pustym płótnie**, aby narysować prostokąt zaznaczenia. Wszystko w jego wnętrzu zostanie zaznaczone: węzły, elementy, ich obciążenia i linie wymiarowe. Naciśnij <kbd>Delete</kbd>, aby to wszystko usunąć, lub <kbd>Ctrl</kbd>+<kbd>C</kbd> / <kbd>Ctrl</kbd>+<kbd>V</kbd>, aby skopiować w inne miejsce.
-- **Przeciągnij węzeł**, aby go przesunąć. Przy włączonym przyciąganiu trafi w siatkę. Połączone elementy i ich obciążenia podążają za nim.
-- **Kliknij dwukrotnie obciążenie**, aby je edytować.
-- **Najedź kursorem** na dowolny obiekt, aby zobaczyć podpowiedź. Węzły pokazują przemieszczenia i obrót, elementy materiał i przekrój, obciążenia ich wartości. Na ekranie dotykowym stuknij obiekt: te same szczegóły pojawią się w panelu zaznaczenia.
-
-![Najechanie na węzeł pokazuje jego przemieszczenia i obrót](/screenshots/pl/ui-hover.webp){.shot-sm}
-
-**Kliknij prawym przyciskiem płótno** (lub przytrzymaj palec na ekranie dotykowym), aby otworzyć menu płótna. Przytrzymaj <kbd>Ctrl</kbd> przy wyborze *Dodaj węzeł* lub *Dodaj element*, aby wstawić je myszą zamiast przez okno dialogowe. Nad elementem menu oferuje też *Wymiaruj element*.
+**Menu płótna** zawiera *Dodaj węzeł*, *Dodaj element*, *Dodaj wymiar* (a nad elementem także *Wymiaruj element*), a dalej *Edytuj*, *Kopiuj*, *Wklej* i *Usuń* dla bieżącego zaznaczenia. Jeśli przy wyborze *Dodaj węzeł* lub *Dodaj element* przytrzymasz <kbd>Ctrl</kbd>, umieścisz je myszą zamiast przez okno dialogowe.
 
 ![Menu płótna](/screenshots/pl/ui-canvas-menu.webp){.shot-sm}
 
-Wszystkie skróty znajdziesz na stronie [Klawiatura, mysz i dotyk](/pl/reference/shortcuts).
+Wszystkie skróty i gesty zebrano na stronie [Klawiatura, mysz i dotyk](/pl/reference/shortcuts).
 
 ### Gdy modelu nie da się rozwiązać {#when-the-model-cannot-be-solved}
 
-Komunikaty pojawiają się w lewym górnym rogu widoku:
+Komunikaty pojawiają się w lewym górnym rogu widoku:
 
-- *Nie zdefiniowano materiałów.* / *Nie zdefiniowano przekrojów.* z przyciskiem **Dodaj nowy**.
-- Mała niebieska plakietka **Brak podpór**, dopóki model jest po prostu niedokończony.
-- **Czerwony komunikat**, gdy coś jest nie tak, z przyciskiem **Pokaż szczegóły**, który wymienia wszystkie problemy.
+| Komunikat | Znaczenie |
+| --- | --- |
+| *Nie zdefiniowano materiałów.*, *Nie zdefiniowano przekrojów.* | Dodaj materiał lub przekrój przyciskiem **Dodaj nowy** obok komunikatu. |
+| Niebieska plakietka **Brak podpór** | Model jest po prostu niedokończony: potrzebuje więcej podpór. |
+| Czerwony komunikat z przyciskiem **Pokaż szczegóły** | Coś jest nie tak. Szczegóły wymieniają każdy problem razem ze wskazówką. |
+| Żółty komunikat | Model został rozwiązany, ale coś wygląda podejrzanie, np. węzeł, do którego nie jest podłączony żaden element. |
 
-Gdy konstrukcja wciąż może się poruszać, EduBeam pokazuje jej ruch przerywanym zarysem i zakreśla winne węzły lub przeguby. Najedź na komunikat, aby ponownie zobaczyć ruch, albo ukryj go przyciskiem z okiem.
+Gdy konstrukcja wciąż może się poruszać, EduBeam animuje ten ruch przerywanym zarysem i zakreśla węzły lub przeguby, które go umożliwiają. Najedź kursorem na komunikat, aby jeszcze raz zobaczyć ruch; przycisk z okiem go ukrywa.
 
-![Rama z przegubami w B i C jest mechanizmem: EduBeam pokazuje, jak się porusza](/screenshots/pl/ui-mechanism.webp)
+![Rama z przegubami w B i C jest mechanizmem: EduBeam pokazuje, jak się porusza](/screenshots/pl/ui-mechanism.webp)
 
-![Pokaż szczegóły wymienia każdy problem ze wskazówką](/screenshots/pl/ui-diagnostics.webp){.shot-lg}
-
-Każdy komunikat objaśnia strona [Rozwiązywanie problemów](/pl/reference/troubleshooting).
+Każdy komunikat i sposób usunięcia problemu objaśnia strona [Rozwiązywanie problemów](/pl/reference/troubleshooting#messages).
 
 ## Dolny pasek {#bottom-bar}
 
-Sześć zakładek, każda z paskiem narzędzi i edytowalną tabelą. Zakładki pokazują, ile obiektów danego rodzaju ma model. **?** po prawej objaśnia otwartą zakładkę, podobnie jak **?** przy niektórych nagłówkach kolumn. Przeciągnij pasek zakładek w górę lub w dół, aby zmienić wysokość panelu, albo zminimalizuj go przyciskiem po prawej.
+Sześć zakładek, każda z paskiem narzędzi i edytowalną tabelą. Etykieta zakładki pokazuje, ile obiektów zawiera. Przeciągnij pasek zakładek w górę lub w dół, aby zmienić wysokość paska, albo zwiń go przyciskiem po prawej. Przycisk **?** obok objaśnia otwartą zakładkę, podobnie jak **?** przy niektórych nagłówkach kolumn.
 
-| Zakładka | Pasek narzędzi | Tabela |
+| Zakładka | Pasek narzędzi | Kolumny tabeli |
 | --- | --- | --- |
-| **Węzły** | Dodaj węzeł (okno dialogowe), Dodaj węzeł (mysz) | Etykieta, współrzędne, **Podparte stopnie swobody** (symbol podpory, Dx, Dz, Ry, kąt podpory α), obciążenia, edycja, usuwanie |
-| **Elementy** | Dodaj element (okno dialogowe), Dodaj element (mysz) | Etykieta, typ, węzły (z przyciskiem zamiany), materiał, przekrój, **Przeguby końcowe**, obciążenia, macierz sztywności, usuwanie |
-| **Obciążenia** | Dodaj obciążenie węzłowe, Dodaj obciążenie elementu | Typ, miejsce przyłożenia, edytowalne składowe, edycja, usuwanie |
-| **Materiały** | Dodaj materiał, Biblioteka materiałów | Etykieta, E, G, α<sub>T</sub>, usuwanie |
-| **Przekroje** | Dodaj przekrój, Biblioteka przekrojów, Przekrój wielokątny | Kształt, etykieta, A, I<sub>y</sub>, h, k, edycja kształtu, usuwanie |
-| **Wyniki** | Wyniki węzłowe, Wyniki elementów, Eksportuj CSV, Kopiuj | Przemieszczenia i obroty węzłów albo siły końcowe elementów |
+| **Węzły** | Dodaj węzeł (okno dialogowe), Dodaj węzeł (mysz) | Węzeł, Współrzędne, **Podparte stopnie swobody** (symbol podpory, `Dx`, `Dz`, `Ry`, kąt α), Obciążenia, Akcje |
+| **Elementy** | Dodaj element (okno dialogowe), Dodaj element (mysz) | Element, Typ, Węzły (z przyciskiem **Zamień kolejność węzłów**), Materiał, Przekrój, **Przeguby końcowe**, Obciążenia, Akcje |
+| **Obciążenia** | Dodaj obciążenie węzłowe, Dodaj obciążenie elementu | Typ, Miejsce przyłożenia, Składowe, Akcje |
+| **Materiały** | Dodaj materiał, Biblioteka materiałów | Materiał, E, G, α<sub>T</sub>, Akcje |
+| **Przekroje** | Dodaj przekrój, Biblioteka przekrojów, Przekrój wielokątny | Kształt, Przekrój, Pole, I<sub>y</sub>, Wysokość, Współczynnik ścinania, Akcje |
+| **Wyniki** | Wyniki węzłowe, Wyniki elementów, Eksportuj CSV, Kopiuj | Przemieszczenia węzłów albo siły przywęzłowe elementów; zob. [Wyniki i wykresy](/pl/essentials/results#results-tab) |
 
-Komórkę edytujesz na miejscu: kliknij, wpisz wartość i naciśnij <kbd>Enter</kbd> (lub <kbd>Esc</kbd>, aby opuścić komórkę). Wartości są wyświetlane i wprowadzane w [bieżących jednostkach](/pl/essentials/units-settings).
+Poszczególne zakładki szczegółowo opisują strony [Węzły i podpory](/pl/essentials/nodes-supports), [Elementy, materiały i przekroje](/pl/essentials/elements), [Obciążenia](/pl/essentials/loads) oraz [Wyniki i wykresy](/pl/essentials/results#results-tab).
+
+### Wpisywanie wartości {#typing-values}
+
+Każde pole liczbowe, w tabelach i w oknach dialogowych, działa tak samo:
+
+- Wartości są w [bieżących jednostkach](/pl/essentials/units-settings#units), podanych w nagłówku kolumny lub za polem.
+- Działa zarówno kropka, jak i przecinek dziesiętny: `2.5` i `2,5` znaczą to samo.
+- Możesz wpisywać działania z `+ - * / ^` i nawiasami: `6/2`, `3*1.5`, `2^3` czy `(4+2)/3` EduBeam obliczy sam. Zapis `1e-5` oznacza $10^{-5}$.
+- W tabeli wartość zatwierdza <kbd>Enter</kbd>, <kbd>Esc</kbd>, <kbd>Tab</kbd> lub kliknięcie w innym miejscu. <kbd>Ctrl</kbd>+<kbd>Z</kbd> cofa ją potem; dopóki jeszcze piszesz, cofa tylko wpisywany tekst.
 
 ## Zakładki nad widokiem {#tabs-above-the-viewer}
 
-**Widok** pokazuje płótno. **Ustawienia** pokazują ustawienia na całym ekranie, więc możesz zmienić kolory lub jednostki i przełączyć się z powrotem, aby zobaczyć efekt. Plakietka jednostek i *Więcej ustawień* otwierają te same ustawienia jako okno dialogowe nad modelem.
+**Widok** pokazuje płótno. **Ustawienia** wyświetlają w jego miejscu [ustawienia](/pl/essentials/units-settings) na całej powierzchni, więc możesz zmienić kolory lub jednostki i przełączyć się z powrotem, aby zobaczyć efekt. Plakietka jednostek i *Więcej ustawień* otwierają te same ustawienia jako okno dialogowe nad modelem.
 
 ## Okna pływające {#floating-windows}
 
-**Macierz sztywności** (z panelu elementu lub z tabeli Elementy) otwiera okno z macierzą sztywności elementu 6 × 6 w układzie globalnym. **Edytuj** w menu płótna otwiera tabelę bieżącego zaznaczenia. Okna przeciągasz za pasek tytułu i zamykasz krzyżykiem ×.
+**Macierz sztywności** (z panelu elementu lub z tabeli *Elementy*) otwiera okno z macierzą sztywności elementu 6 × 6 w osiach globalnych. **Edytuj** w menu płótna otwiera tabelę bieżącego zaznaczenia. Okno przesuniesz, przeciągając jego pasek tytułu, a zamkniesz krzyżykiem ×.

@@ -1,13 +1,16 @@
 {
   "meta": {
-    "description": "Darmowa analiza statyczna belek, ram i kratownic w przeglądarce — bez instalacji i bez konta."
+    "description": "Darmowa analiza statyczna konstrukcji płaskich w przeglądarce – belki, ramy i kratownice obliczone natychmiast."
   },
   "nav": {
     "guide": "Przewodnik",
     "tutorials": "Samouczki",
     "examples": "Przykłady",
     "faq": "FAQ",
-    "openApp": "Otwórz aplikację"
+    "theory": "Teoria",
+    "openApp": "Otwórz aplikację",
+    "libraries": "Biblioteki",
+    "practice": "Zadania"
   },
   "docs": {
     "onThisPage": "Na tej stronie",
@@ -16,26 +19,26 @@
     "lastUpdated": "Ostatnia aktualizacja"
   },
   "footer": {
-    "copyright": "Współtwórcy EduBeam"
+    "copyright": "Współtwórcy EduBeamu"
   },
   "components": {
     "loadsTitle": "Podgląd rodzajów obciążeń",
-    "loadsLede": "Tak wyglądają typowe rodzaje obciążeń w EduBeam. Każda karta to rozwiązany model na żywo, który otwiera się w aplikacji dokładnie tak, jak go ustawiono.",
-    "openInApp": "Otwórz w EduBeam",
+    "loadsLede": "Tak wyglądają typowe rodzaje obciążeń w EduBeamie. Każda karta to rozwiązany model na żywo, który otworzy się w aplikacji dokładnie w takiej postaci.",
+    "openInApp": "Otwórz w EduBeamie",
     "simplySupportedBeam": "Belka swobodnie podparta",
-    "udlBlurb": "Przęsło na podporze przegubowej nieprzesuwnej i przesuwnej pod 12 kN/m: klasyczne wykresy sił tnących i momentów.",
-    "trapezoidalBlurb": "Obciążenie rosnące od 4 do 14 kN/m w prawym przęśle.",
-    "concentratedBlurb": "Pojedyncza siła 18 kN w dół w środku rozpiętości, bez dodatkowego węzła.",
-    "nodalBlurb": "Siła 20 kN na podporze pośredniej, do sprawdzenia reakcji i ugięć.",
-    "temperatureBlurb": "Różnica temperatur na wysokości przekroju (u góry cieplej niż u dołu) i wywołana nią krzywizna.",
+    "udlBlurb": "Przęsło na podporze przegubowej nieprzesuwnej i przesuwnej, obciążone 12 kN/m: klasyczne wykresy sił tnących i momentów zginających.",
+    "trapezoidalBlurb": "Obciążenie rosnące od 4 do 14 kN/m na całej długości prawego przęsła.",
+    "concentratedBlurb": "Siła 18 kN w lewym przęśle, 2 m od podpory, bez węzła w miejscu jej przyłożenia.",
+    "nodalBlurb": "Siła 20 kN w węźle między dwoma przęsłami: wykres momentów załamuje się pod nią.",
+    "temperatureBlurb": "Różnica temperatur na wysokości przekroju (u góry cieplej niż u dołu) i wywołana nią krzywizna.",
     "promoTitle": "Przenieś swoje ramy",
     "promoAccent": "do 3D.",
-    "promoSubtitle": "płyty, powłoki i wymiarowanie stali w przeglądarce",
+    "promoSubtitle": "płyty, powłoki i wymiarowanie elementów stalowych w przeglądarce",
     "promoCta": "Wypróbuj za darmo",
     "spanLength": "Rozpiętość przęsła",
     "loadIntensity": "Intensywność obciążenia",
     "loadPosition": "Położenie obciążenia",
-    "heroHint": "Przesuń obciążenie, a wykresy podążą za nim."
+    "heroHint": "Przesuń obciążenie – wykresy zmienią się razem z nim."
   },
   "common": {
     "deformedShape": "Kształt odkształcony",
@@ -58,33 +61,612 @@
     "items": {
       "welcome": {
         "title": "Belka statycznie niewyznaczalna",
-        "blurb": "Statycznie niewyznaczalna belka o rozpiętości 3 m, utwierdzona i podparta przegubowo przesuwnie, pod obciążeniem równomiernym 10 kN/m."
+        "blurb": "Statycznie niewyznaczalna belka o rozpiętości 3 m, utwierdzona i podparta przegubowo przesuwnie, pod obciążeniem równomiernym 10 kN/m."
       },
       "cantilever": {
         "title": "Wspornik",
-        "blurb": "Wspornik o długości 4 m obciążony siłą węzłową 18 kN skierowaną w dół – krzywizna i ugięcie końca."
+        "blurb": "Wspornik o długości 4 m obciążony siłą węzłową 18 kN skierowaną w dół – krzywizna i ugięcie końca."
       },
       "pratt": {
         "title": "Kratownica Warrena",
-        "blurb": "Prosta kratownica Warrena z obciążeniami węzłowymi 8 kN – rozkład sił osiowych i przemieszczenia."
+        "blurb": "Prosta kratownica Warrena z obciążeniami węzłowymi 8 kN – rozkład sił osiowych i przemieszczenia."
       },
       "continuous": {
         "title": "Belka ciągła trzyprzęsłowa",
-        "blurb": "Przęsła 5+6+5 m z obciążeniem równomiernym, skupionym i równomiernym – porównanie krzywizny i obrotów nad podporami."
+        "blurb": "Przęsła 5+6+5 m z obciążeniem równomiernym, skupionym i równomiernym – porównanie krzywizny i obrotów nad podporami."
       },
       "portal": {
         "title": "Rama portalowa – przypadek obciążenia",
-        "blurb": "Rygiel 8 m na słupach 6 m pod równomiernym obciążeniem dachu oraz poziomymi i pionowymi siłami w narożach – analiza przechyłu i zginania."
+        "blurb": "Rygiel 8 m na słupach 6 m pod równomiernym obciążeniem dachu oraz poziomymi i pionowymi siłami w narożach – analiza przechyłu i zginania."
       },
       "temperature": {
         "title": "Obciążenie termiczne",
-        "blurb": "Belka swobodnie podparta o rozpiętości 8 m z równomiernym i nierównomiernym obciążeniem termicznym."
+        "blurb": "Belka swobodnie podparta o rozpiętości 8 m z równomiernym i nierównomiernym obciążeniem termicznym."
       }
     }
   },
   "search": {
     "label": "Szukaj",
-    "placeholder": "Szukaj w dokumentacji",
-    "noResults": "Brak wyników dla „{query}”"
+    "placeholder": "Szukaj w dokumentacji",
+    "noResults": "Brak wyników dla „{query}”",
+    "shortcut": "Ctrl K"
+  },
+  "home": {
+    "seo": {
+      "title": "EduBeam: darmowa analiza statyczna konstrukcji w przeglądarce",
+      "description": "Darmowa analiza statyczna 2D w przeglądarce. Narysuj belkę, ramę lub kratownicę, dodaj obciążenia i od razu zobacz wykresy N, V, M, reakcje i ugięcia."
+    },
+    "hero": {
+      "title": "Belki, ramy, kratownice.",
+      "lede": "EduBeam to darmowa aplikacja do analizy statycznej belek, ram i kratownic. Model rysujesz w przeglądarce, a wykresy, reakcje i ugięcia przeliczają się przy każdej zmianie.",
+      "launch": "Uruchom EduBeam",
+      "guide": "Przeczytaj przewodnik",
+      "note": "Bezpłatny, z otwartym kodem źródłowym. Bez instalacji i bez zakładania konta."
+    },
+    "steps": {
+      "title": "Od szkicu do wykresów w czterech krokach",
+      "lede": "W tej samej kolejności, w jakiej rozwiązujesz zadanie na papierze. Szybki start zajmuje około dziesięciu minut i prowadzi przez obliczenia prawdziwej belki.",
+      "link": "Przejdź do szybkiego startu",
+      "items": {
+        "nodes": {
+          "label": "Węzły",
+          "title": "Rozmieść węzły",
+          "body": "Kliknij na siatce albo wpisz współrzędne. Tutaj są to cztery narożniki ramy portalowej o szerokości 6 m i wysokości 4 m."
+        },
+        "elements": {
+          "label": "Elementy",
+          "title": "Połącz je elementami",
+          "body": "Połącz węzły elementami belkowymi i przypisz im materiał oraz przekrój: z biblioteki albo wielokąt, który sam narysujesz."
+        },
+        "loads": {
+          "label": "Podpory i obciążenia",
+          "title": "Podeprzyj i obciąż",
+          "body": "Podpory przegubowe pod oboma słupami, 10 kN/m na ryglu i pozioma siła 15 kN w lewym górnym narożu."
+        },
+        "results": {
+          "label": "Wyniki",
+          "title": "Odczytaj wyniki",
+          "body": "Wykres momentów, rysowany po stronie rozciąganej, i reakcje pojawiają się, gdy tylko podpory utrzymają ramę. Te liczby obliczył sam EduBeam, tu, na tej stronie."
+        }
+      }
+    },
+    "examples": {
+      "title": "Otwórz rozwiązany model jednym kliknięciem",
+      "lede": "Każdy z nich jest obliczany na tej stronie przez ten sam solver, którego używa aplikacja. Otwórz dowolny w EduBeamie i zmieniaj go.",
+      "link": "Wszystkie przykłady"
+    },
+    "verify": {
+      "title": "Zgodne z podręcznikiem",
+      "lede": "EduBeam rozwiązuje każdy model metodą elementów skończonych. W klasycznych przypadkach daje wynik zgodny z rozwiązaniem analitycznym co do ostatniej cyfry. Prawą kolumnę obliczyła Twoja przeglądarka podczas wczytywania tej strony.",
+      "case": "Przypadek",
+      "formula": "Wzór",
+      "hand": "Ręcznie",
+      "edubeam": "EduBeam",
+      "link": "Więcej przypadków porównawczych",
+      "steel": "Stal, IPE 200: E = 210 GPa, I = 1943 cm⁴. Odkształcenia od ścinania pominięto, tak jak zakładają wzory analityczne.",
+      "cases": {
+        "ssMoment": "Belka swobodnie podparta o rozpiętości 6 m, 12 kN/m: największy moment",
+        "ssDeflection": "Ta sama belka: największe ugięcie",
+        "cantilever": "Wspornik o długości 4 m, 18 kN na swobodnym końcu: moment w utwierdzeniu",
+        "fixed": "Belka obustronnie utwierdzona o rozpiętości 6 m, 10 kN/m: moment w utwierdzeniu",
+        "propped": "Belka jednostronnie utwierdzona o rozpiętości 6 m, 10 kN/m: reakcja podpory przesuwnej"
+      }
+    },
+    "teaching": {
+      "title": "Stworzony z myślą o wykładach",
+      "lede": "Wstaw model do slajdów albo materiałów do wykładu, a każdy student otworzy dokładnie ten sam.",
+      "link": "Nauczanie z EduBeamem",
+      "slideCourse": "Statyka budowli",
+      "slideTitle": "Wykład 7: kratownice",
+      "slideBody": "Kratownica Warrena obciążona w węzłach trzema siłami 8 kN. Które pręty są rozciągane?",
+      "shareLabel": "Link do udostępnienia",
+      "copy": "Kopiuj",
+      "copied": "Skopiowano",
+      "items": {
+        "share": {
+          "title": "Model to link",
+          "body": "Cały model jest zapisany w adresie URL. Wstaw go do treści zadania, a otworzy się dokładnie taki, jakim go zostawiłeś, także po latach."
+        },
+        "embed": {
+          "title": "Na Twoich slajdach",
+          "body": "Tryb podglądu pokazuje rozwiązany model bez narzędzi do edycji – w sam raz na slajd albo stronę internetową."
+        },
+        "mechanism": {
+          "title": "Wyjaśnia, co poszło nie tak",
+          "body": "Gdy konstrukcja jest mechanizmem, EduBeam pokazuje, jak by się poruszała, zamiast po prostu odmówić obliczeń."
+        },
+        "languages": {
+          "title": "W ich języku i jednostkach",
+          "body": "Studenci pracują w jednym z 18 języków, w jednostkach SI lub amerykańskich, z takimi osiami, jak w ich podręczniku."
+        }
+      },
+      "answerTitle": "Odpowiedź: siły w prętach",
+      "answerBody": "Rozciąganie jest dodatnie. Pas dolny jest rozciągany, pas górny i oba skrajne słupki są ściskane, a w wewnętrznych krzyżulcach rozciąganie i ściskanie występują na przemian.",
+      "prevSlide": "Poprzedni slajd",
+      "nextSlide": "Następny slajd"
+    },
+    "final": {
+      "title": "Narysuj swoją pierwszą belkę.",
+      "lede": "Otwórz EduBeam i wybierz „Narysuj pierwszą belkę”. Krótki samouczek krok po kroku przeprowadzi Cię od pustego ekranu do podpartej i obciążonej belki oraz jej wykresów.",
+      "paths": {
+        "quickStart": {
+          "title": "Szybki start",
+          "body": "Zamodeluj belkę krok po kroku i sprawdź ją ręcznie. 10 minut."
+        },
+        "examples": {
+          "title": "Przykłady",
+          "body": "Rozwiązane modele, które możesz otworzyć, zmienić i na nich się uczyć."
+        },
+        "teaching": {
+          "title": "Nauczanie",
+          "body": "Linki do modeli, slajdy i zadania na Twoje zajęcia."
+        }
+      }
+    },
+    "model": {
+      "title": "Co możesz zamodelować",
+      "lede": "Konstrukcje płaskie rozwiązywane metodą elementów skończonych, z podporami, obciążeniami i wynikami znanymi z kursu statyki.",
+      "supports": {
+        "title": "Podpory",
+        "items": {
+          "pin": "Przegub",
+          "roller": "Przegub przesuwny",
+          "fixed": "Utwierdzenie",
+          "slider": "Utwierdzenie przesuwne",
+          "angled": "Pod dowolnym kątem"
+        },
+        "note": "Do tego zadane osiadania i obroty podpór."
+      },
+      "loads": {
+        "title": "Obciążenia",
+        "items": {
+          "point": "Skupione",
+          "uniform": "Równomierne",
+          "trapezoidal": "Trapezowe",
+          "moment": "Moment",
+          "temperature": "Temperatura"
+        },
+        "note": "W węzłach lub w dowolnym miejscu pręta, w osiach lokalnych lub globalnych."
+      },
+      "sections": {
+        "title": "Przekroje",
+        "items": {
+          "i": "I i H",
+          "hollow": "Skrzynkowe",
+          "solid": "Pełne",
+          "tube": "Rurowe",
+          "polygon": "Własny wielokąt"
+        },
+        "note": "IPE, HEA, AISC W i HSS z biblioteki albo dowolny wielokąt, który narysujesz."
+      },
+      "results": {
+        "title": "Wyniki",
+        "note": "Siła normalna, siła tnąca, moment zginający i postać odkształcona, a do tego reakcje i wartości w dowolnym punkcie."
+      },
+      "facts": {
+        "elements": {
+          "title": "Belki Timoszenki",
+          "body": "Odkształcenia od ścinania tam, gdzie mają znaczenie; dla smukłych prętów wyniki pokrywają się z teorią Eulera–Bernoulliego."
+        },
+        "structures": {
+          "title": "Belki, ramy, kratownice",
+          "body": "Układy płaskie, z przegubami na dowolnym końcu pręta."
+        },
+        "sharing": {
+          "title": "Linki i pliki",
+          "body": "Cały model w jednym linku lub pliku projektu; rysunki jako PNG lub SVG, tabele jako CSV."
+        },
+        "settings": {
+          "title": "18 języków",
+          "body": "Jednostki SI lub amerykańskie, oś z w dół albo podręcznikowa oś y w górę."
+        }
+      }
+    },
+    "heritage": {
+      "title": "Otwarte oprogramowanie wyrosłe z dydaktyki",
+      "body": "EduBeam kontynuuje desktopowy program EduBeam, powstały w Katedrze Mechaniki Wydziału Inżynierii Lądowej Czeskiego Uniwersytetu Technicznego w Pradze (ČVUT), i nadal otwiera pliki sesji tego programu. Wersja internetowa jest darmowa i ma otwarty kod źródłowy, podobnie jak {'@'}edubeam/fem – solver, który stoi za każdą liczbą na tej stronie.",
+      "github": "EduBeam na GitHubie",
+      "solver": "{'@'}edubeam/fem na GitHubie",
+      "team": "Kto tworzy EduBeam"
+    }
+  },
+  "error": {
+    "notFoundTitle": "Nie znaleziono strony",
+    "notFound": "Pod tym adresem nie ma żadnej strony. Mogła zostać przeniesiona albo w linku jest literówka.",
+    "otherTitle": "Coś poszło nie tak",
+    "other": "Nie udało się wyświetlić tej strony. Zwykle pomaga jej ponowne wczytanie.",
+    "home": "Strona główna",
+    "guide": "Przeczytaj przewodnik",
+    "message": "Podpory nie utrzymują konstrukcji: nadal może swobodnie się obracać.",
+    "figure": "Belka na jednej podporze przegubowej, bez drugiej podpory, obracająca się pod obciążeniem swobodnie wokół przegubu"
+  },
+  "problems": {
+    "families": {
+      "simple": {
+        "name": "Belka swobodnie podparta",
+        "skill": "Równowaga belki",
+        "hint": "Z sumy momentów względem punktu A wyznacz reakcję w B, a z sumy sił pionowych reakcję w A. Największy moment występuje tam, gdzie siła tnąca zmienia znak, albo pod siłą skupioną."
+      },
+      "cantilever": {
+        "name": "Wspornik",
+        "skill": "Utwierdzenie",
+        "hint": "Wszystkie reakcje są w utwierdzeniu: zsumuj siły pionowe, a potem momenty względem punktu A. Wspornik ma największy moment w utwierdzeniu."
+      },
+      "overhang": {
+        "name": "Belka ze wspornikiem",
+        "skill": "Moment ujemny nad podporą",
+        "hint": "Reakcję w B wyznacz z sumy momentów względem punktu A. Potem porównaj dwa miejsca, w których moment może być największy: w przęśle, gdzie V = 0, i nad podporą B, gdzie wspornik wywołuje moment ujemny."
+      },
+      "gerber": {
+        "name": "Belka Gerbera",
+        "skill": "Przegub wewnętrzny",
+        "hint": "Zacznij od części GC: opiera się na przegubie G i podporze przesuwnej C, a przegub nie przenosi momentu. Potem obciąż część ABG siłą, którą przekazuje na nią przegub, i rozwiąż ją jak belkę ze wspornikiem."
+      },
+      "threeHinged": {
+        "name": "Rama trójprzegubowa",
+        "skill": "Rozpór i przegub w kluczu",
+        "hint": "Sumy momentów względem A i względem E dają reakcje pionowe. Potem przetnij ramę w przegubie C, gdzie M = 0, i zsumuj momenty względem C dla jednej połowy: stąd otrzymasz rozpór."
+      },
+      "truss": {
+        "name": "Kratownica Warrena",
+        "skill": "Równoważenie węzłów i metoda Rittera",
+        "hint": "Wyznacz reakcje z równowagi całej kratownicy. Potem przetnij trzy pręty, w tym szukany, i zsumuj momenty względem węzła, w którym przecinają się dwa pozostałe; dla krzyżulca zsumuj zamiast tego siły pionowe."
+      },
+      "continuous": {
+        "name": "Belka ciągła dwuprzęsłowa",
+        "skill": "Jedna niewiadoma nadliczbowa",
+        "hint": "Układ jest jednokrotnie statycznie niewyznaczalny: za niewiadomą przyjmij moment nad podporą B. Równanie trzech momentów z M = 0 w A i w C daje go od razu; reakcje wyznaczysz potem przęsło po przęśle."
+      },
+      "portal": {
+        "name": "Rama dwuprzegubowa",
+        "skill": "Rama o sztywnych narożach",
+        "hint": "Układ jest jednokrotnie statycznie niewyznaczalny: usuń poziomą reakcję w D i wyznacz poziome przemieszczenie punktu D od obciążenia oraz od siły jednostkowej przyłożonej w tym punkcie (zasada prac wirtualnych, wykresy M). Reakcję dobierz tak, aby to przemieszczenie było równe zeru."
+      }
+    },
+    "statement": {
+      "simple": "Belka o rozpiętości {L} m, podparta przegubowo nieprzesuwnie w A i przesuwnie w B. Obciążenie: {loads}.",
+      "cantilever": "Wspornik o długości {L} m utwierdzony w A. Na całej długości działa obciążenie q = {q} kN/m, a na swobodnym końcu B siła F = {F} kN.",
+      "cantileverMoment": "Wspornik o długości {L} m utwierdzony w A. Na całej długości działa obciążenie q = {q} kN/m, a na swobodnym końcu B siła F = {F} kN i moment {M} kNm przeciwnie do ruchu wskazówek zegara.",
+      "overhang": "Belka o rozpiętości {L} m, oparta na podporze przegubowej nieprzesuwnej A i przesuwnej B, ma wspornik BC o długości {c} m. W przęśle AB działa obciążenie q = {q} kN/m, a na końcu wspornika C siła F = {F} kN.",
+      "overhangAll": "Belka o rozpiętości {L} m, oparta na podporze przegubowej nieprzesuwnej A i przesuwnej B, ma wspornik BC o długości {c} m. Na całej długości belki działa obciążenie q = {q} kN/m, a na końcu wspornika C siła F = {F} kN.",
+      "gerber": "Belka z przegubem wewnętrznym G, położonym {g} m za podporą B, jest oparta na podporze przegubowej nieprzesuwnej A i podporach przesuwnych B i C: AB = {L1} m, GC = {L3} m.",
+      "gerberLoad": "Na całej długości działa na nią obciążenie q = {q} kN/m.",
+      "gerberLoadForce": "Na całej długości działa na nią obciążenie q = {q} kN/m, a w połowie odcinka AB siła F = {F} kN.",
+      "threeHinged": "Rama o rozpiętości {L} m i wysokości {H} m, oparta na podporach przegubowych nieprzesuwnych A i E, ma przegub C w środku rygla.",
+      "threeHingedWhole": "Na całej długości rygla działa obciążenie q = {q} kN/m.",
+      "threeHingedHalf": "Na lewej połowie rygla działa obciążenie q = {q} kN/m.",
+      "threeHingedWholeForce": "Na całej długości rygla działa obciążenie q = {q} kN/m, a w węźle B pozioma siła F = {F} kN skierowana w prawo.",
+      "threeHingedHalfForce": "Na lewej połowie rygla działa obciążenie q = {q} kN/m, a w węźle B pozioma siła F = {F} kN skierowana w prawo.",
+      "truss": "Kratownica Warrena złożona z {panels} o długości {d} m i wysokości {h} m, oparta na podporze przegubowej nieprzesuwnej A i przesuwnej {end}.",
+      "panels": "{n} przedziału | {n} przedziałów | {n} przedziałów",
+      "trussLoadAll": "Każdy węzeł pasa górnego jest obciążony siłą F = {F} kN skierowaną w dół.",
+      "trussLoad": "Węzły {joints} są obciążone siłami F = {F} kN skierowanymi w dół.",
+      "continuous": "Belka ciągła o przęsłach długości {L1} m i {L2} m, oparta na podporze przegubowej nieprzesuwnej A i podporach przesuwnych B i C. W lewym przęśle działa obciążenie q = {q} kN/m.",
+      "continuousBoth": "Belka ciągła o przęsłach długości {L1} m i {L2} m, oparta na podporze przegubowej nieprzesuwnej A i podporach przesuwnych B i C. W obu przęsłach działa obciążenie q = {q} kN/m.",
+      "portal": "Rama o sztywnych narożach, o rozpiętości {L} m i wysokości {H} m, oparta na podporach przegubowych nieprzesuwnych A i D. Na ryglu BC działa obciążenie q = {q} kN/m.",
+      "portalForce": "Rama o sztywnych narożach, o rozpiętości {L} m i wysokości {H} m, oparta na podporach przegubowych nieprzesuwnych A i D. Na ryglu BC działa obciążenie q = {q} kN/m, a w węźle B pozioma siła F = {F} kN skierowana w prawo.",
+      "advancedNote": "Przyjąć stałą sztywność EI, wpływ ścinania pominąć."
+    },
+    "load": {
+      "udlSpan": "q = {q} kN/m na całej rozpiętości",
+      "pointFromA": "siła F = {F} kN w odległości {a} m od A",
+      "momentAtB": "moment {M} kNm działający w B przeciwnie do ruchu wskazówek zegara"
+    },
+    "task": {
+      "beam": "Wyznaczyć reakcje podporowe i największy moment zginający.",
+      "bar": "Wyznaczyć reakcje podporowe i siłę w pręcie {bar}."
+    },
+    "answer": {
+      "horizontal": "Reakcja pozioma w {node}",
+      "vertical": "Reakcja pionowa w {node}",
+      "fixingMoment": "Moment utwierdzenia w {node}",
+      "bar": "Siła w pręcie {bar}",
+      "largestMoment": "Największy moment zginający co do wartości bezwzględnej"
+    },
+    "unit": {
+      "kN": "kN",
+      "kNm": "kNm"
+    }
+  },
+  "library": {
+    "getStarted": "Pierwsze kroki",
+    "by": "Autor: {author}",
+    "fromRepo": "Biblioteki nie ma jeszcze w npm: powyższe polecenie instaluje ją z GitHuba.",
+    "comingToNpm": "Wkrótce w npm. Kod źródłowy jest na GitHubie."
+  },
+  "solver": {
+    "tagline": "Solver metody elementów skończonych dla ram płaskich, napisany w TypeScripcie.",
+    "seo": {
+      "title": "{'@'}edubeam/fem: solver MES dla ram płaskich w TypeScripcie",
+      "description": "Solver MES dla płaskich belek, ram i kratownic w TypeScripcie: przeguby, obciążenia prętów, temperatura i osiadania podpór, przypadki obciążenia, reakcje i dokładne siły przekrojowe. Silnik EduBeamu."
+    },
+    "run": {
+      "title": "Obliczone na tej stronie",
+      "lede": "Po lewej kod, który Twoja przeglądarka wykonała podczas wczytywania strony. Po prawej wartości, które zwrócił, a rysunek z wyników tego samego solvera wykonała biblioteka {plot}.",
+      "plusShear": "{formula} plus wpływ ścinania"
+    },
+    "features": {
+      "title": "Co zawiera",
+      "analyses": {
+        "title": "Obliczenia",
+        "body": "Statyka liniowa z dowolną liczbą przypadków obciążenia. Wykresy są dokładne między węzłami: siatki nie trzeba zagęszczać."
+      },
+      "elements": {
+        "title": "Elementy",
+        "body": "Dwuwęzłowy element belkowy Timoszenki w płaszczyźnie x–z. Z przegubami na obu końcach staje się prętem kratownicy."
+      },
+      "loads": {
+        "title": "Obciążenia",
+        "body": "Siły i momenty węzłowe, obciążenia skupione, równomierne i trapezowe wzdłuż prętów, temperatura, osiadania podpór."
+      },
+      "results": {
+        "title": "Wyniki",
+        "body": "N, V i M w dowolnym punkcie pręta, linie ugięcia, siły przywęzłowe, przemieszczenia i reakcje."
+      },
+      "reference": "Wszystkie klasy i metody"
+    },
+    "behind": {
+      "title": "Solver, na którym działa EduBeam",
+      "body": "Każdy wykres, reakcję i ugięcie w EduBeamie oraz każdy rysunek w tym serwisie oblicza {name}.",
+      "link": "Przejdź do EduBeamu"
+    }
+  },
+  "plot": {
+    "tagline": "Komponenty Vue, które rysują konstrukcje płaskie i ich wyniki w stylu rysunków z tego serwisu.",
+    "seo": {
+      "title": "{'@'}edubeam/plot: schematy i wykresy konstrukcji dla Vue",
+      "description": "Komponenty Vue, które rysują konstrukcje płaskie, obciążenia, reakcje i wykresy N, V, M jak w podręczniku: na strony przedmiotów, slajdy, zestawy zadań i do samodzielnych plików SVG."
+    },
+    "try": {
+      "title": "Wypróbuj",
+      "lede": "Rama obliczona przez {'@'}edubeam/fem na tej stronie. Zmień to, co ma być narysowane, a kod się dostosuje.",
+      "labelStyle": "Etykiety wartości",
+      "horizontal": "Poziomo",
+      "axis": "Wzdłuż rzędnej"
+    },
+    "teaching": {
+      "title": "Do materiałów dydaktycznych",
+      "lede": "Model zapisany w kodzie to rysunek, który nigdy się nie zdezaktualizuje: zmień liczbę, a rysunek, reakcje i wykresy zmienią się razem z nią. Ziarno generatora liczb losowych wybiera nowe zadanie, a to samo ziarno zawsze daje to samo zadanie. W ten sposób powstały w tym serwisie strona {practice} i {exam}.",
+      "practice": "Zadania ze statyki",
+      "exam": "generator kolokwiów"
+    },
+    "uses": {
+      "exercises": {
+        "title": "Zadania i kolokwia",
+        "body": "Osobne zadanie dla każdego studenta, wygenerowane z ziarna, z kluczem odpowiedzi – do druku albo jako rysunki do LaTeX-a i Worda."
+      },
+      "slides": {
+        "title": "Slajdy i materiały do wykładu",
+        "body": "Rysunki obliczane na żywo, które w Slidevie, Vue czy Beamerze odsłaniają się kliknięcie po kliknięciu."
+      },
+      "embedding": {
+        "title": "W Twojej dokumentacji i aplikacjach",
+        "body": "Vite, VitePress lub Nuxt, renderowanie po stronie serwera albo z wcześniej obliczonego JSON-a."
+      },
+      "print": {
+        "title": "Pliki do druku",
+        "body": "Samodzielny plik SVG ze stałymi kolorami, do Worda, LaTeX-a i Inkscape’a."
+      }
+    },
+    "features": {
+      "title": "Co potrafi",
+      "style": {
+        "title": "W stylu rysunków z tego serwisu",
+        "body": "Pręty, podpory, obciążenia, reakcje i kreskowane wykresy jak w tym serwisie, a do zestawów zadań także wymiary łańcuchowe i niewiadome reakcje oznaczone symbolami."
+      },
+      "readable": {
+        "title": "Czytelne w każdym rozmiarze",
+        "body": "Tekst i linie zachowują rozmiar w pikselach; wartości, które by się nakładały, są przesuwane lub pomijane, nigdy obcinane."
+      },
+      "exact": {
+        "title": "Dokładne",
+        "body": "Wykresy to wielomiany wprost z solvera: ekstrema są wyznaczane dokładnie, a skoki pod siłami skupionymi rysowane jako skoki."
+      },
+      "fits": {
+        "title": "Pasuje do strony",
+        "body": "Kolory z Twojego CSS, motyw jasny i ciemny. Renderuje się na serwerze i nigdy nie przechwytuje przewijania."
+      },
+      "components": "Wszystkie propsy"
+    }
+  },
+  "practice": {
+    "seo": {
+      "title": "Zadania ze statyki z natychmiastowym sprawdzeniem {'|'} EduBeam",
+      "description": "Darmowe zadania ze statyki: belki, ramy i kratownice, za każdym razem z nowymi liczbami. Wyznacz reakcje i największy moment lub siłę w pręcie, od razu sprawdź wynik i zobacz wykresy.",
+      "ogTitle": "Zadania ze statyki z natychmiastowym sprawdzeniem",
+      "ogDescription": "Belki, ramy i kratownice, za każdym razem z nowymi liczbami. Od razu sprawdzisz reakcje i momenty, a potem zobaczysz wykresy."
+    },
+    "title": "Zadania ze statyki",
+    "lede": "Za każdym razem nowe zadanie, z dokładnymi wynikami do porównania z Twoimi. Rozwiąż je na papierze, wpisz, co Ci wyszło, a potem zobacz wykresy.",
+    "codes": "Każde zadanie ma kod, np. {code}. Ten sam kod to zawsze to samo zadanie: wyślij go koledze z roku albo otwórz ten, który dostałeś od prowadzącego.",
+    "announce": "Nowe zadanie: {structure}, {code}.",
+    "structures": {
+      "title": "Konstrukcje",
+      "count": "{picked} z {total}",
+      "legend": "Konstrukcje, z których losuje przycisk Nowe zadanie",
+      "determinate": "Statycznie wyznaczalne",
+      "indeterminate": "Statycznie niewyznaczalne",
+      "note": "Przycisk Nowe zadanie losuje jedną z nich."
+    },
+    "code": {
+      "label": "Kod zadania",
+      "placeholder": "Kod",
+      "open": "Otwórz",
+      "error": "To nie jest kod zadania. Kod to litera i liczba, np. H2048."
+    },
+    "newProblem": "Nowe zadanie",
+    "copyLink": "Kopiuj link",
+    "linkCopied": "Link skopiowany",
+    "barForces": "Siły w prętach, rozciąganie dodatnie",
+    "answers": {
+      "title": "Twoje odpowiedzi",
+      "note": "Reakcje są narysowane na schemacie ze zwrotem, przy którym są dodatnie. Jeśli któraś działa w przeciwną stronę, jej wartość jest ujemna.",
+      "field": "{label}, {direction}, w {unit}",
+      "fieldMagnitude": "{label}, w {unit}"
+    },
+    "positive": {
+      "right": "zwrot dodatni w prawo",
+      "up": "zwrot dodatni w górę",
+      "counterClockwise": "zwrot dodatni przeciwnie do ruchu wskazówek zegara",
+      "tension": "rozciąganie dodatnie",
+      "magnitude": "wartość bezwzględna"
+    },
+    "mark": {
+      "correct": "dobrze",
+      "exact": "wynik dokładny",
+      "sign": "znak?",
+      "signLong": "wartość się zgadza, znak nie",
+      "wrong": "źle"
+    },
+    "verdict": {
+      "allRight": "Wszystko dobrze. Na schemacie zadania pojawiły się wykresy.",
+      "sign": "Dobrze: {right} z {total}. Tam, gdzie widać „{sign}”, wartość się zgadza, ale zwrot jest przeciwny.",
+      "some": "Dobrze: {right} z {total}. Uznawane są odpowiedzi z dokładnością do 1 %.",
+      "revealed": "Dokładne wyniki są obok Twoich pól, a na schemacie zadania pojawiły się wykresy."
+    },
+    "check": "Sprawdź",
+    "nextProblem": "Następne zadanie",
+    "hint": "Wskazówka",
+    "showAnswers": "Pokaż odpowiedzi",
+    "solved": "Rozwiązano na tym urządzeniu: {n} zadanie. | Rozwiązano na tym urządzeniu: {n} zadania. | Rozwiązano na tym urządzeniu: {n} zadań.",
+    "about": {
+      "answers": {
+        "title": "Skąd pochodzą odpowiedzi",
+        "body": "Każde zadanie rozwiązuje w Twojej przeglądarce {solver}, solver, na którym działa EduBeam, a rysuje je {plot}. Największy moment jest wyznaczany dokładnie, a nie odczytywany z krzywej próbkowanej w punktach."
+      },
+      "signs": {
+        "title": "Znaki i jednostki",
+        "body": "Odpowiedzi podaje się w kN i kNm. Obciążenia działają w dół, chyba że zadanie mówi inaczej. Reakcje są dodatnie w prawo, w górę i przeciwnie do ruchu wskazówek zegara, jak pokazuje każde pole; siły w prętach są dodatnie przy rozciąganiu. Wykresy są zgodne z {conventions} EduBeamu.",
+        "conventions": "konwencją znaków"
+      },
+      "teachers": {
+        "title": "Dla prowadzących",
+        "body": "{exam} drukuje te zadania jako kolokwia, dla każdego studenta w innej wersji, z kluczem odpowiedzi. Dzięki kodowi zadania studenci mogą potem sprawdzić tutaj swoje odpowiedzi.",
+        "exam": "Generator kolokwiów"
+      }
+    }
+  },
+  "exam": {
+    "seo": {
+      "title": "Generator kolokwiów ze statyki: arkusze do druku z kluczem odpowiedzi {'|'} EduBeam",
+      "description": "Kolokwia ze statyki w przeglądarce: belki, ramy i kratownice z generowanymi liczbami, inna wersja dla każdego studenta, klucz odpowiedzi i rysunki SVG do LaTeX-a i Worda. Za darmo, bez instalacji.",
+      "ogTitle": "Generator kolokwiów ze statyki: arkusze do druku z kluczem odpowiedzi",
+      "ogDescription": "Generowane belki, ramy i kratownice, osobna wersja dla każdego studenta, klucz odpowiedzi i rysunki SVG. Za darmo, w przeglądarce."
+    },
+    "title": "Generator kolokwiów",
+    "lede": "Kolokwia ze statyki, dla każdego studenta w innej wersji, z kluczem odpowiedzi. Wszystko powstaje w Twojej przeglądarce i nic nie jest nigdzie wysyłane; ustawienia są zapisane w adresie strony, więc zakładka przywróci te same arkusze.",
+    "defaultTitle": "Kolokwium ze statyki",
+    "settings": {
+      "title": "Tytuł",
+      "subtitle": "Drugi wiersz",
+      "subtitlePlaceholder": "Przedmiot, data, czas na rozwiązanie",
+      "problems": "Zadania",
+      "problem": "Zadanie {n}",
+      "determinate": "Statycznie wyznaczalne",
+      "indeterminate": "Statycznie niewyznaczalne",
+      "remove": "Usuń zadanie {n}",
+      "add": "Dodaj zadanie",
+      "problemsNote": "Każda wersja zawiera te zadania w tej kolejności, każde z własnymi liczbami. Najwyżej {max}.",
+      "versions": "Wersje",
+      "versionsNote": "Jedna dla każdego studenta, najwyżej {max}.",
+      "number": "Numer kolokwium",
+      "newNumber": "Nowy",
+      "newNumberTitle": "Nowe liczby we wszystkich zadaniach",
+      "numberNote": "Ten sam numer zawsze daje te same arkusze.",
+      "onPapers": "Na arkuszach",
+      "nameLine": "Miejsce na imię i nazwisko studenta",
+      "working": "Miejsce na obliczenia",
+      "key": "Klucz odpowiedzi na końcu",
+      "codes": "Kody zadań",
+      "codesNote": "Do pracy domowej: studenci sprawdzą odpowiedzi na stronie {practice}, która pokazuje też rozwiązanie. Na kolokwium zostaw wyłączone.",
+      "practicePage": "Zadania ze statyki"
+    },
+    "zipNote": "Plik .zip zawiera wszystkie rysunki i klucze jako SVG, do LaTeX-a i Worda, oraz odpowiedzi w tabeli CSV do sprawdzania prac.",
+    "summary": {
+      "papers": "{n} arkusz | {n} arkusze | {n} arkuszy",
+      "problems": "{n} zadaniem | {n} zadaniami | {n} zadaniami",
+      "plain": "{papers} z {problems}",
+      "withKey": "{papers} z {problems} i kluczem odpowiedzi",
+      "withKeys": "{papers} z {problems} i kluczami odpowiedzi"
+    },
+    "jump": {
+      "label": "Przejdź do arkusza",
+      "placeholder": "Przejdź do…",
+      "papers": "Arkusze",
+      "keys": "Klucze odpowiedzi",
+      "key": "Klucz, wersja {n}"
+    },
+    "version": "Wersja {n}",
+    "download": "Pobierz .zip",
+    "downloadTitle": "Wszystkie rysunki i klucze jako SVG, do LaTeX-a i Worda, oraz odpowiedzi w tabeli CSV do sprawdzania prac",
+    "print": "Drukuj",
+    "printLong": "Drukuj lub zapisz jako PDF",
+    "paper": {
+      "name": "Imię i nazwisko",
+      "rules": "Siły w kN, momenty w kNm. Obciążenia działają w dół, chyba że zadanie mówi inaczej. Reakcje to siły, którymi podpory działają na konstrukcję; są narysowane ze zwrotem, przy którym są dodatnie: w prawo, w górę i przeciwnie do ruchu wskazówek zegara. Ujemna odpowiedź oznacza przeciwny zwrot. Siły w prętach są dodatnie przy rozciąganiu.",
+      "check": "Sprawdź swoje odpowiedzi na stronie {url}"
+    },
+    "key": {
+      "title": "Klucz odpowiedzi",
+      "version": "{title}, wersja {n}",
+      "exam": "Kolokwium nr {n}"
+    },
+    "tension": "rozciąganie +",
+    "solutionFigure": "{name}: rozwiązanie"
+  },
+  "exerciseGenerator": {
+    "solveIt": "Rozwiąż na stronie Zadania ze statyki",
+    "exercise": "Zadanie",
+    "key": "Klucz odpowiedzi",
+    "solution": "Rozwiązanie",
+    "caption": "Wygenerowane w Twojej przeglądarce: ziarno generatora liczb losowych wybiera konstrukcję i jej dane liczbowe, {'@'}edubeam/fem ją rozwiązuje, a {'@'}edubeam/plot rysuje zadanie i rozwiązanie. Całe kolokwia przygotujesz w {exam}.",
+    "exam": "generatorze kolokwiów",
+    "newExercise": "Nowe zadanie"
+  },
+  "ui": {
+    "menu": "Menu",
+    "darkMode": "Tryb ciemny",
+    "lightMode": "Tryb jasny",
+    "language": "Język: {name}",
+    "guideNav": "Przewodnik",
+    "copy": "Kopiuj",
+    "copied": "Skopiowano",
+    "copyCode": "Kopiuj kod",
+    "docs": "Dokumentacja",
+    "elementSketch": "Element w osiach lokalnych"
+  },
+  "heroFigure": {
+    "aria": "Belka ze wspornikiem pod obciążeniem równomiernym i przesuwaną siłą skupioną, z wykresami sił tnących, momentów zginających i ugięć",
+    "slider": "Położenie siły skupionej 20 kN",
+    "loadAt": "{x} m od A",
+    "hint": "Przeciągnij obciążenie albo wskaż wykres, aby odczytać wartość.",
+    "fromA": "{x} m od A",
+    "reactions": "reakcje {a} kN w A i {b} kN w B",
+    "sagging": "największy moment dodatni {m} kNm",
+    "hogging": "moment ujemny nad podporą B {m} kNm"
+  },
+  "plotTexts": {
+    "structure": "Konstrukcja",
+    "structureWith": "Konstrukcja z {parts}",
+    "layers": {
+      "N": "wykresem sił normalnych",
+      "V": "wykresem sił tnących",
+      "M": "wykresem momentów zginających",
+      "w": "postacią odkształconą",
+      "reactions": "reakcjami",
+      "loads": "obciążeniami"
+    },
+    "loadHandle": "Położenie obciążenia {load}",
+    "loadPosition": "{metres} m od początku belki",
+    "stack": "Belka z obciążeniem",
+    "stackWith": "Belka z obciążeniem, a pod nią wykresy {rows}",
+    "rows": {
+      "N": "sił normalnych",
+      "V": "sił tnących",
+      "M": "momentów zginających",
+      "w": "ugięć"
+    },
+    "temperatureUniform": "ΔT",
+    "temperatureGradient": "ΔTb − ΔTt"
   }
 }
