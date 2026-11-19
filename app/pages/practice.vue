@@ -378,13 +378,13 @@ const copyLink = async () => {
                 autocomplete="off"
                 :aria-label="
                   a.positive
-                    ? t('practice.answers.field', { label: words.text(a.label), direction: direction(a), unit: a.unit })
-                    : t('practice.answers.fieldMagnitude', { label: words.text(a.label), unit: a.unit })
+                    ? t('practice.answers.field', { label: words.text(a.label), direction: direction(a), unit: t(`problems.unit.${a.unit}`) })
+                    : t('practice.answers.fieldMagnitude', { label: words.text(a.label), unit: t(`problems.unit.${a.unit}`) })
                 "
                 :aria-describedby="`m-${a.id}`"
                 :readonly="revealed"
               />
-              <span class="text-sm text-muted">{{ a.unit }}</span>
+              <span class="text-sm text-muted">{{ t(`problems.unit.${a.unit}`) }}</span>
               <!-- Read with its field; the summary under the fields is what is announced -->
               <span :id="`m-${a.id}`" class="answer-mark">
                 <template v-if="checked && verdicts[a.id] === 'right'"><Icon name="lucide:check" class="size-4" /><span class="sr-only">{{ t('practice.mark.correct') }}</span></template>

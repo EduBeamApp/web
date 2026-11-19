@@ -397,7 +397,7 @@ const download = () => {
                       <span class="sym"><i>{{ a.symbol[0] }}</i><sub>{{ a.symbol[1] }}</sub></span>
                       <span v-if="a.positive" class="dir">{{ positive(a.positive) }}</span>
                       <span class="blank" />
-                      <span class="unit">{{ a.unit }}</span>
+                      <span class="unit">{{ t(`problems.unit.${a.unit}`) }}</span>
                     </li>
                   </ul>
                   <p v-if="settings.codes" class="problem-check">
@@ -428,7 +428,7 @@ const download = () => {
                         <tr v-for="a in p.solved.answers" :key="a.id">
                           <th><i>{{ a.symbol[0] }}</i><sub>{{ a.symbol[1] }}</sub></th>
                           <td class="num">{{ fmt(a.value) }}</td>
-                          <td>{{ a.unit }}</td>
+                          <td>{{ t(`problems.unit.${a.unit}`) }}</td>
                           <td class="dir">{{ a.positive ? positive(a.positive) : '' }}</td>
                         </tr>
                       </tbody>

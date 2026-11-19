@@ -362,6 +362,10 @@
       "fixingMoment": "Einspannmoment in {node}",
       "bar": "Kraft im Stab {bar}",
       "largestMoment": "Betragsmäßig größtes Biegemoment"
+    },
+    "unit": {
+      "kN": "kN",
+      "kNm": "kNm"
     }
   },
   "library": {

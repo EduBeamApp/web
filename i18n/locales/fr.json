@@ -362,6 +362,10 @@
       "fixingMoment": "Moment d’encastrement en {node}",
       "bar": "Effort dans la barre {bar}",
       "largestMoment": "Moment fléchissant maximal, en valeur absolue"
+    },
+    "unit": {
+      "kN": "kN",
+      "kNm": "kNm"
     }
   },
   "library": {

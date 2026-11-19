@@ -362,6 +362,10 @@
       "fixingMoment": "Moment ve vetknutí v {node}",
       "bar": "Síla v prutu {bar}",
       "largestMoment": "Největší ohybový moment v absolutní hodnotě"
+    },
+    "unit": {
+      "kN": "kN",
+      "kNm": "kNm"
     }
   },
   "library": {

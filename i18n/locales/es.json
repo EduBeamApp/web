@@ -362,6 +362,10 @@
       "fixingMoment": "Momento de empotramiento en {node}",
       "bar": "Axil en la barra {bar}",
       "largestMoment": "Momento flector máximo, en valor absoluto"
+    },
+    "unit": {
+      "kN": "kN",
+      "kNm": "kNm"
     }
   },
   "library": {

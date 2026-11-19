@@ -362,6 +362,10 @@
       "fixingMoment": "Fixing moment at {node}",
       "bar": "Force in bar {bar}",
       "largestMoment": "Largest bending moment, in magnitude"
+    },
+    "unit": {
+      "kN": "kN",
+      "kNm": "kNm"
     }
   },
   "library": {
