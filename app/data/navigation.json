@@ -1516,36 +1516,23 @@
     "sidebar": [
       {
         "text": "Начало работы",
+        "icon": "lucide:flag",
+        "section": "guide",
         "items": [
           {
             "text": "Введение",
             "link": "/ru/guide/introduction"
           },
           {
-            "text": "Быстрый старт (10 мин)",
+            "text": "Быстрый старт (10 мин)",
             "link": "/ru/guide/quick-start"
-          },
-          {
-            "text": "Примеры",
-            "link": "/ru/examples/"
-          }
-        ]
-      },
-      {
-        "text": "Учебные примеры",
-        "items": [
-          {
-            "text": "Трёхшарнирная рама",
-            "link": "/ru/tutorials/three-hinged-frame"
-          },
-          {
-            "text": "Плоская ферма",
-            "link": "/ru/tutorials/truss"
           }
         ]
       },
       {
         "text": "Моделирование",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
         "items": [
           {
             "text": "Интерфейс",
@@ -1571,6 +1558,8 @@
       },
       {
         "text": "Результаты",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
         "items": [
           {
             "text": "Результаты и эпюры",
@@ -1583,10 +1572,12 @@
         ]
       },
       {
-        "text": "Файлы и обмен",
+        "text": "Обмен и преподавание",
+        "icon": "lucide:presentation",
+        "section": "guide",
         "items": [
           {
-            "text": "Импорт, экспорт и обмен",
+            "text": "Файлы, ссылки и экспорт",
             "link": "/ru/essentials/import-export"
           },
           {
@@ -1596,7 +1587,9 @@
         ]
       },
       {
-        "text": "Справочник",
+        "text": "Справка",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
         "items": [
           {
             "text": "Клавиатура, мышь и сенсорный экран",
@@ -1607,28 +1600,75 @@
             "link": "/ru/reference/troubleshooting"
           },
           {
-            "text": "FAQ",
+            "text": "Часто задаваемые вопросы",
             "link": "/ru/faq/"
           }
         ]
       },
       {
+        "text": "Учебные примеры",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Наклонная балка",
+            "link": "/ru/tutorials/inclined-beam"
+          },
+          {
+            "text": "Трёхшарнирная рама",
+            "link": "/ru/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Плоская ферма",
+            "link": "/ru/tutorials/truss"
+          },
+          {
+            "text": "Неразрезная балка и осадка опоры",
+            "link": "/ru/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "Задачи",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Задачи по строительной механике",
+            "link": "/ru/practice"
+          },
+          {
+            "text": "Конструктор контрольных работ",
+            "link": "/ru/exam"
+          },
+          {
+            "text": "Примеры",
+            "link": "/ru/examples/"
+          }
+        ]
+      },
+      {
         "text": "Теоретическое руководство",
+        "icon": "lucide:sigma",
+        "section": "theory",
         "items": [
           {
             "text": "Система координат и правила знаков",
             "link": "/ru/elements/conventions"
           },
           {
-            "text": "Балка",
+            "text": "Балочный элемент",
             "link": "/ru/elements/beam"
           },
           {
-            "text": "Ферма",
+            "text": "Элемент фермы",
             "link": "/ru/elements/truss"
+          },
+          {
+            "text": "Как EduBeam рассчитывает модель",
+            "link": "/ru/elements/analysis"
           }
-        ],
-        "collapsed": true
+        ]
       }
     ]
   },

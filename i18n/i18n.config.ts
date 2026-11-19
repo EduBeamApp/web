@@ -35,6 +35,23 @@ const polishPlural = (choice: number, choicesLength: number): number => {
 }
 
 /**
+ * Russian counts in three forms, written `один | два–четыре | пять и больше` in a message: 1 и 21
+ * задача, 2–4 и 22–24 задачи, но 0, 5–20 и 25–30 задач (11–14 тоже). This is CLDR's Russian rule
+ * for whole numbers; unlike Polish, 21, 31… take the first form. A fraction takes the second form,
+ * as Russian writes it (2,5 задачи). A message with two forms (English, before it is translated)
+ * picks between them as English does.
+ */
+const russianPlural = (choice: number, choicesLength: number): number => {
+  const n = Math.abs(choice)
+  if (choicesLength < 3) return n === 1 ? 0 : 1
+  if (!Number.isInteger(n)) return 1
+  const units = n % 10
+  const tens = n % 100
+  if (units === 1 && tens !== 11) return 0
+  return units >= 2 && units <= 4 && (tens < 12 || tens > 14) ? 1 : 2
+}
+
+/**
  * Text not yet translated shows in English. New copy is written in English first and translated
  * once it is settled.
  */
@@ -42,5 +59,5 @@ export default defineI18nConfig(() => ({
   fallbackLocale: 'en',
   missingWarn: false,
   fallbackWarn: false,
-  pluralRules: { cs: czechPlural, fr: frenchPlural, pt: frenchPlural, pl: polishPlural },
+  pluralRules: { cs: czechPlural, fr: frenchPlural, pt: frenchPlural, pl: polishPlural, ru: russianPlural },
 }))
