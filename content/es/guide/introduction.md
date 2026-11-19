@@ -1,88 +1,171 @@
 ---
-description: "Qué es EduBeam: un solver MEF gratuito en el navegador para vigas, pórticos y celosías 2D. Qué hace y qué no, para quién es y cómo se organiza esta guía."
+description: "Qué es EduBeam, un solver MEF gratuito para vigas, pórticos y celosías 2D en el navegador: qué hace y qué no, para quién es, la guía y sus bibliotecas."
+source: site
 ---
 
 # Introducción
 
-[EduBeam]{.edubeam} es una herramienta gratuita, basada en el navegador, para el **análisis estructural 2D** de vigas, pórticos y celosías. Dibujas la estructura, añades apoyos y cargas, y el solver de elementos finitos lo recalcula todo en el momento en que cambias cualquier cosa. No hay botón *Calcular*, ni instalación, ni cuenta.
+[EduBeam]{.edubeam} es una aplicación gratuita de análisis estructural para **vigas, pórticos y celosías** que funciona en el navegador. Dibujas la estructura, la apoyas y la cargas, y el solver de elementos finitos recalcula los diagramas, las reacciones y las flechas con cada cambio que haces. No hay botón *Calcular*, no hay nada que instalar y no hace falta crear una cuenta.
 
-[Abre EduBeam](https://run.edubeam.app/?lang=es){target="_blank"} en una pestaña nueva y sigue el [Inicio rápido](/es/guide/quick-start).
+::div{.actions}
+[Abrir EduBeam ↗](https://run.edubeam.app/?lang=es){target="_blank"} [Inicio rápido en 10 minutos](/es/guide/quick-start)
+::
 
 ![Un pórtico triarticulado en EduBeam: cargas en naranja, reacciones en morado, momento flector en rojo y deformada en gris](/screenshots/es/hero.webp)
 
-## Tu primera visita {#your-first-visit}
-
-La primera vez que abres la aplicación, un diálogo de bienvenida te pregunta cómo quieres empezar y qué unidades y ejes prefieres. Puedes cambiar ambas cosas más adelante en [Configuración](/es/essentials/units-settings).
-
-![El diálogo de bienvenida](/screenshots/es/welcome.webp){.shot-lg}
-
-- **Hacer un recorrido** te señala, uno a uno, el menú, deshacer y rehacer, los botones del visor, las opciones de visualización, la cuadrícula y las unidades, y la barra inferior.
-- **Dibuja tu primera viga** es una tarea guiada de siete pasos. Dibujas una viga con el ratón, la apoyas, la cargas y lees los resultados. Una pequeña tarjeta en la esquina te indica qué hacer a continuación.
-- **Abrir un ejemplo** abre la galería de modelos ya preparados.
-
-Las tres opciones están también en el **menú ☰**, así que puedes volver a ellas en cualquier momento.
-
-![Dibuja tu primera viga: la tarjeta de la guía permanece en la esquina mientras trabajas](/screenshots/es/first-beam-task.webp)
+:span{#your-first-visit}
 
 ## Qué hace {#what-it-does}
 
-| Área | Capacidades |
-| --- | --- |
-| **Estructuras** | Vigas, vigas continuas, pórticos y celosías planos (x–z) formados por nodos y elementos viga 2D de Timoshenko. Las rótulas de extremo convierten cualquier barra en una barra de celosía. |
-| **Apoyos** | Articulación, rodillo, empotramiento, deslizadera y cualquier otra combinación de `Dx`, `Dz`, `Ry` restringidos, elegida por su símbolo. Apoyos girados mediante un ángulo nodal. Asientos de apoyo. |
-| **Cargas** | Fuerzas y momentos nodales, desplazamientos impuestos, cargas lineales uniformes y trapezoidales, fuerzas y momentos puntuales a lo largo de una barra y cargas térmicas uniformes o con gradiente. |
-| **Secciones** | Bibliotecas de materiales y secciones (europeas y estadounidenses), además de un editor de polígonos que calcula $A$, $I_y$, $I_z$, $I_{yz}$, los ejes principales y los radios de giro de cualquier forma. |
-| **Resultados** | Deformada, esfuerzo axil **N**, esfuerzo cortante **V**, momento flector **M**, reacciones, desplazamientos nodales, fuerzas en los extremos de los elementos y matrices de rigidez de los elementos. |
-| **Análisis** | Análisis estático lineal con un único caso de carga. Los resultados son exactos para el modelo lineal, así que no hace falta refinar la malla. Cuando una estructura no se puede resolver, EduBeam explica por qué y anima cómo puede moverse. |
-| **Archivos** | Guardar y abrir proyectos en JSON, compartir un modelo completo como enlace, exportar el dibujo en PNG o SVG y los resultados en CSV. Los modelos reemplazados recientemente se conservan para que puedas recuperarlos. Todo permanece en tu dispositivo. |
-| **Unidades** | SI o unidades estadounidenses con un clic, o cada magnitud por separado. Ejes con x a la derecha y z hacia abajo, o con x a la derecha e y hacia arriba. |
+::card-grid{cols="2"}
+:::card{title="Estructuras" icon="lucide:triangle" to="/es/essentials/elements"}
+Vigas, vigas continuas, pórticos y celosías en el plano x–z, formados por elementos viga de Timoshenko. Con rótulas en los extremos, un elemento se convierte en una barra de celosía.
+:::
+:::card{title="Apoyos" icon="lucide:anchor" to="/es/essentials/nodes-supports#supports"}
+Articulación, rodillo, empotramiento, deslizadera o cualquier combinación de `Dx`, `Dz` y `Ry` restringidos, elegida por su símbolo. Apoyos inclinados y asientos de apoyo.
+:::
+:::card{title="Cargas" icon="lucide:arrow-down-to-line" to="/es/essentials/loads"}
+Fuerzas y momentos en los nodos o en cualquier punto de una barra, cargas lineales uniformes y trapezoidales, cargas térmicas y desplazamientos impuestos.
+:::
+:::card{title="Secciones" icon="lucide:shapes" to="/es/essentials/elements#cross-sections"}
+Bibliotecas europeas y estadounidenses, o cualquier polígono que dibujes, con $A$, $I_y$, $I_z$, $I_{yz}$, los ejes principales y los radios de giro ya calculados.
+:::
+:::card{title="Resultados" icon="lucide:chart-spline" to="/es/essentials/results"}
+Diagramas de **N**, **V** y **M**, la deformada, las reacciones, los desplazamientos nodales, las fuerzas en los extremos y las matrices de rigidez de los elementos.
+:::
+:::card{title="Análisis" icon="lucide:calculator" to="/es/elements/analysis"}
+Estática lineal, exacta para el modelo lineal: no hay malla que refinar. Si una estructura no se sostiene, EduBeam explica por qué y anima cómo se mueve.
+:::
+:::card{title="Archivos" icon="lucide:folder-open" to="/es/essentials/import-export"}
+Proyectos en JSON, modelos completos como enlaces, dibujos en PNG o SVG y resultados en CSV. Los modelos reemplazados se conservan y nada sale de tu dispositivo.
+:::
+:::card{title="Unidades" icon="lucide:ruler" to="/es/essentials/units-settings"}
+SI o unidades estadounidenses con un clic, o magnitud por magnitud. El eje z hacia abajo, o el eje y hacia arriba de los libros de texto.
+:::
+::
 
 ## Qué no hace (todavía) {#what-it-does-not-do-yet}
 
 Conocer los límites de antemano ahorra tiempo:
 
+::div{.limits}
 - **Solo 2D.** Sin comportamiento fuera del plano, sin pórticos 3D.
 - **Solo estática lineal.** Sin efectos de segundo orden (P–Δ), pandeo, dinámica ni plasticidad.
-- **Un solo caso de carga.** No hay combinaciones de carga ni envolventes. Modela cada caso por separado y guárdalo como archivo o enlace propio.
-- **Sin peso propio.** Aplícalo como carga lineal si lo necesitas.
-- **Sin comprobaciones de diseño.** EduBeam te da esfuerzos y desplazamientos; las comprobaciones normativas corren de tu cuenta.
+- **Un solo caso de carga.** Sin combinaciones ni envolventes: guarda cada caso en su propio archivo o enlace.
+- **Sin peso propio.** Introdúcelo como carga lineal.
+- **Sin dimensionamiento.** EduBeam da los esfuerzos y los desplazamientos; las comprobaciones según la normativa corren de tu cuenta.
+::
 
-Si echas en falta una función importante para ti, [abre una incidencia](https://github.com/janvorisek/edubeam/issues).
+Si echas en falta una función que te importa, [abre una incidencia](https://github.com/janvorisek/edubeam/issues).
 
 ::elementarium-promo{placement="introduction"}
 ::
 
 ## ¿Para quién es? {#who-is-it-for}
 
-- **Estudiantes** de mecánica de estructuras que quieren una respuesta inmediata a sus cálculos a mano. Consulta [Comprobar resultados a mano](/es/guide/verification).
-- **Docentes** que muestran en directo, con el proyector y en cualquiera de los 18 idiomas, cómo los apoyos, las rótulas y las cargas cambian los esfuerzos. Consulta [Enseñar con EduBeam](/es/guide/teaching).
-- **Ingenieros** que quieren una comprobación rápida antes de abrir un programa de escritorio más pesado.
+::card-grid{cols="2"}
+:::card{title="Estudiantes" icon="lucide:graduation-cap" to="/es/practice"}
+Comprobación inmediata de tus cálculos a mano y problemas para practicar que corrigen tus resultados sobre la marcha.
+:::
+:::card{title="Docentes" icon="lucide:presentation" to="/es/guide/teaching"}
+Muestra en directo con el proyector, en 18 idiomas, cómo los apoyos, las rótulas y las cargas cambian los esfuerzos, e imprime un examen distinto para cada estudiante.
+:::
+:::card{title="Ingenieros" icon="lucide:hard-hat" to="/es/elements/analysis"}
+Una comprobación rápida antes de abrir un programa de escritorio más pesado, con cada paso de la solución documentado.
+:::
+:::card{title="Desarrolladores" icon="lucide:code-xml" to="#libraries"}
+El solver y los dibujos de EduBeam, publicados como bibliotecas de código abierto para tu propio código.
+:::
+::
 
-## Cómo está organizada esta guía {#how-this-guide-is-organised}
+## Cómo moverte por la guía {#how-this-guide-is-organised}
 
-1. **Primeros pasos.** Esta página, el [Inicio rápido de 10 minutos](/es/guide/quick-start) y los [Ejemplos](/es/examples/) listos para usar.
-2. **Tutoriales.** Modelos completos de principio a fin, comprobados a mano: un [pórtico triarticulado](/es/tutorials/three-hinged-frame) y una [celosía plana](/es/tutorials/truss).
-3. **Modelado.** Una página por cada bloque: la [interfaz de usuario](/es/essentials/user-interface), [nodos y apoyos](/es/essentials/nodes-supports), [elementos, materiales y secciones](/es/essentials/elements), [cargas](/es/essentials/loads) y [unidades y ajustes](/es/essentials/units-settings).
-4. **Resultados.** Cómo [leer los diagramas y las tablas](/es/essentials/results) y cómo [comprobarlos](/es/guide/verification).
-5. **Archivos y compartir.** [Proyectos, enlaces para compartir, exportación de imágenes y CSV](/es/essentials/import-export), y [enseñar con EduBeam](/es/guide/teaching).
-6. **Referencia.** [Teclado, ratón y pantalla táctil](/es/reference/shortcuts), [solución de problemas](/es/reference/troubleshooting) y las [preguntas frecuentes](/es/faq/).
-7. **Manual teórico.** [Convenio de signos](/es/elements/conventions) y las formulaciones de los elementos [viga](/es/elements/beam) y [barra de celosía](/es/elements/truss).
+La barra lateral agrupa las páginas así. Los botones **?** de la aplicación abren aquí la página correspondiente, en tu idioma.
 
-Los iconos **?** de la aplicación abren la página correspondiente de esta guía en tu idioma.
+::card-grid{cols="2"}
+:::card{title="Primeros pasos" icon="lucide:flag" to="/es/guide/quick-start"}
+Esta página y el Inicio rápido: una primera viga en diez minutos.
+:::
+:::card{title="Crear un modelo" icon="lucide:pencil-ruler" to="/es/essentials/user-interface"}
+La interfaz, nodos y apoyos, elementos, materiales y secciones, cargas, unidades y ajustes.
+:::
+:::card{title="Leer los resultados" icon="lucide:chart-spline" to="/es/essentials/results"}
+Los diagramas y las tablas de resultados, y cómo comprobarlos a mano.
+:::
+:::card{title="Compartir y enseñar" icon="lucide:share-2" to="/es/essentials/import-export"}
+Archivos de proyecto, enlaces para compartir, exportación de imágenes y CSV, y la docencia con EduBeam.
+:::
+:::card{title="Tutoriales" icon="lucide:triangle" to="/es/tutorials/inclined-beam"}
+Una viga inclinada, un pórtico triarticulado, una celosía plana y una viga continua con asiento de apoyo, cada uno construido paso a paso y comprobado a mano.
+:::
+:::card{title="Ejemplos" icon="lucide:library" to="/es/examples/"}
+Seis modelos ya preparados que se abren con un clic, con ejercicios y soluciones.
+:::
+:::card{title="Manual teórico" icon="lucide:sigma" to="/es/elements/conventions"}
+Ejes y convención de signos, los elementos viga y barra de celosía, y cómo resuelve EduBeam un modelo.
+:::
+:::card{title="Ayuda" icon="lucide:life-buoy" to="/es/reference/shortcuts"}
+Teclado, ratón y pantalla táctil, solución de problemas y preguntas frecuentes.
+:::
+::
+
+## Crea tus propias herramientas {#libraries}
+
+EduBeam se apoya en dos bibliotecas de código abierto, documentadas en este mismo sitio. Con ellas puedes resolver estructuras desde un script, generar un ejercicio distinto para cada estudiante o dibujar figuras para diapositivas y apuntes.
+
+::card-grid{cols="2"}
+:::card{title="@edubeam/fem" icon="lucide:package" to="/es/solver"}
+El solver de elementos finitos de EduBeam, en TypeScript: define, resuelve y consulta una viga en una docena de líneas, en el navegador o en Node.
+:::
+:::card{title="@edubeam/plot" icon="lucide:spline" to="/es/plot"}
+Componentes de Vue 3 que dibujan en SVG una estructura resuelta, con sus cargas, reacciones y diagramas de N, V y M.
+:::
+::
 
 ## Idiomas {#languages}
 
-La interfaz está disponible en English, Bahasa Indonesia, Čeština, Deutsch, Español, Français, Italiano, Polski, Português, Tiếng Việt, Русский, Türkçe, Українська, हिन्दी, 日本語, 한국어, ไทย y 汉语. EduBeam elige el idioma según tu navegador. Cámbialo en **Configuración → Idioma y configuración regional**, o abre la aplicación con el parámetro `?lang=`, p. ej. [run.edubeam.app/?lang=cs](https://run.edubeam.app/?lang=cs){target="_blank"}.
+EduBeam habla 18 idiomas y arranca en el de tu navegador. Cámbialo en **Configuración → Idioma y configuración regional**, o elige uno aquí:
+
+::div{.chips}
+- [:icon{name="circle-flags:lang-en"} English](https://run.edubeam.app/?lang=en){target="_blank"}
+- [:icon{name="circle-flags:lang-id"} Bahasa Indonesia](https://run.edubeam.app/?lang=id){target="_blank"}
+- [:icon{name="circle-flags:lang-cs"} Čeština](https://run.edubeam.app/?lang=cs){target="_blank"}
+- [:icon{name="circle-flags:lang-de"} Deutsch](https://run.edubeam.app/?lang=de){target="_blank"}
+- [:icon{name="circle-flags:lang-es"} Español](https://run.edubeam.app/?lang=es){target="_blank"}
+- [:icon{name="circle-flags:lang-fr"} Français](https://run.edubeam.app/?lang=fr){target="_blank"}
+- [:icon{name="circle-flags:lang-it"} Italiano](https://run.edubeam.app/?lang=it){target="_blank"}
+- [:icon{name="circle-flags:lang-pl"} Polski](https://run.edubeam.app/?lang=pl){target="_blank"}
+- [:icon{name="circle-flags:lang-pt-br"} Português](https://run.edubeam.app/?lang=pt){target="_blank"}
+- [:icon{name="circle-flags:lang-vi"} Tiếng Việt](https://run.edubeam.app/?lang=vi){target="_blank"}
+- [:icon{name="circle-flags:lang-ru"} Русский](https://run.edubeam.app/?lang=ru){target="_blank"}
+- [:icon{name="circle-flags:lang-tr"} Türkçe](https://run.edubeam.app/?lang=tr){target="_blank"}
+- [:icon{name="circle-flags:lang-uk"} Українська](https://run.edubeam.app/?lang=uk){target="_blank"}
+- [:icon{name="circle-flags:lang-hi"} हिन्दी](https://run.edubeam.app/?lang=hi){target="_blank"}
+- [:icon{name="circle-flags:lang-ja"} 日本語](https://run.edubeam.app/?lang=ja){target="_blank"}
+- [:icon{name="circle-flags:lang-ko"} 한국어](https://run.edubeam.app/?lang=ko){target="_blank"}
+- [:icon{name="circle-flags:lang-th"} ไทย](https://run.edubeam.app/?lang=th){target="_blank"}
+- [:icon{name="circle-flags:lang-zh"} 中文](https://run.edubeam.app/?lang=cn){target="_blank"}
+::
+
+Un enlace también puede fijar el idioma de antemano: `run.edubeam.app/?lang=es` se abre en español.
 
 ## Autores y agradecimientos {#authors-credits}
 
-[EduBeam]{.edubeam} está dirigido por [Jan Voříšek](https://github.com/janvorisek), mantenedor y diseñador de producto de la edición web moderna. La versión para navegador se desarrolla de forma independiente de la ČVUT. El EduBeam de escritorio original para Windows y Linux fue creado por [Bořek Patzák](http://ksm.fsv.cvut.cz/~bp/), [Jan Stránský](https://mech.fsv.cvut.cz/~stransky/en/) y [Vít Šmilauer](https://mech.fsv.cvut.cz/~smilauer/) en el Departamento de Mecánica de la [Facultad de Ingeniería Civil de la Universidad Técnica Checa de Praga (ČVUT)](https://www.fsv.cvut.cz/en). El solver es la biblioteca de código abierto [@edubeam/fem](/solver).
+[EduBeam]{.edubeam} lo desarrolla [Jan Voříšek](https://github.com/janvorisek) como proyecto independiente. Sigue los pasos del EduBeam de escritorio para Windows y Linux, creado por [Bořek Patzák](http://ksm.fsv.cvut.cz/~bp/), [Jan Stránský](https://mech.fsv.cvut.cz/~stransky/en/) y [Vít Šmilauer](https://mech.fsv.cvut.cz/~smilauer/) en el Departamento de Mecánica de la [Facultad de Ingeniería Civil de la Universidad Técnica Checa de Praga (ČVUT)](https://www.fsv.cvut.cz/en), y todavía abre sus archivos de sesión. Su solver, [@edubeam/fem](/es/solver), nació de la primera versión de Bořek Patzák. Tanto la aplicación como el solver son de código abierto, bajo licencia GPL-3.0.
 
-::team-members{size="small" :members='[{"avatar":"https://www.github.com/janvorisek.png","name":"Jan Voříšek","title":"Desarrollador principal y diseñador del producto","links":[{"icon":"github","link":"https://github.com/janvorisek"},{"icon":"twitter","link":"https://twitter.com/janvorisekdev"}]},{"avatar":"https://www.github.com/bpatzak.png","name":"Bořek Patzák","title":"Solver MEF, autor de la aplicación original","links":[{"icon":"github","link":"https://github.com/bpatzak"}]}]'}
+::team-members{size="small" :members='[{"avatar":"https://www.github.com/janvorisek.png","name":"Jan Voříšek","title":"Desarrollador principal y diseñador del producto","links":[{"icon":"github","link":"https://github.com/janvorisek"},{"icon":"twitter","link":"https://twitter.com/janvorisekdev"}]},{"avatar":"https://www.github.com/kelidas.png","name":"Václav Sadílek","title":"Desarrollador: control táctil, rendimiento del dibujo, cargas y apoyos","links":[{"icon":"web","link":"https://www.stm.fce.vutbr.cz/sadilek/"},{"icon":"github","link":"https://github.com/kelidas"}]},{"avatar":"https://www.github.com/bpatzak.png","name":"Bořek Patzák","title":"El EduBeam original y el primer solver MEF","links":[{"icon":"github","link":"https://github.com/bpatzak"}]}]'}
 ::
 
 ## Contribuir {#contribute}
 
-- Informa de comportamientos confusos o errores mediante una [incidencia en GitHub](https://github.com/janvorisek/edubeam/issues).
-- Mejora esta documentación o las traducciones editando los archivos de `docs/` y abriendo un pull request.
-- Comparte EduBeam con tus compañeros y colegas.
+::card-grid{cols="3"}
+:::card{title="Informar de un problema" icon="lucide:bug" to="https://github.com/janvorisek/edubeam/issues"}
+¿Algo confuso, incorrecto o que no funciona? Una incidencia en GitHub llega directamente al equipo.
+:::
+:::card{title="Mejorar una traducción" icon="lucide:languages" to="https://github.com/janvorisek/edubeam/tree/main/src/locales"}
+Los textos de la aplicación están en un archivo por idioma; los pull requests son bienvenidos.
+:::
+:::card{title="Darlo a conocer" icon="lucide:share-2"}
+Comparte EduBeam con tus compañeros y colegas, o incluye el enlace de un modelo en tus apuntes.
+:::
+::

@@ -332,6 +332,8 @@
     "sidebar": [
       {
         "text": "Primeros pasos",
+        "icon": "lucide:flag",
+        "section": "guide",
         "items": [
           {
             "text": "Introducción",
@@ -340,28 +342,13 @@
           {
             "text": "Inicio rápido (10 min)",
             "link": "/es/guide/quick-start"
-          },
-          {
-            "text": "Ejemplos",
-            "link": "/es/examples/"
           }
         ]
       },
       {
-        "text": "Tutoriales",
-        "items": [
-          {
-            "text": "Pórtico triarticulado",
-            "link": "/es/tutorials/three-hinged-frame"
-          },
-          {
-            "text": "Celosía plana",
-            "link": "/es/tutorials/truss"
-          }
-        ]
-      },
-      {
-        "text": "Modelado",
+        "text": "Crear el modelo",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
         "items": [
           {
             "text": "Interfaz de usuario",
@@ -386,7 +373,9 @@
         ]
       },
       {
-        "text": "Resultados",
+        "text": "Leer los resultados",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
         "items": [
           {
             "text": "Resultados y diagramas",
@@ -399,10 +388,12 @@
         ]
       },
       {
-        "text": "Archivos y compartir",
+        "text": "Compartir y enseñar",
+        "icon": "lucide:presentation",
+        "section": "guide",
         "items": [
           {
-            "text": "Importar, exportar y compartir",
+            "text": "Archivos, enlaces y exportación",
             "link": "/es/essentials/import-export"
           },
           {
@@ -412,7 +403,9 @@
         ]
       },
       {
-        "text": "Referencia",
+        "text": "Ayuda",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
         "items": [
           {
             "text": "Teclado, ratón y pantalla táctil",
@@ -429,22 +422,69 @@
         ]
       },
       {
-        "text": "Manual teórico",
+        "text": "Tutoriales",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
         "items": [
           {
-            "text": "Sistema de coordenadas y convenio de signos",
+            "text": "Viga inclinada",
+            "link": "/es/tutorials/inclined-beam"
+          },
+          {
+            "text": "Pórtico triarticulado",
+            "link": "/es/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Celosía plana",
+            "link": "/es/tutorials/truss"
+          },
+          {
+            "text": "Viga continua y asiento de apoyo",
+            "link": "/es/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "Practicar",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Problemas para practicar",
+            "link": "/es/practice"
+          },
+          {
+            "text": "Generador de exámenes",
+            "link": "/es/exam"
+          },
+          {
+            "text": "Ejemplos",
+            "link": "/es/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Manual teórico",
+        "icon": "lucide:sigma",
+        "section": "theory",
+        "items": [
+          {
+            "text": "Sistema de coordenadas y convención de signos",
             "link": "/es/elements/conventions"
           },
           {
-            "text": "Viga",
+            "text": "Elemento viga",
             "link": "/es/elements/beam"
           },
           {
             "text": "Barra de celosía",
             "link": "/es/elements/truss"
+          },
+          {
+            "text": "Cómo resuelve EduBeam un modelo",
+            "link": "/es/elements/analysis"
           }
-        ],
-        "collapsed": true
+        ]
       }
     ]
   },

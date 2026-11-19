@@ -1,120 +1,231 @@
 ---
-description: "Añade elementos viga, define rótulas de extremo y orientación del elemento, y crea materiales y secciones en EduBeam, incluidas secciones poligonales propias."
+description: "Dibuja elementos viga en EduBeam, libera sus extremos con rótulas para modelar articulaciones y barras de celosía, y define materiales y secciones desde las bibliotecas o con tu propio polígono."
+source: site
 ---
 
 # Elementos, materiales y secciones
 
+En [EduBeam]{.edubeam}, cada elemento es una viga entre dos nodos, con un material y una sección. Dibuja los elementos entre nodos, libera sus extremos con rótulas allí donde la estructura tiene articulaciones, y elige materiales y secciones de las bibliotecas o define los tuyos.
+
 ## El elemento viga {#the-beam-element}
 
-[EduBeam]{.edubeam} tiene un único tipo de elemento: una **viga de Timoshenko 2D** en el plano x–z con tres grados de libertad en cada extremo (`Dx`, `Dz`, `Ry`). Transmite esfuerzo axil, cortante y flector, e incluye la deformación por cortante, por eso la sección tiene un coeficiente de cortante. La formulación completa está en el [manual teórico](/es/elements/beam).
+Hay un único tipo de elemento: una **viga de Timoshenko 2D** en el plano x–z, con tres grados de libertad en cada extremo (`Dx`, `Dz`, `Ry`). Transmite esfuerzo axil, esfuerzo cortante y momento flector, e incluye la [deformación por cortante](#shear-deformation). Una barra de celosía es el mismo elemento con [los dos extremos articulados](#end-hinges). La formulación está en el [manual teórico](/es/elements/beam).
 
-::truss-element{:moment='true' caption="Elemento viga 2D: tres grados de libertad por nodo"}
-::
+Los resultados a lo largo de un elemento son exactos para el modelo lineal, así que **basta un elemento por barra**. Añade un nodo dentro de una barra solo donde necesites un apoyo, una rótula, un cambio de sección o un punto en el que leer desplazamientos. Una carga puntual no lo necesita: una [carga concentrada](/es/essentials/loads#concentrated-load) puede estar en cualquier punto del elemento.
 
-Los resultados a lo largo de un elemento son exactos para el modelo lineal, así que basta un elemento por barra. Añade nodos intermedios solo donde necesites un apoyo, una rótula, un cambio de sección o un nodo en el que leer resultados.
+## Añadir elementos {#adding-elements}
 
-### Añadir elementos {#adding-elements}
+Un elemento necesita un material y una sección, así que añádelos antes (consulta [Materiales](#materials) y [Secciones](#cross-sections)). Mientras no haya ninguno, el visor muestra *No hay materiales definidos.* o *No hay secciones definidas.*, con un botón **Añadir**.
 
-| Método | Cómo |
-| --- | --- |
-| **Diálogo** | Pestaña *Elementos* → el primer botón **Añadir elemento**, o el menú del lienzo → *Añadir elemento*. Elige el **Nodo inicial** y el **Nodo final**, las rótulas, el material y la sección. |
-| **Ratón** | Pestaña *Elementos* → el segundo botón **Añadir elemento** (icono de cursor), o mantén <kbd>Ctrl</kbd> pulsado con la opción del menú del lienzo. Haz clic en un nodo para empezar y luego en el siguiente nodo para conectarlo; un clic en el lienzo vacío crea allí un nodo. Sigue haciendo clic para dibujar una polilínea y pulsa <kbd>Esc</kbd> para terminar. La banda de la parte superior define la **Rótula al inicio** y la **Rótula al final** de cada elemento que dibujas. Se usan el primer material y la primera sección del modelo. |
+- **Eligiendo los nodos.** Pestaña *Elementos* → **Añadir elemento** (el botón con el icono **+**), o clic derecho en el lienzo → *Añadir elemento*. Elige el **Nodo inicial** y el **Nodo final**, marca **Rótula** debajo de cualquiera de ellos si hace falta, y elige el **Material** y la **Sección transversal**. Hacen falta al menos dos nodos.
+- **Con clics.** Pestaña *Elementos* → **Añadir elemento** (el botón con el icono de cursor), o mantén pulsada <kbd>Ctrl</kbd> al elegir *Añadir elemento* en el menú del lienzo. Haz clic en un nodo (o en el lienzo vacío, lo que crea uno) y luego en el siguiente; sigue haciendo clic para dibujar una cadena de elementos y pulsa <kbd>Esc</kbd> o **Cancelar** para terminar. La franja superior define la **Rótula al inicio** y la **Rótula al final** de cada elemento que dibujas. Los elementos reciben el primer material y la primera sección del modelo.
 
 ![El diálogo Añadir elemento](/screenshots/es/qs-element.webp){.shot-md}
 
-::callout{type="warning" title="Primero materiales y secciones"}
-Un elemento necesita un material y una sección. Si no hay ninguno, el visor muestra *No hay materiales definidos.* / *No hay secciones definidas.* con un botón **Añadir**.
-::
+## Orientación del elemento {#element-direction}
 
-### Orientación del elemento {#element-direction}
+Cada elemento tiene sus propios **ejes locales**. El eje x local va del **nodo inicial** al **nodo final**; el eje z local es el x local girado 90° en sentido horario en pantalla. En un elemento dibujado de izquierda a derecha, los ejes locales coinciden con los globales. La **línea discontinua** dibujada a lo largo de cada elemento marca su lado +z local, las «fibras inferiores».
 
-El **eje x local** va del nodo inicial al nodo final. Esto importa para:
+![Un pórtico dibujado A → B → C → D: las líneas discontinuas de los tres elementos quedan dentro del pórtico](/screenshots/es/p2b-element-direction.webp){.shot-md}
 
-- las cargas en coordenadas locales (**LCS** marcado),
-- la *Posición de carga desde el nodo inicial* de las cargas concentradas,
-- el orden de las fuerzas en extremos (`X12, Z12, M12` en el inicio, `X21, Z21, M21` en el final) en la tabla de resultados.
+En este pórtico, el elemento 1 sube de A a B, así que su eje z local, y su línea discontinua, apuntan a la derecha; el elemento 3 baja de C a D, así que su línea discontinua queda a la izquierda. Dibujado así, todas las líneas discontinuas de un pórtico quedan en el interior.
 
-Usa el botón de intercambio entre los dos nodos en la tabla de *Elementos* para invertir un elemento.
+La orientación importa para:
 
-### Rótulas de extremo {#end-hinges}
+- las cargas dadas en ejes locales (**LCS** marcado), consulta [Cargas de elemento](/es/essentials/loads#element-loads);
+- la **Posición de carga desde el nodo inicial** de una carga concentrada;
+- el orden de las [fuerzas de extremo](/es/elements/conventions#end-forces-element-results-table) en los resultados: `X12, Z12, M12` en el nodo inicial y `X21, Z21, M21` en el nodo final;
+- cuál es el «lado discontinuo» en los [ajustes de los diagramas](/es/essentials/units-settings#viewer-settings).
 
-Cada elemento tiene dos casillas de **Rótulas de extremo**, inicio y final, en la tabla de *Elementos*. También están en el diálogo Añadir elemento, en el panel **Editar elemento** del elemento y en la banda que aparece al dibujar con el ratón. Una rótula marcada libera el momento flector en ese extremo, así que:
+Para invertir un elemento, pulsa **Intercambiar nodos** (las flechas entre los dos nodos en la tabla *Elementos*).
 
-- una rótula crea una articulación dentro de un pórtico o de una viga continua (allí el momento es cero);
-- las dos rótulas crean una **barra de celosía**, que solo transmite esfuerzo axil.
+## Rótulas de extremo {#end-hinges}
 
-::truss-element{:hinges='[true,true]' caption="Ambos extremos articulados → barra de celosía"}
-::
+Una rótula de extremo libera el momento flector en un extremo del elemento: allí el momento es nulo y el extremo puede girar independientemente del nodo.
 
-![La tabla de elementos del pórtico triarticulado: el elemento 2 tiene una rótula en su final, en el nodo C](/screenshots/es/elements-table.webp)
+- **Una rótula** introduce una articulación dentro de una viga o de un pórtico.
+- **Dos rótulas** convierten el elemento en una **barra de celosía**, que solo transmite esfuerzo axil.
 
-Cuando dos elementos concurren en un nodo y solo uno de ellos está articulado, el otro sigue transmitiendo momento al nodo. Así que articula el elemento que quieres liberar, no «el nodo». Si las rótulas convierten la estructura en un mecanismo, EduBeam las rodea con un círculo y muestra cómo se mueve.
+Márcalas en cualquiera de estos sitios:
 
-### Editar y eliminar {#editing-and-deleting}
+- la columna **Rótulas de extremo** de la tabla *Elementos*, con una casilla para cada extremo;
+- las casillas **Rótula** del diálogo **Añadir elemento**, o del panel del elemento → **Editar elemento**;
+- **Rótula al inicio** y **Rótula al final** en la franja superior, al dibujar con el ratón.
 
-Haz clic en un elemento y usa su panel (**Editar elemento**, **Añadir carga**, **Matriz de rigidez**, **Eliminar**), o edítalo en la tabla de *Elementos*. Eliminar un elemento elimina también sus cargas. **Matriz de rigidez** abre una ventana con la matriz de rigidez 6 × 6 del elemento en coordenadas globales (N/m, N y N·m), con las rótulas de extremo ya condensadas. Es muy útil para comprobar un ensamblaje hecho a mano.
+![La tabla Elementos de un pórtico triarticulado: el elemento 2 tiene una rótula en su final, en el nodo C](/screenshots/es/elements-table.webp)
 
-## Materiales {#materials}
+### Una rótula: una articulación dentro de la estructura {#one-hinge-a-pin-inside-the-structure}
 
-Pestaña *Materiales* → **Añadir material**:
-
-| Campo | Símbolo | Unidad | Notas |
-| --- | --- | --- | --- |
-| Módulo de Young | $E$ | unidad de presión (MPa por defecto) | Acero ≈ 210 000 MPa, hormigón ≈ 30 000 MPa, madera ≈ 11 000 MPa |
-| Módulo de cortante | $G$ | unidad de presión | $G = E / (2(1+\nu))$; acero ≈ 81 000 MPa. Solo afecta al término de cortante de Timoshenko. |
-| Densidad | $\rho$ | masa / longitud³ (kg/m³, lb/ft³) | Se guarda con el proyecto. El solver estático no la usa (no hay carga de peso propio). |
-| Coeficiente de dilatación térmica | $\alpha$ | 1/K o 1/°F | Lo usan las [cargas térmicas](/es/essentials/loads#temperature-load). Acero: 12 × 10⁻⁶ /K. |
+La misma viga continua de dos vanos de 5 m con una carga de 10 kN/m. A la derecha, el elemento 1 tiene una rótula en su final, en B: el momento sobre el apoyo se anula y cada vano trabaja como una viga biapoyada.
 
 ::div{.shots}
 
-![Añadir material](/screenshots/es/qs-material.webp)
+:::model-figure{caption="Continua: M = −31,25 kNm sobre B"}
+---
+nodes: { A: [0, 0], B: [5, 0], C: [10, 0] }
+supports: { A: pin, B: roller, C: roller }
+members: [[A, B], [B, C]]
+loads:
+  - { member: 1, qz: 10 }
+  - { member: 2, qz: 10 }
+results: [M]
+show: [nodeLabels]
+---
+:::
 
-![La Biblioteca de materiales](/screenshots/es/qs-material-library.webp)
+:::model-figure{caption="Con rótula en B: M = 0 sobre B, 31,25 kNm en cada vano"}
+---
+nodes: { A: [0, 0], B: [5, 0], C: [10, 0] }
+supports: { A: pin, B: roller, C: roller }
+members: [{ nodes: [A, B], hinges: [false, true] }, [B, C]]
+loads:
+  - { member: 1, qz: 10 }
+  - { member: 2, qz: 10 }
+results: [M]
+show: [nodeLabels]
+---
+:::
 
 ::
 
-La **Biblioteca de materiales** tiene materiales ya preparados. La familia que corresponde a tus unidades aparece primero.
+A mano: en la viga continua, $M_B = -qL^2/8 = -31{,}25\ \text{kNm}$ y como máximo $9qL^2/128 = 17{,}58\ \text{kNm}$ en cada vano; con la rótula, $M_B = 0$ y $M_{max} = qL^2/8 = 31{,}25\ \text{kNm}$ en el centro de cada vano. La rótula descarga el apoyo, pero casi duplica los momentos en los vanos. Si quieres resolver a mano una viga con una rótula interior y comprobar tus respuestas mientras las escribes, prueba el [problema G2048](/es/practice?p=G2048).
 
-- **Metales:** aceros estructurales S235, S275, S355, aceros inoxidables, fundición, aleaciones de aluminio, cobre, latón, bronce, titanio; aceros estadounidenses ASTM A992, A36, A572 Gr. 50 y HSS A500 Gr. C.
-- **Hormigón:** hormigón normal y ligero, clases C25/30, C30/37, C40/50, y f′c = 4 ksi y 5 ksi.
-- **Madera:** C24, GL24h, GL32h.
-- **Otros:** vidrio, GFRP, CFRP, HDPE, PVC, PMMA, policarbonato.
+### Dos rótulas: una barra de celosía {#both-hinges-a-truss-bar}
 
-Ábrela con el botón de la barra de herramientas o con *O elegir de la biblioteca* en el diálogo *Añadir material*.
+Una ménsula de pared formada por dos barras, ambas articuladas en los dos extremos, que soporta 20 kN en B. Las barras solo transmiten esfuerzo axil, y el diagrama de momentos queda vacío.
 
-Un material que todavía usan algunos elementos no se puede eliminar; reasigna antes esos elementos.
+::model-figure{caption="Tirante AB: N = +26,67 kN (tracción); puntal CB: N = −33,33 kN (compresión)"}
+---
+nodes: { A: [0, 0], B: [4, 0], C: [0, 3] }
+supports: { A: pin, C: pin }
+members: [{ nodes: [A, B], hinges: [true, true] }, { nodes: [C, B], hinges: [true, true] }]
+loads:
+  - { node: B, fz: 20 }
+results: [N, M]
+show: [nodeLabels]
+---
+::
+
+A mano: el puntal mide 5 m y sube 3 m, así que $N_{CB} = -20 \cdot 5/3 = -33{,}33\ \text{kN}$, y el tirante equilibra su componente horizontal, $N_{AB} = 33{,}33 \cdot 4/5 = 26{,}67\ \text{kN}$. El [tutorial de la celosía plana](/es/tutorials/truss) construye así una celosía completa, y en [Problemas para practicar](/es/practice?p=T2048) hay celosías para resolver a mano.
+
+### La rótula es del elemento, no del nodo {#hinge-the-element-not-the-node}
+
+Una rótula pertenece a un extremo de un elemento: deja que ese extremo gire por su cuenta, mientras todos los demás elementos que llegan al nodo siguen unidos a él rígidamente. Así, donde se encuentran dos barras, una rótula basta para formar una articulación; donde se encuentran varias, articula todas menos una. En un nudo de celosía, donde todas las barras son barras de celosía, todas están articuladas.
+
+Un nodo en el que todos los elementos están articulados no tiene rigidez al giro. EduBeam lo admite y da su giro como 0. Si las rótulas convierten la estructura en un mecanismo, EduBeam las rodea con un círculo y muestra cómo se mueve; consulta [Solución de problemas](/es/reference/troubleshooting#messages).
+
+## Editar y eliminar {#editing-and-deleting}
+
+| Para | Haz esto |
+| --- | --- |
+| Cambiar nodos, rótulas, material o sección | Haz clic en el elemento → **Editar elemento**, o edítalo en la tabla *Elementos*. |
+| Invertirlo | **Intercambiar nodos** en la tabla *Elementos*. |
+| Renombrarlo | Escribe una etiqueta nueva en la columna *Elemento*. |
+| Ver su matriz de rigidez | Haz clic en él → **Matriz de rigidez**, o el botón de la matriz en la columna *Acciones*. Una ventana muestra la matriz 6 × 6 del elemento en ejes globales, en unidades SI (N y m) sean cuales sean las unidades que muestres, con las rótulas de extremo ya condensadas. Muy útil para comprobar un ensamblaje hecho a mano. |
+| Eliminarlo | Haz clic en él → **Eliminar**, la × de la tabla, o selecciónalo y pulsa <kbd>Supr</kbd>. Sus cargas se eliminan con él. |
+
+![El panel de un elemento](/screenshots/es/ui-element-menu.webp){.shot-xs}
+
+## Materiales {#materials}
+
+Pestaña *Materiales* → **Añadir material**, o **Biblioteca de materiales** para uno ya preparado. Muchos elementos pueden compartir un mismo material; al cambiarlo se actualizan todos.
+
+| Campo | Unidad | Para qué sirve |
+| --- | --- | --- |
+| Módulo de Young $E$ | MPa | Rigidez axil y a flexión, $EA$ y $EI_y$. Acero 210 000 MPa, hormigón unos 30 000 MPa, madera unos 11 000 MPa. |
+| Módulo de cortante $G$ | MPa | Rigidez a cortante $kGA$. Salvo que la $k$ de la sección sea enorme, añade [deformación por cortante](#shear-deformation): flechas mayores y, en una estructura hiperestática, esfuerzos distintos. $G = E/(2(1+\nu))$: acero unos 81 000 MPa. |
+| Densidad $\rho$ | kg/m³ | Se guarda con el material, pero no se usa: no hay carga de peso propio. |
+| Coeficiente de dilatación térmica $\alpha$ | 1/K | Lo usan las [cargas térmicas](/es/essentials/loads#temperature-load). Acero $12 \times 10^{-6}$ 1/K. |
+
+Estas son las unidades SI por defecto; siguen tu [configuración](/es/essentials/units-settings#units), así que en unidades estadounidenses E y G están en ksi, la densidad en lb/ft³ y α en 1/°F.
+
+Un material nuevo empieza con $E$ = 210 000 MPa, $G$ = 87 500 MPa ($E/2{,}4$, es decir, $\nu = 0{,}2$), $\rho$ = 1000 kg/m³ y $\alpha = 12 \times 10^{-6}$ 1/K; en unidades estadounidenses empieza como acero ASTM A992. Para el acero, cambia $G$ a 81 000 MPa o elige un acero de la biblioteca.
+
+![El diálogo Añadir material](/screenshots/es/qs-material.webp){.shot-md}
+
+La **Biblioteca de materiales** (también *O elegir de la biblioteca* en el diálogo Añadir material) muestra primero los materiales métricos (EN), o primero los estadounidenses (aceros ASTM, hormigón ACI) cuando tus longitudes están en pies o pulgadas. El **+** de una fila añade ese material, con su nombre:
+
+| Familia | Materiales |
+| --- | --- |
+| Metales | Acero S235, S275, S355; acero inoxidable 304, 316; fundición; aluminio 6061-T6, 7075-T6, 5083; cobre, latón, bronce; titanio Grade 2 y Ti-6Al-4V; aceros estadounidenses ASTM A992, A36, A572 Gr. 50 y HSS A500 Gr. C |
+| Hormigón | C25/30, C30/37, C40/50, ligero; estadounidense $f'_c$ = 4 ksi y 5 ksi |
+| Madera | C24, GL24h, GL32h |
+| Otros | Vidrio, GFRP, CFRP, HDPE, PVC, PMMA, policarbonato |
+
+Un material que todavía usan algunos elementos no se puede eliminar: asigna antes otro material a esos elementos.
 
 ## Secciones {#cross-sections}
 
-Pestaña *Secciones* → **Añadir sección**:
+Pestaña *Secciones* → **Añadir sección**, **Biblioteca de secciones**, o **Sección poligonal** para dibujar tu propia forma. Como los materiales, las secciones pueden compartirlas muchos elementos.
 
-| Campo | Símbolo | Unidad | Notas |
-| --- | --- | --- | --- |
-| Área | $A$ | unidad de área | Rigidez axil $EA$ |
-| Momento de inercia | $I_y$ | unidad de momento de inercia | Rigidez a flexión $EI_y$ respecto al eje perpendicular al dibujo |
-| Altura | $h$ | unidad de dimensiones de sección | La usan las cargas térmicas con gradiente (curvatura $= \alpha\,\Delta T / h$) |
-| Coeficiente de cortante | $k$ | – | Factor de corrección por cortante de Timoshenko: el área eficaz a cortante es $kA$. Usa `1` para ignorar casi por completo la deformación por cortante, unos 0,83 para rectángulos y $A_{alma}/A$ para secciones en I. |
+| Campo | Unidad | Para qué sirve |
+| --- | --- | --- |
+| Área $A$ | m² | Rigidez axil $EA$ y área a cortante $kA$. |
+| Momento de inercia $I_y$ | m⁴ | Rigidez a flexión $EI_y$, respecto al eje perpendicular al dibujo. |
+| Altura $h$ | m | Solo la usan las cargas térmicas: la curvatura es $\alpha\,(\Delta T_b - \Delta T_t)/h$. |
+| Coeficiente de cortante $k$ | – | El área eficaz a cortante es $kA$, así que la rigidez a cortante es $kGA$. Unos 0,83 para un rectángulo, $A_{alma}/A$ para una sección en I. |
 
-La **Biblioteca de secciones** da valores aproximados para rectángulos, cuadrados y círculos, perfiles IPE y HEA, tubos RHS y CHS, y los perfiles W y HSS (rectangulares y circulares) de AISC. Sus coeficientes de cortante dependen de la forma: $h\,t_w/A$ para perfiles en I, $2ht/A$ para tubos rectangulares, 0,5 para tubos circulares, 0,833 para rectángulos y 0,9 para círculos. Toma los valores como punto de partida y compruébalos en un prontuario de perfiles antes de fiarte de ellos.
+Una sección nueva empieza con $A$ = 1 m², $I_y = 10^{-4}$ m⁴, $h$ = 1 m y $k$ = 1 (en unidades estadounidenses, un W12×26 con $k$ = 1). Sustitúyelos por los valores de tu sección, o elige una de la biblioteca.
+
+::callout{type="tip" title="Obtener los resultados de un libro que desprecia la deformación por cortante"}
+La mayoría de los cálculos a mano usan vigas de Euler–Bernoulli, sin deformación por cortante. Para obtener sus resultados, da a $k$ un valor muy grande, como `1e10`; los ejemplos de la aplicación y las figuras de este sitio usan `1e32`. Una sección nueva ($k = 1$), la biblioteca y el editor de polígonos incluyen todos la deformación por cortante; [más abajo](#shear-deformation) verás cuánto cambia.
+::
+
+La **Biblioteca de secciones** da valores aproximados para:
+
+| Familia | Secciones | $k$ |
+| --- | --- | --- |
+| Macizas | Rectángulos, cuadrados, círculos | 0,833 (rectángulo), 0,9 (círculo) |
+| Perfiles en I | IPE 100, IPE 200, HEA 100, HEA 200; perfiles W de AISC, de W8×31 a W36×150 | $h\,t_w/A$, el alma |
+| Tubos rectangulares | RHS 100×50×3, 150×100×5; HSS de AISC | $2ht/A$, las dos almas |
+| Tubos circulares | CHS Ø60×3, Ø114×5; HSS circulares de AISC | 0,5 |
+
+Comprueba los valores de la biblioteca con una tabla de perfiles antes de fiarte de ellos.
 
 ![La Biblioteca de secciones](/screenshots/es/sections-library.webp){.shot-lg}
 
+Para una comprobación rápida a mano: un rectángulo $b \times h$ tiene $A = bh$ e $I_y = bh^3/12$; un círculo macizo de diámetro $d$ tiene $A = \pi d^2/4$ e $I_y = \pi d^4/64$.
+
+### Deformación por cortante: cuándo importan G y k {#shear-deformation}
+
+La rigidez a cortante $kGA$ entra en el elemento a través del [parámetro de cortante](/es/elements/beam#timoshenko-or-euler-bernoulli) $\Phi = 12EI_y/(kGAL^2)$. Con una $k$ muy grande, $\Phi = 0$ y el elemento es una viga de Euler–Bernoulli, así que $G$ no influye. Con una $k$ real, la deformación por cortante siempre aumenta las flechas. En una estructura isostática los esfuerzos no cambian; en una hiperestática cambian también, porque las incógnitas hiperestáticas dependen de la rigidez.
+
+Cuánto cambian depende de la esbeltez de la barra. Un IPE 200 de la biblioteca ($k = h\,t_w/A = 0{,}393$) de acero S235 ($G$ = 81 000 MPa), con 10 kN/m, comparado con la misma viga con $k$ = `1e32`:
+
+| Viga | Con deformación por cortante | Euler–Bernoulli |
+| --- | --- | --- |
+| Biapoyada, $L$ = 2 m ($L/h$ = 10): flecha en el centro del vano | 0,566 mm | 0,511 mm |
+| Empotrada y apoyada, $L$ = 2 m: momento en el empotramiento | −4,84 kNm | −5,00 kNm |
+| Biapoyada, $L$ = 6 m ($L/h$ = 30): flecha en el centro del vano | 41,85 mm | 41,36 mm |
+
+A mano: la parte de la flecha en el centro del vano debida al cortante es $qL^2/(8kGA)$, 0,055 mm en la viga corta, un 11 % más que la parte debida a la flexión, $5qL^4/(384EI_y)$. En la viga empotrada y apoyada, el momento de empotramiento baja de $qL^2/8$ a $(qL^2/8)/(1 + \Phi/4)$. Con $L/h$ = 30, ambos efectos rondan el 1 % o menos; por eso los pórticos esbeltos coinciden con las soluciones de los libros sea cual sea $k$.
+
 ### Secciones poligonales {#polygonal-sections}
 
-Pestaña *Secciones* → **Sección poligonal**, o *O definir una forma poligonal* en el diálogo *Añadir sección*, abre un editor de formas.
+Pestaña *Secciones* → **Sección poligonal**, o *O definir una forma poligonal* en el diálogo Añadir sección, abre un editor de formas que calcula por ti las propiedades de la sección.
 
 ![El editor de secciones poligonales con la plantilla de sección en I, sus ejes principales y la elipse de inercia](/screenshots/es/sections-polygon.webp)
 
-- **Empieza** con una plantilla (rectángulo, I, T, L, perfil en U, rectangular o circular hueca, círculo) con sus dimensiones y pulsa **Aplicar**.
-- **Edita** la forma: arrastra los vértices (se ajustan al **Paso de ajuste**), haz clic en el punto medio de un lado para insertar un vértice, haz doble clic en un vértice para eliminarlo o escribe las coordenadas en la tabla de vértices. **Añadir hueco** añade un contorno interior. **Centrar en el centro de gravedad** mueve la forma para que su centro de gravedad quede en el origen.
-- **Lee** el área $A$, el centro de gravedad, los momentos de inercia baricéntricos $I_y$, $I_z$, $I_{yz}$, los momentos principales $I_1$, $I_2$ con el ángulo de los ejes principales $\alpha$ (de $y$ al eje 1) y los radios de giro. El dibujo muestra la elipse de inercia.
+::div{.steps}
 
-Al guardar, $A$, $I_y$ y $h$ se rellenan a partir de la forma. En la tabla aparecen como solo lectura; usa el botón del polígono en la columna *Acciones* para volver a editar la forma. El coeficiente de cortante $k$ lo sigues introduciendo tú. Las coordenadas de la sección son locales y dextrógiras, con $x$ saliendo de la pantalla, $y$ hacia la izquierda y $z$ hacia abajo.
+### Empieza con una plantilla {#start-from-a-preset}
 
-Si la forma no es simétrica respecto al plano del pórtico (un angular en L, por ejemplo), el editor avisa de que un análisis 2D solo es exacto si la barra está restringida frente al desplazamiento lateral y a la torsión en toda su longitud, por ejemplo por una losa. Cuando $I_{yz}$ es significativo, eliges qué rigidez a flexión usar: **Restringida lateralmente y a torsión en toda su longitud** ($I_y$) o **Libre de desplazarse lateralmente**, que es menor. La torsión no se incluye en ninguno de los dos casos.
+Elige una **Plantilla** (rectángulo, sección en I, sección en T, sección en L, perfil en U, rectangular hueca, círculo, circular hueca), define sus dimensiones y pulsa **Aplicar**.
 
-::callout{type="tip" title="Valores rápidos de comprobación"}
-Para un rectángulo $b \times h$: $A = bh$, $I_y = bh^3/12$. Para un círculo macizo de diámetro $d$: $A = \pi d^2/4$, $I_y = \pi d^4/64$.
+### Ajusta la forma {#adjust-the-shape}
+
+Arrastra los vértices (se ajustan al **Paso de ajuste**), haz clic en el punto medio de un lado para insertar un vértice, o haz doble clic en un vértice para eliminarlo. También puedes escribir las coordenadas en la tabla **Vértices**. **Añadir hueco** añade un contorno interior, y **Centrar en el centro de gravedad** mueve la forma para que su centro de gravedad quede en el origen.
+
+### Lee las propiedades {#read-the-properties}
+
+La pestaña **Propiedades de la sección** muestra $A$, el centro de gravedad, $I_y$, $I_z$, $I_{yz}$ respecto al centro de gravedad, los momentos principales $I_1$, $I_2$ con el **Ángulo de los ejes principales** $\alpha$ (de $y$ al eje 1) y los radios de giro. El dibujo muestra los ejes principales y la elipse de inercia.
+
+### Añádela {#add-it}
+
+Revisa la **Etiqueta** y el **Coeficiente de cortante** $k$: empieza en 0,833, el valor correcto para un rectángulo; una sección en I necesita aproximadamente $A_{alma}/A$. Después pulsa **Añadir sección** (**Guardar** si editas una forma existente). $A$, $I_y$ y $h$ salen de la forma y en la tabla son de solo lectura; para cambiarlos, vuelve a editar la forma con el botón del polígono en la columna *Acciones*.
+
 ::
 
-Los materiales y las secciones pueden compartirse entre cualquier número de elementos. Cambiar un valor actualiza todos los elementos que lo usan y vuelve a resolver el modelo.
+Las coordenadas de la sección son locales y dextrógiras: $x$ sale de la pantalla, $y$ apunta a la izquierda y $z$ hacia abajo.
+
+Si la forma no es simétrica respecto al plano del pórtico (un angular en L, por ejemplo), el editor te avisa: un análisis 2D solo es exacto si la barra está impedida frente al desplazamiento lateral y a la torsión en toda su longitud, por ejemplo por una losa. Cuando $I_{yz}$ es significativo, eliges la rigidez a flexión: **restringida lateralmente y a torsión en toda su longitud** ($I_y$) o **libre de desplazarse lateralmente**, que es menor. La torsión no se incluye en ningún caso.

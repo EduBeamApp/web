@@ -1,150 +1,206 @@
 ---
-description: "Modela en unos diez minutos una viga biapoyada de acero con carga uniforme, lee las reacciones, el cortante y el momento flector, y compruébalos a mano."
+description: "Modela en EduBeam una viga biapoyada de acero en unos diez minutos: material, sección, nodos, apoyos y carga; lee reacciones y diagramas y compruébalos a mano."
+source: site
 ---
 
 # Inicio rápido
 
-En unos diez minutos modelarás una viga biapoyada de acero con carga uniforme, leerás las reacciones, el esfuerzo cortante y el momento flector, y los contrastarás con las fórmulas de los libros de texto.
+En unos diez minutos modelarás una viga biapoyada de acero, leerás sus reacciones, el esfuerzo cortante, el momento flector y la flecha, y comprobarás cada número a mano. Abre EduBeam en otra pestaña, o al lado de esta página, y sigue los pasos.
 
-::callout{type="tip" title="Sigue los pasos en paralelo"}
-Abre [run.edubeam.app](https://run.edubeam.app/?lang=es){target="_blank"} en una segunda pestaña. Si ya hay un modelo cargado, usa **Limpiar estructura** en la barra superior para empezar de cero, y marca *Eliminar materiales* y *Eliminar secciones* para partir de un modelo completamente vacío. La limpieza se puede deshacer con <kbd>Ctrl</kbd>+<kbd>Z</kbd>, y el modelo anterior queda en **☰ → Estructuras recientes**.
-
-¿Prefieres aprender haciendo, con indicaciones en pantalla? **☰ → Dibuja tu primera viga** te guía con el ratón a través de una viga parecida.
+::div{.actions}
+[Abrir EduBeam ↗](https://run.edubeam.app/?lang=es){target="_blank"} [Ir a la comprobación a mano](#_8-check-by-hand)
 ::
 
 ## El problema {#the-problem}
 
-::example-structure
+Una viga de 6 m descansa sobre un apoyo articulado en el nodo 1 y un apoyo móvil en el nodo 2, y soporta una carga uniforme de 12 kN/m en toda su longitud. Es un perfil de acero IPE 200: $E = 210$ GPa, $G = 81$ GPa, $A = 28{,}48\ \text{cm}^2$ e $I_y = 1943\ \text{cm}^4$. Los cuatro valores están en las bibliotecas de EduBeam, así que no hace falta buscar nada.
+
+::model-figure{caption="La viga que vas a modelar: un vano de 6 m del nodo 1 al nodo 2, con 12 kN/m"}
+---
+nodes: { 1: [0, 0], 2: [6, 0] }
+supports: { 1: pin, 2: roller }
+members: [[1, 2]]
+loads:
+  - { member: 1, qz: 12 }
+results: []
+show: [nodeLabels, dimensions]
+---
 ::
 
-Una viga biapoyada de 6 m (articulada a la izquierda, con apoyo móvil a la derecha) soporta una carga uniforme de 12 kN/m. Material: acero, $E = 210\ \text{GPa}$, $G = 81\ \text{GPa}$. Sección: un IPE 200, $A = 28{,}5\ \text{cm}^2$, $I_y = 1943\ \text{cm}^4$, $h = 200\ \text{mm}$.
+## Crea el modelo {#build-the-model}
 
-## 1. Comprueba las unidades {#_1-check-the-units}
+::div{.steps}
 
-La etiqueta de unidades en la esquina inferior derecha del visor muestra las unidades que usan todos los campos de entrada y los resultados. Este tutorial supone los valores SI predeterminados: metros, kN, kNm y MPa.
+### Empieza con un modelo vacío {#start-from-an-empty-model}
 
-![Los botones de cuadrícula (G), ajuste (S) y cruceta, y la etiqueta de unidades](/screenshots/es/ui-grid-units.webp){.shot-sm}
+En tu primera visita, un diálogo de bienvenida te pregunta cómo quieres empezar. Elige **SI (métrico)** en **Sistema de unidades**, deja **x a la derecha, z hacia abajo** en **Sistema de coordenadas** y pulsa **Omitir por ahora**. La aplicación muestra entonces un pequeño pórtico de ejemplo.
 
-Si ves `ft · kip · kip·ft · ksi`, haz clic en la etiqueta y elige **Sistema de unidades → SI (métrico)**.
+1. Pulsa **Limpiar estructura** en la barra superior (en el teléfono está en el menú **☰**).
+2. Marca **Eliminar materiales** y **Eliminar secciones**, y pulsa **Confirmar**.
 
-## 2. Añade el material y la sección {#_2-add-the-material-and-cross-section}
+El lienzo queda vacío y dos mensajes en rojo avisan de que todavía no hay ningún material ni ninguna sección. Los pasos siguientes lo resuelven. No se pierde nada: <kbd>Ctrl</kbd>+<kbd>Z</kbd> recupera el pórtico, que además se conserva en **☰ → Estructuras recientes**.
 
-Los elementos necesitan un material y una sección, así que créalos primero.
+### Comprueba las unidades {#_1-check-the-units}
 
-1. Abre la pestaña **Materiales** en la barra inferior y haz clic en **Añadir material**.
-2. Introduce `E = 210000` MPa y `G = 81000` MPa. Deja la densidad y `α = 0,000012` 1/K. Haz clic en **Añadir material**.
+El botón de unidades, abajo a la derecha del visor, indica las unidades de todos los campos y resultados. Esta página usa unidades SI, que el botón muestra como `m m² kN kNm MPa`, y el eje z hacia abajo. Si el botón muestra pies y kips, haz clic en él y pon **Sistema de unidades** en **SI (métrico)**. En ese mismo lugar, **Sistema de coordenadas** debe ser **x a la derecha, z hacia abajo**: con el eje y hacia arriba, una carga positiva apunta hacia arriba y los signos de esta página no coincidirían.
 
-::div{.shots}
+![Los botones de cuadrícula (G) y ajuste (S), la cruceta y el botón de unidades](/screenshots/es/ui-grid-units.webp){.shot-sm}
 
-![Añadir material: escribe E y G…](/screenshots/es/qs-material.webp)
+### Añade el material y la sección {#_2-add-the-material-and-cross-section}
 
-![…o elige Steel (S235) en la Biblioteca de materiales](/screenshots/es/qs-material-library.webp)
+Cada elemento necesita un material y una sección, así que añádelos primero, desde las bibliotecas.
 
-::
+1. Abre la pestaña **Materiales** en la barra inferior y haz clic en **Biblioteca de materiales**.
+2. Pulsa **+** en la fila **Acero (S235)** ($E = 210\,000$ MPa, $G = 81\,000$ MPa). La biblioteca sigue abierta por si quieres añadir más; ciérrala con **Cancelar**.
+3. Abre la pestaña **Secciones** y haz clic en **Biblioteca de secciones**.
+4. Baja hasta la fila **IPE 200 (aprox.)**, pulsa **+** y cierra la biblioteca con **Cancelar**.
 
-3. Abre la pestaña **Secciones** y haz clic en **Añadir sección**.
-4. Introduce `Área = 0,00285` m², `Iy = 1,943e-5` m⁴, `Altura = 0,2` m y `Coeficiente de cortante = 1`. Haz clic en **Añadir sección**.
+Los dos mensajes en rojo han desaparecido, y la pestaña **Secciones** muestra el IPE 200:
 
-![Añadir sección. También puedes elegirla de la biblioteca o dibujar una forma poligonal.](/screenshots/es/qs-cross-section.webp){.shot-md}
+![El IPE 200 en la pestaña Secciones: área, Iy, altura y coeficiente de cortante](/screenshots/es/a-qs-cross-sections.webp)
 
-::callout{type="details" title="¿Por qué importa el coeficiente de cortante?"}
-EduBeam usa elementos viga de Timoshenko, que incluyen la deformación por cortante. `k` es el factor de corrección por cortante: $k \approx 0{,}83$ para un rectángulo y aproximadamente $0{,}4$–$0{,}5$ para una sección en I cuando $A$ es el área completa. Poner `k = 1` con el área completa *infravalora* ligeramente la flexibilidad a cortante. En una viga esbelta como esta, la diferencia en la flecha queda muy por debajo del 1 %. La fórmula está en la [página de teoría de la viga](/es/elements/beam).
-::
+Si prefieres escribir tus propios valores, usa **Añadir material** y **Añadir sección**. El coeficiente de cortante, aquí 0,3933, vuelve a aparecer en la [comprobación a mano](#_8-check-by-hand).
 
-## 3. Añade los nodos {#_3-add-the-nodes}
+### Añade los nodos {#_3-add-the-nodes}
 
-1. Abre la pestaña **Nodos**. Tiene dos botones **Añadir nodo**: el primero abre un diálogo y el segundo (con un icono de cursor) coloca nodos con el ratón. Haz clic en el primero.
-2. Introduce `X = 0`, `Z = 0` y haz clic en **Añadir nodo**. El nodo recibe la etiqueta `1`.
-3. Añade un segundo nodo en `X = 6`, `Z = 0`. Es el nodo `2`.
+1. Abre la pestaña **Nodos**. Tiene dos botones **Añadir nodo**: **+** abre un diálogo, y el del icono de cursor coloca los nodos con el ratón. Haz clic en **+ Añadir nodo**.
+2. Deja **Coordenada X** y **Coordenada Z** en `0` y pulsa **Añadir nodo**. El diálogo se cierra y aparece el nodo `1`.
+3. Vuelve a hacer clic en **+ Añadir nodo**, escribe `6` en **Coordenada X** y pulsa **Añadir nodo**. Es el nodo `2`.
 
-![El diálogo Añadir nodo también permite definir los apoyos directamente](/screenshots/es/qs-node.webp){.shot-md}
+![El diálogo Añadir nuevo nodo. También permite definir los apoyos directamente.](/screenshots/es/qs-node.webp){.shot-md}
 
-Con el botón del ratón, en cambio, cada clic en el lienzo coloca un nodo. Con **Ajustar a la cuadrícula** activado (<kbd>S</kbd>), los clics caen en el paso de la cuadrícula (0,1 m por defecto).
+### Conéctalos con un elemento {#_4-connect-them-with-an-element}
 
-## 4. Conéctalos con un elemento {#_4-connect-them-with-an-element}
+Abre la pestaña **Elementos** y haz clic en **+ Añadir elemento**. El diálogo ya propone **Nodo inicial** `1`, **Nodo final** `2`, y tu material y tu sección. Pulsa **Añadir elemento**.
 
-1. Abre la pestaña **Elementos** y haz clic en el primer botón **Añadir elemento**.
-2. Elige **Nodo inicial** `1` y **Nodo final** `2`. Tu material y tu sección ya están seleccionados. Haz clic en **Añadir elemento**.
+![Añadir nuevo elemento: los dos nodos extremos, una rótula opcional en cada extremo, el material y la sección](/screenshots/es/a-qs-element.webp){.shot-md}
 
-![Añadir elemento: los dos nodos extremos, rótulas de extremo opcionales, material y sección](/screenshots/es/qs-element.webp){.shot-md}
+Aparece una viga entre los nodos. Pulsa <kbd>F</kbd> para ajustarla a la pantalla. El aviso azul **Faltan apoyos**, arriba a la izquierda del visor, explica por qué todavía no hay resultados.
 
-Aparece una línea entre los nodos. Pulsa <kbd>F</kbd> para ajustarla a la pantalla.
+### Añade los apoyos {#_5-add-the-supports}
 
-## 5. Añade los apoyos {#_5-add-the-supports}
+De vuelta en la pestaña **Nodos**, cada fila tiene un selector de apoyo al principio de la columna **Grados de libertad restringidos**.
 
-En la pestaña **Nodos**, la columna **Grados de libertad restringidos** tiene un selector de símbolos de apoyo y tres casillas por nodo: `Dx`, `Dz`, `Ry`.
+- Nodo `1`: elige **Articulación**. Se marcan `Dx` y `Dz`.
+- Nodo `2`: elige **Rodillo**. Se marca solo `Dz`.
 
-- Nodo `1`: elige el símbolo **Articulación**, o marca **Dx** y **Dz**.
-- Nodo `2`: elige el **Rodillo**, o marca solo **Dz**.
+![El selector de apoyo en la tabla de nodos](/screenshots/es/a-qs-support-picker.webp){.shot-lg}
 
-![Apoyos en la tabla de nodos: nodo 1 articulado, nodo 2 sobre rodillo](/screenshots/es/qs-supports.webp)
+El aviso **Faltan apoyos** desaparece. También puedes hacer clic en un nodo del visor y elegir **Apoyos del nodo**. En [Nodos y apoyos](/es/essentials/nodes-supports#supports) se describen todos los tipos de apoyo.
 
-También puedes hacer clic en un nodo del visor y elegir **Apoyos del nodo**. En [Nodos y apoyos](/es/essentials/nodes-supports#supports) se describen todos los tipos de apoyo.
-
-## 6. Añade la carga {#_6-add-the-load}
+### Añade la carga {#_6-add-the-load}
 
 1. Abre la pestaña **Cargas** y haz clic en **Añadir carga de elemento**.
-2. **Tipo de carga**: *Carga uniformemente distribuida*. **Elemento**: `1`.
-3. Introduce `fz = 12` kN/m y deja `fx = 0`. Haz clic en **Añadir carga de elemento**.
+2. Deja **Tipo de carga** en *Carga uniformemente distribuida* y **Elemento** en `1`.
+3. Escribe `12` en **fz**, deja **fx** en `0` y pulsa **Añadir carga de elemento**.
 
-![El diálogo muestra una vista previa de la carga sobre el elemento](/screenshots/es/qs-load.webp){.shot-md}
+![El diálogo muestra una vista previa de la carga sobre el elemento](/screenshots/es/a-qs-load.webp){.shot-md}
 
-Un `fz` positivo apunta en la dirección +z, que en pantalla es **hacia abajo**, así que un valor positivo es una carga gravitatoria. Consulta el [convenio de signos](/es/elements/conventions).
+Un `fz` positivo apunta en el sentido de +z, es decir, **hacia abajo**, así que un valor positivo es una carga gravitatoria. La casilla **LCS** marcada significa que la carga sigue los ejes propios del elemento (su sistema de coordenadas local, SCL); en una viga horizontal dibujada de izquierda a derecha coinciden con los ejes globales. Consulta la [convención de signos](/es/elements/conventions#loads).
 
-## 7. Lee los resultados {#_7-read-the-results}
+::
 
-La solución aparece en cuanto se añade la carga. El panel de visualización, arriba a la derecha del visor, activa y desactiva los diagramas. **Forma deformada**, **M<sub>y</sub>(x)** y **Reacciones** están activados por defecto. Marca **V<sub>z</sub>(x)** para añadir el esfuerzo cortante.
+## Lee los resultados {#_7-read-the-results}
 
-![Esfuerzo cortante (verde), momento flector (rojo), reacciones (morado) y deformada](/screenshots/es/qs-results.webp)
+La viga se resuelve en cuanto introduces la carga, y de nuevo tras cada cambio que hagas: no hay botón *Calcular*. El panel de arriba a la derecha del visor activa y desactiva los dibujos. **Forma deformada**, **M<sub>y</sub>(x)** y **Reacciones** están activados desde el principio. Marca **V<sub>z</sub>(x)** para añadir el esfuerzo cortante.
 
-| Capa | Lo que deberías ver |
+![Las opciones de visualización, con el esfuerzo cortante activado](/screenshots/es/a-qs-display.webp){.shot-md}
+
+Tu pantalla debería coincidir ahora con esta figura. Alterna entre el momento flector y el esfuerzo cortante:
+
+::model-figure{caption="La viga terminada: reacciones de 36 kN y 54 kNm en el centro del vano"}
+---
+nodes: { 1: [0, 0], 2: [6, 0] }
+supports: { 1: pin, 2: roller }
+members: [[1, 2]]
+loads:
+  - { member: 1, qz: 12 }
+results: [M, V]
+show: [nodeLabels]
+---
+::
+
+| Dibujo | Qué debes ver |
 | --- | --- |
-| **Reacciones** | Dos flechas hacia arriba de **36 kN** en los nodos 1 y 2. |
-| **V<sub>z</sub>(x)** | Una recta desde **+36 kN** a la izquierda hasta **−36 kN** a la derecha, que pasa por cero en el centro del vano. |
-| **M<sub>y</sub>(x)** | Una parábola con su valor extremo de **54 kNm** en el centro del vano. |
-| **Forma deformada** | Una flecha simétrica. Señala el nodo `1` para leer su giro: **2,6469 · 10⁻² rad**. |
+| **Reacciones** | Dos flechas hacia arriba de **36 kN**, una en cada apoyo. |
+| **V<sub>z</sub>(x)** | Una recta desde **+36 kN** en el nodo `1` hasta **−36 kN** en el nodo `2`, que pasa por cero en el centro del vano. |
+| **M<sub>y</sub>(x)** | Una parábola con su máximo de **54 kNm** en el centro del vano, dibujada del lado traccionado, bajo la viga. |
+| **Forma deformada** | Una curva simétrica hacia abajo, dibujada a escala ampliada. |
 
-La pestaña **Resultados** de la barra inferior da los números. **Resultados nodales** lista `Dx`, `Dz`, `Ry` de cada nodo. **Resultados de elementos** lista las fuerzas en los extremos de cada elemento en su sistema de coordenadas local.
+Para ver los números, abre la pestaña **Resultados**. **Resultados nodales** muestra los desplazamientos `Dx`, `Dz` y el giro `Ry` de cada nodo, y **Resultados de elementos**, las fuerzas en los extremos de cada elemento en sus propios ejes. El nodo `1` gira $R_y = -2{,}6469 \cdot 10^{-2}$ rad, y el nodo `2` lo mismo en sentido contrario. En [Resultados y diagramas](/es/essentials/results) se explican todas las tablas y todos los signos.
 
-Si los diagramas se ven demasiado grandes o pequeños, cambia la **Escala de resultados** en **Configuración → Ajustes del visor → Tamaños**.
+Si los diagramas se ven demasiado grandes o pequeños, cambia la **Escala de resultados** en **Configuración → Ajustes del visor**.
 
-## 8. Comprueba a mano {#_8-check-by-hand}
+## Comprueba a mano {#_8-check-by-hand}
+
+Con $q = 12$ kN/m y $L = 6$ m, las fórmulas de los libros de texto dan:
 
 | Magnitud | Fórmula | A mano | EduBeam |
 | --- | --- | --- | --- |
-| Reacción | $R = qL/2$ | 36 kN | 36 kN |
-| Cortante máximo | $V = qL/2$ | 36 kN | 36 kN |
-| Momento máximo | $M = qL^2/8$ | 54 kNm | 54 kNm |
-| Giro en el apoyo | $\varphi = qL^3/(24EI)$ | 0,02647 rad | 0,02647 rad |
-| Flecha en el centro del vano (flexión) | $w = 5qL^4/(384EI)$ | 49,63 mm | |
-| Flecha en el centro del vano (cortante) | $w_s = qL^2/(8kGA)$ | 0,23 mm | |
-| Flecha en el centro del vano (total) | suma | 49,86 mm | 49,86 mm |
+| Reacciones | $qL/2$ | 36 kN | 36 kN |
+| Cortante máximo | $qL/2$ | 36 kN | 36 kN |
+| Momento máximo | $qL^2/8$ | 54 kNm | 54 kNm |
+| Giro en el extremo | $qL^3/(24EI)$ | 0,02647 rad | 0,02647 rad |
+| Flecha en el centro del vano | $w_b + w_s$ | 49,63 + 0,60 = 50,22 mm | 50,22 mm |
 
-No hay ningún nodo en el centro del vano, así que, para leer allí la flecha, añade uno: elige el segundo botón **Añadir nodo**, haz clic sobre la viga en `X = 3` y elige **Conectar a la estructura**. La viga se divide en dos y el `Dz` del nuevo nodo en **Resultados** marca 49,86 mm. Dividir la viga no cambia ningún resultado, porque el elemento es exacto.
+La flecha tiene dos partes, y la mayoría de los libros de texto solo dan la primera:
 
-Todo coincide. Más recetas de comprobación a mano (voladizo, viga biempotrada, celosía, temperatura) en [Comprobar resultados a mano](/es/guide/verification).
+- **Flexión:** $w_b = 5qL^4/(384EI) = 49{,}63$ mm, con $EI = 4080$ kNm² a partir de $E = 210$ GPa e $I_y = 1943\ \text{cm}^4$.
+- **Cortante:** $w_s = qL^2/(8kGA) = 0{,}60$ mm, con $kGA \approx 90\,700$ kN a partir de $k = 0{,}3933$, $G = 81$ GPa y $A = 28{,}48\ \text{cm}^2$.
 
-## 9. Experimenta {#_9-experiment}
+Todavía no hay ningún nodo en el centro del vano, así que añade uno para leer allí la flecha:
 
-Aquí es donde EduBeam demuestra lo que vale. Prueba cada una de estas acciones y observa cómo se actualizan los diagramas:
+1. En la pestaña **Nodos**, haz clic en el segundo botón **Añadir nodo**, el del icono de cursor.
+2. Haz clic sobre la viga en `x = 3`; con el ajuste activado, el nodo cae sobre la cuadrícula. EduBeam pregunta qué hacer con el nodo: pulsa **Conectar a la estructura**. El elemento se divide en `1a` y `1b`, cada uno con su parte de la carga, y el modo de colocar nodos termina. Si en la pestaña **Nodos** el nodo `3` no está en X = `3`, escribe `3` ahí.
+3. En **Resultados → Resultados nodales**, el nodo `3` muestra ahora $D_z = 5{,}0224 \cdot 10^{-2}$ m, es decir, 50,22 mm.
 
-- **Arrastra el nodo 2** hacia la derecha: el momento crece con $L^2$.
-- **Marca `Ry` en el nodo 1** para empotrarlo: el momento en el centro del vano baja y aparece un momento negativo en el apoyo.
-- **Marca `Dz` en el nodo central** que acabas de añadir para obtener una viga continua de dos vanos.
-- **Marca una casilla de Rótulas de extremo** en un elemento de la pestaña Elementos para liberar el momento en ese extremo.
-- Pulsa <kbd>Ctrl</kbd>+<kbd>Z</kbd> para deshacer cualquier paso.
+![Resultados nodales tras la división: el nodo 3 baja 50,22 mm](/screenshots/es/a-qs-nodal-results.webp){.shot-lg}
 
-## 10. Guarda o comparte {#_10-save-or-share}
+Dividir la viga no cambia ningún resultado, porque el elemento es exacto para estas cargas: no hay malla que refinar.
 
-- **Compartir modelo** (en la barra superior o en el menú ☰) te da un enlace que contiene todo el modelo. Pégalo en un correo, un chat o tus diapositivas.
-- **☰ → Guardar proyecto** (<kbd>Ctrl</kbd>+<kbd>S</kbd>) descarga un `project.json` que puedes abrir más tarde con **Abrir proyecto** o arrastrándolo a la aplicación.
-- **☰ → Exportar imagen** (<kbd>Ctrl</kbd>+<kbd>P</kbd>) guarda el dibujo en PNG o SVG para un informe.
+::callout{type="details" title="Por qué importa el coeficiente de cortante"}
+EduBeam usa elementos viga de Timoshenko, que incluyen la deformación por cortante. El coeficiente de cortante $k$ escala el área que resiste el cortante, de modo que $kGA$ es la rigidez a cortante. En las secciones en I de la biblioteca, $k$ es la fracción del área que corresponde al alma, $h t_w / A$: para el IPE 200, $0{,}2 \cdot 0{,}0056 / 0{,}002848 = 0{,}3933$. La parte de la flecha debida al cortante, $w_s = qL^2/(8kGA)$, es la integral de $V/(kGA)$ desde un apoyo hasta el centro del vano.
 
-El modelo también se conserva en el navegador, así que recargar la página no lo pierde. Consulta [Importar, exportar y compartir](/es/essentials/import-export).
+En esta viga esbelta, la parte debida al cortante es de 0,60 mm, alrededor del 1 % del total. En una viga corta y de gran canto es mucho mayor. Pon un coeficiente de cortante muy grande (por ejemplo `1e10`) en la pestaña **Secciones** y EduBeam devuelve los 49,63 mm de la flexión pura. La teoría está en la [página del elemento viga](/es/elements/beam).
+::
 
-## Y ahora {#where-next}
+Encontrarás más casos de comprobación a mano (voladizo, viga biempotrada, celosía, temperatura, asiento de apoyo) en [Comprobar resultados a mano](/es/guide/verification).
 
-- [Tutorial del pórtico triarticulado](/es/tutorials/three-hinged-frame): un pórtico con una rótula interior, comprobado a mano.
-- [Ejemplos](/es/examples/): abre pórticos y celosías ya preparados con un clic.
-- [Cargas](/es/essentials/loads): cargas trapezoidales, concentradas y térmicas, desplazamientos impuestos.
-- [Teclado, ratón y pantalla táctil](/es/reference/shortcuts): trabaja más rápido en el lienzo.
+## Experimenta {#_9-experiment}
+
+Modifica el modelo y observa cómo responden los diagramas. Prueba cada cambio por separado y deshazlo con <kbd>Ctrl</kbd>+<kbd>Z</kbd> antes del siguiente. El nodo `3` es el nodo del centro del vano que acabas de añadir.
+
+- **Arrastra el nodo `2`** hacia la derecha. El momento crece con $L^2$ y la flecha con $L^4$.
+- **Marca `Ry` en el nodo `1`** para empotrar ese extremo. En el empotramiento aparece un momento negativo: $qL^2/8 = 54$ kNm según la fórmula de los libros, 53,8 kNm en EduBeam. En una viga hiperestática, la rigidez a cortante también modifica los esfuerzos.
+- **Marca `Dz` en el nodo `3`** para añadir un apoyo intermedio y obtener una viga continua de dos vanos. El momento sobre el apoyo intermedio pasa a ser negativo: $q(L/2)^2/8 = 13{,}5$ kNm a mano, 13,3 kNm en EduBeam, por el mismo motivo.
+- **Marca `Dz` en el nodo `3` y la segunda casilla de la columna *Rótulas de extremo* del elemento `1a`** (su extremo en el nodo `3`), en la pestaña **Elementos**. La viga se convierte en dos vanos biapoyados de 3 m. Ahora desmarca `Dz` en el nodo `3`: la viga pasa a ser un mecanismo y EduBeam muestra cómo puede moverse.
+
+Para variar la luz y la carga sin construir nada, arrastra los controles deslizantes de abajo y cambia de resultado para ver cómo crece cada uno con la luz.
+
+::example-structure
+::
+
+## Guarda o comparte {#_10-save-or-share}
+
+- **Envíaselo a alguien.** Pulsa **Compartir modelo** en la barra superior y después **Copiar**. El enlace contiene el modelo completo, y quien lo abra obtiene su propia copia para editarla.
+- **Guárdalo como archivo.** **☰ → Guardar proyecto** (<kbd>Ctrl</kbd>+<kbd>S</kbd>) descarga un `project.json`. Vuelve a abrirlo con **☰ → Abrir proyecto** (<kbd>Ctrl</kbd>+<kbd>O</kbd>) o arrastrándolo a la aplicación.
+- **Lleva el dibujo a un informe.** **☰ → Exportar imagen** (<kbd>Ctrl</kbd>+<kbd>P</kbd>) lo guarda en PNG o SVG.
+
+El modelo también se conserva en el navegador, así que no se pierde al recargar la página. Encontrarás los detalles en [Archivos, enlaces y exportación](/es/essentials/import-export).
+
+## Siguientes pasos {#where-next}
+
+::card-grid{cols="2"}
+:::card{title="Tutoriales" icon="lucide:graduation-cap" to="/es/tutorials/inclined-beam"}
+Cuatro modelos construidos paso a paso y comprobados a mano, desde una viga inclinada hasta una viga continua con asiento de apoyo.
+:::
+:::card{title="Ejemplos" icon="lucide:library" to="/es/examples/"}
+Vigas, pórticos y celosías ya preparados que se abren con un clic, con ejercicios y soluciones.
+:::
+:::card{title="Cargas" icon="lucide:arrow-down-to-line" to="/es/essentials/loads"}
+Cargas trapezoidales, concentradas y térmicas, fuerzas nodales y asientos de apoyo.
+:::
+:::card{title="Teclado, ratón y pantalla táctil" icon="lucide:keyboard" to="/es/reference/shortcuts"}
+Dibuja nodos y elementos directamente en el lienzo y edita más rápido.
+:::
+::

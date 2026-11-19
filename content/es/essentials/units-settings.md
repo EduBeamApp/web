@@ -1,83 +1,100 @@
 ---
-description: "Elige idioma, unidades SI o estadounidenses, formato numérico, ejes con y hacia arriba o z hacia abajo, ajustes del visor y controles, y qué guarda EduBeam."
+description: "Configuración de EduBeam: idioma, unidades SI o estadounidenses, formato numérico, ejes con z hacia abajo o y hacia arriba, cuadrícula, diagramas, colores y datos del navegador."
+source: site
 ---
 
 # Unidades y ajustes
 
-Hay tres formas de llegar a la configuración:
+Elige el idioma, las unidades y los ejes con los que trabajas, y el aspecto del dibujo. La configuración solo cambia cómo se muestra y se introduce el modelo: el modelo se guarda siempre en unidades SI y con z hacia abajo, así que un proyecto o un enlace se abre igual con cualquier configuración.
 
-- la pestaña **Configuración** sobre el visor, que la muestra a tamaño completo;
-- la **etiqueta de unidades** abajo a la derecha del visor, que la abre en *Idioma y configuración regional*;
-- **Más ajustes** bajo las opciones de visualización, que la abre en *Ajustes del visor*.
+Hay tres formas de llegar a ella:
 
-La configuración se guarda en el navegador y sobrevive a las recargas. **Restablecer configuración** devuelve a sus valores predeterminados los ajustes del visor, el formato numérico, los ejes, el botón para desplazar y las unidades de tu región; el idioma se conserva.
+- la pestaña **Configuración**, sobre el visor, la muestra a tamaño completo en lugar del modelo, en *Idioma y configuración regional*; la pestaña **Visor** te devuelve al modelo;
+- el **botón de unidades**, abajo a la derecha del visor (`m m² kN kNm MPa`), la abre como un diálogo en *Idioma y configuración regional*;
+- **Más ajustes**, bajo las [opciones de visualización](/es/essentials/user-interface#display-options), abre el diálogo en *Ajustes del visor*.
+
+La configuración se guarda en el navegador y se conserva al recargar. **Restablecer configuración**, debajo de la lista de páginas, devuelve los valores predeterminados: formato numérico, ejes, botón para desplazar la vista, las unidades de tu región y todos los ajustes del visor y las opciones de visualización. El idioma se conserva. El restablecimiento no se puede deshacer.
 
 ## Idioma y configuración regional {#language-locale}
 
 ![Configuración → Idioma y configuración regional](/screenshots/es/settings-language.webp)
 
-**Idioma.** 18 idiomas de interfaz. También puedes abrir la aplicación con `?lang=<código>`: `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn`, `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`.
+**Idioma.** 18 idiomas; la primera vez, EduBeam sigue el idioma de tu navegador. El separador decimal sigue al idioma. Un enlace puede elegir el idioma de quien lo abre: añade `?lang=` con uno de estos códigos: `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (chino), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`.
 
-**Formato numérico.** Cómo se escriben los resultados: *Automático*, *Científico* (predeterminado) o *Ingeniería*. Consulta [Formato numérico](/es/essentials/results#number-format).
+**Formato numérico.** Cómo se escriben los resultados en las tablas y en los recuadros emergentes: *Científico* (1,5 · 10⁴, el predeterminado), *Ingeniería* (15 · 10³) o *Automático*. Consulta [Formato numérico](/es/essentials/results#number-format).
 
-**Sistema de coordenadas.** *x a la derecha, z hacia abajo* (predeterminado) o *x a la derecha, y hacia arriba*. La opción con y hacia arriba invierte el signo de los valores verticales y de los ángulos de apoyo, y renombra los ejes en todas las entradas, tablas, tooltips y exportaciones. El modelo y los archivos guardados no cambian. Consulta [Ejes con y hacia arriba](/es/elements/conventions#y-up-axes).
+**Sistema de coordenadas.** *x a la derecha, z hacia abajo* (el predeterminado) o *x a la derecha, y hacia arriba*. Con *x a la derecha, y hacia arriba*, el eje vertical se llama y y apunta hacia arriba, y los momentos son respecto a z. Las coordenadas verticales, las fuerzas, los desplazamientos, las reacciones y los ángulos de los apoyos cambian de signo, y todas las entradas, tablas, recuadros emergentes y exportaciones usan los nuevos nombres. El modelo, el dibujo y los archivos guardados no cambian en absoluto. Consulta [Ejes con y hacia arriba](/es/elements/conventions#y-up-axes).
 
-![El pórtico triarticulado con ejes y hacia arriba: el indicador de ejes de la esquina apunta y hacia arriba](/screenshots/es/settings-y-up.webp){.shot-lg}
+![El pórtico triarticulado con ejes con y hacia arriba: el indicador de ejes de la esquina apunta y hacia arriba](/screenshots/es/settings-y-up.webp){.shot-lg}
 
-**Sistema de unidades.** *SI (métrico)* o *Estadounidense (imperial)* fija de una vez todas las unidades de abajo. Si después cambias cualquier unidad por separado, el sistema aparece como *Personalizado*. En la primera visita eliges en el diálogo de bienvenida; antes de eso, EduBeam solo supone unidades estadounidenses si el navegador tiene configuración regional de EE. UU. *y* el ordenador está en una zona horaria de EE. UU.
+**Sistema de unidades.** *SI (métrico)* o *Estadounidense (imperial)* fija de una vez todas las unidades. En la primera visita eliges en el diálogo de bienvenida. EduBeam solo propone las unidades estadounidenses cuando el navegador tiene configuración regional de EE. UU. *y* el equipo está en una zona horaria de EE. UU.; en cualquier otro caso propone el SI. Si después cambias una unidad por separado, el sistema aparece como *Personalizado*.
 
-**Unidades.** Cada magnitud tiene su propia unidad. Las entradas, las tablas, los tooltips y las etiquetas de los diagramas usan la unidad elegida, y cambiar una unidad convierte lo que se muestra. El modelo se guarda en SI, así que no se pierde nada al cambiar de un sistema a otro, y un enlace compartido abre el mismo modelo en cualquier unidad.
+### Unidades {#units}
+
+Cada magnitud tiene su propia unidad. La usan las entradas (que la muestran al final del campo), las tablas, los recuadros emergentes y las etiquetas de los diagramas, y al cambiar una unidad se convierte lo que se muestra. En el modelo no cambia nada, así que puedes cambiar de unidades tantas veces como quieras sin perder nada.
 
 | Magnitud | Opciones | SI | Estadounidense |
 | --- | --- | --- | --- |
-| Longitud (geometría) | m, cm, mm, ft, in | m | ft |
+| Longitud (geometría, posiciones de cargas) | m, cm, mm, ft, in | m | ft |
 | Dimensiones de sección | m, cm, mm, ft, in | m | in |
-| Desplazamiento | m, cm, mm, ft, in | m | in |
+| Desplazamiento (resultados, asientos impuestos) | m, cm, mm, ft, in | m | in |
 | Área | m², cm², mm², ft², in² | m² | in² |
-| Segundo momento de área | m⁴, cm⁴, mm⁴, ft⁴, in⁴ | m⁴ | in⁴ |
+| Segundo momento de área (momento de inercia) | m⁴, cm⁴, mm⁴, ft⁴, in⁴ | m⁴ | in⁴ |
 | Masa | kg, lb | kg | lb |
 | Fuerza | N, kN, MN, kgf, Tonf, lbf, kip | kN | kip |
 | Momento flector | Nmm, Nm, kNm, MNm, Tonf·m, lbf·in, lbf·ft, kip·in, kip·ft | kNm | kip·ft |
 | Presión (E, G) | Pa, kPa, MPa, GPa, ksc, psi, ksi, psf, ksf | MPa | ksi |
 | Temperatura | °C, °F | °C | °F |
 
-Las cargas lineales usan *fuerza / longitud* de las unidades elegidas (kN/m en SI, kip/ft en unidades estadounidenses), y la densidad, *masa / longitud³*. El coeficiente de dilatación térmica sigue la unidad de temperatura (1/K o 1/°F). Las cargas térmicas son *variaciones* de temperatura, así que 10 °C equivalen a 18 °F. Los giros están siempre en radianes.
+Algunas unidades se deducen de las demás:
 
-Tonf es la tonelada-fuerza métrica (1000 kgf), no la tonelada corta estadounidense. Las unidades estadounidenses se convierten con sus definiciones exactas (1 ft = 0,3048 m, 1 kip = 4448,2216 N). En pies, escribe valores decimales como `5,5`; las reglas y la cruceta muestran pies y pulgadas (5′-6″).
+- Las **cargas lineales** son fuerza por longitud: kN/m en el SI, kip/ft en unidades estadounidenses.
+- La **densidad** es masa por longitud³: kg/m³ o lb/ft³.
+- La **dilatación térmica** sigue a la temperatura: 1/K o 1/°F. Las cargas térmicas son *variaciones* de temperatura, así que 10 °C equivalen a 18 °F.
+- Los **giros** están siempre en radianes, y los ángulos de los apoyos, en grados.
+
+Tonf es la tonelada-fuerza métrica (1000 kgf), no la tonelada corta estadounidense. Las unidades estadounidenses usan sus definiciones exactas: 1 ft = 0,3048 m, 1 kip = 4448,2216 N. Escribe los pies con decimales, como `5,5`; las reglas y la cruceta muestran pies y pulgadas (5′-6″).
 
 ## Ajustes del visor {#viewer-settings}
 
-![Configuración → Ajustes del visor, con la vista previa en directo a la derecha](/screenshots/es/settings-viewer.webp)
+El aspecto del dibujo. La **Vista previa** de la derecha es una pequeña viga inclinada que muestra al instante cada cambio; los botones de debajo eligen qué resultado muestra, y al cambiar un ajuste de los diagramas o un color, la vista previa pasa a ese resultado.
 
-Una **Vista previa** junto a los ajustes muestra un modelo pequeño que reacciona a cada cambio. Las etiquetas debajo de ella eligen qué resultado muestra, y al hacer clic en un color la vista previa cambia a ese resultado.
+![Configuración → Ajustes del visor, con la vista previa en directo y los ajustes de los diagramas a la derecha](/screenshots/es/b-settings-viewer.webp)
 
-**Cuadrícula**
-- **Mostrar cuadrícula** (<kbd>G</kbd>) dibuja la cuadrícula y las reglas.
-- **Ajustar a la cuadrícula** (<kbd>S</kbd>) hace que los nodos que colocas o arrastras se ajusten al paso de la cuadrícula.
-- **Mostrar cruceta** marca la posición del puntero en las reglas, para que puedas leer sus coordenadas (solo con ratón).
-- **Paso de ajuste a la cuadrícula** es la separación en la unidad de longitud: 0,1 m por defecto, o 0,5 ft en unidades estadounidenses. Al cambiar entre unidades métricas y estadounidenses, un paso que sigue en su valor predeterminado pasa al predeterminado del otro sistema; un paso que hayas fijado tú se conserva.
+La columna de la izquierda, de arriba abajo:
 
-**Tamaños**
-- **Escala de resultados** (8–120 px, 48 por defecto) es la altura en pantalla de la mayor ordenada de un diagrama o de la mayor flecha. Cada diagrama se escala con su propio máximo, así que es un ajuste puramente visual; cámbialo cuando los diagramas sean demasiado grandes o demasiado pequeños.
-- **Tamaño de apoyos** (50–150 %) y **Tamaño de fuente** (10–20 px). Las fuentes más grandes ayudan con un proyector.
+- *Cuadrícula*: **Mostrar cuadrícula** (<kbd>G</kbd>) dibuja la cuadrícula y las reglas; **Ajustar a la cuadrícula** (<kbd>S</kbd>) hace que los nodos que colocas o arrastras caigan en ella; **Mostrar cruceta** marca en las reglas la posición del puntero (con ratón). Las tres opciones están activadas al principio. El **Paso de ajuste a la cuadrícula** es de 0,1 m, o de 0,5 ft en unidades estadounidenses. Al cambiar entre unidades métricas y estadounidenses, un paso que sigue en su valor predeterminado pasa al predeterminado del otro sistema; un paso que hayas fijado tú se conserva.
+- *Tamaños*: **Escala de resultados**, de 8 a 120 px (48 px al principio), es la altura con la que se dibuja la mayor ordenada de un diagrama, o la mayor flecha; es un ajuste puramente visual, porque cada diagrama se escala con su propio valor máximo. **Tamaño de apoyos** va del 50 al 150 % (100 %), y **Tamaño de fuente**, de 10 a 20 px (14 px); con un proyector conviene aumentarlos.
+- *Orientación de las etiquetas de resultados*: los valores se escriben en la dirección de la ordenada, *Perpendicular al diagrama* (la opción predeterminada), o *Siempre horizontales*.
+- *Comprobación del modelo*: **Mostrar cómo puede moverse una estructura inestable** dibuja el contorno discontinuo del mecanismo, y **Animar el movimiento** lo hace oscilar de un lado a otro. Ambas están activadas al principio.
 
-**Orientación de las etiquetas de resultados**: *Perpendicular al diagrama* (las etiquetas siguen el diagrama) o *Siempre horizontales*.
+### Diagramas de esfuerzos internos {#internal-force-diagrams}
 
-**Comprobación del modelo**
-- **Mostrar cómo puede moverse una estructura inestable** dibuja el contorno discontinuo de un mecanismo.
-- **Animar el movimiento** lo hace oscilar de un lado a otro.
+Cada escuela dibuja los diagramas a su manera, así que EduBeam te deja elegir. Estos ajustes solo cambian el dibujo, nunca los valores. La **línea discontinua** a lo largo de cada elemento marca sus fibras inferiores, el lado hacia el que apunta su eje z local (consulta [Orientación del elemento](/es/essentials/elements#element-direction)).
 
-**Colores**: colores independientes para nodos, elementos, cargas, deformada, esfuerzo axil, esfuerzo cortante, momento flector y reacciones. Por defecto: N azul, V verde, M rojo, reacciones moradas, cargas naranjas.
+| Ajuste | Opciones | Predeterminado |
+| --- | --- | --- |
+| **Momento flector** | dibujado en el *Lado traccionado* o en el *Lado comprimido* | *Lado traccionado* |
+| **Fuerza cortante positiva** | dibujada en el *Lado opuesto* a la línea discontinua o en el *Lado discontinuo* | *Lado opuesto* |
+| **Fuerza normal positiva** | *Lado opuesto* o *Lado discontinuo* | *Lado opuesto* |
+| **Relleno** | *Sólido*, *Rayado* (líneas transversales a la barra, como a mano) o *Ninguno* | *Sólido* |
+| **Grado de cada tramo** | escribe el grado del polinomio, de 0° a 3°, en cada tramo de un diagrama | desactivado |
+
+En [Resultados y diagramas](/es/essentials/results#reading-the-sign) se explica cómo leer los signos.
+
+### Colores {#colors}
+
+Colores independientes para nodos, elementos, cargas, deformada, esfuerzo axil, esfuerzo cortante, momento flector y reacciones. Haz clic en una muestra para elegir un color. Por defecto: cargas en naranja, deformada en gris, N en azul, V en verde, M en rojo, reacciones en morado, y nodos y elementos en negro.
 
 ## Controles y atajos {#controls-shortcuts}
 
-**Desplazar con** define qué botón del ratón desplaza el lienzo: *Rueda o botón derecho del ratón* (predeterminado), *Rueda del ratón* o *Botón derecho*. La lista completa de atajos está en la página [Teclado, ratón y pantalla táctil](/es/reference/shortcuts).
+**Desplazar con** define con qué botón del ratón se arrastra el lienzo: *Rueda o botón derecho del ratón* (la opción predeterminada), *Rueda del ratón* (pulsa la rueda y arrastra) o *Botón derecho*. Todos los atajos están en la página [Teclado, ratón y pantalla táctil](/es/reference/shortcuts).
 
 ## Qué se guarda en tu navegador {#what-is-stored-in-your-browser}
 
 Además de la configuración, EduBeam guarda en el almacenamiento local del navegador:
 
-- el **modelo actual**, guardado tras cada cambio, de modo que recargar la pestaña o volver a abrir la aplicación lo restaura;
-- **Estructuras recientes**: los 10 últimos modelos que limpiaste o reemplazaste.
+- el **modelo actual**, guardado tras cada cambio, de modo que al recargar la pestaña o volver a abrir la aplicación lo recuperas;
+- **Estructuras recientes**: los 10 últimos modelos que limpiaste o reemplazaste, listos para restaurarlos desde el menú ☰.
 
-Ambos son por navegador y por dispositivo, y borrar los datos del sitio los elimina. Usa [Guardar proyecto o Compartir modelo](/es/essentials/import-export) para conservar un modelo o llevarlo a otro sitio.
+Ambos pertenecen a este navegador en este dispositivo, y si borras los datos del sitio, se eliminan. Para conservar un modelo o llevarlo a otro dispositivo, usa [Guardar proyecto o Compartir modelo](/es/essentials/import-export).
