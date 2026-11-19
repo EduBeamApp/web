@@ -1,18 +1,21 @@
 {
   "meta": {
-    "description": "Analisis struktur online gratis – balok, portal, dan rangka batang 2D langsung di browser."
+    "description": "Analisis struktur 2D gratis di browser: balok, portal, dan rangka batang langsung dihitung."
   },
   "nav": {
     "guide": "Panduan",
     "tutorials": "Tutorial",
     "examples": "Contoh",
     "faq": "FAQ",
-    "openApp": "Buka aplikasi"
+    "theory": "Teori",
+    "openApp": "Buka aplikasi",
+    "libraries": "Pustaka",
+    "practice": "Latihan soal"
   },
   "docs": {
     "onThisPage": "Di halaman ini",
-    "prev": "Sebelumnya",
-    "next": "Berikutnya",
+    "prev": "Halaman sebelumnya",
+    "next": "Halaman berikutnya",
     "lastUpdated": "Terakhir diperbarui"
   },
   "footer": {
@@ -20,22 +23,22 @@
   },
   "components": {
     "loadsTitle": "Pratinjau tipe beban",
-    "loadsLede": "Seperti apa tipe beban umum di EduBeam. Setiap kartu adalah model hidup yang sudah dihitung dan terbuka di aplikasi persis seperti yang diatur.",
+    "loadsLede": "Seperti inilah tipe beban yang umum di EduBeam. Setiap kartu berisi model interaktif yang sudah dihitung dan terbuka di aplikasi persis seperti yang diatur di sini.",
     "openInApp": "Buka di EduBeam",
     "simplySupportedBeam": "Balok sederhana",
-    "udlBlurb": "Bentang sendi–rol dengan beban 12 kN/m: diagram gaya geser dan momen lentur klasik.",
-    "trapezoidalBlurb": "Beban yang naik dari 4 hingga 14 kN/m di sepanjang bentang kanan.",
-    "concentratedBlurb": "Satu beban 18 kN ke bawah di tengah bentang, tanpa joint tambahan.",
-    "nodalBlurb": "Beban 20 kN di tumpuan tengah, untuk memeriksa reaksi dan lendutan.",
-    "temperatureBlurb": "Perbedaan suhu sepanjang tinggi penampang (atas lebih panas daripada bawah) dan kelengkungan yang ditimbulkannya.",
+    "udlBlurb": "Bentang sendi–rol dengan beban 12 kN/m: diagram gaya geser dan momen yang klasik.",
+    "trapezoidalBlurb": "Beban yang naik dari 4 hingga 14 kN/m di sepanjang bentang kanan.",
+    "concentratedBlurb": "Beban 18 kN di dalam bentang kiri, 2 m dari tumpuan, tanpa joint di bawahnya.",
+    "nodalBlurb": "Beban 20 kN pada joint di antara kedua bentang: diagram momen patah tepat di bawahnya.",
+    "temperatureBlurb": "Selisih suhu antara sisi atas dan sisi bawah penampang (sisi atas lebih panas) dan kelengkungan yang ditimbulkannya.",
     "promoTitle": "Bawa portal Anda",
     "promoAccent": "ke 3D.",
-    "promoSubtitle": "pelat, cangkang & pemeriksaan baja di browser Anda",
+    "promoSubtitle": "pelat, cangkang, dan pemeriksaan baja di browser Anda",
     "promoCta": "Coba gratis",
     "spanLength": "Panjang bentang",
     "loadIntensity": "Intensitas beban",
     "loadPosition": "Posisi beban",
-    "heroHint": "Geser beban, diagram langsung mengikuti."
+    "heroHint": "Pindahkan bebannya. Diagramnya ikut berubah."
   },
   "common": {
     "deformedShape": "Bentuk deformasi",
@@ -58,33 +61,612 @@
     "items": {
       "welcome": {
         "title": "Balok statis tak tentu",
-        "blurb": "Balok jepit–rol statis tak tentu sepanjang 3 m dengan beban merata 10 kN/m."
+        "blurb": "Balok jepit–rol statis tak tentu sepanjang 3 m dengan beban merata 10 kN/m."
       },
       "cantilever": {
         "title": "Kantilever",
-        "blurb": "Kantilever 4 m yang memikul beban joint 18 kN ke bawah, menyoroti kelengkungan dan lendutan ujung."
+        "blurb": "Kantilever 4 m yang memikul beban joint 18 kN ke bawah, menyoroti kelengkungan dan lendutan ujung."
       },
       "pratt": {
         "title": "Rangka batang Warren",
-        "blurb": "Rangka batang Warren sederhana dengan beban joint 8 kN yang menunjukkan distribusi gaya aksial dan perpindahan."
+        "blurb": "Rangka batang Warren sederhana dengan beban joint 8 kN yang menunjukkan distribusi gaya aksial dan perpindahan."
       },
       "continuous": {
         "title": "Balok menerus tiga bentang",
-        "blurb": "Bentang 5+6+5 m dengan beban merata + terpusat + merata untuk membandingkan kelengkungan dan rotasi tumpuan."
+        "blurb": "Bentang 5+6+5 m dengan beban merata + terpusat + merata untuk membandingkan kelengkungan dan rotasi tumpuan."
       },
       "portal": {
         "title": "Kasus beban portal",
-        "blurb": "Balok 8 m di atas kolom 6 m dengan beban merata atap serta beban lateral + vertikal di sudut portal untuk memeriksa goyangan dan lentur."
+        "blurb": "Balok 8 m di atas kolom 6 m dengan beban merata atap serta beban lateral + vertikal di sudut portal untuk memeriksa goyangan dan lentur."
       },
       "temperature": {
         "title": "Beban suhu",
-        "blurb": "Balok sederhana 8 m dengan beban suhu merata dan tidak merata."
+        "blurb": "Balok sederhana 8 m dengan beban suhu merata dan tidak merata."
       }
     }
   },
   "search": {
     "label": "Cari",
     "placeholder": "Cari di dokumentasi",
-    "noResults": "Tidak ada hasil untuk “{query}”"
+    "noResults": "Tidak ada hasil untuk “{query}”",
+    "shortcut": "Ctrl K"
+  },
+  "home": {
+    "seo": {
+      "title": "EduBeam: analisis struktur gratis di browser",
+      "description": "Analisis struktur 2D gratis di browser Anda. Gambar balok, portal, dan rangka batang, tambahkan beban, dan dapatkan seketika diagram N, V, M, reaksi, serta lendutan."
+    },
+    "hero": {
+      "title": "Balok, portal, rangka batang.",
+      "lede": "EduBeam adalah aplikasi analisis struktur gratis untuk balok, portal, dan rangka batang. Gambar model di browser, dan diagram, reaksi, serta lendutannya diperbarui setiap kali Anda mengubahnya.",
+      "launch": "Jalankan EduBeam",
+      "guide": "Baca panduan",
+      "note": "Gratis dan sumber terbuka. Tanpa instalasi, tanpa akun."
+    },
+    "steps": {
+      "title": "Dari sketsa ke diagram dalam empat langkah",
+      "lede": "Urutannya sama seperti saat Anda mengerjakan soal di kertas. Panduan mulai cepat mengajak Anda menghitung balok sungguhan dalam sekitar sepuluh menit.",
+      "link": "Ikuti panduan mulai cepat",
+      "items": {
+        "nodes": {
+          "label": "Joint",
+          "title": "Tempatkan joint",
+          "body": "Klik pada grid atau ketik koordinatnya. Di sini: keempat sudut portal selebar 6 m dan setinggi 4 m."
+        },
+        "elements": {
+          "label": "Elemen",
+          "title": "Hubungkan dengan elemen",
+          "body": "Sambungkan joint dengan elemen balok, lalu beri material dan penampang: dari pustaka, atau poligon yang Anda gambar sendiri."
+        },
+        "loads": {
+          "label": "Tumpuan dan beban",
+          "title": "Beri tumpuan dan beban",
+          "body": "Tumpuan sendi di kedua kaki kolom, 10 kN/m di sepanjang balok, dan gaya horizontal 15 kN di sudut kiri atas."
+        },
+        "results": {
+          "label": "Hasil",
+          "title": "Baca hasilnya",
+          "body": "Diagram momen, digambar di sisi tarik, dan reaksi muncul begitu portal dapat berdiri. Angka-angka ini bukan salinan: EduBeam menghitungnya langsung di halaman ini."
+        }
+      }
+    },
+    "examples": {
+      "title": "Buka model yang sudah dihitung dengan satu klik",
+      "lede": "Setiap model di sini dihitung di halaman ini oleh solver yang sama dengan yang dijalankan aplikasi. Buka salah satunya di EduBeam, lalu ubah sesuka Anda.",
+      "link": "Semua contoh"
+    },
+    "verify": {
+      "title": "Dicocokkan dengan buku teks",
+      "lede": "EduBeam menghitung setiap model dengan metode elemen hingga. Untuk kasus-kasus klasik, hasilnya sama dengan rumus tertutup hingga digit terakhir. Kolom kanan dihitung di browser Anda saat halaman ini dimuat.",
+      "case": "Kasus",
+      "formula": "Rumus tertutup",
+      "hand": "Perhitungan manual",
+      "edubeam": "EduBeam",
+      "link": "Kasus acuan lainnya",
+      "steel": "Baja IPE 200: E = 210 GPa, I = 1943 cm⁴. Deformasi geser diabaikan, sesuai asumsi rumus tertutup.",
+      "cases": {
+        "ssMoment": "Balok sederhana, 12 kN/m pada bentang 6 m: momen terbesar",
+        "ssDeflection": "Balok yang sama: lendutan terbesar",
+        "cantilever": "Kantilever 4 m, 18 kN di ujung bebas: momen di tumpuan jepit",
+        "fixed": "Balok jepit–jepit, 10 kN/m pada bentang 6 m: momen ujung",
+        "propped": "Balok jepit–rol, 10 kN/m pada bentang 6 m: reaksi rol"
+      }
+    },
+    "teaching": {
+      "title": "Dibuat untuk ruang kuliah",
+      "lede": "Masukkan model ke slide atau catatan kuliah Anda, dan setiap mahasiswa membuka model yang persis sama.",
+      "link": "Mengajar dengan EduBeam",
+      "slideCourse": "Statika",
+      "slideTitle": "Kuliah 7: Rangka batang",
+      "slideBody": "Rangka batang Warren dengan tiga beban joint 8 kN. Batang mana saja yang mengalami tarik?",
+      "shareLabel": "Tautan berbagi",
+      "copy": "Salin",
+      "copied": "Disalin",
+      "items": {
+        "share": {
+          "title": "Satu model, satu tautan",
+          "body": "Seluruh model tersimpan di dalam URL. Cantumkan di soal tugas, dan model terbuka persis seperti yang Anda tinggalkan, bahkan bertahun-tahun kemudian."
+        },
+        "embed": {
+          "title": "Di slide Anda",
+          "body": "Mode penampil menampilkan model yang sudah dihitung tanpa alat edit, cocok untuk slide atau halaman web."
+        },
+        "mechanism": {
+          "title": "Menjelaskan letak kesalahannya",
+          "body": "Jika struktur berupa mekanisme, EduBeam menunjukkan bagaimana struktur itu akan bergerak, alih-alih sekadar menolak menghitungnya."
+        },
+        "languages": {
+          "title": "Bahasa dan satuan mahasiswa sendiri",
+          "body": "Mahasiswa bekerja dalam salah satu dari 18 bahasa, dengan satuan SI atau satuan AS, dan dengan arah sumbu seperti di buku teks mereka."
+        }
+      },
+      "answerTitle": "Jawaban: gaya batang",
+      "answerBody": "Tarik bertanda positif. Batang bawah tertarik; batang atas dan kedua diagonal ujung tertekan; diagonal dalam bergantian tarik dan tekan.",
+      "prevSlide": "Slide sebelumnya",
+      "nextSlide": "Slide berikutnya"
+    },
+    "final": {
+      "title": "Gambar balok pertama Anda.",
+      "lede": "Buka EduBeam dan pilih Gambar balok pertama Anda. Panduan singkat langkah demi langkah membawa Anda dari layar kosong hingga balok lengkap dengan tumpuan, beban, dan diagramnya.",
+      "paths": {
+        "quickStart": {
+          "title": "Mulai cepat",
+          "body": "Modelkan balok langkah demi langkah dan periksa hasilnya secara manual. 10 menit."
+        },
+        "examples": {
+          "title": "Contoh",
+          "body": "Model yang sudah dihitung untuk dibuka, diubah, dan dipelajari."
+        },
+        "teaching": {
+          "title": "Mengajar",
+          "body": "Tautan berbagi, slide, dan latihan untuk mata kuliah Anda."
+        }
+      }
+    },
+    "model": {
+      "title": "Apa saja yang dapat dimodelkan",
+      "lede": "Struktur bidang yang dihitung dengan metode elemen hingga, dengan tumpuan, beban, dan hasil seperti dalam mata kuliah statika.",
+      "supports": {
+        "title": "Tumpuan",
+        "items": {
+          "pin": "Sendi",
+          "roller": "Rol",
+          "fixed": "Jepit",
+          "slider": "Jepit geser",
+          "angled": "Miring, dengan sudut berapa pun"
+        },
+        "note": "Ditambah penurunan dan rotasi tumpuan yang ditetapkan."
+      },
+      "loads": {
+        "title": "Beban",
+        "items": {
+          "point": "Terpusat",
+          "uniform": "Merata",
+          "trapezoidal": "Trapesium",
+          "moment": "Momen",
+          "temperature": "Suhu"
+        },
+        "note": "Pada joint atau di mana saja sepanjang elemen, dalam sumbu lokal atau global."
+      },
+      "sections": {
+        "title": "Penampang",
+        "items": {
+          "i": "Profil I dan H",
+          "hollow": "Berongga",
+          "solid": "Pejal",
+          "tube": "Pipa",
+          "polygon": "Poligon Anda"
+        },
+        "note": "IPE, HEA, AISC W, dan HSS dari pustaka, atau poligon apa pun yang Anda gambar."
+      },
+      "results": {
+        "title": "Hasil",
+        "note": "Gaya normal, gaya geser, momen lentur, dan bentuk deformasi, beserta reaksi dan nilai di sembarang titik."
+      },
+      "facts": {
+        "elements": {
+          "title": "Balok Timoshenko",
+          "body": "Deformasi geser diperhitungkan di tempat yang penting; untuk batang langsing, hasilnya sama dengan teori Euler–Bernoulli."
+        },
+        "structures": {
+          "title": "Balok, portal, rangka batang",
+          "body": "Dalam bidang, dengan sendi di ujung elemen mana pun."
+        },
+        "sharing": {
+          "title": "Tautan dan file",
+          "body": "Seluruh model dalam satu tautan atau file proyek; gambar sebagai PNG atau SVG, tabel sebagai CSV."
+        },
+        "settings": {
+          "title": "18 bahasa",
+          "body": "Satuan SI atau AS, sumbu z ke bawah atau y ke atas seperti di buku teks."
+        }
+      }
+    },
+    "heritage": {
+      "title": "Sumber terbuka, berakar di ruang kuliah",
+      "body": "EduBeam meneruskan EduBeam versi desktop yang dikembangkan di Departemen Mekanika, Fakultas Teknik Sipil, Universitas Teknik Ceko di Praha (ČVUT), dan masih dapat membuka file sesi program tersebut. Versi web ini gratis dan sumber terbuka, begitu pula {'@'}edubeam/fem, solver di balik setiap angka di halaman ini.",
+      "github": "EduBeam di GitHub",
+      "solver": "{'@'}edubeam/fem di GitHub",
+      "team": "Tim pengembang EduBeam"
+    }
+  },
+  "error": {
+    "notFoundTitle": "Halaman tidak ditemukan",
+    "notFound": "Tidak ada halaman di alamat ini. Mungkin halamannya sudah dipindahkan, atau ada salah ketik di tautannya.",
+    "otherTitle": "Terjadi kesalahan",
+    "other": "Halaman ini tidak dapat ditampilkan. Biasanya memuat ulang halaman sudah cukup.",
+    "home": "Beranda",
+    "guide": "Baca panduan",
+    "message": "Tumpuan tidak menahan struktur: struktur masih dapat berputar bebas.",
+    "figure": "Balok di atas satu tumpuan sendi, tanpa tumpuan kedua, yang berputar bebas terhadap sendi itu akibat bebannya"
+  },
+  "problems": {
+    "families": {
+      "simple": {
+        "name": "Balok sederhana",
+        "skill": "Keseimbangan balok",
+        "hint": "Tinjau keseimbangan momen terhadap A untuk mencari reaksi di B, lalu jumlahkan gaya vertikal untuk mencari reaksi di A. Momen terbesar terjadi di tempat gaya geser bernilai nol, atau tepat di bawah beban terpusat."
+      },
+      "cantilever": {
+        "name": "Kantilever",
+        "skill": "Tumpuan jepit",
+        "hint": "Semua reaksi bekerja di tumpuan jepit: jumlahkan gaya vertikal, lalu tinjau keseimbangan momen terhadap A. Pada kantilever, momen terbesar terjadi di tumpuan jepit."
+      },
+      "overhang": {
+        "name": "Balok dengan overstek",
+        "skill": "Momen negatif di atas tumpuan",
+        "hint": "Tinjau keseimbangan momen terhadap A untuk mencari reaksi di B. Lalu bandingkan dua kandidat momen terbesar: di dalam bentang, tempat V = 0, dan di atas B, tempat overstek menimbulkan momen negatif."
+      },
+      "gerber": {
+        "name": "Balok Gerber",
+        "skill": "Sendi dalam",
+        "hint": "Mulai dari GC: bagian ini bertumpu pada sendi G dan rol C, dan sendi tidak meneruskan momen. Lalu bebani ABG dengan gaya yang diteruskan oleh sendi, dan hitung sebagai balok dengan overstek."
+      },
+      "threeHinged": {
+        "name": "Portal tiga sendi",
+        "skill": "Gaya dorong horizontal dan sendi puncak",
+        "hint": "Keseimbangan momen terhadap A dan terhadap E memberikan reaksi vertikal. Lalu potong portal di sendi puncak C, tempat M = 0, dan tinjau keseimbangan momen salah satu bagiannya terhadap C: dari situ diperoleh gaya dorong horizontal."
+      },
+      "truss": {
+        "name": "Rangka batang Warren",
+        "skill": "Metode titik simpul dan metode potongan",
+        "hint": "Cari reaksi dari keseimbangan seluruh rangka batang. Lalu potong tiga batang, salah satunya batang yang dicari, dan tinjau keseimbangan momen terhadap joint tempat dua batang lainnya bertemu; untuk batang diagonal, jumlahkan gaya vertikal sebagai gantinya."
+      },
+      "continuous": {
+        "name": "Balok menerus dua bentang",
+        "skill": "Statis tak tentu berderajat satu",
+        "hint": "Struktur ini statis tak tentu berderajat satu: ambil momen di tumpuan B sebagai gaya kelebihan. Persamaan tiga momen, dengan M = 0 di A dan C, langsung memberikan nilainya; reaksi kemudian dihitung bentang demi bentang."
+      },
+      "portal": {
+        "name": "Portal dua sendi",
+        "skill": "Portal kaku",
+        "hint": "Struktur ini statis tak tentu berderajat satu: lepaskan reaksi horizontal di D, hitung perpindahan horizontal D akibat beban dan akibat gaya satuan di D (kerja virtual, dengan diagram M), lalu tetapkan bahwa perpindahan totalnya nol."
+      }
+    },
+    "statement": {
+      "simple": "Sebuah balok dengan bentang {L} m ditumpu sendi di A dan rol di B. Balok dibebani {loads}.",
+      "cantilever": "Sebuah kantilever sepanjang {L} m terjepit di A, dengan beban q = {q} kN/m di sepanjang batang dan F = {F} kN di ujung bebas B.",
+      "cantileverMoment": "Sebuah kantilever sepanjang {L} m terjepit di A, dengan beban q = {q} kN/m di sepanjang batang, F = {F} kN di ujung bebas B, dan momen {M} kNm berlawanan arah jarum jam di B.",
+      "overhang": "Sebuah balok ditumpu sendi di A dan rol di B, dengan bentang AB = {L} m dan overstek sepanjang {c} m hingga C. Beban q = {q} kN/m bekerja pada bentang AB dan F = {F} kN di ujung C.",
+      "overhangAll": "Sebuah balok ditumpu sendi di A dan rol di B, dengan bentang AB = {L} m dan overstek sepanjang {c} m hingga C. Beban q = {q} kN/m bekerja di seluruh panjang balok dan F = {F} kN di ujung C.",
+      "gerber": "Sebuah balok ditumpu sendi di A serta rol di B dan C, dengan sendi dalam G yang terletak {g} m dari B ke arah C: AB = {L1} m, GC = {L3} m.",
+      "gerberLoad": "Beban q = {q} kN/m bekerja di seluruh panjang balok.",
+      "gerberLoadForce": "Beban q = {q} kN/m bekerja di seluruh panjang balok dan F = {F} kN di tengah AB.",
+      "threeHinged": "Sebuah portal selebar {L} m dan setinggi {H} m ditumpu sendi di A dan E, dengan sendi puncak di C.",
+      "threeHingedWhole": "Balok portal memikul q = {q} kN/m di seluruh panjangnya.",
+      "threeHingedHalf": "Balok portal memikul q = {q} kN/m pada separuh kirinya.",
+      "threeHingedWholeForce": "Balok portal memikul q = {q} kN/m di seluruh panjangnya dan gaya F = {F} kN mendorong B ke kanan.",
+      "threeHingedHalfForce": "Balok portal memikul q = {q} kN/m pada separuh kirinya dan gaya F = {F} kN mendorong B ke kanan.",
+      "truss": "Sebuah rangka batang Warren terdiri atas {panels}, masing-masing sepanjang {d} m dan setinggi {h} m, dengan tumpuan sendi di A dan rol di {end}.",
+      "panels": "{n} panel",
+      "trussLoadAll": "Beban F = {F} kN bekerja ke bawah pada setiap joint batang atas.",
+      "trussLoad": "Beban F = {F} kN bekerja ke bawah pada joint {joints}.",
+      "continuous": "Sebuah balok menerus dua bentang ditumpu sendi di A serta rol di B dan C, dengan bentang AB = {L1} m dan BC = {L2} m. Beban q = {q} kN/m bekerja pada bentang kiri AB.",
+      "continuousBoth": "Sebuah balok menerus dua bentang ditumpu sendi di A serta rol di B dan C, dengan bentang AB = {L1} m dan BC = {L2} m. Beban q = {q} kN/m bekerja pada kedua bentang.",
+      "portal": "Sebuah portal kaku selebar {L} m dan setinggi {H} m ditumpu sendi di A dan D, dengan beban q = {q} kN/m pada balok BC.",
+      "portalForce": "Sebuah portal kaku selebar {L} m dan setinggi {H} m ditumpu sendi di A dan D, dengan beban q = {q} kN/m pada balok BC dan gaya F = {F} kN yang mendorong B ke kanan.",
+      "advancedNote": "EI konstan; deformasi geser diabaikan."
+    },
+    "load": {
+      "udlSpan": "q = {q} kN/m di sepanjang bentang",
+      "pointFromA": "F = {F} kN pada jarak {a} m dari A",
+      "momentAtB": "momen {M} kNm berlawanan arah jarum jam di B"
+    },
+    "task": {
+      "beam": "Hitunglah reaksi tumpuan dan momen lentur maksimum.",
+      "bar": "Hitunglah reaksi tumpuan dan gaya batang {bar}."
+    },
+    "answer": {
+      "horizontal": "Reaksi horizontal di {node}",
+      "vertical": "Reaksi vertikal di {node}",
+      "fixingMoment": "Momen jepit di {node}",
+      "bar": "Gaya batang {bar}",
+      "largestMoment": "Momen lentur maksimum (nilai mutlak)"
+    },
+    "unit": {
+      "kN": "kN",
+      "kNm": "kNm"
+    }
+  },
+  "library": {
+    "getStarted": "Mulai",
+    "by": "Oleh {author}",
+    "fromRepo": "Belum tersedia di npm: baris di atas memasangnya dari GitHub.",
+    "comingToNpm": "Segera tersedia di npm. Kode sumbernya ada di GitHub."
+  },
+  "solver": {
+    "tagline": "Solver elemen hingga untuk portal bidang, ditulis dalam TypeScript.",
+    "seo": {
+      "title": "{'@'}edubeam/fem: solver elemen hingga untuk portal 2D dalam TypeScript",
+      "description": "Solver elemen hingga dalam TypeScript untuk balok, portal, dan rangka batang bidang: sendi, beban batang, beban suhu, penurunan tumpuan, kasus beban, reaksi, dan gaya dalam eksak. Mesin di balik EduBeam."
+    },
+    "run": {
+      "title": "Dihitung di halaman ini",
+      "lede": "Kode di sebelah kiri dijalankan di browser Anda saat halaman ini dimuat. Di sebelah kanan ada nilai yang dikembalikannya, dan gambarnya dibuat oleh {plot} dari hasil solver yang sama.",
+      "plusShear": "{formula}, ditambah pengaruh geser"
+    },
+    "features": {
+      "title": "Apa saja isinya",
+      "analyses": {
+        "title": "Analisis",
+        "body": "Statika linear dengan kasus beban sebanyak yang Anda perlukan. Diagram eksak di antara joint: tidak ada jaring elemen yang perlu diperhalus."
+      },
+      "elements": {
+        "title": "Elemen",
+        "body": "Elemen balok Timoshenko dengan dua joint di bidang x–z. Dengan sendi di kedua ujung, elemen ini menjadi batang rangka."
+      },
+      "loads": {
+        "title": "Beban",
+        "body": "Gaya dan momen joint; beban terpusat, merata, dan trapesium di sepanjang batang; beban suhu; penurunan tumpuan."
+      },
+      "results": {
+        "title": "Hasil",
+        "body": "N, V, dan M di titik mana pun sepanjang batang, garis elastis, gaya ujung, perpindahan, dan reaksi."
+      },
+      "reference": "Semua kelas dan metode"
+    },
+    "behind": {
+      "title": "Solver di balik EduBeam",
+      "body": "Setiap diagram, reaksi, dan lendutan di EduBeam, serta setiap gambar di situs ini, dihitung oleh {name}.",
+      "link": "Lihat EduBeam"
+    }
+  },
+  "plot": {
+    "tagline": "Komponen Vue yang menggambar struktur bidang dan hasilnya, dengan gaya gambar seperti di situs ini.",
+    "seo": {
+      "title": "{'@'}edubeam/plot: diagram struktur untuk Vue",
+      "description": "Komponen Vue yang menggambar struktur bidang, beban, reaksi, dan diagram N, V, M seperti di buku teks, untuk halaman mata kuliah, slide, lembar soal, dan file SVG mandiri."
+    },
+    "try": {
+      "title": "Coba",
+      "lede": "Portal yang dihitung oleh {'@'}edubeam/fem di halaman ini. Ubah apa yang digambar; kodenya ikut berubah.",
+      "labelStyle": "Gaya label",
+      "horizontal": "Horizontal",
+      "axis": "Sejajar ordinat"
+    },
+    "teaching": {
+      "title": "Dibuat untuk bahan ajar",
+      "lede": "Model dalam kode adalah gambar yang tidak pernah usang: ubah satu angka, dan gambar, reaksi, serta diagramnya ikut berubah. Seed memilih soal baru; seed yang sama selalu menghasilkan soal yang sama. Halaman {practice} dan {exam} di situs ini dibuat dengan cara ini.",
+      "practice": "Latihan soal",
+      "exam": "Pembuat soal ujian"
+    },
+    "uses": {
+      "exercises": {
+        "title": "Latihan dan ujian",
+        "body": "Satu soal untuk setiap mahasiswa dari sebuah seed, lengkap dengan kunci jawabannya, untuk dicetak atau sebagai gambar untuk LaTeX dan Word."
+      },
+      "slides": {
+        "title": "Slide dan catatan kuliah",
+        "body": "Gambar yang muncul bertahap klik demi klik di Slidev, Vue, atau Beamer, dengan hasil yang dihitung langsung."
+      },
+      "embedding": {
+        "title": "Di dokumentasi dan aplikasi Anda",
+        "body": "Vite, VitePress, atau Nuxt, dirender di server, atau dari JSON yang sudah dihitung sebelumnya."
+      },
+      "print": {
+        "title": "File untuk dicetak",
+        "body": "SVG mandiri dengan warna polos, untuk Word, LaTeX, dan Inkscape."
+      }
+    },
+    "features": {
+      "title": "Kemampuannya",
+      "style": {
+        "title": "Bergaya seperti gambar di situs ini",
+        "body": "Batang, tumpuan, beban, reaksi, dan diagram berarsir seperti di situs ini, dengan dimensi berantai dan nama reaksi yang dicari untuk lembar soal."
+      },
+      "readable": {
+        "title": "Terbaca di ukuran apa pun",
+        "body": "Teks dan garis mempertahankan ukurannya dalam piksel; nilai yang akan bertumpuk dipindahkan atau dihilangkan, tidak pernah terpotong."
+      },
+      "exact": {
+        "title": "Eksak",
+        "body": "Diagram adalah polinomial dari solver itu sendiri: nilai ekstrem dicari secara eksak, dan lompatan di bawah beban terpusat digambar sebagai lompatan."
+      },
+      "fits": {
+        "title": "Menyatu dengan halaman",
+        "body": "Warna diambil dari CSS Anda, untuk tema terang dan gelap. Dirender di server dan tidak pernah menahan gulir halaman."
+      },
+      "components": "Semua prop"
+    }
+  },
+  "practice": {
+    "seo": {
+      "title": "Latihan soal statika dengan jawaban yang langsung diperiksa {'|'} EduBeam",
+      "description": "Latihan statika gratis: balok, portal, dan rangka batang dengan angka baru setiap kali. Hitung reaksi dan momen lentur atau gaya batang terbesar, periksa jawaban seketika, lalu lihat diagramnya.",
+      "ogTitle": "Latihan soal statika dengan jawaban yang langsung diperiksa",
+      "ogDescription": "Balok, portal, dan rangka batang dengan angka baru setiap kali. Periksa reaksi dan momen Anda seketika, lalu lihat diagramnya."
+    },
+    "title": "Latihan soal statika",
+    "lede": "Soal baru setiap kali, dengan jawaban eksak untuk mencocokkan hasil Anda. Kerjakan di kertas, ketik hasilnya, lalu lihat diagramnya.",
+    "codes": "Setiap soal memiliki kode, misalnya {code}. Kode yang sama selalu berarti soal yang sama: bagikan kepada teman kuliah, atau buka soal yang diberikan dosen Anda.",
+    "announce": "Soal baru: {structure}, {code}.",
+    "structures": {
+      "title": "Struktur",
+      "count": "{picked} dari {total}",
+      "legend": "Struktur yang dapat dipilih oleh tombol Soal baru",
+      "determinate": "Statis tertentu",
+      "indeterminate": "Statis tak tentu",
+      "note": "Tombol Soal baru memilih salah satunya secara acak."
+    },
+    "code": {
+      "label": "Kode soal",
+      "placeholder": "Kode",
+      "open": "Buka",
+      "error": "Itu bukan kode soal. Kode soal terdiri atas satu huruf dan sebuah bilangan, misalnya H2048."
+    },
+    "newProblem": "Soal baru",
+    "copyLink": "Salin tautan",
+    "linkCopied": "Tautan disalin",
+    "barForces": "Gaya batang, tarik positif",
+    "answers": {
+      "title": "Jawaban Anda",
+      "note": "Reaksi digambar pada soal dengan arah positifnya. Jika suatu reaksi bekerja ke arah sebaliknya, jawabannya negatif.",
+      "field": "{label}, {direction}, dalam {unit}",
+      "fieldMagnitude": "{label}, dalam {unit}"
+    },
+    "positive": {
+      "right": "positif ke kanan",
+      "up": "positif ke atas",
+      "counterClockwise": "positif berlawanan arah jarum jam",
+      "tension": "positif jika tarik",
+      "magnitude": "nilai mutlak"
+    },
+    "mark": {
+      "correct": "benar",
+      "exact": "jawaban eksak",
+      "sign": "tanda?",
+      "signLong": "besarnya benar, tandanya salah",
+      "wrong": "salah"
+    },
+    "verdict": {
+      "allRight": "Semua benar. Diagramnya kini digambar pada soal.",
+      "sign": "{right} dari {total} benar. Jawaban yang diberi label “{sign}” besarnya benar, tetapi arahnya terbalik.",
+      "some": "{right} dari {total} benar. Jawaban yang selisihnya tidak lebih dari 1% dianggap benar.",
+      "revealed": "Jawaban eksak ada di samping kolom isian Anda, dan diagramnya digambar pada soal."
+    },
+    "check": "Periksa",
+    "nextProblem": "Soal berikutnya",
+    "hint": "Petunjuk",
+    "showAnswers": "Tampilkan jawaban",
+    "solved": "Soal yang sudah diselesaikan di perangkat ini: {n}.",
+    "about": {
+      "answers": {
+        "title": "Asal jawabannya",
+        "body": "Setiap soal dihitung di browser Anda oleh {solver}, solver di balik EduBeam, dan digambar oleh {plot}. Momen terbesar dicari secara eksak, bukan dibaca dari kurva yang hanya dihitung di beberapa titik."
+      },
+      "signs": {
+        "title": "Tanda dan satuan",
+        "body": "Jawaban dalam kN dan kNm. Beban bekerja ke bawah, kecuali soal menyebutkan lain. Reaksi positif ke kanan, ke atas, dan berlawanan arah jarum jam, seperti tertera di setiap kolom; gaya batang positif jika tarik. Diagram mengikuti {conventions} EduBeam.",
+        "conventions": "konvensi tanda"
+      },
+      "teachers": {
+        "title": "Untuk dosen",
+        "body": "{exam} mencetak soal-soal ini sebagai lembar soal ujian, satu paket berbeda untuk setiap mahasiswa, lengkap dengan kunci jawaban. Dengan kode soal, mahasiswa dapat memeriksa sendiri jawabannya di sini setelah ujian.",
+        "exam": "Pembuat soal ujian"
+      }
+    }
+  },
+  "exam": {
+    "seo": {
+      "title": "Pembuat soal ujian statika: lembar soal siap cetak dengan kunci jawaban {'|'} EduBeam",
+      "description": "Buat soal ujian statika di browser: balok, portal, dan rangka batang dengan angka acak, paket berbeda untuk setiap mahasiswa, kunci jawaban, dan gambar SVG untuk LaTeX dan Word. Gratis, tanpa instalasi.",
+      "ogTitle": "Pembuat soal ujian statika: lembar soal siap cetak dengan kunci jawaban",
+      "ogDescription": "Balok, portal, dan rangka batang dengan angka acak, satu paket per mahasiswa, kunci jawaban, dan gambar SVG. Gratis, di browser."
+    },
+    "title": "Pembuat soal ujian",
+    "lede": "Lembar soal ujian statika, satu paket berbeda untuk setiap mahasiswa, lengkap dengan kunci jawaban. Semuanya dibuat di browser Anda dan tidak ada yang dikirim ke mana pun. Pengaturannya tersimpan di alamat halaman, jadi bookmark halaman ini akan memunculkan lagi lembar soal yang sama.",
+    "defaultTitle": "Ujian statika",
+    "settings": {
+      "title": "Judul",
+      "subtitle": "Baris kedua",
+      "subtitlePlaceholder": "Mata kuliah, tanggal, waktu pengerjaan",
+      "problems": "Soal",
+      "problem": "Soal {n}",
+      "determinate": "Statis tertentu",
+      "indeterminate": "Statis tak tentu",
+      "remove": "Hapus soal {n}",
+      "add": "Tambah soal",
+      "problemsNote": "Setiap paket berisi soal-soal ini dengan urutan yang sama, masing-masing dengan angkanya sendiri. Maksimal {max}.",
+      "versions": "Paket",
+      "versionsNote": "Satu paket untuk setiap mahasiswa, maksimal {max}.",
+      "number": "Nomor ujian",
+      "newNumber": "Baru",
+      "newNumberTitle": "Angka baru untuk setiap soal",
+      "numberNote": "Nomor yang sama selalu menghasilkan lembar soal yang sama.",
+      "onPapers": "Pada lembar soal",
+      "nameLine": "Baris untuk nama mahasiswa",
+      "working": "Ruang untuk perhitungan",
+      "key": "Kunci jawaban di bagian akhir",
+      "codes": "Kode soal",
+      "codesNote": "Untuk tugas: mahasiswa memeriksa jawabannya di {practice}, yang juga menampilkan penyelesaiannya. Untuk ujian, biarkan tidak dicentang.",
+      "practicePage": "halaman Latihan soal"
+    },
+    "zipNote": "File .zip berisi setiap gambar dan kunci jawaban dalam format SVG, untuk LaTeX dan Word, serta jawaban dalam tabel CSV untuk penilaian.",
+    "summary": {
+      "papers": "{n} lembar soal",
+      "problems": "{n} soal",
+      "plain": "{papers} ({problems} per lembar)",
+      "withKey": "{papers} ({problems} per lembar), beserta kunci jawabannya",
+      "withKeys": "{papers} ({problems} per lembar), beserta kunci jawaban masing-masing"
+    },
+    "jump": {
+      "label": "Lompat ke lembar soal",
+      "placeholder": "Lompat ke…",
+      "papers": "Lembar soal",
+      "keys": "Kunci jawaban",
+      "key": "Kunci jawaban, paket {n}"
+    },
+    "version": "Paket {n}",
+    "download": "Unduh .zip",
+    "downloadTitle": "Setiap gambar dan kunci jawaban dalam format SVG, untuk LaTeX dan Word, serta jawaban dalam tabel CSV untuk penilaian",
+    "print": "Cetak",
+    "printLong": "Cetak atau simpan sebagai PDF",
+    "paper": {
+      "name": "Nama",
+      "rules": "Gaya dalam kN, momen dalam kNm. Beban bekerja ke bawah, kecuali soal menyebutkan lain. Reaksi adalah gaya yang diberikan tumpuan pada struktur dan digambar dengan arah positifnya: ke kanan, ke atas, dan berlawanan arah jarum jam. Jawaban negatif berarti reaksi bekerja ke arah sebaliknya. Gaya batang positif jika tarik.",
+      "check": "Periksa jawaban Anda di {url}"
+    },
+    "key": {
+      "title": "Kunci jawaban",
+      "version": "{title}, paket {n}",
+      "exam": "Nomor ujian {n}"
+    },
+    "tension": "tarik +",
+    "solutionFigure": "{name}: penyelesaian"
+  },
+  "exerciseGenerator": {
+    "solveIt": "Kerjakan di halaman Latihan soal",
+    "exercise": "Soal",
+    "key": "Kunci jawaban",
+    "solution": "Penyelesaiannya",
+    "caption": "Dibuat di browser Anda: seed memilih struktur dan angkanya, {'@'}edubeam/fem menghitungnya, dan {'@'}edubeam/plot menggambar soal beserta penyelesaiannya. Lembar soal ujian yang lengkap dibuat dengan {exam}.",
+    "exam": "Pembuat soal ujian",
+    "newExercise": "Soal baru"
+  },
+  "ui": {
+    "menu": "Menu",
+    "darkMode": "Mode gelap",
+    "lightMode": "Mode terang",
+    "language": "Bahasa: {name}",
+    "guideNav": "Panduan",
+    "copy": "Salin",
+    "copied": "Disalin",
+    "copyCode": "Salin kode",
+    "docs": "Dokumentasi",
+    "elementSketch": "Elemen dalam sumbu lokalnya"
+  },
+  "heroFigure": {
+    "aria": "Balok dengan overstek yang memikul beban merata dan beban terpusat yang dapat dipindahkan, beserta diagram gaya geser, momen lentur, dan lendutannya",
+    "slider": "Posisi beban terpusat 20 kN",
+    "loadAt": "pada {x} m",
+    "hint": "Seret bebannya, atau arahkan kursor ke diagram untuk membaca nilainya.",
+    "fromA": "{x} m dari A",
+    "reactions": "reaksi {a} kN di A dan {b} kN di B",
+    "sagging": "momen positif terbesar {m} kNm",
+    "hogging": "momen negatif di atas B {m} kNm"
+  },
+  "plotTexts": {
+    "structure": "Struktur",
+    "structureWith": "Struktur beserta {parts}",
+    "layers": {
+      "N": "gaya normal",
+      "V": "gaya geser",
+      "M": "momen lentur",
+      "w": "bentuk deformasi",
+      "reactions": "reaksi",
+      "loads": "beban"
+    },
+    "loadHandle": "Posisi beban {load}",
+    "loadPosition": "{metres} m dari awal balok",
+    "stack": "Balok dengan bebannya",
+    "stackWith": "Balok dengan bebannya, serta diagram {rows} di bawahnya",
+    "rows": {
+      "N": "gaya normal",
+      "V": "gaya geser",
+      "M": "momen lentur",
+      "w": "lendutan"
+    },
+    "temperatureUniform": "ΔT",
+    "temperatureGradient": "ΔTb − ΔTt"
   }
 }

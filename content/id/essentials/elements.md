@@ -1,120 +1,231 @@
 ---
-description: "Tambahkan elemen balok, atur sendi ujung dan arah elemen, serta definisikan material dan penampang di EduBeam, termasuk penampang poligon kustom."
+description: "Menggambar elemen balok di EduBeam, melepas ujungnya dengan sendi untuk sendi dalam dan batang rangka, serta mendefinisikan material dan penampang."
+source: site
 ---
 
 # Elemen, material & penampang
 
+Setiap elemen di [EduBeam]{.edubeam} adalah balok di antara dua joint, dengan sebuah material dan sebuah penampang. Gambar elemen di antara joint, lepaskan ujungnya dengan sendi di tempat struktur memiliki sendi, lalu pilih material dan penampang dari pustaka atau definisikan sendiri.
+
 ## Elemen balok {#the-beam-element}
 
-[EduBeam]{.edubeam} memiliki satu tipe elemen: **balok Timoshenko 2D** pada bidang x–z dengan tiga derajat kebebasan di setiap ujung (`Dx`, `Dz`, `Ry`). Elemen ini memikul gaya aksial, geser, dan lentur, serta memperhitungkan deformasi geser, itulah sebabnya penampang memiliki koefisien geser. Formulasi lengkapnya ada di [manual teori](/id/elements/beam).
+Hanya ada satu tipe elemen: **balok Timoshenko 2D** pada bidang x–z, dengan tiga derajat kebebasan di setiap ujung (`Dx`, `Dz`, `Ry`). Elemen ini memikul gaya normal, gaya geser, dan momen lentur, serta memperhitungkan [deformasi geser](#shear-deformation). Batang rangka adalah elemen yang sama dengan [kedua ujung bersendi](#end-hinges). Formulasinya ada di [manual teori](/id/elements/beam).
 
-::truss-element{:moment='true' caption="Elemen balok 2D – tiga DOF per joint"}
-::
+Hasil di sepanjang elemen eksak untuk model linear, sehingga **satu elemen per batang sudah cukup**. Tambahkan joint di dalam batang hanya di tempat Anda memerlukan tumpuan, sendi, perubahan penampang, atau titik untuk membaca perpindahan. Beban terpusat tidak memerlukan joint: [beban terpusat](/id/essentials/loads#concentrated-load) dapat diletakkan di titik mana pun di sepanjang elemen.
 
-Hasil di sepanjang elemen eksak untuk model linear, jadi satu elemen per batang sudah cukup. Tambahkan joint antara hanya di tempat Anda memerlukan tumpuan, sendi, perubahan penampang, atau joint untuk membaca hasil.
+## Menambahkan elemen {#adding-elements}
 
-### Menambahkan elemen {#adding-elements}
+Elemen memerlukan material dan penampang, jadi tambahkan keduanya lebih dulu (lihat [Material](#materials) dan [Penampang](#cross-sections)). Selama keduanya belum ada, tampilan menunjukkan *Belum ada material yang didefinisikan* atau *Belum ada penampang yang didefinisikan*, dengan tombol **Tambah baru**.
 
-| Cara | Langkah |
-| --- | --- |
-| **Dialog** | Tab *Elemen* → tombol **Tambah elemen** yang pertama, atau menu kanvas → *Tambah elemen*. Pilih **Joint awal** dan **Joint akhir**, sendi, material, dan penampang. |
-| **Mouse** | Tab *Elemen* → tombol **Tambah elemen** yang kedua (ikon kursor), atau tahan <kbd>Ctrl</kbd> pada item menu kanvas. Klik sebuah joint untuk memulai, lalu joint berikutnya untuk menyambungkan; mengklik kanvas kosong membuat joint di sana. Terus klik untuk menggambar polyline, dan tekan <kbd>Esc</kbd> untuk selesai. Banner di atas mengatur **Sendi awal** dan **Sendi akhir** untuk setiap elemen yang Anda gambar. Material dan penampang pertama dalam model yang dipakai. |
+- **Dengan memilih joint.** Tab *Elemen* → **Tambah elemen** (tombol berikon **+**), atau klik kanan kanvas → *Tambah elemen*. Pilih **Joint awal** dan **Joint akhir**, centang **Sendi** di bawah salah satunya jika perlu, lalu pilih **Material** dan **Penampang**. Cara ini memerlukan setidaknya dua joint.
+- **Dengan mengeklik.** Tab *Elemen* → **Tambah elemen** (tombol berikon kursor), atau tahan <kbd>Ctrl</kbd> saat memilih *Tambah elemen* di menu kanvas. Klik sebuah joint (atau kanvas yang kosong, yang membuat joint baru), lalu joint berikutnya; terus klik untuk menggambar rangkaian elemen, dan tekan <kbd>Esc</kbd> atau **Batal** untuk selesai. Banner di atas mengatur **Sendi awal** dan **Sendi akhir** untuk setiap elemen yang Anda gambar. Elemen mendapat material dan penampang pertama dalam model.
 
 ![Dialog Tambah elemen](/screenshots/id/qs-element.webp){.shot-md}
 
-::callout{type="warning" title="Material dan penampang dulu"}
-Elemen memerlukan material dan penampang. Jika belum ada, tampilan menunjukkan *Belum ada material yang didefinisikan* / *Belum ada penampang yang didefinisikan* dengan tombol **Tambah baru**.
-::
+## Arah elemen {#element-direction}
 
-### Arah elemen {#element-direction}
+Setiap elemen memiliki **sumbu lokal** sendiri. Sumbu x lokal mengarah dari **joint awal** ke **joint akhir**; sumbu z lokal adalah sumbu x lokal yang diputar 90° searah jarum jam di layar. Pada elemen yang digambar dari kiri ke kanan, sumbu lokal sama dengan sumbu global. **Garis putus-putus** di sepanjang setiap elemen menandai sisi +z lokalnya, yaitu “serat bawah”.
 
-**Sumbu x lokal** mengarah dari joint awal ke joint akhir. Hal ini berpengaruh pada:
+![Portal yang digambar A → B → C → D: garis putus-putus ketiga elemennya berada di sisi dalam portal](/screenshots/id/p2b-element-direction.webp){.shot-md}
 
-- beban dalam koordinat lokal (**LCS** dicentang),
-- *Posisi beban dari joint awal* pada beban terpusat,
-- urutan gaya ujung (`X12, Z12, M12` di awal, `X21, Z21, M21` di akhir) dalam tabel hasil.
+Pada portal ini, elemen 1 mengarah ke atas dari A ke B, sehingga sumbu z lokalnya, dan garis putus-putusnya, mengarah ke kanan; elemen 3 mengarah ke bawah dari C ke D, sehingga garis putus-putusnya berada di kiri. Jika digambar dengan cara ini, semua garis putus-putus portal berada di sisi dalam.
 
-Gunakan tombol tukar di antara kedua joint pada tabel *Elemen* untuk membalik elemen.
+Arah elemen berpengaruh pada:
 
-### Sendi ujung {#end-hinges}
+- beban yang diberikan dalam sumbu lokal (**LCS** dicentang), lihat [Beban elemen](/id/essentials/loads#element-loads);
+- **Posisi beban dari joint awal** pada beban terpusat;
+- urutan [gaya ujung](/id/elements/conventions#end-forces-element-results-table) dalam hasil: `X12, Z12, M12` di joint awal, `X21, Z21, M21` di joint akhir;
+- sisi mana yang menjadi “sisi putus-putus” dalam [pengaturan diagram](/id/essentials/units-settings#viewer-settings).
 
-Setiap elemen memiliki dua kotak centang **Sendi ujung**, untuk awal dan akhir, di tabel *Elemen*. Kotak ini juga ada di dialog Tambah elemen, di panel **Edit elemen**, dan di banner saat menggambar dengan mouse. Sendi yang dicentang melepas momen lentur di ujung tersebut, sehingga:
+Untuk membalik elemen, tekan **Tukar joint** (tanda panah di antara kedua joint pada tabel *Elemen*).
 
-- satu sendi membuat sendi dalam pada portal atau balok menerus (momen di sana nol);
-- dua sendi membuat **batang rangka** yang hanya memikul gaya aksial.
+## Sendi ujung {#end-hinges}
 
-::truss-element{:hinges='[true,true]' caption="Kedua ujung bersendi → elemen rangka batang"}
-::
+Sendi ujung melepas momen lentur di salah satu ujung elemen: momen di sana nol, dan ujung itu dapat berotasi tanpa terikat pada rotasi joint.
+
+- **Satu sendi** membuat sendi dalam pada balok atau portal.
+- **Dua sendi** membuat **batang rangka**, yang hanya memikul gaya normal.
+
+Centang sendi di salah satu tempat berikut:
+
+- kolom **Sendi ujung** pada tabel *Elemen*, satu kotak centang untuk setiap ujung;
+- kotak **Sendi** di dialog **Tambah elemen**, atau di panel elemen → **Edit elemen**;
+- **Sendi awal** dan **Sendi akhir** di banner saat menggambar dengan mouse.
 
 ![Tabel Elemen dari portal tiga sendi: elemen 2 memiliki sendi di ujung akhirnya, di joint C](/screenshots/id/elements-table.webp)
 
-Jika dua elemen bertemu di sebuah joint dan hanya salah satunya yang bersendi, elemen lainnya tetap menyalurkan momen ke joint. Jadi berikan sendi pada elemen yang ingin dilepas, bukan pada "joint". Jika sendi membuat struktur menjadi mekanisme, EduBeam melingkarinya dan menunjukkan bagaimana struktur bergerak.
+### Satu sendi: sendi di dalam struktur {#one-hinge-a-pin-inside-the-structure}
 
-### Mengedit dan menghapus {#editing-and-deleting}
-
-Klik elemen dan gunakan panelnya (**Edit elemen**, **Tambah beban**, **Matriks kekakuan**, **Hapus**), atau edit di tabel *Elemen*. Menghapus elemen juga menghapus bebannya. **Matriks kekakuan** membuka jendela berisi matriks kekakuan elemen 6 × 6 dalam koordinat global (N/m, N, dan N·m), dengan sendi ujung yang sudah dikondensasi. Ini berguna untuk memeriksa perakitan matriks secara manual.
-
-## Material {#materials}
-
-Tab *Material* → **Tambah material**:
-
-| Kolom | Simbol | Satuan | Catatan |
-| --- | --- | --- | --- |
-| Modulus elastisitas | $E$ | satuan tekanan (bawaan MPa) | Baja ≈ 210 000 MPa, beton ≈ 30 000 MPa, kayu ≈ 11 000 MPa |
-| Modulus geser | $G$ | satuan tekanan | $G = E / (2(1+\nu))$; baja ≈ 81 000 MPa. Hanya memengaruhi suku geser Timoshenko. |
-| Massa jenis | $\rho$ | massa / panjang³ (kg/m³, lb/ft³) | Disimpan bersama proyek. Solver statis tidak memakainya (tidak ada beban berat sendiri). |
-| Koefisien muai panas | $\alpha$ | 1/K atau 1/°F | Dipakai oleh [beban suhu](/id/essentials/loads#temperature-load). Baja: 12 × 10⁻⁶ /K. |
+Balok menerus yang sama, dua bentang 5 m dengan beban 10 kN/m. Pada gambar kanan, elemen 1 memiliki sendi ujung di B: momen di atas tumpuan turun menjadi nol, dan setiap bentang memikul bebannya seperti balok sederhana.
 
 ::div{.shots}
 
-![Tambah material](/screenshots/id/qs-material.webp)
+:::model-figure{caption="Menerus: M = −31,25 kNm di atas B"}
+---
+nodes: { A: [0, 0], B: [5, 0], C: [10, 0] }
+supports: { A: pin, B: roller, C: roller }
+members: [[A, B], [B, C]]
+loads:
+  - { member: 1, qz: 10 }
+  - { member: 2, qz: 10 }
+results: [M]
+show: [nodeLabels]
+---
+:::
 
-![Pustaka material](/screenshots/id/qs-material-library.webp)
+:::model-figure{caption="Bersendi di B: M = 0 di atas B, 31,25 kNm di setiap bentang"}
+---
+nodes: { A: [0, 0], B: [5, 0], C: [10, 0] }
+supports: { A: pin, B: roller, C: roller }
+members: [{ nodes: [A, B], hinges: [false, true] }, [B, C]]
+loads:
+  - { member: 1, qz: 10 }
+  - { member: 2, qz: 10 }
+results: [M]
+show: [nodeLabels]
+---
+:::
 
 ::
 
-**Pustaka material** berisi material siap pakai. Kelompok yang sesuai dengan satuan Anda ditampilkan lebih dulu.
+Perhitungan manual: pada balok menerus, $M_B = -qL^2/8 = -31{,}25\ \text{kNm}$ dan di setiap bentang paling besar $9qL^2/128 = 17{,}58\ \text{kNm}$; dengan sendi, $M_B = 0$ dan $M_{max} = qL^2/8 = 31{,}25\ \text{kNm}$ di setiap tengah bentang. Sendi membebaskan tumpuan dari momen, tetapi momen lapangan hampir menjadi dua kali lipat. Jika ingin berlatih menghitung balok dengan sendi dalam secara manual, dengan jawaban yang langsung diperiksa saat Anda mengetik, coba [soal latihan G2048](/id/practice?p=G2048).
 
-- **Logam:** baja struktural S235, S275, S355, baja tahan karat, besi cor, paduan aluminium, tembaga, kuningan, perunggu, titanium; baja AS ASTM A992, A36, A572 Gr. 50 dan HSS A500 Gr. C.
-- **Beton:** beton normal dan beton ringan, kelas C25/30, C30/37, C40/50, serta f′c = 4 ksi dan 5 ksi.
-- **Kayu:** C24, GL24h, GL32h.
-- **Lainnya:** kaca, GFRP, CFRP, HDPE, PVC, PMMA, polikarbonat.
+### Dua sendi: batang rangka {#both-hinges-a-truss-bar}
 
-Buka dengan tombol di toolbar atau *Atau pilih dari pustaka* di dialog *Tambah material*.
+Konsol dinding dari dua batang, keduanya bersendi di kedua ujung, memikul 20 kN di B. Batang-batangnya hanya memikul gaya normal, dan diagram momennya kosong.
 
-Material yang masih dipakai elemen tidak dapat dihapus; ganti dulu material elemen-elemen tersebut.
+::model-figure{caption="Batang tarik AB: N = +26,67 kN (tarik); batang tekan CB: N = −33,33 kN (tekan)"}
+---
+nodes: { A: [0, 0], B: [4, 0], C: [0, 3] }
+supports: { A: pin, C: pin }
+members: [{ nodes: [A, B], hinges: [true, true] }, { nodes: [C, B], hinges: [true, true] }]
+loads:
+  - { node: B, fz: 20 }
+results: [N, M]
+show: [nodeLabels]
+---
+::
+
+Perhitungan manual: batang tekan panjangnya 5 m dan naik 3 m, sehingga $N_{CB} = -20 \cdot 5/3 = -33{,}33\ \text{kN}$, dan batang tarik mengimbangi komponen horizontalnya, $N_{AB} = 33{,}33 \cdot 4/5 = 26{,}67\ \text{kN}$. Tutorial [Rangka batang bidang](/id/tutorials/truss) menyusun seluruh rangka batang dengan cara ini, dan [Latihan soal](/id/practice?p=T2048) menyediakan rangka batang untuk dihitung secara manual.
+
+### Sendi dipasang pada elemen, bukan pada joint {#hinge-the-element-not-the-node}
+
+Sendi selalu terpasang pada satu ujung satu elemen: sendi membebaskan ujung itu untuk berotasi sendiri, sedangkan semua elemen lain di joint tersebut tetap tersambung kaku dengannya. Jadi di tempat dua batang bertemu, satu sendi sudah membuat sambungan sendi; di tempat beberapa batang bertemu, beri sendi pada semuanya kecuali satu. Pada joint rangka batang, semua batangnya adalah batang rangka, jadi semuanya bersendi.
+
+Joint yang semua elemennya bersendi tidak memiliki kekakuan rotasi. EduBeam menerimanya dan melaporkan rotasinya sebagai 0. Jika sendi membuat struktur menjadi mekanisme, EduBeam melingkari sendi-sendi itu dan menunjukkan bagaimana struktur bergerak; lihat [Pemecahan masalah](/id/reference/troubleshooting#messages).
+
+## Mengedit dan menghapus {#editing-and-deleting}
+
+| Untuk | Lakukan ini |
+| --- | --- |
+| Mengubah joint, sendi, material, atau penampang | Klik elemen → **Edit elemen**, atau edit di tabel *Elemen*. |
+| Membaliknya | **Tukar joint** di tabel *Elemen*. |
+| Mengganti namanya | Ketik label baru di kolom *Elemen*. |
+| Melihat matriks kekakuannya | Klik elemen → **Matriks kekakuan**, atau tombol matriks di kolom *Aksi*. Sebuah jendela menampilkan matriks elemen 6 × 6 dalam sumbu global, dalam satuan SI (N dan m) apa pun satuan yang ditampilkan, dan sendi ujungnya sudah dieliminasi dengan kondensasi statis. Berguna untuk memeriksa perakitan matriks secara manual. |
+| Menghapusnya | Klik elemen → **Hapus**, tombol × di tabel, atau pilih elemen lalu tekan <kbd>Delete</kbd>. Bebannya ikut terhapus. |
+
+![Panel elemen](/screenshots/id/ui-element-menu.webp){.shot-xs}
+
+## Material {#materials}
+
+Tab *Material* → **Tambah material**, atau **Pustaka material** untuk material siap pakai. Banyak elemen dapat memakai satu material yang sama; mengubah material itu memperbarui semuanya.
+
+| Kolom | Satuan | Fungsinya |
+| --- | --- | --- |
+| Modulus elastisitas $E$ | MPa | Kekakuan aksial dan lentur, $EA$ dan $EI_y$. Baja 210 000 MPa, beton sekitar 30 000 MPa, kayu sekitar 11 000 MPa. |
+| Modulus geser $G$ | MPa | Kekakuan geser $kGA$. Kecuali $k$ penampang sangat besar, $G$ menambahkan [deformasi geser](#shear-deformation): lendutan lebih besar dan, pada struktur statis tak tentu, gaya dalam yang berbeda. $G = E/(2(1+\nu))$: baja sekitar 81 000 MPa. |
+| Massa jenis $\rho$ | kg/m³ | Disimpan bersama material, tetapi tidak dipakai: tidak ada beban berat sendiri. |
+| Koefisien muai panas $\alpha$ | 1/K | Dipakai oleh [beban suhu](/id/essentials/loads#temperature-load). Baja $12 \times 10^{-6}$ 1/K. |
+
+Satuan di atas adalah satuan SI bawaan; satuan yang tampil mengikuti [pengaturan](/id/essentials/units-settings#units) Anda, sehingga dalam satuan AS, E dan G dinyatakan dalam ksi, massa jenis dalam lb/ft³, dan α dalam 1/°F.
+
+Material baru dimulai dengan $E$ = 210 000 MPa, $G$ = 87 500 MPa ($E/2{,}4$, yaitu $\nu = 0{,}2$), $\rho$ = 1000 kg/m³, dan $\alpha = 12 \times 10^{-6}$ 1/K; dalam satuan AS, material baru adalah baja ASTM A992. Untuk baja, ubah $G$ menjadi 81 000 MPa atau pilih baja dari pustaka.
+
+![Dialog Tambah material](/screenshots/id/qs-material.webp){.shot-md}
+
+**Pustaka material** (juga *Atau pilih dari pustaka* di dialog Tambah material) menampilkan material metrik (EN) lebih dulu, atau material AS (baja ASTM, beton ACI) lebih dulu jika satuan panjang Anda feet atau inci. Tombol **+** di sebuah baris menambahkan material itu dengan nama yang sama:
+
+| Kelompok | Material |
+| --- | --- |
+| Logam | Baja S235, S275, S355; baja tahan karat 304, 316; besi tuang; aluminium 6061-T6, 7075-T6, 5083; tembaga, kuningan, perunggu; titanium Grade 2 dan Ti-6Al-4V; baja AS ASTM A992, A36, A572 Gr. 50 dan HSS A500 Gr. C |
+| Beton | C25/30, C30/37, C40/50, beton ringan; beton AS $f'_c$ = 4 ksi dan 5 ksi |
+| Kayu | C24, GL24h, GL32h |
+| Lainnya | Kaca, GFRP, CFRP, HDPE, PVC, PMMA, polikarbonat |
+
+Material yang masih dipakai elemen tidak dapat dihapus: pasang material lain pada elemen-elemen itu terlebih dahulu.
 
 ## Penampang {#cross-sections}
 
-Tab *Penampang* → **Tambah penampang**:
+Tab *Penampang* → **Tambah penampang**, **Pustaka penampang**, atau **Penampang poligon** untuk menggambar bentuk sendiri. Seperti material, satu penampang dapat dipakai oleh banyak elemen.
 
-| Kolom | Simbol | Satuan | Catatan |
-| --- | --- | --- | --- |
-| Luas | $A$ | satuan luas | Kekakuan aksial $EA$ |
-| Momen inersia | $I_y$ | satuan momen inersia | Kekakuan lentur $EI_y$ terhadap sumbu yang tegak lurus bidang gambar |
-| Tinggi | $h$ | satuan dimensi penampang | Dipakai oleh beban gradien suhu (kelengkungan $= \alpha\,\Delta T / h$) |
-| Koefisien geser | $k$ | – | Faktor koreksi geser Timoshenko: luas geser efektif adalah $kA$. Gunakan `1` untuk hampir mengabaikan deformasi geser, sekitar 0,83 untuk persegi panjang, $A_{web}/A$ untuk profil I. |
+| Kolom | Satuan | Fungsinya |
+| --- | --- | --- |
+| Luas $A$ | m² | Kekakuan aksial $EA$, dan luas geser $kA$. |
+| Momen inersia $I_y$ | m⁴ | Kekakuan lentur $EI_y$, terhadap sumbu yang tegak lurus bidang gambar. |
+| Tinggi $h$ | m | Hanya dipakai oleh beban suhu: kelengkungannya $\alpha\,(\Delta T_b - \Delta T_t)/h$. |
+| Koefisien geser $k$ | – | Luas geser efektif adalah $kA$, sehingga kekakuan gesernya $kGA$. Sekitar 0,83 untuk persegi panjang, $A_{web}/A$ untuk profil I. |
 
-**Pustaka penampang** memberikan nilai pendekatan untuk persegi panjang, bujur sangkar, dan lingkaran, profil IPE dan HEA, pipa RHS dan CHS, serta profil AISC W dan HSS (persegi dan bulat). Koefisien gesernya mengikuti bentuk: $h\,t_w/A$ untuk profil I, $2ht/A$ untuk pipa persegi, 0,5 untuk pipa bulat, 0,833 untuk persegi panjang, dan 0,9 untuk lingkaran. Anggap nilai-nilai ini sebagai titik awal dan periksa dengan tabel profil sebelum mengandalkannya.
+Penampang baru dimulai dengan $A$ = 1 m², $I_y = 10^{-4}$ m⁴, $h$ = 1 m, dan $k$ = 1 (dalam satuan AS, profil W12×26 dengan $k$ = 1). Ganti dengan nilai penampang Anda, atau pilih dari pustaka.
+
+::callout{type="tip" title="Menyamakan hasil dengan buku teks yang mengabaikan deformasi geser"}
+Sebagian besar perhitungan manual memakai balok Euler–Bernoulli, tanpa deformasi geser. Untuk menyamakan hasilnya, beri $k$ nilai yang sangat besar, misalnya `1e10`; contoh di aplikasi dan gambar di situs ini memakai `1e32`. Penampang baru ($k = 1$), pustaka, dan editor poligon semuanya memperhitungkan deformasi geser; seberapa besar pengaruhnya dijelaskan [di bawah](#shear-deformation).
+::
+
+**Pustaka penampang** memberikan nilai pendekatan untuk:
+
+| Kelompok | Penampang | $k$ |
+| --- | --- | --- |
+| Pejal | Persegi panjang, persegi, lingkaran | 0,833 (persegi panjang), 0,9 (lingkaran) |
+| Profil I | IPE 100, IPE 200, HEA 100, HEA 200; profil AISC W8×31 sampai W36×150 | $h\,t_w/A$, badan profil |
+| Pipa persegi panjang | RHS 100×50×3, 150×100×5; AISC HSS | $2ht/A$, kedua badan |
+| Pipa bulat | CHS Ø60×3, Ø114×5; AISC HSS bulat | 0,5 |
+
+Periksa nilai dari pustaka dengan tabel profil sebelum mengandalkannya.
 
 ![Pustaka penampang](/screenshots/id/sections-library.webp){.shot-lg}
 
+Untuk pemeriksaan cepat secara manual: persegi panjang $b \times h$ memiliki $A = bh$ dan $I_y = bh^3/12$; lingkaran pejal berdiameter $d$ memiliki $A = \pi d^2/4$ dan $I_y = \pi d^4/64$.
+
+### Deformasi geser: kapan G dan k berpengaruh {#shear-deformation}
+
+Kekakuan geser $kGA$ masuk ke elemen melalui [parameter geser](/id/elements/beam#timoshenko-or-euler-bernoulli) $\Phi = 12EI_y/(kGAL^2)$. Dengan $k$ yang sangat besar, $\Phi = 0$ dan elemen menjadi balok Euler–Bernoulli, sehingga $G$ tidak berpengaruh. Dengan $k$ yang sebenarnya, deformasi geser selalu menambah lendutan. Pada struktur statis tertentu gaya dalam tetap sama; pada struktur statis tak tentu gaya dalam juga berubah, karena gaya kelebihannya bergantung pada kekakuan.
+
+Seberapa besar perubahannya bergantung pada kelangsingan batang. Ambil profil IPE 200 dari pustaka ($k = h\,t_w/A = 0{,}393$), baja S235 ($G$ = 81 000 MPa), dan beban 10 kN/m, lalu bandingkan dengan balok yang sama dengan $k$ = `1e32`:
+
+| Balok | Dengan deformasi geser | Euler–Bernoulli |
+| --- | --- | --- |
+| Balok sederhana, $L$ = 2 m ($L/h$ = 10): lendutan di tengah bentang | 0,566 mm | 0,511 mm |
+| Balok jepit–rol, $L$ = 2 m: momen di ujung jepit | −4,84 kNm | −5,00 kNm |
+| Balok sederhana, $L$ = 6 m ($L/h$ = 30): lendutan di tengah bentang | 41,85 mm | 41,36 mm |
+
+Perhitungan manual: bagian geser dari lendutan di tengah bentang adalah $qL^2/(8kGA)$, yaitu 0,055 mm untuk balok pendek, tambahan 11% terhadap bagian lentur $5qL^4/(384EI_y)$. Pada balok jepit–rol, momen ujung jepit turun dari $qL^2/8$ menjadi $(qL^2/8)/(1 + \Phi/4)$. Pada $L/h$ = 30 kedua pengaruh itu sekitar 1% atau kurang; itulah sebabnya portal yang langsing dan jawaban buku teks tetap cocok berapa pun nilai $k$.
+
 ### Penampang poligon {#polygonal-sections}
 
-Tab *Penampang* → **Penampang poligon**, atau *Atau definisikan bentuk poligon* di dialog *Tambah penampang*, membuka editor bentuk.
+Tab *Penampang* → **Penampang poligon**, atau *Atau definisikan bentuk poligon* di dialog Tambah penampang, membuka editor bentuk yang menghitung properti penampang untuk Anda.
 
 ![Editor penampang poligon dengan preset profil I, sumbu utama, dan elips inersianya](/screenshots/id/sections-polygon.webp)
 
-- **Mulai** dari preset (persegi panjang, I, T, L, kanal, persegi berongga atau pipa, lingkaran) beserta dimensinya, lalu tekan **Terapkan**.
-- **Edit** bentuknya: seret titik sudut (menempel pada **Jarak snap**), klik titik tengah sisi untuk menyisipkan titik sudut, klik ganda titik sudut untuk menghapusnya, atau ketik koordinat di tabel titik sudut. **Tambah lubang** menambahkan kontur dalam. **Pusatkan di titik berat** memindahkan bentuk sehingga titik beratnya berada di titik asal.
-- **Baca** luas $A$, titik berat, momen inersia terhadap titik berat $I_y$, $I_z$, $I_{yz}$, momen inersia utama $I_1$, $I_2$ dengan sudut sumbu utama $\alpha$ (dari $y$ ke sumbu 1), dan jari-jari girasi. Gambar menampilkan elips inersia.
+::div{.steps}
 
-Saat disimpan, $A$, $I_y$, dan $h$ diisi dari bentuknya. Nilai-nilai ini hanya-baca di tabel; gunakan tombol poligon di kolom *Aksi* untuk mengedit bentuknya lagi. Koefisien geser $k$ tetap Anda masukkan sendiri. Koordinat penampang bersifat lokal dan mengikuti kaidah tangan kanan, dengan $x$ mengarah keluar layar, $y$ ke kiri, dan $z$ ke bawah.
+### Mulai dari preset {#start-from-a-preset}
 
-Jika bentuknya tidak simetris terhadap bidang portal (misalnya profil siku L), editor memperingatkan bahwa analisis 2D hanya eksak jika batang ditahan terhadap lendutan ke samping dan puntir di sepanjang batang, misalnya oleh pelat. Jika $I_{yz}$ signifikan, Anda memilih kekakuan lentur yang dipakai: **ditahan ke samping dan terhadap puntir di sepanjang batang** ($I_y$) atau **bebas melendut ke samping**, yang lebih kecil. Puntir tidak diperhitungkan pada kedua pilihan.
+Pilih sebuah **Preset** (persegi panjang, profil I, profil T, profil L, kanal, persegi berongga, lingkaran, pipa), atur dimensinya, lalu tekan **Terapkan**.
 
-::callout{type="tip" title="Nilai cepat untuk pengecekan"}
-Untuk persegi panjang $b \times h$: $A = bh$, $I_y = bh^3/12$. Untuk lingkaran pejal berdiameter $d$: $A = \pi d^2/4$, $I_y = \pi d^4/64$.
+### Sesuaikan bentuknya {#adjust-the-shape}
+
+Seret titik sudut (titik sudut menempel pada **Jarak snap**), klik titik tengah sisi untuk menyisipkan titik sudut, atau klik ganda titik sudut untuk menghapusnya. Anda juga dapat mengetik koordinat di tabel **Titik sudut**. **Tambah lubang** menambahkan kontur dalam, dan **Pusatkan di titik berat** memindahkan bentuk sehingga titik beratnya berada di titik asal.
+
+### Baca propertinya {#read-the-properties}
+
+Tab **Properti penampang** menampilkan $A$, titik berat, $I_y$, $I_z$, $I_{yz}$ terhadap titik berat, momen inersia utama $I_1$, $I_2$ dengan **Sudut sumbu utama** $\alpha$ (dari $y$ ke sumbu 1), serta jari-jari girasi. Gambar menampilkan sumbu utama dan elips inersia.
+
+### Tambahkan penampangnya {#add-it}
+
+Periksa **Label** dan **Koefisien geser** $k$: nilai awalnya 0,833, tepat untuk persegi panjang; profil I memerlukan sekitar $A_{web}/A$. Lalu tekan **Tambah penampang** (**Simpan** jika Anda mengedit bentuk yang sudah ada). $A$, $I_y$, dan $h$ diambil dari bentuknya dan hanya-baca di tabel; untuk mengubahnya, edit bentuknya lagi dengan tombol poligon di kolom *Aksi*.
+
 ::
 
-Material dan penampang dapat dipakai bersama oleh sejumlah elemen. Mengubah sebuah nilai memperbarui setiap elemen yang memakainya dan menghitung ulang model.
+Koordinat penampang bersifat lokal dan mengikuti kaidah tangan kanan: $x$ keluar dari layar, $y$ ke kiri, $z$ ke bawah.
+
+Jika bentuknya tidak simetris terhadap bidang portal (misalnya profil siku L), editor memperingatkan Anda: analisis 2D hanya eksak jika batang ditahan terhadap lendutan ke samping dan terhadap puntir di sepanjang batang, misalnya oleh pelat. Jika $I_{yz}$ cukup besar, Anda dapat memilih kekakuan lentur yang dipakai: **ditahan ke samping dan terhadap puntir di sepanjang batang** ($I_y$), atau **bebas melendut ke samping**, yang lebih kecil. Puntir tidak diperhitungkan pada kedua pilihan.

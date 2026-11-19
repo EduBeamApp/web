@@ -2331,6 +2331,8 @@
     "sidebar": [
       {
         "text": "Memulai",
+        "icon": "lucide:flag",
+        "section": "guide",
         "items": [
           {
             "text": "Pendahuluan",
@@ -2339,28 +2341,13 @@
           {
             "text": "Mulai cepat (10 menit)",
             "link": "/id/guide/quick-start"
-          },
-          {
-            "text": "Contoh",
-            "link": "/id/examples/"
           }
         ]
       },
       {
-        "text": "Tutorial",
-        "items": [
-          {
-            "text": "Portal tiga sendi",
-            "link": "/id/tutorials/three-hinged-frame"
-          },
-          {
-            "text": "Rangka batang bidang",
-            "link": "/id/tutorials/truss"
-          }
-        ]
-      },
-      {
-        "text": "Pemodelan",
+        "text": "Membuat model",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
         "items": [
           {
             "text": "Antarmuka pengguna",
@@ -2385,7 +2372,9 @@
         ]
       },
       {
-        "text": "Hasil",
+        "text": "Membaca hasil",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
         "items": [
           {
             "text": "Hasil & diagram",
@@ -2398,10 +2387,12 @@
         ]
       },
       {
-        "text": "File & berbagi",
+        "text": "Berbagi & mengajar",
+        "icon": "lucide:presentation",
+        "section": "guide",
         "items": [
           {
-            "text": "Impor, ekspor & berbagi",
+            "text": "File, tautan & ekspor",
             "link": "/id/essentials/import-export"
           },
           {
@@ -2411,7 +2402,9 @@
         ]
       },
       {
-        "text": "Referensi",
+        "text": "Bantuan",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
         "items": [
           {
             "text": "Keyboard, mouse & sentuh",
@@ -2422,16 +2415,60 @@
             "link": "/id/reference/troubleshooting"
           },
           {
-            "text": "Pertanyaan yang sering diajukan",
+            "text": "FAQ",
             "link": "/id/faq/"
           }
         ]
       },
       {
-        "text": "Manual teori",
+        "text": "Tutorial",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
         "items": [
           {
-            "text": "Sistem koordinat & konvensi tanda",
+            "text": "Balok miring",
+            "link": "/id/tutorials/inclined-beam"
+          },
+          {
+            "text": "Portal tiga sendi",
+            "link": "/id/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Rangka batang bidang",
+            "link": "/id/tutorials/truss"
+          },
+          {
+            "text": "Balok menerus & penurunan tumpuan",
+            "link": "/id/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "Latihan",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Latihan soal",
+            "link": "/id/practice"
+          },
+          {
+            "text": "Pembuat soal ujian",
+            "link": "/id/exam"
+          },
+          {
+            "text": "Contoh",
+            "link": "/id/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Manual teori",
+        "icon": "lucide:sigma",
+        "section": "theory",
+        "items": [
+          {
+            "text": "Sumbu & konvensi tanda",
             "link": "/id/elements/conventions"
           },
           {
@@ -2441,9 +2478,12 @@
           {
             "text": "Elemen rangka batang",
             "link": "/id/elements/truss"
+          },
+          {
+            "text": "Cara EduBeam menghitung",
+            "link": "/id/elements/analysis"
           }
-        ],
-        "collapsed": true
+        ]
       }
     ]
   },
