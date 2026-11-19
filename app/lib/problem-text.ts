@@ -18,13 +18,17 @@ const numberFormat = (locale: string) => new Intl.NumberFormat(locale, { useGrou
 // British usage in English, as on the rest of the site: "H, J and L", without a serial comma
 const listFormat = (locale: string) => new Intl.ListFormat(locale === 'en' ? 'en-GB' : locale, { type: 'conjunction' })
 
+/** Chinese lists join Latin labels with a bare 和 ("F和H"); Chinese puts a space between Han and Latin ("F 和 H") */
+const spaceAroundLatin = (text: string, locale: string) =>
+  locale.startsWith('zh') ? text.replace(/([A-Za-z0-9])(和)/g, '$1 $2').replace(/(和)([A-Za-z0-9])/g, '$1 $2') : text
+
 export const renderText = (text: Text, language: TextLanguage): string => {
   const numbers = numberFormat(language.locale)
   const param = (value: TextParam): string => {
     if (typeof value === 'number') return numbers.format(value)
     if (typeof value === 'string') return value
     if ('key' in value) return renderText(value, language)
-    return listFormat(language.locale).format(value.map((v) => param(v)))
+    return spaceAroundLatin(listFormat(language.locale).format(value.map((v) => param(v))), language.locale)
   }
   const params = Object.fromEntries(Object.entries(text.params ?? {}).map(([name, value]) => [name, param(value)]))
   return language.t(text.key, params, text.count)
