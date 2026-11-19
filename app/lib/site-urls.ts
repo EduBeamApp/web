@@ -9,6 +9,8 @@ export interface SitePage {
   readonly path: string
   /** Language codes it exists in, English first */
   readonly locales: readonly string[]
+  /** When each language's page last changed (ISO date of its last commit), for the sitemap */
+  readonly lastmod?: Readonly<Record<string, string>>
 }
 
 /** A page's path in one language: `/cs/guide/intro`, and `/cs` for the home page */

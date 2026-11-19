@@ -21,6 +21,9 @@ jobs:
       deployments: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          # The whole history: the sitemap dates each page by its last commit
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
