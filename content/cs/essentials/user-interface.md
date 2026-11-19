@@ -82,7 +82,7 @@ Tlačítko ⚙ otevře dvě řady zaškrtávacích políček. První určuje, kt
 | Posun | Tažení pravým tlačítkem nebo stisknutým kolečkem; které z nich, nastavíte v části [Ovládání & zkratky](/cs/essentials/units-settings#controls-shortcuts) | Tažení jedním prstem |
 | Přizpůsobit, vystředit | <kbd>F</kbd>, <kbd>C</kbd> nebo tlačítka vpravo nahoře | Tlačítka vpravo nahoře |
 
-Klávesu pro přiblížení aplikace nemá: prohlížečové zkratky <kbd>Ctrl</kbd>+<kbd>+</kbd> a <kbd>Ctrl</kbd>+<kbd>-</kbd> jsou v ní vypnuté, aby omylem nezvětšily celé rozhraní.
+<kbd>Ctrl</kbd>+<kbd>+</kbd> a <kbd>Ctrl</kbd>+<kbd>-</kbd> přibližují a oddalují výkres kolem jeho středu, na každém rozložení klávesnice. Celé rozhraní nikdy nezvětší, jak by to udělalo přiblížení prohlížeče.
 
 ### Výběr a úpravy {#selecting-and-editing}
 

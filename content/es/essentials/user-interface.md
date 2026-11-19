@@ -82,7 +82,7 @@ El botón ⚙ abre dos filas de casillas. La primera elige los resultados que se
 | Desplazar la vista | Arrastra con el botón derecho o con la rueda pulsada; elige cuál en [Controles y atajos](/es/essentials/units-settings#controls-shortcuts) | Arrastrar con un dedo |
 | Ajustar, centrar | <kbd>F</kbd>, <kbd>C</kbd> o los botones de arriba a la derecha | Los botones de arriba a la derecha |
 
-No hay tecla de zoom: los atajos del propio navegador <kbd>Ctrl</kbd>+<kbd>+</kbd> y <kbd>Ctrl</kbd>+<kbd>-</kbd> están desactivados en la aplicación, para que no amplíen sin querer toda la interfaz.
+<kbd>Ctrl</kbd>+<kbd>+</kbd> y <kbd>Ctrl</kbd>+<kbd>-</kbd> acercan y alejan el dibujo respecto a su centro, con cualquier distribución de teclado. Nunca escalan toda la interfaz, como haría el zoom del navegador.
 
 ### Seleccionar y editar {#selecting-and-editing}
 

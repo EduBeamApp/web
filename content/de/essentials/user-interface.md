@@ -82,7 +82,7 @@ Die Schaltfläche ⚙ öffnet zwei Reihen von Kontrollkästchen. Die erste legt 
 | Verschieben | Ziehen mit der rechten Maustaste oder mit gedrücktem Mausrad; welche der beiden, legen Sie unter [Steuerung & Tastenkürzel](/de/essentials/units-settings#controls-shortcuts) fest | Ziehen mit einem Finger |
 | Anpassen, zentrieren | <kbd>F</kbd>, <kbd>C</kbd> oder die Schaltflächen oben rechts | Die Schaltflächen oben rechts |
 
-Eine Zoomtaste gibt es nicht: Die Browser-Tastenkürzel <kbd>Strg</kbd>+<kbd>+</kbd> und <kbd>Strg</kbd>+<kbd>-</kbd> sind in der App abgeschaltet, damit sie nicht versehentlich die ganze Oberfläche vergrößern.
+<kbd>Strg</kbd>+<kbd>+</kbd> und <kbd>Strg</kbd>+<kbd>-</kbd> vergrößern und verkleinern die Zeichnung um ihre Mitte, auf jeder Tastaturbelegung. Die ganze Oberfläche skalieren sie nie, wie es der Zoom des Browsers täte.
 
 ### Auswählen und Bearbeiten {#selecting-and-editing}
 

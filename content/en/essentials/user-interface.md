@@ -82,7 +82,7 @@ The ⚙ button opens two rows of checkboxes. The first picks the results drawn o
 | Pan | Drag with the right button or the pressed wheel; choose which in [Controls & Shortcuts](/essentials/units-settings#controls-shortcuts) | Drag with one finger |
 | Fit, center | <kbd>F</kbd>, <kbd>C</kbd>, or the top-right buttons | The top-right buttons |
 
-There is no zoom key: the browser's own <kbd>Ctrl</kbd>+<kbd>+</kbd> and <kbd>Ctrl</kbd>+<kbd>-</kbd> are switched off in the app, so they can't scale the whole interface by accident.
+<kbd>Ctrl</kbd>+<kbd>+</kbd> and <kbd>Ctrl</kbd>+<kbd>-</kbd> zoom the drawing about its centre, on any keyboard layout. They never scale the whole interface, as the browser's own zoom would.
 
 ### Selecting and editing {#selecting-and-editing}
 
