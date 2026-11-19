@@ -2577,6 +2577,8 @@
     "sidebar": [
       {
         "text": "시작하기",
+        "icon": "lucide:flag",
+        "section": "guide",
         "items": [
           {
             "text": "소개",
@@ -2585,28 +2587,13 @@
           {
             "text": "빠른 시작 (10분)",
             "link": "/ko/guide/quick-start"
-          },
-          {
-            "text": "예제",
-            "link": "/ko/examples/"
           }
         ]
       },
       {
-        "text": "튜토리얼",
-        "items": [
-          {
-            "text": "3힌지 라멘",
-            "link": "/ko/tutorials/three-hinged-frame"
-          },
-          {
-            "text": "평면 트러스",
-            "link": "/ko/tutorials/truss"
-          }
-        ]
-      },
-      {
-        "text": "모델링",
+        "text": "모델 만들기",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
         "items": [
           {
             "text": "사용자 인터페이스",
@@ -2631,7 +2618,9 @@
         ]
       },
       {
-        "text": "결과",
+        "text": "결과 읽기",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
         "items": [
           {
             "text": "결과 및 다이어그램",
@@ -2644,10 +2633,12 @@
         ]
       },
       {
-        "text": "파일 및 공유",
+        "text": "공유 및 강의",
+        "icon": "lucide:presentation",
+        "section": "guide",
         "items": [
           {
-            "text": "가져오기, 내보내기 및 공유",
+            "text": "파일, 링크 및 내보내기",
             "link": "/ko/essentials/import-export"
           },
           {
@@ -2657,7 +2648,9 @@
         ]
       },
       {
-        "text": "참고 자료",
+        "text": "도움말",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
         "items": [
           {
             "text": "키보드, 마우스 및 터치",
@@ -2674,7 +2667,51 @@
         ]
       },
       {
+        "text": "튜토리얼",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
+        "items": [
+          {
+            "text": "경사 보",
+            "link": "/ko/tutorials/inclined-beam"
+          },
+          {
+            "text": "3힌지 라멘",
+            "link": "/ko/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "평면 트러스",
+            "link": "/ko/tutorials/truss"
+          },
+          {
+            "text": "연속보와 지점 침하",
+            "link": "/ko/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "연습",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "연습 문제",
+            "link": "/ko/practice"
+          },
+          {
+            "text": "시험지 생성기",
+            "link": "/ko/exam"
+          },
+          {
+            "text": "예제",
+            "link": "/ko/examples/"
+          }
+        ]
+      },
+      {
         "text": "이론 매뉴얼",
+        "icon": "lucide:sigma",
+        "section": "theory",
         "items": [
           {
             "text": "좌표계 및 부호 규약",
@@ -2687,9 +2724,12 @@
           {
             "text": "트러스 요소",
             "link": "/ko/elements/truss"
+          },
+          {
+            "text": "EduBeam의 해석 과정",
+            "link": "/ko/elements/analysis"
           }
-        ],
-        "collapsed": true
+        ]
       }
     ]
   }
