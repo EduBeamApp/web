@@ -106,7 +106,7 @@ const teachingIcons = {
     </section>
 
     <!-- How a model is built -->
-    <section class="band-light border-b border-rule bg-mist">
+    <section id="start-here" class="band-light border-b border-rule bg-mist">
       <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
       <div v-reveal class="grid gap-6 lg:grid-cols-12 lg:items-end">
         <h2 class="section-title text-balance text-ink lg:col-span-7">{{ t('home.steps.title') }}</h2>
@@ -123,7 +123,7 @@ const teachingIcons = {
     </section>
 
     <!-- What it models, drawn -->
-    <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+    <section id="what-you-can-model" class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
       <div v-reveal class="grid gap-6 lg:grid-cols-12 lg:items-end">
         <h2 class="section-title text-balance text-ink lg:col-span-7">{{ t('home.model.title') }}</h2>
         <p class="text-pretty leading-relaxed text-muted lg:col-span-5">{{ t('home.model.lede') }}</p>
