@@ -250,10 +250,12 @@ export default defineNuxtConfig({
       // A URL in a language its page is not translated into is written as the redirect alone, not
       // as a whole page shell (a few hundred bytes rather than 60 kB, for some 500 URLs), and needs no payload
       'prerender:generate'(route) {
-        // 404.html is the SPA shell, whose title the error page sets only once it runs; Analytics
-        // reads the title when it loads, before that, so the shell names itself in English
+        // 404.html is the SPA shell, whose title and language the error page sets only once it runs;
+        // Analytics reads the title when it loads, before that, so the shell names itself in English
         if (route.route === '/404.html' && typeof route.contents === 'string' && !route.contents.includes('<title>')) {
-          route.contents = route.contents.replace('<head>', '<head><title>Page not found | EduBeam</title>')
+          route.contents = route.contents
+            .replace('<html>', '<html lang="en">')
+            .replace('<head>', '<head><title>Page not found | EduBeam</title>')
           return
         }
         const page = route.route.replace(/\/_payload\.json$/, '')
