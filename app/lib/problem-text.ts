@@ -33,6 +33,13 @@ export const renderText = (text: Text, language: TextLanguage): string => {
 /** "q = 8 kN/m" and "6 m" never break across lines: no-break spaces around "=" and before a unit */
 const keepTogether = (text: string) => text.replace(/ = /g, ' = ').replace(/(\d) (?=(?:kN\/m|kNm|kN|m)\b)/g, '$1 ')
 
+/** Languages that write sentences one after another with no space: 「…4 m。梁の…」 */
+const NO_SPACE_BETWEEN_SENTENCES = new Set(['ja', 'zh'])
+
 /** The structure and its loads, its sentences in one paragraph */
 export const renderStatement = (problem: Problem, language: TextLanguage): string =>
-  keepTogether(problem.statement.map((s) => renderText(s, language)).join(' '))
+  keepTogether(
+    problem.statement
+      .map((s) => renderText(s, language))
+      .join(NO_SPACE_BETWEEN_SENTENCES.has(language.locale.split('-')[0]) ? '' : ' ')
+  )
