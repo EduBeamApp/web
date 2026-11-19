@@ -1,146 +1,160 @@
 ---
-description: "Tham quan giao diện EduBeam: menu chính, vùng hiển thị và các tùy chọn hiển thị, di chuyển và chọn đối tượng, các thẻ, thanh dưới cùng và các cửa sổ nổi."
+description: "Bản đồ giao diện EduBeam: thanh ứng dụng và menu ☰, vùng hiển thị với các nút và tùy chọn hiển thị, chọn và sửa, các bảng ở thanh dưới cùng, cách nhập giá trị."
+source: site
 ---
 
 # Giao diện người dùng
 
-[EduBeam]{.edubeam} có ba vùng: **thanh ứng dụng** ở trên cùng, **vùng hiển thị** ở giữa, nơi bạn vẽ, và **thanh dưới cùng** với một bảng cho mỗi loại đối tượng. Nắm được cái gì nằm ở đâu, bạn sẽ dễ theo dõi phần còn lại của tài liệu.
+[EduBeam]{.edubeam} có ba vùng: **thanh ứng dụng** ở trên cùng, **vùng hiển thị** ở giữa, nơi bạn vẽ, và **thanh dưới cùng** với một bảng cho mỗi loại đối tượng. Việc gì làm được trong vùng hiển thị thì cũng làm được trong các bảng, và ngược lại.
 
 ![Các phần của giao diện, đánh số theo danh sách bên dưới](/screenshots/vi/ui-overview.webp)
 
-1. **Menu ☰**: mở, lưu, chia sẻ và xuất; ví dụ và các bài hướng dẫn.
-2. **Nút trên thanh ứng dụng**: Xóa kết cấu và Chia sẻ mô hình.
-3. **Hoàn tác / Làm lại** cho mọi thay đổi của mô hình.
-4. **Nút điều khiển hiển thị**: căn giữa, vừa màn hình và nút bật/tắt tùy chọn hiển thị.
-5. **Tùy chọn hiển thị**: chọn kết quả và thành phần mô hình nào được vẽ.
+1. **Menu ☰**: mở, lưu, chia sẻ và xuất; ví dụ và các bài hướng dẫn trong ứng dụng.
+2. **Xóa kết cấu** và **Chia sẻ mô hình**.
+3. **Hoàn tác** và **Làm lại**.
+4. **Các nút của vùng hiển thị**: căn giữa, vừa màn hình và tùy chọn hiển thị.
+5. **Tùy chọn hiển thị**: chọn kết quả và thành phần nào của mô hình được vẽ.
 6. **Lưới, bắt dính, dấu thập và đơn vị.**
 7. **Các thẻ của thanh dưới cùng**: Nút, Phần tử, Tải trọng, Vật liệu, Tiết diện, Kết quả.
-8. **Bảng** của thẻ đang mở, nơi bạn có thể sửa mọi giá trị.
+8. **Bảng** của thẻ đang mở, nơi bạn sửa được mọi giá trị.
 
-::callout{type="tip" title="Đi một vòng tham quan"}
+::callout{type="tip" title="Tham quan giao diện"}
 **☰ → Xem giới thiệu** lần lượt chỉ cho bạn từng phần này ngay trong ứng dụng.
 ::
 
-![Xem giới thiệu, ở bước tùy chọn hiển thị](/screenshots/vi/tour.webp)
-
 ## Thanh ứng dụng {#app-bar}
 
-| Nút | Chức năng |
-| --- | --- |
-| **Menu ☰** | Menu chính, xem bên dưới. |
-| **Xóa kết cấu** | Xóa mọi nút, phần tử và tải trọng sau khi bạn xác nhận. Hai ô đánh dấu cho phép xóa cả vật liệu và tiết diện. <kbd>Ctrl</kbd>+<kbd>Z</kbd> sẽ khôi phục mô hình, và mô hình vẫn được giữ trong Kết cấu gần đây. |
-| **Chia sẻ mô hình** | Mở [hộp thoại chia sẻ](/vi/essentials/import-export#share-a-link) với một liên kết chứa toàn bộ mô hình. |
-| **Có gì mới?** | Ghi chú phát hành. Sau mỗi lần cập nhật, chúng tự mở một lần. |
-| **Tài liệu** / GitHub | Tài liệu này và mã nguồn. |
+- **☰** mở menu chính, xem bên dưới.
+- **Xóa kết cấu** xóa mọi nút, phần tử và tải trọng sau khi bạn xác nhận; đánh dấu **Xóa vật liệu** hoặc **Xóa tiết diện** để xóa luôn vật liệu hoặc tiết diện. <kbd>Ctrl</kbd>+<kbd>Z</kbd> khôi phục mô hình, và mô hình đã xóa cũng được giữ trong *Kết cấu gần đây*.
+- **Chia sẻ mô hình** mở [hộp thoại chia sẻ](/vi/essentials/import-export#share-a-link) với một liên kết chứa toàn bộ mô hình.
+- **Có gì mới?** hiện ghi chú phát hành. Sau mỗi lần cập nhật, chúng tự mở một lần.
+- **Tài liệu** mở tài liệu hướng dẫn này, còn biểu tượng GitHub mở mã nguồn.
 
-Trên điện thoại, thanh chỉ đủ chỗ cho menu ☰ và Tài liệu; mọi thứ khác nằm trong menu.
+Trên điện thoại, thanh chỉ đủ chỗ cho ☰ và **Tài liệu**; **Xóa kết cấu** và **Chia sẻ mô hình** nằm trong menu.
 
 ### Menu ☰ {#the-☰-menu}
 
 ![Menu ☰](/screenshots/vi/ui-app-menu.webp){.shot-xs}
 
-| Mục | Chức năng |
-| --- | --- |
-| **Mở dự án** / **Lưu dự án** | Mở hoặc tải xuống tệp `project.json` (<kbd>Ctrl</kbd>+<kbd>O</kbd> / <kbd>Ctrl</kbd>+<kbd>S</kbd>). |
-| **Kết cấu gần đây** | 10 mô hình gần nhất bạn đã xóa hoặc thay thế, sẵn sàng để khôi phục. |
-| **Xuất hình ảnh** | Lưu hình vẽ dưới dạng PNG hoặc SVG, hoặc sao chép nó (<kbd>Ctrl</kbd>+<kbd>P</kbd>). |
-| **Chia sẻ mô hình** | Giống nút trên thanh ứng dụng. |
-| **Ví dụ** | Bộ sưu tập các mô hình có sẵn. |
-| **Vẽ dầm đầu tiên** | Bài hướng dẫn bảy bước. |
-| **Xem giới thiệu** | Chuyến tham quan giao diện. |
-| **Xóa kết cấu** | Giống nút trên thanh ứng dụng. |
+- **Mở dự án** và **Lưu dự án** mở hoặc tải xuống tệp `project.json` (<kbd>Ctrl</kbd>+<kbd>O</kbd>, <kbd>Ctrl</kbd>+<kbd>S</kbd>).
+- **Kết cấu gần đây** giữ 10 mô hình gần nhất bạn đã xóa hoặc thay thế, để bạn khôi phục khi cần.
+- **Xuất hình ảnh** lưu hình vẽ thành PNG hoặc SVG, hoặc sao chép hình vẽ (<kbd>Ctrl</kbd>+<kbd>P</kbd>).
+- **Ví dụ** là bộ sưu tập các mô hình dựng sẵn; **Vẽ dầm đầu tiên** là bài tập có hướng dẫn gồm bảy bước; **Xem giới thiệu** đưa bạn đi một vòng quanh giao diện.
+- **Chia sẻ mô hình** và **Xóa kết cấu** giống hệt hai nút trên thanh ứng dụng.
 
-Cuối menu hiển thị phiên bản ứng dụng và ngày phát hành.
+Cuối menu ghi phiên bản ứng dụng và ngày phát hành. Mở, lưu, chia sẻ và xuất được trình bày ở trang [Tệp, liên kết và xuất dữ liệu](/vi/essentials/import-export).
 
 ## Vùng hiển thị {#viewer}
 
-Khung vẽ là nơi bạn vẽ và xem xét mô hình. Mọi phần khác của ứng dụng đều theo đối tượng bạn chọn ở đây.
+Khung vẽ là nơi bạn vẽ và xem mô hình. EduBeam tính lại kết quả sau mỗi thay đổi, nên không có nút *Giải*.
 
 ### Các nút trên khung vẽ {#buttons-on-the-canvas}
 
-- **Góc trên bên trái:** **Hoàn tác** và **Làm lại** (<kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd>). Mọi thay đổi mô hình, gồm thêm, sửa, kéo, xóa và xóa toàn bộ kết cấu, đều có thể hoàn tác.
-- **Góc trên bên phải:** **Căn giữa** (<kbd>C</kbd>), **Vừa màn hình** (<kbd>F</kbd>) và nút ⚙ để hiện hoặc ẩn tùy chọn hiển thị. Trên màn hình cảm ứng còn có **Chọn bằng khung**.
-- **Góc dưới bên phải:** **G** bật/tắt lưới, **S** bật/tắt bắt dính lưới, nút dấu thập hiện vị trí con trỏ trên thước, và **ô đơn vị** mở phần cài đặt ở mục *Ngôn ngữ và khu vực*.
+**Góc trên bên trái: Hoàn tác và Làm lại** lần lượt lùi lại hoặc tiến tới qua từng thay đổi của mô hình: thêm, sửa, kéo, xóa, xóa toàn bộ kết cấu (<kbd>Ctrl</kbd>+<kbd>Z</kbd>, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd>).
+
+**Góc trên bên phải:**
+
+- **Chọn bằng khung**, trên thiết bị có màn hình cảm ứng: lần kéo ngón tay tiếp theo sẽ vẽ một khung chọn hình chữ nhật.
+- **Căn giữa** đưa mô hình vào giữa mà không thu phóng (<kbd>C</kbd>); **Vừa màn hình** thu phóng để cả mô hình vừa khít màn hình (<kbd>F</kbd>).
+- **⚙** hiện hoặc ẩn [tùy chọn hiển thị](#display-options).
+
+**Góc dưới bên phải:**
+
+![Các nút lưới, bắt dính, dấu thập và đơn vị](/screenshots/vi/ui-grid-units.webp){.shot-sm}
+
+- **G** hiện hoặc ẩn lưới và thước (<kbd>G</kbd>); **S** bật hoặc tắt bắt dính lưới (<kbd>S</kbd>).
+- Nút **dấu thập** đánh dấu vị trí con trỏ trên thước (chỉ khi dùng chuột).
+- **Ô đơn vị** mở phần cài đặt ở mục [Ngôn ngữ và khu vực](/vi/essentials/units-settings#language-locale).
 
 ### Tùy chọn hiển thị {#display-options}
 
-![Các nút điều khiển hiển thị và tùy chọn hiển thị](/screenshots/vi/ui-display-settings.webp){.shot-lg}
+Nút ⚙ mở hai hàng ô đánh dấu. Hàng thứ nhất chọn các kết quả được vẽ chồng lên mô hình: *Biến dạng*, *N (x)*, *V<sub>z</sub> (x)*, *M<sub>y</sub> (x)* và *Phản lực*; ban đầu bật sẵn biến dạng, mô men uốn và phản lực. Hàng thứ hai hiện hoặc ẩn các phần của mô hình: *Gối tựa*, *Tải trọng*, *Nhãn nút* và *Nhãn phần tử*, ban đầu đều bật.
 
-Hai hàng ô đánh dấu, mở sẵn theo mặc định:
+![Các nút của vùng hiển thị và tùy chọn hiển thị](/screenshots/vi/ui-display-settings.webp){.shot-lg}
 
-- **Kết quả:** *Biến dạng*, *N (x)*, *V<sub>z</sub> (x)*, *M<sub>y</sub> (x)*, *Phản lực*. Biến dạng, M và Phản lực được đánh dấu sẵn.
-- **Mô hình:** *Gối tựa*, *Tải trọng*, *Nhãn nút*, *Nhãn phần tử*.
-
-**Thêm cài đặt** mở toàn bộ [cài đặt](/vi/essentials/units-settings) ở mục *Cài đặt hiển thị*.
+**Thêm cài đặt** mở [cài đặt hiển thị](/vi/essentials/units-settings#viewer-settings): kích cỡ, màu sắc và cách vẽ biểu đồ. Trang [Kết quả và biểu đồ](/vi/essentials/results#overlays-in-the-viewer) giải thích từng kết quả cho biết gì.
 
 ### Di chuyển trên khung vẽ {#navigating}
 
-| Thao tác | Chuột | Cảm ứng |
+| Thao tác | Chuột và bàn phím | Cảm ứng |
 | --- | --- | --- |
-| Thu phóng | Con lăn chuột (thu phóng về phía con trỏ), <kbd>Ctrl</kbd>+<kbd>=</kbd> / <kbd>Ctrl</kbd>+<kbd>-</kbd> | Chụm hoặc mở hai ngón tay |
-| Kéo màn hình | Kéo bằng nút **giữa hoặc phải** (xem *Cài đặt → Điều khiển và phím tắt*) | Kéo bằng một ngón tay |
-| Vừa màn hình / căn giữa | <kbd>F</kbd> / <kbd>C</kbd> hoặc các nút ở góc trên bên phải | Các nút ở góc trên bên phải |
+| Thu phóng | Con lăn chuột (thu phóng về phía con trỏ); trên bàn di chuột, chụm hoặc cuộn bằng hai ngón | Chụm hai ngón |
+| Dịch chuyển hình vẽ | Kéo khi giữ nút chuột phải hoặc giữ con lăn; chọn nút nào trong [Điều khiển và phím tắt](/vi/essentials/units-settings#controls-shortcuts) | Kéo bằng một ngón tay |
+| Vừa màn hình, căn giữa | <kbd>F</kbd>, <kbd>C</kbd> hoặc các nút ở góc trên bên phải | Các nút ở góc trên bên phải |
 
-### Chọn và chỉnh sửa {#selecting-and-editing}
+<kbd>Ctrl</kbd>+<kbd>+</kbd> và <kbd>Ctrl</kbd>+<kbd>-</kbd> thu phóng hình vẽ quanh tâm của nó, với mọi kiểu bố trí bàn phím. Hai tổ hợp phím này không bao giờ phóng to cả giao diện như khi trình duyệt tự thu phóng.
 
-**Nhấp** vào một nút, phần tử, tải trọng hoặc đường kích thước để chọn nó. Một bảng mở ra bên cạnh với thông tin chi tiết và các thao tác phù hợp: thêm tải trọng, đặt gối tựa, sửa, xem ma trận độ cứng, xóa. Khi nhấp vào một nút, thanh dưới cùng cũng chuyển sang thẻ Nút.
+### Chọn và sửa {#selecting-and-editing}
+
+| Muốn | Thao tác |
+| --- | --- |
+| Chọn một đối tượng | Nhấp vào một nút, phần tử, tải trọng hoặc đường kích thước. Bảng thao tác của đối tượng mở ra ngay bên cạnh: thêm tải trọng, đặt gối tựa, sửa, xem ma trận độ cứng, xóa. Thanh dưới cùng chuyển sang thẻ tương ứng. |
+| Chọn nhiều đối tượng | Kéo một hình chữ nhật trên vùng trống của khung vẽ (trên màn hình cảm ứng, nhấn **Chọn bằng khung** trước). Mọi nút nằm bên trong và mọi phần tử mà hình chữ nhật chạm vào đều được chọn, cùng tải trọng và đường kích thước của chúng. <kbd>Ctrl</kbd>+<kbd>A</kbd> chọn tất cả. |
+| Xóa, sao chép, dán | <kbd>Delete</kbd>, <kbd>Ctrl</kbd>+<kbd>C</kbd>, <kbd>Ctrl</kbd>+<kbd>V</kbd>. Phần được dán đi theo con trỏ cho đến khi bạn nhấp chuột; bạn cũng có thể nhập độ dời Δx, Δz ở thanh thông báo. |
+| Di chuyển một nút | Kéo nút đó. Khi bật bắt dính, nút sẽ bắt vào điểm lưới; các phần tử và tải trọng nối với nút di chuyển theo. |
+| Sửa một tải trọng | Nhấp đúp vào tải trọng. |
+| Xem chi tiết | Di chuột lên bất kỳ đối tượng nào để xem chú thích: chuyển vị và góc xoay của nút, vật liệu và tiết diện của phần tử, giá trị của tải trọng. Trên màn hình cảm ứng, chạm vào đối tượng: bảng thao tác của nó hiện đúng các thông tin ấy. |
+| Mở menu khung vẽ | Nhấp chuột phải vào khung vẽ, hoặc nhấn giữ trên màn hình cảm ứng. |
 
 ::div{.shots}
 
-![Một nút: thêm tải trọng, đặt gối tựa, đặt chuyển vị cưỡng bức](/screenshots/vi/ui-node-menu.webp)
+![Bảng thao tác của một nút: thêm tải trọng, đặt gối tựa, đặt chuyển vị cưỡng bức](/screenshots/vi/ui-node-menu.webp)
 
-![Một phần tử: sửa, thêm tải trọng, ma trận độ cứng](/screenshots/vi/ui-element-menu.webp)
+![Di chuột lên một nút sẽ hiện chuyển vị và góc xoay của nó](/screenshots/vi/ui-hover.webp)
 
 ::
 
-- **Kéo trên vùng trống của khung vẽ** để vẽ khung chọn. Mọi thứ nằm bên trong đều được chọn: nút, phần tử, tải trọng và đường kích thước của chúng. Nhấn <kbd>Delete</kbd> để xóa tất cả, hoặc <kbd>Ctrl</kbd>+<kbd>C</kbd> / <kbd>Ctrl</kbd>+<kbd>V</kbd> để sao chép sang chỗ khác.
-- **Kéo một nút** để di chuyển nó. Khi bật bắt dính, nút sẽ rơi đúng vào lưới. Các phần tử nối với nút và tải trọng của chúng di chuyển theo.
-- **Nhấp đúp vào một tải trọng** để sửa nó.
-- **Rê chuột** lên bất kỳ đối tượng nào để xem chú thích. Nút cho biết chuyển vị và góc xoay, phần tử cho biết vật liệu và tiết diện, tải trọng cho biết giá trị. Trên màn hình cảm ứng, bạn chạm vào đối tượng: các thông tin tương tự hiện trong bảng chọn.
-
-![Rê chuột lên một nút sẽ hiện chuyển vị và góc xoay của nó](/screenshots/vi/ui-hover.webp){.shot-sm}
-
-**Nhấp chuột phải vào khung vẽ** (hoặc chạm và giữ trên màn hình cảm ứng) để mở menu khung vẽ. Giữ <kbd>Ctrl</kbd> khi chọn *Thêm nút* hoặc *Thêm phần tử* để đặt chúng bằng chuột thay vì qua hộp thoại. Khi mở trên một phần tử, menu còn có *Ghi kích thước phần tử*.
+**Menu khung vẽ** có *Thêm nút*, *Thêm phần tử*, *Thêm kích thước* (và *Ghi kích thước phần tử* khi mở trên một phần tử), sau đó là *Sửa*, *Sao chép*, *Dán* và *Xóa* cho các đối tượng đang chọn. Giữ <kbd>Ctrl</kbd> khi chọn *Thêm nút* hoặc *Thêm phần tử* để đặt chúng bằng chuột thay vì qua hộp thoại.
 
 ![Menu khung vẽ](/screenshots/vi/ui-canvas-menu.webp){.shot-sm}
 
-Mọi phím tắt đều có ở trang [Bàn phím, chuột và cảm ứng](/vi/reference/shortcuts).
+Trang [Bàn phím, chuột và cảm ứng](/vi/reference/shortcuts) liệt kê mọi phím tắt và thao tác cảm ứng.
 
 ### Khi mô hình không giải được {#when-the-model-cannot-be-solved}
 
-Thông báo xuất hiện ở góc trên bên trái của vùng hiển thị:
+Các thông báo hiện ở góc trên bên trái vùng hiển thị:
 
-- *Chưa có vật liệu nào* / *Chưa có tiết diện nào*, kèm nút **Thêm mới**.
-- Một nhãn nhỏ màu xanh **Cần gối tựa** khi mô hình chỉ đơn giản là chưa hoàn thành.
-- Một **thông báo màu đỏ** khi có lỗi, kèm nút **Hiện chi tiết** liệt kê mọi vấn đề.
+| Thông báo | Ý nghĩa |
+| --- | --- |
+| *Chưa có vật liệu nào.*, *Chưa có tiết diện nào.* | Nhấn **Thêm mới** ngay bên cạnh để thêm vật liệu hoặc tiết diện. |
+| Nhãn màu xanh dương **Cần gối tựa** | Mô hình chỉ là chưa dựng xong: cần thêm gối tựa. |
+| Thông báo màu đỏ, kèm **Hiện chi tiết** | Mô hình có lỗi. Phần chi tiết liệt kê từng vấn đề, mỗi vấn đề kèm một gợi ý. |
+| Thông báo màu vàng | Mô hình đã giải được, nhưng có chỗ trông bất thường, chẳng hạn một nút không nối với phần tử nào. |
 
-Khi kết cấu vẫn còn chuyển động được, EduBeam cho nó đung đưa dưới dạng đường bao nét đứt và khoanh tròn các nút hoặc khớp gây ra vấn đề. Rê chuột lên thông báo để xem lại chuyển động, hoặc dùng nút hình con mắt để ẩn nó.
+Khi kết cấu vẫn còn chuyển động được, EduBeam vẽ nó bằng nét đứt, đung đưa qua lại, và khoanh tròn các nút hoặc khớp gây ra lỗi. Di chuột lên thông báo để xem lại chuyển động; biểu tượng con mắt trên thông báo sẽ ẩn hình chuyển động đi.
 
 ![Khung có khớp tại B và C là hệ biến hình: EduBeam cho thấy nó chuyển động thế nào](/screenshots/vi/ui-mechanism.webp)
 
-![Hiện chi tiết liệt kê từng vấn đề kèm gợi ý](/screenshots/vi/ui-diagnostics.webp){.shot-lg}
-
-Trang [Khắc phục sự cố](/vi/reference/troubleshooting) giải thích từng thông báo.
+Trang [Khắc phục sự cố](/vi/reference/troubleshooting#messages) giải thích từng thông báo và cách sửa.
 
 ## Thanh dưới cùng {#bottom-bar}
 
-Sáu thẻ, mỗi thẻ có một thanh công cụ và một bảng sửa được. Các thẻ cho biết mô hình có bao nhiêu đối tượng mỗi loại. Nút **?** ở bên phải giải thích thẻ đang mở, nút **?** cạnh một số tiêu đề cột cũng vậy. Kéo dải thẻ lên hoặc xuống để đổi kích thước thanh, hoặc thu nhỏ nó bằng nút ở bên phải.
+Thanh dưới cùng có sáu thẻ, mỗi thẻ gồm một thanh công cụ và một bảng sửa trực tiếp được. Nhãn của thẻ cho biết thẻ đang chứa bao nhiêu đối tượng. Kéo dải thẻ lên hoặc xuống để đổi chiều cao của thanh, hoặc thu gọn hẳn bằng nút bấm ở bên phải. Dấu **?** bên cạnh giải thích thẻ đang mở; dấu **?** cạnh một số tiêu đề cột cũng giải thích cột đó.
 
-| Thẻ | Thanh công cụ | Bảng |
+| Thẻ | Thanh công cụ | Các cột của bảng |
 | --- | --- | --- |
-| **Nút** | Thêm nút (hộp thoại), Thêm nút (chuột) | Nhãn, tọa độ, **Bậc tự do bị chặn** (ký hiệu gối tựa, Dx, Dz, Ry, góc gối tựa α), tải trọng, sửa, xóa |
-| **Phần tử** | Thêm phần tử (hộp thoại), Thêm phần tử (chuột) | Nhãn, loại, nút (kèm nút đổi thứ tự), vật liệu, tiết diện, **Khớp đầu thanh**, tải trọng, ma trận độ cứng, xóa |
-| **Tải trọng** | Thêm tải nút, Thêm tải phần tử | Loại, đối tượng, các thành phần sửa được, sửa, xóa |
-| **Vật liệu** | Thêm vật liệu, Thư viện vật liệu | Nhãn, E, G, α<sub>T</sub>, xóa |
-| **Tiết diện** | Thêm tiết diện, Thư viện tiết diện, Tiết diện đa giác | Hình dạng, nhãn, A, I<sub>y</sub>, h, k, sửa hình, xóa |
-| **Kết quả** | Kết quả tại nút, Kết quả phần tử, Xuất CSV, Sao chép | Chuyển vị và góc xoay của từng nút, hoặc nội lực đầu phần tử của từng phần tử |
+| **Nút** | Thêm nút (hộp thoại), Thêm nút (chuột) | Nút, Tọa độ, **Bậc tự do bị chặn** (ký hiệu gối tựa, `Dx`, `Dz`, `Ry`, góc α), Tải trọng, Thao tác |
+| **Phần tử** | Thêm phần tử (hộp thoại), Thêm phần tử (chuột) | Phần tử, Loại, Nút (kèm **Đổi thứ tự nút**), Vật liệu, Tiết diện, **Khớp đầu thanh**, Tải trọng, Thao tác |
+| **Tải trọng** | Thêm tải nút, Thêm tải phần tử | Loại, Đối tượng, Thành phần, Thao tác |
+| **Vật liệu** | Thêm vật liệu, Thư viện vật liệu | Vật liệu, E, G, α<sub>T</sub>, Thao tác |
+| **Tiết diện** | Thêm tiết diện, Thư viện tiết diện, Tiết diện đa giác | Hình dạng, Tiết diện, Diện tích, I<sub>y</sub>, Chiều cao, Hệ số hiệu chỉnh cắt, Thao tác |
+| **Kết quả** | Kết quả tại nút, Kết quả phần tử, Xuất CSV, Sao chép | Chuyển vị tại từng nút, hoặc nội lực đầu phần tử của từng phần tử; xem [Kết quả và biểu đồ](/vi/essentials/results#results-tab) |
 
-Sửa ô ngay tại chỗ: nhấp, gõ giá trị, rồi nhấn <kbd>Enter</kbd> (hoặc <kbd>Esc</kbd> để rời ô). Giá trị được hiển thị và nhập theo [đơn vị hiện tại](/vi/essentials/units-settings).
+Các thẻ được trình bày chi tiết ở các trang [Nút và gối tựa](/vi/essentials/nodes-supports), [Phần tử, vật liệu và tiết diện](/vi/essentials/elements), [Tải trọng](/vi/essentials/loads) và [Kết quả và biểu đồ](/vi/essentials/results#results-tab).
+
+### Nhập giá trị {#typing-values}
+
+Mọi ô nhập số, trong bảng cũng như trong hộp thoại, đều hoạt động như nhau:
+
+- Giá trị tính theo [đơn vị hiện tại](/vi/essentials/units-settings#units), ghi ở tiêu đề cột hoặc sau ô nhập.
+- Dùng dấu chấm hay dấu phẩy thập phân đều được: `2.5` và `2,5` là như nhau.
+- Bạn có thể gõ cả phép tính với `+ - * / ^` và dấu ngoặc: EduBeam tự tính `6/2`, `3*1.5`, `2^3` hay `(4+2)/3`, còn `1e-5` nghĩa là $10^{-5}$.
+- Trong bảng, <kbd>Enter</kbd>, <kbd>Esc</kbd>, <kbd>Tab</kbd> hoặc một cú nhấp ra chỗ khác sẽ áp dụng giá trị. Sau đó <kbd>Ctrl</kbd>+<kbd>Z</kbd> lấy lại giá trị cũ; còn khi bạn đang gõ dở, nó chỉ hoàn tác phần vừa gõ.
 
 ## Các thẻ phía trên vùng hiển thị {#tabs-above-the-viewer}
 
-**Mô hình** hiển thị khung vẽ. **Cài đặt** hiển thị phần cài đặt toàn màn hình, để bạn đổi màu hoặc đơn vị rồi chuyển lại xem kết quả. Ô đơn vị và *Thêm cài đặt* mở cùng phần cài đặt đó dưới dạng hộp thoại phía trên mô hình.
+**Mô hình** hiện khung vẽ. **Cài đặt** hiện [phần cài đặt](/vi/essentials/units-settings) toàn khổ ngay tại chỗ đó, để bạn đổi màu hoặc đơn vị rồi chuyển lại xem tác dụng. Ô đơn vị và *Thêm cài đặt* mở cùng phần cài đặt ấy dưới dạng hộp thoại nằm đè lên mô hình.
 
 ## Cửa sổ nổi {#floating-windows}
 
-**Ma trận độ cứng** (từ bảng của phần tử hoặc từ bảng Phần tử) mở một cửa sổ chứa ma trận độ cứng 6 × 6 của phần tử trong hệ tọa độ tổng thể. **Sửa** trong menu khung vẽ mở một bảng chứa các đối tượng đang chọn. Kéo cửa sổ bằng thanh tiêu đề và đóng bằng nút ×.
+**Ma trận độ cứng** (từ bảng thao tác của một phần tử hoặc từ bảng ở thẻ *Phần tử*) mở một cửa sổ chứa ma trận độ cứng 6 × 6 của phần tử trong hệ trục tổng thể. **Sửa** trong menu khung vẽ mở một bảng gồm các đối tượng đang chọn. Kéo thanh tiêu đề để di chuyển cửa sổ và đóng nó bằng dấu ×.

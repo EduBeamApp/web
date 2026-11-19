@@ -2045,39 +2045,26 @@
     "sidebar": [
       {
         "text": "Bắt đầu",
+        "icon": "lucide:flag",
+        "section": "guide",
         "items": [
           {
             "text": "Giới thiệu",
             "link": "/vi/guide/introduction"
           },
           {
-            "text": "Bắt đầu nhanh (10 phút)",
+            "text": "Bắt đầu nhanh (10 phút)",
             "link": "/vi/guide/quick-start"
-          },
-          {
-            "text": "Ví dụ",
-            "link": "/vi/examples/"
           }
         ]
       },
       {
-        "text": "Hướng dẫn",
+        "text": "Dựng mô hình",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
         "items": [
           {
-            "text": "Khung ba khớp",
-            "link": "/vi/tutorials/three-hinged-frame"
-          },
-          {
-            "text": "Dàn phẳng",
-            "link": "/vi/tutorials/truss"
-          }
-        ]
-      },
-      {
-        "text": "Mô hình hóa",
-        "items": [
-          {
-            "text": "Giao diện người dùng",
+            "text": "Giao diện",
             "link": "/vi/essentials/user-interface"
           },
           {
@@ -2099,7 +2086,9 @@
         ]
       },
       {
-        "text": "Kết quả",
+        "text": "Đọc kết quả",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
         "items": [
           {
             "text": "Kết quả và biểu đồ",
@@ -2112,10 +2101,12 @@
         ]
       },
       {
-        "text": "Tệp và chia sẻ",
+        "text": "Chia sẻ và giảng dạy",
+        "icon": "lucide:presentation",
+        "section": "guide",
         "items": [
           {
-            "text": "Nhập, xuất và chia sẻ",
+            "text": "Tệp, liên kết và xuất dữ liệu",
             "link": "/vi/essentials/import-export"
           },
           {
@@ -2125,7 +2116,9 @@
         ]
       },
       {
-        "text": "Tham khảo",
+        "text": "Trợ giúp",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
         "items": [
           {
             "text": "Bàn phím, chuột và cảm ứng",
@@ -2142,7 +2135,51 @@
         ]
       },
       {
+        "text": "Hướng dẫn",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Dầm xiên",
+            "link": "/vi/tutorials/inclined-beam"
+          },
+          {
+            "text": "Khung ba khớp",
+            "link": "/vi/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Dàn phẳng",
+            "link": "/vi/tutorials/truss"
+          },
+          {
+            "text": "Dầm liên tục và lún gối tựa",
+            "link": "/vi/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "Thực hành",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Luyện tập",
+            "link": "/vi/practice"
+          },
+          {
+            "text": "Trình tạo đề thi",
+            "link": "/vi/exam"
+          },
+          {
+            "text": "Ví dụ",
+            "link": "/vi/examples/"
+          }
+        ]
+      },
+      {
         "text": "Sổ tay lý thuyết",
+        "icon": "lucide:sigma",
+        "section": "theory",
         "items": [
           {
             "text": "Hệ tọa độ và quy ước dấu",
@@ -2155,9 +2192,12 @@
           {
             "text": "Phần tử thanh dàn",
             "link": "/vi/elements/truss"
+          },
+          {
+            "text": "Cách EduBeam giải mô hình",
+            "link": "/vi/elements/analysis"
           }
-        ],
-        "collapsed": true
+        ]
       }
     ]
   },

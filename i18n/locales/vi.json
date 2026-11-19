@@ -1,13 +1,16 @@
 {
   "meta": {
-    "description": "Phân tích kết cấu trực tuyến miễn phí – dầm, khung và dàn phẳng, có kết quả tức thì ngay trên trình duyệt."
+    "description": "Phân tích kết cấu phẳng trực tuyến miễn phí – dầm, khung và dàn được giải tức thì ngay trên trình duyệt."
   },
   "nav": {
     "guide": "Tài liệu",
     "tutorials": "Hướng dẫn",
     "examples": "Ví dụ",
     "faq": "FAQ",
-    "openApp": "Mở ứng dụng"
+    "theory": "Lý thuyết",
+    "openApp": "Mở ứng dụng",
+    "libraries": "Thư viện",
+    "practice": "Luyện tập"
   },
   "docs": {
     "onThisPage": "Trên trang này",
@@ -20,13 +23,13 @@
   },
   "components": {
     "loadsTitle": "Xem trước các loại tải trọng",
-    "loadsLede": "Các loại tải trọng thông dụng trông như thế nào trong EduBeam. Mỗi thẻ là một mô hình đã giải, tương tác được, và mở trong ứng dụng đúng như đã thiết lập.",
+    "loadsLede": "Các loại tải trọng thường gặp trông thế nào trong EduBeam. Mỗi thẻ là một mô hình đã giải, tương tác được, và mở trong ứng dụng đúng như đã thiết lập.",
     "openInApp": "Mở trong EduBeam",
     "simplySupportedBeam": "Dầm đơn giản",
-    "udlBlurb": "Nhịp gối cố định – gối di động chịu 12 kN/m: biểu đồ lực cắt và mô men kinh điển.",
-    "trapezoidalBlurb": "Tải tăng từ 4 đến 14 kN/m trên nhịp bên phải.",
-    "concentratedBlurb": "Một tải tập trung 18 kN hướng xuống tại giữa nhịp, không cần thêm nút.",
-    "nodalBlurb": "Tải 20 kN tại gối tựa giữa, để kiểm tra phản lực và độ võng.",
+    "udlBlurb": "Nhịp gối cố định – gối di động chịu 12 kN/m: biểu đồ lực cắt và mô men quen thuộc.",
+    "trapezoidalBlurb": "Tải tăng dần từ 4 đến 14 kN/m trên nhịp bên phải.",
+    "concentratedBlurb": "Tải 18 kN trong nhịp trái, cách gối tựa 2 m, không cần nút tại điểm đặt tải.",
+    "nodalBlurb": "Tải 20 kN tại nút giữa hai nhịp: biểu đồ mô men có điểm gãy ngay dưới tải.",
     "temperatureBlurb": "Chênh lệch nhiệt độ theo chiều cao tiết diện (thớ trên nóng hơn thớ dưới) và độ cong mà nó gây ra.",
     "promoTitle": "Đưa khung của bạn",
     "promoAccent": "lên 3D.",
@@ -85,6 +88,585 @@
   "search": {
     "label": "Tìm kiếm",
     "placeholder": "Tìm trong tài liệu",
-    "noResults": "Không có kết quả cho “{query}”"
+    "noResults": "Không có kết quả cho “{query}”",
+    "shortcut": "Ctrl K"
+  },
+  "home": {
+    "seo": {
+      "title": "EduBeam: phân tích kết cấu trực tuyến miễn phí",
+      "description": "Phân tích kết cấu phẳng miễn phí ngay trên trình duyệt. Vẽ dầm, khung và dàn, đặt tải trọng và xem ngay biểu đồ N, V, M, phản lực và độ võng."
+    },
+    "hero": {
+      "title": "Dầm, khung, dàn.",
+      "lede": "EduBeam là ứng dụng phân tích kết cấu miễn phí cho dầm, khung và dàn. Bạn vẽ mô hình ngay trên trình duyệt, còn biểu đồ nội lực, phản lực và độ võng cập nhật sau mỗi lần chỉnh sửa.",
+      "launch": "Mở EduBeam",
+      "guide": "Đọc tài liệu",
+      "note": "Miễn phí và mã nguồn mở. Không cần cài đặt, không cần tài khoản."
+    },
+    "steps": {
+      "title": "Từ bản phác thảo đến biểu đồ trong bốn bước",
+      "lede": "Theo đúng thứ tự bạn vẫn giải trên giấy. Phần Bắt đầu nhanh hướng dẫn bạn giải trọn một dầm thực tế trong khoảng mười phút.",
+      "link": "Làm theo phần Bắt đầu nhanh",
+      "items": {
+        "nodes": {
+          "label": "Nút",
+          "title": "Đặt các nút",
+          "body": "Nhấp vào lưới hoặc nhập tọa độ. Ở đây là bốn góc của một khung cổng rộng 6 m, cao 4 m."
+        },
+        "elements": {
+          "label": "Phần tử",
+          "title": "Nối các nút bằng thanh",
+          "body": "Nối các nút bằng phần tử dầm, rồi gán vật liệu và tiết diện: chọn từ thư viện hoặc tự vẽ một tiết diện đa giác."
+        },
+        "loads": {
+          "label": "Gối tựa và tải trọng",
+          "title": "Đặt gối tựa và tải trọng",
+          "body": "Gối cố định ở hai chân cột, 10 kN/m dọc theo dầm và lực ngang 15 kN đẩy vào góc trên bên trái."
+        },
+        "results": {
+          "label": "Kết quả",
+          "title": "Đọc kết quả",
+          "body": "Biểu đồ mô men, vẽ về phía thớ chịu kéo, và các phản lực hiện ra ngay khi khung có đủ gối tựa. Đây là số liệu do chính EduBeam tính ngay trên trang này."
+        }
+      }
+    },
+    "examples": {
+      "title": "Mở một mô hình đã giải chỉ bằng một cú nhấp",
+      "lede": "Mỗi mô hình dưới đây được giải ngay trên trang này, bằng chính bộ giải mà ứng dụng dùng. Hãy mở một mô hình trong EduBeam và thử thay đổi nó.",
+      "link": "Tất cả ví dụ"
+    },
+    "verify": {
+      "title": "Đối chiếu với giáo trình",
+      "lede": "EduBeam giải mọi mô hình bằng phương pháp phần tử hữu hạn. Với các trường hợp kinh điển, kết quả trùng với công thức giải tích đến chữ số cuối cùng. Trình duyệt của bạn tính cột bên phải ngay khi trang này tải xong.",
+      "case": "Trường hợp",
+      "formula": "Công thức giải tích",
+      "hand": "Tính tay",
+      "edubeam": "EduBeam",
+      "link": "Các trường hợp đối chiếu khác",
+      "steel": "Thép IPE 200: E = 210 GPa, I = 1943 cm⁴. Bỏ qua biến dạng trượt, đúng như giả thiết của các công thức giải tích.",
+      "cases": {
+        "ssMoment": "Dầm đơn giản, 12 kN/m trên nhịp 6 m: mô men lớn nhất",
+        "ssDeflection": "Cùng dầm đó: độ võng lớn nhất",
+        "cantilever": "Dầm công xôn dài 4 m, 18 kN tại đầu tự do: mô men tại ngàm",
+        "fixed": "Dầm hai đầu ngàm, 10 kN/m trên nhịp 6 m: mô men đầu ngàm",
+        "propped": "Dầm một đầu ngàm, một đầu gối di động, 10 kN/m trên nhịp 6 m: phản lực gối di động"
+      }
+    },
+    "teaching": {
+      "title": "Dành cho giảng đường",
+      "lede": "Đưa mô hình vào slide hoặc tài liệu bài giảng, và mọi sinh viên đều mở đúng mô hình đó.",
+      "link": "Giảng dạy với EduBeam",
+      "slideCourse": "Cơ học kết cấu",
+      "slideTitle": "Bài giảng 7: Dàn",
+      "slideBody": "Dàn Warren chịu ba lực 8 kN tại các nút. Những thanh nào chịu kéo?",
+      "shareLabel": "Liên kết chia sẻ",
+      "copy": "Sao chép",
+      "copied": "Đã sao chép",
+      "items": {
+        "share": {
+          "title": "Mô hình là một liên kết",
+          "body": "Toàn bộ mô hình nằm trong URL. Đặt liên kết vào bài tập, và mô hình mở ra đúng như bạn để lại, kể cả nhiều năm sau."
+        },
+        "embed": {
+          "title": "Ngay trong slide",
+          "body": "Chế độ trình xem (chỉ đọc) hiển thị mô hình đã giải mà không có công cụ chỉnh sửa, rất hợp để đưa lên slide hay trang web."
+        },
+        "mechanism": {
+          "title": "Chỉ ra chỗ sai",
+          "body": "Khi kết cấu là hệ biến hình, EduBeam cho thấy nó sẽ chuyển động thế nào, thay vì chỉ từ chối giải."
+        },
+        "languages": {
+          "title": "Ngôn ngữ và đơn vị của sinh viên",
+          "body": "Sinh viên làm việc bằng một trong 18 ngôn ngữ, với đơn vị SI hoặc đơn vị Mỹ, và với hệ trục mà giáo trình của họ dùng."
+        }
+      },
+      "answerTitle": "Đáp án: lực dọc trong các thanh",
+      "answerBody": "Lực kéo mang dấu dương. Thanh cánh dưới chịu kéo; thanh cánh trên và hai thanh xiên đầu dàn chịu nén; các thanh xiên bên trong lần lượt kéo, nén xen kẽ.",
+      "prevSlide": "Slide trước",
+      "nextSlide": "Slide sau"
+    },
+    "final": {
+      "title": "Vẽ dầm đầu tiên của bạn.",
+      "lede": "Mở EduBeam và chọn Vẽ dầm đầu tiên. Một bài hướng dẫn ngắn dẫn bạn từ màn hình trống đến một dầm đã có gối tựa, tải trọng và các biểu đồ.",
+      "paths": {
+        "quickStart": {
+          "title": "Bắt đầu nhanh",
+          "body": "Dựng mô hình một dầm từng bước và kiểm tra bằng tính tay. 10 phút."
+        },
+        "examples": {
+          "title": "Ví dụ",
+          "body": "Các mô hình đã giải để mở, thay đổi và học hỏi."
+        },
+        "teaching": {
+          "title": "Giảng dạy",
+          "body": "Liên kết chia sẻ, slide và bài tập cho môn học của bạn."
+        }
+      }
+    },
+    "model": {
+      "title": "Những gì bạn có thể mô hình hóa",
+      "lede": "Kết cấu phẳng được giải bằng phương pháp phần tử hữu hạn, với đủ các loại gối tựa, tải trọng và kết quả của môn Cơ học kết cấu.",
+      "supports": {
+        "title": "Gối tựa",
+        "items": {
+          "pin": "Gối cố định",
+          "roller": "Gối di động",
+          "fixed": "Ngàm",
+          "slider": "Ngàm trượt",
+          "angled": "Xiên góc bất kỳ"
+        },
+        "note": "Ngoài ra còn có độ lún và góc xoay cưỡng bức của gối tựa."
+      },
+      "loads": {
+        "title": "Tải trọng",
+        "items": {
+          "point": "Tập trung",
+          "uniform": "Phân bố đều",
+          "trapezoidal": "Hình thang",
+          "moment": "Mô men",
+          "temperature": "Nhiệt độ"
+        },
+        "note": "Tại nút hoặc ở vị trí bất kỳ trên thanh, theo hệ trục địa phương hoặc tổng thể."
+      },
+      "sections": {
+        "title": "Tiết diện",
+        "items": {
+          "i": "Chữ I và H",
+          "hollow": "Hộp",
+          "solid": "Đặc",
+          "tube": "Ống",
+          "polygon": "Đa giác tự vẽ"
+        },
+        "note": "IPE, HEA, AISC W và HSS từ thư viện, hoặc bất kỳ đa giác nào bạn vẽ."
+      },
+      "results": {
+        "title": "Kết quả",
+        "note": "Lực dọc, lực cắt, mô men uốn và sơ đồ biến dạng, cùng các phản lực và giá trị tại điểm bất kỳ."
+      },
+      "facts": {
+        "elements": {
+          "title": "Dầm Timoshenko",
+          "body": "Kể đến biến dạng trượt khi cần; với thanh mảnh, kết quả trùng với lý thuyết Euler–Bernoulli."
+        },
+        "structures": {
+          "title": "Dầm, khung, dàn",
+          "body": "Trong mặt phẳng, có thể đặt khớp ở đầu bất kỳ thanh nào."
+        },
+        "sharing": {
+          "title": "Liên kết và tệp",
+          "body": "Cả mô hình trong một liên kết hoặc một tệp dự án; hình vẽ dạng PNG hoặc SVG, bảng dạng CSV."
+        },
+        "settings": {
+          "title": "18 ngôn ngữ",
+          "body": "Đơn vị SI hoặc đơn vị Mỹ, trục z hướng xuống hoặc trục y hướng lên như trong giáo trình."
+        }
+      }
+    },
+    "heritage": {
+      "title": "Mã nguồn mở, bắt nguồn từ giảng đường",
+      "body": "EduBeam kế thừa EduBeam bản desktop gốc do Bộ môn Cơ học, Khoa Xây dựng, Đại học Kỹ thuật Séc tại Praha (ČVUT) phát triển, và vẫn mở được các tệp phiên làm việc của chương trình đó. Bản web miễn phí và mã nguồn mở, cũng như {'@'}edubeam/fem, bộ giải tính ra mọi con số trên trang này.",
+      "github": "EduBeam trên GitHub",
+      "solver": "{'@'}edubeam/fem trên GitHub",
+      "team": "Ai phát triển EduBeam"
+    }
+  },
+  "error": {
+    "notFoundTitle": "Không tìm thấy trang",
+    "notFound": "Không có trang nào ở địa chỉ này. Có thể trang đã chuyển sang chỗ khác, hoặc liên kết bị gõ sai.",
+    "otherTitle": "Đã xảy ra lỗi",
+    "other": "Không thể hiển thị trang này. Tải lại trang thường sẽ khắc phục được.",
+    "home": "Trang chủ",
+    "guide": "Đọc tài liệu",
+    "message": "Gối tựa chưa giữ được kết cấu: hệ vẫn có thể xoay tự do.",
+    "figure": "Dầm chỉ có một gối cố định, thiếu gối tựa thứ hai, xoay tự do quanh gối dưới tác dụng của tải trọng"
+  },
+  "problems": {
+    "families": {
+      "simple": {
+        "name": "Dầm đơn giản",
+        "skill": "Cân bằng của dầm",
+        "hint": "Lấy tổng mô men đối với A để tìm phản lực tại B, rồi chiếu các lực lên phương đứng để tìm phản lực tại A. Mô men lớn nhất nằm ở chỗ lực cắt đổi dấu (bằng 0) hoặc ngay dưới lực tập trung."
+      },
+      "cantilever": {
+        "name": "Dầm công xôn",
+        "skill": "Liên kết ngàm",
+        "hint": "Mọi phản lực đều ở ngàm: chiếu các lực lên phương đứng, rồi lấy tổng mô men đối với A. Dầm công xôn có mô men lớn nhất tại ngàm."
+      },
+      "overhang": {
+        "name": "Dầm có đầu thừa",
+        "skill": "Mô men âm trên gối",
+        "hint": "Lấy tổng mô men đối với A để tìm phản lực tại B. Sau đó so sánh hai chỗ có thể có mô men lớn nhất: trong nhịp, nơi V = 0, và trên gối B, nơi đầu thừa gây mô men âm."
+      },
+      "gerber": {
+        "name": "Dầm Gerber",
+        "skill": "Khớp trung gian",
+        "hint": "Bắt đầu với đoạn GC: đoạn này tựa lên khớp G và gối di động C, và khớp không truyền mô men. Sau đó đặt lên đoạn ABG lực mà khớp truyền sang, rồi giải như một dầm có đầu thừa."
+      },
+      "threeHinged": {
+        "name": "Khung ba khớp",
+        "skill": "Lực xô ngang và khớp đỉnh",
+        "hint": "Lấy tổng mô men đối với A và đối với E để tìm các phản lực đứng. Sau đó cắt khung tại khớp đỉnh C, nơi M = 0, và lấy tổng mô men đối với C cho một nửa khung: từ đó tìm được lực xô ngang."
+      },
+      "truss": {
+        "name": "Dàn Warren",
+        "skill": "Tách nút và mặt cắt",
+        "hint": "Tìm phản lực từ cân bằng của cả dàn. Sau đó dùng mặt cắt qua ba thanh, trong đó có thanh cần tìm, và lấy tổng mô men đối với nút nơi hai thanh còn lại gặp nhau; với thanh xiên thì chiếu các lực lên phương đứng."
+      },
+      "continuous": {
+        "name": "Dầm liên tục hai nhịp",
+        "skill": "Siêu tĩnh bậc một",
+        "hint": "Hệ siêu tĩnh bậc một: chọn mô men trên gối B làm ẩn số. Phương trình ba mô men, với M = 0 tại A và C, cho ngay ẩn số này; sau đó tính phản lực cho từng nhịp."
+      },
+      "portal": {
+        "name": "Khung cổng",
+        "skill": "Khung có nút cứng",
+        "hint": "Hệ siêu tĩnh bậc một: bỏ liên kết ngang tại D, tính chuyển vị ngang của D do tải trọng và do lực đơn vị đặt tại D (nguyên lý công khả dĩ, nhân biểu đồ M), rồi cho chuyển vị ngang tổng cộng bằng 0."
+      }
+    },
+    "statement": {
+      "simple": "Dầm đơn giản nhịp {L} m, gối cố định tại A, gối di động tại B, chịu {loads}.",
+      "cantilever": "Dầm công xôn dài {L} m, ngàm tại A, chịu tải phân bố đều q = {q} kN/m trên suốt chiều dài và lực F = {F} kN tại đầu tự do B.",
+      "cantileverMoment": "Dầm công xôn dài {L} m, ngàm tại A, chịu tải phân bố đều q = {q} kN/m trên suốt chiều dài; tại đầu tự do B có lực F = {F} kN và mô men {M} kNm ngược chiều kim đồng hồ.",
+      "overhang": "Dầm AB nhịp {L} m, gối cố định tại A, gối di động tại B, có đầu thừa BC dài {c} m. Dầm chịu tải phân bố đều q = {q} kN/m trên nhịp AB và lực F = {F} kN tại đầu mút C.",
+      "overhangAll": "Dầm AB nhịp {L} m, gối cố định tại A, gối di động tại B, có đầu thừa BC dài {c} m. Dầm chịu tải phân bố đều q = {q} kN/m trên toàn bộ chiều dài và lực F = {F} kN tại đầu mút C.",
+      "gerber": "Dầm tựa trên gối cố định A và các gối di động B, C, có khớp trung gian G cách gối B {g} m về phía C: AB = {L1} m, GC = {L3} m.",
+      "gerberLoad": "Dầm chịu tải phân bố đều q = {q} kN/m trên toàn bộ chiều dài.",
+      "gerberLoadForce": "Dầm chịu tải phân bố đều q = {q} kN/m trên toàn bộ chiều dài và lực F = {F} kN tại giữa đoạn AB.",
+      "threeHinged": "Khung rộng {L} m, cao {H} m, gối cố định tại A và E, có khớp tại đỉnh C.",
+      "threeHingedWhole": "Xà ngang chịu tải phân bố đều q = {q} kN/m trên toàn bộ chiều dài.",
+      "threeHingedHalf": "Xà ngang chịu tải phân bố đều q = {q} kN/m trên nửa bên trái.",
+      "threeHingedWholeForce": "Xà ngang chịu tải phân bố đều q = {q} kN/m trên toàn bộ chiều dài; tại B có lực ngang F = {F} kN hướng sang phải.",
+      "threeHingedHalfForce": "Xà ngang chịu tải phân bố đều q = {q} kN/m trên nửa bên trái; tại B có lực ngang F = {F} kN hướng sang phải.",
+      "truss": "Dàn Warren gồm {panels}, mỗi khoang dài {d} m, chiều cao dàn {h} m, gối cố định tại A và gối di động tại {end}.",
+      "panels": "{n} khoang",
+      "trussLoadAll": "Tại mỗi nút của thanh cánh trên có lực F = {F} kN hướng xuống.",
+      "trussLoad": "Tại các nút {joints} có lực F = {F} kN hướng xuống.",
+      "continuous": "Dầm liên tục ABC gồm hai nhịp AB = {L1} m và BC = {L2} m, gối cố định tại A, gối di động tại B và C. Tải phân bố đều q = {q} kN/m tác dụng trên nhịp trái AB.",
+      "continuousBoth": "Dầm liên tục ABC gồm hai nhịp AB = {L1} m và BC = {L2} m, gối cố định tại A, gối di động tại B và C. Tải phân bố đều q = {q} kN/m tác dụng trên cả hai nhịp.",
+      "portal": "Khung có nút góc cứng, rộng {L} m, cao {H} m, gối cố định tại A và D. Xà ngang BC chịu tải phân bố đều q = {q} kN/m.",
+      "portalForce": "Khung có nút góc cứng, rộng {L} m, cao {H} m, gối cố định tại A và D. Xà ngang BC chịu tải phân bố đều q = {q} kN/m; tại B có lực ngang F = {F} kN hướng sang phải.",
+      "advancedNote": "EI = const; bỏ qua biến dạng trượt."
+    },
+    "load": {
+      "udlSpan": "tải phân bố đều q = {q} kN/m trên toàn nhịp",
+      "pointFromA": "lực tập trung F = {F} kN cách A {a} m",
+      "momentAtB": "mô men tập trung {M} kNm ngược chiều kim đồng hồ tại B"
+    },
+    "task": {
+      "beam": "Xác định phản lực gối tựa và mô men uốn lớn nhất.",
+      "bar": "Xác định phản lực gối tựa và lực dọc trong thanh {bar}."
+    },
+    "answer": {
+      "horizontal": "Phản lực ngang tại {node}",
+      "vertical": "Phản lực đứng tại {node}",
+      "fixingMoment": "Mô men tại ngàm {node}",
+      "bar": "Lực dọc trong thanh {bar}",
+      "largestMoment": "Mô men uốn lớn nhất (theo giá trị tuyệt đối)"
+    },
+    "unit": {
+      "kN": "kN",
+      "kNm": "kNm"
+    }
+  },
+  "library": {
+    "getStarted": "Bắt đầu",
+    "by": "Tác giả: {author}",
+    "fromRepo": "Chưa có trên npm: dòng lệnh trên cài thư viện trực tiếp từ GitHub.",
+    "comingToNpm": "Sắp có trên npm. Mã nguồn đã có trên GitHub."
+  },
+  "solver": {
+    "tagline": "Bộ giải phần tử hữu hạn cho khung phẳng, viết bằng TypeScript.",
+    "seo": {
+      "title": "{'@'}edubeam/fem: bộ giải phần tử hữu hạn cho khung phẳng, viết bằng TypeScript",
+      "description": "Bộ giải phần tử hữu hạn viết bằng TypeScript cho dầm, khung và dàn phẳng: khớp, tải trên thanh, tải nhiệt độ, lún gối tựa, trường hợp tải, phản lực và nội lực chính xác. Lõi tính toán của EduBeam."
+    },
+    "run": {
+      "title": "Chạy ngay trên trang này",
+      "lede": "Trình duyệt của bạn chạy đoạn mã bên trái ngay khi trang tải xong. Bên phải là các giá trị nó trả về, còn hình vẽ do {plot} vẽ từ kết quả của cùng bộ giải đó.",
+      "plusShear": "{formula}, cộng thêm phần do biến dạng trượt"
+    },
+    "features": {
+      "title": "Bộ giải có gì",
+      "analyses": {
+        "title": "Phân tích",
+        "body": "Phân tích tĩnh tuyến tính với số trường hợp tải tùy ý. Biểu đồ chính xác giữa các nút: không cần chia nhỏ phần tử."
+      },
+      "elements": {
+        "title": "Phần tử",
+        "body": "Phần tử dầm Timoshenko hai nút trong mặt phẳng x–z. Khi có khớp ở cả hai đầu, nó là một thanh dàn."
+      },
+      "loads": {
+        "title": "Tải trọng",
+        "body": "Lực và mô men tại nút; tải tập trung, phân bố đều và hình thang trên thanh; tải nhiệt độ; lún gối tựa."
+      },
+      "results": {
+        "title": "Kết quả",
+        "body": "N, V và M tại điểm bất kỳ trên thanh, đường đàn hồi, nội lực đầu phần tử, chuyển vị và phản lực."
+      },
+      "reference": "Toàn bộ lớp và phương thức"
+    },
+    "behind": {
+      "title": "Bộ giải đằng sau EduBeam",
+      "body": "Mọi biểu đồ, phản lực và độ võng trong EduBeam, và mọi hình vẽ trên trang web này, đều do {name} tính.",
+      "link": "Xem EduBeam"
+    }
+  },
+  "plot": {
+    "tagline": "Các component Vue vẽ kết cấu phẳng và kết quả của chúng, theo đúng phong cách hình vẽ của trang web này.",
+    "seo": {
+      "title": "{'@'}edubeam/plot: hình vẽ kết cấu cho Vue",
+      "description": "Các component Vue vẽ kết cấu phẳng, tải trọng, phản lực và biểu đồ N, V, M như trong giáo trình, cho trang môn học, slide, phiếu bài tập và tệp SVG độc lập."
+    },
+    "try": {
+      "title": "Dùng thử",
+      "lede": "{'@'}edubeam/fem giải khung này ngay trên trang. Chọn những gì cần vẽ, đoạn mã thay đổi theo.",
+      "labelStyle": "Kiểu nhãn",
+      "horizontal": "Nằm ngang",
+      "axis": "Dọc theo tung độ"
+    },
+    "teaching": {
+      "title": "Dành cho tài liệu giảng dạy",
+      "lede": "Mô hình viết bằng mã là hình vẽ không bao giờ lỗi thời: đổi một con số, hình vẽ, phản lực và biểu đồ thay đổi theo. Mỗi seed (giá trị khởi tạo bộ sinh số ngẫu nhiên) cho một bài tập mới; cùng một seed luôn cho cùng một bài. Trang {practice} và {exam} trên trang web này được làm đúng theo cách đó.",
+      "practice": "Luyện tập",
+      "exam": "Trình tạo đề thi"
+    },
+    "uses": {
+      "exercises": {
+        "title": "Bài tập và bài kiểm tra",
+        "body": "Mỗi sinh viên một bài tập riêng từ một seed, kèm đáp án, để in ra hoặc xuất hình cho LaTeX và Word."
+      },
+      "slides": {
+        "title": "Slide và tài liệu bài giảng",
+        "body": "Hình vẽ hiện dần theo từng cú nhấp trong Slidev, Vue hoặc Beamer, giải ngay khi trình chiếu."
+      },
+      "embedding": {
+        "title": "Trong tài liệu và ứng dụng của bạn",
+        "body": "Vite, VitePress hoặc Nuxt, kết xuất phía máy chủ, hoặc từ JSON đã giải sẵn."
+      },
+      "print": {
+        "title": "Tệp để in",
+        "body": "Tệp SVG độc lập với màu đơn giản, cho Word, LaTeX và Inkscape."
+      }
+    },
+    "features": {
+      "title": "Thư viện làm được gì",
+      "style": {
+        "title": "Theo phong cách hình vẽ",
+        "body": "Thanh, gối tựa, tải trọng, phản lực và biểu đồ kẻ vạch như trên trang web này, kèm chuỗi kích thước và tên các phản lực cần tìm cho phiếu bài tập."
+      },
+      "readable": {
+        "title": "Dễ đọc ở mọi kích thước",
+        "body": "Chữ và nét vẽ giữ nguyên kích thước điểm ảnh; giá trị nào chồng lên nhau sẽ được dời đi hoặc bỏ bớt, không bao giờ bị cắt cụt."
+      },
+      "exact": {
+        "title": "Chính xác",
+        "body": "Biểu đồ là chính các đa thức của bộ giải: cực trị được tìm chính xác, bước nhảy tại lực tập trung được vẽ đúng là bước nhảy."
+      },
+      "fits": {
+        "title": "Hợp với trang của bạn",
+        "body": "Màu lấy từ CSS của bạn, cả chủ đề sáng lẫn tối. Kết xuất được phía máy chủ và không bao giờ chặn thao tác cuộn trang."
+      },
+      "components": "Toàn bộ prop"
+    }
+  },
+  "practice": {
+    "seo": {
+      "title": "Bài tập Cơ học kết cấu có đáp số ngay {'|'} EduBeam",
+      "description": "Luyện tập Cơ học kết cấu miễn phí: dầm, khung, dàn với số liệu mới mỗi lần. Tính phản lực, mô men lớn nhất hoặc lực dọc, kiểm tra ngay, rồi xem biểu đồ.",
+      "ogTitle": "Bài tập Cơ học kết cấu có đáp số ngay",
+      "ogDescription": "Dầm, khung và dàn với số liệu mới mỗi lần. Kiểm tra ngay phản lực và mô men bạn tính được, rồi xem biểu đồ."
+    },
+    "title": "Luyện tập Cơ học kết cấu",
+    "lede": "Mỗi lần một bài mới, kèm đáp số chính xác để bạn đối chiếu. Giải trên giấy, nhập kết quả, rồi xem biểu đồ.",
+    "codes": "Mỗi bài có một mã bài, chẳng hạn {code}. Cùng một mã luôn là cùng một bài: hãy gửi mã cho bạn cùng lớp, hoặc mở bài mà giảng viên đã giao.",
+    "announce": "Bài mới: {structure}, {code}.",
+    "structures": {
+      "title": "Kết cấu",
+      "count": "{picked}/{total}",
+      "legend": "Các kết cấu mà Bài mới chọn ngẫu nhiên",
+      "determinate": "Tĩnh định",
+      "indeterminate": "Siêu tĩnh",
+      "note": "Bài mới chọn ngẫu nhiên một trong các kết cấu này."
+    },
+    "code": {
+      "label": "Mã bài",
+      "placeholder": "Mã bài",
+      "open": "Mở",
+      "error": "Đây không phải mã bài. Mã bài gồm một chữ cái và một số, chẳng hạn H2048."
+    },
+    "newProblem": "Bài mới",
+    "copyLink": "Sao chép liên kết",
+    "linkCopied": "Đã sao chép liên kết",
+    "barForces": "Lực dọc trong các thanh, kéo mang dấu dương",
+    "answers": {
+      "title": "Đáp số của bạn",
+      "note": "Các phản lực được vẽ trên hình theo chiều quy ước dương. Nếu phản lực thực tế có chiều ngược lại, đáp số của nó mang dấu âm.",
+      "field": "{label}, {direction}, đơn vị {unit}",
+      "fieldMagnitude": "{label}, đơn vị {unit}"
+    },
+    "positive": {
+      "right": "dương khi hướng sang phải",
+      "up": "dương khi hướng lên",
+      "counterClockwise": "dương khi ngược chiều kim đồng hồ",
+      "tension": "dương khi chịu kéo",
+      "magnitude": "giá trị tuyệt đối"
+    },
+    "mark": {
+      "correct": "đúng",
+      "exact": "đáp số chính xác",
+      "sign": "dấu?",
+      "signLong": "đúng độ lớn, sai dấu",
+      "wrong": "chưa đúng"
+    },
+    "verdict": {
+      "allRight": "Tất cả đều đúng. Biểu đồ nội lực đã hiện trên hình bài toán.",
+      "sign": "Đúng {right}/{total}. Ở những ô ghi “{sign}”, độ lớn đã đúng nhưng chiều thì ngược lại.",
+      "some": "Đúng {right}/{total}. Đáp số sai lệch không quá 1 % vẫn được tính là đúng.",
+      "revealed": "Đáp số chính xác nằm cạnh các ô của bạn, và biểu đồ nội lực đã hiện trên hình bài toán."
+    },
+    "check": "Kiểm tra",
+    "nextProblem": "Bài tiếp theo",
+    "hint": "Gợi ý",
+    "showAnswers": "Xem đáp án",
+    "solved": "Đã giải trên thiết bị này: {n} bài.",
+    "about": {
+      "answers": {
+        "title": "Đáp số từ đâu ra",
+        "body": "{solver}, bộ giải của EduBeam, giải từng bài ngay trên trình duyệt của bạn, và {plot} vẽ hình. Mô men lớn nhất được tính chính xác, không phải đọc ra từ một đường cong lấy mẫu."
+      },
+      "signs": {
+        "title": "Dấu và đơn vị",
+        "body": "Đáp số tính bằng kN và kNm. Tải trọng hướng xuống, trừ khi đề bài ghi khác. Phản lực dương khi hướng sang phải, hướng lên và ngược chiều kim đồng hồ, như ghi ở từng ô; lực dọc trong thanh dương khi kéo. Biểu đồ theo {conventions} của EduBeam.",
+        "conventions": "quy ước dấu"
+      },
+      "teachers": {
+        "title": "Dành cho giảng viên",
+        "body": "{exam} in các bài này thành đề thi, mỗi sinh viên một mã đề, kèm đáp án. Nhờ mã bài, sinh viên có thể tự kiểm tra đáp số của mình tại đây sau khi làm bài.",
+        "exam": "Trình tạo đề thi"
+      }
+    }
+  },
+  "exam": {
+    "seo": {
+      "title": "Trình tạo đề thi Cơ học kết cấu: đề in sẵn kèm đáp án {'|'} EduBeam",
+      "description": "Tạo đề kiểm tra Cơ học kết cấu ngay trên trình duyệt: dầm, khung, dàn với số liệu tự sinh, mỗi sinh viên một mã đề, kèm đáp án và hình SVG cho LaTeX và Word. Miễn phí, không cần cài đặt.",
+      "ogTitle": "Trình tạo đề thi Cơ học kết cấu: đề in sẵn kèm đáp án",
+      "ogDescription": "Dầm, khung và dàn với số liệu tự sinh, mỗi sinh viên một mã đề, kèm đáp án và hình SVG. Miễn phí, ngay trên trình duyệt."
+    },
+    "title": "Trình tạo đề thi",
+    "lede": "Đề thi Cơ học kết cấu, mỗi sinh viên một mã đề, kèm đáp án. Mọi thứ được tạo ngay trên trình duyệt của bạn và không gửi đi đâu cả. Các thiết lập nằm trong địa chỉ của trang, nên chỉ cần lưu dấu trang là mở lại được đúng các đề đó.",
+    "defaultTitle": "Kiểm tra Cơ học kết cấu",
+    "settings": {
+      "title": "Tiêu đề",
+      "subtitle": "Dòng thứ hai",
+      "subtitlePlaceholder": "Môn học, ngày thi, thời gian làm bài",
+      "problems": "Các bài",
+      "problem": "Bài {n}",
+      "determinate": "Tĩnh định",
+      "indeterminate": "Siêu tĩnh",
+      "remove": "Xóa bài {n}",
+      "add": "Thêm bài",
+      "problemsNote": "Mã đề nào cũng có các bài này, theo đúng thứ tự này, mỗi bài với số liệu riêng. Tối đa {max} bài.",
+      "versions": "Số mã đề",
+      "versionsNote": "Mỗi sinh viên một mã đề, tối đa {max}.",
+      "number": "Số hiệu bộ đề",
+      "newNumber": "Mới",
+      "newNumberTitle": "Số liệu mới cho mọi bài",
+      "numberNote": "Cùng một số hiệu luôn tạo ra đúng những đề thi như cũ.",
+      "onPapers": "Trên đề thi",
+      "nameLine": "Dòng ghi họ tên sinh viên",
+      "working": "Chỗ làm bài",
+      "key": "Đáp án ở cuối",
+      "codes": "Mã bài",
+      "codesNote": "Cho bài tập về nhà: sinh viên kiểm tra đáp số trên {practice}, nơi có cả lời giải. Khi thi, hãy bỏ đánh dấu ô này.",
+      "practicePage": "trang Luyện tập"
+    },
+    "zipNote": "Tệp .zip chứa mọi hình vẽ và đáp án dạng SVG cho LaTeX và Word, cùng bảng đáp số dạng CSV để chấm bài.",
+    "summary": {
+      "papers": "{n} đề",
+      "problems": "{n} bài",
+      "plain": "{papers}, mỗi đề {problems}",
+      "withKey": "{papers}, mỗi đề {problems}, kèm đáp án",
+      "withKeys": "{papers}, mỗi đề {problems}, kèm đáp án"
+    },
+    "jump": {
+      "label": "Chuyển đến đề",
+      "placeholder": "Chuyển đến…",
+      "papers": "Đề thi",
+      "keys": "Đáp án",
+      "key": "Đáp án mã đề {n}"
+    },
+    "version": "Mã đề {n}",
+    "download": "Tải .zip",
+    "downloadTitle": "Mọi hình vẽ và đáp án dạng SVG cho LaTeX và Word, cùng bảng đáp số dạng CSV để chấm bài",
+    "print": "In",
+    "printLong": "In hoặc lưu thành PDF",
+    "paper": {
+      "name": "Họ và tên",
+      "rules": "Lực tính bằng kN, mô men tính bằng kNm. Tải trọng hướng xuống, trừ khi đề bài ghi khác. Phản lực là lực do gối tựa tác dụng lên kết cấu, được vẽ theo chiều quy ước dương: sang phải, lên trên và ngược chiều kim đồng hồ. Đáp số âm nghĩa là phản lực có chiều ngược lại. Lực dọc trong thanh dương khi kéo.",
+      "check": "Kiểm tra đáp số tại {url}"
+    },
+    "key": {
+      "title": "Đáp án",
+      "version": "{title}, mã đề {n}",
+      "exam": "Bộ đề số {n}"
+    },
+    "tension": "kéo +",
+    "solutionFigure": "{name}: lời giải"
+  },
+  "exerciseGenerator": {
+    "solveIt": "Giải bài này trên trang Luyện tập",
+    "exercise": "Bài tập",
+    "key": "Đáp án",
+    "solution": "Lời giải",
+    "caption": "Tạo ngay trên trình duyệt của bạn: seed chọn kết cấu và số liệu, {'@'}edubeam/fem giải, {'@'}edubeam/plot vẽ cả đề bài lẫn đáp án. Muốn có cả đề thi hoàn chỉnh, hãy dùng {exam}.",
+    "exam": "Trình tạo đề thi",
+    "newExercise": "Bài tập mới"
+  },
+  "ui": {
+    "menu": "Menu",
+    "darkMode": "Chế độ tối",
+    "lightMode": "Chế độ sáng",
+    "language": "Ngôn ngữ: {name}",
+    "guideNav": "Tài liệu",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép",
+    "copyCode": "Sao chép mã",
+    "docs": "Tài liệu",
+    "elementSketch": "Phần tử trong hệ trục địa phương"
+  },
+  "heroFigure": {
+    "aria": "Dầm có đầu thừa chịu tải phân bố đều và một lực tập trung di chuyển được, cùng biểu đồ lực cắt, mô men uốn và độ võng",
+    "slider": "Vị trí của lực tập trung 20 kN",
+    "loadAt": "tại {x} m",
+    "hint": "Kéo tải trọng, hoặc trỏ vào biểu đồ để đọc giá trị.",
+    "fromA": "cách A {x} m",
+    "reactions": "phản lực {a} kN tại A và {b} kN tại B",
+    "sagging": "mô men dương lớn nhất {m} kNm",
+    "hogging": "mô men âm trên gối B {m} kNm"
+  },
+  "plotTexts": {
+    "structure": "Kết cấu",
+    "structureWith": "Kết cấu cùng {parts}",
+    "layers": {
+      "N": "biểu đồ lực dọc",
+      "V": "biểu đồ lực cắt",
+      "M": "biểu đồ mô men uốn",
+      "w": "sơ đồ biến dạng",
+      "reactions": "phản lực",
+      "loads": "tải trọng"
+    },
+    "loadHandle": "Vị trí của tải {load}",
+    "loadPosition": "cách đầu dầm {metres} m",
+    "stack": "Dầm cùng tải trọng",
+    "stackWith": "Dầm cùng tải trọng, bên dưới là {rows}",
+    "rows": {
+      "N": "biểu đồ lực dọc",
+      "V": "biểu đồ lực cắt",
+      "M": "biểu đồ mô men uốn",
+      "w": "biểu đồ độ võng"
+    },
+    "temperatureUniform": "ΔT",
+    "temperatureGradient": "ΔTb − ΔTt"
   }
 }
