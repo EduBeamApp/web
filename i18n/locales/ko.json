@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "description": "무료 온라인 2D 구조 해석 – 보, 라멘, 트러스를 브라우저에서 바로 해석합니다."
+  },
+  "nav": {
+    "guide": "가이드",
+    "tutorials": "튜토리얼",
+    "examples": "예제",
+    "faq": "FAQ",
+    "openApp": "앱 열기"
+  },
+  "docs": {
+    "onThisPage": "이 페이지의 내용",
+    "prev": "이전 페이지",
+    "next": "다음 페이지",
+    "lastUpdated": "마지막 업데이트"
+  },
+  "footer": {
+    "copyright": "EduBeam 기여자"
+  },
+  "components": {
+    "loadsTitle": "하중 유형 미리보기",
+    "loadsLede": "자주 쓰는 하중 유형이 EduBeam에서 어떻게 보이는지 확인하세요. 각 카드는 해석이 끝난 실시간 모델이며, 설정된 그대로 앱에서 열립니다.",
+    "openInApp": "EduBeam에서 열기",
+    "simplySupportedBeam": "단순보",
+    "udlBlurb": "12 kN/m를 받는 힌지–롤러 보: 전형적인 전단력도와 휨모멘트도.",
+    "trapezoidalBlurb": "오른쪽 경간에서 4 kN/m부터 14 kN/m까지 증가하는 하중.",
+    "concentratedBlurb": "절점을 추가하지 않고 경간 중앙에 가한 아래 방향 18 kN 집중하중 하나.",
+    "nodalBlurb": "내부 지점에 가한 20 kN 하중으로 반력과 처짐을 확인합니다.",
+    "temperatureBlurb": "단면 높이에 따른 온도차(상연이 하연보다 따뜻함)와 그로 인한 곡률.",
+    "promoTitle": "골조 해석을",
+    "promoAccent": "3D로.",
+    "promoSubtitle": "슬래브, 쉘, 강구조 검토까지 브라우저에서",
+    "promoCta": "무료로 사용해 보기",
+    "spanLength": "경간 길이",
+    "loadIntensity": "하중 강도",
+    "loadPosition": "하중 위치",
+    "heroHint": "하중을 옮기면 다이어그램이 따라 바뀝니다."
+  },
+  "common": {
+    "deformedShape": "변형 형상",
+    "normalForce": "축력",
+    "shearForce": "전단력",
+    "bendingMoment": "휨모멘트"
+  },
+  "loadType": {
+    "udl": "등분포하중",
+    "trapezoidal": "사다리꼴 분포하중",
+    "concentrated": "집중하중",
+    "temperature": "온도하중"
+  },
+  "loads": {
+    "nodalLoad": "절점하중",
+    "temperatureDeltaTbtNoHTML": "ΔTb-ΔTt",
+    "temperatureDeltaTsNoHTML": "ΔTc"
+  },
+  "examples": {
+    "items": {
+      "welcome": {
+        "title": "부정정보",
+        "blurb": "10 kN/m 등분포하중을 받는 경간 3 m의 고정–롤러 부정정보입니다."
+      },
+      "cantilever": {
+        "title": "캔틸레버",
+        "blurb": "아래 방향 18 kN 절점하중을 받는 4 m 캔틸레버로, 곡률과 자유단 처짐을 보여 줍니다."
+      },
+      "pratt": {
+        "title": "워렌 트러스",
+        "blurb": "8 kN 절점하중을 받는 단순한 워렌 트러스로, 축력 분포와 변위를 보여 줍니다."
+      },
+      "continuous": {
+        "title": "3경간 연속보",
+        "blurb": "5+6+5 m 경간에 등분포 + 집중 + 등분포 하중을 가해 곡률과 지점 회전각을 비교합니다."
+      },
+      "portal": {
+        "title": "문형 라멘 하중조건",
+        "blurb": "6 m 기둥 위의 8 m 보에 지붕 등분포하중과 모서리의 수평 + 연직 하중을 가해 횡변위와 휨을 검토합니다."
+      },
+      "temperature": {
+        "title": "온도하중",
+        "blurb": "균일 및 불균일 온도하중을 받는 경간 8 m 단순보입니다."
+      }
+    }
+  },
+  "search": {
+    "label": "검색",
+    "placeholder": "문서 검색",
+    "noResults": "“{query}”에 대한 결과가 없습니다"
+  }
+}

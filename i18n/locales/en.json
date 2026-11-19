@@ -1,0 +1,666 @@
+{
+  "meta": {
+    "description": "Free 2D structural analysis online – beams, frames and trusses solved instantly in your browser."
+  },
+  "nav": {
+    "guide": "Guide",
+    "tutorials": "Tutorials",
+    "examples": "Examples",
+    "faq": "FAQ",
+    "theory": "Theory",
+    "openApp": "Open the app",
+    "libraries": "Libraries",
+    "practice": "Practice"
+  },
+  "docs": {
+    "onThisPage": "On this page",
+    "prev": "Previous page",
+    "next": "Next page",
+    "lastUpdated": "Last updated"
+  },
+  "footer": {
+    "copyright": "EduBeam contributors"
+  },
+  "components": {
+    "loadsTitle": "Load type previews",
+    "loadsLede": "How the common load types look in EduBeam. Each card is a live, solved model and opens in the app exactly as set up.",
+    "openInApp": "Open in EduBeam",
+    "simplySupportedBeam": "Simply supported beam",
+    "udlBlurb": "Pinned–roller span under 12 kN/m: the classic shear and moment diagrams.",
+    "trapezoidalBlurb": "A load rising from 4 to 14 kN/m across the right span.",
+    "concentratedBlurb": "An 18 kN load inside the left span, 2 m from the support, with no node under it.",
+    "nodalBlurb": "A 20 kN load on the node between the two spans: the moment diagram kinks under it.",
+    "temperatureBlurb": "A temperature difference across the depth (top warmer than bottom) and the curvature it causes.",
+    "promoTitle": "Take your frames",
+    "promoAccent": "into 3D.",
+    "promoSubtitle": "slabs, shells & steel checks in your browser",
+    "promoCta": "Try it free",
+    "spanLength": "Span length",
+    "loadIntensity": "Load intensity",
+    "loadPosition": "Load position",
+    "heroHint": "Move the load. The diagrams follow."
+  },
+  "common": {
+    "deformedShape": "Deformed shape",
+    "normalForce": "Normal force",
+    "shearForce": "Shear force",
+    "bendingMoment": "Bending moment"
+  },
+  "loadType": {
+    "udl": "Uniformly distributed load",
+    "trapezoidal": "Trapezoidal load",
+    "concentrated": "Concentrated load",
+    "temperature": "Temperature load"
+  },
+  "loads": {
+    "nodalLoad": "Nodal load",
+    "temperatureDeltaTbtNoHTML": "ΔTb-ΔTt",
+    "temperatureDeltaTsNoHTML": "ΔTc"
+  },
+  "examples": {
+    "items": {
+      "welcome": {
+        "title": "Indeterminate beam",
+        "blurb": "Statically indeterminate 3 m fixed–roller beam under 10 kN/m UDL."
+      },
+      "cantilever": {
+        "title": "Cantilever",
+        "blurb": "4 m cantilever resisting an 18 kN downward nodal load, highlighting curvature and tip deflection."
+      },
+      "pratt": {
+        "title": "Warren truss",
+        "blurb": "Simple Warren truss with 8 kN joint loads showing axial force distribution and displacements."
+      },
+      "continuous": {
+        "title": "Three-span continuous beam",
+        "blurb": "5+6+5 m spans with UDL + point + UDL to compare curvature and support rotations."
+      },
+      "portal": {
+        "title": "Portal frame load case",
+        "blurb": "8 m beam on 6 m columns under roof UDL and lateral + vertical knee loads for sway and bending checks."
+      },
+      "temperature": {
+        "title": "Temperature load",
+        "blurb": "Simply supported 8 m beam with uniform and non-uniform temperature load."
+      }
+    }
+  },
+  "search": {
+    "label": "Search",
+    "placeholder": "Search the docs",
+    "noResults": "No results for “{query}”"
+  },
+  "home": {
+    "seo": {
+      "title": "EduBeam: free structural analysis online",
+      "description": "Free 2D structural analysis in your browser. Draw beams, frames and trusses, add loads and get N, V, M diagrams, reactions and deflections instantly."
+    },
+    "hero": {
+      "title": "Statics you can play with.",
+      "lede": "EduBeam is a free structural analysis app for beams, frames and trusses. Draw a model in your browser and its diagrams, reactions and deflections update with every edit.",
+      "launch": "Launch EduBeam",
+      "guide": "Read the guide",
+      "note": "Free and open source. No install, no account."
+    },
+    "steps": {
+      "title": "From a sketch to diagrams in four steps",
+      "lede": "In the order you would solve it on paper. The quick start takes you through a real beam in about ten minutes.",
+      "link": "Follow the quick start",
+      "items": {
+        "nodes": {
+          "label": "Nodes",
+          "title": "Place the nodes",
+          "body": "Click on the grid or type the coordinates. Here, the four corners of a portal frame 6 m wide and 4 m high."
+        },
+        "elements": {
+          "label": "Members",
+          "title": "Connect them with members",
+          "body": "Join the nodes with beam members, and give them a material and a cross section: one from the library, or a polygon you draw."
+        },
+        "loads": {
+          "label": "Supports and loads",
+          "title": "Support it and load it",
+          "body": "Pins at both feet, 10 kN/m along the beam and a 15 kN push at the top left corner."
+        },
+        "results": {
+          "label": "Results",
+          "title": "Read the results",
+          "body": "The moment diagram, on the tension side, and the reactions appear as soon as the frame can stand. These numbers are EduBeam’s own, solved on this page."
+        }
+      }
+    },
+    "examples": {
+      "title": "Open a solved model in one click",
+      "lede": "Each of these is solved on this page, by the same solver the app runs. Open one in EduBeam and change it.",
+      "link": "All examples"
+    },
+    "verify": {
+      "title": "Checked against the textbook",
+      "lede": "EduBeam solves every model by the finite element method. For the classic cases it gives the closed-form answer, to the last digit. The right-hand column was computed in your browser as this page loaded.",
+      "case": "Case",
+      "formula": "Closed form",
+      "hand": "By hand",
+      "edubeam": "EduBeam",
+      "link": "More reference cases",
+      "steel": "Steel IPE 200: E = 210 GPa, I = 1943 cm⁴. Shear deformation is left out, as the closed forms assume.",
+      "cases": {
+        "ssMoment": "Simply supported, 12 kN/m over 6 m: largest moment",
+        "ssDeflection": "The same beam: largest deflection",
+        "cantilever": "Cantilever, 18 kN at the tip of 4 m: moment at the wall",
+        "fixed": "Fixed at both ends, 10 kN/m over 6 m: end moment",
+        "propped": "Fixed and propped, 10 kN/m over 6 m: prop reaction"
+      }
+    },
+    "teaching": {
+      "title": "Made for the lecture hall",
+      "lede": "Put a model in your slides or your lecture notes, and every student opens the very same one.",
+      "link": "Teaching with EduBeam",
+      "slideCourse": "Statics",
+      "slideTitle": "Lecture 7: Trusses",
+      "slideBody": "A Warren truss under three 8 kN joint loads. Which members are in tension?",
+      "shareLabel": "Share link",
+      "copy": "Copy",
+      "copied": "Copied",
+      "items": {
+        "share": {
+          "title": "A model is a link",
+          "body": "The whole model travels in the URL. Put it in an assignment, and it opens exactly as you left it, years later too."
+        },
+        "embed": {
+          "title": "In your slides",
+          "body": "A view-only mode shows the solved model without the editing tools, made for a slide or a web page."
+        },
+        "mechanism": {
+          "title": "Explains what went wrong",
+          "body": "When a structure is a mechanism, EduBeam shows how it would move instead of just refusing to solve it."
+        },
+        "languages": {
+          "title": "Their language, their units",
+          "body": "Students work in one of 18 languages, in SI or US units, with the axes their textbook uses."
+        }
+      },
+      "answerTitle": "Answer: the member forces",
+      "answerBody": "Tension is positive. The bottom chord pulls; the top chord and both end posts push; the inner diagonals alternate.",
+      "prevSlide": "Previous slide",
+      "nextSlide": "Next slide"
+    },
+    "final": {
+      "title": "Draw your first beam.",
+      "lede": "Open EduBeam and choose Draw your first beam. A short guided task takes you from an empty screen to a supported, loaded beam and its diagrams.",
+      "paths": {
+        "quickStart": {
+          "title": "Quick start",
+          "body": "Model a beam step by step and check it by hand. 10 minutes."
+        },
+        "examples": {
+          "title": "Examples",
+          "body": "Solved models to open, change and learn from."
+        },
+        "teaching": {
+          "title": "Teaching",
+          "body": "Share links, slides and exercises for your course."
+        }
+      }
+    },
+    "model": {
+      "title": "What you can model",
+      "lede": "Plane structures solved by the finite element method, with the supports, loads and results of a statics course.",
+      "supports": {
+        "title": "Supports",
+        "items": {
+          "pin": "Pin",
+          "roller": "Roller",
+          "fixed": "Fixed",
+          "slider": "Slider",
+          "angled": "At any angle"
+        },
+        "note": "Plus prescribed settlements and rotations."
+      },
+      "loads": {
+        "title": "Loads",
+        "items": {
+          "point": "Point",
+          "uniform": "Uniform",
+          "trapezoidal": "Trapezoidal",
+          "moment": "Moment",
+          "temperature": "Temperature"
+        },
+        "note": "At nodes or anywhere along a member, in local or global axes."
+      },
+      "sections": {
+        "title": "Cross sections",
+        "items": {
+          "i": "I and H",
+          "hollow": "Hollow",
+          "solid": "Solid",
+          "tube": "Tube",
+          "polygon": "Your polygon"
+        },
+        "note": "IPE, HEA, AISC W and HSS from the library, or any polygon you draw."
+      },
+      "results": {
+        "title": "Results",
+        "note": "Normal force, shear force, bending moment and the deformed shape, with the reactions and the value at any point."
+      },
+      "facts": {
+        "elements": {
+          "title": "Timoshenko beams",
+          "body": "Shear deformation where it matters; for slender members the results match Euler–Bernoulli theory."
+        },
+        "structures": {
+          "title": "Beams, frames, trusses",
+          "body": "In the plane, with hinges at any member end."
+        },
+        "sharing": {
+          "title": "Links and files",
+          "body": "A whole model in one link or a project file; drawings as PNG or SVG, tables as CSV."
+        },
+        "settings": {
+          "title": "18 languages",
+          "body": "SI or US units, z-down or textbook y-up axes."
+        }
+      }
+    },
+    "heritage": {
+      "title": "Open source, with roots in the classroom",
+      "body": "EduBeam carries on the desktop EduBeam, created at the Department of Mechanics of the Faculty of Civil Engineering, CTU in Prague, and it still opens that program’s session files. The web edition is free and open source, and so is {'@'}edubeam/fem, the solver behind every number on this page.",
+      "github": "EduBeam on GitHub",
+      "solver": "{'@'}edubeam/fem on GitHub",
+      "team": "Who makes EduBeam"
+    }
+  },
+  "error": {
+    "notFoundTitle": "Page not found",
+    "notFound": "There is no page at this address. It may have moved, or the link may have a typo.",
+    "otherTitle": "Something went wrong",
+    "other": "This page could not be shown. Reloading it usually helps.",
+    "home": "Home page",
+    "guide": "Read the guide",
+    "message": "The supports do not hold the structure: it can still rotate freely.",
+    "figure": "A beam on a single pin support, its second support missing, turning freely about the pin under its load"
+  },
+  "problems": {
+    "families": {
+      "simple": {
+        "name": "Simply supported beam",
+        "skill": "Equilibrium of a beam",
+        "hint": "Take moments about A to find the reaction at B, then sum the vertical forces for A. The largest moment is where the shear force crosses zero, or under a point load."
+      },
+      "cantilever": {
+        "name": "Cantilever",
+        "skill": "A fixed support",
+        "hint": "Every reaction is at the wall: sum the vertical forces, then take moments about A. A cantilever’s largest moment is at the wall."
+      },
+      "overhang": {
+        "name": "Beam with an overhang",
+        "skill": "Hogging over a support",
+        "hint": "Take moments about A for the reaction at B. Then compare two candidates for the largest moment: in the span, where V = 0, and over B, where the overhang hogs."
+      },
+      "gerber": {
+        "name": "Gerber beam",
+        "skill": "An internal hinge",
+        "hint": "Start with GC: it rests on the hinge G and the roller C, and a hinge carries no moment. Then load ABG with the force the hinge passes on, and solve it as a beam with an overhang."
+      },
+      "threeHinged": {
+        "name": "Three-hinged frame",
+        "skill": "Thrust and a crown hinge",
+        "hint": "Moments about A and about E give the vertical reactions. Then cut at the crown hinge C, where M = 0, and take moments about C for one half: that gives the horizontal thrust."
+      },
+      "truss": {
+        "name": "Warren truss",
+        "skill": "Joints and sections",
+        "hint": "Find the reactions from the whole truss. Then cut through three bars, one of them the bar you want, and take moments about the joint where the other two meet; for a diagonal, sum the vertical forces instead."
+      },
+      "continuous": {
+        "name": "Two-span continuous beam",
+        "skill": "One redundant",
+        "hint": "One redundant: take the moment over B as the unknown. The three-moment equation, with M = 0 at A and C, gives it directly; the reactions then follow span by span."
+      },
+      "portal": {
+        "name": "Portal frame",
+        "skill": "A rigid frame",
+        "hint": "One redundant: release the horizontal reaction at D, find the horizontal movement of D under the loads and under a unit force there (virtual work, with M diagrams), and make it zero."
+      }
+    },
+    "statement": {
+      "simple": "A {L} m span on a pin at A and a roller at B, with {loads}.",
+      "cantilever": "A {L} m cantilever fixed at A, with q = {q} kN/m along it and F = {F} kN at the free end B.",
+      "cantileverMoment": "A {L} m cantilever fixed at A, with q = {q} kN/m along it and F = {F} kN at the free end B, and a counter-clockwise moment of {M} kNm at B.",
+      "overhang": "A {L} m span from a pin at A to a roller at B, overhanging {c} m to C, with q = {q} kN/m on the span and F = {F} kN at the tip C.",
+      "overhangAll": "A {L} m span from a pin at A to a roller at B, overhanging {c} m to C, with q = {q} kN/m on the whole length and F = {F} kN at the tip C.",
+      "gerber": "A pin at A and rollers at B and C carry a beam with an internal hinge at G, {g} m beyond B: AB = {L1} m, GC = {L3} m.",
+      "gerberLoad": "It carries q = {q} kN/m over its whole length.",
+      "gerberLoadForce": "It carries q = {q} kN/m over its whole length, and F = {F} kN at the middle of AB.",
+      "threeHinged": "A frame {L} m wide and {H} m high, on pins at A and E, with a hinge at the crown C.",
+      "threeHingedWhole": "The beam carries q = {q} kN/m over its whole length.",
+      "threeHingedHalf": "The beam carries q = {q} kN/m over its left half.",
+      "threeHingedWholeForce": "The beam carries q = {q} kN/m over its whole length, and F = {F} kN pushes B to the right.",
+      "threeHingedHalfForce": "The beam carries q = {q} kN/m over its left half, and F = {F} kN pushes B to the right.",
+      "truss": "A Warren truss of {panels}, each {d} m long and {h} m high, on a pin at A and a roller at {end}.",
+      "panels": "{n} panel | {n} panels",
+      "trussLoadAll": "A load of F = {F} kN acts downwards on every joint of the top chord.",
+      "trussLoad": "A load of F = {F} kN acts downwards on joints {joints}.",
+      "continuous": "A beam continuous over B, on a pin at A and rollers at B and C, with spans of {L1} m and {L2} m and q = {q} kN/m on the left span.",
+      "continuousBoth": "A beam continuous over B, on a pin at A and rollers at B and C, with spans of {L1} m and {L2} m and q = {q} kN/m on both spans.",
+      "portal": "A rigid frame {L} m wide and {H} m high on pins at A and D, with q = {q} kN/m on the beam BC.",
+      "portalForce": "A rigid frame {L} m wide and {H} m high on pins at A and D, with q = {q} kN/m on the beam BC and F = {F} kN pushing B to the right.",
+      "advancedNote": "EI is constant; neglect shear deformation."
+    },
+    "load": {
+      "udlSpan": "q = {q} kN/m over the whole span",
+      "pointFromA": "F = {F} kN at {a} m from A",
+      "momentAtB": "a counter-clockwise moment of {M} kNm at B"
+    },
+    "task": {
+      "beam": "Find the support reactions and the largest bending moment.",
+      "bar": "Find the support reactions and the force in bar {bar}."
+    },
+    "answer": {
+      "horizontal": "Horizontal reaction at {node}",
+      "vertical": "Vertical reaction at {node}",
+      "fixingMoment": "Fixing moment at {node}",
+      "bar": "Force in bar {bar}",
+      "largestMoment": "Largest bending moment, in magnitude"
+    }
+  },
+  "library": {
+    "getStarted": "Get started",
+    "by": "By {author}",
+    "fromRepo": "Not on npm yet: the line above installs it from GitHub.",
+    "comingToNpm": "Coming to npm soon. The source is on GitHub."
+  },
+  "solver": {
+    "tagline": "A finite element solver for plane frames, written in TypeScript.",
+    "seo": {
+      "title": "{'@'}edubeam/fem: a 2D frame FEM solver in TypeScript",
+      "description": "A finite element solver for plane beams, frames and trusses in TypeScript: hinges, member, temperature and settlement loads, load cases, reactions and exact internal forces. The engine behind EduBeam."
+    },
+    "run": {
+      "title": "Run on this page",
+      "lede": "The code on the left, solved in your browser as the page loaded. The values on the right are what it returns, and the figure is drawn from the same solver by {plot}.",
+      "plusShear": "{formula}, plus shear"
+    },
+    "features": {
+      "title": "What's in it",
+      "analyses": {
+        "title": "Analyses",
+        "body": "Linear statics with as many load cases as you need. Diagrams are exact between the nodes: no mesh to refine."
+      },
+      "elements": {
+        "title": "Elements",
+        "body": "A two-node Timoshenko beam in the x–z plane. Hinged at both ends it is a truss bar."
+      },
+      "loads": {
+        "title": "Loads",
+        "body": "Nodal forces and moments, point, uniform and trapezoidal loads along members, temperature, settlements."
+      },
+      "results": {
+        "title": "Results",
+        "body": "N, V and M anywhere along a member, deflected shapes, end forces, displacements and reactions."
+      },
+      "reference": "Every class and method"
+    },
+    "behind": {
+      "title": "The solver behind EduBeam",
+      "body": "Every diagram, reaction and deflection in EduBeam, and every figure on this site, is computed by {name}.",
+      "link": "See EduBeam"
+    }
+  },
+  "plot": {
+    "tagline": "Vue components that draw plane structures and their results, in the figures’ own style.",
+    "seo": {
+      "title": "{'@'}edubeam/plot: structural diagrams for Vue",
+      "description": "Vue components that draw plane structures, loads, reactions and N, V, M diagrams as a textbook does, for course pages, slides, exercise sheets and standalone SVG files."
+    },
+    "try": {
+      "title": "Try it",
+      "lede": "A frame solved by {'@'}edubeam/fem on this page. Change what is drawn; the code follows.",
+      "labelStyle": "Label style",
+      "horizontal": "Horizontal",
+      "axis": "Along the ordinate"
+    },
+    "teaching": {
+      "title": "Made for teaching material",
+      "lede": "A model in code is a figure that can't go out of date: change a number and the drawing, the reactions and the diagrams follow. A seed picks a new exercise; the same seed always gives the same one. This site's {practice} and {exam} are made this way.",
+      "practice": "practice problems",
+      "exam": "exam builder"
+    },
+    "uses": {
+      "exercises": {
+        "title": "Exercises and tests",
+        "body": "One exercise per student from a seed, with its answer key, printed or as figures for LaTeX and Word."
+      },
+      "slides": {
+        "title": "Slides and notes",
+        "body": "Figures that build up click by click in Slidev, Vue or Beamer, solved live."
+      },
+      "embedding": {
+        "title": "In your docs and apps",
+        "body": "Vite, VitePress or Nuxt, rendered on the server, or from pre-solved JSON."
+      },
+      "print": {
+        "title": "Files for print",
+        "body": "A standalone SVG with plain colours, for Word, LaTeX and Inkscape."
+      }
+    },
+    "features": {
+      "title": "What it does",
+      "style": {
+        "title": "In the figures’ style",
+        "body": "Members, supports, loads, reactions and hatched diagrams as on this site, with chain dimensions and named unknown reactions for exercise sheets."
+      },
+      "readable": {
+        "title": "Readable at any size",
+        "body": "Text and lines keep their pixel size; values that would collide are moved or dropped, never clipped."
+      },
+      "exact": {
+        "title": "Exact",
+        "body": "Diagrams are the solver’s own polynomials: extremes found exactly, steps at point loads drawn as steps."
+      },
+      "fits": {
+        "title": "Fits a page",
+        "body": "Colours from your CSS, light and dark. Renders on the server and never captures scrolling."
+      },
+      "components": "Every prop"
+    }
+  },
+  "practice": {
+    "seo": {
+      "title": "Statics practice problems with instant answers {'|'} EduBeam",
+      "description": "Free statics practice: beams, frames and trusses with fresh numbers every time. Work out the reactions and the largest bending moment or bar force, check your answers instantly, then see the diagrams.",
+      "ogTitle": "Statics practice problems with instant answers",
+      "ogDescription": "Beams, frames and trusses with fresh numbers every time. Check your reactions and moments instantly, then see the diagrams."
+    },
+    "title": "Practice statics",
+    "lede": "A new problem every time, with its exact answers to check yours against. Work it out on paper, type in what you get, and then see the diagrams.",
+    "codes": "Every problem has a code, such as {code}. The same code is always the same problem: share it with a classmate, or open the one your teacher gave you.",
+    "announce": "New problem: {structure}, {code}.",
+    "structures": {
+      "title": "Structures",
+      "count": "{picked} of {total}",
+      "legend": "Structures that New problem picks from",
+      "determinate": "Statically determinate",
+      "indeterminate": "Statically indeterminate",
+      "note": "New problem picks one of these at random."
+    },
+    "code": {
+      "label": "Problem code",
+      "placeholder": "Code",
+      "open": "Open",
+      "error": "That is not a problem code. A code is a letter and a number, such as H2048."
+    },
+    "newProblem": "New problem",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied",
+    "barForces": "Bar forces, tension positive",
+    "answers": {
+      "title": "Your answers",
+      "note": "The reactions are drawn on the problem the way they count as positive. If one acts the other way, its answer is negative.",
+      "field": "{label}, {direction}, in {unit}"
+    },
+    "positive": {
+      "right": "positive to the right",
+      "up": "positive upwards",
+      "counterClockwise": "positive counter-clockwise",
+      "tension": "positive in tension",
+      "magnitude": "magnitude"
+    },
+    "mark": {
+      "correct": "correct",
+      "exact": "exact answer",
+      "sign": "sign?",
+      "signLong": "right size, wrong sign",
+      "wrong": "not right"
+    },
+    "verdict": {
+      "allRight": "All correct. The diagrams are now drawn on the problem.",
+      "sign": "{right} of {total} right. Where it says {sign}, the size is right and the direction is not.",
+      "some": "{right} of {total} right. Answers within 1 % count.",
+      "revealed": "The exact answers are beside your fields, and the diagrams are drawn on the problem."
+    },
+    "check": "Check",
+    "nextProblem": "Next problem",
+    "hint": "Hint",
+    "showAnswers": "Show the answers",
+    "solved": "Solved on this device: {n} problem. | Solved on this device: {n} problems.",
+    "about": {
+      "answers": {
+        "title": "Where the answers come from",
+        "body": "Each problem is solved in your browser by {solver}, the solver behind EduBeam, and drawn by {plot}. The largest moment is found exactly, not read off a sampled curve."
+      },
+      "signs": {
+        "title": "Signs and units",
+        "body": "Answers are in kN and kNm. Loads act downwards unless the problem says otherwise. Reactions are positive to the right, upwards and counter-clockwise, as each field shows; bar forces are positive in tension. The diagrams follow EduBeam’s {conventions}.",
+        "conventions": "sign conventions"
+      },
+      "teachers": {
+        "title": "For teachers",
+        "body": "The {exam} prints these problems as test papers, a different version for each student, with an answer key. Each problem’s code lets students check their own answers here afterwards.",
+        "exam": "exam builder"
+      }
+    }
+  },
+  "exam": {
+    "seo": {
+      "title": "Statics exam builder: printable tests with answer keys {'|'} EduBeam",
+      "description": "Build statics tests in your browser: beams, frames and trusses with generated numbers, a different version for every student, an answer key, and SVG figures for LaTeX and Word. Free, nothing to install.",
+      "ogTitle": "Statics exam builder: printable tests with answer keys",
+      "ogDescription": "Generated beams, frames and trusses, a version per student, an answer key, and SVG figures. Free, in the browser."
+    },
+    "title": "Exam builder",
+    "lede": "Test papers of statics problems, a different version for each student, with an answer key. Everything is made in your browser and nothing is sent anywhere; the settings are in the page’s address, so a bookmark brings the same papers back.",
+    "defaultTitle": "Statics test",
+    "settings": {
+      "title": "Title",
+      "subtitle": "Second line",
+      "subtitlePlaceholder": "Course, date, time allowed",
+      "problems": "Problems",
+      "problem": "Problem {n}",
+      "determinate": "Statically determinate",
+      "indeterminate": "Statically indeterminate",
+      "remove": "Remove problem {n}",
+      "add": "Add a problem",
+      "problemsNote": "Every version has these problems, in this order, each with its own numbers. Up to {max}.",
+      "versions": "Versions",
+      "versionsNote": "One per student: up to {max}.",
+      "number": "Exam number",
+      "newNumber": "New",
+      "newNumberTitle": "New numbers for every problem",
+      "numberNote": "The same number always makes the same papers.",
+      "onPapers": "On the papers",
+      "nameLine": "A line for the student’s name",
+      "working": "Space for working",
+      "key": "An answer key at the end",
+      "codes": "Problem codes",
+      "codesNote": "For homework: students check their answers on the {practice}, which shows the solution. Leave off for a test.",
+      "practicePage": "practice page"
+    },
+    "zipNote": "The .zip has every figure and key as SVG, for LaTeX and Word, and the answers as a CSV table for marking.",
+    "summary": {
+      "papers": "{n} paper | {n} papers",
+      "problems": "{n} problem | {n} problems",
+      "plain": "{papers} of {problems}",
+      "withKey": "{papers} of {problems}, with its answer key",
+      "withKeys": "{papers} of {problems}, with answer keys"
+    },
+    "jump": {
+      "label": "Go to a paper",
+      "placeholder": "Go to…",
+      "papers": "Papers",
+      "keys": "Answer keys",
+      "key": "Key, version {n}"
+    },
+    "version": "Version {n}",
+    "download": "Download .zip",
+    "downloadTitle": "Every figure and key as SVG, for LaTeX and Word, and the answers as a CSV table for marking",
+    "print": "Print",
+    "printLong": "Print or save as PDF",
+    "paper": {
+      "name": "Name",
+      "rules": "Forces in kN, moments in kNm. Loads act downwards unless the problem says otherwise. The reactions are the forces the supports put on the structure, drawn the way they count as positive: to the right, upwards and counter-clockwise. A negative answer acts the other way. Bar forces are positive in tension.",
+      "check": "Check your answers at {url}"
+    },
+    "key": {
+      "title": "Answer key",
+      "version": "{title}, version {n}",
+      "exam": "Exam {n}"
+    },
+    "tension": "tension +",
+    "solutionFigure": "{name}: solution"
+  },
+  "exerciseGenerator": {
+    "solveIt": "Solve it on the practice page",
+    "exercise": "The exercise",
+    "key": "Answer key",
+    "solution": "Its solution",
+    "caption": "Generated in your browser: the seed picks the structure and its numbers, {'@'}edubeam/fem solves it, {'@'}edubeam/plot draws both sides. Whole test papers come from the {exam}.",
+    "exam": "exam builder",
+    "newExercise": "New exercise"
+  },
+  "ui": {
+    "menu": "Menu",
+    "darkMode": "Dark mode",
+    "lightMode": "Light mode",
+    "language": "Language: {name}",
+    "guideNav": "Guide",
+    "copy": "Copy",
+    "copied": "Copied",
+    "copyCode": "Copy code",
+    "docs": "Docs",
+    "elementSketch": "An element in its local axes"
+  },
+  "heroFigure": {
+    "aria": "A beam with an overhang under a uniform load and a movable point load, with its shear force, bending moment and deflection diagrams",
+    "slider": "Position of the 20 kN point load",
+    "loadAt": "at {x} m",
+    "hint": "Drag the load, or point at a diagram to read it.",
+    "fromA": "{x} m from A",
+    "reactions": "reactions {a} kN at A and {b} kN at B",
+    "sagging": "largest sagging moment {m} kNm",
+    "hogging": "hogging moment over B {m} kNm"
+  },
+  "plotTexts": {
+    "structure": "Structure",
+    "structureWith": "Structure with its {parts}",
+    "layers": {
+      "N": "normal force",
+      "V": "shear force",
+      "M": "bending moment",
+      "w": "deformed shape",
+      "reactions": "reactions",
+      "loads": "loads"
+    },
+    "loadHandle": "Position of the load {load}",
+    "loadPosition": "{metres} m from the start of the beam",
+    "stack": "A beam with its loads",
+    "stackWith": "A beam with its loads, and its {rows} beneath",
+    "rows": {
+      "N": "normal force",
+      "V": "shear force",
+      "M": "bending moment",
+      "w": "deflection"
+    },
+    "temperatureUniform": "ΔT",
+    "temperatureGradient": "ΔTb − ΔTt"
+  }
+}

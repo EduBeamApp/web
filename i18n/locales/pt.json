@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "description": "Análise estrutural online: vigas, pórticos e treliças planos no navegador."
+  },
+  "nav": {
+    "guide": "Guia",
+    "tutorials": "Tutoriais",
+    "examples": "Exemplos",
+    "faq": "FAQ",
+    "openApp": "Abrir o aplicativo"
+  },
+  "docs": {
+    "onThisPage": "Nesta página",
+    "prev": "Página anterior",
+    "next": "Próxima página",
+    "lastUpdated": "Última atualização"
+  },
+  "footer": {
+    "copyright": "Colaboradores do EduBeam"
+  },
+  "components": {
+    "loadsTitle": "Prévia dos tipos de carga",
+    "loadsLede": "É assim que os tipos de carga mais comuns aparecem no EduBeam. Cada cartão é um modelo resolvido ao vivo e abre no aplicativo exatamente como foi montado.",
+    "openInApp": "Abrir no EduBeam",
+    "simplySupportedBeam": "Viga biapoiada",
+    "udlBlurb": "Vão com apoio fixo e apoio móvel sob 12 kN/m: os diagramas clássicos de cortante e momento.",
+    "trapezoidalBlurb": "Uma carga que cresce de 4 a 14 kN/m no vão da direita.",
+    "concentratedBlurb": "Uma única carga de 18 kN para baixo no meio do vão, sem nó extra.",
+    "nodalBlurb": "Uma carga de 20 kN no apoio intermediário, para conferir reações e deslocamentos.",
+    "temperatureBlurb": "Uma diferença de temperatura ao longo da altura (em cima mais quente que embaixo) e a curvatura que ela causa.",
+    "promoTitle": "Leve seus pórticos",
+    "promoAccent": "para o 3D.",
+    "promoSubtitle": "lajes, cascas e verificações de aço no navegador",
+    "promoCta": "Experimente grátis",
+    "spanLength": "Comprimento do vão",
+    "loadIntensity": "Intensidade da carga",
+    "loadPosition": "Posição da carga",
+    "heroHint": "Mova a carga e os diagramas acompanham."
+  },
+  "common": {
+    "deformedShape": "Forma deformada",
+    "normalForce": "Esforço normal",
+    "shearForce": "Esforço cortante",
+    "bendingMoment": "Momento fletor"
+  },
+  "loadType": {
+    "udl": "Carga distribuída uniforme",
+    "trapezoidal": "Carga trapezoidal",
+    "concentrated": "Carga concentrada",
+    "temperature": "Carga térmica"
+  },
+  "loads": {
+    "nodalLoad": "Carga nodal",
+    "temperatureDeltaTbtNoHTML": "ΔTb-ΔTt",
+    "temperatureDeltaTsNoHTML": "ΔTc"
+  },
+  "examples": {
+    "items": {
+      "welcome": {
+        "title": "Viga hiperestática",
+        "blurb": "Viga hiperestática de 3 m, engastada e com apoio móvel, sob carga distribuída uniforme de 10 kN/m."
+      },
+      "cantilever": {
+        "title": "Viga em balanço",
+        "blurb": "Balanço de 4 m resistindo a uma carga nodal de 18 kN para baixo, destacando a curvatura e o deslocamento da extremidade."
+      },
+      "pratt": {
+        "title": "Treliça Warren",
+        "blurb": "Treliça Warren simples com cargas de 8 kN nos nós, mostrando a distribuição dos esforços normais e os deslocamentos."
+      },
+      "continuous": {
+        "title": "Viga contínua de três vãos",
+        "blurb": "Vãos de 5+6+5 m com carga distribuída + concentrada + distribuída para comparar a curvatura e as rotações nos apoios."
+      },
+      "portal": {
+        "title": "Pórtico sob caso de carga",
+        "blurb": "Viga de 8 m sobre pilares de 6 m sob carga distribuída de cobertura e cargas lateral e vertical nos nós de canto, para verificar deslocamento lateral e flexão."
+      },
+      "temperature": {
+        "title": "Carga térmica",
+        "blurb": "Viga biapoiada de 8 m com carga térmica uniforme e não uniforme."
+      }
+    }
+  },
+  "search": {
+    "label": "Pesquisar",
+    "placeholder": "Pesquisar na documentação",
+    "noResults": "Nenhum resultado para “{query}”"
+  }
+}

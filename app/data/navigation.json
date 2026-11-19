@@ -1,0 +1,2296 @@
+{
+  "en": {
+    "label": "English",
+    "lang": "en",
+    "appLocale": "en",
+    "sidebar": [
+      {
+        "text": "Start here",
+        "icon": "lucide:flag",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Introduction",
+            "link": "/guide/introduction"
+          },
+          {
+            "text": "Quick start (10 min)",
+            "link": "/guide/quick-start"
+          }
+        ]
+      },
+      {
+        "text": "Build a model",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
+        "items": [
+          {
+            "text": "The interface",
+            "link": "/essentials/user-interface"
+          },
+          {
+            "text": "Nodes & supports",
+            "link": "/essentials/nodes-supports"
+          },
+          {
+            "text": "Elements, materials & sections",
+            "link": "/essentials/elements"
+          },
+          {
+            "text": "Loads",
+            "link": "/essentials/loads"
+          },
+          {
+            "text": "Units & settings",
+            "link": "/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "Read the results",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Results & diagrams",
+            "link": "/essentials/results"
+          },
+          {
+            "text": "Checking results by hand",
+            "link": "/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "Share & teach",
+        "icon": "lucide:presentation",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Files, links & export",
+            "link": "/essentials/import-export"
+          },
+          {
+            "text": "Teaching with EduBeam",
+            "link": "/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "Help",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Keyboard, mouse & touch",
+            "link": "/reference/shortcuts"
+          },
+          {
+            "text": "Troubleshooting",
+            "link": "/reference/troubleshooting"
+          },
+          {
+            "text": "FAQ",
+            "link": "/faq/"
+          }
+        ]
+      },
+      {
+        "text": "Tutorials",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Inclined beam",
+            "link": "/tutorials/inclined-beam"
+          },
+          {
+            "text": "Three-hinged frame",
+            "link": "/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Plane truss",
+            "link": "/tutorials/truss"
+          },
+          {
+            "text": "Continuous beam & settlement",
+            "link": "/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "Practice",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Practice problems",
+            "link": "/practice"
+          },
+          {
+            "text": "Exam builder",
+            "link": "/exam"
+          },
+          {
+            "text": "Examples",
+            "link": "/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Theory manual",
+        "icon": "lucide:sigma",
+        "section": "theory",
+        "items": [
+          {
+            "text": "Axes & sign conventions",
+            "link": "/elements/conventions"
+          },
+          {
+            "text": "Beam element",
+            "link": "/elements/beam"
+          },
+          {
+            "text": "Truss element",
+            "link": "/elements/truss"
+          },
+          {
+            "text": "How EduBeam solves",
+            "link": "/elements/analysis"
+          }
+        ]
+      }
+    ]
+  },
+  "de": {
+    "label": "Deutsch",
+    "lang": "de",
+    "appLocale": "de",
+    "sidebar": [
+      {
+        "text": "Erste Schritte",
+        "items": [
+          {
+            "text": "Einführung",
+            "link": "/de/guide/introduction"
+          },
+          {
+            "text": "Schnellstart (10 min)",
+            "link": "/de/guide/quick-start"
+          },
+          {
+            "text": "Beispiele",
+            "link": "/de/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Tutorials",
+        "items": [
+          {
+            "text": "Dreigelenkrahmen",
+            "link": "/de/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Ebenes Fachwerk",
+            "link": "/de/tutorials/truss"
+          }
+        ]
+      },
+      {
+        "text": "Modellierung",
+        "items": [
+          {
+            "text": "Benutzeroberfläche",
+            "link": "/de/essentials/user-interface"
+          },
+          {
+            "text": "Knoten & Lager",
+            "link": "/de/essentials/nodes-supports"
+          },
+          {
+            "text": "Elemente, Materialien & Querschnitte",
+            "link": "/de/essentials/elements"
+          },
+          {
+            "text": "Lasten",
+            "link": "/de/essentials/loads"
+          },
+          {
+            "text": "Einheiten & Einstellungen",
+            "link": "/de/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "Ergebnisse",
+        "items": [
+          {
+            "text": "Ergebnisse & Diagramme",
+            "link": "/de/essentials/results"
+          },
+          {
+            "text": "Ergebnisse von Hand prüfen",
+            "link": "/de/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "Dateien & Teilen",
+        "items": [
+          {
+            "text": "Import, Export & Teilen",
+            "link": "/de/essentials/import-export"
+          },
+          {
+            "text": "Lehren mit EduBeam",
+            "link": "/de/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "Referenz",
+        "items": [
+          {
+            "text": "Tastatur, Maus & Touch",
+            "link": "/de/reference/shortcuts"
+          },
+          {
+            "text": "Fehlerbehebung",
+            "link": "/de/reference/troubleshooting"
+          },
+          {
+            "text": "FAQ",
+            "link": "/de/faq/"
+          }
+        ]
+      },
+      {
+        "text": "Theoriehandbuch",
+        "items": [
+          {
+            "text": "Koordinatensystem & Vorzeichenkonventionen",
+            "link": "/de/elements/conventions"
+          },
+          {
+            "text": "Balken",
+            "link": "/de/elements/beam"
+          },
+          {
+            "text": "Fachwerkstab",
+            "link": "/de/elements/truss"
+          }
+        ],
+        "collapsed": true
+      }
+    ]
+  },
+  "es": {
+    "label": "Español",
+    "lang": "es",
+    "appLocale": "es",
+    "sidebar": [
+      {
+        "text": "Primeros pasos",
+        "items": [
+          {
+            "text": "Introducción",
+            "link": "/es/guide/introduction"
+          },
+          {
+            "text": "Inicio rápido (10 min)",
+            "link": "/es/guide/quick-start"
+          },
+          {
+            "text": "Ejemplos",
+            "link": "/es/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Tutoriales",
+        "items": [
+          {
+            "text": "Pórtico triarticulado",
+            "link": "/es/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Celosía plana",
+            "link": "/es/tutorials/truss"
+          }
+        ]
+      },
+      {
+        "text": "Modelado",
+        "items": [
+          {
+            "text": "Interfaz de usuario",
+            "link": "/es/essentials/user-interface"
+          },
+          {
+            "text": "Nodos y apoyos",
+            "link": "/es/essentials/nodes-supports"
+          },
+          {
+            "text": "Elementos, materiales y secciones",
+            "link": "/es/essentials/elements"
+          },
+          {
+            "text": "Cargas",
+            "link": "/es/essentials/loads"
+          },
+          {
+            "text": "Unidades y ajustes",
+            "link": "/es/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "Resultados",
+        "items": [
+          {
+            "text": "Resultados y diagramas",
+            "link": "/es/essentials/results"
+          },
+          {
+            "text": "Comprobar resultados a mano",
+            "link": "/es/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "Archivos y compartir",
+        "items": [
+          {
+            "text": "Importar, exportar y compartir",
+            "link": "/es/essentials/import-export"
+          },
+          {
+            "text": "Enseñar con EduBeam",
+            "link": "/es/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "Referencia",
+        "items": [
+          {
+            "text": "Teclado, ratón y pantalla táctil",
+            "link": "/es/reference/shortcuts"
+          },
+          {
+            "text": "Solución de problemas",
+            "link": "/es/reference/troubleshooting"
+          },
+          {
+            "text": "Preguntas frecuentes",
+            "link": "/es/faq/"
+          }
+        ]
+      },
+      {
+        "text": "Manual teórico",
+        "items": [
+          {
+            "text": "Sistema de coordenadas y convenio de signos",
+            "link": "/es/elements/conventions"
+          },
+          {
+            "text": "Viga",
+            "link": "/es/elements/beam"
+          },
+          {
+            "text": "Barra de celosía",
+            "link": "/es/elements/truss"
+          }
+        ],
+        "collapsed": true
+      }
+    ]
+  },
+  "pt": {
+    "label": "Português",
+    "lang": "pt-BR",
+    "appLocale": "pt",
+    "sidebar": [
+      {
+        "text": "Primeiros passos",
+        "items": [
+          {
+            "text": "Introdução",
+            "link": "/pt/guide/introduction"
+          },
+          {
+            "text": "Início rápido (10 min)",
+            "link": "/pt/guide/quick-start"
+          },
+          {
+            "text": "Exemplos",
+            "link": "/pt/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Tutoriais",
+        "items": [
+          {
+            "text": "Pórtico triarticulado",
+            "link": "/pt/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Treliça plana",
+            "link": "/pt/tutorials/truss"
+          }
+        ]
+      },
+      {
+        "text": "Modelagem",
+        "items": [
+          {
+            "text": "Interface do usuário",
+            "link": "/pt/essentials/user-interface"
+          },
+          {
+            "text": "Nós e apoios",
+            "link": "/pt/essentials/nodes-supports"
+          },
+          {
+            "text": "Elementos, materiais e seções",
+            "link": "/pt/essentials/elements"
+          },
+          {
+            "text": "Cargas",
+            "link": "/pt/essentials/loads"
+          },
+          {
+            "text": "Unidades e configurações",
+            "link": "/pt/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "Resultados",
+        "items": [
+          {
+            "text": "Resultados e diagramas",
+            "link": "/pt/essentials/results"
+          },
+          {
+            "text": "Conferir resultados à mão",
+            "link": "/pt/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "Arquivos e compartilhamento",
+        "items": [
+          {
+            "text": "Importar, exportar e compartilhar",
+            "link": "/pt/essentials/import-export"
+          },
+          {
+            "text": "Ensinar com o EduBeam",
+            "link": "/pt/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "Referência",
+        "items": [
+          {
+            "text": "Teclado, mouse e toque",
+            "link": "/pt/reference/shortcuts"
+          },
+          {
+            "text": "Solução de problemas",
+            "link": "/pt/reference/troubleshooting"
+          },
+          {
+            "text": "Perguntas frequentes",
+            "link": "/pt/faq/"
+          }
+        ]
+      },
+      {
+        "text": "Manual teórico",
+        "items": [
+          {
+            "text": "Sistema de coordenadas e convenções de sinais",
+            "link": "/pt/elements/conventions"
+          },
+          {
+            "text": "Viga",
+            "link": "/pt/elements/beam"
+          },
+          {
+            "text": "Treliça",
+            "link": "/pt/elements/truss"
+          }
+        ],
+        "collapsed": true
+      }
+    ]
+  },
+  "fr": {
+    "label": "Français",
+    "lang": "fr",
+    "appLocale": "fr",
+    "sidebar": [
+      {
+        "text": "Premiers pas",
+        "items": [
+          {
+            "text": "Introduction",
+            "link": "/fr/guide/introduction"
+          },
+          {
+            "text": "Démarrage rapide (10 min)",
+            "link": "/fr/guide/quick-start"
+          },
+          {
+            "text": "Exemples",
+            "link": "/fr/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Tutoriels",
+        "items": [
+          {
+            "text": "Portique à trois articulations",
+            "link": "/fr/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Treillis plan",
+            "link": "/fr/tutorials/truss"
+          }
+        ]
+      },
+      {
+        "text": "Modélisation",
+        "items": [
+          {
+            "text": "Interface utilisateur",
+            "link": "/fr/essentials/user-interface"
+          },
+          {
+            "text": "Nœuds et appuis",
+            "link": "/fr/essentials/nodes-supports"
+          },
+          {
+            "text": "Éléments, matériaux et sections",
+            "link": "/fr/essentials/elements"
+          },
+          {
+            "text": "Charges",
+            "link": "/fr/essentials/loads"
+          },
+          {
+            "text": "Unités et paramètres",
+            "link": "/fr/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "Résultats",
+        "items": [
+          {
+            "text": "Résultats et diagrammes",
+            "link": "/fr/essentials/results"
+          },
+          {
+            "text": "Vérifier les résultats à la main",
+            "link": "/fr/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "Fichiers et partage",
+        "items": [
+          {
+            "text": "Import, export et partage",
+            "link": "/fr/essentials/import-export"
+          },
+          {
+            "text": "Enseigner avec EduBeam",
+            "link": "/fr/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "Référence",
+        "items": [
+          {
+            "text": "Clavier, souris et tactile",
+            "link": "/fr/reference/shortcuts"
+          },
+          {
+            "text": "Dépannage",
+            "link": "/fr/reference/troubleshooting"
+          },
+          {
+            "text": "FAQ",
+            "link": "/fr/faq/"
+          }
+        ]
+      },
+      {
+        "text": "Manuel théorique",
+        "items": [
+          {
+            "text": "Repère et conventions de signe",
+            "link": "/fr/elements/conventions"
+          },
+          {
+            "text": "Poutre",
+            "link": "/fr/elements/beam"
+          },
+          {
+            "text": "Treillis",
+            "link": "/fr/elements/truss"
+          }
+        ],
+        "collapsed": true
+      }
+    ]
+  },
+  "cs": {
+    "label": "Čeština",
+    "lang": "cs",
+    "appLocale": "cs",
+    "sidebar": [
+      {
+        "text": "Začínáme",
+        "icon": "lucide:flag",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Úvod",
+            "link": "/cs/guide/introduction"
+          },
+          {
+            "text": "Rychlý start (10 min)",
+            "link": "/cs/guide/quick-start"
+          }
+        ]
+      },
+      {
+        "text": "Sestavení modelu",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Uživatelské rozhraní",
+            "link": "/cs/essentials/user-interface"
+          },
+          {
+            "text": "Uzly a podpory",
+            "link": "/cs/essentials/nodes-supports"
+          },
+          {
+            "text": "Prvky, materiály a průřezy",
+            "link": "/cs/essentials/elements"
+          },
+          {
+            "text": "Zatížení",
+            "link": "/cs/essentials/loads"
+          },
+          {
+            "text": "Jednotky a nastavení",
+            "link": "/cs/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "Čtení výsledků",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Výsledky a průběhy",
+            "link": "/cs/essentials/results"
+          },
+          {
+            "text": "Ověření výsledků ručně",
+            "link": "/cs/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "Sdílení a výuka",
+        "icon": "lucide:presentation",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Soubory, odkazy a export",
+            "link": "/cs/essentials/import-export"
+          },
+          {
+            "text": "Výuka s EduBeamem",
+            "link": "/cs/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "Nápověda",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Klávesnice, myš a dotyk",
+            "link": "/cs/reference/shortcuts"
+          },
+          {
+            "text": "Řešení potíží",
+            "link": "/cs/reference/troubleshooting"
+          },
+          {
+            "text": "Časté dotazy",
+            "link": "/cs/faq/"
+          }
+        ]
+      },
+      {
+        "text": "Návody",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Šikmý nosník",
+            "link": "/cs/tutorials/inclined-beam"
+          },
+          {
+            "text": "Trojkloubový rám",
+            "link": "/cs/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Rovinná příhradová konstrukce",
+            "link": "/cs/tutorials/truss"
+          },
+          {
+            "text": "Spojitý nosník a pokles podpory",
+            "link": "/cs/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "Procvičování",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Úlohy k procvičení",
+            "link": "/cs/practice"
+          },
+          {
+            "text": "Generátor písemek",
+            "link": "/cs/exam"
+          },
+          {
+            "text": "Příklady",
+            "link": "/cs/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Teoretický manuál",
+        "icon": "lucide:sigma",
+        "section": "theory",
+        "items": [
+          {
+            "text": "Souřadný systém a znaménková konvence",
+            "link": "/cs/elements/conventions"
+          },
+          {
+            "text": "Nosníkový prvek",
+            "link": "/cs/elements/beam"
+          },
+          {
+            "text": "Příhradový prut",
+            "link": "/cs/elements/truss"
+          },
+          {
+            "text": "Jak EduBeam řeší model",
+            "link": "/cs/elements/analysis"
+          }
+        ]
+      }
+    ]
+  },
+  "zh": {
+    "label": "中文",
+    "lang": "zh",
+    "appLocale": "cn",
+    "sidebar": [
+      {
+        "text": "入门",
+        "items": [
+          {
+            "text": "简介",
+            "link": "/zh/guide/introduction"
+          },
+          {
+            "text": "快速入门（10 分钟）",
+            "link": "/zh/guide/quick-start"
+          },
+          {
+            "text": "示例",
+            "link": "/zh/examples/"
+          }
+        ]
+      },
+      {
+        "text": "教程",
+        "items": [
+          {
+            "text": "三铰刚架",
+            "link": "/zh/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "平面桁架",
+            "link": "/zh/tutorials/truss"
+          }
+        ]
+      },
+      {
+        "text": "建模",
+        "items": [
+          {
+            "text": "用户界面",
+            "link": "/zh/essentials/user-interface"
+          },
+          {
+            "text": "节点与支座",
+            "link": "/zh/essentials/nodes-supports"
+          },
+          {
+            "text": "单元、材料与截面",
+            "link": "/zh/essentials/elements"
+          },
+          {
+            "text": "荷载",
+            "link": "/zh/essentials/loads"
+          },
+          {
+            "text": "单位与设置",
+            "link": "/zh/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "结果",
+        "items": [
+          {
+            "text": "结果与内力图",
+            "link": "/zh/essentials/results"
+          },
+          {
+            "text": "手算校核结果",
+            "link": "/zh/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "文件与分享",
+        "items": [
+          {
+            "text": "导入、导出与分享",
+            "link": "/zh/essentials/import-export"
+          },
+          {
+            "text": "用 EduBeam 教学",
+            "link": "/zh/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "参考",
+        "items": [
+          {
+            "text": "键盘、鼠标与触控",
+            "link": "/zh/reference/shortcuts"
+          },
+          {
+            "text": "疑难解答",
+            "link": "/zh/reference/troubleshooting"
+          },
+          {
+            "text": "常见问题",
+            "link": "/zh/faq/"
+          }
+        ]
+      },
+      {
+        "text": "理论手册",
+        "items": [
+          {
+            "text": "坐标系与符号约定",
+            "link": "/zh/elements/conventions"
+          },
+          {
+            "text": "梁单元",
+            "link": "/zh/elements/beam"
+          },
+          {
+            "text": "桁架单元",
+            "link": "/zh/elements/truss"
+          }
+        ],
+        "collapsed": true
+      }
+    ]
+  },
+  "hi": {
+    "label": "हिन्दी",
+    "lang": "hi",
+    "appLocale": "hi",
+    "sidebar": [
+      {
+        "text": "शुरुआत",
+        "items": [
+          {
+            "text": "परिचय",
+            "link": "/hi/guide/introduction"
+          },
+          {
+            "text": "त्वरित शुरुआत (10 मिनट)",
+            "link": "/hi/guide/quick-start"
+          },
+          {
+            "text": "उदाहरण",
+            "link": "/hi/examples/"
+          }
+        ]
+      },
+      {
+        "text": "ट्यूटोरियल",
+        "items": [
+          {
+            "text": "त्रि-हिंज फ्रेम",
+            "link": "/hi/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "समतल ट्रस",
+            "link": "/hi/tutorials/truss"
+          }
+        ]
+      },
+      {
+        "text": "मॉडलिंग",
+        "items": [
+          {
+            "text": "यूज़र इंटरफ़ेस",
+            "link": "/hi/essentials/user-interface"
+          },
+          {
+            "text": "नोड और सपोर्ट",
+            "link": "/hi/essentials/nodes-supports"
+          },
+          {
+            "text": "अवयव, सामग्री और अनुप्रस्थ काट",
+            "link": "/hi/essentials/elements"
+          },
+          {
+            "text": "भार",
+            "link": "/hi/essentials/loads"
+          },
+          {
+            "text": "इकाइयाँ और सेटिंग्स",
+            "link": "/hi/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "परिणाम",
+        "items": [
+          {
+            "text": "परिणाम और आरेख",
+            "link": "/hi/essentials/results"
+          },
+          {
+            "text": "परिणामों की हाथ से जाँच",
+            "link": "/hi/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "फ़ाइलें और साझाकरण",
+        "items": [
+          {
+            "text": "आयात, निर्यात और साझाकरण",
+            "link": "/hi/essentials/import-export"
+          },
+          {
+            "text": "EduBeam के साथ पढ़ाना",
+            "link": "/hi/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "संदर्भ",
+        "items": [
+          {
+            "text": "कीबोर्ड, माउस और टच",
+            "link": "/hi/reference/shortcuts"
+          },
+          {
+            "text": "समस्या निवारण",
+            "link": "/hi/reference/troubleshooting"
+          },
+          {
+            "text": "अक्सर पूछे जाने वाले प्रश्न",
+            "link": "/hi/faq/"
+          }
+        ]
+      },
+      {
+        "text": "सैद्धांतिक मैनुअल",
+        "items": [
+          {
+            "text": "निर्देशांक तंत्र और चिह्न परिपाटी",
+            "link": "/hi/elements/conventions"
+          },
+          {
+            "text": "बीम",
+            "link": "/hi/elements/beam"
+          },
+          {
+            "text": "ट्रस",
+            "link": "/hi/elements/truss"
+          }
+        ],
+        "collapsed": true
+      }
+    ]
+  },
+  "pl": {
+    "label": "Polski",
+    "lang": "pl",
+    "appLocale": "pl",
+    "sidebar": [
+      {
+        "text": "Pierwsze kroki",
+        "items": [
+          {
+            "text": "Wprowadzenie",
+            "link": "/pl/guide/introduction"
+          },
+          {
+            "text": "Szybki start (10 min)",
+            "link": "/pl/guide/quick-start"
+          },
+          {
+            "text": "Przykłady",
+            "link": "/pl/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Samouczki",
+        "items": [
+          {
+            "text": "Rama trójprzegubowa",
+            "link": "/pl/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Kratownica płaska",
+            "link": "/pl/tutorials/truss"
+          }
+        ]
+      },
+      {
+        "text": "Modelowanie",
+        "items": [
+          {
+            "text": "Interfejs użytkownika",
+            "link": "/pl/essentials/user-interface"
+          },
+          {
+            "text": "Węzły i podpory",
+            "link": "/pl/essentials/nodes-supports"
+          },
+          {
+            "text": "Elementy, materiały i przekroje",
+            "link": "/pl/essentials/elements"
+          },
+          {
+            "text": "Obciążenia",
+            "link": "/pl/essentials/loads"
+          },
+          {
+            "text": "Jednostki i ustawienia",
+            "link": "/pl/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "Wyniki",
+        "items": [
+          {
+            "text": "Wyniki i wykresy",
+            "link": "/pl/essentials/results"
+          },
+          {
+            "text": "Sprawdzanie wyników ręcznie",
+            "link": "/pl/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "Pliki i udostępnianie",
+        "items": [
+          {
+            "text": "Import, eksport i udostępnianie",
+            "link": "/pl/essentials/import-export"
+          },
+          {
+            "text": "Nauczanie z EduBeam",
+            "link": "/pl/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "Informacje dodatkowe",
+        "items": [
+          {
+            "text": "Klawiatura, mysz i dotyk",
+            "link": "/pl/reference/shortcuts"
+          },
+          {
+            "text": "Rozwiązywanie problemów",
+            "link": "/pl/reference/troubleshooting"
+          },
+          {
+            "text": "FAQ",
+            "link": "/pl/faq/"
+          }
+        ]
+      },
+      {
+        "text": "Podręcznik teoretyczny",
+        "items": [
+          {
+            "text": "Układ współrzędnych i konwencje znaków",
+            "link": "/pl/elements/conventions"
+          },
+          {
+            "text": "Belka",
+            "link": "/pl/elements/beam"
+          },
+          {
+            "text": "Kratownica",
+            "link": "/pl/elements/truss"
+          }
+        ],
+        "collapsed": true
+      }
+    ]
+  },
+  "uk": {
+    "label": "Українська",
+    "lang": "uk",
+    "appLocale": "uk",
+    "sidebar": [
+      {
+        "text": "Початок роботи",
+        "items": [
+          {
+            "text": "Вступ",
+            "link": "/uk/guide/introduction"
+          },
+          {
+            "text": "Швидкий старт (10 хв)",
+            "link": "/uk/guide/quick-start"
+          },
+          {
+            "text": "Приклади",
+            "link": "/uk/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Покрокові приклади",
+        "items": [
+          {
+            "text": "Тришарнірна рама",
+            "link": "/uk/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Плоска ферма",
+            "link": "/uk/tutorials/truss"
+          }
+        ]
+      },
+      {
+        "text": "Моделювання",
+        "items": [
+          {
+            "text": "Інтерфейс користувача",
+            "link": "/uk/essentials/user-interface"
+          },
+          {
+            "text": "Вузли та опори",
+            "link": "/uk/essentials/nodes-supports"
+          },
+          {
+            "text": "Елементи, матеріали та перерізи",
+            "link": "/uk/essentials/elements"
+          },
+          {
+            "text": "Навантаження",
+            "link": "/uk/essentials/loads"
+          },
+          {
+            "text": "Одиниці та налаштування",
+            "link": "/uk/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "Результати",
+        "items": [
+          {
+            "text": "Результати та епюри",
+            "link": "/uk/essentials/results"
+          },
+          {
+            "text": "Перевірка результатів вручну",
+            "link": "/uk/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "Файли та обмін",
+        "items": [
+          {
+            "text": "Імпорт, експорт та обмін",
+            "link": "/uk/essentials/import-export"
+          },
+          {
+            "text": "Навчання з EduBeam",
+            "link": "/uk/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "Довідник",
+        "items": [
+          {
+            "text": "Клавіатура, миша та сенсорний екран",
+            "link": "/uk/reference/shortcuts"
+          },
+          {
+            "text": "Усунення несправностей",
+            "link": "/uk/reference/troubleshooting"
+          },
+          {
+            "text": "Часті запитання",
+            "link": "/uk/faq/"
+          }
+        ]
+      },
+      {
+        "text": "Теоретичний посібник",
+        "items": [
+          {
+            "text": "Система координат і правила знаків",
+            "link": "/uk/elements/conventions"
+          },
+          {
+            "text": "Балка",
+            "link": "/uk/elements/beam"
+          },
+          {
+            "text": "Ферма",
+            "link": "/uk/elements/truss"
+          }
+        ],
+        "collapsed": true
+      }
+    ]
+  },
+  "ru": {
+    "label": "Русский",
+    "lang": "ru",
+    "appLocale": "ru",
+    "sidebar": [
+      {
+        "text": "Начало работы",
+        "items": [
+          {
+            "text": "Введение",
+            "link": "/ru/guide/introduction"
+          },
+          {
+            "text": "Быстрый старт (10 мин)",
+            "link": "/ru/guide/quick-start"
+          },
+          {
+            "text": "Примеры",
+            "link": "/ru/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Учебные примеры",
+        "items": [
+          {
+            "text": "Трёхшарнирная рама",
+            "link": "/ru/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Плоская ферма",
+            "link": "/ru/tutorials/truss"
+          }
+        ]
+      },
+      {
+        "text": "Моделирование",
+        "items": [
+          {
+            "text": "Интерфейс",
+            "link": "/ru/essentials/user-interface"
+          },
+          {
+            "text": "Узлы и опоры",
+            "link": "/ru/essentials/nodes-supports"
+          },
+          {
+            "text": "Элементы, материалы и сечения",
+            "link": "/ru/essentials/elements"
+          },
+          {
+            "text": "Нагрузки",
+            "link": "/ru/essentials/loads"
+          },
+          {
+            "text": "Единицы и настройки",
+            "link": "/ru/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "Результаты",
+        "items": [
+          {
+            "text": "Результаты и эпюры",
+            "link": "/ru/essentials/results"
+          },
+          {
+            "text": "Проверка результатов вручную",
+            "link": "/ru/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "Файлы и обмен",
+        "items": [
+          {
+            "text": "Импорт, экспорт и обмен",
+            "link": "/ru/essentials/import-export"
+          },
+          {
+            "text": "Преподавание с EduBeam",
+            "link": "/ru/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "Справочник",
+        "items": [
+          {
+            "text": "Клавиатура, мышь и сенсорный экран",
+            "link": "/ru/reference/shortcuts"
+          },
+          {
+            "text": "Устранение неполадок",
+            "link": "/ru/reference/troubleshooting"
+          },
+          {
+            "text": "FAQ",
+            "link": "/ru/faq/"
+          }
+        ]
+      },
+      {
+        "text": "Теоретическое руководство",
+        "items": [
+          {
+            "text": "Система координат и правила знаков",
+            "link": "/ru/elements/conventions"
+          },
+          {
+            "text": "Балка",
+            "link": "/ru/elements/beam"
+          },
+          {
+            "text": "Ферма",
+            "link": "/ru/elements/truss"
+          }
+        ],
+        "collapsed": true
+      }
+    ]
+  },
+  "th": {
+    "label": "ไทย",
+    "lang": "th",
+    "appLocale": "th",
+    "sidebar": [
+      {
+        "text": "เริ่มต้นใช้งาน",
+        "items": [
+          {
+            "text": "บทนำ",
+            "link": "/th/guide/introduction"
+          },
+          {
+            "text": "เริ่มต้นใช้งานด่วน (10 นาที)",
+            "link": "/th/guide/quick-start"
+          },
+          {
+            "text": "ตัวอย่าง",
+            "link": "/th/examples/"
+          }
+        ]
+      },
+      {
+        "text": "บทเรียน",
+        "items": [
+          {
+            "text": "โครงข้อแข็งสามจุดหมุน",
+            "link": "/th/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "โครงถักในระนาบ",
+            "link": "/th/tutorials/truss"
+          }
+        ]
+      },
+      {
+        "text": "การสร้างโมเดล",
+        "items": [
+          {
+            "text": "ส่วนติดต่อผู้ใช้",
+            "link": "/th/essentials/user-interface"
+          },
+          {
+            "text": "โหนดและจุดรองรับ",
+            "link": "/th/essentials/nodes-supports"
+          },
+          {
+            "text": "เอลิเมนต์ วัสดุ และหน้าตัด",
+            "link": "/th/essentials/elements"
+          },
+          {
+            "text": "แรงกระทำ",
+            "link": "/th/essentials/loads"
+          },
+          {
+            "text": "หน่วยและการตั้งค่า",
+            "link": "/th/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "ผลลัพธ์",
+        "items": [
+          {
+            "text": "ผลลัพธ์และแผนภาพ",
+            "link": "/th/essentials/results"
+          },
+          {
+            "text": "ตรวจสอบผลลัพธ์ด้วยการคำนวณมือ",
+            "link": "/th/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "ไฟล์และการแชร์",
+        "items": [
+          {
+            "text": "นำเข้า ส่งออก และแชร์",
+            "link": "/th/essentials/import-export"
+          },
+          {
+            "text": "สอนด้วย EduBeam",
+            "link": "/th/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "ข้อมูลอ้างอิง",
+        "items": [
+          {
+            "text": "แป้นพิมพ์ เมาส์ และระบบสัมผัส",
+            "link": "/th/reference/shortcuts"
+          },
+          {
+            "text": "การแก้ปัญหา",
+            "link": "/th/reference/troubleshooting"
+          },
+          {
+            "text": "คำถามที่พบบ่อย",
+            "link": "/th/faq/"
+          }
+        ]
+      },
+      {
+        "text": "คู่มือทฤษฎี",
+        "items": [
+          {
+            "text": "ระบบพิกัดและข้อตกลงเรื่องเครื่องหมาย",
+            "link": "/th/elements/conventions"
+          },
+          {
+            "text": "เอลิเมนต์คาน",
+            "link": "/th/elements/beam"
+          },
+          {
+            "text": "เอลิเมนต์โครงถัก",
+            "link": "/th/elements/truss"
+          }
+        ],
+        "collapsed": true
+      }
+    ]
+  },
+  "tr": {
+    "label": "Türkçe",
+    "lang": "tr",
+    "appLocale": "tr",
+    "sidebar": [
+      {
+        "text": "Başlarken",
+        "items": [
+          {
+            "text": "Giriş",
+            "link": "/tr/guide/introduction"
+          },
+          {
+            "text": "Hızlı başlangıç (10 dk)",
+            "link": "/tr/guide/quick-start"
+          },
+          {
+            "text": "Örnekler",
+            "link": "/tr/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Eğitimler",
+        "items": [
+          {
+            "text": "Üç mafsallı çerçeve",
+            "link": "/tr/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Düzlem kafes sistem",
+            "link": "/tr/tutorials/truss"
+          }
+        ]
+      },
+      {
+        "text": "Modelleme",
+        "items": [
+          {
+            "text": "Kullanıcı arayüzü",
+            "link": "/tr/essentials/user-interface"
+          },
+          {
+            "text": "Düğümler ve mesnetler",
+            "link": "/tr/essentials/nodes-supports"
+          },
+          {
+            "text": "Elemanlar, malzemeler ve kesitler",
+            "link": "/tr/essentials/elements"
+          },
+          {
+            "text": "Yükler",
+            "link": "/tr/essentials/loads"
+          },
+          {
+            "text": "Birimler ve ayarlar",
+            "link": "/tr/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "Sonuçlar",
+        "items": [
+          {
+            "text": "Sonuçlar ve diyagramlar",
+            "link": "/tr/essentials/results"
+          },
+          {
+            "text": "Sonuçların elle kontrolü",
+            "link": "/tr/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "Dosyalar ve paylaşım",
+        "items": [
+          {
+            "text": "İçe aktarma, dışa aktarma ve paylaşım",
+            "link": "/tr/essentials/import-export"
+          },
+          {
+            "text": "EduBeam ile öğretim",
+            "link": "/tr/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "Başvuru",
+        "items": [
+          {
+            "text": "Klavye, fare ve dokunmatik",
+            "link": "/tr/reference/shortcuts"
+          },
+          {
+            "text": "Sorun giderme",
+            "link": "/tr/reference/troubleshooting"
+          },
+          {
+            "text": "Sıkça sorulan sorular",
+            "link": "/tr/faq/"
+          }
+        ]
+      },
+      {
+        "text": "Teori kılavuzu",
+        "items": [
+          {
+            "text": "Koordinat sistemi ve işaret kabulü",
+            "link": "/tr/elements/conventions"
+          },
+          {
+            "text": "Kiriş elemanı",
+            "link": "/tr/elements/beam"
+          },
+          {
+            "text": "Kafes çubuğu",
+            "link": "/tr/elements/truss"
+          }
+        ],
+        "collapsed": true
+      }
+    ]
+  },
+  "vi": {
+    "label": "Tiếng Việt",
+    "lang": "vi",
+    "appLocale": "vi",
+    "sidebar": [
+      {
+        "text": "Bắt đầu",
+        "items": [
+          {
+            "text": "Giới thiệu",
+            "link": "/vi/guide/introduction"
+          },
+          {
+            "text": "Bắt đầu nhanh (10 phút)",
+            "link": "/vi/guide/quick-start"
+          },
+          {
+            "text": "Ví dụ",
+            "link": "/vi/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Hướng dẫn",
+        "items": [
+          {
+            "text": "Khung ba khớp",
+            "link": "/vi/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Dàn phẳng",
+            "link": "/vi/tutorials/truss"
+          }
+        ]
+      },
+      {
+        "text": "Mô hình hóa",
+        "items": [
+          {
+            "text": "Giao diện người dùng",
+            "link": "/vi/essentials/user-interface"
+          },
+          {
+            "text": "Nút và gối tựa",
+            "link": "/vi/essentials/nodes-supports"
+          },
+          {
+            "text": "Phần tử, vật liệu và tiết diện",
+            "link": "/vi/essentials/elements"
+          },
+          {
+            "text": "Tải trọng",
+            "link": "/vi/essentials/loads"
+          },
+          {
+            "text": "Đơn vị và cài đặt",
+            "link": "/vi/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "Kết quả",
+        "items": [
+          {
+            "text": "Kết quả và biểu đồ",
+            "link": "/vi/essentials/results"
+          },
+          {
+            "text": "Kiểm tra kết quả bằng tính tay",
+            "link": "/vi/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "Tệp và chia sẻ",
+        "items": [
+          {
+            "text": "Nhập, xuất và chia sẻ",
+            "link": "/vi/essentials/import-export"
+          },
+          {
+            "text": "Giảng dạy với EduBeam",
+            "link": "/vi/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "Tham khảo",
+        "items": [
+          {
+            "text": "Bàn phím, chuột và cảm ứng",
+            "link": "/vi/reference/shortcuts"
+          },
+          {
+            "text": "Khắc phục sự cố",
+            "link": "/vi/reference/troubleshooting"
+          },
+          {
+            "text": "Câu hỏi thường gặp",
+            "link": "/vi/faq/"
+          }
+        ]
+      },
+      {
+        "text": "Sổ tay lý thuyết",
+        "items": [
+          {
+            "text": "Hệ tọa độ và quy ước dấu",
+            "link": "/vi/elements/conventions"
+          },
+          {
+            "text": "Phần tử dầm",
+            "link": "/vi/elements/beam"
+          },
+          {
+            "text": "Phần tử thanh dàn",
+            "link": "/vi/elements/truss"
+          }
+        ],
+        "collapsed": true
+      }
+    ]
+  },
+  "it": {
+    "label": "Italiano",
+    "lang": "it",
+    "appLocale": "it",
+    "sidebar": [
+      {
+        "text": "Per iniziare",
+        "items": [
+          {
+            "text": "Introduzione",
+            "link": "/it/guide/introduction"
+          },
+          {
+            "text": "Avvio rapido (10 min)",
+            "link": "/it/guide/quick-start"
+          },
+          {
+            "text": "Esempi",
+            "link": "/it/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Tutorial",
+        "items": [
+          {
+            "text": "Telaio a tre cerniere",
+            "link": "/it/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Travatura reticolare piana",
+            "link": "/it/tutorials/truss"
+          }
+        ]
+      },
+      {
+        "text": "Modellazione",
+        "items": [
+          {
+            "text": "Interfaccia utente",
+            "link": "/it/essentials/user-interface"
+          },
+          {
+            "text": "Nodi e vincoli",
+            "link": "/it/essentials/nodes-supports"
+          },
+          {
+            "text": "Elementi, materiali e sezioni",
+            "link": "/it/essentials/elements"
+          },
+          {
+            "text": "Carichi",
+            "link": "/it/essentials/loads"
+          },
+          {
+            "text": "Unità e impostazioni",
+            "link": "/it/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "Risultati",
+        "items": [
+          {
+            "text": "Risultati e diagrammi",
+            "link": "/it/essentials/results"
+          },
+          {
+            "text": "Verificare i risultati a mano",
+            "link": "/it/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "File e condivisione",
+        "items": [
+          {
+            "text": "Importazione, esportazione e condivisione",
+            "link": "/it/essentials/import-export"
+          },
+          {
+            "text": "Insegnare con EduBeam",
+            "link": "/it/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "Riferimenti",
+        "items": [
+          {
+            "text": "Tastiera, mouse e touch",
+            "link": "/it/reference/shortcuts"
+          },
+          {
+            "text": "Risoluzione dei problemi",
+            "link": "/it/reference/troubleshooting"
+          },
+          {
+            "text": "Domande frequenti",
+            "link": "/it/faq/"
+          }
+        ]
+      },
+      {
+        "text": "Manuale teorico",
+        "items": [
+          {
+            "text": "Sistema di coordinate e convenzioni dei segni",
+            "link": "/it/elements/conventions"
+          },
+          {
+            "text": "Elemento trave",
+            "link": "/it/elements/beam"
+          },
+          {
+            "text": "Elemento reticolare",
+            "link": "/it/elements/truss"
+          }
+        ],
+        "collapsed": true
+      }
+    ]
+  },
+  "id": {
+    "label": "Bahasa Indonesia",
+    "lang": "id",
+    "appLocale": "id",
+    "sidebar": [
+      {
+        "text": "Memulai",
+        "items": [
+          {
+            "text": "Pendahuluan",
+            "link": "/id/guide/introduction"
+          },
+          {
+            "text": "Mulai cepat (10 menit)",
+            "link": "/id/guide/quick-start"
+          },
+          {
+            "text": "Contoh",
+            "link": "/id/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Tutorial",
+        "items": [
+          {
+            "text": "Portal tiga sendi",
+            "link": "/id/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Rangka batang bidang",
+            "link": "/id/tutorials/truss"
+          }
+        ]
+      },
+      {
+        "text": "Pemodelan",
+        "items": [
+          {
+            "text": "Antarmuka pengguna",
+            "link": "/id/essentials/user-interface"
+          },
+          {
+            "text": "Joint & tumpuan",
+            "link": "/id/essentials/nodes-supports"
+          },
+          {
+            "text": "Elemen, material & penampang",
+            "link": "/id/essentials/elements"
+          },
+          {
+            "text": "Beban",
+            "link": "/id/essentials/loads"
+          },
+          {
+            "text": "Satuan & pengaturan",
+            "link": "/id/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "Hasil",
+        "items": [
+          {
+            "text": "Hasil & diagram",
+            "link": "/id/essentials/results"
+          },
+          {
+            "text": "Memeriksa hasil secara manual",
+            "link": "/id/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "File & berbagi",
+        "items": [
+          {
+            "text": "Impor, ekspor & berbagi",
+            "link": "/id/essentials/import-export"
+          },
+          {
+            "text": "Mengajar dengan EduBeam",
+            "link": "/id/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "Referensi",
+        "items": [
+          {
+            "text": "Keyboard, mouse & sentuh",
+            "link": "/id/reference/shortcuts"
+          },
+          {
+            "text": "Pemecahan masalah",
+            "link": "/id/reference/troubleshooting"
+          },
+          {
+            "text": "Pertanyaan yang sering diajukan",
+            "link": "/id/faq/"
+          }
+        ]
+      },
+      {
+        "text": "Manual teori",
+        "items": [
+          {
+            "text": "Sistem koordinat & konvensi tanda",
+            "link": "/id/elements/conventions"
+          },
+          {
+            "text": "Elemen balok",
+            "link": "/id/elements/beam"
+          },
+          {
+            "text": "Elemen rangka batang",
+            "link": "/id/elements/truss"
+          }
+        ],
+        "collapsed": true
+      }
+    ]
+  },
+  "ja": {
+    "label": "日本語",
+    "lang": "ja",
+    "appLocale": "ja",
+    "sidebar": [
+      {
+        "text": "入門",
+        "items": [
+          {
+            "text": "はじめに",
+            "link": "/ja/guide/introduction"
+          },
+          {
+            "text": "クイックスタート（10 分）",
+            "link": "/ja/guide/quick-start"
+          },
+          {
+            "text": "例題",
+            "link": "/ja/examples/"
+          }
+        ]
+      },
+      {
+        "text": "チュートリアル",
+        "items": [
+          {
+            "text": "3 ヒンジラーメン",
+            "link": "/ja/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "平面トラス",
+            "link": "/ja/tutorials/truss"
+          }
+        ]
+      },
+      {
+        "text": "モデル化",
+        "items": [
+          {
+            "text": "ユーザーインターフェース",
+            "link": "/ja/essentials/user-interface"
+          },
+          {
+            "text": "節点と支点",
+            "link": "/ja/essentials/nodes-supports"
+          },
+          {
+            "text": "要素・材料・断面",
+            "link": "/ja/essentials/elements"
+          },
+          {
+            "text": "荷重",
+            "link": "/ja/essentials/loads"
+          },
+          {
+            "text": "単位と設定",
+            "link": "/ja/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "結果",
+        "items": [
+          {
+            "text": "結果と断面力図",
+            "link": "/ja/essentials/results"
+          },
+          {
+            "text": "手計算による結果の確認",
+            "link": "/ja/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "ファイルと共有",
+        "items": [
+          {
+            "text": "インポート・エクスポート・共有",
+            "link": "/ja/essentials/import-export"
+          },
+          {
+            "text": "EduBeam を使った授業",
+            "link": "/ja/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "リファレンス",
+        "items": [
+          {
+            "text": "キーボード・マウス・タッチ",
+            "link": "/ja/reference/shortcuts"
+          },
+          {
+            "text": "トラブルシューティング",
+            "link": "/ja/reference/troubleshooting"
+          },
+          {
+            "text": "よくある質問",
+            "link": "/ja/faq/"
+          }
+        ]
+      },
+      {
+        "text": "理論マニュアル",
+        "items": [
+          {
+            "text": "座標系と符号規約",
+            "link": "/ja/elements/conventions"
+          },
+          {
+            "text": "梁要素",
+            "link": "/ja/elements/beam"
+          },
+          {
+            "text": "トラス要素",
+            "link": "/ja/elements/truss"
+          }
+        ],
+        "collapsed": true
+      }
+    ]
+  },
+  "ko": {
+    "label": "한국어",
+    "lang": "ko",
+    "appLocale": "ko",
+    "sidebar": [
+      {
+        "text": "시작하기",
+        "items": [
+          {
+            "text": "소개",
+            "link": "/ko/guide/introduction"
+          },
+          {
+            "text": "빠른 시작 (10분)",
+            "link": "/ko/guide/quick-start"
+          },
+          {
+            "text": "예제",
+            "link": "/ko/examples/"
+          }
+        ]
+      },
+      {
+        "text": "튜토리얼",
+        "items": [
+          {
+            "text": "3힌지 라멘",
+            "link": "/ko/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "평면 트러스",
+            "link": "/ko/tutorials/truss"
+          }
+        ]
+      },
+      {
+        "text": "모델링",
+        "items": [
+          {
+            "text": "사용자 인터페이스",
+            "link": "/ko/essentials/user-interface"
+          },
+          {
+            "text": "절점 및 지점",
+            "link": "/ko/essentials/nodes-supports"
+          },
+          {
+            "text": "요소, 재료 및 단면",
+            "link": "/ko/essentials/elements"
+          },
+          {
+            "text": "하중",
+            "link": "/ko/essentials/loads"
+          },
+          {
+            "text": "단위 및 설정",
+            "link": "/ko/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "결과",
+        "items": [
+          {
+            "text": "결과 및 다이어그램",
+            "link": "/ko/essentials/results"
+          },
+          {
+            "text": "손 계산으로 결과 검증",
+            "link": "/ko/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "파일 및 공유",
+        "items": [
+          {
+            "text": "가져오기, 내보내기 및 공유",
+            "link": "/ko/essentials/import-export"
+          },
+          {
+            "text": "EduBeam으로 가르치기",
+            "link": "/ko/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "참고 자료",
+        "items": [
+          {
+            "text": "키보드, 마우스 및 터치",
+            "link": "/ko/reference/shortcuts"
+          },
+          {
+            "text": "문제 해결",
+            "link": "/ko/reference/troubleshooting"
+          },
+          {
+            "text": "자주 묻는 질문",
+            "link": "/ko/faq/"
+          }
+        ]
+      },
+      {
+        "text": "이론 매뉴얼",
+        "items": [
+          {
+            "text": "좌표계 및 부호 규약",
+            "link": "/ko/elements/conventions"
+          },
+          {
+            "text": "보 요소",
+            "link": "/ko/elements/beam"
+          },
+          {
+            "text": "트러스 요소",
+            "link": "/ko/elements/truss"
+          }
+        ],
+        "collapsed": true
+      }
+    ]
+  }
+}

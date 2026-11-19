@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "description": "免费的在线平面结构分析工具——在浏览器中即时求解梁、刚架和桁架。"
+  },
+  "nav": {
+    "guide": "指南",
+    "tutorials": "教程",
+    "examples": "示例",
+    "faq": "常见问题",
+    "openApp": "打开应用"
+  },
+  "docs": {
+    "onThisPage": "本页目录",
+    "prev": "上一页",
+    "next": "下一页",
+    "lastUpdated": "最后更新"
+  },
+  "footer": {
+    "copyright": "EduBeam 贡献者"
+  },
+  "components": {
+    "loadsTitle": "荷载类型预览",
+    "loadsLede": "常见荷载类型在 EduBeam 中的样子。每张卡片都是已求解的实时模型，点击即可在应用中按原样打开。",
+    "openInApp": "在 EduBeam 中打开",
+    "simplySupportedBeam": "简支梁",
+    "udlBlurb": "固定铰支座与滑动铰支座上的 12 kN/m 均布荷载：经典的剪力图和弯矩图。",
+    "trapezoidalBlurb": "右跨上从 4 kN/m 增大到 14 kN/m 的荷载。",
+    "concentratedBlurb": "跨中一个向下 18 kN 的集中荷载，无需额外节点。",
+    "nodalBlurb": "中间支座上的 20 kN 荷载，用于检查支座反力和挠度。",
+    "temperatureBlurb": "沿截面高度的温差（上表面比下表面热）及其引起的曲率。",
+    "promoTitle": "将您的框架",
+    "promoAccent": "带入 3D。",
+    "promoSubtitle": "在浏览器中完成楼板、壳体和钢结构验算",
+    "promoCta": "免费试用",
+    "spanLength": "跨度",
+    "loadIntensity": "荷载集度",
+    "loadPosition": "荷载位置",
+    "heroHint": "移动荷载，内力图随之更新。"
+  },
+  "common": {
+    "deformedShape": "变形图",
+    "normalForce": "轴力",
+    "shearForce": "剪力",
+    "bendingMoment": "弯矩"
+  },
+  "loadType": {
+    "udl": "均布荷载",
+    "trapezoidal": "梯形分布荷载",
+    "concentrated": "集中荷载",
+    "temperature": "温度荷载"
+  },
+  "loads": {
+    "nodalLoad": "节点荷载",
+    "temperatureDeltaTbtNoHTML": "ΔTb-ΔTt",
+    "temperatureDeltaTsNoHTML": "ΔTc"
+  },
+  "examples": {
+    "items": {
+      "welcome": {
+        "title": "超静定梁",
+        "blurb": "3 m 一端固定、一端滚动支座的超静定梁，承受 10 kN/m 均布荷载。"
+      },
+      "cantilever": {
+        "title": "悬臂梁",
+        "blurb": "4 m 悬臂梁承受 18 kN 向下的节点荷载，突出显示曲率和自由端挠度。"
+      },
+      "pratt": {
+        "title": "华伦桁架",
+        "blurb": "承受 8 kN 节点荷载的简单华伦桁架，展示轴力分布和位移。"
+      },
+      "continuous": {
+        "title": "三跨连续梁",
+        "blurb": "5+6+5 m 跨度，分别承受均布荷载、集中荷载和均布荷载，用于比较曲率和支座转角。"
+      },
+      "portal": {
+        "title": "门式刚架荷载工况",
+        "blurb": "6 m 柱上的 8 m 横梁，承受屋面均布荷载以及梁柱节点处的水平和竖向荷载，用于侧移和弯曲验算。"
+      },
+      "temperature": {
+        "title": "温度荷载",
+        "blurb": "8 m 简支梁承受均匀和非均匀温度荷载。"
+      }
+    }
+  },
+  "search": {
+    "label": "搜索",
+    "placeholder": "搜索文档",
+    "noResults": "未找到与“{query}”相关的结果"
+  }
+}

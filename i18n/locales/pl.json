@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "description": "Darmowa analiza statyczna belek, ram i kratownic w przeglądarce — bez instalacji i bez konta."
+  },
+  "nav": {
+    "guide": "Przewodnik",
+    "tutorials": "Samouczki",
+    "examples": "Przykłady",
+    "faq": "FAQ",
+    "openApp": "Otwórz aplikację"
+  },
+  "docs": {
+    "onThisPage": "Na tej stronie",
+    "prev": "Poprzednia strona",
+    "next": "Następna strona",
+    "lastUpdated": "Ostatnia aktualizacja"
+  },
+  "footer": {
+    "copyright": "Współtwórcy EduBeam"
+  },
+  "components": {
+    "loadsTitle": "Podgląd rodzajów obciążeń",
+    "loadsLede": "Tak wyglądają typowe rodzaje obciążeń w EduBeam. Każda karta to rozwiązany model na żywo, który otwiera się w aplikacji dokładnie tak, jak go ustawiono.",
+    "openInApp": "Otwórz w EduBeam",
+    "simplySupportedBeam": "Belka swobodnie podparta",
+    "udlBlurb": "Przęsło na podporze przegubowej nieprzesuwnej i przesuwnej pod 12 kN/m: klasyczne wykresy sił tnących i momentów.",
+    "trapezoidalBlurb": "Obciążenie rosnące od 4 do 14 kN/m w prawym przęśle.",
+    "concentratedBlurb": "Pojedyncza siła 18 kN w dół w środku rozpiętości, bez dodatkowego węzła.",
+    "nodalBlurb": "Siła 20 kN na podporze pośredniej, do sprawdzenia reakcji i ugięć.",
+    "temperatureBlurb": "Różnica temperatur na wysokości przekroju (u góry cieplej niż u dołu) i wywołana nią krzywizna.",
+    "promoTitle": "Przenieś swoje ramy",
+    "promoAccent": "do 3D.",
+    "promoSubtitle": "płyty, powłoki i wymiarowanie stali w przeglądarce",
+    "promoCta": "Wypróbuj za darmo",
+    "spanLength": "Rozpiętość przęsła",
+    "loadIntensity": "Intensywność obciążenia",
+    "loadPosition": "Położenie obciążenia",
+    "heroHint": "Przesuń obciążenie, a wykresy podążą za nim."
+  },
+  "common": {
+    "deformedShape": "Kształt odkształcony",
+    "normalForce": "Siła normalna",
+    "shearForce": "Siła tnąca",
+    "bendingMoment": "Moment zginający"
+  },
+  "loadType": {
+    "udl": "Obciążenie równomiernie rozłożone",
+    "trapezoidal": "Obciążenie trapezowe",
+    "concentrated": "Obciążenie skupione",
+    "temperature": "Obciążenie termiczne"
+  },
+  "loads": {
+    "nodalLoad": "Obciążenie węzłowe",
+    "temperatureDeltaTbtNoHTML": "ΔTb-ΔTt",
+    "temperatureDeltaTsNoHTML": "ΔTc"
+  },
+  "examples": {
+    "items": {
+      "welcome": {
+        "title": "Belka statycznie niewyznaczalna",
+        "blurb": "Statycznie niewyznaczalna belka o rozpiętości 3 m, utwierdzona i podparta przegubowo przesuwnie, pod obciążeniem równomiernym 10 kN/m."
+      },
+      "cantilever": {
+        "title": "Wspornik",
+        "blurb": "Wspornik o długości 4 m obciążony siłą węzłową 18 kN skierowaną w dół – krzywizna i ugięcie końca."
+      },
+      "pratt": {
+        "title": "Kratownica Warrena",
+        "blurb": "Prosta kratownica Warrena z obciążeniami węzłowymi 8 kN – rozkład sił osiowych i przemieszczenia."
+      },
+      "continuous": {
+        "title": "Belka ciągła trzyprzęsłowa",
+        "blurb": "Przęsła 5+6+5 m z obciążeniem równomiernym, skupionym i równomiernym – porównanie krzywizny i obrotów nad podporami."
+      },
+      "portal": {
+        "title": "Rama portalowa – przypadek obciążenia",
+        "blurb": "Rygiel 8 m na słupach 6 m pod równomiernym obciążeniem dachu oraz poziomymi i pionowymi siłami w narożach – analiza przechyłu i zginania."
+      },
+      "temperature": {
+        "title": "Obciążenie termiczne",
+        "blurb": "Belka swobodnie podparta o rozpiętości 8 m z równomiernym i nierównomiernym obciążeniem termicznym."
+      }
+    }
+  },
+  "search": {
+    "label": "Szukaj",
+    "placeholder": "Szukaj w dokumentacji",
+    "noResults": "Brak wyników dla „{query}”"
+  }
+}

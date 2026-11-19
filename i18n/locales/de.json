@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "description": "Baustatik online – ebene Balken, Rahmen und Fachwerke im Browser."
+  },
+  "nav": {
+    "guide": "Anleitung",
+    "tutorials": "Tutorials",
+    "examples": "Beispiele",
+    "faq": "FAQ",
+    "openApp": "App öffnen"
+  },
+  "docs": {
+    "onThisPage": "Auf dieser Seite",
+    "prev": "Vorherige Seite",
+    "next": "Nächste Seite",
+    "lastUpdated": "Zuletzt aktualisiert"
+  },
+  "footer": {
+    "copyright": "EduBeam-Mitwirkende"
+  },
+  "components": {
+    "loadsTitle": "Lastarten im Überblick",
+    "loadsLede": "So sehen die üblichen Lastarten in EduBeam aus. Jede Karte ist ein gelöstes Live-Modell und öffnet sich in der App genau so, wie sie aufgebaut ist.",
+    "openInApp": "In EduBeam öffnen",
+    "simplySupportedBeam": "Einfeldträger",
+    "udlBlurb": "Fest- und Loslager unter 12 kN/m: die klassischen Querkraft- und Momentenlinien.",
+    "trapezoidalBlurb": "Eine Last, die im rechten Feld von 4 auf 14 kN/m ansteigt.",
+    "concentratedBlurb": "Eine einzelne Last von 18 kN nach unten in Feldmitte, ohne zusätzlichen Knoten.",
+    "nodalBlurb": "Eine Last von 20 kN am Innenlager, um Auflagerkräfte und Durchbiegungen zu prüfen.",
+    "temperatureBlurb": "Ein Temperaturunterschied über die Querschnittshöhe (oben wärmer als unten) und die Krümmung, die er erzeugt.",
+    "promoTitle": "Bringen Sie Ihre Rahmen",
+    "promoAccent": "in 3D.",
+    "promoSubtitle": "Platten, Schalen und Stahlnachweise im Browser",
+    "promoCta": "Kostenlos testen",
+    "spanLength": "Spannweite",
+    "loadIntensity": "Lastintensität",
+    "loadPosition": "Lastposition",
+    "heroHint": "Verschieben Sie die Last, die Schnittgrößen folgen."
+  },
+  "common": {
+    "deformedShape": "Verformte Form",
+    "normalForce": "Normalkraft",
+    "shearForce": "Querkraft",
+    "bendingMoment": "Biegemoment"
+  },
+  "loadType": {
+    "udl": "Gleichmäßig verteilte Last",
+    "trapezoidal": "Trapezlast",
+    "concentrated": "Einzellast",
+    "temperature": "Temperaturlast"
+  },
+  "loads": {
+    "nodalLoad": "Knotenlast",
+    "temperatureDeltaTbtNoHTML": "ΔTb-ΔTt",
+    "temperatureDeltaTsNoHTML": "ΔTc"
+  },
+  "examples": {
+    "items": {
+      "welcome": {
+        "title": "Statisch unbestimmter Träger",
+        "blurb": "Statisch unbestimmter 3-m-Träger, eingespannt und verschieblich gelagert, unter 10 kN/m Gleichlast."
+      },
+      "cantilever": {
+        "title": "Kragträger",
+        "blurb": "4-m-Kragträger unter einer nach unten wirkenden Knotenlast von 18 kN – mit Krümmung und Durchbiegung am Kragende."
+      },
+      "pratt": {
+        "title": "Warren-Fachwerk",
+        "blurb": "Einfaches Warren-Fachwerk mit Knotenlasten von 8 kN – zeigt die Verteilung der Normalkräfte und die Verschiebungen."
+      },
+      "continuous": {
+        "title": "Durchlaufträger über drei Felder",
+        "blurb": "Felder 5+6+5 m mit Gleichlast + Einzellast + Gleichlast, um Krümmung und Auflagerverdrehungen zu vergleichen."
+      },
+      "portal": {
+        "title": "Lastfall Portalrahmen",
+        "blurb": "8-m-Riegel auf 6-m-Stützen unter Dach-Gleichlast sowie horizontalen und vertikalen Eckenlasten – zur Untersuchung von Seitenverschiebung und Biegung."
+      },
+      "temperature": {
+        "title": "Temperaturlast",
+        "blurb": "Einfeldträger mit 8 m Spannweite unter gleichmäßiger und ungleichmäßiger Temperaturlast."
+      }
+    }
+  },
+  "search": {
+    "label": "Suchen",
+    "placeholder": "Dokumentation durchsuchen",
+    "noResults": "Keine Treffer für „{query}“"
+  }
+}

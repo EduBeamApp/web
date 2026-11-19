@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "description": "Çevrim içi yapı analizi – düzlem kirişler, çerçeveler ve kafes sistemler doğrudan tarayıcıda."
+  },
+  "nav": {
+    "guide": "Kılavuz",
+    "tutorials": "Eğitimler",
+    "examples": "Örnekler",
+    "faq": "SSS",
+    "openApp": "Uygulamayı aç"
+  },
+  "docs": {
+    "onThisPage": "Bu sayfada",
+    "prev": "Önceki sayfa",
+    "next": "Sonraki sayfa",
+    "lastUpdated": "Son güncelleme"
+  },
+  "footer": {
+    "copyright": "EduBeam katkıda bulunanları"
+  },
+  "components": {
+    "loadsTitle": "Yük türlerine ön bakış",
+    "loadsLede": "Yaygın yük türleri EduBeam'de böyle görünür. Her kart çözülmüş, canlı bir modeldir ve uygulamada tam olarak kurulduğu gibi açılır.",
+    "openInApp": "EduBeam'de aç",
+    "simplySupportedBeam": "Basit mesnetli kiriş",
+    "udlBlurb": "Mafsallı ve kayıcı mesnetli kiriş, 12 kN/m yük altında: klasik kesme kuvveti ve eğilme momenti diyagramları.",
+    "trapezoidalBlurb": "Sağ açıklık boyunca 4 kN/m'den 14 kN/m'ye artan bir yük.",
+    "concentratedBlurb": "Açıklık ortasında aşağı yönlü tek bir 18 kN'lik yük, ek düğüm gerekmeden.",
+    "nodalBlurb": "Mesnet tepkilerini ve sehimleri kontrol etmek için ara mesnete etkiyen 20 kN'lik yük.",
+    "temperatureBlurb": "Kesit yüksekliği boyunca sıcaklık farkı (üst taraf alttan daha sıcak) ve bunun oluşturduğu eğrilik.",
+    "promoTitle": "Çerçevelerinizi",
+    "promoAccent": "3B'ye taşıyın.",
+    "promoSubtitle": "döşemeler, kabuklar ve çelik kontrolleri tarayıcınızda",
+    "promoCta": "Ücretsiz deneyin",
+    "spanLength": "Açıklık",
+    "loadIntensity": "Yük şiddeti",
+    "loadPosition": "Yük konumu",
+    "heroHint": "Yükü kaydırın, diyagramlar onu izlesin."
+  },
+  "common": {
+    "deformedShape": "Deforme şekil",
+    "normalForce": "Normal kuvvet",
+    "shearForce": "Kesme kuvveti",
+    "bendingMoment": "Eğilme momenti"
+  },
+  "loadType": {
+    "udl": "Düzgün yayılı yük",
+    "trapezoidal": "Trapez yük",
+    "concentrated": "Tekil yük",
+    "temperature": "Sıcaklık yüklemesi"
+  },
+  "loads": {
+    "nodalLoad": "Düğüm yükü",
+    "temperatureDeltaTbtNoHTML": "ΔTb-ΔTt",
+    "temperatureDeltaTsNoHTML": "ΔTc"
+  },
+  "examples": {
+    "items": {
+      "welcome": {
+        "title": "Hiperstatik kiriş",
+        "blurb": "10 kN/m düzgün yayılı yük altında, bir ucu ankastre diğer ucu kayıcı mesnetli 3 m'lik hiperstatik kiriş."
+      },
+      "cantilever": {
+        "title": "Konsol kiriş",
+        "blurb": "Aşağı yönlü 18 kN'lik tekil düğüm yükü taşıyan 4 m'lik konsol; eğrilik ve uç sehimi öne çıkıyor."
+      },
+      "pratt": {
+        "title": "Warren kafes kirişi",
+        "blurb": "Düğümlerine 8 kN yük etkiyen basit Warren kafes kirişi; çubuk kuvvetlerinin dağılımını ve yer değiştirmeleri gösterir."
+      },
+      "continuous": {
+        "title": "Üç açıklıklı sürekli kiriş",
+        "blurb": "5+6+5 m açıklıklar; yayılı + tekil + yayılı yük ile eğrilik ve mesnet dönmeleri karşılaştırılır."
+      },
+      "portal": {
+        "title": "Portal çerçeve",
+        "blurb": "6 m'lik kolonlar üzerinde 8 m'lik kiriş; çatı yayılı yükü ile köşelerdeki yatay ve düşey yükler altında yanal öteleme ve eğilme kontrolü."
+      },
+      "temperature": {
+        "title": "Sıcaklık yüklemesi",
+        "blurb": "Düzgün ve düzgün olmayan sıcaklık değişimi etkisindeki 8 m'lik basit mesnetli kiriş."
+      }
+    }
+  },
+  "search": {
+    "label": "Ara",
+    "placeholder": "Belgelerde ara",
+    "noResults": "“{query}” için sonuç yok"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "description": "Calcul des structures en ligne : poutres, portiques et treillis plans dans le navigateur."
+  },
+  "nav": {
+    "guide": "Guide",
+    "tutorials": "Tutoriels",
+    "examples": "Exemples",
+    "faq": "FAQ",
+    "openApp": "Ouvrir l’application"
+  },
+  "docs": {
+    "onThisPage": "Sur cette page",
+    "prev": "Page précédente",
+    "next": "Page suivante",
+    "lastUpdated": "Dernière mise à jour"
+  },
+  "footer": {
+    "copyright": "Contributeurs d’EduBeam"
+  },
+  "components": {
+    "loadsTitle": "Aperçu des types de charges",
+    "loadsLede": "Voici à quoi ressemblent les types de charges courants dans EduBeam. Chaque carte est un modèle résolu en direct et s’ouvre dans l’application exactement tel qu’il est défini.",
+    "openInApp": "Ouvrir dans EduBeam",
+    "simplySupportedBeam": "Poutre sur deux appuis",
+    "udlBlurb": "Travée sur articulation et appui simple sous 12 kN/m : les diagrammes classiques d’effort tranchant et de moment.",
+    "trapezoidalBlurb": "Une charge qui croît de 4 à 14 kN/m sur la travée de droite.",
+    "concentratedBlurb": "Une seule charge de 18 kN vers le bas à mi-travée, sans nœud supplémentaire.",
+    "nodalBlurb": "Une charge de 20 kN sur l’appui intermédiaire, pour vérifier réactions et flèches.",
+    "temperatureBlurb": "Une différence de température sur la hauteur (dessus plus chaud que dessous) et la courbure qu’elle provoque.",
+    "promoTitle": "Passez vos portiques",
+    "promoAccent": "en 3D.",
+    "promoSubtitle": "dalles, coques et vérifications acier dans votre navigateur",
+    "promoCta": "Essayer gratuitement",
+    "spanLength": "Portée",
+    "loadIntensity": "Intensité de la charge",
+    "loadPosition": "Position de la charge",
+    "heroHint": "Déplacez la charge, les diagrammes suivent."
+  },
+  "common": {
+    "deformedShape": "Déformée",
+    "normalForce": "Effort normal",
+    "shearForce": "Effort tranchant",
+    "bendingMoment": "Moment fléchissant"
+  },
+  "loadType": {
+    "udl": "Charge uniformément répartie",
+    "trapezoidal": "Charge trapézoïdale",
+    "concentrated": "Charge ponctuelle",
+    "temperature": "Charge thermique"
+  },
+  "loads": {
+    "nodalLoad": "Charge nodale",
+    "temperatureDeltaTbtNoHTML": "ΔTb-ΔTt",
+    "temperatureDeltaTsNoHTML": "ΔTc"
+  },
+  "examples": {
+    "items": {
+      "welcome": {
+        "title": "Poutre hyperstatique",
+        "blurb": "Poutre hyperstatique de 3 m, encastrée et sur appui simple, sous une charge uniformément répartie de 10 kN/m."
+      },
+      "cantilever": {
+        "title": "Console",
+        "blurb": "Console de 4 m reprenant une charge nodale de 18 kN vers le bas, mettant en évidence la courbure et la flèche en bout."
+      },
+      "pratt": {
+        "title": "Treillis Warren",
+        "blurb": "Treillis Warren simple avec des charges nodales de 8 kN, montrant la répartition des efforts normaux et les déplacements."
+      },
+      "continuous": {
+        "title": "Poutre continue à trois travées",
+        "blurb": "Travées de 5+6+5 m avec charge répartie + ponctuelle + répartie pour comparer la courbure et les rotations sur appuis."
+      },
+      "portal": {
+        "title": "Portique sous chargement",
+        "blurb": "Traverse de 8 m sur poteaux de 6 m sous charge répartie de toiture et charges latérales + verticales aux angles, pour vérifier le déplacement latéral et la flexion."
+      },
+      "temperature": {
+        "title": "Charge thermique",
+        "blurb": "Poutre sur appuis simples de 8 m soumise à une charge thermique uniforme et non uniforme."
+      }
+    }
+  },
+  "search": {
+    "label": "Rechercher",
+    "placeholder": "Rechercher dans la documentation",
+    "noResults": "Aucun résultat pour « {query} »"
+  }
+}

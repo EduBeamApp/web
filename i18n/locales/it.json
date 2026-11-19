@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "description": "Analisi strutturale 2D gratuita online – travi, telai e travature reticolari risolti all'istante nel browser."
+  },
+  "nav": {
+    "guide": "Guida",
+    "tutorials": "Tutorial",
+    "examples": "Esempi",
+    "faq": "FAQ",
+    "openApp": "Apri l'app"
+  },
+  "docs": {
+    "onThisPage": "In questa pagina",
+    "prev": "Pagina precedente",
+    "next": "Pagina successiva",
+    "lastUpdated": "Ultimo aggiornamento"
+  },
+  "footer": {
+    "copyright": "Contributori di EduBeam"
+  },
+  "components": {
+    "loadsTitle": "Anteprima dei tipi di carico",
+    "loadsLede": "Come appaiono in EduBeam i tipi di carico più comuni. Ogni scheda è un modello risolto e interattivo e si apre nell'app esattamente come è impostato.",
+    "openInApp": "Apri in EduBeam",
+    "simplySupportedBeam": "Trave semplicemente appoggiata",
+    "udlBlurb": "Campata cerniera–carrello con 12 kN/m: i classici diagrammi di taglio e momento.",
+    "trapezoidalBlurb": "Un carico che cresce da 4 a 14 kN/m sulla campata destra.",
+    "concentratedBlurb": "Un unico carico di 18 kN verso il basso in mezzeria, senza nodi aggiuntivi.",
+    "nodalBlurb": "Un carico di 20 kN sull'appoggio intermedio, per controllare reazioni e frecce.",
+    "temperatureBlurb": "Una differenza di temperatura lungo l'altezza della sezione (fibre superiori più calde di quelle inferiori) e la curvatura che provoca.",
+    "promoTitle": "Porta i tuoi telai",
+    "promoAccent": "in 3D.",
+    "promoSubtitle": "solai, gusci e verifiche dell'acciaio nel browser",
+    "promoCta": "Provalo gratis",
+    "spanLength": "Luce della campata",
+    "loadIntensity": "Intensità del carico",
+    "loadPosition": "Posizione del carico",
+    "heroHint": "Sposta il carico, i diagrammi lo seguono."
+  },
+  "common": {
+    "deformedShape": "Deformata",
+    "normalForce": "Sforzo normale",
+    "shearForce": "Taglio",
+    "bendingMoment": "Momento flettente"
+  },
+  "loadType": {
+    "udl": "Carico uniforme",
+    "trapezoidal": "Carico trapezoidale",
+    "concentrated": "Carico concentrato",
+    "temperature": "Carico termico"
+  },
+  "loads": {
+    "nodalLoad": "Carico nodale",
+    "temperatureDeltaTbtNoHTML": "ΔTb-ΔTt",
+    "temperatureDeltaTsNoHTML": "ΔTc"
+  },
+  "examples": {
+    "items": {
+      "welcome": {
+        "title": "Trave iperstatica",
+        "blurb": "Trave iperstatica di 3 m, incastro–carrello, con carico uniforme di 10 kN/m."
+      },
+      "cantilever": {
+        "title": "Mensola",
+        "blurb": "Mensola di 4 m con un carico nodale di 18 kN verso il basso, per evidenziare curvatura e freccia all'estremità."
+      },
+      "pratt": {
+        "title": "Travatura Warren",
+        "blurb": "Semplice travatura reticolare Warren con carichi nodali di 8 kN: distribuzione degli sforzi normali e spostamenti."
+      },
+      "continuous": {
+        "title": "Trave continua a tre campate",
+        "blurb": "Campate di 5+6+5 m con carico uniforme + concentrato + uniforme, per confrontare la curvatura e le rotazioni agli appoggi."
+      },
+      "portal": {
+        "title": "Telaio a portale",
+        "blurb": "Trave di 8 m su colonne di 6 m con carico uniforme in copertura e carichi orizzontale + verticale ai nodi d'angolo, per verificare spostamenti laterali e flessione."
+      },
+      "temperature": {
+        "title": "Carico termico",
+        "blurb": "Trave semplicemente appoggiata di 8 m con carico termico uniforme e non uniforme."
+      }
+    }
+  },
+  "search": {
+    "label": "Cerca",
+    "placeholder": "Cerca nella documentazione",
+    "noResults": "Nessun risultato per «{query}»"
+  }
+}

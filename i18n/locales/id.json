@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "description": "Analisis struktur online gratis – balok, portal, dan rangka batang 2D langsung di browser."
+  },
+  "nav": {
+    "guide": "Panduan",
+    "tutorials": "Tutorial",
+    "examples": "Contoh",
+    "faq": "FAQ",
+    "openApp": "Buka aplikasi"
+  },
+  "docs": {
+    "onThisPage": "Di halaman ini",
+    "prev": "Sebelumnya",
+    "next": "Berikutnya",
+    "lastUpdated": "Terakhir diperbarui"
+  },
+  "footer": {
+    "copyright": "Kontributor EduBeam"
+  },
+  "components": {
+    "loadsTitle": "Pratinjau tipe beban",
+    "loadsLede": "Seperti apa tipe beban umum di EduBeam. Setiap kartu adalah model hidup yang sudah dihitung dan terbuka di aplikasi persis seperti yang diatur.",
+    "openInApp": "Buka di EduBeam",
+    "simplySupportedBeam": "Balok sederhana",
+    "udlBlurb": "Bentang sendi–rol dengan beban 12 kN/m: diagram gaya geser dan momen lentur klasik.",
+    "trapezoidalBlurb": "Beban yang naik dari 4 hingga 14 kN/m di sepanjang bentang kanan.",
+    "concentratedBlurb": "Satu beban 18 kN ke bawah di tengah bentang, tanpa joint tambahan.",
+    "nodalBlurb": "Beban 20 kN di tumpuan tengah, untuk memeriksa reaksi dan lendutan.",
+    "temperatureBlurb": "Perbedaan suhu sepanjang tinggi penampang (atas lebih panas daripada bawah) dan kelengkungan yang ditimbulkannya.",
+    "promoTitle": "Bawa portal Anda",
+    "promoAccent": "ke 3D.",
+    "promoSubtitle": "pelat, cangkang & pemeriksaan baja di browser Anda",
+    "promoCta": "Coba gratis",
+    "spanLength": "Panjang bentang",
+    "loadIntensity": "Intensitas beban",
+    "loadPosition": "Posisi beban",
+    "heroHint": "Geser beban, diagram langsung mengikuti."
+  },
+  "common": {
+    "deformedShape": "Bentuk deformasi",
+    "normalForce": "Gaya normal",
+    "shearForce": "Gaya geser",
+    "bendingMoment": "Momen lentur"
+  },
+  "loadType": {
+    "udl": "Beban merata",
+    "trapezoidal": "Beban trapesium",
+    "concentrated": "Beban terpusat",
+    "temperature": "Beban suhu"
+  },
+  "loads": {
+    "nodalLoad": "Beban joint",
+    "temperatureDeltaTbtNoHTML": "ΔTb-ΔTt",
+    "temperatureDeltaTsNoHTML": "ΔTc"
+  },
+  "examples": {
+    "items": {
+      "welcome": {
+        "title": "Balok statis tak tentu",
+        "blurb": "Balok jepit–rol statis tak tentu sepanjang 3 m dengan beban merata 10 kN/m."
+      },
+      "cantilever": {
+        "title": "Kantilever",
+        "blurb": "Kantilever 4 m yang memikul beban joint 18 kN ke bawah, menyoroti kelengkungan dan lendutan ujung."
+      },
+      "pratt": {
+        "title": "Rangka batang Warren",
+        "blurb": "Rangka batang Warren sederhana dengan beban joint 8 kN yang menunjukkan distribusi gaya aksial dan perpindahan."
+      },
+      "continuous": {
+        "title": "Balok menerus tiga bentang",
+        "blurb": "Bentang 5+6+5 m dengan beban merata + terpusat + merata untuk membandingkan kelengkungan dan rotasi tumpuan."
+      },
+      "portal": {
+        "title": "Kasus beban portal",
+        "blurb": "Balok 8 m di atas kolom 6 m dengan beban merata atap serta beban lateral + vertikal di sudut portal untuk memeriksa goyangan dan lentur."
+      },
+      "temperature": {
+        "title": "Beban suhu",
+        "blurb": "Balok sederhana 8 m dengan beban suhu merata dan tidak merata."
+      }
+    }
+  },
+  "search": {
+    "label": "Cari",
+    "placeholder": "Cari di dokumentasi",
+    "noResults": "Tidak ada hasil untuk “{query}”"
+  }
+}

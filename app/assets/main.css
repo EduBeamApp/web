@@ -1,0 +1,928 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * EduBeam beside Elementarium: the same engineering hand - a DIN-style display face (Barlow, the
+ * face EduBeam's docs always had) over IBM Plex Sans, slate neutrals, hairline sheets instead of
+ * floating cards - with indigo for EduBeam's actions and navy, the app bar's colour, for its ink.
+ * The only decoration is the app's own diagram colours: normal force, shear, moment.
+ */
+@theme {
+  --font-sans: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Barlow', 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-brand: 'Lobster', cursive;
+
+  --color-paper: var(--paper);
+  --color-mist: var(--mist);
+  --color-sheet: var(--sheet);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-brand: var(--brand);
+  --color-brand-ink: var(--brand-ink);
+  --color-lilac: var(--lilac);
+  --color-appbar: #111133;
+
+  /* The app's diagram colours, for the models and the one decorative rule */
+  --color-moment: #ff2222;
+  --color-shear: #00af00;
+  --color-normal: #2222ff;
+  --color-deformed: #555555;
+  --color-reaction: #a020f0;
+  --color-load: #ff8700;
+}
+
+:root {
+  color-scheme: light;
+  --paper: oklch(1 0 0);
+  --mist: oklch(0.975 0.006 268);
+  --sheet: oklch(1 0 0);
+  --ink: oklch(0.2 0.06 276);
+  --ink-soft: oklch(0.34 0.04 272);
+  --muted: oklch(0.53 0.035 266);
+  --rule: oklch(0.92 0.012 266);
+  --brand: oklch(0.51 0.23 277);
+  --brand-ink: oklch(0.985 0.004 270);
+  --lilac: oklch(0.955 0.025 278);
+  --link: oklch(0.48 0.22 277);
+  --grid-line: oklch(0.2 0.06 276 / 6%);
+  --grid-line-strong: oklch(0.2 0.06 276 / 11%);
+  /* The models are drawn on the app's white canvas in either theme */
+  --canvas: #ffffff;
+  --canvas-grid: #eef0f6;
+  /* Light on the page: faint glows in the brand's indigo and the reaction violet, a lit edge on panels */
+  --glow-a: color-mix(in oklab, var(--brand), transparent 90%);
+  --glow-b: color-mix(in oklab, #a020f0, transparent 93%);
+  --sheen: oklch(0.2 0.06 276 / 3%);
+  /* Structures in the figures, and the short accent rules above columns */
+  --figure-ink: var(--ink);
+  --strong-rule: var(--ink);
+}
+
+.dark {
+  color-scheme: dark;
+  --paper: oklch(0.155 0.04 274);
+  --mist: oklch(0.195 0.045 274);
+  --sheet: oklch(0.2 0.045 274);
+  --ink: oklch(0.97 0.006 270);
+  --ink-soft: oklch(0.86 0.015 270);
+  --muted: oklch(0.7 0.03 266);
+  --rule: oklch(0.29 0.04 272);
+  --brand: oklch(0.585 0.2 277);
+  --brand-ink: oklch(0.985 0.004 270);
+  --lilac: oklch(0.27 0.07 278);
+  --link: oklch(0.76 0.12 277);
+  --grid-line: oklch(0.97 0.006 270 / 5%);
+  --grid-line-strong: oklch(0.97 0.006 270 / 9%);
+  /* Figures are drawn by @edubeam/plot in the page's own colours, so their canvas goes dark too */
+  --canvas: oklch(0.185 0.04 274);
+  --canvas-grid: oklch(0.97 0.006 270 / 5%);
+  --figure-ink: oklch(0.78 0.025 270);
+  /* The app's normal-force blue is too dark to read on the night page; a lighter shade of it */
+  --color-normal: #7d7dff;
+  --glow-a: color-mix(in oklab, var(--brand), transparent 84%);
+  --glow-b: color-mix(in oklab, #a020f0, transparent 90%);
+  --sheen: oklch(1 0 0 / 3.5%);
+  --strong-rule: oklch(0.4 0.04 272);
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  scroll-padding-top: 5.5rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* A field whose caret already shows the focus, inside a frame that clips a ring (the search box) */
+[data-no-focus-ring]:focus-visible {
+  outline: none;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--brand), transparent 75%);
+}
+
+/* Tailwind resets buttons to the default cursor; everything clickable shows the hand */
+button:not(:disabled),
+[role='button'],
+summary,
+input[type='range'] {
+  cursor: pointer;
+}
+
+/* Scrollbars tinted to the page, the track left clear beside sticky sidebars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in oklab, var(--muted), transparent 50%) transparent;
+}
+
+/* A sticky sidebar or table of contents taller than the window scrolls on its own; reaching its end
+   does not hand the wheel on to the page */
+.side-scroll {
+  position: sticky;
+  top: 6rem;
+  max-height: calc(100dvh - 7rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-bottom: 2.5rem;
+}
+
+/* Reveal on scroll: added by the v-reveal directive at mount, so without JS everything is painted */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-in {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* At night the navy bands are lifted above the page, so they still read as bands */
+.dark .on-navy {
+  --paper: oklch(0.235 0.065 276);
+  --mist: oklch(0.27 0.065 276);
+  --sheet: oklch(0.255 0.065 276);
+  background-color: oklch(0.235 0.065 276);
+}
+
+/* What the figures draw structures in: the ink, softened at night */
+.text-figure {
+  color: var(--figure-ink);
+}
+
+/* The product's name, as the app writes it */
+.edubeam {
+  font-family: var(--font-brand);
+  font-weight: 400;
+}
+/* In running text the name is a word like any other: the wordmark is for the logo */
+.doc .edubeam {
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+
+/* Section headings: the display face a step quieter than the hero's */
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.9rem, 1.5rem + 1.4vw, 2.6rem);
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+}
+
+/* Components sit in their layer, so a utility on the same element (`hidden`, `!rounded-none`) wins */
+@layer components {
+/* ---------------------------------------------------------------------------------------------
+ * Backdrops and sheets
+ * ------------------------------------------------------------------------------------------- */
+
+/* Drafting paper: a fine 16 px mesh over a 64 px structural grid */
+.blueprint-bg {
+  background-image:
+    linear-gradient(to right, var(--grid-line-strong) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line-strong) 1px, transparent 1px),
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size:
+    64px 64px,
+    64px 64px,
+    16px 16px,
+    16px 16px;
+}
+
+.mask-fade-radial {
+  mask-image: radial-gradient(ellipse 75% 65% at 50% 0%, black 25%, transparent 100%);
+}
+
+/* A soft pool of light, for behind a figure */
+.bloom {
+  background: radial-gradient(closest-side, var(--glow-a), transparent);
+  filter: blur(8px);
+}
+
+/* A band lit from two corners: indigo at the top left, violet at the bottom right */
+.band-light {
+  background-image:
+    radial-gradient(60% 90% at 0% 0%, var(--glow-a), transparent 70%),
+    radial-gradient(50% 80% at 100% 100%, var(--glow-b), transparent 70%);
+}
+
+/* A panel with a lit top edge, so it reads as a sheet on the page rather than a box */
+.sheen {
+  background-image: linear-gradient(180deg, var(--sheen), transparent 55%);
+}
+
+/* A results sheet: cells divided by hairlines, the gaps showing the rule colour behind them */
+.sheet {
+  display: grid;
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  border-radius: 0.875rem;
+  background: var(--rule);
+}
+.sheet > * {
+  background: linear-gradient(180deg, var(--sheen), transparent 55%), var(--paper);
+}
+
+/* A band in the app bar's navy: the page's tokens turned light, so anything inside just works */
+.on-navy {
+  --paper: #111133;
+  --mist: #1a1a46;
+  --sheet: #16163d;
+  --ink: #ffffff;
+  --ink-soft: rgb(255 255 255 / 0.85);
+  --muted: rgb(255 255 255 / 0.62);
+  --rule: rgb(255 255 255 / 0.13);
+  --link: #b3a9ff;
+  --brand: #8f80ff;
+  --grid-line: rgb(255 255 255 / 0.03);
+  --grid-line-strong: rgb(255 255 255 / 0.055);
+  --figure-ink: rgb(255 255 255 / 0.82);
+  --strong-rule: rgb(255 255 255 / 0.3);
+  /* Tailwind's colours resolve var(--ink) and the rest once at the root, so they are set here too */
+  --color-paper: var(--paper);
+  --color-mist: var(--mist);
+  --color-sheet: var(--sheet);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-brand: var(--brand);
+  background: #111133;
+  color: #fff;
+}
+
+
+/* ---------------------------------------------------------------------------------------------
+ * Buttons: one solid violet action per view, the rest outlined
+ * ------------------------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  border-radius: 0.55rem;
+  padding: 0 1.35rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition:
+    background-color 0.15s,
+    border-color 0.15s,
+    color 0.15s;
+}
+.btn-primary {
+  background: var(--brand);
+  color: var(--brand-ink);
+}
+.btn-primary:hover {
+  background: color-mix(in oklab, var(--brand), var(--ink) 18%);
+}
+.btn-quiet {
+  border: 1px solid var(--rule);
+  color: var(--ink);
+}
+.btn-quiet:hover {
+  background: var(--mist);
+}
+
+/* ---------------------------------------------------------------------------------------------
+ * Live models: EduBeam's canvas, its grid, and the controls under it
+ * ------------------------------------------------------------------------------------------- */
+.live-canvas {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  border-radius: 1rem;
+  background-color: var(--canvas);
+  background-image:
+    linear-gradient(to right, var(--canvas-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--canvas-grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.live-stage {
+  position: relative;
+}
+
+.live-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding: 0.75rem;
+  border-top: 1px solid var(--rule);
+  background: var(--mist);
+}
+.dark .live-controls {
+  background: var(--sheet);
+}
+
+.live-ranges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  flex: 1 1 16rem;
+  justify-content: flex-end;
+}
+
+.live-caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-top: 0.65rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.live-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--link);
+}
+.live-open:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.result-switch {
+  display: inline-flex;
+  gap: 0.125rem;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+}
+.result-switch button {
+  min-width: 3.4rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.35rem;
+  font-family: 'KaTeX_Main', Georgia, serif;
+  font-size: 0.95rem;
+  color: var(--muted);
+  box-shadow: inset 0 -2px 0 transparent;
+  transition:
+    background-color 0.15s,
+    color 0.15s;
+}
+.result-switch button i {
+  font-family: 'KaTeX_Math', Georgia, serif;
+}
+.result-switch button:hover {
+  color: var(--ink);
+}
+.result-switch button[aria-checked='true'] {
+  background: var(--mist);
+  color: var(--ink);
+  box-shadow: inset 0 -2px 0 var(--dot);
+}
+
+/* On the app bar the tabs read as the app's own: white on navy */
+.result-switch--appbar {
+  border: 0;
+  background: transparent;
+}
+.result-switch--appbar button {
+  color: rgb(255 255 255 / 0.6);
+}
+.result-switch--appbar button:hover {
+  color: #fff;
+}
+.result-switch--appbar button[aria-checked='true'] {
+  background: rgb(255 255 255 / 0.1);
+  color: #fff;
+}
+
+.range-field {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1 1 12rem;
+  max-width: 24rem;
+  font-size: 0.875rem;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.range-field .range-value {
+  min-width: 7.5rem;
+  white-space: nowrap;
+}
+.range-field i {
+  font-family: 'KaTeX_Math', Georgia, serif;
+  font-size: 1.05em;
+}
+.range-field input {
+  flex: 1;
+  accent-color: var(--brand);
+}
+
+.gallery-item {
+  display: block;
+}
+}
+
+/* ---------------------------------------------------------------------------------------------
+ * The docs pages
+ * ------------------------------------------------------------------------------------------- */
+.doc {
+  --tw-prose-body: var(--ink-soft);
+  --tw-prose-headings: var(--ink);
+  --tw-prose-links: var(--link);
+  --tw-prose-bold: var(--ink);
+  --tw-prose-code: var(--ink);
+  --tw-prose-quotes: var(--ink-soft);
+  --tw-prose-hr: var(--rule);
+  --tw-prose-th-borders: var(--rule);
+  --tw-prose-td-borders: var(--rule);
+  --tw-prose-bullets: var(--brand);
+  --tw-prose-counters: var(--muted);
+  --tw-prose-captions: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.doc :where(h1, h2, h3, h4) {
+  font-family: var(--font-display);
+}
+
+.doc h1 {
+  font-weight: 700;
+  font-size: clamp(2.4rem, 1.7rem + 2.4vw, 3.25rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.doc h2 {
+  font-weight: 700;
+  font-size: 1.85rem;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  /* A thin rule opens each section, so long pages read as parts rather than one stream */
+  margin-top: 2.25em;
+  padding-top: 1.5em;
+  border-top: 1px solid var(--rule);
+}
+.doc :is(h1, p, div) + h2:first-of-type,
+.doc h2:first-child {
+  margin-top: 1.75em;
+}
+
+.doc h3 {
+  font-weight: 600;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+}
+
+.doc :where(h1, h2, h3, h4) a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: inherit;
+}
+
+.doc a {
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  font-weight: 500;
+}
+
+.doc :not(pre) > code {
+  font-family: var(--font-mono);
+  font-size: 0.84em;
+  font-weight: 500;
+  padding: 0.12em 0.38em;
+  border-radius: 0.3rem;
+  background: var(--mist);
+  border: 1px solid var(--rule);
+}
+
+.doc :not(pre) > code::before,
+.doc :not(pre) > code::after {
+  content: none;
+}
+
+/* Code: Shiki's colours for both themes, on a quiet panel rather than a dark slab */
+.shiki,
+.shiki span {
+  color: var(--shiki-light, var(--shiki-default));
+  background: transparent !important;
+}
+.dark .shiki,
+.dark .shiki span {
+  color: var(--shiki-dark);
+}
+
+.doc pre,
+.code-panel {
+  margin-block: 1.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 0.75rem;
+  background: var(--mist);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+.doc pre {
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+}
+.dark .doc pre,
+.dark .code-panel {
+  background: var(--sheet);
+}
+.doc pre code {
+  font-size: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+.code-panel {
+  margin: 0;
+  overflow: hidden;
+}
+.code-caption {
+  padding: 0.55rem 1.25rem;
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.code-body pre {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+}
+/* Nuxt Content blocks its lines (its Markdown code has no newlines between them); Shiki's own
+   output keeps the newlines, so here the lines stay inline or every line would break twice */
+.code-body pre code .line {
+  display: inline;
+}
+
+.doc kbd {
+  font-family: var(--font-sans);
+  font-size: 0.8em;
+  font-weight: 600;
+  padding: 0.1em 0.45em;
+  border: 1px solid var(--rule);
+  border-bottom-width: 2px;
+  border-radius: 0.35rem;
+  background: var(--sheet);
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.doc table {
+  font-size: 0.92em;
+}
+
+.doc thead th {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* Screenshots of the app, framed like the live models */
+.doc img {
+  border-radius: 0.75rem;
+  border: 1px solid var(--rule);
+  margin-inline: auto;
+}
+
+.doc img.shot-lg {
+  max-width: min(100%, 640px);
+}
+.doc img.shot-md {
+  max-width: min(100%, 460px);
+}
+.doc img.shot-sm {
+  max-width: min(100%, 340px);
+}
+.doc img.shot-xs {
+  max-width: min(100%, 240px);
+}
+
+.doc .shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+  margin-block: 1.75em;
+}
+
+.doc .shots p {
+  margin: 0;
+}
+
+/*
+ * Live figures side by side line up as one piece: their frames, captions and links each share a
+ * row of the group (subgrid), and a shorter drawing sits centred in a frame as tall as the tallest.
+ * When the row wraps to one column on a phone, the figures simply stack.
+ */
+.doc .shots:has(> .model-figure) {
+  row-gap: 0;
+}
+.doc .shots > .model-figure {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  margin: 0;
+}
+.doc .shots > .model-figure .live-canvas {
+  display: flex;
+  flex-direction: column;
+}
+.doc .shots > .model-figure .live-stage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.doc .shots > .model-figure .live-caption {
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: subgrid;
+  justify-items: start;
+  gap: 0;
+}
+.doc .shots > .model-figure .live-open {
+  margin-top: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.doc figure {
+  text-align: center;
+}
+
+.doc figcaption {
+  font-size: 0.875rem;
+}
+
+.doc .katex {
+  /* Matched to the body's size, and an inline formula never breaks between its parts */
+  font-size: 1.02em;
+  white-space: nowrap;
+}
+
+.doc .katex-display {
+  margin-block: 1.5rem;
+  padding: 0.85rem 1.25rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-left: 2px solid color-mix(in oklab, var(--brand), transparent 50%);
+  border-radius: 0 0.5rem 0.5rem 0;
+  background: color-mix(in oklab, var(--mist), transparent 20%);
+  color: var(--ink);
+}
+
+/* The home page's "Start here": three entry points, side by side */
+.doc .start-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1.75rem;
+  margin-block: 1.5rem 2rem;
+}
+
+.doc .start-grid p {
+  margin: 0;
+  padding-top: 1rem;
+  border-top: 2px solid var(--strong-rule);
+  font-size: 0.95rem;
+}
+
+.doc .start-grid strong {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* A run of short links shown as chips, e.g. the languages: `::div{.chips}` around a list */
+.doc .chips ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0;
+  padding: 0;
+  list-style: none;
+}
+.doc .chips li {
+  margin: 0;
+  padding: 0;
+}
+.doc .chips li::marker {
+  content: none;
+}
+.doc .chips a,
+.doc .chips li > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--sheet);
+  color: var(--ink);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.doc .chips a:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+/* What a tool does not do, as a quiet panel: `::div{.limits}` around a list */
+.doc .limits {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 0.875rem;
+  background: var(--mist);
+}
+.doc .limits ul {
+  display: grid;
+  gap: 0.6rem 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 640px) {
+  .doc .limits ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.doc .limits li {
+  position: relative;
+  margin: 0;
+  padding-left: 1.5rem;
+  font-size: 0.95rem;
+}
+.doc .limits li::before {
+  content: '';
+  position: absolute;
+  left: 0.15rem;
+  /* Centred on the first line: half the line height (1.75), nudged to the middle of the lowercase */
+  top: calc(0.875em + 0.05em - 1px);
+  width: 0.65rem;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--muted);
+}
+.doc .limits li::marker {
+  content: none;
+}
+
+/* Calls to action inside a page: `::div{.actions}` around links; the first one is the main action */
+.doc .actions p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0 2rem;
+}
+.doc .actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  height: 2.6rem;
+  padding: 0 1.15rem;
+  border: 1px solid var(--rule);
+  border-radius: 0.55rem;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.15s;
+}
+.doc .actions a:hover {
+  background: var(--mist);
+}
+.doc .actions a:first-child {
+  border-color: var(--brand);
+  background: var(--brand);
+  color: var(--brand-ink);
+}
+.doc .actions a:first-child:hover {
+  background: color-mix(in oklab, var(--brand), var(--ink) 18%);
+}
+
+/* A procedure: `::div{.steps}` around `### Step` headings, numbered on a rail down the left */
+.doc .steps {
+  counter-reset: step;
+  margin-block: 2rem;
+  padding-left: 2.75rem;
+  border-left: 1px solid var(--rule);
+  margin-left: 0.9rem;
+}
+.doc .steps > h3 {
+  position: relative;
+  counter-increment: step;
+  margin-top: 2rem;
+  font-size: 1.15rem;
+}
+.doc .steps > h3:first-child {
+  margin-top: 0;
+}
+.doc .steps > h3::before {
+  content: counter(step);
+  position: absolute;
+  left: calc(-2.75rem - 0.9rem - 0.5px);
+  top: -0.1rem;
+  display: grid;
+  place-items: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 1px solid color-mix(in oklab, var(--brand), transparent 55%);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--brand);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+.doc .steps > :last-child {
+  margin-bottom: 0;
+}
+
+/* The live model's figure in a page, and other figures that are panels rather than pictures */
+.doc .model-figure,
+.doc .exercise {
+  margin-block: 2rem;
+  text-align: left;
+}
+
+.doc .table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-block: 2em;
+}
+.doc .table-scroll > table {
+  margin: 0;
+}
+
+/* The app's support icons are drawn black on white: turned for the night page */
+.dark .doc img[src*='/screenshots/b-support-'] {
+  filter: invert(1) hue-rotate(180deg);
+  /* The inverted white tile turns black: screened onto the page it disappears, leaving the symbol */
+  mix-blend-mode: screen;
+}
+
+/* A fenced block in a page (ProsePre): the panel draws the frame, the pre only scrolls. Nuxt
+   Content's lines carry no newlines, so each is a block. */
+.doc .code-panel pre.md-code {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+.doc pre.md-code code .line {
+  display: block;
+}
+
+/* Printing a page prints its content: no site header, footer or controls, on white paper */
+@media print {
+  .site-header,
+  .site-footer,
+  .no-print {
+    display: none !important;
+  }
+  html,
+  body {
+    background: #fff !important;
+  }
+}

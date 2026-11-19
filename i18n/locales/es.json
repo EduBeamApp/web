@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "description": "Análisis de estructuras en línea: vigas, pórticos y celosías planos en el navegador."
+  },
+  "nav": {
+    "guide": "Guía",
+    "tutorials": "Tutoriales",
+    "examples": "Ejemplos",
+    "faq": "Preguntas frecuentes",
+    "openApp": "Abrir la aplicación"
+  },
+  "docs": {
+    "onThisPage": "En esta página",
+    "prev": "Página anterior",
+    "next": "Página siguiente",
+    "lastUpdated": "Última actualización"
+  },
+  "footer": {
+    "copyright": "Colaboradores de EduBeam"
+  },
+  "components": {
+    "loadsTitle": "Vista previa de los tipos de carga",
+    "loadsLede": "Así se ven los tipos de carga habituales en EduBeam. Cada tarjeta es un modelo resuelto en vivo y se abre en la aplicación tal como está configurado.",
+    "openInApp": "Abrir en EduBeam",
+    "simplySupportedBeam": "Viga simplemente apoyada",
+    "udlBlurb": "Vano articulado y con rodillo bajo 12 kN/m: los diagramas clásicos de cortante y momento.",
+    "trapezoidalBlurb": "Una carga que crece de 4 a 14 kN/m en el vano derecho.",
+    "concentratedBlurb": "Una sola carga de 18 kN hacia abajo en el centro del vano, sin nodo adicional.",
+    "nodalBlurb": "Una carga de 20 kN en el apoyo intermedio para comprobar reacciones y flechas.",
+    "temperatureBlurb": "Una diferencia de temperatura en el canto (arriba más caliente que abajo) y la curvatura que produce.",
+    "promoTitle": "Lleve sus pórticos",
+    "promoAccent": "a 3D.",
+    "promoSubtitle": "losas, láminas y comprobaciones de acero en el navegador",
+    "promoCta": "Pruébelo gratis",
+    "spanLength": "Luz del vano",
+    "loadIntensity": "Intensidad de la carga",
+    "loadPosition": "Posición de la carga",
+    "heroHint": "Mueva la carga y los diagramas la siguen."
+  },
+  "common": {
+    "deformedShape": "Forma deformada",
+    "normalForce": "Fuerza normal",
+    "shearForce": "Fuerza cortante",
+    "bendingMoment": "Momento flector"
+  },
+  "loadType": {
+    "udl": "Carga uniformemente distribuida",
+    "trapezoidal": "Carga trapezoidal",
+    "concentrated": "Carga concentrada",
+    "temperature": "Carga térmica"
+  },
+  "loads": {
+    "nodalLoad": "Carga nodal",
+    "temperatureDeltaTbtNoHTML": "ΔTb-ΔTt",
+    "temperatureDeltaTsNoHTML": "ΔTc"
+  },
+  "examples": {
+    "items": {
+      "welcome": {
+        "title": "Viga hiperestática",
+        "blurb": "Viga hiperestática de 3 m, empotrada y con apoyo móvil, bajo carga uniforme de 10 kN/m."
+      },
+      "cantilever": {
+        "title": "Voladizo",
+        "blurb": "Voladizo de 4 m con una carga nodal de 18 kN hacia abajo, que muestra la curvatura y la flecha en el extremo."
+      },
+      "pratt": {
+        "title": "Celosía Warren",
+        "blurb": "Celosía Warren sencilla con cargas de 8 kN en los nudos que muestra la distribución de axiles y los desplazamientos."
+      },
+      "continuous": {
+        "title": "Viga continua de tres vanos",
+        "blurb": "Vanos de 5+6+5 m con carga uniforme + puntual + uniforme para comparar la curvatura y los giros en los apoyos."
+      },
+      "portal": {
+        "title": "Pórtico con caso de carga",
+        "blurb": "Viga de 8 m sobre pilares de 6 m bajo carga uniforme de cubierta y cargas lateral + vertical en los nudos para comprobar el desplome y la flexión."
+      },
+      "temperature": {
+        "title": "Carga térmica",
+        "blurb": "Viga biapoyada de 8 m con carga térmica uniforme y no uniforme."
+      }
+    }
+  },
+  "search": {
+    "label": "Buscar",
+    "placeholder": "Buscar en la documentación",
+    "noResults": "Sin resultados para «{query}»"
+  }
+}

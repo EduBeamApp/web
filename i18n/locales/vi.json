@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "description": "Phân tích kết cấu trực tuyến miễn phí – dầm, khung và dàn phẳng, có kết quả tức thì ngay trên trình duyệt."
+  },
+  "nav": {
+    "guide": "Tài liệu",
+    "tutorials": "Hướng dẫn",
+    "examples": "Ví dụ",
+    "faq": "FAQ",
+    "openApp": "Mở ứng dụng"
+  },
+  "docs": {
+    "onThisPage": "Trên trang này",
+    "prev": "Trang trước",
+    "next": "Trang sau",
+    "lastUpdated": "Cập nhật lần cuối"
+  },
+  "footer": {
+    "copyright": "Những người đóng góp cho EduBeam"
+  },
+  "components": {
+    "loadsTitle": "Xem trước các loại tải trọng",
+    "loadsLede": "Các loại tải trọng thông dụng trông như thế nào trong EduBeam. Mỗi thẻ là một mô hình đã giải, tương tác được, và mở trong ứng dụng đúng như đã thiết lập.",
+    "openInApp": "Mở trong EduBeam",
+    "simplySupportedBeam": "Dầm đơn giản",
+    "udlBlurb": "Nhịp gối cố định – gối di động chịu 12 kN/m: biểu đồ lực cắt và mô men kinh điển.",
+    "trapezoidalBlurb": "Tải tăng từ 4 đến 14 kN/m trên nhịp bên phải.",
+    "concentratedBlurb": "Một tải tập trung 18 kN hướng xuống tại giữa nhịp, không cần thêm nút.",
+    "nodalBlurb": "Tải 20 kN tại gối tựa giữa, để kiểm tra phản lực và độ võng.",
+    "temperatureBlurb": "Chênh lệch nhiệt độ theo chiều cao tiết diện (thớ trên nóng hơn thớ dưới) và độ cong mà nó gây ra.",
+    "promoTitle": "Đưa khung của bạn",
+    "promoAccent": "lên 3D.",
+    "promoSubtitle": "bản sàn, vỏ mỏng và kiểm tra kết cấu thép ngay trên trình duyệt",
+    "promoCta": "Dùng thử miễn phí",
+    "spanLength": "Chiều dài nhịp",
+    "loadIntensity": "Cường độ tải trọng",
+    "loadPosition": "Vị trí tải trọng",
+    "heroHint": "Di chuyển tải trọng, biểu đồ thay đổi theo."
+  },
+  "common": {
+    "deformedShape": "Sơ đồ biến dạng",
+    "normalForce": "Lực dọc",
+    "shearForce": "Lực cắt",
+    "bendingMoment": "Mô men uốn"
+  },
+  "loadType": {
+    "udl": "Tải phân bố đều",
+    "trapezoidal": "Tải hình thang",
+    "concentrated": "Tải tập trung",
+    "temperature": "Tải nhiệt độ"
+  },
+  "loads": {
+    "nodalLoad": "Tải trọng nút",
+    "temperatureDeltaTbtNoHTML": "ΔTb-ΔTt",
+    "temperatureDeltaTsNoHTML": "ΔTc"
+  },
+  "examples": {
+    "items": {
+      "welcome": {
+        "title": "Dầm siêu tĩnh",
+        "blurb": "Dầm siêu tĩnh 3 m, một đầu ngàm một đầu gối di động, chịu tải phân bố đều 10 kN/m."
+      },
+      "cantilever": {
+        "title": "Dầm công xôn",
+        "blurb": "Dầm công xôn 4 m chịu tải trọng nút 18 kN hướng xuống, làm rõ độ cong và độ võng đầu tự do."
+      },
+      "pratt": {
+        "title": "Dàn Warren",
+        "blurb": "Dàn Warren đơn giản chịu tải 8 kN tại các mắt dàn, cho thấy phân bố lực dọc và chuyển vị."
+      },
+      "continuous": {
+        "title": "Dầm liên tục ba nhịp",
+        "blurb": "Các nhịp 5+6+5 m với tải phân bố đều + tập trung + phân bố đều để so sánh độ cong và góc xoay tại gối."
+      },
+      "portal": {
+        "title": "Khung cổng",
+        "blurb": "Dầm 8 m trên cột 6 m chịu tải phân bố đều trên mái và tải ngang + đứng tại nút góc để kiểm tra chuyển vị ngang và uốn."
+      },
+      "temperature": {
+        "title": "Tải nhiệt độ",
+        "blurb": "Dầm đơn giản 8 m chịu tải nhiệt độ đều và không đều."
+      }
+    }
+  },
+  "search": {
+    "label": "Tìm kiếm",
+    "placeholder": "Tìm trong tài liệu",
+    "noResults": "Không có kết quả cho “{query}”"
+  }
+}

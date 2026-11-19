@@ -1,0 +1,41 @@
+name: Deploy
+
+# The website, www.edubeam.app. It took over the Cloudflare Pages project of the documentation that
+# used to be built from the app's docs/ folder, so it deploys the same way: main is production, dev
+# lands on dev.edubeam-docs.pages.dev.
+on:
+  push:
+    branches: [main, dev]
+  workflow_dispatch:
+
+# One deploy per branch at a time; a newer push replaces a queued one.
+concurrency:
+  group: deploy-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run generate
+        env:
+          NODE_OPTIONS: --max-old-space-size=6144
+
+      - uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy .output/public --project-name edubeam-docs --branch ${{ github.ref_name }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
