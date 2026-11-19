@@ -98,6 +98,11 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Korean wraps at spaces, as English does; by default browsers break inside words */
+html:lang(ko) {
+  word-break: keep-all;
+}
+
 :focus-visible {
   outline: 2px solid var(--brand);
   outline-offset: 2px;
