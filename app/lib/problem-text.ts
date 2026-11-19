@@ -37,7 +37,11 @@ export const renderText = (text: Text, language: TextLanguage): string => {
     if (typeof value === 'number') return numbers.format(value)
     if (typeof value === 'string') return value
     if ('key' in value) return renderText(value, language)
-    return writtenList(listFormat(language.locale).format(value.map((v) => param(v))), language.locale)
+    const items = value.map((v) => param(v))
+    // Thai lists bare labels with commas ("H, J และ L"); Intl separates them with spaces only
+    if (language.locale.startsWith('th') && items.length > 1 && items.every((i) => !/\s/.test(i)))
+      return `${items.slice(0, -1).join(', ')} และ ${items.at(-1)}`
+    return writtenList(listFormat(language.locale).format(items), language.locale)
   }
   const params = Object.fromEntries(Object.entries(text.params ?? {}).map(([name, value]) => [name, param(value)]))
   return language.t(text.key, params, text.count)
