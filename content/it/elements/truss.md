@@ -1,5 +1,5 @@
 ---
-description: "L’asta reticolare in EduBeam: un elemento trave incernierato alle due estremità, perché coincide con il classico elemento reticolare, rigidezza e trasformazione."
+description: "L’asta reticolare in EduBeam: un elemento trave incernierato agli estremi, perché coincide con il classico elemento reticolare, rigidezza e trasformazione."
 source: site
 ---
 

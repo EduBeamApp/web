@@ -1,6 +1,6 @@
 ---
 title: StructurePlot
-description: "Nosník, rám nebo příhradová konstrukce se StructurePlot: vrstvy, postupně přibývající obrázky, neznámé reakce v zadání, náhledy, velikost, jednotky a odečet hodnot."
+description: "Nosník, rám nebo příhradová konstrukce se StructurePlot: vrstvy, obrázky po krocích, neznámé reakce v zadání, náhledy, velikost, jednotky a odečet hodnot."
 order: 2
 group: Komponenty
 ---

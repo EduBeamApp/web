@@ -5,6 +5,8 @@ source: site
 
 # File, tautan & ekspor
 
+:span{#impor-ekspor-berbagi}
+
 Simpan model Anda sebagai file, kirim sebagai tautan, sematkan di halaman web, atau ekspor sebagai gambar atau tabel. Semua yang ada di [EduBeam]{.edubeam} terjadi di browser Anda dan tidak ada yang diunggah: tautan berbagi benar-benar memuat modelnya.
 
 ::card-grid{cols="3"}

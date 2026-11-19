@@ -1,5 +1,5 @@
 ---
-description: "Lire les résultats d’EduBeam : diagrammes N, V, M, déformée, réactions et leurs signes, infobulles, tableaux, export CSV, matrice de rigidité, format des nombres."
+description: "Lire les résultats d’EduBeam : diagrammes N, V, M, déformée, réactions et leurs signes, infobulles, tableaux, export CSV, matrice de rigidité."
 source: site
 ---
 

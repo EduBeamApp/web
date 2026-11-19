@@ -1,6 +1,6 @@
 ---
 title: Slide dan catatan kuliah
-description: "Gambar kuliah @edubeam/plot yang tersusun klik demi klik di Slidev, Vue atau Beamer, dihitung saat kuliah, dan masuk ke catatan, PowerPoint dan Word sebagai SVG."
+description: "Gambar kuliah @edubeam/plot yang tersusun klik demi klik di Slidev, Vue atau Beamer, dihitung langsung, dan masuk ke catatan, PowerPoint dan Word sebagai SVG."
 order: 6
 source: site
 ---

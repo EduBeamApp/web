@@ -1,5 +1,5 @@
 ---
-description: "Tutorial: viga inclinada de cobertura ou de escada no EduBeam: carga por metro em planta, esforços N e V ao longo da inclinação e o apoio móvel girado. Cerca de 15 minutos."
+description: "Tutorial: viga inclinada no EduBeam: carga por metro em planta, esforços N e V ao longo da inclinação e o apoio móvel girado. Cerca de 15 minutos."
 source: site
 ---
 

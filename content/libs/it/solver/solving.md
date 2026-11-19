@@ -1,6 +1,6 @@
 ---
 title: Calcolo
-description: "Cosa fa solve() in @edubeam/fem, quando rinumerare le equazioni dopo aver modificato un modello, come riconoscere un meccanismo e quanto può essere grande un modello."
+description: "Cosa fa solve() in @edubeam/fem, quando rinumerare le equazioni dopo una modifica, come riconoscere un meccanismo e quanto può essere grande un modello."
 order: 9
 group: Calcolo e risultati
 source: site

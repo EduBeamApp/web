@@ -1,5 +1,5 @@
 ---
-description: "Raccourcis clavier, actions de souris et gestes tactiles d’EduBeam : annuler, enregistrer, exporter, copier-coller, ajuster, zoomer, sélectionner, déplacer la vue."
+description: "Raccourcis clavier, souris et gestes tactiles d’EduBeam : annuler, enregistrer, exporter, copier-coller, ajuster, zoomer, sélectionner, déplacer la vue."
 source: site
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: "Všechny klávesové zkratky, akce myši a dotyková gesta v EduBeamu: zpět, uložení, otevření, export obrázku, kopírování a vložení, přizpůsobení obrazovce, přiblížení, výběr a posun."
+description: "Všechny klávesové zkratky, akce myši a dotyková gesta v EduBeamu: zpět, uložení, otevření, export obrázku, kopírování a vložení, přiblížení, výběr a posun."
 source: site
 ---
 

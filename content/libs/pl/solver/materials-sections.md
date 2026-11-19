@@ -1,6 +1,6 @@
 ---
 title: Materiały i przekroje
-description: "Parametry materiału i przekroju w @edubeam/fem: które są potrzebne w danych obliczeniach, co się dzieje, gdy któregoś brakuje, i jak wyłączyć odkształcenie postaciowe."
+description: "Parametry materiału i przekroju w @edubeam/fem: których wymagają dane obliczenia, co się dzieje, gdy któregoś brakuje, i jak wyłączyć odkształcenie postaciowe."
 order: 4
 source: site
 ---

@@ -1,6 +1,6 @@
 ---
 title: Fonctions
-description: "Fonctions, constantes et types de @edubeam/plot 0.2.0 hors composants : structureSvg pour les fichiers SVG, lecture exacte, unités, lignes de poutre, mise en page."
+description: "Fonctions, constantes et types de @edubeam/plot hors composants : structureSvg pour les fichiers SVG, lecture exacte, unités, lignes de poutre, mise en page."
 order: 10
 source: site
 ---

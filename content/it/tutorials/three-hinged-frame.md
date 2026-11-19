@@ -1,5 +1,5 @@
 ---
-description: "Tutorial: telaio a tre cerniere con carico uniforme in EduBeam, con reazioni, spinta, forze interne e abbassamento della cerniera verificati a mano. Circa 15 minuti."
+description: "Tutorial: telaio a tre cerniere con carico uniforme in EduBeam, con reazioni, spinta, forze interne e abbassamento della cerniera verificati a mano."
 source: site
 ---
 

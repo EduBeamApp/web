@@ -1,5 +1,5 @@
 ---
-description: "Der Fachwerkstab in EduBeam: ein Balkenelement mit zwei Endgelenken, warum das genau das klassische Fachwerkelement ist, Steifigkeits- und Transformationsmatrix."
+description: "Fachwerkstab in EduBeam: ein Balkenelement mit zwei Endgelenken, warum das genau das klassische Fachwerkelement ist, Steifigkeits- und Transformationsmatrix."
 source: site
 ---
 

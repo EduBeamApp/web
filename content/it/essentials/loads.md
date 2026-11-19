@@ -1,5 +1,5 @@
 ---
-description: "Forze, momenti, cedimenti, carichi uniformi, trapezoidali, concentrati e termici in EduBeam, con la convenzione dei segni: z positivo verso il basso, momenti antiorari."
+description: "Forze, momenti, cedimenti, carichi uniformi, trapezoidali, concentrati e termici in EduBeam, con la convenzione dei segni: z verso il basso, momenti antiorari."
 source: site
 ---
 

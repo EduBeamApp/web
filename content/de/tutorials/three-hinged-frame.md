@@ -1,5 +1,5 @@
 ---
-description: "Dreigelenkrahmen unter Gleichlast in EduBeam: Auflagerreaktionen, Horizontalschub und Schnittgrößen ablesen und bis zur Durchbiegung des Gelenks von Hand prüfen. Etwa 15 Minuten."
+description: "Dreigelenkrahmen unter Gleichlast in EduBeam: Auflagerkräfte, Horizontalschub und Schnittgrößen ablesen und bis zur Durchbiegung des Gelenks von Hand prüfen."
 ---
 
 # Tutorial: Dreigelenkrahmen

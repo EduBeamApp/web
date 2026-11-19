@@ -1,6 +1,6 @@
 ---
 title: โมเดลสำหรับวาดภาพ
-description: "PlotModel ข้อมูลธรรมดาที่แปลงเป็น JSON ได้ ซึ่ง modelFromSolver สร้างจากโมเดล @edubeam/fem ที่คำนวณแล้ว ผลลัพธ์แบบพหุนามแบ่งช่วง และการอ่านค่าแม่นตรงและค่าสุดขีด"
+description: "PlotModel ข้อมูลธรรมดาที่แปลงเป็น JSON ได้ ซึ่ง modelFromSolver สร้างจากโมเดล @edubeam/fem ที่คำนวณแล้ว ผลลัพธ์แบบพหุนามแบ่งช่วง ค่าแม่นตรงและค่าสุดขีด"
 order: 9
 source: site
 ---

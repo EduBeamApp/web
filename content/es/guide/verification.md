@@ -1,5 +1,5 @@
 ---
-description: "EduBeam frente a las fórmulas de los libros: vigas, una celosía, temperatura, un asiento de apoyo y en qué difiere su viga de Timoshenko de la de Euler–Bernoulli."
+description: "EduBeam frente a las fórmulas de los libros: vigas, una celosía, temperatura, un asiento y en qué difiere su viga de Timoshenko de la de Euler–Bernoulli."
 source: site
 ---
 

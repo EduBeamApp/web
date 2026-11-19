@@ -1,6 +1,6 @@
 ---
 title: Mô hình vẽ
-description: "PlotModel: dữ liệu thuần, tuần tự hóa được thành JSON, do modelFromSolver tạo từ mô hình @edubeam/fem đã giải, kết quả dạng đa thức từng đoạn, cách đọc giá trị và cực trị chính xác."
+description: "PlotModel, tuần tự hóa được thành JSON, do modelFromSolver tạo từ mô hình @edubeam/fem đã giải: kết quả dạng đa thức từng đoạn, giá trị và cực trị chính xác."
 order: 9
 source: site
 ---

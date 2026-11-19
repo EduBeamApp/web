@@ -1,5 +1,5 @@
 ---
-description: "Eğitim: EduBeam'de iki açıklıklı sürekli kiriş modelleyin, basit kirişlerle karşılaştırın, orta mesnedi çöktürün, kuvvet yöntemiyle kontrol edin. Yaklaşık 25 dakika."
+description: "Eğitim: EduBeam'de iki açıklıklı sürekli kiriş kurun, basit kirişlerle karşılaştırın, orta mesnedi çöktürün, kuvvet yöntemiyle kontrol edin. Yaklaşık 25 dakika."
 source: site
 ---
 

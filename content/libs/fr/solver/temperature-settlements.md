@@ -1,6 +1,6 @@
 ---
 title: Température et tassements
-description: "Chargez les barres de @edubeam/fem par une variation et une différence de température, et déplacez les appuis par un déplacement imposé, avec des exemples vérifiés."
+description: "Chargez les barres de @edubeam/fem par une variation et une différence de température, imposez un déplacement aux appuis, avec des exemples vérifiés."
 order: 7
 source: site
 ---

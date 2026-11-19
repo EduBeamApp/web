@@ -1,6 +1,6 @@
 ---
 title: Scripts et serveurs
-description: "@edubeam/fem dans Node : une feuille d’exercices avec son corrigé, une ligne d’influence écrite en CSV et un petit point d’accès HTTP qui calcule des poutres à la demande."
+description: "@edubeam/fem dans Node : une feuille d’exercices et son corrigé, une ligne d’influence en CSV et un point d’accès HTTP qui calcule des poutres à la demande."
 order: 15
 source: site
 ---

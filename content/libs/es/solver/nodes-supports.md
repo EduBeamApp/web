@@ -1,6 +1,6 @@
 ---
 title: Nodos y apoyos
-description: "Crea los nodos de un modelo de @edubeam/fem, apóyalos impidiendo grados de libertad, gira los ejes de un apoyo móvil inclinado y modifica nodos después del cálculo."
+description: "Crea los nodos de un modelo de @edubeam/fem, apóyalos impidiendo grados de libertad, gira los ejes de un apoyo móvil inclinado y modifica nodos tras el cálculo."
 order: 3
 group: Modelado
 source: site

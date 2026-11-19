@@ -1,6 +1,6 @@
 ---
 title: थीम और रंग
-description: "@edubeam/plot के चित्रों के रंग CSS custom properties या colors prop से बदलें, light और dark थीम अपनाएँ, श्वेत-श्याम छापें, SVG फ़ाइलों में रंग दें, फ़ॉन्ट और animation बदलें।"
+description: "@edubeam/plot के चित्रों के रंग CSS custom properties या colors prop से बदलें: light और dark थीम, श्वेत-श्याम छपाई, SVG में रंग, फ़ॉन्ट और animation।"
 order: 4
 source: site
 ---

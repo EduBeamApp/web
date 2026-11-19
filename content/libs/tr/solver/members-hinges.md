@@ -1,6 +1,6 @@
 ---
 title: Çubuklar ve mafsallar
-description: "Düğümleri Beam2D çubuklarıyla bağlayın, uç mafsallarıyla momenti serbest bırakın, kafes çubuğu modelleyin, rijitlik ve dönüşüm matrislerini @edubeam/fem ile alın."
+description: "Düğümleri Beam2D çubuklarıyla bağlayın, uç mafsalıyla momenti serbest bırakın, kafes çubuğu modelleyin, rijitlik ve dönüşüm matrislerini @edubeam/fem ile alın."
 order: 5
 source: site
 ---

@@ -1,6 +1,6 @@
 ---
 title: DiagramStack
-description: "Disegna con DiagramStack una trave sopra i diagrammi V(x), M(x) e w(x) su un unico asse x, leggi ogni riga con un cursore e lascia trascinare un carico concentrato."
+description: "Disegna con DiagramStack una trave sopra i diagrammi V(x), M(x) e w(x) sullo stesso asse, leggi ogni riga col cursore e lascia trascinare un carico concentrato."
 order: 3
 source: site
 ---

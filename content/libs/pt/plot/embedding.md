@@ -1,6 +1,6 @@
 ---
 title: Incorporação
-description: "Figuras do @edubeam/plot num app Vite, em notas de aula com VitePress ou num site Nuxt: renderização no servidor, modelos resolvidos em JSON ou SVG puro sem Vue."
+description: "Figuras do @edubeam/plot num app Vite, em notas de aula com VitePress ou num site Nuxt: renderização no servidor, modelos resolvidos em JSON ou SVG sem Vue."
 order: 7
 source: site
 ---

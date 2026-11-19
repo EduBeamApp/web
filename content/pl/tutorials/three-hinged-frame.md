@@ -1,5 +1,5 @@
 ---
-description: "Samouczek: rama trójprzegubowa z obciążeniem równomiernym w EduBeamie – reakcje, rozpór i siły przekrojowe sprawdzone ręcznie, aż po ugięcie przegubu. Około 15 minut."
+description: "Samouczek: rama trójprzegubowa z obciążeniem równomiernym w EduBeamie – reakcje, rozpór i siły przekrojowe sprawdzone ręcznie, aż po ugięcie przegubu."
 source: site
 ---
 

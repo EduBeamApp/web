@@ -1,6 +1,6 @@
 ---
 title: Batang dan sendi
-description: "Hubungkan joint dengan batang Beam2D, lepas momen dengan sendi ujung, modelkan batang rangka, dan ambil matriks kekakuan serta transformasi elemen dari @edubeam/fem."
+description: "Hubungkan joint dengan batang Beam2D, lepas momen dengan sendi ujung, modelkan batang rangka, dan ambil matriks kekakuan serta transformasi dari @edubeam/fem."
 order: 5
 source: site
 ---

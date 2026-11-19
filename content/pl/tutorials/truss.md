@@ -1,5 +1,5 @@
 ---
-description: "Samouczek: kratownica płaska w EduBeamie – siły w prętach metodą równoważenia węzłów i metodą Rittera, pręt zerowy i ugięcie z zasady prac wirtualnych. Około 20 minut."
+description: "Samouczek: kratownica płaska w EduBeamie – siły w prętach metodą równoważenia węzłów i metodą Rittera, pręt zerowy i ugięcie z zasady prac wirtualnych."
 source: site
 ---
 

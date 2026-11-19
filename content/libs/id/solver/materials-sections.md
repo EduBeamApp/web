@@ -1,6 +1,6 @@
 ---
 title: Material dan penampang
-description: "Parameter material dan penampang yang dipakai @edubeam/fem, parameter yang diperlukan setiap analisis, akibatnya jika terlupa, dan cara mematikan deformasi geser."
+description: "Parameter material dan penampang yang dipakai @edubeam/fem, mana yang diperlukan setiap analisis, akibatnya jika terlupa, dan cara mematikan deformasi geser."
 order: 4
 source: site
 ---

@@ -1,6 +1,6 @@
 ---
 title: Nodi e vincoli
-description: "Crea i nodi di un modello @edubeam/fem, vincolali bloccando i gradi di libertà, ruota gli assi di un vincolo per un carrello inclinato e modifica i nodi dopo il calcolo."
+description: "Crea i nodi di un modello @edubeam/fem, vincolali bloccando i gradi di libertà, ruota gli assi di un carrello inclinato e modifica i nodi dopo il calcolo."
 order: 3
 group: Modellazione
 source: site

@@ -1,5 +1,5 @@
 ---
-description: "Todos os atalhos de teclado, ações do mouse e gestos de toque do EduBeam: desfazer, salvar, abrir, exportar imagem, copiar, colar, ajustar, zoom, seleção e panorâmica."
+description: "Atalhos de teclado, ações do mouse e gestos de toque do EduBeam: desfazer, salvar, abrir, exportar imagem, copiar, colar, ajustar, zoom, seleção e panorâmica."
 source: site
 ---
 

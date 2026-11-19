@@ -1,5 +1,5 @@
 ---
-description: "Tutorial: treliça plana no EduBeam. Esforços nas barras pelos métodos dos nós e das seções, a barra de esforço nulo e uma flecha por trabalhos virtuais. Cerca de 20 minutos."
+description: "Tutorial: treliça plana no EduBeam. Esforços nas barras pelos métodos dos nós e das seções, a barra de esforço nulo e uma flecha por trabalhos virtuais."
 source: site
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Diapositivas y apuntes
-description: "Figuras para clase con @edubeam/plot que se completan clic a clic en Slidev, Vue o Beamer, se resuelven en directo y pasan a apuntes, PowerPoint y Word como SVG."
+description: "Figuras para clase con @edubeam/plot que se completan clic a clic en Slidev, Vue o Beamer, se resuelven en directo y pasan a apuntes, PowerPoint y Word en SVG."
 order: 6
 source: site
 ---

@@ -1,5 +1,5 @@
 ---
-description: "EduBeam'in iki düğümlü Timoshenko kirişi: kesin rijitlik matrisi, kayma şekil değiştirmesi, statik yoğunlaştırmayla uç mafsalları, ankastrelik uç kuvvetleri, dönüşüm."
+description: "EduBeam'in iki düğümlü Timoshenko kirişi: kesin rijitlik matrisi, kayma şekil değiştirmesi, statik kondensasyonla uç mafsalları, ankastrelik uç kuvvetleri."
 source: site
 ---
 

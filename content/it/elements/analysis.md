@@ -1,5 +1,5 @@
 ---
-description: "Il metodo diretto della rigidezza in EduBeam, svolto a mano su una trave incastrata-appoggiata: numerazione dei GdL, assemblaggio, vincoli, reazioni e risultati."
+description: "Metodo diretto della rigidezza in EduBeam, svolto a mano su una trave incastrata-appoggiata: numerazione dei GdL, assemblaggio, vincoli, reazioni e risultati."
 source: site
 ---
 

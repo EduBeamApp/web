@@ -1,6 +1,6 @@
 ---
 title: Knoten- und Stablasten
-description: "Kräfte und Momente an Knoten sowie Gleich-, Trapez- und Einzellasten auf Stäben, in globalen oder lokalen Achsen, mit @edubeam/fem aufbringen, ändern und entfernen."
+description: "Knotenkräfte und -momente sowie Gleich-, Trapez- und Einzellasten auf Stäben in globalen oder lokalen Achsen mit @edubeam/fem aufbringen, ändern und entfernen."
 order: 6
 group: Lasten
 ---

@@ -1,6 +1,6 @@
 ---
 title: Poutres
-description: "Des programmes @edubeam/fem complets pour une console et une poutre continue à deux travées, avec leur sortie, chacun vérifié par la formule classique des manuels."
+description: "Des programmes @edubeam/fem complets pour une console et une poutre continue à deux travées, avec leur sortie, chacun vérifié par la formule classique."
 order: 12
 group: Exemples complets
 source: site

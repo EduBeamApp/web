@@ -1,9 +1,11 @@
 ---
-description: "EduBeam-Projekte speichern und öffnen, Desktop-Sitzungen laden, Links teilen, Viewer einbetten, URL-Parameter, Bild- und Tabellenexport. Alles bleibt im Browser."
+description: "EduBeam-Projekte speichern und öffnen, Desktop-Sitzungen laden, Links teilen, Viewer einbetten, URL-Parameter, Bild- und Tabellenexport – alles im Browser."
 source: site
 ---
 
 # Dateien, Links & Export
+
+:span{#import-export-teilen}
 
 Speichern Sie Ihr Modell als Datei, verschicken Sie es als Link, betten Sie es in eine Webseite ein oder exportieren Sie ein Bild oder eine Tabelle davon. Alles in [EduBeam]{.edubeam} geschieht in Ihrem Browser, und nichts wird hochgeladen: Ein Link enthält buchstäblich das Modell.
 

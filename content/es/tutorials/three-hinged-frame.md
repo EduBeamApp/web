@@ -1,5 +1,5 @@
 ---
-description: "Tutorial: un pórtico triarticulado con carga uniforme en EduBeam. Reacciones, empuje y esfuerzos comprobados a mano, hasta la flecha de la rótula. Unos 15 minutos."
+description: "Tutorial: un pórtico triarticulado con carga uniforme en EduBeam. Reacciones, empuje y esfuerzos comprobados a mano, hasta la flecha de la rótula."
 source: site
 ---
 

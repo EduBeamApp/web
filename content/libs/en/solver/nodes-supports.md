@@ -1,6 +1,6 @@
 ---
 title: Nodes and supports
-description: "Create the nodes of a @edubeam/fem model, support them by fixing degrees of freedom, turn a support's axes for an inclined roller, and change nodes after a solve."
+description: "Create the nodes of a @edubeam/fem model, support them by fixing degrees of freedom, turn a support's axes for an inclined roller, and change nodes later."
 order: 3
 group: Modelling
 source: site

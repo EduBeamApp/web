@@ -1,5 +1,5 @@
 ---
-description: "Tutoriel : une poutre continue à deux travées dans EduBeam, comparée à deux travées isostatiques, puis un tassement d’appui, le tout vérifié par la méthode des forces. Environ 25 minutes."
+description: "Tutoriel : une poutre continue à deux travées dans EduBeam, comparée à deux travées isostatiques, avec un tassement d’appui, vérifiée par la méthode des forces."
 source: site
 ---
 

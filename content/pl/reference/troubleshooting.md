@@ -1,5 +1,5 @@
 ---
-description: "Dlaczego EduBeam nie pokazuje wyników i jak to naprawić: wyjaśnienie każdego błędu i ostrzeżenia, wyniki, które wyglądają źle, oraz pliki i linki, które się nie otwierają."
+description: "Dlaczego EduBeam nie pokazuje wyników i jak to naprawić: wyjaśnienie każdego błędu i ostrzeżenia, podejrzane wyniki oraz pliki i linki, które się nie otwierają."
 source: site
 ---
 

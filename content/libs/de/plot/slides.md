@@ -1,6 +1,6 @@
 ---
 title: Folien und Skripte
-description: "Abbildungen für die Vorlesung mit @edubeam/plot: Klick für Klick aufgebaut in Slidev, Vue oder Beamer, live berechnet und als SVG im Skript, in PowerPoint und Word."
+description: "Vorlesungsabbildungen mit @edubeam/plot: Klick für Klick aufgebaut in Slidev, Vue oder Beamer, live berechnet und als SVG im Skript, in PowerPoint und Word."
 order: 6
 ---
 

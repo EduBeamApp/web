@@ -1,6 +1,6 @@
 ---
 title: Lire les résultats
-description: "Lisez les réactions, les déplacements nodaux, les efforts internes le long d’une barre, la déformée et les efforts d’extrémité d’un modèle @edubeam/fem calculé, et la forme de chaque retour."
+description: "Lisez sur un modèle @edubeam/fem calculé les réactions, les déplacements, les efforts internes le long d’une barre, la déformée, les efforts d’extrémité."
 order: 10
 source: site
 ---

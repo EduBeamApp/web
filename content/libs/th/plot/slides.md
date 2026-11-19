@@ -1,6 +1,6 @@
 ---
 title: สไลด์และเอกสารประกอบการสอน
-description: "ภาพประกอบการบรรยายด้วย @edubeam/plot ที่ค่อย ๆ เพิ่มเนื้อหาทีละคลิกใน Slidev, Vue หรือ Beamer คำนวณสดในห้องบรรยาย และใช้ในเอกสาร PowerPoint และ Word เป็นไฟล์ SVG"
+description: "ภาพประกอบการบรรยายด้วย @edubeam/plot ที่ค่อย ๆ เพิ่มเนื้อหาทีละคลิกใน Slidev, Vue หรือ Beamer คำนวณสด และใช้ในเอกสาร PowerPoint และ Word เป็นไฟล์ SVG"
 order: 6
 source: site
 ---

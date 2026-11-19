@@ -1,6 +1,6 @@
 ---
 title: फ़ंक्शन
-description: "कंपोनेंट के अलावा @edubeam/plot 0.2.0 के सारे फ़ंक्शन, constant और टाइप: SVG फ़ाइलों के लिए structureSvg, सटीक परिणाम, इकाइयाँ, बीम-रेखाएँ और अपने चित्रों का लेआउट।"
+description: "कंपोनेंट के अलावा @edubeam/plot के सारे फ़ंक्शन, constant और टाइप: SVG फ़ाइलों के लिए structureSvg, सटीक परिणाम, इकाइयाँ, बीम-रेखाएँ और अपने चित्रों का लेआउट।"
 order: 10
 source: site
 ---

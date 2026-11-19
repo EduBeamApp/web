@@ -1,6 +1,6 @@
 ---
 title: Exercises and tests
-description: "Generate a different structural analysis exercise for every student from a seed with @edubeam/fem and @edubeam/plot, with an answer key that is always right, on a web page, as a printed test or as SVG figures for LaTeX and Word."
+description: "Generate a different statics exercise for every student from a seed, with an answer key that is always right: on a web page, a printed test or SVG figures."
 order: 5
 group: Use cases
 source: site

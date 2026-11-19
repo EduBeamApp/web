@@ -1,6 +1,6 @@
 ---
 title: Başlarken
-description: "EduBeam'in sonlu elemanlar çözücüsü @edubeam/fem kütüphanesini kurun; bir düzine TypeScript satırıyla basit mesnetli bir kirişi çözün, sonuçlarını okuyup kontrol edin."
+description: "EduBeam'in sonlu elemanlar çözücüsü @edubeam/fem kütüphanesini kurun; bir düzine TypeScript satırıyla basit mesnetli bir kirişi çözüp sonuçlarını kontrol edin."
 order: 1
 group: Giriş
 source: site

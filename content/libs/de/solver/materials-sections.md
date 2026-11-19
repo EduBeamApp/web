@@ -1,6 +1,6 @@
 ---
 title: Materialien und Querschnitte
-description: "Die Material- und Querschnittsparameter von @edubeam/fem: welche jede Berechnung braucht, was passiert, wenn einer fehlt, und wie Sie die Schubverformung abschalten."
+description: "Welche Material- und Querschnittsparameter @edubeam/fem für jede Berechnung braucht, was passiert, wenn einer fehlt, und wie Sie die Schubverformung abschalten."
 order: 4
 ---
 

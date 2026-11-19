@@ -1,5 +1,5 @@
 ---
-description: "EduBeam'de kiriş elemanları çizin, uç mafsallarıyla mafsallı birleşim ve kafes çubuğu modelleyin; malzeme ve kesitleri kütüphaneden alın veya çokgenle tanımlayın."
+description: "EduBeam'de kiriş elemanı çizin, uç mafsallarıyla mafsallı birleşim ve kafes çubuğu modelleyin; malzeme ve kesitleri kütüphaneden alın veya çokgenle tanımlayın."
 source: site
 ---
 

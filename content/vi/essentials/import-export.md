@@ -1,9 +1,11 @@
 ---
-description: "Lưu và mở dự án, mở phiên làm việc của EduBeam bản desktop, chia sẻ qua liên kết, nhúng trình xem, tham số URL, xuất hình ảnh và bảng kết quả, ngay trong trình duyệt."
+description: "Lưu và mở dự án, mở phiên làm việc của EduBeam bản desktop, chia sẻ qua liên kết, nhúng trình xem, xuất hình ảnh và bảng kết quả, ngay trong trình duyệt."
 source: site
 ---
 
 # Tệp, liên kết và xuất dữ liệu
+
+:span{#nhap-xuat-va-chia-se}
 
 Bạn có thể lưu mô hình thành tệp, gửi đi dưới dạng liên kết, nhúng vào trang web, hoặc xuất ra hình ảnh hay bảng số liệu. Mọi thứ trong [EduBeam]{.edubeam} đều diễn ra trong trình duyệt của bạn và không có gì được tải lên máy chủ: bản thân liên kết chia sẻ chứa toàn bộ mô hình.
 

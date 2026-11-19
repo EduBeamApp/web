@@ -1,5 +1,5 @@
 ---
-description: "Dessiner des éléments poutre dans EduBeam, libérer leurs extrémités par des rotules pour modéliser articulations et barres de treillis, définir matériaux et sections."
+description: "Dessiner des éléments dans EduBeam, libérer leurs extrémités par des rotules pour modéliser articulations et barres de treillis, définir matériaux et sections."
 source: site
 ---
 

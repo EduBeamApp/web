@@ -1,6 +1,6 @@
 ---
 title: Odczyt wyników
-description: "Reakcje, przemieszczenia węzłów, siły przekrojowe w dowolnym punkcie pręta, linia ugięcia i siły przywęzłowe z modelu @edubeam/fem oraz format zwracanych danych."
+description: "Reakcje, przemieszczenia węzłów, siły przekrojowe wzdłuż pręta, linia ugięcia i siły przywęzłowe z modelu @edubeam/fem oraz format zwracanych danych."
 order: 10
 source: site
 ---

@@ -1,6 +1,6 @@
 ---
 title: Sonuçları çizmek
-description: "Çözülmüş bir @edubeam/fem modelini @edubeam/plot ile çizin: bir Vue bileşeninde, Node betiğinden bağımsız bir SVG dosyası olarak ya da sonra çizilecek JSON olarak."
+description: "Çözülmüş bir @edubeam/fem modelini @edubeam/plot ile çizin: Vue bileşeninde, Node betiğinden bağımsız bir SVG dosyası olarak ya da sonra çizilecek JSON olarak."
 order: 11
 source: site
 ---

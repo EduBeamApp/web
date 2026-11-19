@@ -1,6 +1,6 @@
 ---
 title: Charges nodales et charges sur barre
-description: "Appliquez avec @edubeam/fem des forces et moments aux nœuds, des charges uniformes, trapézoïdales et ponctuelles sur les barres, en axes globaux ou locaux ; modifiez-les ou supprimez-les."
+description: "Appliquez avec @edubeam/fem forces et moments nodaux, charges sur barre uniformes, trapézoïdales et ponctuelles, en axes globaux ou locaux, puis modifiez-les."
 order: 6
 group: Charges
 source: site

@@ -1,6 +1,6 @@
 ---
 title: Uzlová a prvková zatížení
-description: "Zadejte v @edubeam/fem síly a momenty v uzlech a rovnoměrná, lineárně proměnná a osamělá zatížení na prvcích, v globálních nebo lokálních osách, a pak je měňte či odebírejte."
+description: "Zadejte v @edubeam/fem uzlové síly a momenty, rovnoměrná, lineárně proměnná a osamělá zatížení prvků v globálních či lokálních osách, pak je měňte či odeberte."
 order: 6
 group: Zatížení
 ---

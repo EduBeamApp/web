@@ -1,5 +1,5 @@
 ---
-description: "Wstawianie i edycja węzłów w EduBeamie, przyciąganie do siatki, dzielenie elementów i dobór podpory: przegubowej, przesuwnej, utwierdzenia i ich odmian pionowych i ukośnych."
+description: "Wstawianie i edycja węzłów w EduBeamie, przyciąganie do siatki, dzielenie elementów i dobór podpory: przegubowa, przesuwna, utwierdzenie, pionowa lub ukośna."
 source: site
 ---
 

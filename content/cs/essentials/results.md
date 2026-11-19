@@ -1,5 +1,5 @@
 ---
-description: "Výsledky v EduBeamu: průběhy N, V a M, deformovaný tvar a reakce, jejich znaménka, hodnoty po najetí myší, tabulky výsledků, export CSV, matice tuhosti a formát čísel."
+description: "Výsledky v EduBeamu: průběhy N, V a M, deformovaný tvar a reakce, jejich znaménka, hodnoty po najetí myší, tabulky výsledků, export CSV a matice tuhosti."
 source: site
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: "EduBeam berechnet ebene Balken, Rahmen und Fachwerke kostenlos im Browser: was es kann und was nicht, für wen es gedacht ist, Aufbau der Anleitung, Bibliotheken."
+description: "EduBeam berechnet ebene Balken, Rahmen und Fachwerke kostenlos im Browser: Möglichkeiten und Grenzen, Zielgruppe und Aufbau der Anleitung."
 source: site
 ---
 

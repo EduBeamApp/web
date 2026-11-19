@@ -1,5 +1,5 @@
 ---
-description: "Read EduBeam's results: normal force, shear force and bending moment diagrams, the deformed shape and reactions, their signs, hover values, the result tables, CSV export, the stiffness matrix and the number format."
+description: "Read EduBeam's results: N, V and M diagrams, the deformed shape and reactions, their signs, hover values, result tables, CSV export and the stiffness matrix."
 source: site
 ---
 

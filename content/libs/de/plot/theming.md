@@ -1,6 +1,6 @@
 ---
 title: Farben und Farbschemata
-description: "Grafiken von @edubeam/plot über CSS-Variablen oder die Prop colors einfärben: helles und dunkles Farbschema, Schwarz-Weiß-Druck, SVG-Dateien, Schrift, Animation."
+description: "@edubeam/plot-Grafiken über CSS-Variablen oder die Prop colors einfärben: helles und dunkles Farbschema, Schwarz-Weiß-Druck, SVG-Dateien, Schrift, Animation."
 order: 4
 ---
 

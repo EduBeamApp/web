@@ -1,5 +1,5 @@
 ---
-description: "Darmowa analiza statyczna konstrukcji 2D w przeglądarce. Narysuj belkę, ramę lub kratownicę, dodaj obciążenia i od razu zobacz wykresy N, V, M, reakcje i ugięcia."
+description: "Darmowa analiza konstrukcji 2D w przeglądarce. Narysuj belkę, ramę lub kratownicę, dodaj obciążenia i od razu zobacz wykresy N, V, M, reakcje i ugięcia."
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 

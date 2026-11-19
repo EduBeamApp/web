@@ -1,5 +1,5 @@
 ---
-description: "O elemento de viga de Timoshenko do EduBeam: rigidez exata, deformação por cisalhamento, rótulas por condensação estática, esforços de engastamento e matriz de transformação."
+description: "O elemento de viga de Timoshenko do EduBeam: rigidez exata, deformação por cisalhamento, rótulas por condensação, esforços de engastamento, transformação."
 source: site
 ---
 

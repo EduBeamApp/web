@@ -1,9 +1,11 @@
 ---
-description: "Conventions de signes d’EduBeam : x vers la droite, z vers le bas, charges, déplacements, axes locaux, N, V, M, efforts d’extrémité, réactions, option y vers le haut."
+description: "Convention de signes d’EduBeam : x à droite, z vers le bas, charges, déplacements, axes locaux, N, V, M, efforts d’extrémité, réactions, option y vers le haut."
 source: site
 ---
 
 # Repère et conventions de signes
+
+:span{#repere-et-conventions-de-signe}
 
 Chaque nombre qu’affiche EduBeam a un signe. Cette page précise ce que *positif* veut dire pour les coordonnées, les charges, les déplacements, les efforts internes, les efforts d’extrémité et les réactions, pour que vous puissiez comparer l’application avec vos propres calculs. La plupart des résultats qui semblent faux s’expliquent en fait par une convention de signes.
 

@@ -1,5 +1,5 @@
 ---
-description: "Mengapa EduBeam tidak menampilkan hasil dan cara mengatasinya: setiap pesan kesalahan dan peringatan, hasil yang tampak salah, serta file atau tautan yang tidak terbuka."
+description: "Mengapa EduBeam tidak menampilkan hasil dan cara mengatasinya: setiap pesan kesalahan dan peringatan, hasil yang janggal, file atau tautan yang tidak terbuka."
 source: site
 ---
 

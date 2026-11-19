@@ -1,6 +1,6 @@
 ---
 title: Temperatura y asientos
-description: "Carga barras de @edubeam/fem con una variación uniforme y una diferencia de temperatura, y mueve apoyos con un desplazamiento impuesto, con ejemplos comprobados."
+description: "Carga barras de @edubeam/fem con una variación y una diferencia de temperatura, y mueve apoyos con un desplazamiento impuesto, con ejemplos comprobados."
 order: 7
 source: site
 ---

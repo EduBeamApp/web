@@ -1,5 +1,5 @@
 ---
-description: "Tutorial: model an inclined beam (a roof rafter or a stair flight) in EduBeam, enter a load given per metre of plan, read the normal and shear forces along the slope, and see how the direction of the roller changes them. About 15 minutes."
+description: "Tutorial: an inclined beam in EduBeam with a load per metre of plan, its normal and shear forces along the slope, and the roller's direction. 15 minutes."
 source: site
 ---
 

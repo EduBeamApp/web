@@ -1,6 +1,6 @@
 ---
 title: Cargas nodales y en barras
-description: "Aplica fuerzas y momentos en nodos y cargas uniformes, trapezoidales y puntuales en barras, en ejes globales o locales, con @edubeam/fem, y modifícalas o elimínalas."
+description: "Aplica con @edubeam/fem fuerzas y momentos nodales y cargas uniformes, trapezoidales y puntuales en barras, en ejes globales o locales, y cámbialas o bórralas."
 order: 6
 group: Cargas
 source: site

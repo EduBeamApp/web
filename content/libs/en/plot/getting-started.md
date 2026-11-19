@@ -1,6 +1,6 @@
 ---
 title: Getting started
-description: "Install @edubeam/plot, draw a beam solved by @edubeam/fem with its loads, reactions and bending moment in a Vue 3 app, redraw it as the model changes, and save it as an SVG file."
+description: "Install @edubeam/plot, draw a beam solved by @edubeam/fem with its loads, reactions and bending moment in Vue 3, redraw it as it changes, save it as SVG."
 order: 1
 group: Introduction
 source: site

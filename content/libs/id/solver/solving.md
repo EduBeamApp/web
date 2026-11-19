@@ -1,6 +1,6 @@
 ---
 title: Perhitungan
-description: "Apa yang dilakukan solve() di @edubeam/fem, kapan persamaan dinomori ulang setelah perubahan, cara mengenali mekanisme, dan sebesar apa model yang sanggup dihitung."
+description: "Apa yang dilakukan solve() di @edubeam/fem, kapan persamaan dinomori ulang setelah perubahan, cara mengenali mekanisme, dan ukuran model yang sanggup dihitung."
 order: 9
 group: Perhitungan dan hasil
 source: site

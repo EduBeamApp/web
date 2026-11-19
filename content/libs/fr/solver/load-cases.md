@@ -1,6 +1,6 @@
 ---
 title: Cas de charge
-description: "Calculez en une fois plusieurs cas de charge d’un même modèle @edubeam/fem, puis combinez leurs résultats par superposition en combinaisons de charges et en enveloppes."
+description: "Calculez en une fois plusieurs cas de charge d’un modèle @edubeam/fem et combinez leurs résultats par superposition en combinaisons de charges et en enveloppes."
 order: 8
 source: site
 ---

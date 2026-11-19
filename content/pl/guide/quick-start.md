@@ -1,5 +1,5 @@
 ---
-description: "W ok. 10 minut zamodelujesz w EduBeamie stalową belkę swobodnie podpartą (materiał, przekrój, węzły, podpory, obciążenie), odczytasz wyniki i sprawdzisz je ręcznie."
+description: "W 10 minut zamodelujesz w EduBeamie stalową belkę swobodnie podpartą (materiał, przekrój, węzły, podpory, obciążenie), odczytasz wyniki i sprawdzisz je ręcznie."
 source: site
 ---
 

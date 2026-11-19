@@ -1,5 +1,5 @@
 ---
-description: "Tutorial: balok menerus dua bentang di EduBeam. Bandingkan dengan dua balok sederhana, turunkan tumpuan tengah, dan periksa dengan metode gaya. Sekitar 25 menit."
+description: "Tutorial: balok menerus dua bentang di EduBeam. Bandingkan dengan dua balok sederhana, turunkan tumpuan tengah, periksa dengan metode gaya. Sekitar 25 menit."
 source: site
 ---
 

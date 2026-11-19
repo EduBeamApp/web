@@ -1,6 +1,6 @@
 ---
 title: Exercices et examens
-description: "Générer avec @edubeam/fem et @edubeam/plot un exercice de calcul des structures différent par étudiant, avec un corrigé toujours juste, en page web, imprimé ou en SVG."
+description: "Générer avec @edubeam/fem et @edubeam/plot un exercice de statique différent par étudiant, avec un corrigé toujours juste, en page web, imprimé ou en SVG."
 order: 5
 group: Cas d’utilisation
 source: site

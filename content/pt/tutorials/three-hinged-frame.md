@@ -1,5 +1,5 @@
 ---
-description: "Tutorial: modele no EduBeam um pórtico triarticulado com carga uniforme, leia reações, empuxo e esforços e confira tudo à mão, até a flecha da rótula. Cerca de 15 minutos."
+description: "Tutorial: modele no EduBeam um pórtico triarticulado com carga uniforme, leia reações, empuxo e esforços e confira tudo à mão, até a flecha da rótula."
 source: site
 ---
 

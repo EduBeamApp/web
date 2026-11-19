@@ -1,6 +1,6 @@
 ---
 title: Theming and colours
-description: "Colour @edubeam/plot figures through CSS custom properties or the colors prop, follow light and dark themes, print in black and white, colour SVG files, set the font and restyle the animations."
+description: "Colour @edubeam/plot figures with CSS custom properties or the colors prop: light and dark themes, black-and-white print, SVG colours, fonts, animations."
 order: 4
 source: site
 ---

@@ -1,6 +1,6 @@
 ---
 title: Treliças
-description: "Uma treliça Warren de nós articulados no @edubeam/fem, cada esforço conferido pelo método das seções, e um laço que gera treliças com qualquer número de painéis."
+description: "Treliça Warren de nós articulados no @edubeam/fem, cada esforço conferido pelo método das seções, e um laço que gera treliças com qualquer número de painéis."
 order: 14
 source: site
 ---

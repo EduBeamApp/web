@@ -1,6 +1,6 @@
 ---
 title: Materiales y secciones
-description: "Los parámetros de material y de sección que usa @edubeam/fem, cuáles necesita cada análisis, qué pasa si falta uno y cómo desactivar la deformación por cortante."
+description: "Los parámetros de material y sección que usa @edubeam/fem, cuáles necesita cada análisis, qué pasa si falta uno y cómo desactivar la deformación por cortante."
 order: 4
 source: site
 ---

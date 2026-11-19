@@ -1,5 +1,5 @@
 ---
-description: "Giảng dạy với EduBeam: mô hình trực tiếp trên máy chiếu, liên kết chia sẻ trong tài liệu, bài tập tự kiểm tra, bài luyện tập tự sinh và đề thi in được kèm đáp án."
+description: "Giảng dạy với EduBeam: mô hình trực tiếp trên máy chiếu, liên kết chia sẻ trong tài liệu, bài tập tự kiểm tra, bài luyện tập tự sinh và đề thi in kèm đáp án."
 source: site
 ---
 

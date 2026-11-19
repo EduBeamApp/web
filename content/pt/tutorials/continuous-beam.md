@@ -1,5 +1,5 @@
 ---
-description: "Tutorial: viga contínua de dois vãos no EduBeam, comparada com dois vãos biapoiados, com recalque do apoio central e conferida pelo método das forças. Cerca de 25 minutos."
+description: "Tutorial: viga contínua de dois vãos no EduBeam, comparada a dois vãos biapoiados, com recalque de apoio, conferida pelo método das forças. Cerca de 25 minutos."
 source: site
 ---
 

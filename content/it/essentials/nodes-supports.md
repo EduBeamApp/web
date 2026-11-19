@@ -1,5 +1,5 @@
 ---
-description: "Posizionare e modificare i nodi in EduBeam, lo snap alla griglia, dividere gli elementi e scegliere il vincolo: cerniera, carrello, incastro, pattino, anche inclinati."
+description: "Creare e modificare nodi in EduBeam, agganciarli alla griglia, dividere elementi, scegliere il vincolo: cerniera, carrello, incastro, pattino, anche inclinati."
 source: site
 ---
 

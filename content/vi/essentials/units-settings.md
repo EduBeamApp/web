@@ -1,5 +1,5 @@
 ---
-description: "Cài đặt EduBeam: ngôn ngữ, đơn vị SI hoặc hệ Mỹ, định dạng số, trục z xuống hoặc y lên, lưới, kiểu và màu biểu đồ, nút kéo màn hình, dữ liệu lưu trong trình duyệt."
+description: "Cài đặt EduBeam: ngôn ngữ, đơn vị SI hoặc hệ Mỹ, định dạng số, trục z xuống hoặc y lên, lưới, kiểu và màu biểu đồ, dữ liệu lưu trong trình duyệt."
 source: site
 ---
 

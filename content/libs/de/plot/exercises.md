@@ -1,6 +1,6 @@
 ---
 title: Übungsaufgaben und Klausuren
-description: "Mit @edubeam/fem und @edubeam/plot für alle Studierenden eine eigene Statikaufgabe aus einem Seed erzeugen, mit stets richtiger Lösung: im Web, gedruckt, als SVG."
+description: "Mit @edubeam/fem und @edubeam/plot für alle Studierenden je eine Statikaufgabe aus einem Seed erzeugen, mit stets richtiger Lösung: im Web, gedruckt, als SVG."
 order: 5
 group: Anwendungen
 ---

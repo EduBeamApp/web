@@ -1,6 +1,6 @@
 ---
 title: Slide và tài liệu bài giảng
-description: "Hình bài giảng với @edubeam/plot hiện dần theo từng cú nhấp trong Slidev, Vue hoặc Beamer, giải trực tiếp trong giờ giảng, và vào tài liệu, PowerPoint, Word dưới dạng tệp SVG."
+description: "Hình bài giảng với @edubeam/plot hiện dần theo từng cú nhấp trong Slidev, Vue hoặc Beamer, giải trực tiếp, và đưa vào tài liệu, PowerPoint, Word dưới dạng SVG."
 order: 6
 source: site
 ---

@@ -1,5 +1,5 @@
 ---
-description: "Die Oberfläche von EduBeam: Kopfleiste und Menü ☰, Ansicht mit Schaltflächen und Anzeigeoptionen, Auswählen und Bearbeiten, Tabellen der unteren Leiste, Werteingabe."
+description: "Die Oberfläche von EduBeam: Kopfleiste und Menü ☰, Ansicht mit Anzeigeoptionen, Auswählen und Bearbeiten, Tabellen der unteren Leiste, Werteingabe."
 source: site
 ---
 

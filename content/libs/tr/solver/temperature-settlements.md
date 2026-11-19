@@ -1,6 +1,6 @@
 ---
 title: Sıcaklık ve mesnet çökmeleri
-description: "@edubeam/fem çubuklarına düzgün sıcaklık değişimi ve sıcaklık farkı uygulayın, mesnetleri öngörülen yer değiştirmeyle hareket ettirin; kontrol edilmiş örneklerle."
+description: "@edubeam/fem çubuklarına düzgün sıcaklık değişimi ve sıcaklık farkı uygulayın, mesnetlere öngörülen yer değiştirme verin; kontrol edilmiş örneklerle."
 order: 7
 source: site
 ---

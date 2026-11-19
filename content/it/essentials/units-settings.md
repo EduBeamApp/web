@@ -1,5 +1,5 @@
 ---
-description: "Impostazioni di EduBeam: lingua, unità SI o USA, formato dei numeri, assi z in basso o y in alto, griglia, diagrammi, colori, tasto per spostare la vista, dati nel browser."
+description: "Impostazioni di EduBeam: lingua, unità SI o USA, formato dei numeri, assi z in basso o y in alto, griglia, diagrammi, colori, dati nel browser."
 source: site
 ---
 

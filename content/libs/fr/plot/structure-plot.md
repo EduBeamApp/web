@@ -1,6 +1,6 @@
 ---
 title: StructurePlot
-description: "Dessiner une poutre, un portique ou un treillis plan avec StructurePlot : couches, figures progressives, réactions nommées, miniatures, unités, lecture au survol."
+description: "Dessiner une poutre, un portique ou un treillis avec StructurePlot : couches, figures progressives, réactions nommées, miniatures, unités, lecture au survol."
 order: 2
 group: Composants
 source: site

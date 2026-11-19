@@ -1,5 +1,5 @@
 ---
-description: "Ergebnisse in EduBeam ablesen: N-, V- und M-Verläufe, Verformungsfigur, Auflagerreaktionen, Vorzeichen, Tooltips, Tabellen, CSV-Export, Steifigkeitsmatrix und Zahlenformat."
+description: "Ergebnisse in EduBeam ablesen: N-, V- und M-Verläufe, Verformungsfigur, Auflagerreaktionen, Vorzeichen, Tooltips, Tabellen, CSV-Export und Steifigkeitsmatrix."
 source: site
 ---
 

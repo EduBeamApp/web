@@ -1,9 +1,11 @@
 ---
-description: "Projeleri kaydedip açın, masaüstü EduBeam oturumlarını yükleyin, bağlantıyla paylaşın, görüntüleyici gömün, URL parametrelerini kullanın, görüntü ve tablo dışa aktarın."
+description: "Projeleri kaydedip açın, masaüstü EduBeam oturumlarını yükleyin, modeli bağlantıyla paylaşın, görüntüleyici gömün, görüntü ve tablo dışa aktarın."
 source: site
 ---
 
 # Dosyalar, bağlantılar ve dışa aktarma
+
+:span{#ice-aktarma-dısa-aktarma-ve-paylasım}
 
 Modelinizi dosya olarak kaydedin, bağlantı olarak gönderin, bir web sayfasına gömün ya da görüntüsünü veya sonuç tablosunu dışa aktarın. [EduBeam]{.edubeam}'de her şey tarayıcınızda gerçekleşir ve hiçbir şey bir sunucuya yüklenmez: paylaşım bağlantısı modelin kendisini içerir.
 

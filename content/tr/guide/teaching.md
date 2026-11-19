@@ -1,5 +1,5 @@
 ---
-description: "EduBeam ile öğretim: projeksiyonda canlı modeller, ders notlarında paylaşım bağlantıları, kendi kendine kontrol edilen ödevler, üretilen sorular ve cevap anahtarlı sınavlar."
+description: "EduBeam ile öğretim: projeksiyonda canlı modeller, notlarda paylaşım bağlantıları, kendi kendine kontrol edilen ödevler, alıştırmalar, cevap anahtarlı sınavlar."
 source: site
 ---
 

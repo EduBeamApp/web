@@ -1,6 +1,6 @@
 ---
 title: Model gambar
-description: "PlotModel: data biasa yang dapat diserialkan ke JSON, dibuat modelFromSolver dari model terhitung, berisi hasil sebagai polinomial per bagian dan nilai eksaknya."
+description: "PlotModel: data yang dapat diserialkan ke JSON, dibuat modelFromSolver dari model terhitung, berisi hasil sebagai polinomial per bagian dan nilai eksaknya."
 order: 9
 source: site
 ---

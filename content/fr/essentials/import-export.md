@@ -5,6 +5,8 @@ source: site
 
 # Fichiers, liens et export
 
+:span{#import-export-et-partage}
+
 Enregistrez votre modèle dans un fichier, envoyez-le sous forme de lien, intégrez-le dans une page web, ou exportez-en une image ou un tableau. Dans [EduBeam]{.edubeam}, tout se passe dans votre navigateur et rien n’est envoyé à un serveur : un lien de partage contient littéralement le modèle.
 
 ::card-grid{cols="3"}

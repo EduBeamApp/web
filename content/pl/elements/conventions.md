@@ -1,5 +1,5 @@
 ---
-description: "Konwencje znaków w EduBeamie: x w prawo i z w dół, dodatnie obciążenia i przemieszczenia, osie lokalne, N, V i M, siły przywęzłowe, reakcje i opcja osi y w górę."
+description: "Konwencje znaków w EduBeamie: x w prawo, z w dół, dodatnie obciążenia i przemieszczenia, osie lokalne, N, V i M, siły przywęzłowe, reakcje i opcja osi y w górę."
 source: site
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: "Configurações do EduBeam: idioma, unidades SI ou americanas, formato numérico, eixos z para baixo ou y para cima, grade, diagramas, cores e o que fica no navegador."
+description: "Configurações do EduBeam: idioma, unidades SI ou americanas, formato numérico, eixos z para baixo ou y para cima, grade, diagramas, cores e dados no navegador."
 source: site
 ---
 

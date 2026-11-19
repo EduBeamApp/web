@@ -1,6 +1,6 @@
 ---
 title: Travature reticolari
-description: "Una travatura Warren con nodi a cerniera in @edubeam/fem, gli sforzi verificati con il metodo delle sezioni e un ciclo che genera travature con quanti campi vuoi."
+description: "Una travatura Warren con nodi a cerniera in @edubeam/fem, gli sforzi verificati col metodo delle sezioni e un ciclo che genera travature con quanti campi vuoi."
 order: 14
 source: site
 ---

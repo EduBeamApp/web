@@ -1,5 +1,5 @@
 ---
-description: "Convenzioni dei segni di EduBeam: x a destra, z in basso, carichi e spostamenti positivi, assi locali, N, V e M, forze di estremità, reazioni, assi con y in alto."
+description: "Convenzioni dei segni di EduBeam: x a destra, z in basso, carichi e spostamenti positivi, assi locali, N, V, M, forze di estremità, reazioni, opzione y in alto."
 source: site
 ---
 

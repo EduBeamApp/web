@@ -1,5 +1,5 @@
 ---
-description: "Hướng dẫn: mô hình hóa khung ba khớp chịu tải phân bố đều trong EduBeam, đọc phản lực, lực xô ngang và nội lực, rồi kiểm tra bằng tính tay, kể cả độ võng của khớp. Khoảng 15 phút."
+description: "Hướng dẫn: khung ba khớp chịu tải phân bố đều trong EduBeam; phản lực, lực xô ngang, nội lực và độ võng tại khớp, kiểm tra bằng tính tay. Khoảng 15 phút."
 source: site
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Lettura dei risultati
-description: "Leggi da un modello @edubeam/fem risolto reazioni, spostamenti, forze interne lungo le aste, deformate e forze di estremità, con la forma restituita da ogni chiamata."
+description: "Leggi da un modello @edubeam/fem risolto reazioni, spostamenti, forze interne lungo le aste, deformate e forze di estremità, e cosa restituisce ogni chiamata."
 order: 10
 source: site
 ---

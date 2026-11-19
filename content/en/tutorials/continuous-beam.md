@@ -1,5 +1,5 @@
 ---
-description: "Tutorial: model a statically indeterminate two-span beam in EduBeam, compare it with two simple spans, let its middle support settle, and check every number with the force method. About 25 minutes."
+description: "Tutorial: a two-span continuous beam in EduBeam, compared with two simple spans, with a settling support, checked by the force method. About 25 minutes."
 source: site
 ---
 

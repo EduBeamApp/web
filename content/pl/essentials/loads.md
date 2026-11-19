@@ -1,5 +1,5 @@
 ---
-description: "Siły, momenty, osiadania, obciążenia równomierne, trapezowe, skupione i termiczne w EduBeamie oraz ich znaki: oś z w dół, momenty dodatnie przeciwnie do ruchu wskazówek zegara."
+description: "Obciążenia w EduBeamie: siły, momenty, osiadania, równomierne, trapezowe, skupione i termiczne; oś z w dół, moment dodatni przeciwnie do ruchu wskazówek zegara."
 source: site
 ---
 

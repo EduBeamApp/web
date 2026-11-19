@@ -1,6 +1,6 @@
 ---
 title: Temi e colori
-description: "Colora le figure di @edubeam/plot con le proprietà personalizzate CSS o la prop colors, segui i temi chiaro e scuro, stampa in bianco e nero, scegli font e animazioni."
+description: "Colora le figure di @edubeam/plot con proprietà CSS personalizzate o la prop colors: temi chiaro e scuro, stampa in bianco e nero, font e animazioni."
 order: 4
 source: site
 ---

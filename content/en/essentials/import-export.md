@@ -1,9 +1,11 @@
 ---
-description: "Save and open EduBeam projects, open desktop EduBeam sessions, share a model as a link, embed a live viewer, use URL parameters, and export images and result tables. Everything stays in your browser."
+description: "Save and open EduBeam projects and desktop sessions, share a model as a link, embed a live viewer, and export images and result tables, all in your browser."
 source: site
 ---
 
 # Files, links & export
+
+:span{#import-export-sharing}
 
 Save your model as a file, send it as a link, embed it in a web page, or export a picture or a table of it. Everything in [EduBeam]{.edubeam} happens in your browser and nothing is uploaded: a share link literally contains the model.
 

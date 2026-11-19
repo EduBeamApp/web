@@ -1,6 +1,6 @@
 ---
 title: Bài tập và đề thi
-description: "Tạo cho mỗi sinh viên một bài tập Cơ học kết cấu khác nhau từ một seed với @edubeam/fem và @edubeam/plot, đáp án luôn đúng, trên web, đề thi in hoặc hình SVG cho LaTeX và Word."
+description: "Tạo cho mỗi sinh viên một bài tập Cơ học kết cấu khác nhau từ một seed, kèm đáp án luôn đúng: trên trang web, đề thi in hoặc hình SVG cho LaTeX và Word."
 order: 5
 group: Cách dùng
 source: site

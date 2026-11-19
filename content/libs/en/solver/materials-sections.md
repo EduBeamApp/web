@@ -1,6 +1,6 @@
 ---
 title: Materials and sections
-description: "The material and cross-section parameters @edubeam/fem uses, which ones each analysis needs, what happens when one is missing, and how to switch shear deformation off."
+description: "The material and section parameters @edubeam/fem uses, which ones each analysis needs, what happens when one is missing, and turning off shear deformation."
 order: 4
 source: site
 ---

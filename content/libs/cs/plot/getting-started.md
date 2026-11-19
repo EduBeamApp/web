@@ -1,6 +1,6 @@
 ---
 title: Začínáme
-description: "Instalace @edubeam/plot, vykreslení nosníku spočteného v @edubeam/fem se zatížením, reakcemi a ohybovým momentem ve Vue 3, překreslení po změně a uložení do SVG."
+description: "Instalace @edubeam/plot, vykreslení nosníku spočteného v @edubeam/fem se zatížením, reakcemi a ohybovým momentem ve Vue 3, překreslení po změně a export do SVG."
 order: 1
 group: Úvod
 ---

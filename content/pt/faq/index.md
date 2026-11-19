@@ -1,5 +1,5 @@
 ---
-description: "Respostas curtas sobre o EduBeam: custo, uso offline, privacidade, precisão, como os resultados são calculados, como citá-lo, exercícios, compartilhamento e código."
+description: "Respostas curtas sobre o EduBeam: custo, uso offline, privacidade, precisão, cálculo dos resultados, como citá-lo, exercícios, compartilhamento e código."
 source: site
 ---
 

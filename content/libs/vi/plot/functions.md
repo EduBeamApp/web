@@ -1,6 +1,6 @@
 ---
 title: Hàm
-description: "Mọi hàm, hằng số và kiểu mà @edubeam/plot 0.2.0 export ngoài các component: structureSvg cho tệp SVG độc lập, đọc kết quả chính xác, đơn vị, đường dầm và bố cục cho hình riêng."
+description: "Mọi hàm, hằng số và kiểu mà @edubeam/plot export ngoài các component: structureSvg cho tệp SVG độc lập, kết quả chính xác, đơn vị, đường dầm và bố cục."
 order: 10
 source: site
 ---

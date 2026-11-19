@@ -1,6 +1,6 @@
 ---
 title: एम्बेड करना
-description: "@edubeam/plot के चित्र Vite ऐप, VitePress पाठ्यक्रम नोट्स या Nuxt साइट में लगाएँ, सर्वर पर render करें, पहले से हल मॉडल JSON में भेजें, या Vue के बिना साधारण SVG लिखें।"
+description: "@edubeam/plot के चित्र Vite ऐप, VitePress नोट्स या Nuxt साइट में लगाएँ, सर्वर पर render करें, पहले से हल मॉडल भेजें, या साधारण SVG फ़ाइलें लिखें।"
 order: 7
 source: site
 ---

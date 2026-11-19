@@ -1,5 +1,5 @@
 ---
-description: "Wszystkie skróty klawiszowe, czynności myszą i gesty dotykowe w EduBeamie: cofanie, zapis, otwieranie, eksport obrazu, kopiowanie i wklejanie, zoom i przesuwanie."
+description: "Wszystkie skróty klawiszowe, czynności myszą i gesty dotykowe w EduBeamie: cofanie, zapis, otwarcie, eksport obrazu, kopiowanie, wklejanie, zoom i przesuwanie."
 source: site
 ---
 

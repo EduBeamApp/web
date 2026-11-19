@@ -1,5 +1,5 @@
 ---
-description: "Posicione e edite nós no EduBeam, encaixe-os na grade, divida elementos e escolha o apoio: fixo, móvel, engaste, engaste deslizante e as variantes verticais e inclinadas."
+description: "Posicione e edite nós no EduBeam, encaixe-os na grade, divida elementos e escolha o apoio: fixo, móvel, engaste, engaste deslizante, vertical ou inclinado."
 source: site
 ---
 

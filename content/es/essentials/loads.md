@@ -1,5 +1,5 @@
 ---
-description: "Fuerzas, momentos, asientos y cargas uniformes, trapezoidales, puntuales y térmicas en EduBeam, con su convención de signos: z positiva hacia abajo y momentos positivos antihorarios."
+description: "Fuerzas, momentos, asientos y cargas uniformes, trapezoidales, puntuales y térmicas en EduBeam, y sus signos: z hacia abajo, momentos antihorarios positivos."
 source: site
 ---
 

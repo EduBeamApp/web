@@ -1,5 +1,5 @@
 ---
-description: "Mengajar dengan EduBeam: model langsung di proyektor, tautan berbagi di catatan kuliah, tugas yang diperiksa sendiri, latihan soal, dan lembar soal ujian dengan kunci jawaban."
+description: "Mengajar dengan EduBeam: model langsung di proyektor, tautan berbagi di catatan, tugas yang diperiksa sendiri, latihan soal, dan ujian dengan kunci jawaban."
 source: site
 ---
 

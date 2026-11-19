@@ -1,5 +1,5 @@
 ---
-description: "Mapa interfejsu EduBeamu: pasek aplikacji i menu ☰, widok z przyciskami i opcjami wyświetlania, zaznaczanie i edycja, tabele dolnego paska i wpisywanie wartości."
+description: "Mapa interfejsu EduBeamu: pasek aplikacji i menu ☰, widok i jego opcje wyświetlania, zaznaczanie i edycja, tabele dolnego paska i wpisywanie wartości."
 source: site
 ---
 

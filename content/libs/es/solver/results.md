@@ -1,6 +1,6 @@
 ---
 title: Lectura de resultados
-description: "Lee reacciones, desplazamientos, esfuerzos en cualquier punto, deformadas y fuerzas en los extremos de un modelo resuelto de @edubeam/fem, y qué devuelve cada llamada."
+description: "Lee reacciones, desplazamientos, esfuerzos en las barras, deformadas y fuerzas de extremo de un modelo resuelto de @edubeam/fem, y qué devuelve cada llamada."
 order: 10
 source: site
 ---

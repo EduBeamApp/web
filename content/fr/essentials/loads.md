@@ -1,5 +1,5 @@
 ---
-description: "Forces, moments, tassements, charges réparties, ponctuelles et thermiques dans EduBeam, et leur convention de signes : z vers le bas, moments antihoraires positifs."
+description: "Forces, moments, tassements, charges réparties, ponctuelles et thermiques dans EduBeam, et leurs signes : z vers le bas, moments antihoraires positifs."
 source: site
 ---
 

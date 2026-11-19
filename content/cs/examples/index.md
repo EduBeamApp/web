@@ -1,5 +1,5 @@
 ---
-description: "Šest vyřešených nosníků, rámů a příhradových konstrukcí, které otevřete v EduBeamu jedním kliknutím, s náměty na cvičení a výsledky pro kontrolu ručního výpočtu."
+description: "Šest vyřešených nosníků, rámů a příhradových konstrukcí, které otevřete v EduBeamu jedním kliknutím, s náměty na cvičení a výsledky ke kontrole ručního výpočtu."
 source: site
 ---
 

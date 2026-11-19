@@ -1,5 +1,5 @@
 ---
-description: "Hướng dẫn: mô hình hóa dầm liên tục hai nhịp siêu tĩnh trong EduBeam, so sánh với hai dầm đơn giản, cho gối giữa bị lún và kiểm tra mọi con số bằng phương pháp lực. Khoảng 25 phút."
+description: "Hướng dẫn: mô hình hóa dầm liên tục hai nhịp trong EduBeam, so sánh với hai dầm đơn giản, cho gối giữa bị lún và kiểm tra bằng phương pháp lực. Khoảng 25 phút."
 source: site
 ---
 

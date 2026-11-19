@@ -1,5 +1,5 @@
 ---
-description: "Co je EduBeam: bezplatný MKP program v prohlížeči pro rovinné nosníky, rámy a příhradové konstrukce. Co umí a neumí, pro koho je, jak se vyznat v příručce a na jakých knihovnách stojí."
+description: "Co je EduBeam: bezplatný MKP program v prohlížeči pro rovinné nosníky, rámy a příhradové konstrukce. Co umí a neumí, pro koho je a jak se vyznat v příručce."
 source: site
 ---
 

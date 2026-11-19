@@ -1,6 +1,6 @@
 ---
 title: Beban joint dan beban batang
-description: "Berikan gaya dan momen di joint, serta beban merata, trapesium, dan terpusat pada batang, dalam sumbu global atau lokal dengan @edubeam/fem; lalu ubah atau hapus."
+description: "Berikan gaya dan momen di joint, beban merata, trapesium, dan terpusat pada batang, dalam sumbu global atau lokal dengan @edubeam/fem; lalu ubah atau hapus."
 order: 6
 group: Beban
 source: site

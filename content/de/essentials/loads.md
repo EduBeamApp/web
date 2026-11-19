@@ -1,5 +1,5 @@
 ---
-description: "Kräfte, Momente, Auflagersenkungen, Gleich-, Trapez-, Einzel- und Temperaturlasten in EduBeam mit Vorzeichen: z positiv nach unten, Momente positiv gegen den Uhrzeigersinn."
+description: "Kräfte, Momente, Auflagersenkungen, Gleich-, Trapez-, Einzel- und Temperaturlasten in EduBeam mit Vorzeichen: z nach unten, Momente gegen den Uhrzeigersinn."
 source: site
 ---
 

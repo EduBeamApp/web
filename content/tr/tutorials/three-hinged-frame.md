@@ -1,5 +1,5 @@
 ---
-description: "Eğitim: EduBeam'de üç mafsallı bir çerçeve modelleyin; mesnet tepkilerini, yatay itkiyi, iç kuvvetleri ve mafsalın sehimini elle kontrol edin. Yaklaşık 15 dakika."
+description: "Eğitim: EduBeam'de üç mafsallı çerçeve modelleyin; mesnet tepkilerini, yatay itkiyi, iç kuvvetleri ve mafsalın sehimini elle kontrol edin. Yaklaşık 15 dakika."
 source: site
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Düğümler ve mesnetler
-description: "@edubeam/fem modelinde düğüm oluşturun, serbestlik derecelerini tutarak mesnet tanımlayın, eğik mesnet için eksenleri döndürün, çözümden sonra düğümleri değiştirin."
+description: "@edubeam/fem modelinde düğüm oluşturun, serbestlik derecelerini tutarak mesnet tanımlayın, eğik mesnet için eksenleri döndürün, düğümleri sonradan değiştirin."
 order: 3
 group: Modelleme
 source: site

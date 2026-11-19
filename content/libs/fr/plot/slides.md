@@ -1,6 +1,6 @@
 ---
 title: Diapositives et supports de cours
-description: "Des figures de cours avec @edubeam/plot : construites clic après clic dans Slidev, Vue ou Beamer, calculées en direct, en SVG pour le polycopié, PowerPoint et Word."
+description: "Figures de cours avec @edubeam/plot : construites clic après clic dans Slidev, Vue ou Beamer, calculées en direct, en SVG pour le polycopié, PowerPoint et Word."
 order: 6
 source: site
 ---

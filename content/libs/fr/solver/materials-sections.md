@@ -1,6 +1,6 @@
 ---
 title: Matériaux et sections
-description: "Les paramètres de matériau et de section de @edubeam/fem, ceux dont chaque calcul a besoin, l’effet d’un paramètre manquant et comment négliger la déformation d’effort tranchant."
+description: "Les paramètres de matériau et de section de @edubeam/fem, ceux qu’exige chaque calcul, l’effet d’un oubli et comment négliger la déformation d’effort tranchant."
 order: 4
 source: site
 ---

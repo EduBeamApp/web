@@ -1,5 +1,5 @@
 ---
-description: "Tutorial: balok miring (kasau atap atau tangga) di EduBeam. Beban per meter proyeksi horizontal, gaya normal dan geser, dan pengaruh arah tumpuan rol. Sekitar 15 menit."
+description: "Tutorial: balok miring (kasau atau tangga) di EduBeam. Beban per meter proyeksi horizontal, gaya normal dan geser, serta arah tumpuan rol. Sekitar 15 menit."
 source: site
 ---
 

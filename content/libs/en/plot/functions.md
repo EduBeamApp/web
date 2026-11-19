@@ -1,6 +1,6 @@
 ---
 title: Functions
-description: "Every function, constant and type @edubeam/plot 0.2.0 exports besides its components: structureSvg for standalone SVG files, reading results exactly, units, beam lines, and the layout for figures of your own."
+description: "The functions, constants and types @edubeam/plot exports besides its components: structureSvg for SVG files, exact results, units, beam lines and layout."
 order: 10
 source: site
 ---

@@ -1,5 +1,5 @@
 ---
-description: "EduBeam'de düğüm ekleyip düzenleyin, ızgaraya yakalayın, elemanları bölün; mafsallı, kayıcı, ankastre, kayar ankastre mesnetleri ve düşey ve eğik türlerini seçin."
+description: "EduBeam'de düğüm ekleyip düzenleyin, ızgaraya yakalayın, elemanları bölün; mafsallı, kayıcı, ankastre, kayar ankastre mesnetleri, düşey ve eğik türlerini seçin."
 source: site
 ---
 

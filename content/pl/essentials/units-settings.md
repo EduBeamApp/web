@@ -1,5 +1,5 @@
 ---
-description: "Ustawienia EduBeamu: język, jednostki SI lub amerykańskie, format liczb, osie z w dół lub y w górę, siatka, styl i kolory wykresów, przesuwanie widoku i dane w przeglądarce."
+description: "Ustawienia EduBeamu: język, jednostki SI lub amerykańskie, format liczb, osie z w dół lub y w górę, siatka, styl i kolory wykresów oraz dane w przeglądarce."
 source: site
 ---
 

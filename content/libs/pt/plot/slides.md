@@ -1,6 +1,6 @@
 ---
 title: Slides e notas de aula
-description: "Figuras de aula com o @edubeam/plot que se completam clique a clique no Slidev, Vue ou Beamer, resolvidas ao vivo e levadas em SVG para notas, PowerPoint e Word."
+description: "Figuras de aula com @edubeam/plot que se completam clique a clique no Slidev, Vue ou Beamer, resolvidas ao vivo e levadas em SVG para notas, PowerPoint e Word."
 order: 6
 source: site
 ---

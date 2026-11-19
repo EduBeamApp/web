@@ -1,6 +1,6 @@
 ---
 title: Sonuçları okumak
-description: "Çözülmüş bir @edubeam/fem modelinden mesnet tepkilerini, yer değiştirmeleri, iç kuvvetleri, elastik eğriyi ve uç kuvvetlerini okuyun; her çağrının döndürdüğü veri yapısıyla."
+description: "Çözülmüş @edubeam/fem modelinden mesnet tepkilerini, yer değiştirmeleri, iç kuvvetleri, elastik eğriyi ve uç kuvvetlerini okuyun; her çağrının dönüş değeriyle."
 order: 10
 source: site
 ---

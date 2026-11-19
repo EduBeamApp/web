@@ -1,6 +1,6 @@
 ---
 title: Plot model
-description: "The plain, JSON-serialisable PlotModel that modelFromSolver makes from a solved @edubeam/fem model, its piecewise polynomial results, and how to read exact values and extremes from it."
+description: "The JSON-serialisable PlotModel that modelFromSolver makes from a solved @edubeam/fem model, its piecewise polynomial results, exact values and extremes."
 order: 9
 source: site
 ---

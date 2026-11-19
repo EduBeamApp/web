@@ -1,5 +1,5 @@
 ---
-description: "Lực, mô men, lún gối tựa, tải phân bố đều, hình thang, tập trung và nhiệt độ trong EduBeam, kèm quy ước dấu: z dương hướng xuống, mô men dương ngược chiều kim đồng hồ."
+description: "Lực, mô men, lún gối, tải phân bố đều, hình thang, tập trung và nhiệt độ trong EduBeam, kèm quy ước dấu: z hướng xuống, mô men dương ngược chiều kim đồng hồ."
 source: site
 ---
 

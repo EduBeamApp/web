@@ -1,5 +1,5 @@
 ---
-description: "Tutorial: susun rangka batang bidang di EduBeam, periksa gaya batang dengan metode titik simpul dan potongan, temukan batang tanpa gaya, dan hitung lendutan. Sekitar 20 menit."
+description: "Tutorial: susun rangka batang bidang di EduBeam, periksa gaya batang dengan metode titik simpul dan potongan, temukan batang tanpa gaya, dan hitung lendutan."
 source: site
 ---
 

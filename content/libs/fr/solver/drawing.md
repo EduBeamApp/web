@@ -1,6 +1,6 @@
 ---
 title: Dessiner les résultats
-description: "Transformez un modèle @edubeam/fem calculé en diagrammes avec @edubeam/plot : dans un composant Vue, en fichier SVG depuis un script Node, ou en JSON à dessiner plus tard."
+description: "Tracez les diagrammes d’un modèle @edubeam/fem calculé avec @edubeam/plot : dans un composant Vue, en SVG depuis un script Node ou en JSON à dessiner plus tard."
 order: 11
 source: site
 ---

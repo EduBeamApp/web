@@ -1,5 +1,5 @@
 ---
-description: "Trave di Timoshenko a due nodi in EduBeam: rigidezza esatta, deformazione a taglio, cerniere per condensazione statica, forze di incastro perfetto, trasformazione."
+description: "Trave di Timoshenko a due nodi in EduBeam: rigidezza esatta, deformazione a taglio, cerniere per condensazione, forze di incastro perfetto, trasformazione."
 source: site
 ---
 

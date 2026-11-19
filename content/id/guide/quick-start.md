@@ -1,5 +1,5 @@
 ---
-description: "Modelkan balok baja sederhana di EduBeam dalam sekitar sepuluh menit: material, penampang, joint, tumpuan, dan beban, lalu baca hasilnya dan periksa secara manual."
+description: "Modelkan balok baja sederhana di EduBeam dalam sepuluh menit: material, penampang, joint, tumpuan, dan beban, lalu baca hasilnya dan periksa secara manual."
 source: site
 ---
 

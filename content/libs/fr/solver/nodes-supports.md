@@ -1,6 +1,6 @@
 ---
 title: Nœuds et appuis
-description: "Créez les nœuds d’un modèle @edubeam/fem, définissez leurs appuis en bloquant des degrés de liberté, tournez les axes d’un appui simple incliné et modifiez les nœuds après un calcul."
+description: "Créez les nœuds d’un modèle @edubeam/fem, bloquez leurs degrés de liberté, tournez les axes d’un appui simple incliné et modifiez les nœuds après un calcul."
 order: 3
 group: Modélisation
 source: site

@@ -1,6 +1,6 @@
 ---
 title: DiagramStack
-description: "Desenhe com DiagramStack uma viga sobre os seus diagramas V(x), M(x) e w(x) num mesmo eixo x, leia todas as linhas com um cursor e deixe o leitor arrastar uma carga."
+description: "Desenhe com DiagramStack uma viga sobre os diagramas V(x), M(x) e w(x) num mesmo eixo x, leia as linhas com um cursor e deixe o leitor arrastar uma carga."
 order: 3
 source: site
 ---

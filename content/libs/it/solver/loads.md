@@ -1,6 +1,6 @@
 ---
 title: Carichi nodali e sulle aste
-description: "Applica con @edubeam/fem forze e momenti nei nodi e carichi uniformi, trapezoidali e concentrati lungo le aste, in assi globali o locali; poi modificali o rimuovili."
+description: "Applica con @edubeam/fem forze e momenti nodali e carichi uniformi, trapezoidali e concentrati sulle aste, in assi globali o locali; poi modificali o rimuovili."
 order: 6
 group: Carichi
 source: site

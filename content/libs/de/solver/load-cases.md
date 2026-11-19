@@ -1,6 +1,6 @@
 ---
 title: Lastfälle
-description: "Mehrere Lastfälle eines @edubeam/fem-Modells auf einmal berechnen und ihre Ergebnisse durch Superposition zu Lastfallkombinationen und Umhüllenden zusammenfassen."
+description: "Mehrere Lastfälle eines @edubeam/fem-Modells auf einmal berechnen und die Ergebnisse zu Lastfallkombinationen und Umhüllenden überlagern."
 order: 8
 ---
 

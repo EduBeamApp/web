@@ -1,5 +1,5 @@
 ---
-description: "Rysowanie elementów belkowych w EduBeamie, przeguby końcowe dla połączeń przegubowych i prętów kratownic oraz materiały i przekroje z bibliotek lub z własnego wielokąta."
+description: "Rysowanie elementów belkowych w EduBeamie, przeguby końcowe dla połączeń przegubowych i prętów kratownic, materiały i przekroje z bibliotek lub z wielokąta."
 source: site
 ---
 

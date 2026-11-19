@@ -1,6 +1,6 @@
 ---
 title: Résolution
-description: "Ce que fait solve() dans @edubeam/fem, quand renuméroter les équations après une modification, comment reconnaître un mécanisme et quelle taille de modèle il traite."
+description: "Ce que fait solve() dans @edubeam/fem, quand renuméroter les équations après modification, comment repérer un mécanisme et quelle taille de modèle il traite."
 order: 9
 group: Calcul et résultats
 source: site

@@ -1,5 +1,5 @@
 ---
-description: "Dibuja elementos viga en EduBeam, libera sus extremos con rótulas para modelar articulaciones y barras de celosía, y define materiales y secciones desde las bibliotecas o con tu propio polígono."
+description: "Dibuja elementos en EduBeam, libera sus extremos con rótulas (articulaciones, barras de celosía) y define materiales y secciones con bibliotecas o un polígono."
 source: site
 ---
 

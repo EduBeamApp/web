@@ -1,5 +1,5 @@
 ---
-description: "Tutorial: trave inclinata (trave di falda, rampa di scale) in EduBeam: carico per metro in pianta, N e V lungo la falda e direzione del carrello. Circa 15 minuti."
+description: "Tutorial: trave inclinata (trave di falda, rampa di scale) in EduBeam: carico per metro in pianta, N e V lungo la falda e direzione del carrello. 15 minuti."
 source: site
 ---
 

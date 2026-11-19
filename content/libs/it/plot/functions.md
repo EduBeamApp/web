@@ -1,6 +1,6 @@
 ---
 title: Funzioni
-description: "Funzioni, costanti e tipi che @edubeam/plot 0.2.0 esporta oltre ai componenti: structureSvg per file SVG, lettura esatta dei risultati, unità, linee di trave e impaginazione."
+description: "Funzioni, costanti e tipi che @edubeam/plot esporta oltre ai componenti: structureSvg per file SVG, risultati esatti, unità, linee di trave e impaginazione."
 order: 10
 source: site
 ---

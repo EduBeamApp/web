@@ -1,5 +1,5 @@
 ---
-description: "Balkenelemente in EduBeam zeichnen, Enden mit Gelenken freigeben (bis zum Fachwerkstab), Materialien und Querschnitte aus Bibliotheken wählen oder als Polygon anlegen."
+description: "Balkenelemente in EduBeam zeichnen, Enden mit Gelenken freigeben (bis zum Fachwerkstab), Materialien und Querschnitte aus Bibliotheken oder als Polygon anlegen."
 source: site
 ---
 

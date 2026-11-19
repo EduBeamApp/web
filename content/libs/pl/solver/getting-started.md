@@ -1,6 +1,6 @@
 ---
 title: Pierwsze kroki
-description: "Zainstaluj @edubeam/fem, solver MES, na którym działa EduBeam, i w kilkunastu linijkach TypeScriptu rozwiąż belkę swobodnie podpartą, sprawdź ją i odczytaj wyniki."
+description: "Zainstaluj @edubeam/fem, solver MES, na którym działa EduBeam, i w kilkunastu linijkach TypeScriptu rozwiąż belkę swobodnie podpartą, sprawdź i odczytaj wyniki."
 order: 1
 group: Wprowadzenie
 source: site

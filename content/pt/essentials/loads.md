@@ -1,5 +1,5 @@
 ---
-description: "Forças, momentos, recalques e cargas uniformes, trapezoidais, concentradas e térmicas no EduBeam, com seus sinais: z positivo para baixo, momento positivo anti-horário."
+description: "Forças, momentos, recalques e cargas uniformes, trapezoidais, concentradas e térmicas no EduBeam, com seus sinais: z para baixo, momento positivo anti-horário."
 source: site
 ---
 

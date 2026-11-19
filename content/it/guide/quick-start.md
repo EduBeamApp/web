@@ -1,5 +1,5 @@
 ---
-description: "Modella in circa dieci minuti una trave in acciaio semplicemente appoggiata: materiale, sezione, nodi, vincoli e carico, poi leggi i risultati e verificali a mano."
+description: "Modella in dieci minuti una trave in acciaio semplicemente appoggiata: materiale, sezione, nodi, vincoli e carico, poi leggi i risultati e verificali a mano."
 source: site
 ---
 

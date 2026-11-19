@@ -1,5 +1,5 @@
 ---
-description: "Einstellungen in EduBeam: Sprache, SI- oder US-Einheiten, Zahlenformat, z nach unten oder y nach oben, Raster, Verläufe, Farben, Maustaste und was im Browser bleibt."
+description: "Einstellungen in EduBeam: Sprache, SI- oder US-Einheiten, Zahlenformat, z nach unten oder y nach oben, Raster, Verläufe, Farben und was im Browser bleibt."
 source: site
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Düğüm ve çubuk yükleri
-description: "@edubeam/fem ile düğümlere kuvvet ve moment, çubuklara düzgün yayılı, trapez ve tekil yük uygulayın; global veya yerel eksenlerde verin, sonra değiştirin ya da kaldırın."
+description: "@edubeam/fem ile düğümlere kuvvet ve moment, çubuklara düzgün yayılı, trapez ve tekil yük uygulayın (global veya yerel eksenlerde); değiştirin ya da kaldırın."
 order: 6
 group: Yükler
 source: site

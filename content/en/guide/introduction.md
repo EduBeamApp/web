@@ -1,5 +1,5 @@
 ---
-description: "What EduBeam is: a free, browser-based FEM solver for 2D beams, frames and trusses. What it can and cannot do, who it is for, how the guide is organised, and the open-source libraries behind it."
+description: "EduBeam is a free FEM solver for 2D beams, frames and trusses in your browser: what it can and cannot do, who it is for, and how this guide is organised."
 source: site
 ---
 

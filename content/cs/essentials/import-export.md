@@ -5,6 +5,8 @@ source: site
 
 # Soubory, odkazy a export
 
+:span{#import-export-a-sdileni}
+
 Model můžete uložit do souboru, poslat odkazem, vložit na webovou stránku nebo z něj exportovat obrázek či tabulku. V [EduBeamu]{.edubeam} se vše odehrává ve vašem prohlížeči a nic se nenahrává na server: sdílený odkaz model doslova obsahuje.
 
 ::card-grid{cols="3"}

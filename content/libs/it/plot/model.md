@@ -1,6 +1,6 @@
 ---
 title: Modello di disegno
-description: "Il PlotModel, dati semplici e serializzabili in JSON che modelFromSolver ricava da un modello risolto con @edubeam/fem: risultati come polinomi a tratti, valori esatti ed estremi."
+description: "Il PlotModel, dati semplici serializzabili in JSON che modelFromSolver ricava da un modello @edubeam/fem risolto: polinomi a tratti, valori esatti ed estremi."
 order: 9
 source: site
 ---

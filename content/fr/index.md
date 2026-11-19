@@ -1,5 +1,5 @@
 ---
-description: "Calcul des structures 2D gratuit dans le navigateur. Dessinez poutres, portiques et treillis, ajoutez des charges et obtenez aussitôt N, V, M, réactions et flèches."
+description: "Calcul des structures 2D gratuit dans le navigateur. Dessinez poutres, portiques et treillis, chargez-les et obtenez aussitôt N, V, M, réactions et flèches."
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 

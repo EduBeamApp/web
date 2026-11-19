@@ -1,5 +1,5 @@
 ---
-description: "Metode kekakuan langsung seperti dijalankan EduBeam, dihitung manual pada balok jepit–rol: penomoran DOF, perakitan, tumpuan, reaksi, dan hasil sepanjang batang."
+description: "Metode kekakuan langsung seperti dijalankan EduBeam, dihitung manual pada balok jepit–rol: penomoran DOF, perakitan, tumpuan, reaksi, dan hasil batang."
 source: site
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Temas y colores
-description: "Colorea las figuras de @edubeam/plot con propiedades personalizadas de CSS o la prop colors: temas claro y oscuro, blanco y negro, archivos SVG, fuente y animación."
+description: "Colorea las figuras de @edubeam/plot con propiedades personalizadas de CSS o la prop colors: temas claro y oscuro, blanco y negro, SVG, fuente y animación."
 order: 4
 source: site
 ---

@@ -1,5 +1,5 @@
 ---
-description: "EduBeam settings: language, SI or US customary units, number format, z-down or y-up axes, grid, diagram style and colours, the pan button, and what the app keeps in your browser."
+description: "EduBeam settings: language, SI or US units, number format, z-down or y-up axes, grid, diagram style and colours, and what the app keeps in your browser."
 source: site
 ---
 

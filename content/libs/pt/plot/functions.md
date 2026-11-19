@@ -1,6 +1,6 @@
 ---
 title: Funções
-description: "Funções, constantes e tipos que o @edubeam/plot 0.2.0 exporta além dos componentes: structureSvg, leitura exata de resultados, unidades, linhas de viga e composição."
+description: "Funções, constantes e tipos que o @edubeam/plot exporta além dos componentes: structureSvg, leitura exata de resultados, unidades, linhas de viga e composição."
 order: 10
 source: site
 ---

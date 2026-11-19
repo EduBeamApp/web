@@ -1,5 +1,5 @@
 ---
-description: "Configuración de EduBeam: idioma, unidades SI o estadounidenses, formato numérico, ejes con z hacia abajo o y hacia arriba, cuadrícula, diagramas, colores y datos del navegador."
+description: "Configuración de EduBeam: idioma, unidades SI o estadounidenses, formato numérico, ejes z abajo o y arriba, cuadrícula, diagramas, colores, datos del navegador."
 source: site
 ---
 

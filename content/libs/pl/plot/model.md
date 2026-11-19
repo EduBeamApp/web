@@ -1,6 +1,6 @@
 ---
 title: Model rysunku
-description: "PlotModel z modelFromSolver: zwykłe dane JSON z obliczonego modelu @edubeam/fem, wyniki jako wielomiany przedziałami i odczyt dokładnych wartości oraz ekstremów."
+description: "PlotModel z modelFromSolver: zwykły JSON z obliczonego modelu @edubeam/fem, wyniki jako wielomiany przedziałami i odczyt dokładnych wartości oraz ekstremów."
 order: 9
 source: site
 ---

@@ -1,6 +1,6 @@
 ---
 title: प्लॉट मॉडल
-description: "साधारण, JSON में बदला जा सकने वाला PlotModel जो modelFromSolver हल किए गए @edubeam/fem मॉडल से बनाता है, उसके खंडशः बहुपद परिणाम, और उससे सटीक मान व चरम मान पढ़ना।"
+description: "JSON में बदला जा सकने वाला PlotModel जो modelFromSolver हल किए गए @edubeam/fem मॉडल से बनाता है, उसके खंडशः बहुपद परिणाम, सटीक मान और चरम मान।"
 order: 9
 source: site
 ---

@@ -379,7 +379,7 @@
     "tagline": "A finite element solver for plane frames, written in TypeScript.",
     "seo": {
       "title": "{'@'}edubeam/fem: a 2D frame FEM solver in TypeScript",
-      "description": "A finite element solver for plane beams, frames and trusses in TypeScript: hinges, member, temperature and settlement loads, load cases, reactions and exact internal forces. The engine behind EduBeam."
+      "description": "A finite element solver for plane beams, frames and trusses in TypeScript: hinges, temperature and settlement loads, load cases, exact internal forces."
     },
     "run": {
       "title": "Run on this page",
@@ -416,7 +416,7 @@
     "tagline": "Vue components that draw plane structures and their results, in the figures’ own style.",
     "seo": {
       "title": "{'@'}edubeam/plot: structural diagrams for Vue",
-      "description": "Vue components that draw plane structures, loads, reactions and N, V, M diagrams as a textbook does, for course pages, slides, exercise sheets and standalone SVG files."
+      "description": "Vue components that draw plane structures, loads, reactions and N, V, M diagrams as a textbook does, for course pages, slides, exercises and SVG files."
     },
     "try": {
       "title": "Try it",
@@ -473,7 +473,7 @@
   "practice": {
     "seo": {
       "title": "Statics practice problems with instant answers {'|'} EduBeam",
-      "description": "Free statics practice: beams, frames and trusses with fresh numbers every time. Work out the reactions and the largest bending moment or bar force, check your answers instantly, then see the diagrams.",
+      "description": "Free statics practice: beams, frames and trusses with new numbers every time. Find the reactions and the largest moment or bar force, check them instantly.",
       "ogTitle": "Statics practice problems with instant answers",
       "ogDescription": "Beams, frames and trusses with fresh numbers every time. Check your reactions and moments instantly, then see the diagrams."
     },
@@ -550,7 +550,7 @@
   "exam": {
     "seo": {
       "title": "Statics exam builder: printable tests with answer keys {'|'} EduBeam",
-      "description": "Build statics tests in your browser: beams, frames and trusses with generated numbers, a different version for every student, an answer key, and SVG figures for LaTeX and Word. Free, nothing to install.",
+      "description": "Build statics tests in your browser: beams, frames and trusses with generated numbers, a version for every student, an answer key and SVG figures. Free.",
       "ogTitle": "Statics exam builder: printable tests with answer keys",
       "ogDescription": "Generated beams, frames and trusses, a version per student, an answer key, and SVG figures. Free, in the browser."
     },

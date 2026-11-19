@@ -1,5 +1,5 @@
 ---
-description: "Mapa de la interfaz de EduBeam: barra superior y menú ☰, visor con sus botones y opciones de visualización, selección y edición, tablas de la barra inferior y cómo introducir valores."
+description: "Mapa de la interfaz de EduBeam: barra superior y menú ☰, visor y sus opciones, selección y edición, tablas de la barra inferior e introducción de valores."
 source: site
 ---
 

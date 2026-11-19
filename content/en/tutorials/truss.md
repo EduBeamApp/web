@@ -1,5 +1,5 @@
 ---
-description: "Tutorial: build a plane truss in EduBeam from hinged bars, check its bar forces with the method of joints and the method of sections, find a zero-force member, and check a deflection by virtual work. About 20 minutes."
+description: "Tutorial: a plane truss in EduBeam, its bar forces checked by the method of joints and of sections, a zero-force member and a deflection by virtual work."
 source: site
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: StructurePlot
-description: "Vigas, pórticos y celosías planas con StructurePlot: capas, figuras que se completan, reacciones como incógnitas, miniaturas, tamaños, unidades y lectura de valores."
+description: "Vigas, pórticos y celosías con StructurePlot: capas, figuras que se completan, reacciones como incógnitas, miniaturas, tamaños, unidades y lectura de valores."
 order: 2
 group: Componentes
 source: site

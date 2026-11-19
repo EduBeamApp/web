@@ -1,5 +1,5 @@
 ---
-description: "EduBeam confrontato con le formule dei manuali: travi, una travatura, carico termico, un cedimento e dove la trave di Timoshenko differisce da quella di Eulero–Bernoulli."
+description: "EduBeam e le formule dei manuali: travi, una travatura, temperatura, un cedimento e dove la trave di Timoshenko differisce da quella di Eulero–Bernoulli."
 source: site
 ---
 

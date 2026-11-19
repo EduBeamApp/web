@@ -1,5 +1,5 @@
 ---
-description: "Coloca y edita nodos en EduBeam, ajústalos a la cuadrícula, divide elementos y elige el apoyo adecuado: articulación, rodillo, empotramiento, deslizadera y sus variantes verticales e inclinadas."
+description: "Crea y edita nodos en EduBeam, ajústalos a la cuadrícula, divide elementos y elige el apoyo: articulación, rodillo, empotramiento, deslizadera o uno inclinado."
 source: site
 ---
 

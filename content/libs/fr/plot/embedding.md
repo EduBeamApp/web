@@ -1,6 +1,6 @@
 ---
 title: Intégration
-description: "Intégrer les figures de @edubeam/plot dans une application Vite, un cours sous VitePress ou un site Nuxt, avec SSR, des modèles précalculés en JSON ou du SVG sans Vue."
+description: "Intégrer les figures de @edubeam/plot dans un projet Vite, un cours VitePress ou un site Nuxt, avec SSR, des modèles précalculés en JSON ou du SVG sans Vue."
 order: 7
 source: site
 ---

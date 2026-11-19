@@ -1,5 +1,5 @@
 ---
-description: "Hướng dẫn: dựng dàn phẳng từ các thanh có khớp trong EduBeam, kiểm tra lực dọc bằng phương pháp tách nút và mặt cắt, tìm thanh không chịu lực, tính độ võng bằng công khả dĩ. Khoảng 20 phút."
+description: "Hướng dẫn: dựng dàn phẳng trong EduBeam, kiểm tra lực dọc bằng phương pháp tách nút và mặt cắt, tìm thanh không chịu lực, tính độ võng bằng công khả dĩ."
 source: site
 ---
 

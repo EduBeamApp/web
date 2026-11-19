@@ -1,5 +1,5 @@
 ---
-description: "Apply forces, moments, settlements, uniform, trapezoidal, point and temperature loads in EduBeam, with the sign convention of each: positive z is down, positive moments are counter-clockwise."
+description: "Forces, moments, settlements, uniform, trapezoidal, point and temperature loads in EduBeam, and their signs: z is down, moments are counter-clockwise."
 source: site
 ---
 

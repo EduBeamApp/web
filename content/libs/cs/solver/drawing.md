@@ -1,6 +1,6 @@
 ---
 title: Vykreslení výsledků
-description: "Jak z vyřešeného modelu @edubeam/fem udělat průběhy pomocí @edubeam/plot: ve Vue komponentě, jako samostatný soubor SVG ze skriptu v Node, nebo jako JSON k pozdějšímu vykreslení."
+description: "Jak z vyřešeného modelu @edubeam/fem udělat průběhy pomocí @edubeam/plot: ve Vue komponentě, jako soubor SVG ze skriptu v Node nebo jako JSON na později."
 order: 11
 ---
 

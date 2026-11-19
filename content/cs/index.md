@@ -1,5 +1,5 @@
 ---
-description: "Statický výpočet 2D konstrukcí zdarma v prohlížeči. Nakreslete nosník, rám nebo příhradovou konstrukci, zadejte zatížení a hned uvidíte N, V, M, reakce a průhyby."
+description: "Statický výpočet 2D konstrukcí zdarma v prohlížeči. Nakreslete nosník, rám či příhradovou konstrukci, zadejte zatížení a hned uvidíte N, V, M, reakce a průhyby."
 source: site
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home

@@ -1,6 +1,6 @@
 ---
 title: Slide e dispense
-description: "Figure per le lezioni con @edubeam/plot che si costruiscono un clic alla volta in Slidev, Vue o Beamer, si risolvono dal vivo e finiscono in dispense, PowerPoint e Word come SVG."
+description: "Figure per le lezioni con @edubeam/plot, costruite clic dopo clic in Slidev, Vue o Beamer, risolte dal vivo e portate in SVG in dispense, PowerPoint e Word."
 order: 6
 source: site
 ---

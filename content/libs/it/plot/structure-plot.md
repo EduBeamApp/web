@@ -1,6 +1,6 @@
 ---
 title: StructurePlot
-description: "Disegna con StructurePlot una trave, un telaio o una travatura piana: livelli, figure progressive, reazioni incognite per esercizi, miniature, dimensioni, unità e lettura dei valori."
+description: "Disegna con StructurePlot travi, telai e travature: livelli, figure progressive, reazioni incognite, miniature, dimensioni, unità e lettura dei valori."
 order: 2
 group: Componenti
 source: site

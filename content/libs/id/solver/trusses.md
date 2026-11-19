@@ -1,6 +1,6 @@
 ---
 title: Rangka batang
-description: "Rangka batang Warren bersendi di @edubeam/fem, setiap gaya batang diperiksa dengan metode potongan, dan loop yang membuat rangka batang dengan jumlah panel berapa pun."
+description: "Rangka batang Warren bersendi di @edubeam/fem, tiap gaya batang diperiksa dengan metode potongan, dan loop pembuat rangka batang dengan jumlah panel berapa pun."
 order: 14
 source: site
 ---

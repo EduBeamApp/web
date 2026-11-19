@@ -1,5 +1,5 @@
 ---
-description: "EduBeam'in tüm klavye kısayolları, fare işlemleri ve dokunmatik hareketleri: geri alma, kaydetme, açma, görüntü dışa aktarma, kopyalama, sığdırma, yakınlaştırma, seçme ve kaydırma."
+description: "EduBeam'in tüm klavye kısayolları, fare ve dokunma hareketleri: geri alma, kaydetme, açma, dışa aktarma, kopyalama, sığdırma, yakınlaştırma, seçme ve kaydırma."
 source: site
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: "Apa itu EduBeam: solver elemen hingga gratis di browser untuk balok, portal, dan rangka batang 2D. Kemampuan dan batasannya, sasaran pengguna, susunan panduan, dan pustakanya."
+description: "EduBeam adalah solver elemen hingga gratis di browser untuk balok, portal, dan rangka batang 2D: kemampuan dan batasnya, sasaran pengguna, dan susunan panduan."
 source: site
 ---
 

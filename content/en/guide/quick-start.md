@@ -1,5 +1,5 @@
 ---
-description: "Model a simply supported steel beam in EduBeam in about ten minutes: material, section, nodes, supports and load, then read the reactions and diagrams and check them by hand."
+description: "Model a simply supported steel beam in EduBeam in ten minutes: material, section, nodes, supports and load, then read the results and check them by hand."
 source: site
 ---
 

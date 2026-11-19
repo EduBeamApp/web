@@ -1,5 +1,5 @@
 ---
-description: "Os resultados do EduBeam: diagramas N, V e M, deformada, reações e seus sinais, valores ao apontar, tabelas, exportação CSV, matriz de rigidez e formato numérico."
+description: "Resultados do EduBeam: diagramas N, V e M, deformada, reações e seus sinais, valores ao apontar, tabelas, exportação CSV, matriz de rigidez e formato numérico."
 source: site
 ---
 

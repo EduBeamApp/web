@@ -1,5 +1,5 @@
 ---
-description: "Resultados en EduBeam: diagramas de axiles, cortantes y momentos, deformada, reacciones y sus signos, valores al pasar el ratón, tablas, CSV, matriz de rigidez y formato numérico."
+description: "Resultados en EduBeam: diagramas de axiles, cortantes y momentos, deformada, reacciones y sus signos, valores al pasar el ratón, tablas, CSV, matriz de rigidez."
 source: site
 ---
 

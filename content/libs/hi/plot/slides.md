@@ -1,6 +1,6 @@
 ---
 title: स्लाइड और नोट्स
-description: "@edubeam/plot से व्याख्यान के चित्र: Slidev, Vue या Beamer में हर क्लिक के साथ आगे बढ़ते, व्याख्यान में ही हल होते, और SVG फ़ाइलों के रूप में नोट्स, PowerPoint और Word में।"
+description: "@edubeam/plot से व्याख्यान के चित्र: Slidev, Vue या Beamer में हर क्लिक के साथ आगे बढ़ते, लाइव हल होते, और SVG के रूप में नोट्स, PowerPoint और Word में।"
 order: 6
 source: site
 ---

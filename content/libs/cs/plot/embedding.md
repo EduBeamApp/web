@@ -1,6 +1,6 @@
 ---
 title: Vkládání do stránek
-description: "Obrázky @edubeam/plot v aplikaci Vite, ve skriptech ve VitePressu nebo na webu v Nuxtu, vykreslení na serveru, předem spočtené modely v JSONu a čisté SVG bez Vue."
+description: "Obrázky @edubeam/plot v aplikaci Vite, ve skriptech ve VitePressu nebo na webu v Nuxtu, vykreslení na serveru, předem spočtené modely v JSONu a čisté SVG."
 order: 7
 ---
 

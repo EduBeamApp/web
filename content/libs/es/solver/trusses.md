@@ -1,6 +1,6 @@
 ---
 title: Celosías
-description: "Una celosía Warren articulada en @edubeam/fem, con cada axil comprobado por el método de las secciones, y un bucle que genera celosías de cualquier número de módulos."
+description: "Celosía Warren articulada en @edubeam/fem, cada axil comprobado por el método de las secciones, y un bucle que genera celosías de cualquier número de módulos."
 order: 14
 source: site
 ---

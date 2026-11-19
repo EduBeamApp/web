@@ -1,9 +1,11 @@
 ---
-description: "Projekty EduBeamu i sesje desktopowego EduBeamu, link do modelu, osadzony podgląd, parametry URL, eksport obrazów i tabel wyników. Wszystko zostaje w przeglądarce."
+description: "Projekty EduBeamu i sesje desktopowego EduBeamu, link do modelu, osadzony podgląd, parametry URL, eksport obrazów i tabel wyników – wszystko w przeglądarce."
 source: site
 ---
 
 # Pliki, linki i eksport
+
+:span{#import-eksport-i-udostepnianie}
 
 Model możesz zapisać jako plik, wysłać jako link, osadzić na stronie WWW albo wyeksportować jako obraz lub tabelę. Wszystko w aplikacji [EduBeam]{.edubeam} dzieje się w Twojej przeglądarce i nic nie jest wysyłane na serwer: link do modelu dosłownie zawiera model.
 

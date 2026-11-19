@@ -1,6 +1,6 @@
 ---
 title: Barras y rótulas
-description: "Barras Beam2D entre nodos, rótulas de extremo que liberan el momento, barras de celosía y las matrices de rigidez y de transformación del elemento en @edubeam/fem."
+description: "Barras Beam2D entre nodos, rótulas de extremo que liberan el momento, barras de celosía y las matrices de rigidez y de transformación en @edubeam/fem."
 order: 5
 source: site
 ---

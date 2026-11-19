@@ -1,5 +1,5 @@
 ---
-description: "EduBeam'in işaret kabulleri: x sağa, z aşağı; pozitif yükler ve yer değiştirmeler, yerel eksenler, N, V, M, çubuk uç kuvvetleri, mesnet tepkileri, y yukarı seçeneği."
+description: "EduBeam'in işaret kabulleri: x sağa, z aşağı; pozitif yükler ve yer değiştirmeler, yerel eksenler, N, V, M, uç kuvvetleri, mesnet tepkileri, y yukarı seçeneği."
 source: site
 ---
 

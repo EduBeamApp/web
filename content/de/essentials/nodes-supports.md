@@ -1,5 +1,5 @@
 ---
-description: "Knoten in EduBeam setzen, am Raster fangen, Elemente teilen und das passende Lager wählen: Festlager, Loslager, Einspannung, Parallelführung, auch vertikal oder schräg."
+description: "Knoten in EduBeam setzen, am Raster fangen, Elemente teilen und passende Lager wählen: Festlager, Loslager, Einspannung, Parallelführung, vertikal oder schräg."
 source: site
 ---
 
@@ -73,10 +73,10 @@ Die acht Lager sind die acht möglichen Kombinationen dieser drei. Lesen Sie die
 
 | Gehaltene Verschiebungen | Frei drehbar | Zusätzlich gegen Verdrehung gehalten |
 | --- | --- | --- |
-| **Beide** (`Dx` und `Dz`) | ![](/screenshots/b-support-pin.webp){width="34" style="display:inline;border:0;border-radius:0;margin:0 0.35em 0 0;vertical-align:middle"} **Festlager** | ![](/screenshots/b-support-fixed.webp){width="34" style="display:inline;border:0;border-radius:0;margin:0 0.35em 0 0;vertical-align:middle"} **Einspannung** |
-| **Nur vertikal** (`Dz`): horizontal verschieblich | ![](/screenshots/b-support-roller.webp){width="34" style="display:inline;border:0;border-radius:0;margin:0 0.35em 0 0;vertical-align:middle"} **Loslager** | ![](/screenshots/b-support-slider.webp){width="34" style="display:inline;border:0;border-radius:0;margin:0 0.35em 0 0;vertical-align:middle"} **Parallelführung** |
-| **Nur horizontal** (`Dx`): vertikal verschieblich | ![](/screenshots/b-support-vertical-roller.webp){width="34" style="display:inline;border:0;border-radius:0;margin:0 0.35em 0 0;vertical-align:middle"} **Vertikales Loslager** | ![](/screenshots/b-support-vertical-slider.webp){width="34" style="display:inline;border:0;border-radius:0;margin:0 0.35em 0 0;vertical-align:middle"} **Vertikale Parallelführung** |
-| **Keine**: in beide Richtungen verschieblich | ![](/screenshots/b-support-free.webp){width="34" style="display:inline;border:0;border-radius:0;margin:0 0.35em 0 0;vertical-align:middle"} **Frei** (kein Lager) | ![](/screenshots/b-support-rotation-only.webp){width="34" style="display:inline;border:0;border-radius:0;margin:0 0.35em 0 0;vertical-align:middle"} **Nur Verdrehung gehalten** |
+| **Beide** (`Dx` und `Dz`) | ![](/screenshots/de/b-support-pin.webp){width="34" style="display:inline;border:0;border-radius:0;margin:0 0.35em 0 0;vertical-align:middle"} **Festlager** | ![](/screenshots/de/b-support-fixed.webp){width="34" style="display:inline;border:0;border-radius:0;margin:0 0.35em 0 0;vertical-align:middle"} **Einspannung** |
+| **Nur vertikal** (`Dz`): horizontal verschieblich | ![](/screenshots/de/b-support-roller.webp){width="34" style="display:inline;border:0;border-radius:0;margin:0 0.35em 0 0;vertical-align:middle"} **Loslager** | ![](/screenshots/de/b-support-slider.webp){width="34" style="display:inline;border:0;border-radius:0;margin:0 0.35em 0 0;vertical-align:middle"} **Parallelführung** |
+| **Nur horizontal** (`Dx`): vertikal verschieblich | ![](/screenshots/de/b-support-vertical-roller.webp){width="34" style="display:inline;border:0;border-radius:0;margin:0 0.35em 0 0;vertical-align:middle"} **Vertikales Loslager** | ![](/screenshots/de/b-support-vertical-slider.webp){width="34" style="display:inline;border:0;border-radius:0;margin:0 0.35em 0 0;vertical-align:middle"} **Vertikale Parallelführung** |
+| **Keine**: in beide Richtungen verschieblich | ![](/screenshots/de/b-support-free.webp){width="34" style="display:inline;border:0;border-radius:0;margin:0 0.35em 0 0;vertical-align:middle"} **Frei** (kein Lager) | ![](/screenshots/de/b-support-rotation-only.webp){width="34" style="display:inline;border:0;border-radius:0;margin:0 0.35em 0 0;vertical-align:middle"} **Nur Verdrehung gehalten** |
 
 Für jeden gehaltenen Freiheitsgrad berechnet EduBeam eine **Auflagerreaktion**: `Dx` liefert eine horizontale Kraft $R_x$, `Dz` eine vertikale Kraft $R_z$, `Ry` ein Moment $M$. Ein Festlager hat also $R_x$ und $R_z$, ein Loslager nur $R_z$, eine Parallelführung $R_z$ und $M$ und eine Einspannung alle drei.
 

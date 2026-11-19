@@ -1,6 +1,6 @@
 ---
 title: Kafes sistemler
-description: "@edubeam/fem ile mafsal düğümlü bir Warren kafes kirişi: her çubuk kuvveti kesim yöntemiyle kontrol edildi. Ayrıca istenen sayıda gözlü kafes sistem üreten bir döngü."
+description: "@edubeam/fem ile mafsal düğümlü bir Warren kafes kirişi, kesim yöntemiyle kontrol edilen çubuk kuvvetleri ve istenen sayıda gözlü kafes sistem üreten bir döngü."
 order: 14
 source: site
 ---

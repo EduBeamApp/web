@@ -1,6 +1,6 @@
 ---
 title: Casi di carico
-description: "Risolvi in una volta più casi di carico di un modello @edubeam/fem e combinane i risultati per sovrapposizione degli effetti in combinazioni di carico e inviluppi."
+description: "Risolvi in una volta più casi di carico di un modello @edubeam/fem e combinane i risultati per sovrapposizione in combinazioni di carico e inviluppi."
 order: 8
 source: site
 ---

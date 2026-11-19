@@ -1,6 +1,6 @@
 ---
 title: Treillis
-description: "Un treillis Warren articulé dans @edubeam/fem, l’effort de chaque barre vérifié par la méthode des sections, et une boucle qui génère des treillis de n’importe quel nombre de panneaux."
+description: "Un treillis Warren articulé dans @edubeam/fem, chaque effort vérifié par la méthode des sections, et une boucle qui génère des treillis de n panneaux."
 order: 14
 source: site
 ---

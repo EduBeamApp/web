@@ -1,5 +1,5 @@
 ---
-description: "Élément poutre de Timoshenko à deux nœuds : rigidité exacte, déformation d’effort tranchant, rotules par condensation, efforts d’encastrement, matrice de passage."
+description: "Poutre de Timoshenko à deux nœuds : rigidité exacte, déformation d’effort tranchant, rotules par condensation, efforts d’encastrement, matrice de passage."
 source: site
 ---
 

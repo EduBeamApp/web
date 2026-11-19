@@ -1,6 +1,6 @@
 ---
 title: Nodal and member loads
-description: "Apply forces and moments at nodes, and uniform, trapezoidal and point loads along members, in global or local axes, with @edubeam/fem; then change or remove them."
+description: "Apply nodal forces and moments, and uniform, trapezoidal and point member loads, in global or local axes with @edubeam/fem; then change or remove them."
 order: 6
 group: Loads
 source: site

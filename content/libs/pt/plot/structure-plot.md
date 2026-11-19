@@ -1,6 +1,6 @@
 ---
 title: StructurePlot
-description: "Vigas, pórticos e treliças planas com StructurePlot: camadas, figuras que se completam, reações como incógnitas, miniaturas, tamanhos, unidades e leitura de valores."
+description: "Vigas, pórticos e treliças com StructurePlot: camadas, figuras que se completam, reações como incógnitas, miniaturas, tamanhos, unidades e leitura de valores."
 order: 2
 group: Componentes
 source: site

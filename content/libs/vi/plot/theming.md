@@ -1,6 +1,6 @@
 ---
 title: Màu sắc và chủ đề
-description: "Tô màu hình của @edubeam/plot qua CSS custom properties hoặc prop colors, theo chủ đề sáng và tối, in đen trắng, tô màu tệp SVG, đặt phông chữ và chỉnh hiệu ứng chuyển động."
+description: "Tô màu hình @edubeam/plot qua CSS custom properties hoặc prop colors: chủ đề sáng và tối, in đen trắng, màu tệp SVG, phông chữ, hiệu ứng chuyển động."
 order: 4
 source: site
 ---

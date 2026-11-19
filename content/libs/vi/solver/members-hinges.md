@@ -1,6 +1,6 @@
 ---
 title: Thanh và khớp
-description: "Nối các nút bằng thanh Beam2D, giải phóng mô men bằng khớp đầu thanh, mô hình hóa thanh dàn, và lấy ma trận độ cứng, ma trận biến đổi của phần tử từ @edubeam/fem."
+description: "Nối các nút bằng thanh Beam2D, giải phóng mô men bằng khớp đầu thanh, mô hình hóa thanh dàn, và lấy ma trận độ cứng, ma trận biến đổi từ @edubeam/fem."
 order: 5
 source: site
 ---

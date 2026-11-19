@@ -1,5 +1,5 @@
 ---
-description: "EduBeam nedir: 2B kiriş, çerçeve ve kafes sistemler için tarayıcıda çalışan ücretsiz bir sonlu elemanlar çözücüsü. Neler yapıp yapmadığı, kimler için olduğu, kılavuzun düzeni ve arkasındaki açık kaynaklı kütüphaneler."
+description: "EduBeam: 2B kiriş, çerçeve ve kafes sistemler için tarayıcıda ücretsiz sonlu elemanlar çözücüsü. Neler yapıp yapmadığı, kimler için olduğu, kılavuzun düzeni."
 source: site
 ---
 

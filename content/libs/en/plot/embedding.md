@@ -1,6 +1,6 @@
 ---
 title: Embedding
-description: "Put @edubeam/plot figures in a Vite app, VitePress course notes or a Nuxt site, render them on the server, ship pre-solved models as JSON, or write plain SVG for any page without Vue."
+description: "Put @edubeam/plot figures in a Vite app, VitePress notes or a Nuxt site, render them on the server, ship pre-solved models, or write plain SVG files."
 order: 7
 source: site
 ---

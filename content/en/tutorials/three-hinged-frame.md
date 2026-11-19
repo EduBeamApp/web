@@ -1,5 +1,5 @@
 ---
-description: "Tutorial: model a three-hinged portal frame under a uniform load in EduBeam, read its reactions, thrust and internal forces, and check every number by hand, including the deflection of the hinge. About 15 minutes."
+description: "Tutorial: a three-hinged frame under a uniform load in EduBeam, its reactions, thrust and internal forces, checked by hand with the hinge deflection."
 source: site
 ---
 

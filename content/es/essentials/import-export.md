@@ -1,9 +1,11 @@
 ---
-description: "Guarda y abre proyectos y sesiones del EduBeam de escritorio, comparte un enlace, incrusta un visor, usa parámetros de URL y exporta imágenes y tablas. Todo se queda en tu navegador."
+description: "Guarda y abre proyectos y sesiones del EduBeam de escritorio, comparte un enlace, incrusta un visor y exporta imágenes y tablas. Todo se queda en tu navegador."
 source: site
 ---
 
 # Archivos, enlaces y exportación
+
+:span{#importar-exportar-y-compartir}
 
 Guarda tu modelo como archivo, envíalo como enlace, incrústalo en una página web o exporta una imagen o una tabla. En [EduBeam]{.edubeam} todo ocurre en tu navegador y no se sube nada: un enlace para compartir contiene literalmente el modelo.
 

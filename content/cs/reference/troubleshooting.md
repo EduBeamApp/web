@@ -1,9 +1,11 @@
 ---
-description: "Proč EduBeam nezobrazuje výsledky a jak to napravit: vysvětlení všech chyb a varování, výsledky, které vypadají špatně, a soubory či odkazy, které nejdou otevřít."
+description: "Proč EduBeam nezobrazuje výsledky a jak to napravit: vysvětlení všech chyb a varování, podezřelé výsledky a soubory či odkazy, které nejdou otevřít."
 source: site
 ---
 
 # Řešení potíží
+
+:span{#reseni-problemu}
 
 Když model nelze vypočítat, EduBeam vám to oznámí hlášením vlevo nahoře v zobrazení a tlačítko **Zobrazit podrobnosti** vypíše všechny problémy. Vyberte nadpis dialogu, který jste viděli: u každého hlášení níže najdete, co znamená a jak ho odstranit.
 

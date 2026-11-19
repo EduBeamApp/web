@@ -1,5 +1,5 @@
 ---
-description: "Place and edit nodes in EduBeam, snap them to the grid, split elements, and choose the right support: pin, roller, fixed, slider and their vertical and inclined variants."
+description: "Place and edit nodes in EduBeam, snap them to the grid, split elements, and pick the right support: pin, roller, fixed, slider, vertical or inclined."
 source: site
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Fachwerke
-description: "Ein gelenkiges Warren-Fachwerk in @edubeam/fem, jede Stabkraft mit dem Ritterschnitt geprüft, und eine Schleife, die Fachwerke mit beliebig vielen Feldern erzeugt."
+description: "Ein gelenkiges Warren-Fachwerk in @edubeam/fem, jede Stabkraft per Ritterschnitt geprüft, und eine Schleife, die Fachwerke mit beliebig vielen Feldern erzeugt."
 order: 14
 ---
 

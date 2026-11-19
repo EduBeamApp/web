@@ -1,5 +1,5 @@
 ---
-description: "Tutorial: portal tiga sendi dengan beban merata di EduBeam. Baca reaksi, gaya dorong, dan gaya dalam, lalu periksa semuanya secara manual, sampai lendutan sendi. Sekitar 15 menit."
+description: "Tutorial: portal tiga sendi dengan beban merata di EduBeam. Baca reaksi, gaya dorong, dan gaya dalam, lalu periksa secara manual, termasuk lendutan sendi."
 source: site
 ---
 

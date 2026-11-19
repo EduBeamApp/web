@@ -1,6 +1,6 @@
 ---
 title: Slides and notes
-description: "Lecture figures with @edubeam/plot that build up click by click in Slidev, Vue or Beamer, solve live in the lecture, and go into notes, PowerPoint and Word as SVG files."
+description: "Lecture figures with @edubeam/plot that build up click by click in Slidev, Vue or Beamer, solve live, and go into notes, PowerPoint and Word as SVG."
 order: 6
 source: site
 ---

@@ -1,5 +1,5 @@
 ---
-description: "Deformační metoda tak, jak ji počítá EduBeam, ručně na jednostranně vetknutém nosníku: kódová čísla, sestavení soustavy, podpory, reakce a výsledky po délce prvků."
+description: "Deformační metoda tak, jak ji počítá EduBeam, ručně na jednostranně vetknutém nosníku: kódová čísla, sestavení soustavy, podpory, reakce a výsledky na prvcích."
 source: site
 ---
 

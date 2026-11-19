@@ -1,5 +1,5 @@
 ---
-description: "Tutoriel : un portique à trois articulations sous charge uniforme dans EduBeam. Réactions, poussée, efforts internes et flèche de la rotule, vérifiés à la main. Environ 15 minutes."
+description: "Tutoriel : un portique à trois articulations sous charge uniforme dans EduBeam. Réactions, poussée, efforts internes et flèche de la rotule, vérifiés à la main."
 source: site
 ---
 

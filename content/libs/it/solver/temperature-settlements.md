@@ -1,6 +1,6 @@
 ---
 title: Temperatura e cedimenti
-description: "Applica alle aste di @edubeam/fem una variazione termica uniforme e una differenza di temperatura, e sposta i vincoli con uno spostamento imposto, con esempi verificati."
+description: "Applica alle aste di @edubeam/fem una variazione termica e una differenza di temperatura, e sposta i vincoli con uno spostamento imposto, con esempi verificati."
 order: 7
 source: site
 ---

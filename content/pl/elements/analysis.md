@@ -1,5 +1,5 @@
 ---
-description: "Metoda przemieszczeń w ujęciu macierzowym tak, jak liczy ją EduBeam, ręcznie na belce jednostronnie utwierdzonej: numeracja, agregacja, podpory, reakcje i wyniki."
+description: "Macierzowa metoda przemieszczeń tak, jak liczy ją EduBeam, ręcznie na belce jednostronnie utwierdzonej: numeracja, agregacja, podpory, reakcje i wyniki."
 source: site
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: StructurePlot
-description: "Draw a plane beam, frame or truss with StructurePlot: layers, figures that build up, named unknown reactions for exercises, thumbnails, sizes, units and a hover readout."
+description: "Draw a beam, frame or truss with StructurePlot: layers, figures that build up, named reactions for exercises, thumbnails, sizes, units and a readout."
 order: 2
 group: Components
 source: site

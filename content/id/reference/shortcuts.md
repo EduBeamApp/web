@@ -1,5 +1,5 @@
 ---
-description: "Semua pintasan keyboard, aksi mouse, dan gerakan sentuh EduBeam: urungkan, simpan, buka, ekspor gambar, salin dan tempel, sesuaikan layar, zoom, pilih, dan geser tampilan."
+description: "Semua pintasan keyboard, aksi mouse, dan gerakan sentuh EduBeam: urungkan, simpan, buka, ekspor gambar, salin-tempel, sesuaikan layar, zoom, pilih, dan geser."
 source: site
 ---
 

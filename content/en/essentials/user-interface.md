@@ -1,5 +1,5 @@
 ---
-description: "A map of the EduBeam interface: the app bar and ☰ menu, the viewer with its buttons and display options, selecting and editing, the bottom-bar tables, and how to type values."
+description: "A map of the EduBeam interface: the app bar and ☰ menu, the viewer and its display options, selecting and editing, the bottom-bar tables, typing values."
 source: site
 ---
 

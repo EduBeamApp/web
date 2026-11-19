@@ -1,6 +1,6 @@
 ---
 title: Script e server
-description: "Usa @edubeam/fem da Node: un foglio di esercizi con le soluzioni, una linea d’influenza salvata in CSV e un piccolo endpoint HTTP che risolve travi su richiesta."
+description: "Usa @edubeam/fem da Node: un foglio di esercizi con le soluzioni, una linea d’influenza salvata in CSV e un endpoint HTTP che risolve travi su richiesta."
 order: 15
 source: site
 ---

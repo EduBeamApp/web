@@ -1,6 +1,6 @@
 ---
 title: Tải trọng nút và tải trọng trên thanh
-description: "Đặt lực, mô men tại nút và tải phân bố đều, tải hình thang, lực tập trung trên thanh trong @edubeam/fem, theo hệ trục tổng thể hoặc địa phương; rồi sửa hoặc xóa chúng."
+description: "Đặt lực, mô men tại nút và tải phân bố đều, hình thang, lực tập trung trên thanh trong @edubeam/fem, theo hệ trục tổng thể hoặc địa phương; rồi sửa hoặc xóa."
 order: 6
 group: Tải trọng
 source: site

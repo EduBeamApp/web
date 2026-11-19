@@ -1,6 +1,6 @@
 ---
 title: DiagramStack
-description: "Draw a beam above its V(x), M(x) and w(x) diagrams on one x axis with DiagramStack, read every row with a cursor, and let the reader drag a point load along the beam."
+description: "Draw a beam above its V(x), M(x) and w(x) diagrams on one axis with DiagramStack, read the rows with a cursor, and let the reader drag a point load."
 order: 3
 source: site
 ---

@@ -1,9 +1,11 @@
 ---
-description: "Salvare e aprire progetti e sessioni dell’EduBeam desktop, condividere link, incorporare il modello, parametri URL, esportare immagini e tabelle, tutto nel browser."
+description: "Salvare e aprire progetti e sessioni dell’EduBeam desktop, condividere link, incorporare il modello, esportare immagini e tabelle, tutto nel browser."
 source: site
 ---
 
 # File, link ed esportazione
+
+:span{#importazione-esportazione-e-condivisione}
 
 Salva il modello in un file, invialo come link, incorporalo in una pagina web, oppure esportane un’immagine o una tabella. In [EduBeam]{.edubeam} tutto avviene nel tuo browser e nulla viene caricato su un server: un link condiviso contiene letteralmente il modello.
 

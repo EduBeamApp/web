@@ -1,5 +1,5 @@
 ---
-description: "Nastavení EduBeamu: jazyk, jednotky SI nebo americké, formát čísel, osy z dolů nebo y nahoru, mřížka, styl a barvy průběhů, posun zobrazení a co se ukládá v prohlížeči."
+description: "Nastavení EduBeamu: jazyk, jednotky SI nebo americké, formát čísel, osy z dolů nebo y nahoru, mřížka, styl a barvy průběhů a co se ukládá v prohlížeči."
 source: site
 ---
 

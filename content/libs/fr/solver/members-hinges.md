@@ -1,6 +1,6 @@
 ---
 title: Barres et rotules
-description: "Reliez les nœuds par des barres Beam2D, libérez les moments par des rotules d’extrémité, modélisez des barres de treillis et obtenez les matrices de rigidité et de passage."
+description: "Reliez les nœuds par des barres Beam2D, libérez les moments par des rotules d’extrémité, modélisez des treillis et lisez les matrices de rigidité et de passage."
 order: 5
 source: site
 ---

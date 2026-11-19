@@ -1,6 +1,6 @@
 ---
 title: StructurePlot
-description: "StructurePlot ile kiriş, çerçeve ve kafes sistem çizimi: katmanlar, adım adım oluşan şekiller, bilinmeyen mesnet tepkileri, küçük resimler, birimler, değer okuma."
+description: "StructurePlot ile kiriş, çerçeve, kafes sistem çizimi: katmanlar, adım adım oluşan şekiller, bilinmeyen mesnet tepkileri, küçük resimler, birimler, değer okuma."
 order: 2
 group: Bileşenler
 source: site

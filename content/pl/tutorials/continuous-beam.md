@@ -1,5 +1,5 @@
 ---
-description: "Samouczek: statycznie niewyznaczalna belka dwuprzęsłowa w EduBeamie – porównanie z dwiema belkami swobodnie podpartymi, osiadanie podpory i metoda sił. Około 25 minut."
+description: "Samouczek: statycznie niewyznaczalna belka dwuprzęsłowa w EduBeamie – porównanie z dwiema belkami swobodnie podpartymi, osiadanie podpory i metoda sił."
 source: site
 ---
 

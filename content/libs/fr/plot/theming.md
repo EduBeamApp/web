@@ -1,6 +1,6 @@
 ---
 title: Thèmes et couleurs
-description: "Colorer les figures de @edubeam/plot par des propriétés CSS ou la prop colors, suivre le thème clair ou sombre, imprimer en noir et blanc, régler police et animations."
+description: "Colorer les figures de @edubeam/plot par des propriétés CSS ou la prop colors : thèmes clair et sombre, impression en noir et blanc, police et animations."
 order: 4
 source: site
 ---

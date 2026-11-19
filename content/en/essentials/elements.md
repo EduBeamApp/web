@@ -1,5 +1,5 @@
 ---
-description: "Draw beam elements in EduBeam, release their ends with hinges to model pins and truss bars, and define materials and cross sections from the libraries or your own polygon."
+description: "Draw beam elements in EduBeam, release their ends with hinges for pins and truss bars, and define materials and sections from the libraries or a polygon."
 source: site
 ---
 

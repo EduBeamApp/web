@@ -1,5 +1,5 @@
 ---
-description: "Tutoriel : une poutre inclinée (arbalétrier, volée d’escalier) dans EduBeam, une charge par mètre en plan, N et V le long de la pente et l’effet de l’orientation de l’appui simple. Environ 15 minutes."
+description: "Tutoriel : une poutre inclinée dans EduBeam, une charge par mètre en plan, N et V le long de la pente et l’orientation de l’appui simple. Environ 15 minutes."
 source: site
 ---
 

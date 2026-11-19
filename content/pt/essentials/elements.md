@@ -1,5 +1,5 @@
 ---
-description: "Desenhe elementos no EduBeam, libere as extremidades com rótulas para articulações e barras de treliça, e defina materiais e seções pelas bibliotecas ou por polígono."
+description: "Desenhe elementos no EduBeam, libere as extremidades com rótulas (articulações, barras de treliça) e defina materiais e seções por biblioteca ou polígono."
 source: site
 ---
 

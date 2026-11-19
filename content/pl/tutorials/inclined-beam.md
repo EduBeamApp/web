@@ -1,5 +1,5 @@
 ---
-description: "Samouczek: belka pochyła (krokiew, bieg schodów) w EduBeamie – obciążenie na metr rzutu, siły N i V wzdłuż pochylenia i wpływ kierunku podpory przesuwnej. Około 15 minut."
+description: "Samouczek: belka pochyła (krokiew, bieg schodów) w EduBeamie – obciążenie na metr rzutu, siły N i V wzdłuż pochylenia i wpływ kierunku podpory przesuwnej."
 source: site
 ---
 

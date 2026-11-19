@@ -1,5 +1,5 @@
 ---
-description: "EduBeam'in kullandığı doğrudan rijitlik yöntemi, elle çözülen ankastre–kayıcı mesnetli bir kirişte: numaralama, birleştirme, mesnetler, tepkiler, çubuk sonuçları."
+description: "EduBeam'in kullandığı doğrudan rijitlik yöntemi, elle çözülen ankastre–kayıcı mesnetli kirişte: numaralama, birleştirme, mesnetler, tepkiler, çubuk sonuçları."
 source: site
 ---
 

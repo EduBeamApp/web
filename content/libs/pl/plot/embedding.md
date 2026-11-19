@@ -1,6 +1,6 @@
 ---
 title: Osadzanie
-description: "Rysunki @edubeam/plot w aplikacji Vite, w materiałach w VitePressie lub na stronie w Nuxcie, renderowanie na serwerze, gotowe modele w JSON i czysty SVG bez Vue."
+description: "Rysunki @edubeam/plot w aplikacji Vite, w materiałach w VitePressie lub na stronie w Nuxcie, renderowanie na serwerze, gotowe modele w JSON i czysty SVG."
 order: 7
 source: site
 ---

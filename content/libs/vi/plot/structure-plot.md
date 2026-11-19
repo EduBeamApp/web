@@ -1,6 +1,6 @@
 ---
 title: StructurePlot
-description: "Vẽ dầm, khung hay dàn phẳng bằng StructurePlot: lớp vẽ, hình hiện dần, phản lực chưa biết có tên cho bài tập, ảnh thu nhỏ, cỡ hình, đơn vị và đọc giá trị khi di chuột."
+description: "Vẽ dầm, khung hay dàn phẳng bằng StructurePlot: lớp vẽ, hình hiện dần, phản lực chưa biết có tên cho bài tập, ảnh thu nhỏ, cỡ hình, đơn vị và đọc giá trị."
 order: 2
 group: Component
 source: site

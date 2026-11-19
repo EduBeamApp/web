@@ -1,5 +1,5 @@
 ---
-description: "Enseñar con EduBeam: modelos en directo en el proyector, enlaces en los apuntes, tareas autocomprobables, problemas generados y exámenes impresos con sus soluciones."
+description: "Enseñar con EduBeam: modelos proyectados en directo, enlaces en los apuntes, tareas autocomprobables, problemas generados y exámenes impresos con soluciones."
 source: site
 ---
 

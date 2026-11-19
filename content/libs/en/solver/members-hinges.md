@@ -1,6 +1,6 @@
 ---
 title: Members and hinges
-description: "Connect nodes with Beam2D members, release moments with end hinges, model truss bars, and get the element's stiffness and transformation matrices from @edubeam/fem."
+description: "Connect nodes with Beam2D members, release moments with end hinges, model truss bars, and read stiffness and transformation matrices in @edubeam/fem."
 order: 5
 source: site
 ---

@@ -1,5 +1,5 @@
 ---
-description: "Peta antarmuka EduBeam: bilah aplikasi dan menu ☰, tampilan dengan tombol dan opsi tampilannya, memilih dan mengedit, tabel bilah bawah, dan cara mengetik nilai."
+description: "Peta antarmuka EduBeam: bilah aplikasi dan menu ☰, tampilan dan opsi tampilannya, memilih dan mengedit, tabel bilah bawah, dan cara mengetik nilai."
 source: site
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Erste Schritte
-description: "@edubeam/plot installieren, einen mit @edubeam/fem berechneten Träger mit Lasten, Reaktionen und Momentenverlauf in Vue 3 zeichnen, aktualisieren und als SVG speichern."
+description: "@edubeam/plot installieren, einen mit @edubeam/fem berechneten Träger mit Lasten, Reaktionen und M-Verlauf in Vue 3 zeichnen, aktualisieren, als SVG speichern."
 order: 1
 group: Einführung
 ---

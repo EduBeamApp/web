@@ -1,6 +1,6 @@
 ---
 title: Модель рисунка
-description: "PlotModel — простая модель, сериализуемая в JSON, которую modelFromSolver создаёт из расчёта @edubeam/fem: кусочные полиномы результатов, точные значения и экстремумы."
+description: "PlotModel — сериализуемая в JSON модель, которую modelFromSolver создаёт из расчёта @edubeam/fem: кусочные полиномы результатов, точные значения и экстремумы."
 order: 9
 source: site
 ---

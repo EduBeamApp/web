@@ -1,5 +1,5 @@
 ---
-description: "Yaklaşık on dakikada EduBeam'de basit mesnetli bir çelik kiriş modelleyin: malzeme, kesit, düğümler, mesnetler ve yük; sonra mesnet tepkilerini ve diyagramları okuyup elle kontrol edin."
+description: "On dakikada EduBeam'de basit mesnetli bir çelik kiriş modelleyin: malzeme, kesit, düğümler, mesnetler ve yük; sonra sonuçları okuyup elle kontrol edin."
 source: site
 ---
 

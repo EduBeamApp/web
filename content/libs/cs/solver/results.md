@@ -1,6 +1,6 @@
 ---
 title: Čtení výsledků
-description: "Reakce, posuny uzlů, vnitřní síly kdekoli na prvku, deformovaný tvar a koncové síly z vyřešeného modelu @edubeam/fem, i s podobou dat, která jednotlivá volání vracejí."
+description: "Reakce, posuny uzlů, vnitřní síly kdekoli na prvku, deformovaný tvar a koncové síly z vyřešeného modelu @edubeam/fem a co jednotlivá volání vracejí."
 order: 10
 ---
 

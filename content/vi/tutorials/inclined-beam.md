@@ -1,5 +1,5 @@
 ---
-description: "Hướng dẫn: mô hình hóa dầm xiên (kèo mái, vế thang) trong EduBeam, nhập tải cho trên mét hình chiếu ngang, đọc lực dọc, lực cắt và xem hướng gối di động thay đổi chúng ra sao. Khoảng 15 phút."
+description: "Hướng dẫn: dầm xiên (kèo mái, vế thang) trong EduBeam, tải trên mét hình chiếu ngang, lực dọc, lực cắt và ảnh hưởng của hướng gối di động. Khoảng 15 phút."
 source: site
 ---
 

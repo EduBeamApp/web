@@ -1,6 +1,6 @@
 ---
 title: Suhu dan penurunan tumpuan
-description: "Bebani batang @edubeam/fem dengan perubahan suhu dan selisih suhu, dan pindahkan tumpuan dengan perpindahan yang ditetapkan, lengkap dengan contoh yang sudah diperiksa."
+description: "Bebani batang @edubeam/fem dengan perubahan suhu dan selisih suhu, dan beri tumpuan perpindahan yang ditetapkan, lengkap dengan contoh yang sudah diperiksa."
 order: 7
 source: site
 ---

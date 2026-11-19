@@ -1,5 +1,5 @@
 ---
-description: "EduBeam'in ders kitabı formülleriyle kontrolü: kirişler, bir kafes sistem, sıcaklık, mesnet çökmesi ve Timoshenko kirişinin Euler–Bernoulli'den nerede ayrıldığı."
+description: "EduBeam'in ders kitabı formülleriyle kontrolü: kirişler, kafes sistem, sıcaklık, mesnet çökmesi ve Timoshenko kirişinin Euler–Bernoulli'den nerede ayrıldığı."
 source: site
 ---
 

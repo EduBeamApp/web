@@ -1,5 +1,5 @@
 ---
-description: "Modele uma viga biapoiada de aço no EduBeam em cerca de dez minutos: material, seção, nós, apoios e carga; depois leia as reações e os diagramas e confira-os à mão."
+description: "Modele uma viga biapoiada de aço no EduBeam em dez minutos: material, seção, nós, apoios e carga; depois leia as reações e os diagramas e confira-os à mão."
 source: site
 ---
 

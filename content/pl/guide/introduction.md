@@ -1,5 +1,5 @@
 ---
-description: "Czym jest EduBeam: darmowy program MES w przeglądarce do płaskich belek, ram i kratownic. Co potrafi, czego nie, dla kogo jest, jak czytać przewodnik i na jakich bibliotekach stoi."
+description: "Czym jest EduBeam: darmowy program MES w przeglądarce do płaskich belek, ram i kratownic. Co potrafi, czego nie, dla kogo jest i jak czytać przewodnik."
 source: site
 ---
 

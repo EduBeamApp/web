@@ -1,9 +1,11 @@
 ---
-description: "Convención de signos de EduBeam: x a la derecha, z hacia abajo, cargas y desplazamientos positivos, ejes locales, N, V, M, fuerzas de extremo, reacciones y eje y arriba."
+description: "Convención de signos de EduBeam: x a la derecha, z hacia abajo, cargas y desplazamientos, ejes locales, N, V, M, fuerzas de extremo, reacciones y eje y arriba."
 source: site
 ---
 
 # Sistema de coordenadas y convención de signos
+
+:span{#sistema-de-coordenadas-y-convenio-de-signos}
 
 Cada número que muestra EduBeam tiene signo. Esta página explica qué significa *positivo* para las coordenadas, las cargas, los desplazamientos, los esfuerzos, las fuerzas de extremo y las reacciones, para que puedas comparar la aplicación con tus propios cálculos. La mayoría de los resultados que parecen erróneos son, en realidad, una cuestión de convención de signos.
 

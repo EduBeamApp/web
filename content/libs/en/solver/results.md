@@ -1,6 +1,6 @@
 ---
 title: Reading results
-description: "Read reactions, nodal displacements, internal forces anywhere along a member, deflected shapes and end forces from a solved @edubeam/fem model, with the shape each call returns."
+description: "Read reactions, displacements, internal forces along a member, deflected shapes and end forces from a solved @edubeam/fem model, and what each call returns."
 order: 10
 source: site
 ---

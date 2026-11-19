@@ -1,6 +1,6 @@
 ---
 title: Integrazione
-description: "Inserisci le figure di @edubeam/plot in un’app Vite, in dispense VitePress o in un sito Nuxt, con rendering lato server, modelli già risolti in JSON o SVG semplice senza Vue."
+description: "Usa le figure di @edubeam/plot in un’app Vite, in dispense VitePress o in un sito Nuxt, con rendering lato server, modelli già risolti in JSON o SVG senza Vue."
 order: 7
 source: site
 ---

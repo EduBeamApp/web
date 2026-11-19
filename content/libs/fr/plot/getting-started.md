@@ -1,6 +1,6 @@
 ---
 title: Premiers pas
-description: "Installer @edubeam/plot, dessiner dans Vue 3 une poutre calculée par @edubeam/fem avec charges, réactions et moment fléchissant, la redessiner et l’enregistrer en SVG."
+description: "Installer @edubeam/plot, dessiner dans Vue 3 une poutre de @edubeam/fem avec charges, réactions et moment fléchissant, la redessiner et l’enregistrer en SVG."
 order: 1
 group: Introduction
 source: site

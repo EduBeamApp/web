@@ -1,5 +1,5 @@
 ---
-description: "Tutoriel : construire un treillis plan dans EduBeam, vérifier ses efforts par la méthode des nœuds et des sections, repérer une barre à effort nul, contrôler une flèche. Environ 20 minutes."
+description: "Tutoriel : un treillis plan dans EduBeam, ses efforts vérifiés par la méthode des nœuds et des sections, une barre à effort nul et le contrôle d’une flèche."
 source: site
 ---
 

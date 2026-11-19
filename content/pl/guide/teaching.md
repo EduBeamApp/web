@@ -1,9 +1,11 @@
 ---
-description: "Nauczanie z EduBeamem: modele na żywo na projektorze, linki w materiałach, samodzielnie sprawdzane prace domowe, generowane zadania i kolokwia z kluczem odpowiedzi."
+description: "Nauczanie z EduBeamem: modele na żywo na projektorze, linki w materiałach, samodzielnie sprawdzane prace domowe, generowane zadania i kolokwia z odpowiedziami."
 source: site
 ---
 
 # Nauczanie z EduBeamem
+
+:span{#nauczanie-z-edubeam}
 
 [EduBeam]{.edubeam} narodził się w sali wykładowej i tam wciąż sprawdza się najlepiej: model na projektorze reaguje w chwili, gdy go zmieniasz, a dzięki linkowi ten sam model ma na laptopie każdy student. Ta strona zbiera to, z czego prowadzący korzystają najczęściej, od pierwszego wykładu po kolokwium.
 

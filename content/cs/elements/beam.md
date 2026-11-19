@@ -5,6 +5,8 @@ source: site
 
 # Nosníkový prvek
 
+:span{#prutovy-prvek-nosnik}
+
 Každý prut v EduBeamu, ať je to nosník, sloup, nebo příhradový prut, je tentýž prvek: přímý dvouuzlový **Timošenkův nosník** v rovině x–z s konstantním průřezem. Tato stránka uvádí jeho formulaci přesně tak, jak ji počítá řešič, takže si kteroukoli matici prvku nebo vektor zatížení můžete sestavit ručně a porovnat s aplikací. Znaménka odpovídají stránce [Souřadný systém a znaménková konvence](/cs/elements/conventions), kód najdete v souboru `Beam2D.ts` knihovny [@edubeam/fem](/cs/solver) a stránka [Jak EduBeam řeší model](/cs/elements/analysis) ukazuje, jak se z prvků poskládá řešení.
 
 ## Stupně volnosti {#degrees-of-freedom}

@@ -1,6 +1,6 @@
 ---
 title: Esercizi e compiti
-description: "Con @edubeam/fem e @edubeam/plot, un esercizio diverso per ogni studente a partire da un seme, con soluzioni sempre giuste: in una pagina web, stampato o in SVG."
+description: "Con @edubeam/fem e @edubeam/plot, un esercizio diverso per studente a partire da un seme, con soluzioni sempre giuste: in una pagina web, stampato o in SVG."
 order: 5
 group: Casi d’uso
 source: site

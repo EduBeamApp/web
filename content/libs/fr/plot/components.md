@@ -1,6 +1,6 @@
 ---
 title: API des composants
-description: "Toutes les props et tous les événements de StructurePlot et DiagramStack dans @edubeam/plot 0.2.0, avec types et défauts, le plugin EduBeamPlot et les types exportés."
+description: "Les props et les événements de StructurePlot et DiagramStack dans @edubeam/plot 0.2.0, avec types et défauts, le plugin EduBeamPlot et les types exportés."
 order: 8
 group: Référence
 source: site

@@ -1,6 +1,6 @@
 ---
 title: Nhúng vào trang web
-description: "Đưa hình của @edubeam/plot vào ứng dụng Vite, tài liệu VitePress hay trang Nuxt, render trên server, gửi mô hình đã giải dạng JSON, hoặc ghi SVG thuần không cần Vue."
+description: "Đưa hình @edubeam/plot vào ứng dụng Vite, tài liệu VitePress hay trang Nuxt, render trên server, gửi mô hình đã giải dạng JSON, hoặc ghi tệp SVG thuần."
 order: 7
 source: site
 ---

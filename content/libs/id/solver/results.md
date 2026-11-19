@@ -1,6 +1,6 @@
 ---
 title: Membaca hasil
-description: "Baca reaksi, perpindahan joint, gaya dalam di sepanjang batang, bentuk deformasi, dan gaya ujung dari model @edubeam/fem yang sudah dihitung, beserta bentuk nilainya."
+description: "Baca reaksi, perpindahan, gaya dalam sepanjang batang, bentuk deformasi, dan gaya ujung dari model @edubeam/fem yang sudah dihitung, beserta bentuk nilainya."
 order: 10
 source: site
 ---

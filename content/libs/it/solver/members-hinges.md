@@ -1,6 +1,6 @@
 ---
 title: Aste e cerniere
-description: "Collega i nodi con aste Beam2D, svincola il momento con cerniere di estremità, modella aste reticolari e ricava da @edubeam/fem le matrici di rigidezza e di trasformazione."
+description: "Aste Beam2D tra i nodi, cerniere di estremità che svincolano il momento, aste reticolari e matrici di rigidezza e di trasformazione in @edubeam/fem."
 order: 5
 source: site
 ---

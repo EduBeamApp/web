@@ -1,5 +1,5 @@
 ---
-description: "Por que o EduBeam não mostra resultados e como resolver: cada mensagem de erro e de aviso explicada, resultados que parecem errados e arquivos ou links que não abrem."
+description: "Por que o EduBeam não mostra resultados e como resolver: mensagens de erro e aviso explicadas, resultados que parecem errados, arquivos ou links que não abrem."
 source: site
 ---
 

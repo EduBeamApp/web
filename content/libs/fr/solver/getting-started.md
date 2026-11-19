@@ -1,6 +1,6 @@
 ---
 title: Premiers pas
-description: "Installez @edubeam/fem, le solveur aux éléments finis d’EduBeam, puis calculez, vérifiez et lisez une poutre sur deux appuis en une douzaine de lignes de TypeScript."
+description: "Installez @edubeam/fem, le solveur aux éléments finis d’EduBeam, puis calculez, vérifiez et lisez une poutre sur deux appuis en une douzaine de lignes."
 order: 1
 group: Introduction
 source: site

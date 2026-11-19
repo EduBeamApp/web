@@ -1,5 +1,5 @@
 ---
-description: "Síly, momenty, poklesy podpor, rovnoměrné, lineárně proměnné, osamělé i teplotní zatížení v EduBeamu a jejich znaménka: z míří dolů, moment je kladný proti směru hodinových ručiček."
+description: "Síly, momenty, poklesy podpor, spojité, osamělé i teplotní zatížení v EduBeamu a jejich znaménka: z míří dolů, moment je kladný proti směru hodinových ručiček."
 source: site
 ---
 

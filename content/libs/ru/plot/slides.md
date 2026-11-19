@@ -1,6 +1,6 @@
 ---
 title: Слайды и конспекты
-description: "Рисунки для лекций с @edubeam/plot: дополняются по щелчку в Slidev, Vue или Beamer, пересчитываются прямо на лекции и попадают в конспекты, PowerPoint и Word как SVG."
+description: "Рисунки для лекций с @edubeam/plot: дополняются по щелчку в Slidev, Vue или Beamer, считаются на лету и попадают в конспекты, PowerPoint и Word как SVG."
 order: 6
 source: site
 ---
