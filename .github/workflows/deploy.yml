@@ -32,6 +32,8 @@ jobs:
       - run: npm run generate
         env:
           NODE_OPTIONS: --max-old-space-size=6144
+          # Google Analytics and AdSense on the production site only (nuxt.config.ts), so previews stay out of the statistics
+          GOOGLE_TAGS: ${{ github.ref_name == 'main' }}
 
       - uses: cloudflare/wrangler-action@v3
         with:

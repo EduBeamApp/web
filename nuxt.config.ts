@@ -38,6 +38,16 @@ const FALLBACK_ROUTES = [...VUE_PAGES, ...LIBS_PAGES].flatMap((page) =>
 )
 const FALLBACK = new Set(FALLBACK_ROUTES)
 
+/**
+ * Google Analytics and AdSense, as the VitePress docs had them, but on the production site only:
+ * the deploy builds main with `GOOGLE_TAGS=true`, so previews and local builds load neither and
+ * their visits stay out of the statistics, as in the app. The tag is the website's own GA stream,
+ * the one the docs reported to (the app reports to another).
+ */
+const GOOGLE_TAGS = process.env.GOOGLE_TAGS === 'true'
+const GA_TAG_ID = 'G-FGX9PYDV0G'
+const ADSENSE_CLIENT = 'ca-pub-3761845630657739'
+
 export default defineNuxtConfig({
   modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxt/icon', '@nuxtjs/color-mode'],
 
@@ -47,6 +57,17 @@ export default defineNuxtConfig({
     head: {
       titleTemplate: '%s',
       link: [{ rel: 'icon', type: 'image/png', href: '/logo.png' }],
+      // In every page's prerendered head, so the first page view is sent before the app hydrates.
+      // Later pages are counted by GA's enhanced measurement, which sends a page_view on each
+      // history change, as it did for the VitePress router.
+      script: GOOGLE_TAGS
+        ? [
+            { src: `https://www.googletagmanager.com/gtag/js?id=${GA_TAG_ID}`, async: true },
+            {
+              innerHTML: `window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', '${GA_TAG_ID}');`,
+            },
+          ]
+        : [],
     },
   },
 
@@ -198,6 +219,8 @@ export default defineNuxtConfig({
     docsPages: DOCS_PAGES,
     libsPages: LIBS_PAGES,
     public: {
+      /** AdSense auto ads (`plugins/adsense.client.ts`), empty where they are off */
+      adsenseClient: GOOGLE_TAGS ? ADSENSE_CLIENT : '',
       /**
        * The pages not yet in every language (docs, library docs and Vue pages), with the languages
        * they are in: a page's head names a translation only where one exists, and links in another
@@ -227,6 +250,12 @@ export default defineNuxtConfig({
       // A URL in a language its page is not translated into is written as the redirect alone, not
       // as a whole page shell (a few hundred bytes rather than 60 kB, for some 500 URLs), and needs no payload
       'prerender:generate'(route) {
+        // 404.html is the SPA shell, whose title the error page sets only once it runs; Analytics
+        // reads the title when it loads, before that, so the shell names itself in English
+        if (route.route === '/404.html' && typeof route.contents === 'string' && !route.contents.includes('<title>')) {
+          route.contents = route.contents.replace('<head>', '<head><title>Page not found | EduBeam</title>')
+          return
+        }
         const page = route.route.replace(/\/_payload\.json$/, '')
         if (!FALLBACK.has(page)) return
         if (page !== route.route) route.skip = true
