@@ -1,150 +1,206 @@
 ---
-description: "Em cerca de dez minutos, modele uma viga biapoiada de aço com carga uniforme, leia as reações, o esforço cortante e o momento fletor e confira tudo à mão."
+description: "Modele uma viga biapoiada de aço no EduBeam em cerca de dez minutos: material, seção, nós, apoios e carga; depois leia as reações e os diagramas e confira-os à mão."
+source: site
 ---
 
 # Início rápido
 
-Em cerca de dez minutos você vai modelar uma viga biapoiada de aço com carga uniforme, ler as reações, o esforço cortante e o momento fletor, e conferi-los com as fórmulas dos livros.
+Em cerca de dez minutos você vai montar uma viga biapoiada de aço, ler as reações, o esforço cortante, o momento fletor e a flecha, e conferir cada número à mão. Abra o EduBeam em uma segunda aba, ou ao lado desta página, e acompanhe.
 
-::callout{type="tip" title="Acompanhe em paralelo"}
-Abra [run.edubeam.app](https://run.edubeam.app/?lang=pt){target="_blank"} em uma segunda aba. Se já houver um modelo carregado, use **Limpar estrutura** na barra superior para começar vazio, e marque *Excluir materiais* e *Excluir seções* para começar totalmente do zero. A limpeza pode ser desfeita com <kbd>Ctrl</kbd>+<kbd>Z</kbd>, e o modelo antigo fica em **☰ → Estruturas recentes**.
-
-Prefere aprender fazendo, com dicas na tela? **☰ → Desenhar sua primeira viga** guia você por uma viga parecida usando o mouse.
+::div{.actions}
+[Abrir o EduBeam ↗](https://run.edubeam.app/?lang=pt){target="_blank"} [Ir direto à conferência à mão](#_8-check-by-hand)
 ::
 
 ## O problema {#the-problem}
 
-::example-structure
+Uma viga de 6 m tem apoio fixo no nó 1 e apoio móvel no nó 2 e recebe uma carga uniforme de 12 kN/m em todo o comprimento. É um perfil de aço IPE 200: $E = 210$ GPa, $G = 81$ GPa, $A = 28{,}48\ \text{cm}^2$ e $I_y = 1943\ \text{cm}^4$. Os quatro valores vêm das bibliotecas do EduBeam, então não é preciso procurar nada.
+
+::model-figure{caption="A viga que você vai montar: um vão de 6 m do nó 1 ao nó 2, sob 12 kN/m"}
+---
+nodes: { 1: [0, 0], 2: [6, 0] }
+supports: { 1: pin, 2: roller }
+members: [[1, 2]]
+loads:
+  - { member: 1, qz: 12 }
+results: []
+show: [nodeLabels, dimensions]
+---
 ::
 
-Uma viga biapoiada de 6 m (apoio fixo à esquerda, apoio móvel à direita) suporta uma carga uniforme de 12 kN/m. Material: aço, $E = 210\ \text{GPa}$, $G = 81\ \text{GPa}$. Seção: IPE 200, $A = 28{,}5\ \text{cm}^2$, $I_y = 1943\ \text{cm}^4$, $h = 200\ \text{mm}$.
+## Monte o modelo {#build-the-model}
 
-## 1. Confira as unidades {#_1-check-the-units}
+::div{.steps}
 
-O indicador de unidades no canto inferior direito da visualização mostra as unidades usadas em todos os campos de entrada e resultados. Este tutorial assume os padrões SI: metros, kN, kNm e MPa.
+### Comece com um modelo vazio {#start-from-an-empty-model}
 
-![Os botões de grade (G), encaixe (S) e mira, e o indicador de unidades](/screenshots/pt/ui-grid-units.webp){.shot-sm}
+Na primeira visita, um diálogo de boas-vindas pergunta como você quer começar. Escolha **SI (métrico)** em **Sistema de unidades**, mantenha **x para a direita, z para baixo** em **Sistema de coordenadas** e clique em **Pular por enquanto**. O aplicativo mostra então um pequeno pórtico de exemplo.
 
-Se aparecer `ft · kip · kip·ft · ksi`, clique no indicador e escolha **Sistema de unidades → SI (métrico)**.
+1. Clique em **Limpar estrutura** na barra superior (no celular, o botão fica no menu **☰**).
+2. Marque **Excluir materiais** e **Excluir seções** e clique em **Confirmar**.
 
-## 2. Adicione o material e a seção {#_2-add-the-material-and-cross-section}
+A tela fica vazia, e duas mensagens em vermelho avisam que ainda não há material nem seção. Os próximos passos resolvem isso. Nada se perde: <kbd>Ctrl</kbd>+<kbd>Z</kbd> traz o pórtico de volta, e ele também fica guardado em **☰ → Estruturas recentes**.
 
-Os elementos precisam de um material e de uma seção, então crie-os primeiro.
+### Confira as unidades {#_1-check-the-units}
 
-1. Abra a aba **Materiais** na barra inferior e clique em **Adicionar material**.
-2. Informe `E = 210000` MPa e `G = 81000` MPa. Deixe a densidade e `α = 0,000012` 1/K. Clique em **Adicionar material**.
+O indicador de unidades, no canto inferior direito da visualização, mostra as unidades de todos os campos e resultados. Esta página usa o SI, que o indicador mostra como `m m² kN kNm MPa`, e o eixo z apontando para baixo. Se o indicador mostrar pés e kips, clique nele e escolha **SI (métrico)** em **Sistema de unidades**. No mesmo lugar, **Sistema de coordenadas** deve estar em **x para a direita, z para baixo**: com o y para cima, uma carga positiva aponta para cima, e os sinais desta página não corresponderiam.
 
-::div{.shots}
+![Os botões de grade (G) e de encaixe (S), a mira e o indicador de unidades](/screenshots/pt/ui-grid-units.webp){.shot-sm}
 
-![Adicionar material: digite E e G…](/screenshots/pt/qs-material.webp)
+### Adicione o material e a seção {#_2-add-the-material-and-cross-section}
 
-![…ou escolha Steel (S235) na Biblioteca de materiais](/screenshots/pt/qs-material-library.webp)
+Todo elemento precisa de um material e de uma seção, então adicione-os primeiro, a partir das bibliotecas.
 
-::
+1. Abra a aba **Materiais** na barra inferior e clique em **Biblioteca de materiais**.
+2. Clique em **+** na linha **Aço (S235)** ($E = 210\,000$ MPa, $G = 81\,000$ MPa). A biblioteca continua aberta para você adicionar outros; feche-a com **Cancelar**.
+3. Abra a aba **Seções** e clique em **Biblioteca de seções**.
+4. Role até a linha **IPE 200 (aprox.)**, clique em **+** e feche a biblioteca com **Cancelar**.
 
-3. Abra a aba **Seções** e clique em **Adicionar seção**.
-4. Informe `Área = 0,00285` m², `Iy = 1,943e-5` m⁴, `Altura = 0,2` m e `Coeficiente de cisalhamento = 1`. Clique em **Adicionar seção**.
+As duas mensagens em vermelho somem, e a aba **Seções** lista o IPE 200:
 
-![Adicionar seção. Ou escolha da biblioteca, ou desenhe uma forma poligonal.](/screenshots/pt/qs-cross-section.webp){.shot-md}
+![O IPE 200 na aba Seções: área, Iy, altura e coeficiente de cisalhamento](/screenshots/pt/a-qs-cross-sections.webp)
 
-::callout{type="details" title="Por que o coeficiente de cisalhamento importa?"}
-O EduBeam usa elementos de viga de Timoshenko, que incluem a deformação por cisalhamento. `k` é o fator de correção de cisalhamento: $k \approx 0{,}83$ para um retângulo e cerca de $0{,}4$–$0{,}5$ para um perfil I quando $A$ é a área total. Usar `k = 1` com a área total *subestima* levemente a flexibilidade ao cisalhamento. Em uma viga esbelta como esta, a diferença na flecha fica bem abaixo de 1 %. A fórmula está na [página de teoria da viga](/pt/elements/beam).
-::
+Para digitar valores próprios em vez dos da biblioteca, use **Adicionar material** e **Adicionar seção**. O coeficiente de cisalhamento, aqui 0,3933, volta a aparecer na [conferência à mão](#_8-check-by-hand).
 
-## 3. Adicione os nós {#_3-add-the-nodes}
+### Adicione os nós {#_3-add-the-nodes}
 
-1. Abra a aba **Nós**. Ela tem dois botões **Adicionar nó**: o primeiro abre um diálogo, o segundo (com ícone de cursor) posiciona nós com o mouse. Clique no primeiro.
-2. Informe `X = 0`, `Z = 0` e clique em **Adicionar nó**. O nó recebe o rótulo `1`.
-3. Adicione um segundo nó em `X = 6`, `Z = 0`. Este é o nó `2`.
+1. Abra a aba **Nós**. Ela tem dois botões **Adicionar nó**: o **+** abre um diálogo, e o do ícone de cursor posiciona nós com o mouse. Clique em **+ Adicionar nó**.
+2. Deixe **Coordenada X** e **Coordenada Z** em `0` e clique em **Adicionar nó**. O diálogo se fecha e o nó `1` aparece.
+3. Clique de novo em **+ Adicionar nó**, digite `6` em **Coordenada X** e clique em **Adicionar nó**. Este é o nó `2`.
 
-![O diálogo Adicionar nó também pode definir os apoios de imediato](/screenshots/pt/qs-node.webp){.shot-md}
+![O diálogo Adicionar novo nó. Ele também pode definir os apoios de imediato.](/screenshots/pt/qs-node.webp){.shot-md}
 
-Com o botão do mouse, cada clique na tela posiciona um nó. Com **Encaixar na grade** ativado (<kbd>S</kbd>), os cliques caem no passo da grade (0,1 m por padrão).
+### Conecte-os com um elemento {#_4-connect-them-with-an-element}
 
-## 4. Conecte-os com um elemento {#_4-connect-them-with-an-element}
+Abra a aba **Elementos** e clique em **+ Adicionar elemento**. O diálogo já sugere **Nó inicial** `1`, **Nó final** `2`, além do seu material e da sua seção. Clique em **Adicionar elemento**.
 
-1. Abra a aba **Elementos** e clique no primeiro botão **Adicionar elemento**.
-2. Escolha **Nó inicial** `1` e **Nó final** `2`. O material e a seção que você criou já vêm selecionados. Clique em **Adicionar elemento**.
+![Adicionar novo elemento: os dois nós de extremidade, uma rótula opcional em cada extremidade, o material e a seção](/screenshots/pt/a-qs-element.webp){.shot-md}
 
-![Adicionar elemento: os dois nós de extremidade, rótulas de extremidade opcionais, material e seção](/screenshots/pt/qs-element.webp){.shot-md}
+Uma viga aparece entre os nós. Pressione <kbd>F</kbd> para ajustá-la à tela. Uma etiqueta azul *Faltam apoios*, no canto superior esquerdo da visualização, explica por que ainda não há resultados.
 
-Uma linha aparece entre os nós. Pressione <kbd>F</kbd> para ajustá-la à tela.
+### Adicione os apoios {#_5-add-the-supports}
 
-## 5. Adicione os apoios {#_5-add-the-supports}
+De volta à aba **Nós**, cada linha tem um seletor de apoio no início da coluna **GLs restringidos**.
 
-Na aba **Nós**, a coluna **GLs restringidos** tem um seletor de símbolo de apoio e três caixas de seleção por nó: `Dx`, `Dz`, `Ry`.
+- Nó `1`: escolha **Apoio fixo** (de segundo gênero). Isso marca `Dx` e `Dz`.
+- Nó `2`: escolha **Apoio móvel** (de primeiro gênero). Isso marca apenas `Dz`.
 
-- Nó `1`: escolha o símbolo de **apoio fixo** ou marque **Dx** e **Dz**.
-- Nó `2`: escolha o **apoio móvel** ou marque apenas **Dz**.
+![O seletor de apoio na tabela da aba Nós](/screenshots/pt/a-qs-support-picker.webp){.shot-lg}
 
-![Apoios na tabela de nós: nó 1 com apoio fixo, nó 2 com apoio móvel](/screenshots/pt/qs-supports.webp)
+A etiqueta *Faltam apoios* desaparece. Você também pode clicar em um nó na visualização e escolher **Apoios do nó**. A página [Nós e apoios](/pt/essentials/nodes-supports#supports) lista todos os tipos de apoio.
 
-Você também pode clicar em um nó na visualização e escolher **Apoios do nó**. [Nós e apoios](/pt/essentials/nodes-supports#supports) lista todos os tipos de apoio.
-
-## 6. Adicione a carga {#_6-add-the-load}
+### Adicione a carga {#_6-add-the-load}
 
 1. Abra a aba **Cargas** e clique em **Adicionar carga de elemento**.
-2. **Tipo de carga**: *Carga distribuída uniforme*. **Elemento**: `1`.
-3. Informe `fz = 12` kN/m e deixe `fx = 0`. Clique em **Adicionar carga de elemento**.
+2. Mantenha **Tipo de carga** em *Carga distribuída uniforme* e **Elemento** em `1`.
+3. Digite `12` em **fz**, deixe **fx** em `0` e clique em **Adicionar carga de elemento**.
 
-![O diálogo mostra uma prévia da carga no elemento](/screenshots/pt/qs-load.webp){.shot-md}
+![O diálogo mostra uma prévia da carga no elemento](/screenshots/pt/a-qs-load.webp){.shot-md}
 
-Um `fz` positivo aponta no sentido +z, que na tela é **para baixo**, então um valor positivo é uma carga gravitacional. Veja as [convenções de sinais](/pt/elements/conventions).
+Um `fz` positivo aponta no sentido +z, que é **para baixo**; portanto um valor positivo é uma carga gravitacional. A caixa **LCS** marcada significa que a carga segue os eixos do próprio elemento, o seu sistema de coordenadas local (SCL); numa viga horizontal desenhada da esquerda para a direita, eles coincidem com os eixos globais. Veja as [convenções de sinais](/pt/elements/conventions#loads).
 
-## 7. Leia os resultados {#_7-read-the-results}
+::
 
-A solução aparece assim que a carga é adicionada. O painel de exibição no canto superior direito da visualização liga e desliga os diagramas. **Forma deformada**, **M<sub>y</sub>(x)** e **Reações** vêm ligados por padrão. Marque **V<sub>z</sub>(x)** para adicionar o esforço cortante.
+## Leia os resultados {#_7-read-the-results}
 
-![Esforço cortante (verde), momento fletor (vermelho), reações (roxo) e a deformada](/screenshots/pt/qs-results.webp)
+A viga é resolvida no instante em que a carga entra, e de novo a cada alteração que você fizer: não há botão *Calcular*. O painel no canto superior direito da visualização liga e desliga os desenhos. **Forma deformada**, **M<sub>y</sub>(x)** e **Reações** já vêm ligados. Marque **V<sub>z</sub>(x)** para acrescentar o esforço cortante.
 
-| Diagrama | O que você deve ver |
+![As opções de exibição, com o esforço cortante ligado](/screenshots/pt/a-qs-display.webp){.shot-md}
+
+Sua tela deve estar igual a esta figura. Alterne entre o momento fletor e o esforço cortante:
+
+::model-figure{caption="A viga pronta: reações de 36 kN e 54 kNm no meio do vão"}
+---
+nodes: { 1: [0, 0], 2: [6, 0] }
+supports: { 1: pin, 2: roller }
+members: [[1, 2]]
+loads:
+  - { member: 1, qz: 12 }
+results: [M, V]
+show: [nodeLabels]
+---
+::
+
+| Desenho | O que observar |
 | --- | --- |
-| **Reações** | Duas setas para cima de **36 kN** nos nós 1 e 2. |
-| **V<sub>z</sub>(x)** | Uma reta de **+36 kN** à esquerda até **−36 kN** à direita, cruzando o zero no meio do vão. |
-| **M<sub>y</sub>(x)** | Uma parábola com valor extremo de **54 kNm** no meio do vão. |
-| **Forma deformada** | Uma flecha simétrica. Aponte para o nó `1` para ler sua rotação: **2,6469 · 10⁻² rad**. |
+| **Reações** | Duas setas para cima de **36 kN**, uma em cada apoio. |
+| **V<sub>z</sub>(x)** | Uma reta de **+36 kN** no nó `1` até **−36 kN** no nó `2`, passando por zero no meio do vão. |
+| **M<sub>y</sub>(x)** | Uma parábola com o máximo de **54 kNm** no meio do vão, desenhada do lado tracionado, abaixo da viga. |
+| **Forma deformada** | Uma deformada simétrica, desenhada em escala ampliada. |
 
-A aba **Resultados** da barra inferior traz os números. **Resultados nodais** lista `Dx`, `Dz`, `Ry` de cada nó. **Resultados dos elementos** lista os esforços de extremidade de cada elemento em seu sistema de coordenadas local.
+Para ver os números, abra a aba **Resultados**. **Resultados nodais** lista os deslocamentos `Dx`, `Dz` e a rotação `Ry` de cada nó, e **Resultados dos elementos** lista os esforços de extremidade de cada elemento nos seus eixos locais. O nó `1` gira $R_y = -2{,}6469 \cdot 10^{-2}$ rad, e o nó `2` gira o mesmo valor no sentido contrário. A página [Resultados e diagramas](/pt/essentials/results) explica cada tabela e cada sinal.
 
-Se os diagramas parecerem grandes ou pequenos demais, altere **Escala de resultados** em **Configurações → Configurações de visualização → Tamanhos**.
+Se os diagramas parecerem grandes ou pequenos demais, altere **Escala de resultados** em **Configurações → Configurações de visualização**.
 
-## 8. Confira à mão {#_8-check-by-hand}
+## Confira à mão {#_8-check-by-hand}
+
+Com $q = 12$ kN/m e $L = 6$ m, as fórmulas dos livros dão:
 
 | Grandeza | Fórmula | À mão | EduBeam |
 | --- | --- | --- | --- |
-| Reação | $R = qL/2$ | 36 kN | 36 kN |
-| Cortante máximo | $V = qL/2$ | 36 kN | 36 kN |
-| Momento máximo | $M = qL^2/8$ | 54 kNm | 54 kNm |
-| Rotação no apoio | $\varphi = qL^3/(24EI)$ | 0,02647 rad | 0,02647 rad |
-| Flecha no meio do vão (flexão) | $w = 5qL^4/(384EI)$ | 49,63 mm | |
-| Flecha no meio do vão (cisalhamento) | $w_s = qL^2/(8kGA)$ | 0,23 mm | |
-| Flecha no meio do vão (total) | soma | 49,86 mm | 49,86 mm |
+| Reações | $qL/2$ | 36 kN | 36 kN |
+| Maior esforço cortante | $qL/2$ | 36 kN | 36 kN |
+| Maior momento | $qL^2/8$ | 54 kNm | 54 kNm |
+| Rotação no apoio | $qL^3/(24EI)$ | 0,02647 rad | 0,02647 rad |
+| Flecha no meio do vão | $w_b + w_s$ | 49,63 + 0,60 = 50,22 mm | 50,22 mm |
 
-Não há nó no meio do vão, então, para ler a flecha ali, adicione um: escolha o segundo botão **Adicionar nó**, clique sobre a viga em `X = 3` e escolha **Conectar à estrutura**. A viga é dividida em duas e o `Dz` do novo nó em **Resultados** mostra 49,86 mm. A divisão não altera nenhum resultado, porque o elemento é exato.
+A flecha tem duas parcelas, e a maioria dos livros dá só a primeira:
 
-Tudo confere. Mais roteiros de conferência (viga em balanço, viga biengastada, treliça, temperatura) estão em [Conferir resultados à mão](/pt/guide/verification).
+- **Flexão:** $w_b = 5qL^4/(384EI) = 49{,}63$ mm, com $EI = 4080$ kNm² a partir de $E = 210$ GPa e $I_y = 1943\ \text{cm}^4$.
+- **Cisalhamento:** $w_s = qL^2/(8kGA) = 0{,}60$ mm, com $kGA \approx 90\,700$ kN a partir de $k = 0{,}3933$, $G = 81$ GPa e $A = 28{,}48\ \text{cm}^2$.
 
-## 9. Experimente {#_9-experiment}
+Ainda não há nó no meio do vão; adicione um para ler a flecha ali:
 
-É aqui que o EduBeam mostra seu valor. Tente cada uma destas ações e observe os diagramas se atualizarem:
+1. Na aba **Nós**, clique no segundo botão **Adicionar nó**, o do ícone de cursor.
+2. Clique sobre a viga em `x = 3`; com o encaixe ligado, o nó cai na grade. O EduBeam pergunta o que fazer com o nó: clique em **Conectar à estrutura**. O elemento se divide em `1a` e `1b`, levando a carga junto, e o posicionamento de nós termina. Se o nó `3` não estiver em X = `3` na aba **Nós**, digite `3` ali.
+3. Em **Resultados → Resultados nodais**, o nó `3` mostra agora $D_z = 5{,}0224 \cdot 10^{-2}$ m, ou seja, 50,22 mm.
 
-- **Arraste o nó 2** para a direita: o momento cresce com $L^2$.
-- **Marque `Ry` no nó 1** para engastá-lo: o momento no meio do vão cai e surge um momento negativo no apoio.
-- **Marque `Dz` no nó do meio do vão** que você acabou de adicionar, para obter uma viga contínua de dois vãos.
-- **Marque uma rótula de extremidade** em um elemento na aba Elementos para liberar o momento naquela extremidade.
-- Pressione <kbd>Ctrl</kbd>+<kbd>Z</kbd> para desfazer qualquer passo.
+![Resultados nodais após a divisão: o nó 3 desce 50,22 mm](/screenshots/pt/a-qs-nodal-results.webp){.shot-lg}
 
-## 10. Salve ou compartilhe {#_10-save-or-share}
+Dividir a viga não altera nenhum resultado, porque o elemento é exato para essas cargas: não há malha para refinar.
 
-- **Compartilhar modelo** (na barra superior ou no menu ☰) gera um link que contém o modelo inteiro. Cole-o em um e-mail, em um chat ou nos seus slides.
-- **☰ → Salvar projeto** (<kbd>Ctrl</kbd>+<kbd>S</kbd>) baixa um `project.json` que você pode abrir depois com **Abrir projeto** ou arrastando-o para o aplicativo.
-- **☰ → Exportar imagem** (<kbd>Ctrl</kbd>+<kbd>P</kbd>) salva o desenho em PNG ou SVG para um relatório.
+::callout{type="details" title="Por que o coeficiente de cisalhamento importa"}
+O EduBeam usa elementos de viga de Timoshenko, que incluem a deformação por cisalhamento. O coeficiente de cisalhamento $k$ multiplica a área que resiste ao cisalhamento, de modo que $kGA$ é a rigidez ao cisalhamento. Para os perfis I da biblioteca, $k$ é a fração da área que cabe à alma, $h t_w / A$: no IPE 200, $0{,}2 \cdot 0{,}0056 / 0{,}002848 = 0{,}3933$. A parcela da flecha devida ao cisalhamento, $w_s = qL^2/(8kGA)$, é a integral de $V/(kGA)$ do apoio até o meio do vão.
 
-O modelo também fica guardado no navegador, então recarregar a página não o perde. Veja [Importar, exportar e compartilhar](/pt/essentials/import-export).
+Nesta viga esbelta, a parcela do cisalhamento é de 0,60 mm, cerca de 1 % do total. Numa viga curta e alta, ela é bem maior. Defina o coeficiente de cisalhamento como um número muito grande (por exemplo, `1e10`) na aba **Seções**, e o EduBeam devolve os 49,63 mm só da flexão. A teoria está na página [Elemento de viga](/pt/elements/beam).
+::
+
+Mais roteiros de conferência à mão (viga em balanço, viga biengastada, treliça, temperatura, recalque) estão em [Conferir resultados à mão](/pt/guide/verification).
+
+## Experimente {#_9-experiment}
+
+Altere o modelo e veja os diagramas acompanharem. Teste cada alteração separadamente e desfaça-a com <kbd>Ctrl</kbd>+<kbd>Z</kbd> antes da próxima. O nó `3` é o nó do meio do vão que você acabou de adicionar.
+
+- **Arraste o nó `2`** para a direita. O momento cresce com $L^2$ e a flecha com $L^4$.
+- **Marque `Ry` no nó `1`** para engastar essa extremidade. Surge um momento negativo no engaste: $qL^2/8 = 54$ kNm pela fórmula dos livros, 53,8 kNm no EduBeam. Numa viga hiperestática, a rigidez ao cisalhamento também altera os esforços.
+- **Marque `Dz` no nó `3`** para acrescentar um apoio intermediário e obter uma viga contínua de dois vãos. O momento sobre o apoio intermediário passa a ser negativo: $q(L/2)^2/8 = 13{,}5$ kNm à mão, 13,3 kNm no EduBeam, pelo mesmo motivo.
+- **Marque `Dz` no nó `3` e a segunda caixa da coluna *Rótulas de extremidade* do elemento `1a`** (a extremidade no nó `3`), na aba **Elementos**. A viga vira duas vigas biapoiadas de 3 m. Agora desmarque `Dz` no nó `3`: a viga se torna um mecanismo, e o EduBeam mostra como ela pode se mover.
+
+Para experimentar o vão e a carga sem montar nada, arraste os controles deslizantes abaixo e alterne entre os resultados para ver como cada um cresce com o vão.
+
+::example-structure
+::
+
+## Salve ou compartilhe {#_10-save-or-share}
+
+- **Envie para alguém.** Clique em **Compartilhar modelo** na barra superior e depois em **Copiar**. O link contém o modelo inteiro, e quem o abre recebe uma cópia própria para editar.
+- **Guarde como arquivo.** **☰ → Salvar projeto** (<kbd>Ctrl</kbd>+<kbd>S</kbd>) baixa um `project.json`. Abra-o de novo com **☰ → Abrir projeto** (<kbd>Ctrl</kbd>+<kbd>O</kbd>) ou arrastando-o para o aplicativo.
+- **Coloque o desenho em um relatório.** **☰ → Exportar imagem** (<kbd>Ctrl</kbd>+<kbd>P</kbd>) salva o desenho em PNG ou SVG.
+
+O modelo também fica guardado no navegador, então não se perde quando você recarrega a página. Os detalhes estão em [Arquivos, links e exportação](/pt/essentials/import-export).
 
 ## Próximos passos {#where-next}
 
-- [Tutorial do pórtico triarticulado](/pt/tutorials/three-hinged-frame): um pórtico com rótula interna, conferido à mão.
-- [Exemplos](/pt/examples/): abra pórticos e treliças prontos com um clique.
-- [Cargas](/pt/essentials/loads): cargas trapezoidais, concentradas e térmicas, deslocamentos prescritos.
-- [Teclado, mouse e toque](/pt/reference/shortcuts): trabalhe mais rápido na tela.
+::card-grid{cols="2"}
+:::card{title="Tutoriais" icon="lucide:graduation-cap" to="/pt/tutorials/inclined-beam"}
+Quatro modelos montados passo a passo e conferidos à mão, de uma viga inclinada a uma viga contínua com recalque de apoio.
+:::
+:::card{title="Exemplos" icon="lucide:library" to="/pt/examples/"}
+Vigas, pórticos e treliças prontos que abrem com um clique, com exercícios e respostas.
+:::
+:::card{title="Cargas" icon="lucide:arrow-down-to-line" to="/pt/essentials/loads"}
+Cargas trapezoidais, concentradas e térmicas, forças nodais e recalques de apoio.
+:::
+:::card{title="Teclado, mouse e toque" icon="lucide:keyboard" to="/pt/reference/shortcuts"}
+Desenhe nós e elementos direto na tela e edite mais rápido.
+:::
+::

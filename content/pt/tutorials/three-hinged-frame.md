@@ -1,118 +1,204 @@
 ---
-description: "Tutorial passo a passo: modele no EduBeam um pórtico triarticulado com carga uniforme e confira à mão as reações e os momentos fletores. Cerca de 15 minutos."
+description: "Tutorial: modele no EduBeam um pórtico triarticulado com carga uniforme, leia reações, empuxo e esforços e confira tudo à mão, até a flecha da rótula. Cerca de 15 minutos."
+source: site
 ---
 
 # Tutorial: pórtico triarticulado
 
-Um pórtico triarticulado é isostático: as três equações de equilíbrio mais a condição $M = 0$ na rótula fornecem as quatro reações de apoio. Isso o torna um modelo perfeito para conferir cada número que o EduBeam desenha. Reserve cerca de 15 minutos.
+Modele um pórtico com uma rótula no meio do vão, leia as reações e os diagramas e confira cada número à mão, até a flecha da rótula.
 
-![O pórtico pronto: momento fletor e reações](/screenshots/pt/tut-frame-moment.webp)
+- **Tempo:** cerca de 15 minutos.
+- **Você precisa de:** o EduBeam aberto em uma segunda aba, em um computador com mouse e teclado. Se ainda não usou o EduBeam, faça antes o [Início rápido](/pt/guide/quick-start) ou o tutorial da [viga inclinada](/pt/tutorials/inclined-beam).
+- **Pré-requisitos:** o equilíbrio de um pórtico e os diagramas de corpo livre. A verificação opcional da flecha usa o método da carga unitária (trabalhos virtuais).
+- **Unidades:** SI. O indicador de unidades, no canto inferior direito da visualização, deve mostrar `m m² kN kNm MPa`. Se aparecerem pés e kips, clique nele e escolha **SI (métrico)** em **Sistema de unidades**.
 
-[Abra o modelo pronto](https://run.edubeam.app/?model=eyJuIjpbWyJBIixbMCwwLDBdLFswLDJdLG51bGxdLFsiQiIsWzAsMCwtNF0sW10sbnVsbF0sWyJDIixbNCwwLC00XSxbXSxudWxsXSxbIkQiLFs4LDAsLTRdLFtdLG51bGxdLFsiRSIsWzgsMCwwXSxbMCwyXSxudWxsXV0sImUiOltbIjEiLFsiQSIsIkIiXSwiMSIsIjEiLFtmYWxzZSxmYWxzZV1dLFsiMiIsWyJCIiwiQyJdLCIxIiwiMSIsW2ZhbHNlLHRydWVdXSxbIjMiLFsiQyIsIkQiXSwiMSIsIjEiLFtmYWxzZSxmYWxzZV1dLFsiNCIsWyJEIiwiRSJdLCIxIiwiMSIsW2ZhbHNlLGZhbHNlXV1dLCJtIjpbWyIxIiw3ODUwLDIxMDAwMDAwMDAwMCw4MTAwMDAwMDAwMCwwLjAwMDAxMl1dLCJjcyI6W1siMSIsMC4wMDUzOCwwLjAwMDA4MzU2LDAuMywxXV0sImVsIjpbWyIyIixbMCwxMDAwMF0sZmFsc2VdLFsiMyIsWzAsMTAwMDBdLGZhbHNlXV0sImQiOltdfQ%3D%3D&lang=pt){target="_blank"} se quiser apenas explorá-lo.
+**Você vai aprender a**
+
+- desenhar um pórtico como uma única poligonal com o mouse,
+- colocar uma rótula dentro de uma barra com as caixas de **Rótulas de extremidade**,
+- obter o empuxo horizontal da condição $M = 0$ na rótula e interpretar o sinal de $V$ em barras desenhadas em sentidos diferentes.
+
+::div{.actions}
+[Abrir o EduBeam ↗](https://run.edubeam.app/?lang=pt){target="_blank"} [Ir para a verificação à mão](#_6-check-by-hand)
+::
+
+::model-figure{caption="O pórtico pronto: 10 kN/m na viga, apoios fixos nos nós 1 e 5 e uma rótula no nó 3"}
+---
+nodes: { 1: [0, 0], 2: [0, -4], 3: [4, -4], 4: [8, -4], 5: [8, 0] }
+supports: { 1: pin, 5: pin }
+members: [[1, 2], { nodes: [2, 3], hinges: [false, true] }, [3, 4], [4, 5]]
+loads:
+  - { member: 2, qz: 10 }
+  - { member: 3, qz: 10 }
+results: [M, N, V, w]
+show: [nodeLabels, dimensions]
+---
+::
 
 ## O problema {#the-problem}
 
-- Dois pilares de 4 m, com apoios fixos nas bases A e E, a 8 m um do outro.
-- Uma viga horizontal B–D no topo, com uma rótula no meio do vão, em C.
-- Uma carga uniforme $q = 10$ kN/m em toda a viga.
-- Aço ($E = 210$ GPa, $G = 81$ GPa), IPE 300 ($A = 53{,}8$ cm², $I_y = 8356$ cm⁴, $h = 300$ mm).
+- Dois pilares de 4 m, com apoios fixos (de segundo gênero) nas bases, nós 1 e 5, a 8 m um do outro.
+- Uma viga horizontal do nó 2 ao nó 4 no topo, com uma rótula no meio do vão, no nó 3.
+- Uma carga uniforme $q = 10$ kN/m em toda a viga.
+- Aço, $E = 210$ GPa, e $I_y = 8{,}356 \times 10^{-5}$ m⁴ (um IPE 300) em todas as barras.
 
-| Nó | X [m] | Z [m] | Apoio |
+| Nó | x (m) | z (m) | |
 | --- | --- | --- | --- |
-| A | 0 | 0 | apoio fixo |
-| B | 0 | −4 | |
-| C | 4 | −4 | (rótula na viga) |
-| D | 8 | −4 | |
-| E | 8 | 0 | apoio fixo |
+| 1 | 0 | 0 | apoio fixo |
+| 2 | 0 | −4 | canto |
+| 3 | 4 | −4 | rótula na viga |
+| 4 | 8 | −4 | canto |
+| 5 | 8 | 0 | apoio fixo |
 
-Lembre-se de que **z aponta para baixo**, então o topo dos pilares está em `Z = −4`.
+O eixo z aponta **para baixo**, então o topo dos pilares está em $z = -4$.
 
-## 1. Material e seção {#_1-material-and-section}
+**É isostático?** Dois apoios fixos dão quatro reações. As três equações de equilíbrio e $M_3 = 0$ na rótula somam quatro equações: sim.
 
-1. **Limpar estrutura** (marque *Excluir materiais* e *Excluir seções*).
-2. *Materiais* → **Biblioteca de materiais** → **Steel (S235)**.
-3. *Seções* → **Adicionar seção**: `Área = 0,00538`, `Iy = 8,356e-5`, `Altura = 0,3`, `Coeficiente de cisalhamento = 1`.
+## Monte o modelo {#model-it}
 
-A seção afeta apenas os deslocamentos. Este pórtico é isostático, então seus esforços internos não dependem de $E$, $A$ ou $I$.
+::div{.steps}
 
-## 2. Desenhe o pórtico {#_2-draw-the-frame}
+### Material e seção {#_1-material-and-section}
 
-O jeito mais rápido é uma única poligonal com o mouse:
+1. Clique em **Limpar estrutura** na barra superior, marque **Excluir materiais** e **Excluir seções** e clique em **Confirmar**. A numeração dos nós e dos elementos recomeça do 1.
+2. Aba **Materiais** → **Biblioteca de materiais** → **+** na linha **Aço (S235)**; depois feche a biblioteca com **Cancelar**.
+3. Aba **Seções** → **Adicionar seção**. Digite `8,356e-5` em **Iy**, mantenha **Área**, **Altura** e **Coeficiente de cisalhamento** em `1` e clique em **Adicionar seção**.
 
-1. Verifique se **Encaixar na grade** está ativado (o botão **S**).
-2. Aba *Elementos* → o segundo botão **Adicionar elemento** (ícone de cursor).
-3. Clique em (0, 0), depois em (0, −4), (4, −4), (8, −4) e (8, 0). Use as réguas e a mira para encontrar os pontos. Cada clique adiciona um nó e o liga ao anterior.
-4. Pressione <kbd>Esc</kbd> para terminar e depois <kbd>F</kbd> para ajustar o pórtico à tela.
+Uma área de 1 m² impede que as barras encurtem ou se deformem por cisalhamento de forma perceptível, como supõe o cálculo à mão da flecha. Os esforços internos de um pórtico isostático não dependem de $E$, $A$ nem $I_y$.
 
-Agora você tem cinco nós e quatro elementos. As imagens aqui rotulam os nós de A a E; renomeie os seus na tabela *Nós*, se quiser, ou mantenha 1–5. Confira as coordenadas na tabela e corrija as que não caíram na grade.
+### Desenhe o pórtico {#_2-draw-the-frame}
 
-## 3. Apoios e a rótula {#_3-supports-and-the-hinge}
+1. Aba **Elementos** → o segundo botão **Adicionar elemento**, o do ícone de cursor.
+2. Clique em (0, 0), (0, −4), (4, −4), (8, −4) e (8, 0). Cada clique adiciona o nó seguinte e o liga ao anterior; os cliques se encaixam na grade.
+3. Pressione <kbd>Esc</kbd> para parar de desenhar e depois <kbd>F</kbd> para ajustar a vista.
 
-1. Clique no nó A, abra **Apoios do nó** e escolha o **apoio fixo**. Faça o mesmo no nó E.
-2. Na tabela *Elementos*, encontre o elemento de B a C e marque a rótula do **fim** (a segunda caixa em *Rótulas de extremidade*).
+Agora você tem os nós 1 a 5 e os elementos 1 a 4, numerados na ordem em que os desenhou, como nas figuras desta página. Compare a tabela **Nós** com a tabela acima e corrija qualquer coordenada que tenha saído errada.
 
-![A tabela de elementos: a rótula está no fim do elemento 2, no nó C](/screenshots/pt/elements-table.webp)
+### Apoios e a rótula {#_3-supports-and-the-hinge}
 
-::callout{type="tip" title="Uma rótula, não duas"}
-Rotular o fim do elemento B–C basta: o momento em C passa a ser zero, porque C–D não consegue transmitir momento a um nó que só ele segura rigidamente. Marque também o início de C–D e nada muda. Mas marque também uma rótula em B, e o pórtico vira um mecanismo. Experimente: o EduBeam mostra como ele se move.
-::
+1. Clique no nó 1 → **Apoios do nó** → o símbolo **Apoio fixo**. Faça o mesmo no nó 5.
+2. Na tabela **Elementos**, encontre o elemento 2, do nó 2 ao nó 3, e marque a segunda das suas caixas de **Rótulas de extremidade**: a rótula no fim dele, no nó 3.
 
-## 4. Carga {#_4-load}
+![A tabela Elementos: o elemento 2 tem a rótula do fim marcada, no nó 3](/screenshots/pt/p2t-frame-elements-table.webp)
 
-*Cargas* → **Adicionar carga de elemento** → *Carga distribuída uniforme*, elemento B–C, `fz = 10` kN/m. Repita para o elemento C–D. A viga é horizontal, então a caixa LCS não faz diferença aqui.
+Uma rótula basta. O elemento 3 passa a ser a única barra ligada rigidamente ao nó 3, então nenhum momento pode passar para ele ali. Marcar também o início do elemento 3 não muda nada.
 
-## 5. Resultados {#_5-results}
+### Carga {#_4-load}
 
-As opções de exibição começam com a forma deformada, o momento fletor e as reações ligados. Marque **N (x)** e **V<sub>z</sub> (x)** para ver o resto.
+1. Aba **Cargas** → **Adicionar carga de elemento**.
+2. **Tipo de carga** *Carga distribuída uniforme*, **Elemento** `2`, `fz = 10`. Clique em **Adicionar carga de elemento**.
+3. Repita para o elemento 3.
 
-::div{.shots}
-
-![Momento fletor e reações](/screenshots/pt/tut-frame-moment.webp)
-
-![Esforço normal](/screenshots/pt/tut-frame-normal.webp)
-
-![Esforço cortante](/screenshots/pt/results-shear.webp)
-
-![Forma deformada](/screenshots/pt/results-deformed.webp)
+Um `fz` positivo aponta para baixo. A viga é horizontal, então a caixa **LCS** (sistema de coordenadas local) não faz diferença aqui.
 
 ::
 
-## 6. Confira à mão {#_6-check-by-hand}
+## Resultados {#_5-results}
 
-**Reações verticais.** Por simetria, cada base recebe metade da carga:
+Nas opções de exibição, no canto superior direito da visualização (a engrenagem as mostra e oculta), **Forma deformada**, **M<sub>y</sub> (x)** e **Reações** já vêm ligados. Marque **N (x)** e **V<sub>z</sub> (x)** para ver o resto, ou desmarque alguns para ver um diagrama de cada vez. O EduBeam indica os valores em kN e kNm com duas casas decimais.
 
-$$V_A = V_E = \frac{q \cdot 8}{2} = 40\ \text{kN}$$
+- Cada base mostra `40,00` para cima e `20,00` para dentro.
+- O momento fletor mostra `-80,00` nos dois cantos e não tem valor na rótula, onde é nulo. O EduBeam o desenha do lado tracionado, aqui por fora do pórtico.
+- O esforço normal é negativo em todo o pórtico: `-40,00` nos pilares, `-20,00` na viga. As quatro barras estão comprimidas.
+- Aba **Resultados** → **Resultados nodais**: a rótula, nó 3, desce $D_z$ = `4,2554 · 10⁻² m`, ou seja, 42,55 mm, o valor na rótula na vista $w(x)$ da figura acima.
 
-**Reações horizontais.** Tome os momentos em relação à rótula C para a metade esquerda do pórtico. O momento ali deve ser nulo:
+## Confira à mão {#_6-check-by-hand}
 
-$$V_A \cdot 4 - H_A \cdot 4 - q \cdot 4 \cdot 2 = 0 \quad\Rightarrow\quad H_A = \frac{160 - 80}{4} = 20\ \text{kN}$$
+**Reações verticais.** Por simetria, cada base recebe metade dos 80 kN:
 
-As duas bases empurram para dentro com 20 kN; esse empuxo horizontal é o que torna eficiente um pórtico triarticulado.
+$$
+V_1 = V_5 = \frac{q \cdot 8}{2} = 40\ \text{kN}
+$$
 
-**Esforços internos.**
+**Reações horizontais.** Corte o pórtico na rótula e tome os momentos em relação ao nó 3 para a metade esquerda, onde o momento é nulo:
+
+$$
+V_1 \cdot 4 - H_1 \cdot 4 - q \cdot 4 \cdot 2 = 0 \quad\Rightarrow\quad H_1 = \frac{160 - 80}{4} = 20\ \text{kN}
+$$
+
+As duas bases empurram para dentro com 20 kN. Sem esse empuxo, que vem de apoios fixos que não podem se afastar, o pórtico não ficaria em pé: os pilares se abririam e a rótula cairia.
 
 | Grandeza | Fórmula | À mão | EduBeam |
 | --- | --- | --- | --- |
-| Reações verticais | $qL/2$ | 40 kN | 40 kN |
-| Reações horizontais | de $M_C = 0$ | 20 kN | 20 kN |
-| Momento nos cantos B e D | $H \cdot h$ | 80 kNm, tração por fora | −80 kNm |
-| Momento na rótula C | | 0 | 0 |
-| Esforço normal nos pilares | $-V_A$ | −40 kN | −40 kN |
-| Esforço normal na viga | $-H_A$ | −20 kN | −20 kN |
-| Cortante nos pilares | $H_A$ | 20 kN | −20 kN (A–B), +20 kN (D–E) |
-| Cortante na viga em B | $V_A$ | 40 kN | 40 kN |
-| Cortante na viga em C | $V_A - 4q$ | 0 | 0 |
-| Cortante na viga em D | $V_A - 8q$ | −40 kN | −40 kN |
+| Reações verticais | $q \cdot 8/2$ | 40 kN | 40,00 |
+| Reações horizontais | de $M_3 = 0$ | 20 kN | 20,00 |
+| Momentos nos cantos, nós 2 e 4 | $H_1 \cdot 4$ | 80 kNm, tração por fora | −80,00 |
+| Momento na rótula, nó 3 | | 0 | sem valor |
+| $N$ nos pilares | $-V_1$ | −40 kN | −40,00 |
+| $N$ na viga | $-H_1$ | −20 kN | −20,00 |
+| $V$ nos pilares | $\pm H_1$ | ±20 kN | −20,00; 20,00 |
+| $V$ na viga nos nós 2, 3, 4 | $V_1 - q\,x$ | 40; 0; −40 kN | 40,00; sem valor; −40,00 |
 
-Os dois pilares têm sinais opostos de cortante embora suportem a mesma força, porque os eixos locais de cada elemento seguem a sua orientação: A–B é desenhado para cima e D–E para baixo. Inverta os nós de um pilar e o sinal dele se inverte.
+Os dois pilares têm o mesmo cortante com sinais opostos, −20 kN no elemento 1 e +20 kN no elemento 4, porque os eixos locais de cada elemento seguem o sentido em que ele foi desenhado: o elemento 1 para cima, o elemento 4 para baixo. Inverta os nós de um pilar e o sinal dele se inverte. A página [Sistema de coordenadas e convenções de sinais](/pt/elements/conventions#internal-forces) explica por quê.
 
-Na viga, $M(x) = -80 + 40x - 5x^2$ kNm (x a partir de B), que é nulo na rótula e nunca positivo: a viga inteira tem momento negativo. O cortante $V(x) = 40 - 10x$ cai a zero exatamente em C, então o extremo do momento também está na rótula.
+Na viga, $M(x) = -80 + 40x - 5x^2$ kNm, com $x$ medido a partir do nó 2. O momento é nulo na rótula e nunca positivo: a viga inteira tem momento negativo. O cortante $V(x) = 40 - 10x$ se anula exatamente na rótula, e é ali, portanto, que o momento tem o seu extremo.
 
-**Deslocamento.** A rótula C desce 43,1 mm (*Resultados → Resultados nodais*, `Dz` de C). Isso vem da flexão das quatro barras e é um bom exercício para o princípio dos trabalhos virtuais.
+::callout{type="details" title="A flecha da rótula pelo princípio dos trabalhos virtuais"}
+Aplique uma carga unitária para baixo no nó 3. Ela dá as reações $\bar V = \bar H = 1/2$ e um momento $\bar m$ que cresce de 0 na base até 2 no canto e volta a 0 na rótula, com tração por fora, como o momento real $M$. Integre $M \bar m$ nas quatro barras:
 
-## 7. Experimente {#_7-experiment}
+$$
+\text{pilares: } 2\int_0^4 (20\,y)(0{,}5\,y)\,dy = 426{,}7
+$$
 
-- **Desmarque a rótula** em C. O pórtico passa a ser uma vez hiperestático; os momentos nos cantos diminuem e surge um momento positivo no meio do vão. Agora a seção importa: experimente uma viga mais rígida.
-- **Engaste as bases** (escolha o apoio **engaste**). Surgem momentos em A e E.
-- **Adicione uma carga horizontal**: uma carga nodal `Fx = 10` kN em B. O pórtico se desloca lateralmente e as reações deixam de ser simétricas. Confira-as com as mesmas três equações e $M_C = 0$.
-- **Marque também uma rótula em B**. O pórtico agora é um mecanismo, e o EduBeam anima como ele pode se mover.
+$$
+\text{viga: } 2\int_0^4 (80 - 40x + 5x^2)(2 - 0{,}5x)\,dx = 320
+$$
+
+Com $EI = 210 \times 10^6 \cdot 8{,}356 \times 10^{-5} = 17\,548$ kNm²:
+
+$$
+\delta_3 = \frac{1}{EI}\int M \bar m\,dx = \frac{746{,}7}{17\,548} = 0{,}04255\ \text{m}
+$$
+
+São os 42,55 mm que o EduBeam mostra como `4,2554 · 10⁻²` m. O 4 do último algarismo vem do pequeníssimo encurtamento e da deformação por cisalhamento que uma área de 1 m² ainda permite e que o cálculo à mão despreza. Com a área real de um IPE 300, $A = 53{,}8$ cm², e a alma como área de cisalhamento (um coeficiente de cisalhamento de 0,40), as barras encurtam e se deformam mais por cisalhamento, e a rótula desce 43,7 mm, cerca de 3 % a mais.
+::
+
+## Experimente {#_7-experiment}
+
+Mude uma coisa de cada vez, preveja o resultado e só então confira. <kbd>Ctrl</kbd>+<kbd>Z</kbd> desfaz cada alteração.
+
+**Desmarque a rótula.** O pórtico passa a ser uma vez hiperestático. O empuxo cai à metade, 10 kN, os momentos nos cantos caem para −40 kNm, e surge na viga um momento positivo de 40 kNm no meio do vão. O nó 3 agora desce apenas 12,16 mm, em vez de 42,55 mm. As seções também passam a importar: dê à viga uma seção mais rígida que a dos pilares, e os momentos nos cantos aumentam.
+
+::model-figure{caption="Sem a rótula: menos empuxo, metade do momento nos cantos e um momento positivo no meio do vão"}
+---
+nodes: { 1: [0, 0], 2: [0, -4], 3: [4, -4], 4: [8, -4], 5: [8, 0] }
+supports: { 1: pin, 5: pin }
+members: [[1, 2], [2, 3], [3, 4], [4, 5]]
+loads:
+  - { member: 2, qz: 10 }
+  - { member: 3, qz: 10 }
+results: [M, w]
+show: [nodeLabels]
+---
+::
+
+**Engaste as bases.** Dê aos nós 1 e 5 o símbolo **Engaste**. O empuxo sobe para 30 kN e surgem momentos de 40 kNm nas bases (o EduBeam mostra `39,99`, porque os pilares encurtam ligeiramente), mas os momentos nos cantos continuam em 80 kNm. Por simetria, o cortante na rótula é nulo, então cada metade da viga continua trabalhando como um balanço de 4 m a partir do seu canto: $q \cdot 4^2/2 = 80$ kNm.
+
+**Empurre lateralmente.** De volta aos apoios fixos, adicione uma carga nodal `Fx = 10` kN no nó 2. As reações perdem a simetria: 35 kN e 45 kN para cima, 15 kN e 25 kN na horizontal. Confira-as com as mesmas três equações e $M_3 = 0$; a carga no nó 2 não tem braço de alavanca em relação ao nó 3. O canto esquerdo cai para −60 kNm, e a metade esquerda da viga passa a ter um pequeno momento positivo, de 1,25 kNm a 0,5 m da rótula.
+
+::model-figure{caption="Uma carga horizontal de 10 kN no nó 2: o canto direito agora recebe 100 kNm"}
+---
+nodes: { 1: [0, 0], 2: [0, -4], 3: [4, -4], 4: [8, -4], 5: [8, 0] }
+supports: { 1: pin, 5: pin }
+members: [[1, 2], { nodes: [2, 3], hinges: [false, true] }, [3, 4], [4, 5]]
+loads:
+  - { member: 2, qz: 10 }
+  - { member: 3, qz: 10 }
+  - { node: 2, fx: 10 }
+results: [M, N]
+show: [nodeLabels]
+---
+::
+
+**Adicione uma segunda rótula.** Marque também a rótula do início do elemento 2, no nó 2. Duas rótulas na viga sobre dois pilares com apoios fixos formam um mecanismo. O EduBeam não mostra resultados, informa *As articulações dos nós 2, 3 deixam a estrutura se mover.* e anima o movimento.
+
+## Próximos passos {#next-steps}
+
+::card-grid{cols="2"}
+:::card{title="Praticar: pórticos triarticulados" icon="lucide:dices" to="/pt/practice?p=H2048"}
+O mesmo pórtico sob novas cargas, entre elas um empurrão horizontal, com as suas respostas conferidas na hora. Comece pelo exercício H2048; para mais, deixe selecionado apenas **Pórtico triarticulado** e clique em **Novo exercício**.
+:::
+:::card{title="Próximo: treliça plana" icon="lucide:git-fork" to="/pt/tutorials/truss"}
+Nove barras rotuladas: o método dos nós, o método das seções, uma barra de esforço nulo e uma flecha pelo princípio dos trabalhos virtuais.
+:::
+::

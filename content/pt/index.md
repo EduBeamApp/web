@@ -1,5 +1,5 @@
 ---
-description: "Análise estrutural 2D gratuita no navegador. Desenhe vigas, pórticos e treliças, aplique cargas e veja na hora os diagramas N, V e M, as reações e os deslocamentos."
+description: "Análise estrutural 2D gratuita no navegador. Desenhe vigas, pórticos e treliças, aplique cargas e veja na hora os diagramas N, V e M, as reações e as flechas."
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
@@ -26,7 +26,7 @@ features:
     title: Resultados enquanto você desenha
     details: Não existe botão Calcular. Arraste um nó, marque uma rótula ou altere uma carga, e N, V, M, as reações e a deformada acompanham na hora.
     link: /pt/essentials/results
-    linkText: Leitura dos resultados
+    linkText: Resultados e diagramas
   - icon: 🧑‍🏫
     title: Feito para o ensino
     details: Primeiros passos guiados, valores ao passar o mouse, um solver que explica por que uma estrutura é um mecanismo e links de compartilhamento que você pode colocar nas notas de aula.
@@ -41,18 +41,18 @@ features:
     title: Compartilhe, exporte, incorpore
     details: Envie um modelo inteiro como link, salve-o como arquivo, exporte o desenho em PNG ou SVG e as tabelas de resultados em CSV.
     link: /pt/essentials/import-export
-    linkText: Arquivos e compartilhamento
+    linkText: Arquivos, links e exportação
 ---
 
 ## Comece aqui {#start-here}
 
 ::div{.start-grid}
 
-**Primeira vez no EduBeam?** Siga o [Início rápido de 10 minutos](/pt/guide/quick-start). Você modela uma viga biapoiada passo a passo e confere cada resultado à mão.
+**Primeira vez no EduBeam?** Siga o [Início rápido de 10 minutos](/pt/guide/quick-start). Você modela uma viga biapoiada passo a passo e confere cada resultado à mão.
 
-**Já sabe o que quer construir?** Vá direto a um [tutorial](/pt/tutorials/three-hinged-frame) ou abra um [exemplo](/pt/examples/) pronto e modifique-o.
+**Já sabe o que quer modelar?** Vá direto a um [tutorial](/pt/tutorials/three-hinged-frame) ou abra um [exemplo](/pt/examples/) pronto e modifique-o.
 
-**Dá aula?** Veja [Ensinar com o EduBeam](/pt/guide/teaching): links de compartilhamento para exercícios, um visualizador incorporável para slides e exercícios prontos.
+**Dá aulas?** Veja [Ensinar com o EduBeam](/pt/guide/teaching): links de compartilhamento para trabalhos e listas, um visualizador incorporável para slides e exercícios prontos.
 
 ::
 
@@ -67,8 +67,8 @@ features:
 ## O que você pode modelar {#what-you-can-model}
 
 - **Vigas, pórticos e treliças** no plano: vigas contínuas, pórticos simples, arcos triarticulados, treliças com nós articulados.
-- **Qualquer apoio**: apoio fixo, apoio móvel, engaste, engaste deslizante, apoios rotacionados e recalques de apoio.
-- **Cargas**: forças e momentos concentrados, cargas distribuídas uniformes e trapezoidais, cargas concentradas em qualquer ponto de uma barra e temperatura.
+- **Qualquer apoio**: apoio fixo, apoio móvel, engaste, engaste deslizante, apoios inclinados e recalques de apoio.
+- **Cargas**: forças e momentos concentrados, cargas distribuídas uniformes e trapezoidais, cargas concentradas em qualquer ponto de uma barra e cargas térmicas.
 - **Qualquer seção**: da biblioteca (IPE, HEA, AISC W, HSS, retângulos, tubos) ou desenhada como polígono, com as propriedades calculadas para você.
 
 Saiba mais na [Introdução](/pt/guide/introduction).

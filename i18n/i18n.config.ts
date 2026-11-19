@@ -12,6 +12,7 @@ const czechPlural = (choice: number, choicesLength: number): number => {
 /**
  * French counts zero with the singular, written `un | plusieurs` in a message: 0 exercice,
  * 1 exercice, 2 exercices. Below 2 is the first form, as CLDR's French rule (integer part 0 or 1).
+ * Brazilian Portuguese counts the same way (CLDR `pt`: 0 exercício, 1 exercício, 2 exercícios).
  */
 const frenchPlural = (choice: number, choicesLength: number): number => {
   if (choicesLength < 2) return 0
@@ -26,5 +27,5 @@ export default defineI18nConfig(() => ({
   fallbackLocale: 'en',
   missingWarn: false,
   fallbackWarn: false,
-  pluralRules: { cs: czechPlural, fr: frenchPlural },
+  pluralRules: { cs: czechPlural, fr: frenchPlural, pt: frenchPlural },
 }))

@@ -1,13 +1,16 @@
 {
   "meta": {
-    "description": "Análise estrutural online: vigas, pórticos e treliças planos no navegador."
+    "description": "Análise estrutural 2D gratuita e online: vigas, pórticos e treliças resolvidos na hora, no seu navegador."
   },
   "nav": {
     "guide": "Guia",
     "tutorials": "Tutoriais",
     "examples": "Exemplos",
     "faq": "FAQ",
-    "openApp": "Abrir o aplicativo"
+    "theory": "Teoria",
+    "openApp": "Abrir o aplicativo",
+    "libraries": "Bibliotecas",
+    "practice": "Praticar"
   },
   "docs": {
     "onThisPage": "Nesta página",
@@ -23,11 +26,11 @@
     "loadsLede": "É assim que os tipos de carga mais comuns aparecem no EduBeam. Cada cartão é um modelo resolvido ao vivo e abre no aplicativo exatamente como foi montado.",
     "openInApp": "Abrir no EduBeam",
     "simplySupportedBeam": "Viga biapoiada",
-    "udlBlurb": "Vão com apoio fixo e apoio móvel sob 12 kN/m: os diagramas clássicos de cortante e momento.",
-    "trapezoidalBlurb": "Uma carga que cresce de 4 a 14 kN/m no vão da direita.",
-    "concentratedBlurb": "Uma única carga de 18 kN para baixo no meio do vão, sem nó extra.",
-    "nodalBlurb": "Uma carga de 20 kN no apoio intermediário, para conferir reações e deslocamentos.",
-    "temperatureBlurb": "Uma diferença de temperatura ao longo da altura (em cima mais quente que embaixo) e a curvatura que ela causa.",
+    "udlBlurb": "Vão com apoio fixo e apoio móvel sob 12 kN/m: os diagramas clássicos de esforço cortante e momento fletor.",
+    "trapezoidalBlurb": "Uma carga que cresce de 4 a 14 kN/m ao longo do vão da direita.",
+    "concentratedBlurb": "Uma carga de 18 kN no vão da esquerda, a 2 m do apoio, sem nenhum nó embaixo dela.",
+    "nodalBlurb": "Uma carga de 20 kN no nó entre os dois vãos: o diagrama de momento fletor forma um ponto anguloso sob ela.",
+    "temperatureBlurb": "Uma diferença de temperatura ao longo da altura da seção (em cima mais quente que embaixo) e a curvatura que ela provoca.",
     "promoTitle": "Leve seus pórticos",
     "promoAccent": "para o 3D.",
     "promoSubtitle": "lajes, cascas e verificações de aço no navegador",
@@ -58,33 +61,612 @@
     "items": {
       "welcome": {
         "title": "Viga hiperestática",
-        "blurb": "Viga hiperestática de 3 m, engastada e com apoio móvel, sob carga distribuída uniforme de 10 kN/m."
+        "blurb": "Viga hiperestática de 3 m, engastada e com apoio móvel, sob carga distribuída uniforme de 10 kN/m."
       },
       "cantilever": {
         "title": "Viga em balanço",
-        "blurb": "Balanço de 4 m resistindo a uma carga nodal de 18 kN para baixo, destacando a curvatura e o deslocamento da extremidade."
+        "blurb": "Balanço de 4 m resistindo a uma carga nodal de 18 kN para baixo, destacando a curvatura e o deslocamento da extremidade."
       },
       "pratt": {
         "title": "Treliça Warren",
-        "blurb": "Treliça Warren simples com cargas de 8 kN nos nós, mostrando a distribuição dos esforços normais e os deslocamentos."
+        "blurb": "Treliça Warren simples com cargas de 8 kN nos nós, mostrando a distribuição dos esforços normais e os deslocamentos."
       },
       "continuous": {
         "title": "Viga contínua de três vãos",
-        "blurb": "Vãos de 5+6+5 m com carga distribuída + concentrada + distribuída para comparar a curvatura e as rotações nos apoios."
+        "blurb": "Vãos de 5+6+5 m com carga distribuída + concentrada + distribuída para comparar a curvatura e as rotações nos apoios."
       },
       "portal": {
         "title": "Pórtico sob caso de carga",
-        "blurb": "Viga de 8 m sobre pilares de 6 m sob carga distribuída de cobertura e cargas lateral e vertical nos nós de canto, para verificar deslocamento lateral e flexão."
+        "blurb": "Viga de 8 m sobre pilares de 6 m sob carga distribuída de cobertura e cargas lateral e vertical nos nós de canto, para verificar deslocamento lateral e flexão."
       },
       "temperature": {
         "title": "Carga térmica",
-        "blurb": "Viga biapoiada de 8 m com carga térmica uniforme e não uniforme."
+        "blurb": "Viga biapoiada de 8 m com carga térmica uniforme e não uniforme."
       }
     }
   },
   "search": {
     "label": "Pesquisar",
     "placeholder": "Pesquisar na documentação",
-    "noResults": "Nenhum resultado para “{query}”"
+    "noResults": "Nenhum resultado para “{query}”",
+    "shortcut": "Ctrl K"
+  },
+  "home": {
+    "seo": {
+      "title": "EduBeam: análise estrutural gratuita e online",
+      "description": "Análise estrutural 2D gratuita no navegador. Desenhe vigas, pórticos e treliças, aplique cargas e veja na hora os diagramas N, V, M, as reações e as flechas."
+    },
+    "hero": {
+      "title": "Vigas, pórticos, treliças.",
+      "lede": "O EduBeam é um aplicativo gratuito de análise estrutural para vigas, pórticos e treliças. Desenhe o modelo no navegador: os diagramas, as reações e as flechas se atualizam a cada alteração.",
+      "launch": "Abrir o EduBeam",
+      "guide": "Ler o guia",
+      "note": "Gratuito e de código aberto. Sem instalação, sem cadastro."
+    },
+    "steps": {
+      "title": "Do esboço aos diagramas em quatro passos",
+      "lede": "Na mesma ordem em que você resolveria no papel. O início rápido percorre uma viga real em cerca de dez minutos.",
+      "link": "Seguir o início rápido",
+      "items": {
+        "nodes": {
+          "label": "Nós",
+          "title": "Posicione os nós",
+          "body": "Clique na grade ou digite as coordenadas. Aqui, os quatro cantos de um pórtico de 6 m de largura e 4 m de altura."
+        },
+        "elements": {
+          "label": "Barras",
+          "title": "Ligue os nós com barras",
+          "body": "Una os nós com elementos de viga e defina o material e a seção de cada um: uma seção da biblioteca ou um polígono desenhado por você."
+        },
+        "loads": {
+          "label": "Apoios e cargas",
+          "title": "Adicione apoios e cargas",
+          "body": "Apoios fixos na base dos dois pilares, 10 kN/m ao longo da viga e uma força horizontal de 15 kN no canto superior esquerdo."
+        },
+        "results": {
+          "label": "Resultados",
+          "title": "Leia os resultados",
+          "body": "O diagrama de momento fletor, desenhado do lado tracionado, e as reações aparecem assim que o pórtico fica estável. Esses números são do próprio EduBeam, calculados nesta página."
+        }
+      }
+    },
+    "examples": {
+      "title": "Abra um modelo resolvido com um clique",
+      "lede": "Todos são resolvidos nesta página pelo mesmo solver que o aplicativo usa. Abra um deles no EduBeam e altere-o.",
+      "link": "Todos os exemplos"
+    },
+    "verify": {
+      "title": "Conferido com os livros-texto",
+      "lede": "O EduBeam resolve todo modelo pelo método dos elementos finitos. Nos casos clássicos, ele chega à solução analítica até o último dígito. A coluna da direita foi calculada no seu navegador quando esta página carregou.",
+      "case": "Caso",
+      "formula": "Fórmula",
+      "hand": "À mão",
+      "edubeam": "EduBeam",
+      "link": "Mais casos de referência",
+      "steel": "Aço, IPE 200: E = 210 GPa, I = 1943 cm⁴. A deformação por cisalhamento é desprezada, como nas soluções analíticas.",
+      "cases": {
+        "ssMoment": "Viga biapoiada, 12 kN/m em 6 m: momento máximo",
+        "ssDeflection": "A mesma viga: flecha máxima",
+        "cantilever": "Viga em balanço de 4 m, 18 kN na extremidade: momento no engaste",
+        "fixed": "Viga biengastada, 10 kN/m em 6 m: momento nas extremidades",
+        "propped": "Viga engastada e apoiada, 10 kN/m em 6 m: reação no apoio móvel"
+      }
+    },
+    "teaching": {
+      "title": "Feito para a sala de aula",
+      "lede": "Coloque um modelo nos seus slides ou nas suas notas de aula, e todos os alunos abrem exatamente o mesmo.",
+      "link": "Ensinar com o EduBeam",
+      "slideCourse": "Isostática",
+      "slideTitle": "Aula 7: treliças",
+      "slideBody": "Uma treliça Warren com três cargas de 8 kN nos nós. Quais barras estão tracionadas?",
+      "shareLabel": "Link de compartilhamento",
+      "copy": "Copiar",
+      "copied": "Copiado",
+      "items": {
+        "share": {
+          "title": "Um modelo é um link",
+          "body": "O modelo inteiro está na própria URL. Coloque-o numa lista de exercícios e ele abrirá exatamente como você o deixou, mesmo anos depois."
+        },
+        "embed": {
+          "title": "Nos seus slides",
+          "body": "Um modo de visualização mostra o modelo resolvido sem as ferramentas de edição, pensado para um slide ou uma página da web."
+        },
+        "mechanism": {
+          "title": "Explica o que deu errado",
+          "body": "Quando a estrutura é um mecanismo, o EduBeam mostra como ela se moveria, em vez de simplesmente se recusar a resolvê-la."
+        },
+        "languages": {
+          "title": "O idioma e as unidades de cada aluno",
+          "body": "Os alunos trabalham em um de 18 idiomas, em unidades SI ou americanas, com os eixos do livro que eles usam."
+        }
+      },
+      "answerTitle": "Resposta: os esforços nas barras",
+      "answerBody": "A tração é positiva. O banzo inferior está tracionado; o banzo superior e os dois montantes extremos, comprimidos; as diagonais internas alternam tração e compressão.",
+      "prevSlide": "Slide anterior",
+      "nextSlide": "Próximo slide"
+    },
+    "final": {
+      "title": "Desenhe sua primeira viga.",
+      "lede": "Abra o EduBeam e escolha “Desenhar sua primeira viga”. Uma tarefa guiada curta leva você da tela vazia a uma viga apoiada e carregada, com os seus diagramas.",
+      "paths": {
+        "quickStart": {
+          "title": "Início rápido",
+          "body": "Modele uma viga passo a passo e confira-a à mão. 10 minutos."
+        },
+        "examples": {
+          "title": "Exemplos",
+          "body": "Modelos resolvidos para abrir, alterar e aprender."
+        },
+        "teaching": {
+          "title": "Ensino",
+          "body": "Links de compartilhamento, slides e exercícios para a sua disciplina."
+        }
+      }
+    },
+    "model": {
+      "title": "O que você pode modelar",
+      "lede": "Estruturas planas resolvidas pelo método dos elementos finitos, com os apoios, as cargas e os resultados de uma disciplina de estática.",
+      "supports": {
+        "title": "Apoios",
+        "items": {
+          "pin": "Apoio fixo",
+          "roller": "Apoio móvel",
+          "fixed": "Engaste",
+          "slider": "Engaste deslizante",
+          "angled": "Em qualquer ângulo"
+        },
+        "note": "Além de recalques e rotações prescritos."
+      },
+      "loads": {
+        "title": "Cargas",
+        "items": {
+          "point": "Concentrada",
+          "uniform": "Uniforme",
+          "trapezoidal": "Trapezoidal",
+          "moment": "Momento",
+          "temperature": "Térmica"
+        },
+        "note": "Nos nós ou em qualquer ponto de uma barra, em eixos locais ou globais."
+      },
+      "sections": {
+        "title": "Seções",
+        "items": {
+          "i": "I e H",
+          "hollow": "Vazada",
+          "solid": "Maciça",
+          "tube": "Tubo",
+          "polygon": "Seu polígono"
+        },
+        "note": "IPE, HEA, AISC W e HSS da biblioteca, ou qualquer polígono que você desenhar."
+      },
+      "results": {
+        "title": "Resultados",
+        "note": "Esforço normal, esforço cortante, momento fletor e deformada, com as reações e o valor em qualquer ponto."
+      },
+      "facts": {
+        "elements": {
+          "title": "Vigas de Timoshenko",
+          "body": "Deformação por cisalhamento onde ela importa; em barras esbeltas, os resultados coincidem com a teoria de Euler–Bernoulli."
+        },
+        "structures": {
+          "title": "Vigas, pórticos, treliças",
+          "body": "No plano, com rótulas em qualquer extremidade de barra."
+        },
+        "sharing": {
+          "title": "Links e arquivos",
+          "body": "Um modelo inteiro num link ou num arquivo de projeto; desenhos em PNG ou SVG, tabelas em CSV."
+        },
+        "settings": {
+          "title": "18 idiomas",
+          "body": "Unidades SI ou americanas; eixo z para baixo ou, como nos livros, y para cima."
+        }
+      }
+    },
+    "heritage": {
+      "title": "Código aberto, com raízes na sala de aula",
+      "body": "O EduBeam dá continuidade ao EduBeam original para desktop, criado no Departamento de Mecânica da Faculdade de Engenharia Civil da Universidade Técnica Tcheca de Praga (ČVUT), e ainda abre os arquivos de sessão daquele programa. A versão web é gratuita e de código aberto, assim como a biblioteca {'@'}edubeam/fem, o solver por trás de cada número desta página.",
+      "github": "EduBeam no GitHub",
+      "solver": "{'@'}edubeam/fem no GitHub",
+      "team": "Quem faz o EduBeam"
+    }
+  },
+  "error": {
+    "notFoundTitle": "Página não encontrada",
+    "notFound": "Não há nenhuma página neste endereço. Talvez ela tenha mudado de lugar, ou o link tenha um erro de digitação.",
+    "otherTitle": "Algo deu errado",
+    "other": "Não foi possível exibir esta página. Recarregá-la costuma resolver.",
+    "home": "Página inicial",
+    "guide": "Ler o guia",
+    "message": "Os apoios não seguram a estrutura: ela ainda pode girar livremente.",
+    "figure": "Uma viga sobre um único apoio fixo, sem o segundo apoio, girando livremente em torno dele sob a carga"
+  },
+  "problems": {
+    "families": {
+      "simple": {
+        "name": "Viga biapoiada",
+        "skill": "Equilíbrio de uma viga",
+        "hint": "Faça a soma dos momentos em relação a A para achar a reação em B e, depois, a soma das forças verticais para a reação em A. O maior momento fica onde o esforço cortante passa por zero, ou sob uma carga concentrada."
+      },
+      "cantilever": {
+        "name": "Viga em balanço",
+        "skill": "Um engaste",
+        "hint": "Todas as reações estão no engaste: some as forças verticais e depois os momentos em relação a A. Numa viga em balanço, o maior momento fica no engaste."
+      },
+      "overhang": {
+        "name": "Viga biapoiada com balanço",
+        "skill": "Momento negativo sobre o apoio",
+        "hint": "Faça a soma dos momentos em relação a A para obter a reação em B. Depois compare os dois pontos candidatos ao maior momento: no vão, onde V = 0, e sobre B, onde o balanço provoca momento negativo."
+      },
+      "gerber": {
+        "name": "Viga Gerber",
+        "skill": "Uma rótula interna",
+        "hint": "Comece pelo trecho GC: ele se apoia na rótula G e no apoio móvel C, e uma rótula não transmite momento. Depois carregue o trecho ABG com a força que a rótula transmite e resolva-o como uma viga biapoiada com balanço."
+      },
+      "threeHinged": {
+        "name": "Pórtico triarticulado",
+        "skill": "Empuxo e rótula central",
+        "hint": "Os momentos em relação a A e a E dão as reações verticais. Depois corte na rótula central C, onde M = 0, e faça a soma dos momentos em relação a C para uma das metades: assim você obtém o empuxo horizontal."
+      },
+      "truss": {
+        "name": "Treliça Warren",
+        "skill": "Método dos nós e das seções",
+        "hint": "Calcule as reações com a treliça inteira. Depois corte três barras, uma delas a que você procura, e faça a soma dos momentos em relação ao nó onde as outras duas se encontram; para uma diagonal, some as forças verticais."
+      },
+      "continuous": {
+        "name": "Viga contínua de dois vãos",
+        "skill": "Uma vez hiperestática",
+        "hint": "A viga é uma vez hiperestática: tome o momento sobre B como incógnita. A equação dos três momentos, com M = 0 em A e em C, dá esse momento diretamente; depois as reações saem vão a vão."
+      },
+      "portal": {
+        "name": "Pórtico biarticulado",
+        "skill": "Um pórtico de nós rígidos",
+        "hint": "O pórtico é uma vez hiperestático: libere a reação horizontal em D, calcule o deslocamento horizontal de D sob as cargas e sob uma força unitária aplicada ali (trabalhos virtuais, com os diagramas de M) e imponha que o deslocamento total seja zero."
+      }
+    },
+    "statement": {
+      "simple": "Uma viga biapoiada de {L} m de vão, com apoio fixo em A e apoio móvel em B, recebe {loads}.",
+      "cantilever": "Uma viga em balanço de {L} m, engastada em A, recebe q = {q} kN/m em todo o comprimento e F = {F} kN na extremidade livre B.",
+      "cantileverMoment": "Uma viga em balanço de {L} m, engastada em A, recebe q = {q} kN/m em todo o comprimento, F = {F} kN na extremidade livre B e, também em B, um momento anti-horário de {M} kNm.",
+      "overhang": "Uma viga de {L} m de vão, com apoio fixo em A e apoio móvel em B, continua em balanço por {c} m até C. Ela recebe q = {q} kN/m no vão e F = {F} kN na extremidade C.",
+      "overhangAll": "Uma viga de {L} m de vão, com apoio fixo em A e apoio móvel em B, continua em balanço por {c} m até C. Ela recebe q = {q} kN/m em todo o comprimento e F = {F} kN na extremidade C.",
+      "gerber": "Uma viga com rótula interna em G, {g} m à direita de B, tem apoio fixo em A e apoios móveis em B e C: AB = {L1} m, GC = {L3} m.",
+      "gerberLoad": "Ela recebe q = {q} kN/m em todo o comprimento.",
+      "gerberLoadForce": "Ela recebe q = {q} kN/m em todo o comprimento e F = {F} kN no meio de AB.",
+      "threeHinged": "Um pórtico de {L} m de largura e {H} m de altura tem apoios fixos em A e E e uma rótula central em C.",
+      "threeHingedWhole": "A viga recebe q = {q} kN/m em todo o comprimento.",
+      "threeHingedHalf": "A viga recebe q = {q} kN/m na metade esquerda.",
+      "threeHingedWholeForce": "A viga recebe q = {q} kN/m em todo o comprimento, e uma força F = {F} kN empurra B para a direita.",
+      "threeHingedHalfForce": "A viga recebe q = {q} kN/m na metade esquerda, e uma força F = {F} kN empurra B para a direita.",
+      "truss": "Uma treliça Warren de {panels}, cada um com {d} m de comprimento e {h} m de altura, tem apoio fixo em A e apoio móvel em {end}.",
+      "panels": "{n} painel | {n} painéis",
+      "trussLoadAll": "Uma carga F = {F} kN atua para baixo em cada nó do banzo superior.",
+      "trussLoad": "Uma carga F = {F} kN atua para baixo em cada um dos nós {joints}.",
+      "continuous": "Uma viga contínua sobre B, com apoio fixo em A e apoios móveis em B e C, tem vãos de {L1} m e {L2} m e recebe q = {q} kN/m no vão da esquerda.",
+      "continuousBoth": "Uma viga contínua sobre B, com apoio fixo em A e apoios móveis em B e C, tem vãos de {L1} m e {L2} m e recebe q = {q} kN/m nos dois vãos.",
+      "portal": "Um pórtico de nós rígidos de {L} m de largura e {H} m de altura, com apoios fixos em A e D, recebe q = {q} kN/m na viga BC.",
+      "portalForce": "Um pórtico de nós rígidos de {L} m de largura e {H} m de altura, com apoios fixos em A e D, recebe q = {q} kN/m na viga BC, e uma força F = {F} kN empurra B para a direita.",
+      "advancedNote": "EI constante; despreze a deformação por cisalhamento."
+    },
+    "load": {
+      "udlSpan": "q = {q} kN/m em todo o vão",
+      "pointFromA": "F = {F} kN a {a} m de A",
+      "momentAtB": "um momento anti-horário de {M} kNm em B"
+    },
+    "task": {
+      "beam": "Determine as reações de apoio e o maior momento fletor.",
+      "bar": "Determine as reações de apoio e o esforço normal na barra {bar}."
+    },
+    "answer": {
+      "horizontal": "Reação horizontal em {node}",
+      "vertical": "Reação vertical em {node}",
+      "fixingMoment": "Momento de engastamento em {node}",
+      "bar": "Esforço normal na barra {bar}",
+      "largestMoment": "Maior momento fletor, em valor absoluto"
+    },
+    "unit": {
+      "kN": "kN",
+      "kNm": "kNm"
+    }
+  },
+  "library": {
+    "getStarted": "Primeiros passos",
+    "by": "Por {author}",
+    "fromRepo": "Ainda não está no npm: a linha acima instala a biblioteca a partir do GitHub.",
+    "comingToNpm": "Em breve no npm. O código-fonte está no GitHub."
+  },
+  "solver": {
+    "tagline": "Um solver de elementos finitos para pórticos planos, escrito em TypeScript.",
+    "seo": {
+      "title": "{'@'}edubeam/fem: solver MEF para pórticos planos em TypeScript",
+      "description": "Solver de elementos finitos em TypeScript para vigas, pórticos e treliças planos: rótulas, cargas nas barras, térmicas e recalques, casos de carga, reações e esforços internos exatos. O motor do EduBeam."
+    },
+    "run": {
+      "title": "Executado nesta página",
+      "lede": "À esquerda, o código, executado no seu navegador quando a página carregou. À direita, os valores que ele retorna; a figura é desenhada por {plot} a partir do mesmo solver.",
+      "plusShear": "{formula}, mais a parcela do cisalhamento"
+    },
+    "features": {
+      "title": "O que ele inclui",
+      "analyses": {
+        "title": "Análises",
+        "body": "Análise estática linear com quantos casos de carga você precisar. Os diagramas são exatos entre os nós: não há malha para refinar."
+      },
+      "elements": {
+        "title": "Elementos",
+        "body": "Uma viga de Timoshenko de dois nós no plano x–z. Com rótulas nas duas extremidades, ela funciona como barra de treliça."
+      },
+      "loads": {
+        "title": "Cargas",
+        "body": "Forças e momentos nodais; cargas concentradas, uniformes e trapezoidais ao longo das barras; temperatura; recalques."
+      },
+      "results": {
+        "title": "Resultados",
+        "body": "N, V e M em qualquer ponto de uma barra, deformadas, esforços de extremidade, deslocamentos e reações."
+      },
+      "reference": "Todas as classes e métodos"
+    },
+    "behind": {
+      "title": "O solver por trás do EduBeam",
+      "body": "{name} calcula todos os diagramas, reações e flechas do EduBeam, e todas as figuras deste site.",
+      "link": "Conheça o EduBeam"
+    }
+  },
+  "plot": {
+    "tagline": "Componentes Vue que desenham estruturas planas e seus resultados, no estilo das figuras deste site.",
+    "seo": {
+      "title": "{'@'}edubeam/plot: diagramas estruturais para Vue",
+      "description": "Componentes Vue que desenham estruturas planas, cargas, reações e diagramas de N, V e M como num livro-texto, para páginas de disciplinas, slides, listas de exercícios e arquivos SVG."
+    },
+    "try": {
+      "title": "Experimente",
+      "lede": "Um pórtico resolvido nesta página pelo {'@'}edubeam/fem. Altere o que é desenhado; o código acompanha.",
+      "labelStyle": "Estilo dos rótulos",
+      "horizontal": "Horizontal",
+      "axis": "Ao longo da ordenada"
+    },
+    "teaching": {
+      "title": "Feito para material didático",
+      "lede": "Um modelo em código é uma figura que nunca fica desatualizada: mude um número, e o desenho, as reações e os diagramas acompanham. Uma semente (valor inicial do gerador aleatório) escolhe um novo exercício; a mesma semente sempre gera o mesmo. A página {practice} e o {exam} deste site são feitos assim.",
+      "practice": "Exercícios de estática",
+      "exam": "gerador de provas"
+    },
+    "uses": {
+      "exercises": {
+        "title": "Exercícios e provas",
+        "body": "Um exercício por aluno a partir de uma semente, com o gabarito, impresso ou como figuras para LaTeX e Word."
+      },
+      "slides": {
+        "title": "Slides e notas de aula",
+        "body": "Figuras que se constroem clique a clique no Slidev, no Vue ou no Beamer, resolvidas ao vivo."
+      },
+      "embedding": {
+        "title": "Na sua documentação e nos seus aplicativos",
+        "body": "Vite, VitePress ou Nuxt, com renderização no servidor ou a partir de JSON já resolvido."
+      },
+      "print": {
+        "title": "Arquivos para impressão",
+        "body": "Um SVG independente com cores fixas, para Word, LaTeX e Inkscape."
+      }
+    },
+    "features": {
+      "title": "O que ela faz",
+      "style": {
+        "title": "No estilo das figuras",
+        "body": "Barras, apoios, cargas, reações e diagramas hachurados como neste site, com cotas encadeadas e reações incógnitas nomeadas para listas de exercícios."
+      },
+      "readable": {
+        "title": "Legível em qualquer tamanho",
+        "body": "Textos e linhas mantêm o tamanho em pixels; valores que se sobreporiam são deslocados ou omitidos, nunca cortados."
+      },
+      "exact": {
+        "title": "Exata",
+        "body": "Os diagramas são os próprios polinômios do solver: extremos encontrados de forma exata, saltos sob cargas concentradas desenhados como saltos."
+      },
+      "fits": {
+        "title": "Combina com a página",
+        "body": "Cores do seu CSS, no tema claro e no escuro. Renderiza no servidor e nunca captura a rolagem."
+      },
+      "components": "Todas as props"
+    }
+  },
+  "practice": {
+    "seo": {
+      "title": "Exercícios de estática com correção na hora {'|'} EduBeam",
+      "description": "Exercícios de estática gratuitos: vigas, pórticos e treliças com valores novos a cada vez. Calcule as reações e o maior momento fletor ou esforço na barra, confira as respostas na hora e veja os diagramas.",
+      "ogTitle": "Exercícios de estática com correção na hora",
+      "ogDescription": "Vigas, pórticos e treliças com valores novos a cada vez. Confira na hora suas reações e momentos e depois veja os diagramas."
+    },
+    "title": "Exercícios de estática",
+    "lede": "Um exercício novo a cada vez, com as respostas exatas para você comparar com as suas. Resolva no papel, digite o que encontrou e depois veja os diagramas.",
+    "codes": "Todo exercício tem um código, como {code}. O mesmo código é sempre o mesmo exercício: compartilhe-o com um colega ou abra o que o seu professor passou.",
+    "announce": "Novo exercício: {structure}, {code}.",
+    "structures": {
+      "title": "Estruturas",
+      "count": "{picked} de {total}",
+      "legend": "Estruturas que “Novo exercício” pode sortear",
+      "determinate": "Isostáticas",
+      "indeterminate": "Hiperestáticas",
+      "note": "“Novo exercício” sorteia uma delas."
+    },
+    "code": {
+      "label": "Código do exercício",
+      "placeholder": "Código",
+      "open": "Abrir",
+      "error": "Isso não é um código de exercício. Um código é uma letra seguida de um número, como H2048."
+    },
+    "newProblem": "Novo exercício",
+    "copyLink": "Copiar link",
+    "linkCopied": "Link copiado",
+    "barForces": "Esforços nas barras, tração positiva",
+    "answers": {
+      "title": "Suas respostas",
+      "note": "As reações estão desenhadas no exercício no sentido em que contam como positivas. Se uma delas atua no sentido contrário, a resposta é negativa.",
+      "field": "{label}, {direction}, em {unit}",
+      "fieldMagnitude": "{label}, em {unit}"
+    },
+    "positive": {
+      "right": "positiva para a direita",
+      "up": "positiva para cima",
+      "counterClockwise": "positivo no sentido anti-horário",
+      "tension": "positivo na tração",
+      "magnitude": "valor absoluto"
+    },
+    "mark": {
+      "correct": "correto",
+      "exact": "resposta exata",
+      "sign": "sinal?",
+      "signLong": "valor certo, sinal errado",
+      "wrong": "incorreto"
+    },
+    "verdict": {
+      "allRight": "Tudo certo. Os diagramas agora estão desenhados no exercício.",
+      "sign": "{right} de {total} respostas certas. Onde aparece “{sign}”, o valor está certo, mas o sentido não.",
+      "some": "{right} de {total} respostas certas. Valem as respostas com erro de até 1 %.",
+      "revealed": "As respostas exatas estão ao lado dos seus campos, e os diagramas estão desenhados no exercício."
+    },
+    "check": "Conferir",
+    "nextProblem": "Próximo exercício",
+    "hint": "Dica",
+    "showAnswers": "Mostrar as respostas",
+    "solved": "{n} exercício resolvido neste dispositivo. | {n} exercícios resolvidos neste dispositivo.",
+    "about": {
+      "answers": {
+        "title": "De onde vêm as respostas",
+        "body": "Cada exercício é resolvido no seu navegador pelo {solver}, o solver do EduBeam, e desenhado pelo {plot}. O maior momento é calculado de forma exata, e não lido numa curva amostrada."
+      },
+      "signs": {
+        "title": "Sinais e unidades",
+        "body": "As respostas são dadas em kN e kNm. As cargas atuam para baixo, salvo indicação contrária no enunciado. As reações são positivas para a direita, para cima e no sentido anti-horário, como cada campo indica; os esforços nas barras são positivos na tração. Os diagramas seguem as {conventions} do EduBeam.",
+        "conventions": "convenções de sinais"
+      },
+      "teachers": {
+        "title": "Para professores",
+        "body": "O {exam} imprime estes exercícios como provas, uma versão diferente para cada aluno, com o gabarito. Com o código de cada exercício, os alunos podem conferir aqui as próprias respostas depois.",
+        "exam": "gerador de provas"
+      }
+    }
+  },
+  "exam": {
+    "seo": {
+      "title": "Gerador de provas de estática: provas para imprimir, com gabarito {'|'} EduBeam",
+      "description": "Monte provas de estática no navegador: vigas, pórticos e treliças com valores gerados, uma versão para cada aluno, gabarito e figuras SVG para LaTeX e Word. Gratuito, sem instalar nada.",
+      "ogTitle": "Gerador de provas de estática: provas para imprimir, com gabarito",
+      "ogDescription": "Vigas, pórticos e treliças gerados, uma versão por aluno, gabarito e figuras SVG. Gratuito, no navegador."
+    },
+    "title": "Gerador de provas",
+    "lede": "Provas de estática, uma versão diferente para cada aluno, com o gabarito. Tudo é gerado no seu navegador e nada é enviado a lugar nenhum; as configurações ficam no endereço da página, então um favorito traz de volta as mesmas provas.",
+    "defaultTitle": "Prova de estática",
+    "settings": {
+      "title": "Título",
+      "subtitle": "Segunda linha",
+      "subtitlePlaceholder": "Disciplina, data, duração",
+      "problems": "Exercícios",
+      "problem": "Exercício {n}",
+      "determinate": "Isostáticas",
+      "indeterminate": "Hiperestáticas",
+      "remove": "Remover o exercício {n}",
+      "add": "Adicionar um exercício",
+      "problemsNote": "Todas as versões têm estes exercícios, nesta ordem, cada um com os próprios valores. Até {max}.",
+      "versions": "Versões",
+      "versionsNote": "Uma por aluno: até {max}.",
+      "number": "Número da prova",
+      "newNumber": "Novo",
+      "newNumberTitle": "Valores novos para todos os exercícios",
+      "numberNote": "O mesmo número sempre gera as mesmas provas.",
+      "onPapers": "Nas provas",
+      "nameLine": "Uma linha para o nome do aluno",
+      "working": "Espaço para os cálculos",
+      "key": "Gabarito no final",
+      "codes": "Códigos dos exercícios",
+      "codesNote": "Em exercícios para casa, os alunos conferem as respostas na página {practice}, que mostra a solução. Numa prova, deixe desmarcado.",
+      "practicePage": "Exercícios de estática"
+    },
+    "zipNote": "O .zip traz todas as figuras e gabaritos em SVG, para LaTeX e Word, e as respostas numa tabela CSV para a correção.",
+    "summary": {
+      "papers": "{n} prova | {n} provas",
+      "problems": "{n} exercício | {n} exercícios",
+      "plain": "{papers} de {problems}",
+      "withKey": "{papers} de {problems}, com o gabarito",
+      "withKeys": "{papers} de {problems}, com os gabaritos"
+    },
+    "jump": {
+      "label": "Ir para uma prova",
+      "placeholder": "Ir para…",
+      "papers": "Provas",
+      "keys": "Gabaritos",
+      "key": "Gabarito, versão {n}"
+    },
+    "version": "Versão {n}",
+    "download": "Baixar .zip",
+    "downloadTitle": "Todas as figuras e gabaritos em SVG, para LaTeX e Word, e as respostas numa tabela CSV para a correção",
+    "print": "Imprimir",
+    "printLong": "Imprimir ou salvar como PDF",
+    "paper": {
+      "name": "Nome",
+      "rules": "Forças em kN, momentos em kNm. As cargas atuam para baixo, salvo indicação contrária no enunciado. As reações são as forças que os apoios exercem sobre a estrutura e estão desenhadas no sentido em que contam como positivas: para a direita, para cima e no sentido anti-horário. Uma resposta negativa atua no sentido contrário. Os esforços nas barras são positivos na tração.",
+      "check": "Confira suas respostas em {url}"
+    },
+    "key": {
+      "title": "Gabarito",
+      "version": "{title}, versão {n}",
+      "exam": "Prova nº {n}"
+    },
+    "tension": "tração +",
+    "solutionFigure": "{name}: solução"
+  },
+  "exerciseGenerator": {
+    "solveIt": "Resolver na página Exercícios de estática",
+    "exercise": "O exercício",
+    "key": "Gabarito",
+    "solution": "A solução",
+    "caption": "Gerado no seu navegador: a semente escolhe a estrutura e os valores, o {'@'}edubeam/fem resolve e o {'@'}edubeam/plot desenha o enunciado e a solução. Provas completas saem do {exam}.",
+    "exam": "gerador de provas",
+    "newExercise": "Novo exercício"
+  },
+  "ui": {
+    "menu": "Menu",
+    "darkMode": "Modo escuro",
+    "lightMode": "Modo claro",
+    "language": "Idioma: {name}",
+    "guideNav": "Guia",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "copyCode": "Copiar código",
+    "docs": "Documentação",
+    "elementSketch": "Um elemento nos seus eixos locais"
+  },
+  "heroFigure": {
+    "aria": "Uma viga biapoiada com balanço sob carga uniforme e uma carga concentrada móvel, com os diagramas de esforço cortante e de momento fletor e a linha elástica",
+    "slider": "Posição da carga concentrada de 20 kN",
+    "loadAt": "a {x} m",
+    "hint": "Arraste a carga ou aponte para um diagrama para ler os valores.",
+    "fromA": "a {x} m de A",
+    "reactions": "reações de {a} kN em A e {b} kN em B",
+    "sagging": "maior momento positivo de {m} kNm",
+    "hogging": "momento negativo de {m} kNm sobre B"
+  },
+  "plotTexts": {
+    "structure": "Estrutura",
+    "structureWith": "Estrutura com {parts}",
+    "layers": {
+      "N": "o diagrama de esforço normal",
+      "V": "o diagrama de esforço cortante",
+      "M": "o diagrama de momento fletor",
+      "w": "a deformada",
+      "reactions": "as reações",
+      "loads": "as cargas"
+    },
+    "loadHandle": "Posição da carga {load}",
+    "loadPosition": "a {metres} m do início da viga",
+    "stack": "Uma viga com suas cargas",
+    "stackWith": "Uma viga com suas cargas e, abaixo, {rows}",
+    "rows": {
+      "N": "o diagrama de esforço normal",
+      "V": "o diagrama de esforço cortante",
+      "M": "o diagrama de momento fletor",
+      "w": "a linha elástica"
+    },
+    "temperatureUniform": "ΔT",
+    "temperatureGradient": "ΔTb − ΔTt"
   }
 }

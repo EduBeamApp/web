@@ -495,6 +495,8 @@
     "sidebar": [
       {
         "text": "Primeiros passos",
+        "icon": "lucide:flag",
+        "section": "guide",
         "items": [
           {
             "text": "Introdução",
@@ -503,28 +505,13 @@
           {
             "text": "Início rápido (10 min)",
             "link": "/pt/guide/quick-start"
-          },
-          {
-            "text": "Exemplos",
-            "link": "/pt/examples/"
           }
         ]
       },
       {
-        "text": "Tutoriais",
-        "items": [
-          {
-            "text": "Pórtico triarticulado",
-            "link": "/pt/tutorials/three-hinged-frame"
-          },
-          {
-            "text": "Treliça plana",
-            "link": "/pt/tutorials/truss"
-          }
-        ]
-      },
-      {
-        "text": "Modelagem",
+        "text": "Montar o modelo",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
         "items": [
           {
             "text": "Interface do usuário",
@@ -549,7 +536,9 @@
         ]
       },
       {
-        "text": "Resultados",
+        "text": "Ler os resultados",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
         "items": [
           {
             "text": "Resultados e diagramas",
@@ -562,10 +551,12 @@
         ]
       },
       {
-        "text": "Arquivos e compartilhamento",
+        "text": "Compartilhar e ensinar",
+        "icon": "lucide:presentation",
+        "section": "guide",
         "items": [
           {
-            "text": "Importar, exportar e compartilhar",
+            "text": "Arquivos, links e exportação",
             "link": "/pt/essentials/import-export"
           },
           {
@@ -575,7 +566,9 @@
         ]
       },
       {
-        "text": "Referência",
+        "text": "Ajuda",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
         "items": [
           {
             "text": "Teclado, mouse e toque",
@@ -592,22 +585,69 @@
         ]
       },
       {
+        "text": "Tutoriais",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Viga inclinada",
+            "link": "/pt/tutorials/inclined-beam"
+          },
+          {
+            "text": "Pórtico triarticulado",
+            "link": "/pt/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Treliça plana",
+            "link": "/pt/tutorials/truss"
+          },
+          {
+            "text": "Viga contínua e recalque de apoio",
+            "link": "/pt/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "Praticar",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Exercícios de estática",
+            "link": "/pt/practice"
+          },
+          {
+            "text": "Gerador de provas",
+            "link": "/pt/exam"
+          },
+          {
+            "text": "Exemplos",
+            "link": "/pt/examples/"
+          }
+        ]
+      },
+      {
         "text": "Manual teórico",
+        "icon": "lucide:sigma",
+        "section": "theory",
         "items": [
           {
             "text": "Sistema de coordenadas e convenções de sinais",
             "link": "/pt/elements/conventions"
           },
           {
-            "text": "Viga",
+            "text": "Elemento de viga",
             "link": "/pt/elements/beam"
           },
           {
-            "text": "Treliça",
+            "text": "Elemento de treliça",
             "link": "/pt/elements/truss"
+          },
+          {
+            "text": "Como o EduBeam resolve um modelo",
+            "link": "/pt/elements/analysis"
           }
-        ],
-        "collapsed": true
+        ]
       }
     ]
   },

@@ -1,146 +1,160 @@
 ---
-description: "Um passeio pela interface do EduBeam: o menu principal, a visualização e suas opções de exibição, navegação e seleção, as abas, a barra inferior e as janelas flutuantes."
+description: "Mapa da interface do EduBeam: barra superior e menu ☰, visualização e opções de exibição, seleção e edição, tabelas da barra inferior e digitação de valores."
+source: site
 ---
 
 # Interface do usuário
 
-[EduBeam]{.edubeam} tem três áreas: a **barra superior** no topo, a **visualização** no meio, onde você desenha, e a **barra inferior**, com uma tabela para cada tipo de objeto. Quando você sabe o que fica em cada lugar, o resto do guia faz sentido.
+O [EduBeam]{.edubeam} tem três áreas: a **barra superior**, no topo; a **visualização**, no meio, onde você desenha; e a **barra inferior**, com uma tabela para cada tipo de objeto. Tudo o que você faz na visualização você também pode fazer nas tabelas, e vice-versa.
 
 ![As partes da interface, numeradas como na lista abaixo](/screenshots/pt/ui-overview.webp)
 
 1. **Menu ☰**: abrir, salvar, compartilhar e exportar; exemplos e tours guiados.
-2. **Botões da barra superior**: Limpar estrutura e Compartilhar modelo.
-3. **Desfazer / Refazer** para cada alteração do modelo.
-4. **Botões da visualização**: centralizar, ajustar à tela e o botão das opções de exibição.
-5. **Opções de exibição**: quais resultados e partes do modelo são desenhados.
+2. **Limpar estrutura** e **Compartilhar modelo**.
+3. **Desfazer** e **Refazer**.
+4. **Botões da visualização**: centralizar, ajustar à tela e as opções de exibição.
+5. **Opções de exibição**: quais resultados e quais partes do modelo são desenhados.
 6. **Grade, encaixe, mira e unidades.**
 7. **Abas da barra inferior**: Nós, Elementos, Cargas, Materiais, Seções, Resultados.
-8. **A tabela** da aba aberta, onde cada valor pode ser editado.
+8. **A tabela** da aba aberta, onde todos os valores podem ser editados.
 
 ::callout{type="tip" title="Faça o tour"}
 **☰ → Fazer um tour** mostra essas partes no próprio aplicativo, uma de cada vez.
 ::
 
-![Fazer um tour, no passo das opções de exibição](/screenshots/pt/tour.webp)
-
 ## Barra superior {#app-bar}
 
-| Controle | O que faz |
-| --- | --- |
-| **Menu ☰** | O menu principal, veja abaixo. |
-| **Limpar estrutura** | Exclui todos os nós, elementos e cargas após uma confirmação. Duas caixas de seleção excluem também os materiais e as seções. <kbd>Ctrl</kbd>+<kbd>Z</kbd> traz o modelo de volta, e ele fica guardado em Estruturas recentes. |
-| **Compartilhar modelo** | Abre o [diálogo de compartilhamento](/pt/essentials/import-export#share-a-link) com um link que contém o modelo inteiro. |
-| **O que há de novo?** | Notas de versão. Elas também se abrem sozinhas uma vez após uma atualização. |
-| **Documentação** / GitHub | Este guia e o código-fonte. |
+- **☰** abre o menu principal, descrito abaixo.
+- **Limpar estrutura** exclui todos os nós, elementos e cargas depois de uma confirmação; marque **Excluir materiais** ou **Excluir seções** para remover também esses itens. <kbd>Ctrl</kbd>+<kbd>Z</kbd> traz o modelo de volta, e ele também fica guardado em *Estruturas recentes*.
+- **Compartilhar modelo** abre o [diálogo de compartilhamento](/pt/essentials/import-export#share-a-link) com um link que contém o modelo inteiro.
+- **O que há de novo?** mostra as notas de versão. Elas também se abrem sozinhas uma vez depois de cada atualização.
+- **Documentação** abre este guia, e o ícone do GitHub, o código-fonte.
 
-Em um celular, só cabem o menu ☰ e Documentação; todo o resto fica no menu.
+No celular só cabem o ☰ e **Documentação**; **Limpar estrutura** e **Compartilhar modelo** ficam no menu.
 
 ### O menu ☰ {#the-☰-menu}
 
 ![O menu ☰](/screenshots/pt/ui-app-menu.webp){.shot-xs}
 
-| Item | O que faz |
-| --- | --- |
-| **Abrir projeto** / **Salvar projeto** | Abre ou baixa um arquivo `project.json` (<kbd>Ctrl</kbd>+<kbd>O</kbd> / <kbd>Ctrl</kbd>+<kbd>S</kbd>). |
-| **Estruturas recentes** | Os últimos 10 modelos que você limpou ou substituiu, prontos para restaurar. |
-| **Exportar imagem** | Salva o desenho em PNG ou SVG, ou o copia (<kbd>Ctrl</kbd>+<kbd>P</kbd>). |
-| **Compartilhar modelo** | O mesmo que o botão da barra superior. |
-| **Exemplos** | A galeria de modelos prontos. |
-| **Desenhar sua primeira viga** | Uma tarefa guiada de sete passos. |
-| **Fazer um tour** | O tour pela interface. |
-| **Limpar estrutura** | O mesmo que o botão da barra superior. |
+- **Abrir projeto** e **Salvar projeto** abrem ou baixam um arquivo `project.json` (<kbd>Ctrl</kbd>+<kbd>O</kbd>, <kbd>Ctrl</kbd>+<kbd>S</kbd>).
+- **Estruturas recentes** guarda os últimos 10 modelos que você limpou ou substituiu, prontos para restaurar.
+- **Exportar imagem** salva o desenho em PNG ou SVG, ou o copia (<kbd>Ctrl</kbd>+<kbd>P</kbd>).
+- **Exemplos** é a galeria de modelos prontos; **Desenhar sua primeira viga** é uma tarefa guiada de sete passos; **Fazer um tour** é o tour pela interface.
+- **Compartilhar modelo** e **Limpar estrutura** fazem o mesmo que os botões da barra superior.
 
-A parte de baixo do menu mostra a versão do aplicativo e sua data de lançamento.
+Na parte de baixo do menu aparecem a versão do aplicativo e a data de lançamento. Abrir, salvar, compartilhar e exportar estão explicados em [Arquivos, links e exportação](/pt/essentials/import-export).
 
 ## Visualização {#viewer}
 
-A tela é onde você desenha e inspeciona o modelo. Todo o resto do aplicativo acompanha o que você seleciona aqui.
+É a tela onde você desenha e inspeciona o modelo. O EduBeam recalcula os resultados a cada alteração; não existe botão *Resolver*.
 
 ### Botões sobre a tela {#buttons-on-the-canvas}
 
-- **Canto superior esquerdo:** **Desfazer** e **Refazer** (<kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd>). Toda alteração do modelo, incluindo adicionar, editar, arrastar, excluir e limpar, pode ser desfeita.
-- **Canto superior direito:** **Centralizar conteúdo** (<kbd>C</kbd>), **Ajustar conteúdo à tela** (<kbd>F</kbd>) e o botão ⚙, que mostra ou oculta as opções de exibição. Em telas sensíveis ao toque há também **Seleção por retângulo**.
-- **Canto inferior direito:** **G** liga e desliga a grade, **S** liga e desliga o encaixe na grade, o botão da mira mostra a posição do ponteiro nas réguas, e o **indicador de unidades** abre as configurações em *Idioma e localidade*.
+**Canto superior esquerdo: Desfazer e Refazer** voltam e avançam por todas as alterações do modelo: adicionar, editar, arrastar, excluir, limpar (<kbd>Ctrl</kbd>+<kbd>Z</kbd>, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd>).
+
+**Canto superior direito:**
+
+- **Seleção por retângulo**, em dispositivos com tela sensível ao toque: o próximo movimento do dedo seleciona um retângulo.
+- **Centralizar conteúdo** centraliza o modelo sem alterar o zoom (<kbd>C</kbd>); **Ajustar conteúdo à tela** ajusta o zoom para mostrar o modelo inteiro (<kbd>F</kbd>).
+- **⚙** mostra ou oculta as [opções de exibição](#display-options).
+
+**Canto inferior direito:**
+
+![Os botões da grade, do encaixe, da mira e das unidades](/screenshots/pt/ui-grid-units.webp){.shot-sm}
+
+- **G** mostra ou oculta a grade e as réguas (<kbd>G</kbd>); **S** liga ou desliga o encaixe na grade (<kbd>S</kbd>).
+- O botão da **mira** marca a posição do ponteiro nas réguas; funciona só com o mouse.
+- O **indicador de unidades** abre as configurações em [Idioma e localidade](/pt/essentials/units-settings#language-locale).
 
 ### Opções de exibição {#display-options}
 
+O botão ⚙ abre duas linhas de caixas de seleção. A primeira escolhe os resultados desenhados sobre o modelo: *Forma deformada*, *N (x)*, *V<sub>z</sub> (x)*, *M<sub>y</sub> (x)* e *Reações*; de início, a forma deformada, o momento fletor e as reações estão marcados. A segunda mostra ou oculta partes do modelo: *Apoios*, *Cargas*, *Rótulos dos nós* e *Rótulos dos elementos*, todas marcadas de início.
+
 ![Os botões da visualização e as opções de exibição](/screenshots/pt/ui-display-settings.webp){.shot-lg}
 
-Duas linhas de caixas de seleção, abertas por padrão:
-
-- **Resultados:** *Forma deformada*, *N (x)*, *V<sub>z</sub> (x)*, *M<sub>y</sub> (x)*, *Reações*. Forma deformada, M e Reações começam marcados.
-- **Modelo:** *Apoios*, *Cargas*, *Rótulos dos nós*, *Rótulos dos elementos*.
-
-**Mais configurações** abre as [configurações](/pt/essentials/units-settings) completas em *Configurações de visualização*.
+**Mais configurações** abre as [configurações de visualização](/pt/essentials/units-settings#viewer-settings): tamanhos, cores e a forma de desenhar os diagramas. O que cada resultado mostra está explicado em [Resultados e diagramas](/pt/essentials/results#overlays-in-the-viewer).
 
 ### Navegação {#navigating}
 
-| Ação | Mouse | Toque |
+| Ação | Mouse e teclado | Toque |
 | --- | --- | --- |
-| Zoom | Roda do mouse (em direção ao cursor), <kbd>Ctrl</kbd>+<kbd>=</kbd> / <kbd>Ctrl</kbd>+<kbd>-</kbd> | Pinça |
-| Panorâmica | Arrastar com o botão **do meio ou direito** (veja *Configurações → Controles e atalhos*) | Arrastar com um dedo |
-| Ajustar / centralizar | <kbd>F</kbd> / <kbd>C</kbd> ou os botões do canto superior direito | Os botões do canto superior direito |
+| Zoom | Roda do mouse, em direção ao ponteiro; no trackpad, pinça ou rolagem com dois dedos | Pinça |
+| Mover a vista | Arrastar com o botão direito ou com a roda pressionada; escolha qual em [Controles e atalhos](/pt/essentials/units-settings#controls-shortcuts) | Arrastar com um dedo |
+| Ajustar, centralizar | <kbd>F</kbd>, <kbd>C</kbd> ou os botões do canto superior direito | Os botões do canto superior direito |
+
+<kbd>Ctrl</kbd>+<kbd>+</kbd> e <kbd>Ctrl</kbd>+<kbd>-</kbd> aproximam e afastam o desenho em torno do centro, em qualquer layout de teclado. Eles nunca ampliam a interface inteira, como faria o zoom do próprio navegador.
 
 ### Selecionar e editar {#selecting-and-editing}
 
-**Clique** em um nó, elemento, carga ou linha de cota para selecioná-lo. Um painel se abre ao lado com os detalhes e as ações cabíveis: adicionar uma carga, definir apoios, editar, mostrar a matriz de rigidez, excluir. Clicar em um nó também muda a barra inferior para a aba Nós.
+| Para | Faça assim |
+| --- | --- |
+| Selecionar um objeto | Clique em um nó, elemento, carga ou linha de cota. Ao lado dele se abre um painel com as ações cabíveis: adicionar uma carga, definir apoios, editar, mostrar a matriz de rigidez, excluir. A barra inferior muda para a aba correspondente. |
+| Selecionar vários | Arraste um retângulo sobre a tela vazia (numa tela sensível ao toque, pressione antes **Seleção por retângulo**). Ele seleciona todos os nós que estão dentro e todos os elementos que toca, com suas cargas e linhas de cota. <kbd>Ctrl</kbd>+<kbd>A</kbd> seleciona tudo. |
+| Excluir, copiar, colar | <kbd>Delete</kbd>, <kbd>Ctrl</kbd>+<kbd>C</kbd>, <kbd>Ctrl</kbd>+<kbd>V</kbd>. O que você cola acompanha o ponteiro até você clicar, ou é colado com o deslocamento Δx, Δz que você digitar na faixa no topo. |
+| Mover um nó | Arraste-o. Com o encaixe ligado, ele se encaixa na grade; os elementos e as cargas ligados a ele acompanham. |
+| Editar uma carga | Clique duas vezes nela. |
+| Ver detalhes | Aponte para qualquer objeto e aparece uma dica: os deslocamentos e a rotação de um nó, o material e a seção de um elemento, os valores de uma carga. Numa tela sensível ao toque, toque no objeto: o painel mostra o mesmo. |
+| Abrir o menu da tela | Clique com o botão direito na tela ou, numa tela sensível ao toque, toque e segure. |
 
 ::div{.shots}
 
-![Um nó: adicionar uma carga, definir apoios, prescrever um deslocamento](/screenshots/pt/ui-node-menu.webp)
+![O painel de um nó: adicionar uma carga, definir apoios, prescrever um deslocamento](/screenshots/pt/ui-node-menu.webp)
 
-![Um elemento: editar, adicionar uma carga, matriz de rigidez](/screenshots/pt/ui-element-menu.webp)
+![Ao apontar para um nó, aparecem seus deslocamentos e sua rotação](/screenshots/pt/ui-hover.webp)
 
 ::
 
-- **Arraste sobre a tela vazia** para desenhar um retângulo de seleção. Tudo o que estiver dentro é selecionado: nós, elementos, suas cargas e linhas de cota. Pressione <kbd>Delete</kbd> para excluir tudo, ou <kbd>Ctrl</kbd>+<kbd>C</kbd> / <kbd>Ctrl</kbd>+<kbd>V</kbd> para copiar para outro lugar.
-- **Arraste um nó** para movê-lo. Com o encaixe ativado, ele cai na grade. Os elementos conectados e suas cargas acompanham.
-- **Clique duas vezes em uma carga** para editá-la.
-- **Aponte** para qualquer item para ver uma dica. Os nós mostram seus deslocamentos e sua rotação, os elementos o material e a seção, as cargas seus valores. Em uma tela sensível ao toque, toque no item: os mesmos detalhes aparecem no painel de seleção.
-
-![Apontar para um nó mostra seus deslocamentos e sua rotação](/screenshots/pt/ui-hover.webp){.shot-sm}
-
-**Clique com o botão direito na tela** (ou toque e segure em uma tela sensível ao toque) para abrir o menu da tela. Segure <kbd>Ctrl</kbd> ao escolher *Adicionar nó* ou *Adicionar elemento* para posicioná-los com o mouse em vez de por um diálogo. Sobre um elemento, o menu também oferece *Cotar o elemento*.
+O **menu da tela** oferece *Adicionar nó*, *Adicionar elemento*, *Adicionar cota* (e, sobre um elemento, *Cotar o elemento*) e, para a seleção atual, *Editar*, *Copiar*, *Colar* e *Excluir*. Segure <kbd>Ctrl</kbd> ao escolher *Adicionar nó* ou *Adicionar elemento* para posicioná-los com o mouse em vez de usar um diálogo.
 
 ![O menu da tela](/screenshots/pt/ui-canvas-menu.webp){.shot-sm}
 
-Todos os atalhos estão na página [Teclado, mouse e toque](/pt/reference/shortcuts).
+A página [Teclado, mouse e toque](/pt/reference/shortcuts) lista todos os atalhos e gestos.
 
 ### Quando o modelo não pode ser resolvido {#when-the-model-cannot-be-solved}
 
 As mensagens aparecem no canto superior esquerdo da visualização:
 
-- *Nenhum material definido.* / *Nenhuma seção definida.*, com um botão **Adicionar**.
-- Uma pequena etiqueta azul **Faltam apoios** enquanto o modelo está apenas incompleto.
-- Uma **mensagem vermelha** quando algo está errado, com **Mostrar detalhes**, que lista cada problema.
+| Mensagem | Significado |
+| --- | --- |
+| *Nenhum material definido.*, *Nenhuma seção definida.* | Crie um com o botão **Adicionar** ao lado. |
+| A etiqueta azul **Faltam apoios** | O modelo simplesmente ainda não está pronto: faltam apoios. |
+| Uma mensagem vermelha, com **Mostrar detalhes** | Há algo errado. Os detalhes listam cada problema, cada um com uma dica. |
+| Uma mensagem amarela | O modelo foi resolvido, mas algo parece estranho, por exemplo um nó ao qual nenhum elemento está ligado. |
 
-Quando a estrutura ainda pode se mover, o EduBeam a faz oscilar como um contorno tracejado e circula os nós ou as rótulas responsáveis. Aponte para a mensagem para ver o movimento de novo, ou use o botão do olho para ocultá-lo.
+Quando a estrutura ainda pode se mover, o EduBeam mostra o movimento dela com um contorno tracejado que oscila e marca com um círculo os nós ou as rótulas responsáveis. Aponte para a mensagem para ver o movimento de novo; o botão do olho o oculta.
 
 ![Um pórtico com rótulas em B e C é um mecanismo: o EduBeam mostra como ele se move](/screenshots/pt/ui-mechanism.webp)
 
-![Mostrar detalhes lista cada problema com uma dica](/screenshots/pt/ui-diagnostics.webp){.shot-lg}
-
-[Solução de problemas](/pt/reference/troubleshooting) explica cada mensagem.
+Em [Solução de problemas](/pt/reference/troubleshooting#messages) você encontra cada mensagem e como resolvê-la.
 
 ## Barra inferior {#bottom-bar}
 
-Seis abas, cada uma com uma barra de ferramentas e uma tabela editável. As abas mostram quantos objetos de cada tipo o modelo tem. O **?** à direita explica a aba aberta, assim como o **?** ao lado de alguns títulos de coluna. Arraste a faixa de abas para cima ou para baixo para redimensionar a barra, ou minimize-a com o botão à direita.
+São seis abas, cada uma com uma barra de ferramentas e uma tabela editável. O nome da aba mostra quantos objetos ela contém. Arraste a faixa de abas para cima ou para baixo para redimensionar a barra, ou recolha-a com o botão à direita. O **?** ao lado explica a aba aberta, assim como o **?** ao lado de alguns títulos de coluna.
 
-| Aba | Barra de ferramentas | Tabela |
+| Aba | Barra de ferramentas | Colunas da tabela |
 | --- | --- | --- |
-| **Nós** | Adicionar nó (diálogo), Adicionar nó (mouse) | Rótulo, coordenadas, **GLs restringidos** (símbolo do apoio, Dx, Dz, Ry, ângulo do apoio α), cargas, editar, excluir |
-| **Elementos** | Adicionar elemento (diálogo), Adicionar elemento (mouse) | Rótulo, tipo, nós (com um botão para invertê-los), material, seção, **Rótulas de extremidade**, cargas, matriz de rigidez, excluir |
-| **Cargas** | Adicionar carga nodal, Adicionar carga de elemento | Tipo, alvo, componentes editáveis, editar, excluir |
-| **Materiais** | Adicionar material, Biblioteca de materiais | Rótulo, E, G, α<sub>T</sub>, excluir |
-| **Seções** | Adicionar seção, Biblioteca de seções, Seção poligonal | Forma, rótulo, A, I<sub>y</sub>, h, k, editar forma, excluir |
-| **Resultados** | Resultados nodais, Resultados dos elementos, Exportar CSV, Copiar | Deslocamentos e rotações por nó, ou esforços de extremidade por elemento |
+| **Nós** | Adicionar nó (diálogo), Adicionar nó (mouse) | Nó, Coordenadas, **GLs restringidos** (símbolo do apoio, `Dx`, `Dz`, `Ry`, ângulo α), Cargas, Ações |
+| **Elementos** | Adicionar elemento (diálogo), Adicionar elemento (mouse) | Elemento, Tipo, Nós (com **Inverter nós**), Material, Seção, **Rótulas de extremidade**, Cargas, Ações |
+| **Cargas** | Adicionar carga nodal, Adicionar carga de elemento | Tipo, Alvo, Componentes, Ações |
+| **Materiais** | Adicionar material, Biblioteca de materiais | Material, E, G, α<sub>T</sub>, Ações |
+| **Seções** | Adicionar seção, Biblioteca de seções, Seção poligonal | Forma, Seção, Área, I<sub>y</sub>, Altura, Coeficiente de cisalhamento, Ações |
+| **Resultados** | Resultados nodais, Resultados dos elementos, Exportar CSV, Copiar | Deslocamentos por nó ou esforços de extremidade por elemento; veja [Resultados](/pt/essentials/results#results-tab) |
 
-Edite uma célula no lugar: clique, digite e pressione <kbd>Enter</kbd> (ou <kbd>Esc</kbd> para sair da célula). Os valores são mostrados e digitados nas [unidades atuais](/pt/essentials/units-settings).
+Cada aba é explicada em detalhe nas páginas [Nós e apoios](/pt/essentials/nodes-supports), [Elementos, materiais e seções](/pt/essentials/elements), [Cargas](/pt/essentials/loads) e [Resultados e diagramas](/pt/essentials/results#results-tab).
+
+### Digitar valores {#typing-values}
+
+Todos os campos numéricos, nas tabelas e nos diálogos, funcionam do mesmo jeito:
+
+- Os valores estão nas [unidades atuais](/pt/essentials/units-settings#units), indicadas no título da coluna ou depois do campo.
+- Tanto o ponto quanto a vírgula servem de separador decimal: `2.5` e `2,5` dão o mesmo valor.
+- Você pode digitar contas com `+ - * / ^` e parênteses: `6/2`, `3*1.5`, `2^3` ou `(4+2)/3` são calculados para você, e `1e-5` vale $10^{-5}$.
+- Na tabela, <kbd>Enter</kbd>, <kbd>Esc</kbd>, <kbd>Tab</kbd> ou um clique em outro lugar aplicam o valor. Depois disso, <kbd>Ctrl</kbd>+<kbd>Z</kbd> o desfaz; enquanto você ainda está digitando, ele desfaz só a digitação.
 
 ## Abas acima da visualização {#tabs-above-the-viewer}
 
-**Estrutura** mostra a tela. **Configurações** mostra as configurações em tamanho inteiro, para que você possa mudar cores ou unidades e voltar para ver o efeito. O indicador de unidades e *Mais configurações* abrem as mesmas configurações como um diálogo sobre o modelo.
+**Estrutura** mostra a tela. **Configurações** mostra as [configurações](/pt/essentials/units-settings) em tamanho inteiro no lugar dela, para que você mude cores ou unidades e volte para ver o efeito. O indicador de unidades e *Mais configurações* abrem as mesmas configurações como um diálogo sobre o modelo.
 
 ## Janelas flutuantes {#floating-windows}
 
-**Matriz de rigidez** (no painel de um elemento ou na tabela de elementos) abre uma janela com a matriz de rigidez 6 × 6 do elemento em coordenadas globais. **Editar** no menu da tela abre uma tabela da seleção atual. Arraste-as pela barra de título e feche-as com o ×.
+**Matriz de rigidez** (no painel de um elemento ou na tabela *Elementos*) abre uma janela com a matriz de rigidez 6 × 6 do elemento em eixos globais. **Editar**, no menu da tela, abre uma tabela com a seleção atual. Mova uma janela arrastando a barra de título e feche-a com o ×.
