@@ -97,7 +97,7 @@ Kladná síla `Fz` míří dolů. Všechny pruty jsou ve styčníku připojené 
 
 V možnostech zobrazení vpravo nahoře v okně konstrukce (ozubeným kolem je zobrazíte a skryjete) vypněte **Deformovaný tvar** a **M<sub>y</sub> (x)**, protože v příhradové konstrukci ohyb nevzniká, a zapněte **N (x)**. Tah je kladný a EduBeam síly popisuje v kN na dvě desetinná místa.
 
-- U obou podpor uvidíte `30,00` směrem nahoru. Pevný kloub nemá vodorovnou šipku, protože žádnou vodorovnou sílu nepřenáší.
+- U obou podpor uvidíte `30,00` směrem nahoru. Vodorovná reakce v pevném kloubu ukazuje `0,00`, protože vodorovné zatížení nepůsobí.
 - Všechny tři pruty dolního pásu mají popisek `40,00`, tedy tah, horní pás `-40,00`, tedy tlak.
 - Prostřední diagonála 5–3 nepřenáší nic, a proto nemá popisek, stejně jako na obrázku nahoře.
 - Záložka **Výsledky** → **Výsledky v uzlech**: uzel 2 se posune dolů o $D_z$ = `2,2937 · 10⁻³ m`, tedy o 2,294 mm.
@@ -184,7 +184,7 @@ section: { a: 0.002, iy: 1.0e-6, h: 0.1 }
 ---
 ::
 
-**Odstraňte prostřední diagonálu.** Smažte prvek 8. Z prostředního pole se stane kloubový obdélník, který se může zkosit do strany. EduBeam nezobrazí žádné výsledky, vypíše *Klouby v uzlu 2, 3, 5, 6 umožňují konstrukci pohyb.*, tedy čtyři rohy tohoto pole, a pohyb ukáže animací.
+**Odstraňte prostřední diagonálu.** Smažte prvek 8. Z prostředního pole se stane kloubový obdélník, který se může zkosit do strany. EduBeam nezobrazí žádné výsledky, vypíše *Klouby v uzlech 2, 3, 5, 6 umožňují konstrukci pohyb.*, tedy čtyři rohy tohoto pole, a pohyb ukáže animací.
 
 **Odškrtněte všechny klouby** v tabulce **Prvky**. Z příhradové konstrukce se stane rám s tuhými styčníky. Zapněte **M<sub>y</sub> (x)**: ohybové momenty zůstanou pod 0,1 kNm a normálové síly se změní o méně než 0,1 %. Proto u příhradové konstrukce složené z trojúhelníků idealizace kloubových styčníků funguje.
 

@@ -51,9 +51,9 @@ Plátno je teď prázdné a dvě červená hlášení upozorňují, že zatím 
 Každý prvek potřebuje materiál a průřez, proto je přidejte jako první, a to z knihoven.
 
 1. Ve spodní liště otevřete záložku **Materiály** a klikněte na **Knihovna materiálů**.
-2. Na řádku **Steel (S235)** klikněte na **+** ($E = 210\,000$ MPa, $G = 81\,000$ MPa). Knihovna zůstane otevřená pro další výběr, zavřete ji tedy tlačítkem **Zrušit**.
+2. Na řádku **Ocel (S235)** klikněte na **+** ($E = 210\,000$ MPa, $G = 81\,000$ MPa). Knihovna zůstane otevřená pro další výběr, zavřete ji tedy tlačítkem **Zrušit**.
 3. Otevřete záložku **Průřezy** a klikněte na **Knihovna průřezů**.
-4. Sjeďte na řádek **IPE 200 (approx)**, klikněte na **+** a knihovnu zavřete tlačítkem **Zrušit**.
+4. Sjeďte na řádek **IPE 200 (přibl.)**, klikněte na **+** a knihovnu zavřete tlačítkem **Zrušit**.
 
 Obě červená hlášení zmizela a v záložce **Průřezy** je IPE 200:
 

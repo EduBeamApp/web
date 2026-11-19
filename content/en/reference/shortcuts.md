@@ -38,7 +38,7 @@ Undo also takes back clearing the model, opening a file, a link or an example, a
 | <kbd>S</kbd> | Toggle snap to grid |
 | <kbd>Ctrl</kbd>+<kbd>+</kbd> / <kbd>Ctrl</kbd>+<kbd>-</kbd> | Zoom the drawing in / out about its centre |
 
-In EduBeam, <kbd>Ctrl</kbd>+<kbd>+</kbd> and <kbd>Ctrl</kbd>+<kbd>-</kbd> zoom the drawing, never the whole interface as they do on other sites. They go by the position of those keys on a US keyboard, the two left of <kbd>Backspace</kbd>; with another layout, zoom with the wheel, a trackpad or a pinch.
+In EduBeam, <kbd>Ctrl</kbd>+<kbd>+</kbd> and <kbd>Ctrl</kbd>+<kbd>-</kbd> zoom the drawing, never the whole interface as they do on other sites. They work with any keyboard layout: the keys marked + and −, wherever your layout has them, the two left of <kbd>Backspace</kbd> on a US keyboard, and the + and − of the numeric keypad.
 
 ### Tables and dialogs {#tables-and-dialogs}
 

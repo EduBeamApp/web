@@ -38,7 +38,7 @@ Zpět vrátí i smazání modelu, otevření souboru, odkazu nebo příkladu a�
 | <kbd>S</kbd> | Zapnout nebo vypnout přichytávání k mřížce |
 | <kbd>Ctrl</kbd>+<kbd>+</kbd> / <kbd>Ctrl</kbd>+<kbd>-</kbd> | Přiblížit / oddálit výkres kolem jeho středu |
 
-<kbd>Ctrl</kbd>+<kbd>+</kbd> a <kbd>Ctrl</kbd>+<kbd>-</kbd> v EduBeamu přibližují a oddalují výkres, nikdy celé rozhraní jako na jiných webech. Řídí se polohou těchto kláves na americké klávesnici, tedy dvěma klávesami vlevo od <kbd>Backspace</kbd>. Pokud máte jiné rozložení, přibližujte kolečkem myši, touchpadem nebo roztažením prstů.
+<kbd>Ctrl</kbd>+<kbd>+</kbd> a <kbd>Ctrl</kbd>+<kbd>-</kbd> v EduBeamu přibližují a oddalují výkres, nikdy celé rozhraní jako na jiných webech. Fungují s každým rozložením klávesnice: s klávesami označenými + a −, ať je vaše rozložení má kdekoli, se dvěma klávesami vlevo od <kbd>Backspace</kbd> na americké klávesnici i s + a − na numerické klávesnici.
 
 ### Tabulky a dialogy {#tables-and-dialogs}
 

@@ -190,7 +190,7 @@ show: [nodeLabels]
 ---
 ::
 
-**Add a second hinge.** Tick the start hinge of element 2 as well, at node 2. Two hinges in the beam on two pinned columns make a mechanism. EduBeam shows no results, reports *The hinges at node 2, 3 let the structure move.*, and animates the motion.
+**Add a second hinge.** Tick the start hinge of element 2 as well, at node 2. Two hinges in the beam on two pinned columns make a mechanism. EduBeam shows no results, reports *The hinges at nodes 2, 3 let the structure move.*, and animates the motion.
 
 ## Next steps {#next-steps}
 

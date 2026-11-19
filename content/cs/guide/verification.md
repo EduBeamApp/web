@@ -265,7 +265,7 @@ Nosníkové prvky EduBeamu jsou **Timošenkovy** nosníky: kromě ohybového pr�
 
 ### Prostý nosník {#shear-simply-supported}
 
-Kolik to dělá, ukazuje nosník z [Rychlého startu](/cs/guide/quick-start#_8-check-by-hand). Je to prostý nosník z prvního příkladu se skutečným průřezem **IPE 200 (approx)** z knihovny průřezů: $I_y = 1943$ cm⁴, $A = 28{,}48$ cm² a smykový součinitel $k = 0{,}3933$ (podíl stojiny na ploše průřezu), s $G = 81$ GPa. Tedy $EI = 4080{,}3$ kNm² a $kGA = 90\,720$ kN.
+Kolik to dělá, ukazuje nosník z [Rychlého startu](/cs/guide/quick-start#_8-check-by-hand). Je to prostý nosník z prvního příkladu se skutečným průřezem **IPE 200 (přibl.)** z knihovny průřezů: $I_y = 1943$ cm⁴, $A = 28{,}48$ cm² a smykový součinitel $k = 0{,}3933$ (podíl stojiny na ploše průřezu), s $G = 81$ GPa. Tedy $EI = 4080{,}3$ kNm² a $kGA = 90\,720$ kN.
 
 | Veličina | Vzorec | Hodnota |
 | --- | --- | --- |

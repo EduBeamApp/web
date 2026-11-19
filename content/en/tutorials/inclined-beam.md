@@ -91,7 +91,7 @@ The beam is solved as soon as the load is in. In the display options at the top 
 
 EduBeam labels diagrams and reactions in kN and kNm with two decimals, so you should read:
 
-- `6.00` at each support, upward. The pin has no horizontal arrow: it takes no horizontal force.
+- `6.00` at each support, upward. The pin's horizontal reaction reads `0.00`: no horizontal force acts.
 - `6.00` kNm, the peak of the bending moment, at mid-span.
 - `4.80` kN of shear at node 1 and `-4.80` at node 2.
 - `-3.60` kN of normal force at node 1 (compression) and `3.60` at node 2 (tension), through zero at mid-span.
@@ -148,7 +148,7 @@ show: [nodeLabels]
 
 The angle turns the node's own axes. In the default axes, x right and z down, a negative angle turns them counter-clockwise on screen. [Inclined supports](/essentials/nodes-supports#inclined-skewed-supports) has more.
 
-The roller now rolls along the slope, so its reaction is perpendicular to the member: $12 \cdot 2 / 5 = 4.8$ kN, from moments about node 1. The pin takes the rest, and with it the whole normal force: −7.2 kN at node 1, zero at node 2. (EduBeam may label node 2 `-0.00`, a trace left by rounding the angle to −36.87°.)
+The roller now rolls along the slope, so its reaction is perpendicular to the member: $12 \cdot 2 / 5 = 4.8$ kN, from moments about node 1. The pin takes the rest, and with it the whole normal force: −7.2 kN at node 1, zero at node 2.
 
 ::model-figure{caption="The roller at node 2 turned by −36.87° to roll along the slope: the normal force runs from −7.2 kN to zero"}
 ---

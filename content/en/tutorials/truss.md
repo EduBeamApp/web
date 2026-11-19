@@ -97,7 +97,7 @@ Positive `Fz` points down. Every bar at a joint is hinged, so nothing holds the 
 
 In the display options at the top right of the viewer (the cog shows and hides them), untick **Deformed shape** and **M<sub>y</sub> (x)**, as there is no bending in a truss, and tick **N (x)**. Tension is positive, and EduBeam labels the forces in kN with two decimals.
 
-- Both supports read `30.00` upward; the pin has no horizontal arrow, as it carries no horizontal force.
+- Both supports read `30.00` upward; the pin's horizontal reaction reads `0.00`, as no horizontal load acts.
 - The bottom chord reads `40.00` in all three bars, tension; the top chord `-40.00`, compression.
 - The middle diagonal, 5–3, carries nothing, so it has no label, as in the figure at the top.
 - **Results** tab → **Nodal results**: node 2 moves down by $D_z$ = `2.2937 · 10⁻³ m`, that is 2.294 mm.
@@ -184,7 +184,7 @@ section: { a: 0.002, iy: 1.0e-6, h: 0.1 }
 ---
 ::
 
-**Remove the middle diagonal.** Delete element 8. The middle panel becomes a hinged rectangle that can shear sideways. EduBeam shows no results, reports *The hinges at node 2, 3, 5, 6 let the structure move.*, the four corners of that panel, and animates the motion.
+**Remove the middle diagonal.** Delete element 8. The middle panel becomes a hinged rectangle that can shear sideways. EduBeam shows no results, reports *The hinges at nodes 2, 3, 5, 6 let the structure move.*, the four corners of that panel, and animates the motion.
 
 **Untick all the hinges** in the **Elements** table. The truss becomes a frame with rigid joints. Tick **M<sub>y</sub> (x)**: the bending moments stay below 0.1 kNm and the normal forces change by less than 0.1 %. That is why the pin-jointed idealisation works for a triangulated truss.
 

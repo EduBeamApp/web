@@ -190,7 +190,7 @@ show: [nodeLabels]
 ---
 ::
 
-**Přidejte druhý kloub.** Zaškrtněte i kloub na začátku prvku 2, v uzlu 2. Dva klouby v příčli na dvou kloubově uložených sloupech tvoří mechanismus. EduBeam nezobrazí žádné výsledky, vypíše *Klouby v uzlu 2, 3 umožňují konstrukci pohyb.* a pohyb ukáže animací.
+**Přidejte druhý kloub.** Zaškrtněte i kloub na začátku prvku 2, v uzlu 2. Dva klouby v příčli na dvou kloubově uložených sloupech tvoří mechanismus. EduBeam nezobrazí žádné výsledky, vypíše *Klouby v uzlech 2, 3 umožňují konstrukci pohyb.* a pohyb ukáže animací.
 
 ## Co dál {#next-steps}
 

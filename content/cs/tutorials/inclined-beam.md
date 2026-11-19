@@ -91,7 +91,7 @@ Nosník je vyřešený, jakmile zadáte zatížení. V možnostech zobrazení v
 
 EduBeam popisuje průběhy a reakce v kN a kNm na dvě desetinná místa, takže uvidíte:
 
-- V každé podpoře `6,00` směrem nahoru. Pevný kloub nemá vodorovnou šipku: nepřenáší žádnou vodorovnou sílu.
+- V každé podpoře `6,00` směrem nahoru. Vodorovná reakce v pevném kloubu ukazuje `0,00`: žádná vodorovná síla nepůsobí.
 - Uprostřed rozpětí vrchol ohybového momentu `6,00` kNm.
 - Posouvající sílu `4,80` kN v uzlu 1 a `-4,80` v uzlu 2.
 - Normálovou sílu `-3,60` kN v uzlu 1 (tlak) a `3,60` v uzlu 2 (tah), uprostřed rozpětí nulovou.
@@ -148,7 +148,7 @@ show: [nodeLabels]
 
 Úhel natáčí vlastní osy uzlu. Ve výchozích osách (x doprava, z dolů) je záporný úhel natočí na obrazovce proti směru hodinových ručiček. Více najdete v kapitole [Šikmé podpory](/cs/essentials/nodes-supports#inclined-skewed-supports).
 
-Posuvný kloub se teď posouvá podél sklonu, takže jeho reakce je kolmá k prvku: z momentové podmínky k uzlu 1 vychází $12 \cdot 2 / 5 = 4{,}8$ kN. Zbytek převezme pevný kloub, a s ním i celou normálovou sílu: −7,2 kN v uzlu 1, nula v uzlu 2. (EduBeam může u uzlu 2 ukázat `-0,00`, stopu po zaokrouhlení úhlu na −36,87°.)
+Posuvný kloub se teď posouvá podél sklonu, takže jeho reakce je kolmá k prvku: z momentové podmínky k uzlu 1 vychází $12 \cdot 2 / 5 = 4{,}8$ kN. Zbytek převezme pevný kloub, a s ním i celou normálovou sílu: −7,2 kN v uzlu 1, nula v uzlu 2.
 
 ::model-figure{caption="Posuvný kloub v uzlu 2 natočený o −36,87°, aby se posouval podél sklonu: normálová síla probíhá od −7,2 kN do nuly"}
 ---
