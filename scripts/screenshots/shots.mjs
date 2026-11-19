@@ -367,7 +367,8 @@ const viewerSettings = async (page) => {
     .filter({ hasText: t('tabView.settings') })
     .first()
     .click();
-  await page.getByText(t('settings.viewer_settings'), { exact: true }).first().click();
+  // The last match: in Korean the tab strip itself reads 뷰어 설정 (viewer, settings)
+  await page.getByText(t('settings.viewer_settings'), { exact: true }).last().click();
   await wait(page, 600);
 };
 
