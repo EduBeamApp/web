@@ -181,7 +181,7 @@
         }
       },
       "answerTitle": "Réponse : les efforts dans les barres",
-      "answerBody": "La traction est positive. La membrure inférieure est tendue ; la membrure supérieure et les deux montants d’extrémité sont comprimés ; les diagonales intérieures sont alternativement tendues et comprimées.",
+      "answerBody": "La traction est positive. La membrure inférieure est tendue ; la membrure supérieure et les deux diagonales d’extrémité sont comprimées ; les diagonales intérieures sont alternativement tendues et comprimées.",
       "prevSlide": "Diapositive précédente",
       "nextSlide": "Diapositive suivante"
     },

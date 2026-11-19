@@ -181,7 +181,7 @@
         }
       },
       "answerTitle": "Lösung: die Stabkräfte",
-      "answerBody": "Zug ist positiv. Der Untergurt ist gezogen, der Obergurt und beide Endpfosten sind gedrückt, und in den inneren Diagonalen wechseln sich Zug und Druck ab.",
+      "answerBody": "Zug ist positiv. Der Untergurt ist gezogen, der Obergurt und beide Enddiagonalen sind gedrückt, und in den inneren Diagonalen wechseln sich Zug und Druck ab.",
       "prevSlide": "Vorherige Folie",
       "nextSlide": "Nächste Folie"
     },
