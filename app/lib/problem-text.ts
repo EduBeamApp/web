@@ -20,11 +20,14 @@ const listFormat = (locale: string) => new Intl.ListFormat(locale === 'en' ? 'en
 
 /**
  * Where Intl's list differs from how the language is written: Chinese joins Latin labels with a bare 和 ("F和H")
- * but puts a space between Han and Latin ("F 和 H"); Hindi writes no comma before और ("H, J और L").
+ * but puts a space between Han and Latin ("F 和 H"); Hindi writes no comma before और ("H, J और L"); Thai
+ * glues และ to both items ("AและB").
  */
 const writtenList = (text: string, locale: string) => {
   if (locale.startsWith('zh')) return text.replace(/([A-Za-z0-9])(和)/g, '$1 $2').replace(/(和)([A-Za-z0-9])/g, '$1 $2')
   if (locale.startsWith('hi')) return text.replace(', और ', ' और ')
+  // Thai puts a space before และ, and after it only before a Latin label ("A และ B", "จาก A และโมเมนต์")
+  if (locale.startsWith('th')) return text.replace(/ ?และ/g, ' และ').replace(/และ([A-Za-z0-9])/g, 'และ $1')
   return text
 }
 
