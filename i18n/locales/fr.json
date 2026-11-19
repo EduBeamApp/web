@@ -1,13 +1,16 @@
 {
   "meta": {
-    "description": "Calcul des structures en ligne : poutres, portiques et treillis plans dans le navigateur."
+    "description": "Calcul des structures 2D gratuit en ligne : poutres, portiques et treillis résolus instantanément dans votre navigateur."
   },
   "nav": {
     "guide": "Guide",
     "tutorials": "Tutoriels",
     "examples": "Exemples",
     "faq": "FAQ",
-    "openApp": "Ouvrir l’application"
+    "theory": "Théorie",
+    "openApp": "Ouvrir l’application",
+    "libraries": "Bibliothèques",
+    "practice": "S’entraîner"
   },
   "docs": {
     "onThisPage": "Sur cette page",
@@ -20,13 +23,13 @@
   },
   "components": {
     "loadsTitle": "Aperçu des types de charges",
-    "loadsLede": "Voici à quoi ressemblent les types de charges courants dans EduBeam. Chaque carte est un modèle résolu en direct et s’ouvre dans l’application exactement tel qu’il est défini.",
+    "loadsLede": "Voici à quoi ressemblent les types de charges courants dans EduBeam. Chaque carte est un modèle calculé en direct, qui s’ouvre dans l’application exactement tel qu’il est défini.",
     "openInApp": "Ouvrir dans EduBeam",
     "simplySupportedBeam": "Poutre sur deux appuis",
-    "udlBlurb": "Travée sur articulation et appui simple sous 12 kN/m : les diagrammes classiques d’effort tranchant et de moment.",
-    "trapezoidalBlurb": "Une charge qui croît de 4 à 14 kN/m sur la travée de droite.",
-    "concentratedBlurb": "Une seule charge de 18 kN vers le bas à mi-travée, sans nœud supplémentaire.",
-    "nodalBlurb": "Une charge de 20 kN sur l’appui intermédiaire, pour vérifier réactions et flèches.",
+    "udlBlurb": "Travée sur articulation et appui simple sous 12 kN/m : les diagrammes classiques d’effort tranchant et de moment fléchissant.",
+    "trapezoidalBlurb": "Une charge qui croît de 4 à 14 kN/m sur la travée de droite.",
+    "concentratedBlurb": "Une charge de 18 kN dans la travée de gauche, à 2 m de l’appui, sans nœud en dessous.",
+    "nodalBlurb": "Une charge de 20 kN sur le nœud entre les deux travées : le diagramme des moments y forme un angle.",
     "temperatureBlurb": "Une différence de température sur la hauteur (dessus plus chaud que dessous) et la courbure qu’elle provoque.",
     "promoTitle": "Passez vos portiques",
     "promoAccent": "en 3D.",
@@ -58,33 +61,608 @@
     "items": {
       "welcome": {
         "title": "Poutre hyperstatique",
-        "blurb": "Poutre hyperstatique de 3 m, encastrée et sur appui simple, sous une charge uniformément répartie de 10 kN/m."
+        "blurb": "Poutre hyperstatique de 3 m, encastrée et sur appui simple, sous une charge uniformément répartie de 10 kN/m."
       },
       "cantilever": {
         "title": "Console",
-        "blurb": "Console de 4 m reprenant une charge nodale de 18 kN vers le bas, mettant en évidence la courbure et la flèche en bout."
+        "blurb": "Console de 4 m reprenant une charge nodale de 18 kN vers le bas, mettant en évidence la courbure et la flèche en bout."
       },
       "pratt": {
         "title": "Treillis Warren",
-        "blurb": "Treillis Warren simple avec des charges nodales de 8 kN, montrant la répartition des efforts normaux et les déplacements."
+        "blurb": "Treillis Warren simple avec des charges nodales de 8 kN, montrant la répartition des efforts normaux et les déplacements."
       },
       "continuous": {
         "title": "Poutre continue à trois travées",
-        "blurb": "Travées de 5+6+5 m avec charge répartie + ponctuelle + répartie pour comparer la courbure et les rotations sur appuis."
+        "blurb": "Travées de 5+6+5 m avec charge répartie + ponctuelle + répartie pour comparer la courbure et les rotations sur appuis."
       },
       "portal": {
         "title": "Portique sous chargement",
-        "blurb": "Traverse de 8 m sur poteaux de 6 m sous charge répartie de toiture et charges latérales + verticales aux angles, pour vérifier le déplacement latéral et la flexion."
+        "blurb": "Traverse de 8 m sur poteaux de 6 m sous charge répartie de toiture et charges latérales + verticales aux angles, pour vérifier le déplacement latéral et la flexion."
       },
       "temperature": {
         "title": "Charge thermique",
-        "blurb": "Poutre sur appuis simples de 8 m soumise à une charge thermique uniforme et non uniforme."
+        "blurb": "Poutre sur appuis simples de 8 m soumise à une charge thermique uniforme et non uniforme."
       }
     }
   },
   "search": {
     "label": "Rechercher",
     "placeholder": "Rechercher dans la documentation",
-    "noResults": "Aucun résultat pour « {query} »"
+    "noResults": "Aucun résultat pour « {query} »",
+    "shortcut": "Ctrl K"
+  },
+  "home": {
+    "seo": {
+      "title": "EduBeam : calcul des structures gratuit en ligne",
+      "description": "Calcul des structures 2D gratuit dans le navigateur : dessinez poutres, portiques et treillis, chargez-les et obtenez aussitôt N, V, M, réactions et flèches."
+    },
+    "hero": {
+      "title": "Poutres, portiques, treillis.",
+      "lede": "EduBeam est une application gratuite de calcul des structures pour poutres, portiques et treillis. Dessinez un modèle dans votre navigateur : ses diagrammes, ses réactions et ses flèches se mettent à jour à chaque modification.",
+      "launch": "Lancer EduBeam",
+      "guide": "Lire le guide",
+      "note": "Gratuit et open source. Sans installation ni compte."
+    },
+    "steps": {
+      "title": "Du croquis aux diagrammes en quatre étapes",
+      "lede": "Dans l’ordre que vous suivriez sur papier. Le démarrage rapide vous fait modéliser une vraie poutre en dix minutes environ.",
+      "link": "Suivre le démarrage rapide",
+      "items": {
+        "nodes": {
+          "label": "Nœuds",
+          "title": "Placez les nœuds",
+          "body": "Cliquez sur la grille ou saisissez les coordonnées. Ici, les quatre angles d’un portique de 6 m de large et 4 m de haut."
+        },
+        "elements": {
+          "label": "Barres",
+          "title": "Reliez-les par des barres",
+          "body": "Reliez les nœuds par des éléments poutre et attribuez-leur un matériau et une section : une section de la bibliothèque, ou un polygone que vous dessinez."
+        },
+        "loads": {
+          "label": "Appuis et charges",
+          "title": "Ajoutez appuis et charges",
+          "body": "Une articulation au pied de chaque poteau, 10 kN/m sur la traverse et une force horizontale de 15 kN à l’angle supérieur gauche."
+        },
+        "results": {
+          "label": "Résultats",
+          "title": "Lisez les résultats",
+          "body": "Le diagramme des moments, tracé côté tendu, et les réactions apparaissent dès que le portique est stable. Ces valeurs sont celles d’EduBeam, calculées sur cette page."
+        }
+      }
+    },
+    "examples": {
+      "title": "Ouvrez un modèle résolu en un clic",
+      "lede": "Chacun est calculé sur cette page, par le même solveur que l’application. Ouvrez-en un dans EduBeam et modifiez-le.",
+      "link": "Tous les exemples"
+    },
+    "verify": {
+      "title": "Vérifié sur les cas d’école",
+      "lede": "EduBeam résout chaque modèle par la méthode des éléments finis. Pour les cas classiques, il donne la solution analytique au dernier chiffre près. Votre navigateur a calculé la colonne de droite au chargement de cette page.",
+      "case": "Cas",
+      "formula": "Formule",
+      "hand": "À la main",
+      "edubeam": "EduBeam",
+      "link": "Plus de cas de référence",
+      "steel": "Acier IPE 200 : E = 210 GPa, I = 1943 cm⁴. La déformation d’effort tranchant est négligée, comme le supposent les formules analytiques.",
+      "cases": {
+        "ssMoment": "Poutre sur deux appuis, 12 kN/m sur 6 m : moment maximal",
+        "ssDeflection": "Même poutre : flèche maximale",
+        "cantilever": "Console de 4 m, 18 kN en bout : moment à l’encastrement",
+        "fixed": "Poutre bi-encastrée, 10 kN/m sur 6 m : moment aux extrémités",
+        "propped": "Poutre encastrée-appuyée, 10 kN/m sur 6 m : réaction de l’appui simple"
+      }
+    },
+    "teaching": {
+      "title": "Conçu pour l’amphi",
+      "lede": "Mettez un modèle dans vos diapositives ou vos notes de cours : chaque étudiant ouvre exactement le même.",
+      "link": "Enseigner avec EduBeam",
+      "slideCourse": "Statique",
+      "slideTitle": "Cours 7 : treillis",
+      "slideBody": "Un treillis Warren sous trois charges nodales de 8 kN. Quelles barres sont tendues ?",
+      "shareLabel": "Lien de partage",
+      "copy": "Copier",
+      "copied": "Copié",
+      "items": {
+        "share": {
+          "title": "Un modèle, c’est un lien",
+          "body": "Tout le modèle tient dans l’URL. Mettez-le dans un devoir : il s’ouvrira exactement tel que vous l’avez laissé, même des années plus tard."
+        },
+        "embed": {
+          "title": "Dans vos diapositives",
+          "body": "Le mode visionneuse affiche le modèle résolu sans les outils d’édition, pour une diapositive ou une page web."
+        },
+        "mechanism": {
+          "title": "Explique ce qui ne va pas",
+          "body": "Quand une structure est un mécanisme, EduBeam montre comment elle bougerait au lieu de simplement refuser le calcul."
+        },
+        "languages": {
+          "title": "Leur langue, leurs unités",
+          "body": "Les étudiants travaillent dans l’une des 18 langues proposées, en unités SI ou américaines, avec les axes de leur manuel."
+        }
+      },
+      "answerTitle": "Réponse : les efforts dans les barres",
+      "answerBody": "La traction est positive. La membrure inférieure est tendue ; la membrure supérieure et les deux montants d’extrémité sont comprimés ; les diagonales intérieures sont alternativement tendues et comprimées.",
+      "prevSlide": "Diapositive précédente",
+      "nextSlide": "Diapositive suivante"
+    },
+    "final": {
+      "title": "Dessinez votre première poutre.",
+      "lede": "Ouvrez EduBeam et choisissez « Dessiner votre première poutre ». Un court exercice guidé vous mène d’un écran vide à une poutre appuyée et chargée, avec ses diagrammes.",
+      "paths": {
+        "quickStart": {
+          "title": "Démarrage rapide",
+          "body": "Modélisez une poutre pas à pas et vérifiez-la à la main. 10 minutes."
+        },
+        "examples": {
+          "title": "Exemples",
+          "body": "Des modèles résolus à ouvrir, modifier et étudier."
+        },
+        "teaching": {
+          "title": "Enseignement",
+          "body": "Liens de partage, diapositives et exercices pour votre cours."
+        }
+      }
+    },
+    "model": {
+      "title": "Ce que vous pouvez modéliser",
+      "lede": "Des structures planes résolues par la méthode des éléments finis, avec les appuis, les charges et les résultats d’un cours de statique.",
+      "supports": {
+        "title": "Appuis",
+        "items": {
+          "pin": "Articulation",
+          "roller": "Appui simple",
+          "fixed": "Encastrement",
+          "slider": "Glissière",
+          "angled": "Inclinés d’un angle quelconque"
+        },
+        "note": "Ainsi que des tassements et des rotations imposés."
+      },
+      "loads": {
+        "title": "Charges",
+        "items": {
+          "point": "Ponctuelle",
+          "uniform": "Uniforme",
+          "trapezoidal": "Trapézoïdale",
+          "moment": "Moment",
+          "temperature": "Thermique"
+        },
+        "note": "Aux nœuds ou en tout point d’une barre, en axes locaux ou globaux."
+      },
+      "sections": {
+        "title": "Sections",
+        "items": {
+          "i": "I et H",
+          "hollow": "Caisson",
+          "solid": "Pleine",
+          "tube": "Tube",
+          "polygon": "Votre polygone"
+        },
+        "note": "IPE, HEA, AISC W et HSS de la bibliothèque, ou tout polygone que vous dessinez."
+      },
+      "results": {
+        "title": "Résultats",
+        "note": "Effort normal, effort tranchant, moment fléchissant et déformée, avec les réactions et la valeur en tout point."
+      },
+      "facts": {
+        "elements": {
+          "title": "Poutres de Timoshenko",
+          "body": "La déformation d’effort tranchant là où elle compte ; pour les barres élancées, les résultats rejoignent la théorie d’Euler–Bernoulli."
+        },
+        "structures": {
+          "title": "Poutres, portiques, treillis",
+          "body": "Dans le plan, avec des rotules à n’importe quelle extrémité de barre."
+        },
+        "sharing": {
+          "title": "Liens et fichiers",
+          "body": "Un modèle entier dans un lien ou un fichier projet ; les dessins en PNG ou SVG, les tableaux en CSV."
+        },
+        "settings": {
+          "title": "18 langues",
+          "body": "Unités SI ou américaines, axe z vers le bas ou axe y vers le haut des manuels."
+        }
+      }
+    },
+    "heritage": {
+      "title": "Open source, né dans l’enseignement",
+      "body": "EduBeam prolonge l’EduBeam de bureau d’origine, créé au département de mécanique de la Faculté de génie civil de l’Université technique tchèque de Prague (ČVUT), et ouvre toujours les fichiers de session de ce programme. La version web est gratuite et open source, tout comme {'@'}edubeam/fem, le solveur qui calcule chaque valeur de cette page.",
+      "github": "EduBeam sur GitHub",
+      "solver": "{'@'}edubeam/fem sur GitHub",
+      "team": "Qui développe EduBeam"
+    }
+  },
+  "error": {
+    "notFoundTitle": "Page introuvable",
+    "notFound": "Il n’y a aucune page à cette adresse. Elle a peut-être été déplacée, ou le lien contient une faute de frappe.",
+    "otherTitle": "Une erreur s’est produite",
+    "other": "Impossible d’afficher cette page. La recharger suffit généralement.",
+    "home": "Page d’accueil",
+    "guide": "Lire le guide",
+    "message": "Les appuis ne maintiennent pas la structure : elle peut encore tourner librement.",
+    "figure": "Une poutre sur une seule articulation, privée de son second appui, qui tourne librement autour de l’articulation sous sa charge"
+  },
+  "problems": {
+    "families": {
+      "simple": {
+        "name": "Poutre sur deux appuis",
+        "skill": "Équilibre d’une poutre",
+        "hint": "Écrire l’équilibre des moments par rapport à A pour obtenir la réaction en B, puis celui des forces verticales pour la réaction en A. Le moment maximal se trouve là où l’effort tranchant s’annule, ou sous une charge ponctuelle."
+      },
+      "cantilever": {
+        "name": "Console",
+        "skill": "Un encastrement",
+        "hint": "Toutes les réactions sont à l’encastrement : écrire l’équilibre des forces verticales, puis celui des moments par rapport à A. Le moment maximal d’une console se trouve à l’encastrement."
+      },
+      "overhang": {
+        "name": "Poutre sur deux appuis avec porte-à-faux",
+        "skill": "Moment négatif sur appui",
+        "hint": "Écrire l’équilibre des moments par rapport à A pour obtenir la réaction en B. Comparer ensuite deux candidats au moment maximal : dans la travée, là où V = 0, et sur l’appui B, où le porte-à-faux crée un moment négatif."
+      },
+      "gerber": {
+        "name": "Poutre Gerber",
+        "skill": "Une rotule intérieure",
+        "hint": "Commencer par la partie GC : elle repose sur la rotule G et sur l’appui simple C, et une rotule ne transmet aucun moment. Charger ensuite la partie ABG de la force que lui transmet la rotule, puis la résoudre comme une poutre sur deux appuis avec porte-à-faux."
+      },
+      "threeHinged": {
+        "name": "Portique à trois articulations",
+        "skill": "Poussée et rotule à la clé",
+        "hint": "Les équilibres des moments par rapport à A et par rapport à E donnent les réactions verticales. Couper ensuite à la rotule à la clé C, où M = 0, et écrire l’équilibre des moments par rapport à C pour l’une des deux moitiés : cela donne la poussée horizontale."
+      },
+      "truss": {
+        "name": "Treillis Warren",
+        "skill": "Méthode des nœuds et des sections",
+        "hint": "Calculer les réactions en considérant le treillis entier. Couper ensuite trois barres, dont la barre cherchée, et écrire l’équilibre des moments par rapport au nœud où se rejoignent les deux autres ; pour une diagonale, écrire plutôt l’équilibre des forces verticales."
+      },
+      "continuous": {
+        "name": "Poutre continue à deux travées",
+        "skill": "Hyperstatique de degré 1",
+        "hint": "Une seule inconnue hyperstatique : prendre comme inconnue le moment sur l’appui B. L’équation des trois moments, avec M = 0 en A et en C, le donne directement ; les réactions s’en déduisent ensuite travée par travée."
+      },
+      "portal": {
+        "name": "Portique bi-articulé",
+        "skill": "Un portique à nœuds rigides",
+        "hint": "Une seule inconnue hyperstatique : libérer la réaction horizontale en D, calculer le déplacement horizontal de D sous les charges, puis sous une force unité appliquée en D (principe des travaux virtuels, avec les diagrammes de M), et écrire que le déplacement total est nul."
+      }
+    },
+    "statement": {
+      "simple": "Une poutre de {L} m de portée repose sur un appui articulé en A et un appui simple en B. Elle porte {loads}.",
+      "cantilever": "Une console de {L} m, encastrée en A, porte q = {q} kN/m sur toute sa longueur et F = {F} kN à l’extrémité libre B.",
+      "cantileverMoment": "Une console de {L} m, encastrée en A, porte q = {q} kN/m sur toute sa longueur, F = {F} kN à l’extrémité libre B et, également en B, un moment antihoraire de {M} kNm.",
+      "overhang": "Une poutre de {L} m de portée, sur un appui articulé en A et un appui simple en B, se prolonge par un porte-à-faux de {c} m jusqu’en C. Elle porte q = {q} kN/m sur la travée et F = {F} kN à l’extrémité C.",
+      "overhangAll": "Une poutre de {L} m de portée, sur un appui articulé en A et un appui simple en B, se prolonge par un porte-à-faux de {c} m jusqu’en C. Elle porte q = {q} kN/m sur toute sa longueur et F = {F} kN à l’extrémité C.",
+      "gerber": "Une poutre avec une rotule intérieure en G, située {g} m au-delà de B, repose sur un appui articulé en A et sur des appuis simples en B et C : AB = {L1} m, GC = {L3} m.",
+      "gerberLoad": "Elle porte q = {q} kN/m sur toute sa longueur.",
+      "gerberLoadForce": "Elle porte q = {q} kN/m sur toute sa longueur et F = {F} kN au milieu de la travée AB.",
+      "threeHinged": "Un portique de {L} m de large et {H} m de haut repose sur des appuis articulés en A et E, avec une rotule à la clé C.",
+      "threeHingedWhole": "La traverse porte q = {q} kN/m sur toute sa longueur.",
+      "threeHingedHalf": "La traverse porte q = {q} kN/m sur sa moitié gauche.",
+      "threeHingedWholeForce": "La traverse porte q = {q} kN/m sur toute sa longueur, et une force F = {F} kN pousse B vers la droite.",
+      "threeHingedHalfForce": "La traverse porte q = {q} kN/m sur sa moitié gauche, et une force F = {F} kN pousse B vers la droite.",
+      "truss": "Un treillis Warren de {panels}, chacun de {d} m de long et {h} m de haut, repose sur un appui articulé en A et un appui simple en {end}.",
+      "panels": "{n} panneau | {n} panneaux",
+      "trussLoadAll": "Chaque nœud de la membrure supérieure porte une charge F = {F} kN dirigée vers le bas.",
+      "trussLoad": "Les nœuds {joints} portent chacun une charge F = {F} kN dirigée vers le bas.",
+      "continuous": "Une poutre continue à deux travées, AB = {L1} m et BC = {L2} m, repose sur un appui articulé en A et sur des appuis simples en B et C. Elle porte q = {q} kN/m sur la travée de gauche.",
+      "continuousBoth": "Une poutre continue à deux travées, AB = {L1} m et BC = {L2} m, repose sur un appui articulé en A et sur des appuis simples en B et C. Elle porte q = {q} kN/m sur les deux travées.",
+      "portal": "Un portique à nœuds rigides de {L} m de large et {H} m de haut repose sur des appuis articulés en A et D. La traverse BC porte q = {q} kN/m.",
+      "portalForce": "Un portique à nœuds rigides de {L} m de large et {H} m de haut repose sur des appuis articulés en A et D. La traverse BC porte q = {q} kN/m, et une force F = {F} kN pousse B vers la droite.",
+      "advancedNote": "EI est constant ; négliger la déformation d’effort tranchant."
+    },
+    "load": {
+      "udlSpan": "q = {q} kN/m sur toute la portée",
+      "pointFromA": "F = {F} kN à {a} m de A",
+      "momentAtB": "un moment antihoraire de {M} kNm en B"
+    },
+    "task": {
+      "beam": "Déterminer les réactions d’appui et le moment fléchissant maximal.",
+      "bar": "Déterminer les réactions d’appui et l’effort dans la barre {bar}."
+    },
+    "answer": {
+      "horizontal": "Réaction horizontale en {node}",
+      "vertical": "Réaction verticale en {node}",
+      "fixingMoment": "Moment d’encastrement en {node}",
+      "bar": "Effort dans la barre {bar}",
+      "largestMoment": "Moment fléchissant maximal, en valeur absolue"
+    }
+  },
+  "library": {
+    "getStarted": "Prise en main",
+    "by": "Par {author}",
+    "fromRepo": "Pas encore sur npm : la ligne ci-dessus l’installe depuis GitHub.",
+    "comingToNpm": "Bientôt sur npm. Le code source est sur GitHub."
+  },
+  "solver": {
+    "tagline": "Un solveur éléments finis pour portiques plans, écrit en TypeScript.",
+    "seo": {
+      "title": "{'@'}edubeam/fem : un solveur MEF de portiques plans en TypeScript",
+      "description": "Solveur éléments finis en TypeScript pour poutres, portiques et treillis plans : rotules, charges sur barre, thermiques et tassements, cas de charge, réactions et efforts internes exacts. Le moteur d’EduBeam."
+    },
+    "run": {
+      "title": "Exécuté sur cette page",
+      "lede": "À gauche, le code, exécuté dans votre navigateur au chargement de la page. À droite, les valeurs qu’il renvoie ; la figure est dessinée par {plot} à partir du même solveur.",
+      "plusShear": "{formula}, plus le terme d’effort tranchant"
+    },
+    "features": {
+      "title": "Ce qu’il contient",
+      "analyses": {
+        "title": "Analyses",
+        "body": "Statique linéaire, avec autant de cas de charge que nécessaire. Les diagrammes sont exacts entre les nœuds : aucun maillage à affiner."
+      },
+      "elements": {
+        "title": "Éléments",
+        "body": "Une poutre de Timoshenko à deux nœuds dans le plan x–z. Avec des rotules aux deux extrémités, c’est une barre de treillis."
+      },
+      "loads": {
+        "title": "Charges",
+        "body": "Forces et moments nodaux ; charges ponctuelles, uniformes et trapézoïdales sur les barres ; température ; tassements."
+      },
+      "results": {
+        "title": "Résultats",
+        "body": "N, V et M en tout point d’une barre, déformées, efforts d’extrémité, déplacements et réactions."
+      },
+      "reference": "Toutes les classes et méthodes"
+    },
+    "behind": {
+      "title": "Le moteur de calcul d’EduBeam",
+      "body": "Tous les diagrammes, réactions et flèches d’EduBeam, et toutes les figures de ce site, sont calculés par {name}.",
+      "link": "Découvrir EduBeam"
+    }
+  },
+  "plot": {
+    "tagline": "Des composants Vue qui dessinent les structures planes et leurs résultats, dans le style des figures de ce site.",
+    "seo": {
+      "title": "{'@'}edubeam/plot : diagrammes de structures pour Vue",
+      "description": "Composants Vue qui dessinent structures planes, charges, réactions et diagrammes N, V, M comme dans un manuel, pour pages de cours, diapositives, feuilles d’exercices et fichiers SVG."
+    },
+    "try": {
+      "title": "Essayez",
+      "lede": "Un portique calculé sur cette page par {'@'}edubeam/fem. Modifiez ce qui est dessiné ; le code suit.",
+      "labelStyle": "Style des étiquettes",
+      "horizontal": "Horizontal",
+      "axis": "Le long de l’ordonnée"
+    },
+    "teaching": {
+      "title": "Conçu pour les supports de cours",
+      "lede": "Un modèle écrit en code est une figure qui ne peut pas devenir obsolète : changez un nombre, et le dessin, les réactions et les diagrammes suivent. Une graine (valeur initiale du générateur aléatoire) choisit un nouvel exercice ; la même graine donne toujours le même. La page {practice} et le {exam} de ce site reposent sur ce principe.",
+      "practice": "Exercices d’entraînement",
+      "exam": "générateur d’examens"
+    },
+    "uses": {
+      "exercises": {
+        "title": "Exercices et examens",
+        "body": "Un exercice par étudiant à partir d’une graine, avec son corrigé, imprimé ou en figures pour LaTeX et Word."
+      },
+      "slides": {
+        "title": "Diapositives et notes de cours",
+        "body": "Des figures qui se construisent clic après clic dans Slidev, Vue ou Beamer, calculées en direct."
+      },
+      "embedding": {
+        "title": "Dans vos documentations et applications",
+        "body": "Vite, VitePress ou Nuxt, avec rendu côté serveur ou à partir de JSON précalculé."
+      },
+      "print": {
+        "title": "Fichiers pour l’impression",
+        "body": "Un SVG autonome aux couleurs fixes, pour Word, LaTeX et Inkscape."
+      }
+    },
+    "features": {
+      "title": "Ce qu’il fait",
+      "style": {
+        "title": "Dans le style des figures",
+        "body": "Barres, appuis, charges, réactions et diagrammes hachurés comme sur ce site, avec des cotes en chaîne et des réactions inconnues nommées pour les feuilles d’exercices."
+      },
+      "readable": {
+        "title": "Lisible à toute taille",
+        "body": "Le texte et les traits gardent leur taille en pixels ; les valeurs qui se chevaucheraient sont déplacées ou omises, jamais tronquées."
+      },
+      "exact": {
+        "title": "Exact",
+        "body": "Les diagrammes sont les polynômes mêmes du solveur : extremums trouvés exactement, sauts sous les charges ponctuelles dessinés comme des sauts."
+      },
+      "fits": {
+        "title": "S’intègre à la page",
+        "body": "Couleurs reprises de votre CSS, en thème clair et sombre. Rendu côté serveur, sans jamais capturer le défilement."
+      },
+      "components": "Toutes les props"
+    }
+  },
+  "practice": {
+    "seo": {
+      "title": "Exercices de statique avec correction immédiate {'|'} EduBeam",
+      "description": "Exercices de statique gratuits : poutres, portiques et treillis, avec de nouvelles valeurs à chaque fois. Calculez les réactions et le moment maximal ou l’effort dans une barre, vérifiez aussitôt, puis voyez les diagrammes.",
+      "ogTitle": "Exercices de statique avec correction immédiate",
+      "ogDescription": "Poutres, portiques et treillis, avec de nouvelles valeurs à chaque fois. Vérifiez aussitôt vos réactions et vos moments, puis voyez les diagrammes."
+    },
+    "title": "S’entraîner en statique",
+    "lede": "Un nouvel exercice à chaque fois, avec ses réponses exactes pour vérifier les vôtres. Résolvez-le sur papier, saisissez vos résultats, puis voyez les diagrammes.",
+    "codes": "Chaque exercice a un code, par exemple {code}. Le même code donne toujours le même exercice : partagez-le avec un camarade, ou ouvrez celui que votre enseignant vous a donné.",
+    "announce": "Nouvel exercice : {structure}, {code}.",
+    "structures": {
+      "title": "Structures",
+      "count": "{picked} sur {total}",
+      "legend": "Structures que « Nouvel exercice » peut proposer",
+      "determinate": "Isostatiques",
+      "indeterminate": "Hyperstatiques",
+      "note": "« Nouvel exercice » en choisit une au hasard."
+    },
+    "code": {
+      "label": "Code d’exercice",
+      "placeholder": "Code",
+      "open": "Ouvrir",
+      "error": "Ce n’est pas un code d’exercice. Un code est une lettre suivie d’un nombre, par exemple H2048."
+    },
+    "newProblem": "Nouvel exercice",
+    "copyLink": "Copier le lien",
+    "linkCopied": "Lien copié",
+    "barForces": "Efforts dans les barres, traction positive",
+    "answers": {
+      "title": "Vos réponses",
+      "note": "Les réactions sont dessinées sur l’exercice dans leur sens positif. Si l’une d’elles agit dans l’autre sens, sa valeur est négative.",
+      "field": "{label}, {direction}, en {unit}",
+      "fieldMagnitude": "{label}, en {unit}"
+    },
+    "positive": {
+      "right": "positive vers la droite",
+      "up": "positive vers le haut",
+      "counterClockwise": "positif dans le sens antihoraire",
+      "tension": "positif en traction",
+      "magnitude": "valeur absolue"
+    },
+    "mark": {
+      "correct": "correct",
+      "exact": "réponse exacte",
+      "sign": "signe ?",
+      "signLong": "bonne valeur, mauvais signe",
+      "wrong": "incorrect"
+    },
+    "verdict": {
+      "allRight": "Tout est juste. Les diagrammes sont maintenant dessinés sur l’exercice.",
+      "sign": "Réponses justes : {right} sur {total}. Là où figure « {sign} », la valeur est bonne, mais pas le sens.",
+      "some": "Réponses justes : {right} sur {total}. Les réponses à 1 % près sont acceptées.",
+      "revealed": "Les réponses exactes sont à côté de vos champs, et les diagrammes sont dessinés sur l’exercice."
+    },
+    "check": "Vérifier",
+    "nextProblem": "Exercice suivant",
+    "hint": "Indication",
+    "showAnswers": "Afficher les réponses",
+    "solved": "{n} exercice résolu sur cet appareil. | {n} exercices résolus sur cet appareil.",
+    "about": {
+      "answers": {
+        "title": "D’où viennent les réponses",
+        "body": "{solver}, le solveur d’EduBeam, résout chaque exercice dans votre navigateur, et {plot} le dessine. Le moment maximal est calculé exactement, et non lu sur une courbe échantillonnée."
+      },
+      "signs": {
+        "title": "Signes et unités",
+        "body": "Les réponses sont en kN et en kNm. Les charges agissent vers le bas, sauf indication contraire dans l’énoncé. Les réactions sont positives vers la droite, vers le haut et dans le sens antihoraire, comme l’indique chaque champ ; les efforts dans les barres sont positifs en traction. Les diagrammes suivent les {conventions} d’EduBeam.",
+        "conventions": "conventions de signes"
+      },
+      "teachers": {
+        "title": "Pour les enseignants",
+        "body": "Le {exam} imprime ces exercices sous forme de sujets d’examen, une version différente par étudiant, avec le corrigé. Grâce au code de chaque exercice, les étudiants peuvent ensuite vérifier leurs réponses ici.",
+        "exam": "générateur d’examens"
+      }
+    }
+  },
+  "exam": {
+    "seo": {
+      "title": "Générateur d’examens de statique : sujets imprimables avec corrigés {'|'} EduBeam",
+      "description": "Créez des sujets de statique dans votre navigateur : poutres, portiques et treillis aux valeurs générées, une version par étudiant, un corrigé et des figures SVG pour LaTeX et Word. Gratuit, rien à installer.",
+      "ogTitle": "Générateur d’examens de statique : sujets imprimables avec corrigés",
+      "ogDescription": "Poutres, portiques et treillis générés, une version par étudiant, un corrigé et des figures SVG. Gratuit, dans le navigateur."
+    },
+    "title": "Générateur d’examens",
+    "lede": "Des sujets d’examen de statique, une version différente par étudiant, avec le corrigé. Tout est créé dans votre navigateur et rien n’est envoyé nulle part ; les réglages sont enregistrés dans l’adresse de la page, si bien qu’un favori redonne les mêmes sujets.",
+    "defaultTitle": "Examen de statique",
+    "settings": {
+      "title": "Titre",
+      "subtitle": "Deuxième ligne",
+      "subtitlePlaceholder": "Cours, date, durée",
+      "problems": "Exercices",
+      "problem": "Exercice {n}",
+      "determinate": "Isostatiques",
+      "indeterminate": "Hyperstatiques",
+      "remove": "Supprimer l’exercice {n}",
+      "add": "Ajouter un exercice",
+      "problemsNote": "Chaque version comporte ces exercices, dans cet ordre, chacun avec ses propres valeurs. Jusqu’à {max}.",
+      "versions": "Versions",
+      "versionsNote": "Une par étudiant : jusqu’à {max}.",
+      "number": "Numéro d’examen",
+      "newNumber": "Nouveau",
+      "newNumberTitle": "Nouvelles valeurs pour tous les exercices",
+      "numberNote": "Le même numéro donne toujours les mêmes sujets.",
+      "onPapers": "Sur les sujets",
+      "nameLine": "Une ligne pour le nom de l’étudiant",
+      "working": "De la place pour les calculs",
+      "key": "Un corrigé à la fin",
+      "codes": "Codes d’exercice",
+      "codesNote": "Pour un devoir : les étudiants vérifient leurs réponses sur la page {practice}, qui montre la solution. À désactiver pour un examen.",
+      "practicePage": "Exercices d’entraînement"
+    },
+    "zipNote": "Le .zip contient toutes les figures et tous les corrigés en SVG, pour LaTeX et Word, ainsi que les réponses dans un tableau CSV pour la correction.",
+    "summary": {
+      "papers": "{n} sujet | {n} sujets",
+      "problems": "{n} exercice | {n} exercices",
+      "plain": "{papers} de {problems}",
+      "withKey": "{papers} de {problems}, avec le corrigé",
+      "withKeys": "{papers} de {problems}, avec les corrigés"
+    },
+    "jump": {
+      "label": "Aller à un sujet",
+      "placeholder": "Aller à…",
+      "papers": "Sujets",
+      "keys": "Corrigés",
+      "key": "Corrigé, version {n}"
+    },
+    "version": "Version {n}",
+    "download": "Télécharger le .zip",
+    "downloadTitle": "Toutes les figures et tous les corrigés en SVG, pour LaTeX et Word, ainsi que les réponses dans un tableau CSV pour la correction",
+    "print": "Imprimer",
+    "printLong": "Imprimer ou enregistrer en PDF",
+    "paper": {
+      "name": "Nom",
+      "rules": "Forces en kN, moments en kNm. Les charges agissent vers le bas, sauf indication contraire dans l’énoncé. Les réactions sont les forces que les appuis exercent sur la structure ; elles sont dessinées dans leur sens positif : vers la droite, vers le haut et dans le sens antihoraire. Une réponse négative agit dans l’autre sens. Les efforts dans les barres sont positifs en traction.",
+      "check": "Vérifiez vos réponses sur {url}"
+    },
+    "key": {
+      "title": "Corrigé",
+      "version": "{title}, version {n}",
+      "exam": "Examen n° {n}"
+    },
+    "tension": "traction +",
+    "solutionFigure": "{name} : solution"
+  },
+  "exerciseGenerator": {
+    "solveIt": "Résoudre cet exercice sur la page Exercices d’entraînement",
+    "exercise": "L’exercice",
+    "key": "Corrigé",
+    "solution": "Sa solution",
+    "caption": "Généré dans votre navigateur : la graine choisit la structure et ses valeurs, {'@'}edubeam/fem la résout et {'@'}edubeam/plot dessine l’énoncé et la solution. Les sujets complets viennent du {exam}.",
+    "exam": "générateur d’examens",
+    "newExercise": "Nouvel exercice"
+  },
+  "ui": {
+    "menu": "Menu",
+    "darkMode": "Mode sombre",
+    "lightMode": "Mode clair",
+    "language": "Langue : {name}",
+    "guideNav": "Guide",
+    "copy": "Copier",
+    "copied": "Copié",
+    "copyCode": "Copier le code",
+    "docs": "Documentation",
+    "elementSketch": "Un élément et ses axes locaux"
+  },
+  "heroFigure": {
+    "aria": "Une poutre sur deux appuis avec porte-à-faux, sous une charge uniforme et une charge ponctuelle mobile, avec ses diagrammes d’effort tranchant et de moment fléchissant et sa déformée",
+    "slider": "Position de la charge ponctuelle de 20 kN",
+    "loadAt": "à {x} m",
+    "hint": "Faites glisser la charge, ou placez le pointeur sur un diagramme pour en lire les valeurs.",
+    "fromA": "à {x} m de A",
+    "reactions": "réactions de {a} kN en A et de {b} kN en B",
+    "sagging": "moment positif maximal de {m} kNm",
+    "hogging": "moment négatif sur l’appui B de {m} kNm"
+  },
+  "plotTexts": {
+    "structure": "Structure",
+    "structureWith": "Structure avec {parts}",
+    "layers": {
+      "N": "le diagramme de l’effort normal",
+      "V": "le diagramme de l’effort tranchant",
+      "M": "le diagramme des moments fléchissants",
+      "w": "la déformée",
+      "reactions": "les réactions",
+      "loads": "les charges"
+    },
+    "loadHandle": "Position de la charge {load}",
+    "loadPosition": "à {metres} m du début de la poutre",
+    "stack": "Une poutre et ses charges",
+    "stackWith": "Une poutre et ses charges, avec en dessous {rows}",
+    "rows": {
+      "N": "le diagramme de l’effort normal",
+      "V": "le diagramme de l’effort tranchant",
+      "M": "le diagramme des moments fléchissants",
+      "w": "la flèche"
+    },
+    "temperatureUniform": "ΔT",
+    "temperatureGradient": "ΔTb − ΔTt"
   }
 }

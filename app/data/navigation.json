@@ -617,7 +617,9 @@
     "appLocale": "fr",
     "sidebar": [
       {
-        "text": "Premiers pas",
+        "text": "Pour commencer",
+        "icon": "lucide:flag",
+        "section": "guide",
         "items": [
           {
             "text": "Introduction",
@@ -626,28 +628,13 @@
           {
             "text": "Démarrage rapide (10 min)",
             "link": "/fr/guide/quick-start"
-          },
-          {
-            "text": "Exemples",
-            "link": "/fr/examples/"
           }
         ]
       },
       {
-        "text": "Tutoriels",
-        "items": [
-          {
-            "text": "Portique à trois articulations",
-            "link": "/fr/tutorials/three-hinged-frame"
-          },
-          {
-            "text": "Treillis plan",
-            "link": "/fr/tutorials/truss"
-          }
-        ]
-      },
-      {
-        "text": "Modélisation",
+        "text": "Créer un modèle",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
         "items": [
           {
             "text": "Interface utilisateur",
@@ -672,7 +659,9 @@
         ]
       },
       {
-        "text": "Résultats",
+        "text": "Lire les résultats",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
         "items": [
           {
             "text": "Résultats et diagrammes",
@@ -685,10 +674,12 @@
         ]
       },
       {
-        "text": "Fichiers et partage",
+        "text": "Partager et enseigner",
+        "icon": "lucide:presentation",
+        "section": "guide",
         "items": [
           {
-            "text": "Import, export et partage",
+            "text": "Fichiers, liens et export",
             "link": "/fr/essentials/import-export"
           },
           {
@@ -698,7 +689,9 @@
         ]
       },
       {
-        "text": "Référence",
+        "text": "Aide",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
         "items": [
           {
             "text": "Clavier, souris et tactile",
@@ -709,28 +702,75 @@
             "link": "/fr/reference/troubleshooting"
           },
           {
-            "text": "FAQ",
+            "text": "Foire aux questions",
             "link": "/fr/faq/"
           }
         ]
       },
       {
-        "text": "Manuel théorique",
+        "text": "Tutoriels",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
         "items": [
           {
-            "text": "Repère et conventions de signe",
+            "text": "Poutre inclinée",
+            "link": "/fr/tutorials/inclined-beam"
+          },
+          {
+            "text": "Portique à trois articulations",
+            "link": "/fr/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Treillis plan",
+            "link": "/fr/tutorials/truss"
+          },
+          {
+            "text": "Poutre continue et tassement d’appui",
+            "link": "/fr/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "S’entraîner",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Exercices d’entraînement",
+            "link": "/fr/practice"
+          },
+          {
+            "text": "Générateur d’examens",
+            "link": "/fr/exam"
+          },
+          {
+            "text": "Exemples",
+            "link": "/fr/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Manuel théorique",
+        "icon": "lucide:sigma",
+        "section": "theory",
+        "items": [
+          {
+            "text": "Repère et conventions de signes",
             "link": "/fr/elements/conventions"
           },
           {
-            "text": "Poutre",
+            "text": "Élément poutre",
             "link": "/fr/elements/beam"
           },
           {
-            "text": "Treillis",
+            "text": "Barre de treillis",
             "link": "/fr/elements/truss"
+          },
+          {
+            "text": "Comment EduBeam résout un modèle",
+            "link": "/fr/elements/analysis"
           }
-        ],
-        "collapsed": true
+        ]
       }
     ]
   },
