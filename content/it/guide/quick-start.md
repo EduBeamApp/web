@@ -1,150 +1,206 @@
 ---
-description: "Modella in circa dieci minuti una trave in acciaio semplicemente appoggiata con un carico uniforme, leggi reazioni, taglio e momento flettente e verificali a mano."
+description: "Modella in circa dieci minuti una trave in acciaio semplicemente appoggiata: materiale, sezione, nodi, vincoli e carico, poi leggi i risultati e verificali a mano."
+source: site
 ---
 
 # Avvio rapido
 
-In circa dieci minuti modellerai una trave in acciaio semplicemente appoggiata con un carico uniforme, leggerai reazioni, taglio e momento flettente e li confronterai con le formule dei manuali.
+In circa dieci minuti costruirai una trave in acciaio semplicemente appoggiata, ne leggerai reazioni, taglio, momento flettente e freccia, e verificherai a mano ogni numero. Apri EduBeam in una seconda scheda, o accanto a questa pagina, e segui i passi.
 
-::callout{type="tip" title="Segui passo passo"}
-Apri [run.edubeam.app](https://run.edubeam.app/?lang=it){target="_blank"} in una seconda scheda. Se c'è già un modello, usa **Cancella struttura** nella barra dell'app per partire da zero, e spunta *Elimina materiali* ed *Elimina sezioni* per ripartire completamente da capo. La cancellazione si annulla con <kbd>Ctrl</kbd>+<kbd>Z</kbd>, e il vecchio modello resta in **☰ → Strutture recenti**.
-
-Preferisci imparare facendo, con i suggerimenti sullo schermo? **☰ → Disegna la tua prima trave** ti guida con il mouse attraverso una trave simile.
+::div{.actions}
+[Apri EduBeam ↗](https://run.edubeam.app/?lang=it){target="_blank"} [Vai alla verifica a mano](#_8-check-by-hand)
 ::
 
-## Il problema {#the-problem}
+## L’esercizio {#the-problem}
+
+Una trave di 6 m poggia su una cerniera nel nodo 1 e su un carrello nel nodo 2 e porta su tutta la lunghezza un carico uniformemente distribuito di 12 kN/m. È un profilo in acciaio IPE 200: $E = 210$ GPa, $G = 81$ GPa, $A = 28{,}48\ \text{cm}^2$ e $I_y = 1943\ \text{cm}^4$. Tutti e quattro i valori vengono dalle librerie di EduBeam, quindi non devi cercare nulla.
+
+::model-figure{caption="La trave che costruirai: una campata di 6 m dal nodo 1 al nodo 2, con 12 kN/m"}
+---
+nodes: { 1: [0, 0], 2: [6, 0] }
+supports: { 1: pin, 2: roller }
+members: [[1, 2]]
+loads:
+  - { member: 1, qz: 12 }
+results: []
+show: [nodeLabels, dimensions]
+---
+::
+
+## Costruisci il modello {#build-the-model}
+
+::div{.steps}
+
+### Parti da un modello vuoto {#start-from-an-empty-model}
+
+Alla prima visita, una finestra di benvenuto ti chiede come vuoi iniziare. Scegli **SI (metrico)** in **Sistema di unità**, lascia **x a destra, z in basso** in **Sistema di coordinate** e premi **Salta per ora**. L’app mostra allora un piccolo telaio di esempio.
+
+1. Premi **Cancella struttura** nella barra dell’app (sullo smartphone si trova nel menu **☰**).
+2. Spunta **Elimina materiali** ed **Elimina sezioni**, poi premi **Conferma**.
+
+L’area di disegno ora è vuota e due messaggi in rosso avvisano che mancano ancora un materiale e una sezione. Li aggiungerai nei prossimi passi. Non perdi nulla: <kbd>Ctrl</kbd>+<kbd>Z</kbd> riporta indietro il telaio, che resta comunque anche in **☰ → Strutture recenti**.
+
+### Controlla le unità {#_1-check-the-units}
+
+L’indicatore in basso a destra nella vista elenca le unità usate da tutti i campi e da tutti i risultati. Questa pagina usa le unità SI, che l’indicatore mostra come `m m² kN kNm MPa`, e l’asse z rivolto verso il basso. Se l’indicatore mostra piedi e kip, fai clic su di esso e imposta **Sistema di unità** su **SI (metrico)**. Nello stesso punto, **Sistema di coordinate** deve essere **x a destra, z in basso**: con y verso l’alto un carico positivo punta verso l’alto e i segni di questa pagina non corrisponderebbero.
+
+![I pulsanti di griglia (G) e snap (S), il mirino e l’indicatore delle unità](/screenshots/it/ui-grid-units.webp){.shot-sm}
+
+### Aggiungi il materiale e la sezione {#_2-add-the-material-and-cross-section}
+
+Ogni elemento ha bisogno di un materiale e di una sezione, quindi aggiungili per primi, prendendoli dalle librerie.
+
+1. Apri la scheda **Materiali** nella barra inferiore e fai clic su **Libreria materiali**.
+2. Premi **+** sulla riga **Acciaio (S235)** ($E = 210\,000$ MPa, $G = 81\,000$ MPa). La libreria resta aperta per aggiungerne altri: chiudila con **Annulla**.
+3. Apri la scheda **Sezioni** e fai clic su **Libreria sezioni**.
+4. Scorri fino alla riga **IPE 200 (appross.)**, premi **+** e chiudi la libreria con **Annulla**.
+
+I due messaggi in rosso sono spariti e la scheda **Sezioni** elenca l’IPE 200:
+
+![L’IPE 200 nella scheda Sezioni: area, Iy, altezza e coefficiente di taglio](/screenshots/it/a-qs-cross-sections.webp)
+
+Se preferisci inserire valori tuoi, usa **Aggiungi materiale** e **Aggiungi sezione**. Il coefficiente di taglio, qui 0,3933, ricompare nella [verifica a mano](#_8-check-by-hand).
+
+### Aggiungi i nodi {#_3-add-the-nodes}
+
+1. Apri la scheda **Nodi**. Ci sono due pulsanti **Aggiungi nodo**: **+** apre una finestra di dialogo, quello con l’icona del cursore posiziona i nodi con il mouse. Fai clic su **+ Aggiungi nodo**.
+2. Lascia **Coordinata X** e **Coordinata Z** a `0` e premi **Aggiungi nodo**. La finestra si chiude e compare il nodo `1`.
+3. Fai di nuovo clic su **+ Aggiungi nodo**, inserisci `6` in **Coordinata X** e premi **Aggiungi nodo**. Questo è il nodo `2`.
+
+![La finestra Aggiungi nuovo nodo, in cui puoi assegnare subito anche i vincoli](/screenshots/it/qs-node.webp){.shot-md}
+
+### Collegali con un elemento {#_4-connect-them-with-an-element}
+
+Apri la scheda **Elementi** e fai clic su **+ Aggiungi elemento**. La finestra propone già **Nodo iniziale** `1`, **Nodo finale** `2`, il tuo materiale e la tua sezione. Premi **Aggiungi elemento**.
+
+![Aggiungi nuovo elemento: i due nodi di estremità, una cerniera facoltativa a ciascuna estremità, il materiale e la sezione](/screenshots/it/a-qs-element.webp){.shot-md}
+
+Tra i nodi compare una trave. Premi <kbd>F</kbd> per adattarla allo schermo. L’indicatore blu **Servono vincoli**, in alto a sinistra nella vista, spiega perché non ci sono ancora risultati.
+
+### Aggiungi i vincoli {#_5-add-the-supports}
+
+Torna alla scheda **Nodi**: all’inizio della colonna **GdL vincolati**, ogni riga ha un selettore del vincolo.
+
+- Nodo `1`: scegli **Cerniera**. Vengono spuntati `Dx` e `Dz`.
+- Nodo `2`: scegli **Carrello**. Viene spuntato solo `Dz`.
+
+![Il selettore del vincolo nella tabella Nodi](/screenshots/it/a-qs-support-picker.webp){.shot-lg}
+
+L’indicatore **Servono vincoli** scompare. Puoi anche fare clic su un nodo nella vista e scegliere **Vincoli del nodo**. La pagina [Nodi e vincoli](/it/essentials/nodes-supports#supports) elenca tutti i tipi di vincolo.
+
+### Aggiungi il carico {#_6-add-the-load}
+
+1. Apri la scheda **Carichi** e fai clic su **Aggiungi carico su elemento**.
+2. Lascia **Tipo di carico** su *Carico uniforme* ed **Elemento** su `1`.
+3. Inserisci `12` in **fz**, lascia **fx** a `0` e premi **Aggiungi carico su elemento**.
+
+![La finestra mostra un’anteprima del carico sull’elemento](/screenshots/it/a-qs-load.webp){.shot-md}
+
+Un `fz` positivo punta nel verso +z, cioè **verso il basso**, quindi un valore positivo è un carico gravitazionale. La casella **LCS** spuntata indica che il carico segue gli assi propri dell’elemento, cioè il suo sistema di coordinate locale (LCS); per una trave orizzontale disegnata da sinistra a destra coincidono con gli assi globali. Vedi le [convenzioni dei segni](/it/elements/conventions#loads).
+
+::
+
+## Leggi i risultati {#_7-read-the-results}
+
+EduBeam risolve la trave nel momento in cui inserisci il carico, e di nuovo dopo ogni modifica: non c’è un pulsante *Calcola*. Il pannello in alto a destra nella vista attiva e disattiva i disegni. **Deformata**, **M<sub>y</sub>(x)** e **Reazioni** sono attivi fin dall’inizio. Spunta **V<sub>z</sub>(x)** per aggiungere il taglio.
+
+![Le opzioni di visualizzazione, con il taglio attivato](/screenshots/it/a-qs-display.webp){.shot-md}
+
+Lo schermo dovrebbe ora corrispondere a questa figura. Passa dal momento flettente al taglio e viceversa:
+
+::model-figure{caption="La trave finita: reazioni di 36 kN e 54 kNm in mezzeria"}
+---
+nodes: { 1: [0, 0], 2: [6, 0] }
+supports: { 1: pin, 2: roller }
+members: [[1, 2]]
+loads:
+  - { member: 1, qz: 12 }
+results: [M, V]
+show: [nodeLabels]
+---
+::
+
+| Disegno | Cosa dovresti vedere |
+| --- | --- |
+| **Reazioni** | Due frecce verso l’alto da **36 kN**, una su ciascun appoggio. |
+| **V<sub>z</sub>(x)** | Una retta da **+36 kN** nel nodo `1` a **−36 kN** nel nodo `2`, che si annulla in mezzeria. |
+| **M<sub>y</sub>(x)** | Una parabola con il massimo di **54 kNm** in mezzeria, disegnata dal lato teso, sotto la trave. |
+| **Deformata** | Un abbassamento simmetrico, disegnato amplificato. |
+
+Per i valori numerici apri la scheda **Risultati**. **Risultati nodali** elenca gli spostamenti `Dx`, `Dz` e la rotazione `Ry` di ogni nodo; **Risultati degli elementi** elenca le forze di estremità di ogni elemento nei suoi assi locali. Il nodo `1` ruota di $R_y = -2{,}6469 \cdot 10^{-2}$ rad, il nodo `2` della stessa quantità in verso opposto. La pagina [Risultati e diagrammi](/it/essentials/results) spiega ogni tabella e ogni segno.
+
+Se i diagrammi sembrano troppo grandi o troppo piccoli, cambia **Scala dei risultati** in **Impostazioni → Impostazioni della vista**.
+
+## Verifica a mano {#_8-check-by-hand}
+
+Con $q = 12$ kN/m e $L = 6$ m, le formule dei manuali danno:
+
+| Grandezza | Formula | A mano | EduBeam |
+| --- | --- | --- | --- |
+| Reazioni | $qL/2$ | 36 kN | 36 kN |
+| Taglio massimo | $qL/2$ | 36 kN | 36 kN |
+| Momento massimo | $qL^2/8$ | 54 kNm | 54 kNm |
+| Rotazione all’estremità | $qL^3/(24EI)$ | 0,02647 rad | 0,02647 rad |
+| Freccia in mezzeria | $w_b + w_s$ | 49,63 + 0,60 = 50,22 mm | 50,22 mm |
+
+La freccia ha due contributi, e la maggior parte dei manuali riporta solo il primo:
+
+- **Flessione:** $w_b = 5qL^4/(384EI) = 49{,}63$ mm, con $EI = 4080$ kNm² da $E = 210$ GPa e $I_y = 1943\ \text{cm}^4$.
+- **Taglio:** $w_s = qL^2/(8kGA) = 0{,}60$ mm, con $kGA \approx 90\,700$ kN da $k = 0{,}3933$, $G = 81$ GPa e $A = 28{,}48\ \text{cm}^2$.
+
+In mezzeria non c’è ancora un nodo, quindi aggiungine uno per leggere lì la freccia:
+
+1. Nella scheda **Nodi**, fai clic sul secondo pulsante **Aggiungi nodo**, quello con l’icona del cursore.
+2. Fai clic sulla trave in `x = 3`; con lo snap attivo il nodo cade sulla griglia. EduBeam chiede che cosa fare del nodo: premi **Collega alla struttura**. L’elemento viene diviso in `1a` e `1b`, insieme al suo carico, e il posizionamento dei nodi termina. Se nella scheda **Nodi** il nodo `3` non si trova in X = `3`, scrivi lì `3`.
+3. In **Risultati → Risultati nodali** il nodo `3` mostra ora $D_z = 5{,}0224 \cdot 10^{-2}$ m, cioè 50,22 mm.
+
+![Risultati nodali dopo la divisione: il nodo 3 si abbassa di 50,22 mm](/screenshots/it/a-qs-nodal-results.webp){.shot-lg}
+
+Dividere la trave non cambia alcun risultato, perché per questi carichi l’elemento è esatto: non c’è una mesh da infittire.
+
+::callout{type="details" title="Perché conta il coefficiente di taglio"}
+EduBeam usa elementi trave di Timoshenko, che includono la deformazione a taglio. Il coefficiente di taglio $k$ definisce l’area resistente a taglio $kA$, quindi $kGA$ è la rigidezza a taglio ($k$ è l’inverso del fattore di taglio χ dei testi italiani). Per le sezioni a I della libreria $k$ è la quota dell’area che spetta all’anima, $h t_w / A$: per l’IPE 200, $0{,}2 \cdot 0{,}0056 / 0{,}002848 = 0{,}3933$. Il contributo del taglio alla freccia, $w_s = qL^2/(8kGA)$, è l’integrale di $V/(kGA)$ dall’appoggio alla mezzeria.
+
+Per questa trave snella il contributo del taglio è 0,60 mm, circa l’1 % del totale. In una trave tozza, corta e alta, pesa molto di più. Imposta il coefficiente di taglio a un numero molto grande (ad esempio `1e10`) nella scheda **Sezioni**, ed EduBeam restituisce i 49,63 mm della sola flessione. La teoria è nella pagina [Elemento trave](/it/elements/beam).
+::
+
+Altri casi da verificare a mano (mensola, trave doppiamente incastrata, travatura reticolare, carico termico, cedimento) sono nella pagina [Verificare i risultati a mano](/it/guide/verification).
+
+## Sperimenta {#_9-experiment}
+
+Modifica il modello e osserva come cambiano i diagrammi. Prova una modifica alla volta e annullala con <kbd>Ctrl</kbd>+<kbd>Z</kbd> prima di passare alla successiva. Il nodo `3` è il nodo di mezzeria che hai appena aggiunto.
+
+- **Trascina il nodo `2`** verso destra. Il momento cresce con $L^2$ e la freccia con $L^4$.
+- **Spunta `Ry` nel nodo `1`** per incastrare quell’estremità. Sull’incastro compare un momento negativo: $qL^2/8 = 54$ kNm secondo la formula dei manuali, 53,8 kNm in EduBeam. In una trave iperstatica la rigidezza a taglio cambia anche le forze interne.
+- **Spunta `Dz` nel nodo `3`** per aggiungere un appoggio intermedio e ottenere una trave continua a due campate. Il momento sull’appoggio intermedio diventa negativo: $q(L/2)^2/8 = 13{,}5$ kNm a mano, 13,3 kNm in EduBeam, per lo stesso motivo.
+- **Spunta `Dz` nel nodo `3` e la seconda casella della colonna *Cerniere di estremità* dell’elemento `1a`** (la sua estremità nel nodo `3`) nella scheda **Elementi**. La trave diventa due campate semplicemente appoggiate di 3 m. Ora togli la spunta a `Dz` nel nodo `3`: la trave diventa un meccanismo, ed EduBeam mostra come può muoversi.
+
+Per variare luce e carico senza costruire nulla, trascina i cursori qui sotto e passa da un risultato all’altro per vedere come ciascuno cresce con la luce.
 
 ::example-structure
 ::
 
-Una trave semplicemente appoggiata di 6 m (cerniera a sinistra, carrello a destra) porta un carico uniforme di 12 kN/m. Materiale: acciaio, $E = 210\ \text{GPa}$, $G = 81\ \text{GPa}$. Sezione: IPE 200, $A = 28{,}5\ \text{cm}^2$, $I_y = 1943\ \text{cm}^4$, $h = 200\ \text{mm}$.
+## Salva o condividi {#_10-save-or-share}
 
-## 1. Controlla le unità {#_1-check-the-units}
+- **Invialo a qualcuno.** Premi **Condividi modello** nella barra dell’app, poi **Copia**. Il link contiene l’intero modello, e chi lo apre ne riceve una propria copia da modificare.
+- **Conservalo in un file.** **☰ → Salva progetto** (<kbd>Ctrl</kbd>+<kbd>S</kbd>) scarica un file `project.json`. Lo riapri con **☰ → Apri progetto** (<kbd>Ctrl</kbd>+<kbd>O</kbd>) o trascinandolo sull’app.
+- **Metti il disegno in una relazione.** **☰ → Esporta immagine** (<kbd>Ctrl</kbd>+<kbd>P</kbd>) lo salva in PNG o SVG.
 
-L'indicatore delle unità nell'angolo in basso a destra della vista mostra le unità usate da tutti i campi di input e dai risultati. Questo tutorial presuppone le unità SI predefinite: metri, kN, kNm e MPa.
-
-![I pulsanti di griglia (G), snap (S) e mirino, e l'indicatore delle unità](/screenshots/it/ui-grid-units.webp){.shot-sm}
-
-Se vedi `ft · kip · kip·ft · ksi`, fai clic sull'indicatore e scegli **Sistema di unità → SI (metrico)**.
-
-## 2. Aggiungi il materiale e la sezione {#_2-add-the-material-and-cross-section}
-
-Gli elementi hanno bisogno di un materiale e di una sezione, quindi crea prima questi.
-
-1. Apri la scheda **Materiali** nella barra inferiore e fai clic su **Aggiungi materiale**.
-2. Inserisci `E = 210000` MPa e `G = 81000` MPa. Lascia la densità e `α = 0,000012` 1/K. Fai clic su **Aggiungi materiale**.
-
-::div{.shots}
-
-![Aggiungi materiale: inserisci E e G…](/screenshots/it/qs-material.webp)
-
-![…oppure scegli Steel (S235) dalla Libreria materiali](/screenshots/it/qs-material-library.webp)
-
-::
-
-3. Apri la scheda **Sezioni** e fai clic su **Aggiungi sezione**.
-4. Inserisci `Area = 0,00285` m², `Iy = 1,943e-5` m⁴, `Altezza = 0,2` m e `Coefficiente di taglio = 1`. Fai clic su **Aggiungi sezione**.
-
-![Aggiungi sezione. Oppure scegli dalla libreria, o disegna una forma poligonale.](/screenshots/it/qs-cross-section.webp){.shot-md}
-
-::callout{type="details" title="Perché conta il coefficiente di taglio?"}
-EduBeam usa elementi trave di Timoshenko, che includono la deformazione a taglio. `k` è il coefficiente di correzione a taglio (l'inverso del fattore di taglio χ dei testi italiani): $k \approx 0{,}83$ per un rettangolo e circa $0{,}4$–$0{,}5$ per una sezione a I quando $A$ è l'area intera. Con `k = 1` e l'area intera la deformabilità a taglio risulta leggermente *sottostimata*. Per una trave snella come questa la differenza nella freccia è ben sotto l'1 %. La formula è nella [pagina sulla teoria della trave](/it/elements/beam).
-::
-
-## 3. Aggiungi i nodi {#_3-add-the-nodes}
-
-1. Apri la scheda **Nodi**. Ci sono due pulsanti **Aggiungi nodo**: il primo apre una finestra di dialogo, il secondo (con l'icona del cursore) posiziona i nodi con il mouse. Fai clic sul primo.
-2. Inserisci `X = 0`, `Z = 0` e fai clic su **Aggiungi nodo**. Il nodo prende l'etichetta `1`.
-3. Aggiungi un secondo nodo in `X = 6`, `Z = 0`. Questo è il nodo `2`.
-
-![La finestra Aggiungi nodo può anche assegnare subito i vincoli](/screenshots/it/qs-node.webp){.shot-md}
-
-Con il pulsante del mouse, invece, ogni clic nell'area di disegno posiziona un nodo. Con **Snap alla griglia** attivo (<kbd>S</kbd>), i clic cadono sul passo della griglia (0,1 m per impostazione predefinita).
-
-## 4. Collegali con un elemento {#_4-connect-them-with-an-element}
-
-1. Apri la scheda **Elementi** e fai clic sul primo pulsante **Aggiungi elemento**.
-2. Scegli **Nodo iniziale** `1` e **Nodo finale** `2`. Il materiale e la sezione sono già selezionati. Fai clic su **Aggiungi elemento**.
-
-![Aggiungi elemento: i due nodi di estremità, le cerniere di estremità facoltative, il materiale e la sezione](/screenshots/it/qs-element.webp){.shot-md}
-
-Tra i nodi compare una linea. Premi <kbd>F</kbd> per adattarla allo schermo.
-
-## 5. Aggiungi i vincoli {#_5-add-the-supports}
-
-Nella scheda **Nodi**, la colonna **GdL vincolati** ha per ogni nodo un selettore del simbolo di vincolo e tre caselle: `Dx`, `Dz`, `Ry`.
-
-- Nodo `1`: scegli il simbolo **Cerniera**, oppure spunta **Dx** e **Dz**.
-- Nodo `2`: scegli il **Carrello**, oppure spunta solo **Dz**.
-
-![Vincoli nella tabella Nodi: nodo 1 con cerniera, nodo 2 su carrello](/screenshots/it/qs-supports.webp)
-
-Puoi anche fare clic su un nodo nella vista e scegliere **Vincoli del nodo**. [Nodi e vincoli](/it/essentials/nodes-supports#supports) elenca tutti i tipi di vincolo.
-
-## 6. Aggiungi il carico {#_6-add-the-load}
-
-1. Apri la scheda **Carichi** e fai clic su **Aggiungi carico su elemento**.
-2. **Tipo di carico**: *Carico uniforme*. **Elemento**: `1`.
-3. Inserisci `fz = 12` kN/m e lascia `fx = 0`. Fai clic su **Aggiungi carico su elemento**.
-
-![La finestra mostra un'anteprima del carico sull'elemento](/screenshots/it/qs-load.webp){.shot-md}
-
-Un `fz` positivo punta nel verso +z, cioè **verso il basso** sullo schermo, quindi un valore positivo è un carico gravitazionale. Vedi le [convenzioni dei segni](/it/elements/conventions).
-
-## 7. Leggi i risultati {#_7-read-the-results}
-
-La soluzione compare non appena aggiungi il carico. Il pannello di visualizzazione in alto a destra nella vista attiva e disattiva i diagrammi. **Deformata**, **M<sub>y</sub>(x)** e **Reazioni** sono attivi per impostazione predefinita. Spunta **V<sub>z</sub>(x)** per aggiungere il taglio.
-
-![Taglio (verde), momento flettente (rosso), reazioni (viola) e deformata](/screenshots/it/qs-results.webp)
-
-| Diagramma | Cosa dovresti vedere |
-| --- | --- |
-| **Reazioni** | Due frecce verso l'alto da **36 kN** nei nodi 1 e 2. |
-| **V<sub>z</sub>(x)** | Una retta da **+36 kN** a sinistra a **−36 kN** a destra, che si annulla in mezzeria. |
-| **M<sub>y</sub>(x)** | Una parabola con il massimo di **54 kNm** in mezzeria. |
-| **Deformata** | Un abbassamento simmetrico. Passa con il mouse sul nodo `1` per leggerne la rotazione: **2,6469 · 10⁻² rad**. |
-
-La scheda **Risultati** nella barra inferiore fornisce i valori numerici. **Risultati nodali** elenca `Dx`, `Dz`, `Ry` per ogni nodo. **Risultati degli elementi** elenca le forze di estremità di ogni elemento nel suo sistema di coordinate locale.
-
-Se i diagrammi sembrano troppo grandi o troppo piccoli, cambia **Scala dei risultati** in **Impostazioni → Impostazioni della vista → Dimensioni**.
-
-## 8. Verifica a mano {#_8-check-by-hand}
-
-| Grandezza | Formula | Valore a mano | EduBeam |
-| --- | --- | --- | --- |
-| Reazione | $R = qL/2$ | 36 kN | 36 kN |
-| Taglio massimo | $V = qL/2$ | 36 kN | 36 kN |
-| Momento massimo | $M = qL^2/8$ | 54 kNm | 54 kNm |
-| Rotazione all'estremità | $\varphi = qL^3/(24EI)$ | 0,02647 rad | 0,02647 rad |
-| Freccia in mezzeria (flessione) | $w = 5qL^4/(384EI)$ | 49,63 mm | |
-| Freccia in mezzeria (taglio) | $w_s = qL^2/(8kGA)$ | 0,23 mm | |
-| Freccia in mezzeria (totale) | somma | 49,86 mm | 49,86 mm |
-
-In mezzeria non c'è un nodo, quindi per leggere lì la freccia aggiungine uno: scegli il secondo pulsante **Aggiungi nodo**, fai clic sulla trave in `X = 3` e scegli **Collega alla struttura**. La trave viene divisa in due e il `Dz` del nuovo nodo in **Risultati** vale 49,86 mm. La divisione non cambia alcun risultato, perché l'elemento è esatto.
-
-Tutto torna. Altre ricette di verifica a mano (mensola, trave doppiamente incastrata, travatura reticolare, temperatura) sono in [Verificare i risultati a mano](/it/guide/verification).
-
-## 9. Sperimenta {#_9-experiment}
-
-È qui che EduBeam dà il meglio. Prova ciascuna di queste modifiche e guarda i diagrammi aggiornarsi:
-
-- **Trascina il nodo 2** verso destra: il momento cresce con $L^2$.
-- **Spunta `Ry` nel nodo 1** per incastrarlo: il momento in mezzeria diminuisce e sull'appoggio compare un momento negativo.
-- **Spunta `Dz` nel nodo di mezzeria** che hai appena aggiunto, per ottenere una trave continua a due campate.
-- **Spunta una cerniera di estremità** su un elemento nella scheda Elementi per svincolare il momento a un'estremità.
-- Premi <kbd>Ctrl</kbd>+<kbd>Z</kbd> per annullare qualsiasi passo.
-
-## 10. Salva o condividi {#_10-save-or-share}
-
-- **Condividi modello** (nella barra dell'app o nel menu ☰) ti dà un link che contiene l'intero modello. Incollalo in un'e-mail, in una chat o nelle tue slide.
-- **☰ → Salva progetto** (<kbd>Ctrl</kbd>+<kbd>S</kbd>) scarica un file `project.json` che puoi riaprire in seguito con **Apri progetto** o trascinandolo sull'app.
-- **☰ → Esporta immagine** (<kbd>Ctrl</kbd>+<kbd>P</kbd>) salva il disegno in PNG o SVG per una relazione.
-
-Il modello viene anche conservato nel browser, quindi ricaricare la pagina non lo fa perdere. Vedi [Importazione, esportazione e condivisione](/it/essentials/import-export).
+Il modello resta salvato anche nel browser, quindi ricaricare la pagina non lo fa perdere. I dettagli sono nella pagina [File, link ed esportazione](/it/essentials/import-export).
 
 ## E ora? {#where-next}
 
-- [Tutorial sul telaio a tre cerniere](/it/tutorials/three-hinged-frame): un telaio con una cerniera interna, verificato a mano.
-- [Esempi](/it/examples/): apri con un clic telai e travature reticolari già pronti.
-- [Carichi](/it/essentials/loads): carichi trapezoidali, concentrati e termici, spostamenti imposti.
-- [Tastiera, mouse e touch](/it/reference/shortcuts): lavora più velocemente nell'area di disegno.
+::card-grid{cols="2"}
+:::card{title="Tutorial" icon="lucide:graduation-cap" to="/it/tutorials/inclined-beam"}
+Quattro modelli costruiti passo passo e verificati a mano, da una trave inclinata a una trave continua con il cedimento di un appoggio.
+:::
+:::card{title="Esempi" icon="lucide:library" to="/it/examples/"}
+Travi, telai e travature reticolari già pronti che si aprono con un clic, con esercizi e soluzioni.
+:::
+:::card{title="Carichi" icon="lucide:arrow-down-to-line" to="/it/essentials/loads"}
+Carichi trapezoidali, concentrati e termici, forze nodali e cedimenti vincolari.
+:::
+:::card{title="Tastiera, mouse e touch" icon="lucide:keyboard" to="/it/reference/shortcuts"}
+Disegna nodi ed elementi direttamente nell’area di disegno e modifica il modello più in fretta.
+:::
+::

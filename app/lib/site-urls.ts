@@ -23,10 +23,10 @@ export const localizedPath = (code: string, path: string): string =>
  * name it, and the English page stops standing in for it. In the sitemap's order.
  */
 export const VUE_PAGES = {
-  '/practice': ['en', 'de', 'es', 'fr', 'pt', 'cs'],
-  '/exam': ['en', 'de', 'es', 'fr', 'pt', 'cs'],
-  '/solver': ['en', 'de', 'es', 'fr', 'pt', 'cs'],
-  '/plot': ['en', 'de', 'es', 'fr', 'pt', 'cs'],
+  '/practice': ['en', 'de', 'es', 'fr', 'pt', 'it', 'cs'],
+  '/exam': ['en', 'de', 'es', 'fr', 'pt', 'it', 'cs'],
+  '/solver': ['en', 'de', 'es', 'fr', 'pt', 'it', 'cs'],
+  '/plot': ['en', 'de', 'es', 'fr', 'pt', 'it', 'cs'],
 } as const satisfies Readonly<Record<string, readonly string[]>>
 
 /** The pages above as the page list has them */

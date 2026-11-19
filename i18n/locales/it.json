@@ -1,13 +1,16 @@
 {
   "meta": {
-    "description": "Analisi strutturale 2D gratuita online – travi, telai e travature reticolari risolti all'istante nel browser."
+    "description": "Analisi strutturale 2D gratuita online: travi, telai e travature reticolari risolti all’istante nel browser."
   },
   "nav": {
     "guide": "Guida",
     "tutorials": "Tutorial",
     "examples": "Esempi",
     "faq": "FAQ",
-    "openApp": "Apri l'app"
+    "theory": "Teoria",
+    "openApp": "Apri l’app",
+    "libraries": "Librerie",
+    "practice": "Esercizi"
   },
   "docs": {
     "onThisPage": "In questa pagina",
@@ -20,22 +23,22 @@
   },
   "components": {
     "loadsTitle": "Anteprima dei tipi di carico",
-    "loadsLede": "Come appaiono in EduBeam i tipi di carico più comuni. Ogni scheda è un modello risolto e interattivo e si apre nell'app esattamente come è impostato.",
+    "loadsLede": "Come appaiono in EduBeam i tipi di carico più comuni. Ogni riquadro è un modello risolto e interattivo, e si apre nell’app esattamente come è impostato.",
     "openInApp": "Apri in EduBeam",
     "simplySupportedBeam": "Trave semplicemente appoggiata",
-    "udlBlurb": "Campata cerniera–carrello con 12 kN/m: i classici diagrammi di taglio e momento.",
-    "trapezoidalBlurb": "Un carico che cresce da 4 a 14 kN/m sulla campata destra.",
-    "concentratedBlurb": "Un unico carico di 18 kN verso il basso in mezzeria, senza nodi aggiuntivi.",
-    "nodalBlurb": "Un carico di 20 kN sull'appoggio intermedio, per controllare reazioni e frecce.",
-    "temperatureBlurb": "Una differenza di temperatura lungo l'altezza della sezione (fibre superiori più calde di quelle inferiori) e la curvatura che provoca.",
+    "udlBlurb": "Campata cerniera–carrello con 12 kN/m: i classici diagrammi del taglio e del momento flettente.",
+    "trapezoidalBlurb": "Un carico che cresce da 4 a 14 kN/m lungo la campata destra.",
+    "concentratedBlurb": "Un carico di 18 kN nella campata sinistra, a 2 m dall’appoggio, senza alcun nodo sotto.",
+    "nodalBlurb": "Un carico di 20 kN sul nodo tra le due campate: lì il diagramma del momento forma un punto angoloso.",
+    "temperatureBlurb": "Una differenza di temperatura lungo l’altezza della sezione (fibre superiori più calde di quelle inferiori) e la curvatura che provoca.",
     "promoTitle": "Porta i tuoi telai",
     "promoAccent": "in 3D.",
-    "promoSubtitle": "solai, gusci e verifiche dell'acciaio nel browser",
+    "promoSubtitle": "solai, gusci e verifiche dell’acciaio nel browser",
     "promoCta": "Provalo gratis",
     "spanLength": "Luce della campata",
     "loadIntensity": "Intensità del carico",
     "loadPosition": "Posizione del carico",
-    "heroHint": "Sposta il carico, i diagrammi lo seguono."
+    "heroHint": "Sposta il carico: i diagrammi lo seguono."
   },
   "common": {
     "deformedShape": "Deformata",
@@ -85,6 +88,585 @@
   "search": {
     "label": "Cerca",
     "placeholder": "Cerca nella documentazione",
-    "noResults": "Nessun risultato per «{query}»"
+    "noResults": "Nessun risultato per «{query}»",
+    "shortcut": "Ctrl K"
+  },
+  "home": {
+    "seo": {
+      "title": "EduBeam: analisi strutturale online gratuita",
+      "description": "Analisi strutturale 2D gratuita nel browser. Disegna travi, telai e travature reticolari, aggiungi i carichi e ottieni subito i diagrammi di N, V, M, le reazioni e le frecce."
+    },
+    "hero": {
+      "title": "Travi, telai, travature reticolari.",
+      "lede": "EduBeam è un’app gratuita di analisi strutturale per travi, telai e travature reticolari. Disegna un modello nel browser: diagrammi, reazioni e frecce si aggiornano a ogni modifica.",
+      "launch": "Avvia EduBeam",
+      "guide": "Leggi la guida",
+      "note": "Gratuito e open source. Niente installazione, niente account."
+    },
+    "steps": {
+      "title": "Dallo schizzo ai diagrammi in quattro passi",
+      "lede": "Nello stesso ordine in cui risolveresti la struttura su carta. L’avvio rapido ti accompagna su una trave vera in circa dieci minuti.",
+      "link": "Segui l’avvio rapido",
+      "items": {
+        "nodes": {
+          "label": "Nodi",
+          "title": "Posiziona i nodi",
+          "body": "Fai clic sulla griglia o inserisci le coordinate. Qui, i quattro vertici di un telaio a portale largo 6 m e alto 4 m."
+        },
+        "elements": {
+          "label": "Elementi",
+          "title": "Collegali con le aste",
+          "body": "Unisci i nodi con elementi trave e assegna loro un materiale e una sezione: una della libreria, oppure un poligono che disegni tu."
+        },
+        "loads": {
+          "label": "Vincoli e carichi",
+          "title": "Vincola e carica la struttura",
+          "body": "Cerniere al piede di entrambe le colonne, 10 kN/m lungo la trave e una forza orizzontale di 15 kN sul nodo d’angolo in alto a sinistra."
+        },
+        "results": {
+          "label": "Risultati",
+          "title": "Leggi i risultati",
+          "body": "Il diagramma del momento, disegnato sul lato teso, e le reazioni compaiono non appena il telaio è vincolato a sufficienza. Sono i valori di EduBeam, calcolati in questa pagina."
+        }
+      }
+    },
+    "examples": {
+      "title": "Apri un modello risolto con un clic",
+      "lede": "Ognuno è risolto in questa pagina dallo stesso solutore che usa l’app. Aprine uno in EduBeam e modificalo.",
+      "link": "Tutti gli esempi"
+    },
+    "verify": {
+      "title": "Verificato sui libri di testo",
+      "lede": "EduBeam risolve ogni modello con il metodo degli elementi finiti. Nei casi classici dà la soluzione in forma chiusa, fino all’ultima cifra. Il tuo browser ha calcolato la colonna di destra mentre caricava questa pagina.",
+      "case": "Caso",
+      "formula": "Forma chiusa",
+      "hand": "A mano",
+      "edubeam": "EduBeam",
+      "link": "Altri casi di riferimento",
+      "steel": "Acciaio IPE 200: E = 210 GPa, I = 1943 cm⁴. La deformazione a taglio è trascurata, come nelle soluzioni in forma chiusa.",
+      "cases": {
+        "ssMoment": "Trave appoggiata, 12 kN/m su 6 m: momento massimo",
+        "ssDeflection": "La stessa trave: freccia massima",
+        "cantilever": "Mensola di 4 m, 18 kN all’estremità: momento all’incastro",
+        "fixed": "Trave doppiamente incastrata, 10 kN/m su 6 m: momento alle estremità",
+        "propped": "Trave incastrata-appoggiata, 10 kN/m su 6 m: reazione dell’appoggio"
+      }
+    },
+    "teaching": {
+      "title": "Pensato per l’aula",
+      "lede": "Inserisci un modello nelle slide o nelle dispense: ogni studente aprirà esattamente lo stesso.",
+      "link": "Insegnare con EduBeam",
+      "slideCourse": "Statica",
+      "slideTitle": "Lezione 7: travature reticolari",
+      "slideBody": "Una travatura Warren con tre carichi nodali da 8 kN. Quali aste sono tese?",
+      "shareLabel": "Link condiviso",
+      "copy": "Copia",
+      "copied": "Copiato",
+      "items": {
+        "share": {
+          "title": "Un modello è un link",
+          "body": "L’intero modello viaggia nell’URL. Mettilo negli esercizi che assegni: si apre esattamente come l’hai lasciato, anche a distanza di anni."
+        },
+        "embed": {
+          "title": "Nelle tue slide",
+          "body": "La modalità visualizzatore, pensata per una slide o una pagina web, mostra il modello risolto senza gli strumenti di modifica."
+        },
+        "mechanism": {
+          "title": "Spiega che cosa non va",
+          "body": "Quando una struttura è labile, EduBeam mostra il meccanismo con cui si muoverebbe, invece di limitarsi a non risolverla."
+        },
+        "languages": {
+          "title": "La loro lingua, le loro unità",
+          "body": "Gli studenti lavorano in una delle 18 lingue, con unità SI o statunitensi e con gli assi del loro libro di testo."
+        }
+      },
+      "answerTitle": "Soluzione: gli sforzi nelle aste",
+      "answerBody": "La trazione è positiva. Il corrente inferiore è teso; il corrente superiore e i due montanti di estremità sono compressi; le diagonali interne sono alternativamente tese e compresse.",
+      "prevSlide": "Slide precedente",
+      "nextSlide": "Slide successiva"
+    },
+    "final": {
+      "title": "Disegna la tua prima trave.",
+      "lede": "Apri EduBeam e scegli «Disegna la tua prima trave». Un breve esercizio guidato ti porta da uno schermo vuoto a una trave vincolata e caricata, con i suoi diagrammi.",
+      "paths": {
+        "quickStart": {
+          "title": "Avvio rapido",
+          "body": "Modella una trave passo dopo passo e verificala a mano. 10 minuti."
+        },
+        "examples": {
+          "title": "Esempi",
+          "body": "Modelli risolti da aprire, modificare e da cui imparare."
+        },
+        "teaching": {
+          "title": "Didattica",
+          "body": "Link condivisi, slide ed esercizi per il tuo corso."
+        }
+      }
+    },
+    "model": {
+      "title": "Cosa puoi modellare",
+      "lede": "Strutture piane risolte con il metodo degli elementi finiti, con i vincoli, i carichi e i risultati di un corso di statica.",
+      "supports": {
+        "title": "Vincoli",
+        "items": {
+          "pin": "Cerniera",
+          "roller": "Carrello",
+          "fixed": "Incastro",
+          "slider": "Pattino",
+          "angled": "Con qualsiasi inclinazione"
+        },
+        "note": "Inoltre cedimenti e rotazioni imposti."
+      },
+      "loads": {
+        "title": "Carichi",
+        "items": {
+          "point": "Concentrato",
+          "uniform": "Uniforme",
+          "trapezoidal": "Trapezoidale",
+          "moment": "Momento",
+          "temperature": "Termico"
+        },
+        "note": "Nei nodi o in qualsiasi punto di un’asta, negli assi locali o globali."
+      },
+      "sections": {
+        "title": "Sezioni",
+        "items": {
+          "i": "I e H",
+          "hollow": "Scatolare",
+          "solid": "Piena",
+          "tube": "Tubolare",
+          "polygon": "Il tuo poligono"
+        },
+        "note": "IPE, HEA, AISC W e HSS dalla libreria, oppure qualsiasi poligono che disegni tu."
+      },
+      "results": {
+        "title": "Risultati",
+        "note": "Sforzo normale, taglio, momento flettente e deformata, con le reazioni e il valore in qualsiasi punto."
+      },
+      "facts": {
+        "elements": {
+          "title": "Travi di Timoshenko",
+          "body": "La deformazione a taglio dove conta; per le aste snelle i risultati coincidono con la teoria di Eulero–Bernoulli."
+        },
+        "structures": {
+          "title": "Travi, telai, travature reticolari",
+          "body": "Nel piano, con cerniere a qualsiasi estremità delle aste."
+        },
+        "sharing": {
+          "title": "Link e file",
+          "body": "Un intero modello in un link o in un file di progetto; disegni in PNG o SVG, tabelle in CSV."
+        },
+        "settings": {
+          "title": "18 lingue",
+          "body": "Unità SI o statunitensi, asse z verso il basso o asse y verso l’alto come nei libri di testo."
+        }
+      }
+    },
+    "heritage": {
+      "title": "Open source, con radici in aula",
+      "body": "EduBeam prosegue l’EduBeam desktop originale, nato presso il Dipartimento di Meccanica della Facoltà di Ingegneria Civile del Politecnico di Praga (ČVUT), e ne apre ancora i file di sessione. La versione web è gratuita e open source, come lo è {'@'}edubeam/fem, il solutore che calcola ogni numero di questa pagina.",
+      "github": "EduBeam su GitHub",
+      "solver": "{'@'}edubeam/fem su GitHub",
+      "team": "Chi sviluppa EduBeam"
+    }
+  },
+  "error": {
+    "notFoundTitle": "Pagina non trovata",
+    "notFound": "A questo indirizzo non c’è nessuna pagina. Forse è stata spostata, oppure il link contiene un errore di battitura.",
+    "otherTitle": "Qualcosa è andato storto",
+    "other": "Non è stato possibile mostrare questa pagina. Di solito basta ricaricarla.",
+    "home": "Pagina iniziale",
+    "guide": "Leggi la guida",
+    "message": "I vincoli non trattengono la struttura: può ancora ruotare liberamente.",
+    "figure": "Una trave su un’unica cerniera, senza il secondo vincolo, che ruota liberamente attorno alla cerniera sotto il suo carico"
+  },
+  "problems": {
+    "families": {
+      "simple": {
+        "name": "Trave semplicemente appoggiata",
+        "skill": "Equilibrio di una trave",
+        "hint": "Scrivi l’equilibrio alla rotazione attorno ad A per trovare la reazione in B, poi l’equilibrio alla traslazione verticale per quella in A. Il momento massimo si trova dove il taglio si annulla, oppure sotto un carico concentrato."
+      },
+      "cantilever": {
+        "name": "Mensola",
+        "skill": "Un incastro",
+        "hint": "Tutte le reazioni sono nell’incastro: scrivi l’equilibrio alla traslazione verticale, poi l’equilibrio alla rotazione attorno ad A. In una mensola il momento massimo è all’incastro."
+      },
+      "overhang": {
+        "name": "Trave appoggiata con sbalzo",
+        "skill": "Momento negativo sull’appoggio",
+        "hint": "L’equilibrio alla rotazione attorno ad A dà la reazione in B. Poi confronta i due possibili massimi del momento: in campata, dove V = 0, e sull’appoggio B, dove lo sbalzo produce un momento negativo."
+      },
+      "gerber": {
+        "name": "Trave Gerber",
+        "skill": "Una cerniera interna",
+        "hint": "Parti dal tratto GC: poggia sulla cerniera G e sul carrello C, e una cerniera non trasmette momento. Poi carica il tratto ABG con la forza che gli trasmette la cerniera e risolvilo come una trave appoggiata con sbalzo."
+      },
+      "threeHinged": {
+        "name": "Telaio a tre cerniere",
+        "skill": "Spinta e cerniera interna",
+        "hint": "Gli equilibri alla rotazione attorno ad A e attorno a E danno le reazioni verticali. Poi taglia nella cerniera C, dove M = 0, e scrivi l’equilibrio alla rotazione attorno a C per una delle due metà: ottieni la spinta orizzontale."
+      },
+      "truss": {
+        "name": "Travatura Warren",
+        "skill": "Metodo dei nodi e delle sezioni",
+        "hint": "Ricava le reazioni dall’equilibrio dell’intera travatura. Poi taglia tre aste, tra cui quella che cerchi, e scrivi l’equilibrio alla rotazione attorno al nodo in cui si incontrano le altre due (sezione di Ritter); per una diagonale usa invece l’equilibrio alla traslazione verticale."
+      },
+      "continuous": {
+        "name": "Trave continua a due campate",
+        "skill": "Un’incognita iperstatica",
+        "hint": "La trave è una volta iperstatica: assumi come incognita iperstatica il momento sull’appoggio B. L’equazione dei tre momenti, con M = 0 in A e in C, lo fornisce direttamente; poi ricavi le reazioni campata per campata."
+      },
+      "portal": {
+        "name": "Telaio a portale",
+        "skill": "Un telaio a nodi rigidi",
+        "hint": "Il telaio è una volta iperstatico: sopprimi la reazione orizzontale in D, calcola lo spostamento orizzontale di D prodotto dai carichi e da una forza unitaria applicata in D (PLV, con i diagrammi di M) e imponi che lo spostamento totale sia nullo."
+      }
+    },
+    "statement": {
+      "simple": "Una trave di luce {L} m poggia su una cerniera in A e su un carrello in B. Carichi: {loads}.",
+      "cantilever": "Una mensola di {L} m, incastrata in A, è soggetta a un carico q = {q} kN/m su tutta la lunghezza e a una forza F = {F} kN all’estremità libera B.",
+      "cantileverMoment": "Una mensola di {L} m, incastrata in A, è soggetta a un carico q = {q} kN/m su tutta la lunghezza, a una forza F = {F} kN all’estremità libera B e, sempre in B, a un momento antiorario di {M} kNm.",
+      "overhang": "Una trave di luce {L} m, con una cerniera in A e un carrello in B, prosegue con uno sbalzo di {c} m fino a C. È soggetta a q = {q} kN/m sulla campata e a F = {F} kN all’estremità C.",
+      "overhangAll": "Una trave di luce {L} m, con una cerniera in A e un carrello in B, prosegue con uno sbalzo di {c} m fino a C. È soggetta a q = {q} kN/m su tutta la lunghezza e a F = {F} kN all’estremità C.",
+      "gerber": "Una trave con una cerniera interna in G, a {g} m a destra di B, poggia su una cerniera in A e su carrelli in B e C: AB = {L1} m, GC = {L3} m.",
+      "gerberLoad": "È soggetta a q = {q} kN/m su tutta la lunghezza.",
+      "gerberLoadForce": "È soggetta a q = {q} kN/m su tutta la lunghezza e a F = {F} kN in mezzeria di AB.",
+      "threeHinged": "Un telaio largo {L} m e alto {H} m poggia su cerniere in A e in E e ha una cerniera interna in C, in mezzeria della trave.",
+      "threeHingedWhole": "La trave è soggetta a q = {q} kN/m su tutta la lunghezza.",
+      "threeHingedHalf": "La trave è soggetta a q = {q} kN/m sulla metà sinistra.",
+      "threeHingedWholeForce": "La trave è soggetta a q = {q} kN/m su tutta la lunghezza; in B agisce inoltre una forza F = {F} kN verso destra.",
+      "threeHingedHalfForce": "La trave è soggetta a q = {q} kN/m sulla metà sinistra; in B agisce inoltre una forza F = {F} kN verso destra.",
+      "truss": "Una travatura Warren a {panels}, ciascuno lungo {d} m e alto {h} m, poggia su una cerniera in A e su un carrello in {end}.",
+      "panels": "{n} campo | {n} campi",
+      "trussLoadAll": "Su ogni nodo del corrente superiore agisce un carico F = {F} kN verso il basso.",
+      "trussLoad": "Su ciascuno dei nodi {joints} agisce un carico F = {F} kN verso il basso.",
+      "continuous": "Una trave continua su tre appoggi (una cerniera in A e due carrelli in B e C) ha due campate, di {L1} m e {L2} m, ed è soggetta a q = {q} kN/m sulla campata sinistra.",
+      "continuousBoth": "Una trave continua su tre appoggi (una cerniera in A e due carrelli in B e C) ha due campate, di {L1} m e {L2} m, ed è soggetta a q = {q} kN/m su entrambe le campate.",
+      "portal": "Un telaio a nodi rigidi largo {L} m e alto {H} m, con cerniere in A e in D, è soggetto a q = {q} kN/m sulla trave BC.",
+      "portalForce": "Un telaio a nodi rigidi largo {L} m e alto {H} m, con cerniere in A e in D, è soggetto a q = {q} kN/m sulla trave BC e a una forza F = {F} kN applicata in B verso destra.",
+      "advancedNote": "EI costante; trascurare la deformazione a taglio."
+    },
+    "load": {
+      "udlSpan": "q = {q} kN/m su tutta la campata",
+      "pointFromA": "F = {F} kN a {a} m da A",
+      "momentAtB": "un momento antiorario di {M} kNm in B"
+    },
+    "task": {
+      "beam": "Determinare le reazioni vincolari e il momento flettente massimo.",
+      "bar": "Determinare le reazioni vincolari e lo sforzo normale nell’asta {bar}."
+    },
+    "answer": {
+      "horizontal": "Reazione orizzontale in {node}",
+      "vertical": "Reazione verticale in {node}",
+      "fixingMoment": "Momento d’incastro in {node}",
+      "bar": "Sforzo normale nell’asta {bar}",
+      "largestMoment": "Momento flettente massimo, in valore assoluto"
+    },
+    "unit": {
+      "kN": "kN",
+      "kNm": "kNm"
+    }
+  },
+  "library": {
+    "getStarted": "Per iniziare",
+    "by": "Di {author}",
+    "fromRepo": "Non è ancora su npm: la riga qui sopra la installa da GitHub.",
+    "comingToNpm": "Presto su npm. Il codice sorgente è su GitHub."
+  },
+  "solver": {
+    "tagline": "Un solutore agli elementi finiti per telai piani, scritto in TypeScript.",
+    "seo": {
+      "title": "{'@'}edubeam/fem: solutore FEM per telai piani in TypeScript",
+      "description": "Solutore agli elementi finiti in TypeScript per travi, telai e travature reticolari piane: cerniere, carichi sulle aste, termici e cedimenti, casi di carico, reazioni e forze interne esatte. Il motore di EduBeam."
+    },
+    "run": {
+      "title": "Eseguito in questa pagina",
+      "lede": "A sinistra il codice, eseguito nel tuo browser al caricamento della pagina. A destra i valori che restituisce; la figura la disegna {plot} con i risultati dello stesso solutore.",
+      "plusShear": "{formula}, più il contributo del taglio"
+    },
+    "features": {
+      "title": "Cosa contiene",
+      "analyses": {
+        "title": "Analisi",
+        "body": "Statica lineare con tutti i casi di carico che servono. I diagrammi sono esatti tra i nodi: nessuna discretizzazione da infittire."
+      },
+      "elements": {
+        "title": "Elementi",
+        "body": "Una trave di Timoshenko a due nodi nel piano x–z. Con le cerniere a entrambe le estremità diventa un’asta reticolare."
+      },
+      "loads": {
+        "title": "Carichi",
+        "body": "Forze e momenti nodali, carichi concentrati, uniformi e trapezoidali sulle aste, carichi termici, cedimenti."
+      },
+      "results": {
+        "title": "Risultati",
+        "body": "N, V e M in qualsiasi punto di un’asta, deformate, forze di estremità, spostamenti e reazioni."
+      },
+      "reference": "Tutte le classi e i metodi"
+    },
+    "behind": {
+      "title": "Il solutore di EduBeam",
+      "body": "{name} calcola ogni diagramma, reazione e freccia di EduBeam, e ogni figura di questo sito.",
+      "link": "Vai a EduBeam"
+    }
+  },
+  "plot": {
+    "tagline": "Componenti Vue che disegnano strutture piane e i loro risultati, nello stile delle figure di questo sito.",
+    "seo": {
+      "title": "{'@'}edubeam/plot: diagrammi strutturali per Vue",
+      "description": "Componenti Vue che disegnano strutture piane, carichi, reazioni e diagrammi di N, V, M come in un libro di testo, per pagine dei corsi, slide, fogli di esercizi e file SVG autonomi."
+    },
+    "try": {
+      "title": "Provalo",
+      "lede": "Un telaio risolto in questa pagina da {'@'}edubeam/fem. Cambia ciò che viene disegnato: il codice si aggiorna.",
+      "labelStyle": "Stile delle etichette",
+      "horizontal": "Orizzontale",
+      "axis": "Lungo l’ordinata"
+    },
+    "teaching": {
+      "title": "Pensato per il materiale didattico",
+      "lede": "Un modello scritto in codice è una figura che non diventa mai obsoleta: cambi un numero e il disegno, le reazioni e i diagrammi si aggiornano. Un seme (valore iniziale del generatore casuale) sceglie un nuovo esercizio; lo stesso seme dà sempre lo stesso esercizio. La pagina {practice} e il {exam} di questo sito sono fatti così.",
+      "practice": "Esercizi di statica",
+      "exam": "generatore di compiti"
+    },
+    "uses": {
+      "exercises": {
+        "title": "Esercizi e compiti",
+        "body": "Un esercizio per ogni studente a partire da un seme, con le soluzioni, da stampare o come figure per LaTeX e Word."
+      },
+      "slides": {
+        "title": "Slide e dispense",
+        "body": "Figure che si costruiscono clic dopo clic in Slidev, Vue o Beamer, risolte in tempo reale."
+      },
+      "embedding": {
+        "title": "Nella tua documentazione e nelle tue app",
+        "body": "Vite, VitePress o Nuxt, con rendering sul server o da JSON già risolto."
+      },
+      "print": {
+        "title": "File per la stampa",
+        "body": "Un SVG autonomo con colori fissi, per Word, LaTeX e Inkscape."
+      }
+    },
+    "features": {
+      "title": "Cosa fa",
+      "style": {
+        "title": "Nello stile delle figure",
+        "body": "Aste, vincoli, carichi, reazioni e diagrammi tratteggiati come in questo sito, con quote in catena e reazioni incognite con il loro nome per i fogli di esercizi."
+      },
+      "readable": {
+        "title": "Leggibile a ogni dimensione",
+        "body": "Testo e linee mantengono la loro dimensione in pixel; i valori che si sovrapporrebbero vengono spostati o omessi, mai tagliati."
+      },
+      "exact": {
+        "title": "Esatto",
+        "body": "I diagrammi sono i polinomi del solutore: gli estremi sono trovati in modo esatto e i salti sotto i carichi concentrati sono disegnati come salti."
+      },
+      "fits": {
+        "title": "Si adatta alla pagina",
+        "body": "Colori presi dal tuo CSS, con tema chiaro e scuro. Rendering lato server; non intercetta mai lo scorrimento della pagina."
+      },
+      "components": "Tutte le prop"
+    }
+  },
+  "practice": {
+    "seo": {
+      "title": "Esercizi di statica con verifica immediata {'|'} EduBeam",
+      "description": "Esercizi di statica gratuiti: travi, telai e travature reticolari con dati sempre nuovi. Calcola reazioni, momento massimo o sforzo in un’asta, verifica subito le risposte e guarda i diagrammi.",
+      "ogTitle": "Esercizi di statica con verifica immediata",
+      "ogDescription": "Travi, telai e travature reticolari con dati sempre nuovi. Verifica subito reazioni e momenti, poi guarda i diagrammi."
+    },
+    "title": "Esercizi di statica",
+    "lede": "Un esercizio nuovo ogni volta, con i risultati esatti con cui confrontare i tuoi. Risolvilo su carta, inserisci i valori che ottieni e poi guarda i diagrammi.",
+    "codes": "Ogni esercizio ha un codice, ad esempio {code}. Lo stesso codice dà sempre lo stesso esercizio: condividilo con un compagno di corso o apri quello che ti ha dato il docente.",
+    "announce": "Nuovo esercizio: {structure}, {code}.",
+    "structures": {
+      "title": "Strutture",
+      "count": "{picked} di {total}",
+      "legend": "Strutture tra cui sceglie «Nuovo esercizio»",
+      "determinate": "Strutture isostatiche",
+      "indeterminate": "Strutture iperstatiche",
+      "note": "«Nuovo esercizio» ne sceglie una a caso."
+    },
+    "code": {
+      "label": "Codice dell’esercizio",
+      "placeholder": "Codice",
+      "open": "Apri",
+      "error": "Questo non è un codice di esercizio. Un codice è una lettera seguita da un numero, ad esempio H2048."
+    },
+    "newProblem": "Nuovo esercizio",
+    "copyLink": "Copia link",
+    "linkCopied": "Link copiato",
+    "barForces": "Sforzi nelle aste, positivi se di trazione",
+    "answers": {
+      "title": "Le tue risposte",
+      "note": "Le reazioni sono disegnate sull’esercizio nel verso in cui si considerano positive. Se una agisce nel verso opposto, il suo valore è negativo.",
+      "field": "{label}, {direction}, in {unit}",
+      "fieldMagnitude": "{label}, in {unit}"
+    },
+    "positive": {
+      "right": "positiva verso destra",
+      "up": "positiva verso l’alto",
+      "counterClockwise": "positivo in senso antiorario",
+      "tension": "positivo se di trazione",
+      "magnitude": "valore assoluto"
+    },
+    "mark": {
+      "correct": "corretto",
+      "exact": "valore esatto",
+      "sign": "segno?",
+      "signLong": "valore giusto, segno sbagliato",
+      "wrong": "errato"
+    },
+    "verdict": {
+      "allRight": "Tutto corretto. Ora i diagrammi sono disegnati sull’esercizio.",
+      "sign": "Risposte corrette: {right} su {total}. Dove compare «{sign}», il valore è giusto ma il verso è opposto.",
+      "some": "Risposte corrette: {right} su {total}. Una risposta conta come corretta se si discosta al massimo dell’1 % dal valore esatto.",
+      "revealed": "I valori esatti sono accanto ai tuoi campi, e i diagrammi sono disegnati sull’esercizio."
+    },
+    "check": "Verifica",
+    "nextProblem": "Esercizio successivo",
+    "hint": "Suggerimento",
+    "showAnswers": "Mostra le soluzioni",
+    "solved": "{n} esercizio risolto su questo dispositivo. | {n} esercizi risolti su questo dispositivo.",
+    "about": {
+      "answers": {
+        "title": "Da dove vengono le soluzioni",
+        "body": "{solver}, il solutore di EduBeam, risolve ogni esercizio nel tuo browser, e {plot} lo disegna. Il momento massimo è calcolato in modo esatto, non letto su una curva campionata."
+      },
+      "signs": {
+        "title": "Segni e unità",
+        "body": "Le risposte sono in kN e kNm. I carichi agiscono verso il basso, salvo diversa indicazione nel testo. Le reazioni sono positive verso destra, verso l’alto e in senso antiorario, come indica ogni campo; gli sforzi nelle aste sono positivi se di trazione. I diagrammi seguono la {conventions} di EduBeam.",
+        "conventions": "convenzione dei segni"
+      },
+      "teachers": {
+        "title": "Per i docenti",
+        "body": "Il {exam} stampa questi esercizi come compiti, una versione diversa per ogni studente, con le soluzioni. Con il codice di ciascun esercizio, gli studenti possono poi verificare qui le proprie risposte.",
+        "exam": "generatore di compiti"
+      }
+    }
+  },
+  "exam": {
+    "seo": {
+      "title": "Generatore di compiti di statica: compiti da stampare con le soluzioni {'|'} EduBeam",
+      "description": "Crea compiti di statica nel browser: travi, telai e travature reticolari con dati generati, una versione per ogni studente, le soluzioni e figure SVG per LaTeX e Word. Gratuito, senza installare nulla.",
+      "ogTitle": "Generatore di compiti di statica: compiti da stampare con le soluzioni",
+      "ogDescription": "Travi, telai e travature reticolari generati, una versione per ogni studente, le soluzioni e figure SVG. Gratuito, nel browser."
+    },
+    "title": "Generatore di compiti",
+    "lede": "Compiti di statica, una versione diversa per ogni studente, con le soluzioni. Il tuo browser crea tutto e non invia nulla a nessuno; le impostazioni stanno nell’indirizzo della pagina, quindi un segnalibro riporta agli stessi compiti.",
+    "defaultTitle": "Compito di statica",
+    "settings": {
+      "title": "Titolo",
+      "subtitle": "Seconda riga",
+      "subtitlePlaceholder": "Corso, data, tempo a disposizione",
+      "problems": "Esercizi",
+      "problem": "Esercizio {n}",
+      "determinate": "Strutture isostatiche",
+      "indeterminate": "Strutture iperstatiche",
+      "remove": "Rimuovi l’esercizio {n}",
+      "add": "Aggiungi un esercizio",
+      "problemsNote": "Ogni versione contiene questi esercizi, in quest’ordine, ciascuno con i propri dati. Al massimo {max}.",
+      "versions": "Versioni",
+      "versionsNote": "Una per studente: al massimo {max}.",
+      "number": "Numero del compito",
+      "newNumber": "Nuovo",
+      "newNumberTitle": "Nuovi dati per tutti gli esercizi",
+      "numberNote": "Lo stesso numero genera sempre gli stessi compiti.",
+      "onPapers": "Sui compiti",
+      "nameLine": "Una riga per il nome dello studente",
+      "working": "Spazio per i calcoli",
+      "key": "Le soluzioni alla fine",
+      "codes": "Codici degli esercizi",
+      "codesNote": "Per gli esercizi per casa: gli studenti verificano le risposte nella pagina {practice}, che mostra la soluzione. Lasciali disattivati per un compito in classe.",
+      "practicePage": "Esercizi di statica"
+    },
+    "zipNote": "Il file .zip contiene tutte le figure e le soluzioni in SVG, per LaTeX e Word, e le risposte in una tabella CSV per la correzione.",
+    "summary": {
+      "papers": "{n} compito | {n} compiti",
+      "problems": "{n} esercizio | {n} esercizi",
+      "plain": "{papers} da {problems}",
+      "withKey": "{papers} da {problems}, con il foglio delle soluzioni",
+      "withKeys": "{papers} da {problems}, con i fogli delle soluzioni"
+    },
+    "jump": {
+      "label": "Vai a un compito",
+      "placeholder": "Vai a…",
+      "papers": "Compiti",
+      "keys": "Soluzioni",
+      "key": "Soluzioni, versione {n}"
+    },
+    "version": "Versione {n}",
+    "download": "Scarica .zip",
+    "downloadTitle": "Tutte le figure e le soluzioni in SVG, per LaTeX e Word, e le risposte in una tabella CSV per la correzione",
+    "print": "Stampa",
+    "printLong": "Stampa o salva come PDF",
+    "paper": {
+      "name": "Nome",
+      "rules": "Forze in kN, momenti in kNm. I carichi agiscono verso il basso, salvo diversa indicazione nel testo. Le reazioni sono le forze che i vincoli esercitano sulla struttura e sono disegnate nel verso in cui si considerano positive: verso destra, verso l’alto e in senso antiorario. Una risposta negativa indica il verso opposto. Gli sforzi nelle aste sono positivi se di trazione.",
+      "check": "Verifica le tue risposte su {url}"
+    },
+    "key": {
+      "title": "Soluzioni",
+      "version": "{title}, versione {n}",
+      "exam": "Compito n. {n}"
+    },
+    "tension": "trazione +",
+    "solutionFigure": "{name}: soluzione"
+  },
+  "exerciseGenerator": {
+    "solveIt": "Risolvilo nella pagina Esercizi di statica",
+    "exercise": "L’esercizio",
+    "key": "Soluzioni",
+    "solution": "La sua soluzione",
+    "caption": "Generato nel tuo browser: il seme sceglie la struttura e i suoi dati, {'@'}edubeam/fem la risolve e {'@'}edubeam/plot disegna sia il testo sia la soluzione. I compiti completi si creano con il {exam}.",
+    "exam": "generatore di compiti",
+    "newExercise": "Nuovo esercizio"
+  },
+  "ui": {
+    "menu": "Menu",
+    "darkMode": "Tema scuro",
+    "lightMode": "Tema chiaro",
+    "language": "Lingua: {name}",
+    "guideNav": "Guida",
+    "copy": "Copia",
+    "copied": "Copiato",
+    "copyCode": "Copia il codice",
+    "docs": "Documentazione",
+    "elementSketch": "Un elemento nei suoi assi locali"
+  },
+  "heroFigure": {
+    "aria": "Una trave appoggiata con sbalzo soggetta a un carico uniforme e a un carico concentrato mobile, con i diagrammi del taglio e del momento flettente e la linea elastica",
+    "slider": "Posizione del carico concentrato di 20 kN",
+    "loadAt": "a {x} m",
+    "hint": "Trascina il carico, oppure passa il mouse su un diagramma per leggerne i valori.",
+    "fromA": "a {x} m da A",
+    "reactions": "reazioni di {a} kN in A e di {b} kN in B",
+    "sagging": "momento massimo in campata di {m} kNm",
+    "hogging": "momento negativo sull’appoggio B di {m} kNm"
+  },
+  "plotTexts": {
+    "structure": "Struttura",
+    "structureWith": "Struttura con {parts}",
+    "layers": {
+      "N": "il diagramma dello sforzo normale",
+      "V": "il diagramma del taglio",
+      "M": "il diagramma del momento flettente",
+      "w": "la deformata",
+      "reactions": "le reazioni",
+      "loads": "i carichi"
+    },
+    "loadHandle": "Posizione del carico {load}",
+    "loadPosition": "a {metres} m dall’inizio della trave",
+    "stack": "Una trave con i suoi carichi",
+    "stackWith": "Una trave con i suoi carichi e, sotto, {rows}",
+    "rows": {
+      "N": "il diagramma dello sforzo normale",
+      "V": "il diagramma del taglio",
+      "M": "il diagramma del momento flettente",
+      "w": "la linea elastica"
+    },
+    "temperatureUniform": "ΔT",
+    "temperatureGradient": "ΔTb − ΔTt"
   }
 }

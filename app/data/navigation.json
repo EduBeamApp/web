@@ -1968,6 +1968,8 @@
     "sidebar": [
       {
         "text": "Per iniziare",
+        "icon": "lucide:flag",
+        "section": "guide",
         "items": [
           {
             "text": "Introduzione",
@@ -1976,28 +1978,13 @@
           {
             "text": "Avvio rapido (10 min)",
             "link": "/it/guide/quick-start"
-          },
-          {
-            "text": "Esempi",
-            "link": "/it/examples/"
           }
         ]
       },
       {
-        "text": "Tutorial",
-        "items": [
-          {
-            "text": "Telaio a tre cerniere",
-            "link": "/it/tutorials/three-hinged-frame"
-          },
-          {
-            "text": "Travatura reticolare piana",
-            "link": "/it/tutorials/truss"
-          }
-        ]
-      },
-      {
-        "text": "Modellazione",
+        "text": "Crea un modello",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
         "items": [
           {
             "text": "Interfaccia utente",
@@ -2022,7 +2009,9 @@
         ]
       },
       {
-        "text": "Risultati",
+        "text": "Leggi i risultati",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
         "items": [
           {
             "text": "Risultati e diagrammi",
@@ -2035,10 +2024,12 @@
         ]
       },
       {
-        "text": "File e condivisione",
+        "text": "Condividi e insegna",
+        "icon": "lucide:presentation",
+        "section": "guide",
         "items": [
           {
-            "text": "Importazione, esportazione e condivisione",
+            "text": "File, link ed esportazione",
             "link": "/it/essentials/import-export"
           },
           {
@@ -2048,7 +2039,9 @@
         ]
       },
       {
-        "text": "Riferimenti",
+        "text": "Aiuto",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
         "items": [
           {
             "text": "Tastiera, mouse e touch",
@@ -2065,7 +2058,51 @@
         ]
       },
       {
+        "text": "Tutorial",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Trave inclinata",
+            "link": "/it/tutorials/inclined-beam"
+          },
+          {
+            "text": "Telaio a tre cerniere",
+            "link": "/it/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Travatura reticolare piana",
+            "link": "/it/tutorials/truss"
+          },
+          {
+            "text": "Trave continua e cedimento vincolare",
+            "link": "/it/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "Esercizi",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Esercizi di statica",
+            "link": "/it/practice"
+          },
+          {
+            "text": "Generatore di compiti",
+            "link": "/it/exam"
+          },
+          {
+            "text": "Esempi",
+            "link": "/it/examples/"
+          }
+        ]
+      },
+      {
         "text": "Manuale teorico",
+        "icon": "lucide:sigma",
+        "section": "theory",
         "items": [
           {
             "text": "Sistema di coordinate e convenzioni dei segni",
@@ -2078,9 +2115,12 @@
           {
             "text": "Elemento reticolare",
             "link": "/it/elements/truss"
+          },
+          {
+            "text": "Come EduBeam risolve un modello",
+            "link": "/it/elements/analysis"
           }
-        ],
-        "collapsed": true
+        ]
       }
     ]
   },
