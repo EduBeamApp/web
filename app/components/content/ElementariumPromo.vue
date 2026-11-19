@@ -13,10 +13,10 @@ const href = computed(
       :href="href"
       target="_blank"
       rel="noopener"
-      class="group flex items-center gap-5 overflow-hidden rounded-2xl border border-[#1c2550] bg-[#070b24] px-5 py-4 text-white transition hover:border-[#3a4fb0]"
+      class="group flex flex-wrap items-center gap-x-5 gap-y-3 overflow-hidden rounded-2xl border border-[#1c2550] bg-[#070b24] px-5 py-4 text-white transition hover:border-[#3a4fb0]"
     >
       <img src="/elementarium/logo.png" width="31" height="37" alt="" class="shrink-0" />
-      <div class="min-w-0 flex-1">
+      <div class="min-w-[12rem] flex-1">
         <p class="font-display text-lg font-semibold">
           {{ t('components.promoTitle') }}
           <span class="text-[#6f8cff]">{{ t('components.promoAccent') }}</span>

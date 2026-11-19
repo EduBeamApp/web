@@ -241,7 +241,7 @@ const copyLink = async () => {
 </script>
 
 <template>
-  <div v-if="!redirecting" class="mx-auto max-w-7xl px-4 pb-24 pt-12 sm:px-6">
+  <main v-if="!redirecting" class="mx-auto max-w-7xl px-4 pb-24 pt-12 sm:px-6">
     <header class="grid gap-6 lg:grid-cols-12 lg:items-end">
       <div class="lg:col-span-7">
         <h1 class="section-title text-balance text-ink">{{ t('practice.title') }}</h1>
@@ -460,7 +460,7 @@ const copyLink = async () => {
         </i18n-t>
       </div>
     </section>
-  </div>
+  </main>
 </template>
 
 <style scoped>

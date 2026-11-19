@@ -487,6 +487,9 @@ input[type='range'] {
 
 .doc h1 {
   font-weight: 700;
+  /* A long compound word (Vorzeichenkonventionen) breaks on a phone instead of widening the page */
+  overflow-wrap: break-word;
+  hyphens: auto;
   font-size: clamp(2.4rem, 1.7rem + 2.4vw, 3.25rem);
   line-height: 1;
   letter-spacing: -0.02em;

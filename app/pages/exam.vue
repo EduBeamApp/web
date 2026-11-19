@@ -235,7 +235,7 @@ const download = () => {
 </script>
 
 <template>
-  <div v-if="!redirecting" class="exam-page mx-auto max-w-7xl px-4 pb-24 pt-12 sm:px-6">
+  <main v-if="!redirecting" class="exam-page mx-auto max-w-7xl px-4 pb-24 pt-12 sm:px-6">
     <header class="no-print max-w-3xl">
       <h1 class="section-title text-balance text-ink">{{ t('exam.title') }}</h1>
       <p class="mt-3 text-pretty leading-relaxed text-muted">{{ t('exam.lede') }}</p>
@@ -243,7 +243,7 @@ const download = () => {
 
     <div class="mt-8 grid gap-8 lg:grid-cols-[20rem_minmax(0,1fr)] lg:gap-10">
       <!-- Settings -->
-      <aside class="no-print">
+      <aside class="no-print min-w-0">
         <!-- From lg up the panel fits the window and its settings scroll on their own -->
         <div class="panel">
           <form class="settings" @submit.prevent>
@@ -448,7 +448,7 @@ const download = () => {
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <style scoped>

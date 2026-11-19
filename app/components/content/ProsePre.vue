@@ -22,7 +22,12 @@ const label = computed(() => props.filename ?? (props.language ? (LANGUAGES[prop
 const copied = ref(false)
 let timer: ReturnType<typeof setTimeout> | undefined
 const copy = async () => {
-  await navigator.clipboard.writeText(props.code.trimEnd())
+  try {
+    await navigator.clipboard.writeText(props.code.trimEnd())
+  } catch {
+    // The browser refused the clipboard: the code stays on screen to copy by hand
+    return
+  }
   copied.value = true
   clearTimeout(timer)
   timer = setTimeout(() => (copied.value = false), 1600)

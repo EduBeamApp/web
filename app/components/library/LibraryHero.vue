@@ -6,7 +6,12 @@ const props = defineProps<{ product: Product; docs: string }>()
 const { t } = useI18n()
 const copied = ref(false)
 const copy = async () => {
-  await navigator.clipboard.writeText(props.product.install)
+  try {
+    await navigator.clipboard.writeText(props.product.install)
+  } catch {
+    // The browser refused the clipboard: the command stays on screen to copy by hand
+    return
+  }
   copied.value = true
   setTimeout(() => (copied.value = false), 1600)
 }
