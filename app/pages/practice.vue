@@ -376,7 +376,11 @@ const copyLink = async () => {
                 class="field answer-input"
                 inputmode="decimal"
                 autocomplete="off"
-                :aria-label="t('practice.answers.field', { label: words.text(a.label), direction: direction(a), unit: a.unit })"
+                :aria-label="
+                  a.positive
+                    ? t('practice.answers.field', { label: words.text(a.label), direction: direction(a), unit: a.unit })
+                    : t('practice.answers.fieldMagnitude', { label: words.text(a.label), unit: a.unit })
+                "
                 :aria-describedby="`m-${a.id}`"
                 :readonly="revealed"
               />

@@ -5,15 +5,17 @@ const NAMED: readonly PlotLayer[] = ['N', 'V', 'M', 'w', 'reactions', 'loads']
 
 export default defineNuxtPlugin((nuxtApp) => {
   const i18n = nuxtApp.$i18n
+  // "loads, reactions and bending moment", with the language's own "and"
+  const list = (items: string[]) => new Intl.ListFormat(i18n.locale.value, { type: 'conjunction' }).format(items)
   const texts = computed(
     (): PlotTexts => ({
       structure: (shown) => {
         const parts = shown.filter((l) => NAMED.includes(l)).map((l) => i18n.t(`plotTexts.layers.${l}`))
-        return parts.length > 0 ? i18n.t('plotTexts.structureWith', { parts: parts.join(', ') }) : i18n.t('plotTexts.structure')
+        return parts.length > 0 ? i18n.t('plotTexts.structureWith', { parts: list(parts) }) : i18n.t('plotTexts.structure')
       },
       stack: (rows) =>
         rows.length > 0
-          ? i18n.t('plotTexts.stackWith', { rows: rows.map((r) => i18n.t(`plotTexts.rows.${r}`)).join(', ') })
+          ? i18n.t('plotTexts.stackWith', { rows: list(rows.map((r) => i18n.t(`plotTexts.rows.${r}`))) })
           : i18n.t('plotTexts.stack'),
       temperature: { uniform: i18n.t('plotTexts.temperatureUniform'), gradient: i18n.t('plotTexts.temperatureGradient') },
       loadHandle: (load) => i18n.t('plotTexts.loadHandle', { load }),

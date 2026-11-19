@@ -92,7 +92,7 @@ watch(locale, fit, { flush: 'post' })
         >
           <Icon name="lucide:search" class="size-4 shrink-0" />
           <span class="hidden" :class="squeeze ? '' : 'xl:inline'">{{ t('search.placeholder') }}</span>
-          <kbd class="ml-auto hidden rounded border border-rule px-1.5 font-sans text-xs xl:inline">Ctrl K</kbd>
+          <kbd class="ml-auto hidden rounded border border-rule px-1.5 font-sans text-xs xl:inline">{{ t('search.shortcut') }}</kbd>
         </button>
         <SearchDialog v-model:open="searching" />
         <LocaleSwitch :compact="squeeze > 1" />

@@ -9,7 +9,7 @@ import { buildExampleSolver, examples } from '~/lib/examples'
  * EduBeam exactly as it is drawn here.
  */
 const { t } = useI18n()
-const { openUrl } = useLiveModel()
+const { openUrl, numberFormat } = useLiveModel()
 const solvers = shallowRef<LinearStaticSolver[]>([])
 /** Each tile's link opens the app showing the diagram the tile shows, as the plot chose it. */
 const links = shallowRef<string[]>([])
@@ -34,7 +34,7 @@ onMounted(() => {
       >
         <div class="flex h-48 items-center px-3">
           <ClientOnly>
-            <StructurePlot v-if="solvers[i]" :solver="solvers[i]" compact :height="180" class="w-full" />
+            <StructurePlot v-if="solvers[i]" :solver="solvers[i]" compact :height="180" :number-format="numberFormat" class="w-full" />
           </ClientOnly>
         </div>
         <div class="flex flex-1 items-start justify-between gap-3 border-t border-rule px-4 py-3.5">

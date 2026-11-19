@@ -88,7 +88,8 @@
   "search": {
     "label": "Search",
     "placeholder": "Search the docs",
-    "noResults": "No results for “{query}”"
+    "noResults": "No results for “{query}”",
+    "shortcut": "Ctrl K"
   },
   "home": {
     "seo": {
@@ -496,7 +497,8 @@
     "answers": {
       "title": "Your answers",
       "note": "The reactions are drawn on the problem the way they count as positive. If one acts the other way, its answer is negative.",
-      "field": "{label}, {direction}, in {unit}"
+      "field": "{label}, {direction}, in {unit}",
+      "fieldMagnitude": "{label}, in {unit}"
     },
     "positive": {
       "right": "positive to the right",

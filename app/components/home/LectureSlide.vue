@@ -10,7 +10,7 @@ import { buildExampleSolver, examples } from '~/lib/examples'
  * forces fade in, as on a projector. Under the slides, the link that opens the very same model.
  */
 const { t } = useI18n()
-const { openUrl } = useLiveModel()
+const { openUrl, numberFormat } = useLiveModel()
 const pratt = examples.find((e) => e.id === 'pratt')!
 
 /* The slide is white as a projector shows it, in either theme, so its drawing keeps the day colours */
@@ -120,6 +120,7 @@ const copy = async () => {
                   :reserve="[...ANSWER]"
                   :colors="SLIDE_COLORS"
                   :animate="false"
+                  :number-format="numberFormat"
                   class="max-h-full w-full"
                 />
               </ClientOnly>

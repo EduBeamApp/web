@@ -88,7 +88,8 @@
   "search": {
     "label": "Hledat",
     "placeholder": "Hledat v příručce",
-    "noResults": "Pro „{query}“ nic nenalezeno"
+    "noResults": "Pro „{query}“ nic nenalezeno",
+    "shortcut": "Ctrl K"
   },
   "home": {
     "seo": {
@@ -496,7 +497,8 @@
     "answers": {
       "title": "Vaše výsledky",
       "note": "Reakce jsou v zadání nakreslené ve směru, ve kterém jsou kladné. Pokud některá působí opačně, je její výsledek záporný.",
-      "field": "{label}, {direction}, v {unit}"
+      "field": "{label}, {direction}, v {unit}",
+      "fieldMagnitude": "{label}, v {unit}"
     },
     "positive": {
       "right": "kladně doprava",
