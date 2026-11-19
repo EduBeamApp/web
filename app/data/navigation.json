@@ -1393,6 +1393,8 @@
     "sidebar": [
       {
         "text": "Початок роботи",
+        "icon": "lucide:flag",
+        "section": "guide",
         "items": [
           {
             "text": "Вступ",
@@ -1401,28 +1403,13 @@
           {
             "text": "Швидкий старт (10 хв)",
             "link": "/uk/guide/quick-start"
-          },
-          {
-            "text": "Приклади",
-            "link": "/uk/examples/"
           }
         ]
       },
       {
-        "text": "Покрокові приклади",
-        "items": [
-          {
-            "text": "Тришарнірна рама",
-            "link": "/uk/tutorials/three-hinged-frame"
-          },
-          {
-            "text": "Плоска ферма",
-            "link": "/uk/tutorials/truss"
-          }
-        ]
-      },
-      {
-        "text": "Моделювання",
+        "text": "Створення моделі",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
         "items": [
           {
             "text": "Інтерфейс користувача",
@@ -1447,7 +1434,9 @@
         ]
       },
       {
-        "text": "Результати",
+        "text": "Перегляд результатів",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
         "items": [
           {
             "text": "Результати та епюри",
@@ -1460,20 +1449,24 @@
         ]
       },
       {
-        "text": "Файли та обмін",
+        "text": "Обмін і викладання",
+        "icon": "lucide:presentation",
+        "section": "guide",
         "items": [
           {
-            "text": "Імпорт, експорт та обмін",
+            "text": "Файли, посилання та експорт",
             "link": "/uk/essentials/import-export"
           },
           {
-            "text": "Навчання з EduBeam",
+            "text": "Викладання з EduBeam",
             "link": "/uk/guide/teaching"
           }
         ]
       },
       {
-        "text": "Довідник",
+        "text": "Довідка",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
         "items": [
           {
             "text": "Клавіатура, миша та сенсорний екран",
@@ -1490,22 +1483,69 @@
         ]
       },
       {
+        "text": "Покрокові приклади",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Похила балка",
+            "link": "/uk/tutorials/inclined-beam"
+          },
+          {
+            "text": "Тришарнірна рама",
+            "link": "/uk/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Плоска ферма",
+            "link": "/uk/tutorials/truss"
+          },
+          {
+            "text": "Нерозрізна балка й осідання опори",
+            "link": "/uk/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "Задачі та приклади",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Задачі з будівельної механіки",
+            "link": "/uk/practice"
+          },
+          {
+            "text": "Генератор контрольних робіт",
+            "link": "/uk/exam"
+          },
+          {
+            "text": "Приклади",
+            "link": "/uk/examples/"
+          }
+        ]
+      },
+      {
         "text": "Теоретичний посібник",
+        "icon": "lucide:sigma",
+        "section": "theory",
         "items": [
           {
             "text": "Система координат і правила знаків",
             "link": "/uk/elements/conventions"
           },
           {
-            "text": "Балка",
+            "text": "Балковий елемент",
             "link": "/uk/elements/beam"
           },
           {
-            "text": "Ферма",
+            "text": "Елемент ферми",
             "link": "/uk/elements/truss"
+          },
+          {
+            "text": "Як EduBeam розраховує модель",
+            "link": "/uk/elements/analysis"
           }
-        ],
-        "collapsed": true
+        ]
       }
     ]
   },

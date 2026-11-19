@@ -52,6 +52,23 @@ const russianPlural = (choice: number, choicesLength: number): number => {
 }
 
 /**
+ * Ukrainian counts in three forms, written `одна | дві–чотири | п’ять і більше` in a message: 1 and 21
+ * задача, 2–4 and 22–24 задачі, but 0, 5–20 and 25–30 задач (11–14 included). This is CLDR's Ukrainian
+ * rule for whole numbers. A message with two forms (English, before it is translated) picks between
+ * them as English does.
+ */
+const ukrainianPlural = (choice: number, choicesLength: number): number => {
+  const n = Math.abs(choice)
+  if (choicesLength < 3) return n === 1 ? 0 : 1
+  // A fraction takes the second form (2,5 задачі), as in Russian
+  if (!Number.isInteger(n)) return 1
+  const units = n % 10
+  const tens = n % 100
+  if (units === 1 && tens !== 11) return 0
+  return units >= 2 && units <= 4 && (tens < 12 || tens > 14) ? 1 : 2
+}
+
+/**
  * Text not yet translated shows in English. New copy is written in English first and translated
  * once it is settled.
  */
@@ -59,5 +76,5 @@ export default defineI18nConfig(() => ({
   fallbackLocale: 'en',
   missingWarn: false,
   fallbackWarn: false,
-  pluralRules: { cs: czechPlural, fr: frenchPlural, pt: frenchPlural, pl: polishPlural, ru: russianPlural },
+  pluralRules: { cs: czechPlural, fr: frenchPlural, pt: frenchPlural, pl: polishPlural, ru: russianPlural, uk: ukrainianPlural },
 }))
