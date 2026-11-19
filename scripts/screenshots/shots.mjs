@@ -1,6 +1,6 @@
 // What the guide on the website shows, one entry per image in its public/screenshots.
 //
-// A shot: { name, model?, width?, height?, app?, viewer?, firstVisit?, url?, setup?(page, helpers),
+// A shot: { name, model?, width?, height?, scale?, app?, viewer?, firstVisit?, url?, setup?(page, helpers),
 //           clip?(page, helpers) → selector(s) or boxes, pad? }
 // Models are files in ./models; `viewer` and `app` seed the persisted stores before the app loads.
 
@@ -230,6 +230,188 @@ const fillNth = async (page, n, value) => {
   await wait(page, 200);
 };
 
+/** A box of the page, where a crop is a fixed part of a fixed viewport rather than one element. */
+const box = (x, y, width, height) => () => ({ x, y, width, height });
+
+/** The visible box of the first match, for crops that are not one element grown evenly. */
+const boxOf = async (page, selector) => {
+  const found = await page.locator(selector).first().boundingBox();
+  if (!found) throw new Error(`Nothing to clip: ${selector}`);
+  return found;
+};
+
+/**
+ * The quick start, walked from a first visit like a new user would: an empty model, a material and
+ * a section from the libraries, two nodes, one element, supports, a load, the display panel, a node
+ * in the middle and its results. Each a-qs shot replays it up to its own `step` and is taken there.
+ */
+const quickStart = async (page, step) => {
+  const dlg = page.locator('.v-dialog');
+  /** The support menu of the first node still free. */
+  const openSupports = async () => {
+    await page
+      .getByRole('button', { name: t('supports.free') })
+      .first()
+      .click();
+    await wait(page, 500);
+  };
+  const chooseSupport = async (label) => {
+    await page
+      .locator('.v-list-item')
+      .filter({ has: page.getByText(label, { exact: true }) })
+      .click();
+    await wait(page);
+  };
+  /** Adds the row of a library dialog whose name contains `name` (a product name, the same in every language). */
+  const fromLibrary = async (libraryTab, libraryButton, name) => {
+    await bottomTab(page, libraryTab);
+    await page.getByRole('button', { name: libraryButton }).click();
+    await wait(page, 500);
+    const row = page.locator('.v-dialog tr', { hasText: name });
+    await row.scrollIntoViewIfNeeded();
+    await wait(page, 300);
+    await row.locator('button').first().click();
+    await page.getByRole('button', { name: t('dialogs.common.cancel') }).click();
+    await wait(page);
+  };
+
+  await page.getByText(t('welcome.skip')).click();
+  await wait(page);
+  await page.getByText(t('common.clearMesh')).first().click();
+  await page.getByText(t('confirmation.clearMesh.materials')).click();
+  await page.getByText(t('confirmation.clearMesh.crossSections')).click();
+  await page.getByRole('button', { name: t('common.confirm') }).click();
+  await wait(page);
+  await fromLibrary(t('tabs.materials'), t('materials.material_library'), 'S235');
+  await fromLibrary(t('tabs.crossSections'), t('materials.section_library'), 'IPE 200');
+  if (step === 'cross-sections') return page.mouse.move(1278, 300);
+
+  await bottomTab(page, t('tabs.nodes'));
+  for (const x of [0, 6]) {
+    await page
+      .getByRole('button', { name: t('nodes.addNode') })
+      .first()
+      .click();
+    await wait(page);
+    await dlg.getByLabel(t('dialogs.addNode.coordinate_x')).fill(String(x));
+    await dlg.getByRole('button', { name: t('dialogs.addNode.addNode') }).click();
+    await wait(page);
+  }
+  await bottomTab(page, t('tabs.elements'));
+  await page
+    .getByRole('button', { name: t('elements.addElement') })
+    .first()
+    .click();
+  await wait(page, 600);
+  // Two selects carry autofocus; the start node is the one shown focused
+  await page.locator('.v-dialog .v-select input').first().focus();
+  if (step === 'element') return;
+
+  await dlg.getByRole('button', { name: t('dialogs.addElement.addElement') }).click();
+  await wait(page);
+  await bottomTab(page, t('tabs.nodes'));
+  await wait(page, 300);
+  await openSupports();
+  if (step === 'support-picker') return;
+
+  await chooseSupport(t('supports.pin'));
+  await openSupports();
+  await chooseSupport(t('supports.roller'));
+  await bottomTab(page, t('tabs.loads'));
+  await page
+    .getByRole('button', { name: t('loads.addElementLoad') })
+    .first()
+    .click();
+  await wait(page, 500);
+  await dlg.getByLabel('fz').fill('12');
+  if (step === 'load') return;
+
+  await dlg.getByRole('button', { name: t('dialogs.addElementLoad.addElementLoad') }).click();
+  await wait(page, 600);
+  await fit(page);
+  // The third display toggle is the shear force, Vz(x)
+  await page.locator('#viewerSettings .v-checkbox').nth(2).locator('input').click();
+  await page.evaluate(() => document.activeElement?.blur());
+  await page.mouse.move(400, 300);
+  await wait(page, 500);
+  if (step === 'display') return;
+
+  // A node in the middle of the beam, placed by mouse on the element, which splits it in two
+  await bottomTab(page, t('tabs.nodes'));
+  await page
+    .getByRole('button', { name: t('nodes.addNode') })
+    .nth(1)
+    .click();
+  await wait(page);
+  const beam = await rectOf(page, elementSel('1'));
+  const middle = { x: beam.x + beam.width / 2, y: beam.y + beam.height / 2 };
+  await page.mouse.move(middle.x - 60, middle.y);
+  await page.mouse.move(middle.x, middle.y);
+  await page.mouse.click(middle.x, middle.y);
+  await wait(page, 600);
+  await page.getByRole('button', { name: t('confirmation.splitElementAndPlaceNode.split') }).click();
+  await wait(page);
+  await page.keyboard.press('Escape');
+  await bottomTab(page, t('tabs.results'));
+  await wait(page, 300);
+  await page.getByRole('button', { name: t('results.nodal_results') }).click();
+  await wait(page, 600);
+  await page.mouse.move(1278, 300);
+};
+
+/** The Settings tab of the app, on its Viewer settings page. */
+const viewerSettings = async (page) => {
+  await page
+    .locator('.v-tab')
+    .filter({ hasText: t('tabView.settings') })
+    .first()
+    .click();
+  await page.getByText(t('settings.viewer_settings'), { exact: true }).first().click();
+  await wait(page, 600);
+};
+
+/** The last match's box: of two overlays open at once, the one opened last. */
+const lastBoxOf = async (page, selector) => {
+  const found = await page.locator(selector).last().boundingBox();
+  if (!found) throw new Error(`Nothing to clip: ${selector}`);
+  return found;
+};
+
+/** Opens the support menu of node 1 in the Nodes tab, with no item highlighted. */
+const supportMenu = async (page) => {
+  await bottomTab(page, t('tabs.nodes'));
+  await page.locator('#bottomBar .support-select').first().click();
+  await wait(page, 600);
+  await page.evaluate(() =>
+    document.querySelectorAll('.v-list-item--active').forEach((item) => {
+      item.classList.remove('v-list-item--active');
+      item.querySelector('.v-list-item__overlay')?.remove();
+    })
+  );
+  await page.mouse.move(5, 5);
+};
+
+/**
+ * The results tab from below its tab strip down to `below` under the table, `width` wide, or wider
+ * when a language's buttons or fields reach further.
+ */
+const resultsArea = (width, below) => async (page) => {
+  const tab = await boxOf(page, '#bottomBar .v-tab[value=tab-results]');
+  const { right, bottom } = await page.evaluate(() => {
+    const visible = (selector) =>
+      [...document.querySelectorAll('#bottomBar .v-window-item--active')]
+        .flatMap((item) => [...item.querySelectorAll(selector)])
+        .map((el) => el.getBoundingClientRect())
+        .filter((r) => r.width > 0);
+    return {
+      right: Math.max(...visible('.v-input, .v-btn').map((r) => r.right)),
+      bottom: Math.max(...visible('table').map((r) => r.bottom)),
+    };
+  });
+  const y = tab.y + tab.height + 1;
+  return { x: 0, y, width: Math.max(width, right + 16), height: bottom + below - y };
+};
+
 export const shots = [
   // ---------------------------------------------------------------- home & introduction
   {
@@ -263,7 +445,10 @@ export const shots = [
     setup: async (page) => {
       await menuItem(page, t('welcome.showAround'));
       for (let i = 0; i < 3; i++) {
-        await page.getByRole('button', { name: t('tour.nextButton'), exact: true }).first().click();
+        await page
+          .getByRole('button', { name: t('tour.nextButton'), exact: true })
+          .first()
+          .click();
         await wait(page, 400);
       }
     },
@@ -325,6 +510,56 @@ export const shots = [
     pad: 0,
   },
   fitAndCrop('qs-results', 'beam', ['showShearForce', 'showBendingMoment', 'showReactions', 'showDeformedShape']),
+  // The quick start, each step of it walked from a first visit (see quickStart)
+  {
+    name: 'a-qs-cross-sections',
+    firstVisit: true,
+    setup: (page) => quickStart(page, 'cross-sections'),
+    // The toolbar, the header and the one section added
+    clip: box(0, 576, 940, 124),
+    pad: 0,
+  },
+  {
+    name: 'a-qs-element',
+    firstVisit: true,
+    setup: (page) => quickStart(page, 'element'),
+    clip: () => dialog,
+    pad: 0,
+  },
+  {
+    name: 'a-qs-support-picker',
+    firstVisit: true,
+    setup: (page) => quickStart(page, 'support-picker'),
+    // The support menu over the nodes table, from the left edge
+    clip: box(0, 404, 720, 336),
+    pad: 0,
+  },
+  {
+    name: 'a-qs-load',
+    firstVisit: true,
+    setup: (page) => quickStart(page, 'load'),
+    clip: () => dialog,
+    pad: 0,
+  },
+  {
+    name: 'a-qs-display',
+    firstVisit: true,
+    setup: (page) => quickStart(page, 'display'),
+    // The display toggles with the grid behind them, at least 460 px wide from their right edge
+    clip: async (page) => {
+      const toggles = await boxOf(page, '#viewerSettings');
+      const width = Math.max(460, toggles.width + 8);
+      return { x: toggles.x + toggles.width + 4 - width, y: toggles.y - 1, width, height: toggles.height + 2 };
+    },
+    pad: 0,
+  },
+  {
+    name: 'a-qs-nodal-results',
+    firstVisit: true,
+    setup: (page) => quickStart(page, 'nodal-results'),
+    clip: box(0, 576, 640, 190),
+    pad: 0,
+  },
 
   // ---------------------------------------------------------------- user interface
   {
@@ -452,19 +687,46 @@ export const shots = [
     clip: () => '#addModeBanner',
     pad: 8,
   },
-  {
-    name: 'nodes-edit',
+  // One icon per support, which the guide's tables show inline next to the support's name
+  ...[
+    ['b-support-free', 'supports.free'],
+    ['b-support-pin', 'supports.pin'],
+    ['b-support-roller', 'supports.roller'],
+    ['b-support-vertical-roller', 'supports.verticalRoller'],
+    ['b-support-fixed', 'supports.fixed'],
+    ['b-support-slider', 'supports.slider'],
+    ['b-support-vertical-slider', 'supports.verticalSlider'],
+    ['b-support-rotation-only', 'supports.rotation'],
+  ].map(([name, support]) => ({
+    name,
     model: 'beam',
-    setup: async (page) => {
-      await page.locator('#bottomBar .mdi-pencil').first().click();
-      await wait(page, 700);
-    },
-    clip: () => dialog,
-    pad: 0,
-  },
+    scale: 3,
+    app: { bottomBarHeight: 420 },
+    viewer: { settingsOpen: false },
+    setup: supportMenu,
+    clip: (page) =>
+      page
+        .locator('.v-overlay--active .v-list-item')
+        .filter({ has: page.getByText(t(support), { exact: true }) })
+        .locator('.v-list-item__prepend > *')
+        .first()
+        .boundingBox(),
+    pad: 4,
+  })),
 
   // ---------------------------------------------------------------- elements, materials, sections
   table('elements-table', 'three-hinged-frame', (page) => bottomTab(page, t('tabs.elements'))),
+  // The dashed line on each element's bottom side, nothing else drawn
+  {
+    name: 'p2b-element-direction',
+    model: 'portal-frame',
+    width: 1100,
+    height: 700,
+    viewer: only(),
+    setup: fit,
+    clip: box(340, 150, 440, 260),
+    pad: 0,
+  },
   {
     name: 'sections-library',
     setup: async (page) => {
@@ -541,6 +803,29 @@ export const shots = [
     },
     { numberStyle: 'auto' }
   ),
+  {
+    name: 'p2c-results-nodal',
+    model: 'results-frame',
+    width: 1200,
+    app: { bottomBarHeight: 300, numberStyle: 'auto' },
+    height: 820,
+    setup: (page) => bottomTab(page, t('tabs.results')),
+    clip: resultsArea(600, 7),
+    pad: 0,
+  },
+  {
+    name: 'p2c-results-element',
+    model: 'results-frame',
+    width: 1200,
+    height: 820,
+    app: { bottomBarHeight: 300, numberStyle: 'auto' },
+    setup: async (page) => {
+      await bottomTab(page, t('tabs.results'));
+      await toolbarButton(page, t('results.element_results'));
+    },
+    clip: resultsArea(1134, 2),
+    pad: 0,
+  },
 
   // ---------------------------------------------------------------- units & settings
   {
@@ -566,16 +851,23 @@ export const shots = [
     width: 1200,
     height: 900,
     app: { bottomBarHeight: 100 },
-    setup: async (page) => {
-      await page
-        .locator('.v-tab')
-        .filter({ hasText: t('tabView.settings') })
-        .first()
-        .click();
-      await page.getByText(t('settings.viewer_settings'), { exact: true }).first().click();
-      await wait(page, 600);
-    },
+    setup: viewerSettings,
     clip: settingsArea,
+    pad: 0,
+  },
+  // The viewer settings alone, tall enough for all of them
+  {
+    name: 'b-settings-viewer',
+    model: 'beam',
+    width: 1200,
+    height: 1300,
+    app: { bottomBarHeight: 100 },
+    setup: viewerSettings,
+    settle: 900,
+    clip: async (page) => {
+      const settings = await boxOf(page, '.viewer-settings');
+      return { x: settings.x - 12, y: settings.y, width: settings.width + 24, height: settings.height + 12 };
+    },
     pad: 0,
   },
   // The whole drawing area, so the axis indicator in the corner shows y up
@@ -595,6 +887,26 @@ export const shots = [
         .locator('header .v-btn')
         .filter({ hasText: t('common.shareModel') })
         .click(),
+    clip: () => dialog,
+    pad: 0,
+  },
+  {
+    name: 'c1-share',
+    model: 'three-hinged-frame',
+    width: 900,
+    height: 820,
+    setup: async (page) => {
+      await page
+        .locator('header .v-btn')
+        .filter({ hasText: t('common.shareModel') })
+        .click();
+      await wait(page, 800);
+      // The link as the deployed app gives it, not the address the shots were taken from
+      await page.evaluate(() => {
+        const link = document.querySelector('.share-textarea textarea');
+        link.value = link.value.replace(location.origin, 'https://run.edubeam.app');
+      });
+    },
     clip: () => dialog,
     pad: 0,
   },
@@ -642,4 +954,58 @@ export const shots = [
   fitAndCrop('tut-frame-normal', 'three-hinged-frame', ['showNormalForce']),
   fitAndCrop('tut-truss-model', 'truss', [], { width: 1200 }),
   fitAndCrop('tut-truss', 'truss', ['showNormalForce', 'showReactions'], { width: 1200 }),
+  // The models of the tutorials' "Open in EduBeam" links
+  {
+    name: 'p2t-frame-elements-table',
+    model: 'tutorial-frame',
+    width: 1000,
+    height: 1100,
+    setup: (page) => bottomTab(page, t('tabs.elements')),
+    // The tab strip, the toolbar and the first three elements
+    clip: async (page) => {
+      const bar = await boxOf(page, '#bottomBar');
+      return { x: 0, y: bar.y + 2, width: 1000, height: 210 };
+    },
+    pad: 0,
+  },
+  {
+    name: 'p2t-node-supports-angle',
+    model: 'inclined-beam',
+    width: 1100,
+    height: 800,
+    viewer: { settingsOpen: false },
+    setup: async (page) => {
+      await fit(page);
+      await hoverNode(page, '2');
+      await clickNode(page, '2');
+      await page.locator('.selection-tooltip').getByText(t('nodes.defineSupports')).click();
+      await wait(page, 600);
+      await page.getByRole('textbox', { name: t('nodes.lcsAngle') }).fill('-36.87');
+    },
+    // Both menus, with a little more room above than below
+    clip: async (page, { clipOf }) => {
+      const menus = await clipOf(page, [
+        await lastBoxOf(page, '.selection-tooltip'),
+        await lastBoxOf(page, '.v-overlay--active .v-overlay__content'),
+      ]);
+      return { x: menus.x - 6, y: menus.y - 6, width: menus.width + 13, height: menus.height + 10 };
+    },
+    pad: 0,
+  },
+  {
+    name: 'p2t-prescribe-displacement',
+    model: 'continuous-beam',
+    width: 1100,
+    height: 800,
+    setup: async (page) => {
+      await fit(page);
+      await hoverNode(page, '2');
+      await clickNode(page, '2');
+      await page.getByText(t('loads.addPrescribedDisplacement')).last().click();
+      await wait(page, 800);
+      await page.getByRole('textbox', { name: 'Dz' }).fill('0.01');
+    },
+    clip: () => dialog,
+    pad: 0,
+  },
 ];

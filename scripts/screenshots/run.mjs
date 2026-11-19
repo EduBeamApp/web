@@ -9,9 +9,11 @@
 //   npm run screenshots -- --lang cs      # the Czech guide, in screenshots/cs/
 //   npm run screenshots -- --lang all     # every language of the guide
 //   npm run screenshots -- --missing      # only shots that do not exist yet, e.g. after a crash
+//   npm run screenshots -- --out /tmp/s   # into another folder instead, e.g. to compare before replacing
 //
-// English shots go to screenshots/, every other language to screenshots/<docs language>/, with the
-// app in that language. Buttons are found by their labels in the app's language, so no shot names one.
+// English shots go to screenshots/, every other language to screenshots/<docs language>/ (the same
+// layout under the --out folder), with the app in that language. Buttons are found by their labels
+// in the app's language, so no shot names one.
 // Every shot starts from a fresh browser context, so the output depends only on the app and the
 // model files in ./models. Shots are written as WebP, encoded by Chromium itself, so no image
 // tooling is needed besides Playwright.
@@ -23,7 +25,6 @@ import { setMessages, shots } from './shots.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const APP = process.env.APP ?? 'http://localhost:5173/';
-const SCREENSHOTS = resolve(here, '../../public/screenshots');
 
 /** Docs language → app language. The docs say zh where the app says cn. */
 const APP_LANGUAGE = {
@@ -53,6 +54,10 @@ const langArg = langAt >= 0 ? args.splice(langAt, 2)[1] : 'en';
 if (langArg !== 'all' && !(langArg in APP_LANGUAGE)) {
   throw new Error(`--lang takes ${Object.keys(APP_LANGUAGE).join(', ')} or all`);
 }
+const outAt = args.indexOf('--out');
+const outArg = outAt >= 0 ? args.splice(outAt, 2)[1] : undefined;
+if (outAt >= 0 && !outArg) throw new Error('--out takes a folder');
+const SCREENSHOTS = outArg ? resolve(outArg) : resolve(here, '../../public/screenshots');
 const missingAt = args.indexOf('--missing');
 const onlyMissing = missingAt >= 0;
 if (onlyMissing) args.splice(missingAt, 1);
@@ -100,6 +105,7 @@ let version = '';
 async function openApp({
   width = 1280,
   height = 800,
+  scale = 2,
   lang = 'en',
   model,
   app = {},
@@ -111,7 +117,7 @@ async function openApp({
   // seeded settings set it for every other shot. Without it, every first-visit shot came out in English.
   const context = await browser.newContext({
     viewport: { width, height },
-    deviceScaleFactor: 2,
+    deviceScaleFactor: scale,
     locale: lang === 'cn' ? 'zh-CN' : lang,
   });
   context.setDefaultTimeout(5000);
