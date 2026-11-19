@@ -1146,7 +1146,9 @@
     "appLocale": "hi",
     "sidebar": [
       {
-        "text": "शुरुआत",
+        "text": "यहाँ से शुरू करें",
+        "icon": "lucide:flag",
+        "section": "guide",
         "items": [
           {
             "text": "परिचय",
@@ -1155,28 +1157,13 @@
           {
             "text": "त्वरित शुरुआत (10 मिनट)",
             "link": "/hi/guide/quick-start"
-          },
-          {
-            "text": "उदाहरण",
-            "link": "/hi/examples/"
           }
         ]
       },
       {
-        "text": "ट्यूटोरियल",
-        "items": [
-          {
-            "text": "त्रि-हिंज फ्रेम",
-            "link": "/hi/tutorials/three-hinged-frame"
-          },
-          {
-            "text": "समतल ट्रस",
-            "link": "/hi/tutorials/truss"
-          }
-        ]
-      },
-      {
-        "text": "मॉडलिंग",
+        "text": "मॉडल बनाएँ",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
         "items": [
           {
             "text": "यूज़र इंटरफ़ेस",
@@ -1201,7 +1188,9 @@
         ]
       },
       {
-        "text": "परिणाम",
+        "text": "परिणाम पढ़ें",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
         "items": [
           {
             "text": "परिणाम और आरेख",
@@ -1214,10 +1203,12 @@
         ]
       },
       {
-        "text": "फ़ाइलें और साझाकरण",
+        "text": "साझा करें और पढ़ाएँ",
+        "icon": "lucide:presentation",
+        "section": "guide",
         "items": [
           {
-            "text": "आयात, निर्यात और साझाकरण",
+            "text": "फ़ाइलें, लिंक और निर्यात",
             "link": "/hi/essentials/import-export"
           },
           {
@@ -1227,7 +1218,9 @@
         ]
       },
       {
-        "text": "संदर्भ",
+        "text": "सहायता",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
         "items": [
           {
             "text": "कीबोर्ड, माउस और टच",
@@ -1238,28 +1231,75 @@
             "link": "/hi/reference/troubleshooting"
           },
           {
-            "text": "अक्सर पूछे जाने वाले प्रश्न",
+            "text": "प्रश्नोत्तर",
             "link": "/hi/faq/"
           }
         ]
       },
       {
-        "text": "सैद्धांतिक मैनुअल",
+        "text": "ट्यूटोरियल",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
         "items": [
           {
-            "text": "निर्देशांक तंत्र और चिह्न परिपाटी",
+            "text": "झुका बीम",
+            "link": "/hi/tutorials/inclined-beam"
+          },
+          {
+            "text": "त्रि-हिंज फ्रेम",
+            "link": "/hi/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "समतल ट्रस",
+            "link": "/hi/tutorials/truss"
+          },
+          {
+            "text": "सतत बीम और सपोर्ट का धँसाव",
+            "link": "/hi/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "अभ्यास",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "अभ्यास प्रश्न",
+            "link": "/hi/practice"
+          },
+          {
+            "text": "प्रश्नपत्र जनरेटर",
+            "link": "/hi/exam"
+          },
+          {
+            "text": "उदाहरण",
+            "link": "/hi/examples/"
+          }
+        ]
+      },
+      {
+        "text": "सैद्धांतिक मैनुअल",
+        "icon": "lucide:sigma",
+        "section": "theory",
+        "items": [
+          {
+            "text": "अक्ष और चिह्न परिपाटी",
             "link": "/hi/elements/conventions"
           },
           {
-            "text": "बीम",
+            "text": "बीम अवयव",
             "link": "/hi/elements/beam"
           },
           {
-            "text": "ट्रस",
+            "text": "ट्रस अवयव",
             "link": "/hi/elements/truss"
+          },
+          {
+            "text": "EduBeam कैसे हल करता है",
+            "link": "/hi/elements/analysis"
           }
-        ],
-        "collapsed": true
+        ]
       }
     ]
   },
