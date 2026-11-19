@@ -271,7 +271,8 @@ const quickStart = async (page, step) => {
     await row.scrollIntoViewIfNeeded();
     await wait(page, 300);
     await row.locator('button').first().click();
-    await page.getByRole('button', { name: t('dialogs.common.cancel') }).click();
+    // In the dialog: in French the toolbar's Undo is "Annuler" too
+    await page.locator('.v-dialog').getByRole('button', { name: t('dialogs.common.cancel') }).click();
     await wait(page);
   };
 
