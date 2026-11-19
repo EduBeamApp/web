@@ -37,7 +37,7 @@ useSeoMeta({
 
 const route = useRoute()
 const router = useRouter()
-const { numberFormat, openUrl } = useLiveModel()
+const { numberFormat, openUrl, units } = useLiveModel()
 
 // Per-browser conveniences: the families picked and the problems solved. Storage may be off.
 const store = {
@@ -340,7 +340,7 @@ const copyLink = async () => {
               :reaction-labels="showSolution ? 'values' : 'names'"
               :reserve-reaction-labels="['names', 'values']"
               :max-height="380"
-              :number-format="numberFormat"
+              :number-format="numberFormat" :units="units"
               :title="words.statement(current.problem)"
               :hover="showSolution"
               class="w-full"

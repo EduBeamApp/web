@@ -13,6 +13,9 @@ import { createExampleLibrary } from '~/lib/examples'
 const STEPS = ['nodes', 'elements', 'loads', 'results'] as const
 
 const { t, locale } = useI18n()
+const { units } = useLiveModel()
+/** A unit's symbol as the page writes it: kN, or кН on Russian pages */
+const unit = (kind: 'force' | 'moment' | 'distributed' | 'length' | 'displacement') => units.value[kind].symbol
 const active = ref(0)
 
 /* ── The frame: 6 m wide, 4 m high, pinned at both feet (model axes: x right, z down) ─────── */
@@ -266,7 +269,7 @@ const onKey = (e: KeyboardEvent) => {
               </text>
             </g>
             <!-- The units, once, now that the values on the drawing are plain numbers -->
-            <text x="62" y="62" class="bs-num" fill="var(--muted)">M [kNm], R [kN]</text>
+            <text x="62" y="62" class="bs-num" fill="var(--muted)">M [{{ unit('moment') }}], R [{{ unit('force') }}]</text>
           </g>
 
           <!-- 3: supports and loads -->
@@ -281,10 +284,10 @@ const onKey = (e: KeyboardEvent) => {
                 <line :x1="px(x, -4)[0]" :x2="px(x, -4)[0]" :y1="px(0, -4)[1] - 40" :y2="px(0, -4)[1] - 8" stroke-width="1.25" />
                 <path :d="`M${px(x, -4)[0] - 3},${px(0, -4)[1] - 10}l6,0l-3,6Z`" stroke="none" />
               </g>
-              <text :x="px(0, -4)[0]" :y="px(0, -4)[1] - 48" text-anchor="start" stroke="none" class="bs-num">q = {{ Q }} kN/m</text>
+              <text :x="px(0, -4)[0]" :y="px(0, -4)[1] - 48" text-anchor="start" stroke="none" class="bs-num">q = {{ Q }} {{ unit('distributed') }}</text>
             </g>
             <line :x1="px(0, -4)[0] - 78" :x2="px(0, -4)[0] - 6" :y1="px(0, -4)[1]" :y2="px(0, -4)[1]" stroke="var(--color-load)" stroke-width="3" marker-end="url(#bs-load)" />
-            <text :x="px(0, -4)[0] - 82" :y="px(0, -4)[1] - 10" text-anchor="start" class="bs-num" font-weight="600" fill="var(--color-load)">{{ H }} kN</text>
+            <text :x="px(0, -4)[0] - 82" :y="px(0, -4)[1] - 10" text-anchor="start" class="bs-num" font-weight="600" fill="var(--color-load)">{{ H }} {{ unit('force') }}</text>
           </g>
 
           <!-- 2: members -->
@@ -321,10 +324,10 @@ const onKey = (e: KeyboardEvent) => {
             <g class="bs-layer text-muted" :class="{ on: active === 0 }" stroke="currentColor" fill="currentColor">
               <line :x1="px(0, 0)[0]" :x2="px(6, 0)[0]" :y1="Y0 + 52" :y2="Y0 + 52" stroke-width="1" />
               <line v-for="x in [0, 6]" :key="x" :x1="px(x, 0)[0]" :x2="px(x, 0)[0]" :y1="Y0 + 44" :y2="Y0 + 60" stroke-width="1" />
-              <text :x="px(3, 0)[0]" :y="Y0 + 46" text-anchor="middle" stroke="none" class="bs-num">6 m</text>
+              <text :x="px(3, 0)[0]" :y="Y0 + 46" text-anchor="middle" stroke="none" class="bs-num">6 {{ unit('length') }}</text>
               <line :x1="px(6, 0)[0] + 58" :x2="px(6, 0)[0] + 58" :y1="px(6, -4)[1]" :y2="px(6, 0)[1]" stroke-width="1" />
               <line v-for="z in [0, -4]" :key="z" :x1="px(6, 0)[0] + 50" :x2="px(6, 0)[0] + 66" :y1="px(6, z)[1]" :y2="px(6, z)[1]" stroke-width="1" />
-              <text :x="px(6, 0)[0] + 66" :y="px(6, -2)[1] + 4" stroke="none" class="bs-num">4 m</text>
+              <text :x="px(6, 0)[0] + 66" :y="px(6, -2)[1] + 4" stroke="none" class="bs-num">4 {{ unit('length') }}</text>
             </g>
           </g>
         </svg>

@@ -30,7 +30,7 @@ onMounted(() => {
   solver.value = s
 })
 
-const { numberFormat } = useLiveModel()
+const { numberFormat, units } = useLiveModel()
 const layers = computed<PlotLayer[]>(() => [
   'members',
   'supports',
@@ -46,6 +46,6 @@ const layers = computed<PlotLayer[]>(() => [
 
 <template>
   <LiveFrame :solver="solver" height="h-56" class="my-8">
-    <StructurePlot v-if="solver" :solver="solver" :layers="layers" :number-format="numberFormat" class="w-full" />
+    <StructurePlot v-if="solver" :solver="solver" :layers="layers" :number-format="numberFormat" :units="units" class="w-full" />
   </LiveFrame>
 </template>

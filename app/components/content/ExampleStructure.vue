@@ -30,7 +30,7 @@ const LAYER = { normal: 'N', shear: 'V', moment: 'M', deformed: 'w' } as const s
 const base: PlotLayer[] = ['members', 'supports', 'loads', 'reactions']
 const layers = computed<PlotLayer[]>(() => [...base, LAYER[result.value]])
 const reserve: PlotLayer[] = [...base, 'N', 'V', 'M', 'w']
-const { numberFormat } = useLiveModel()
+const { numberFormat, units } = useLiveModel()
 </script>
 
 <template>
@@ -41,7 +41,7 @@ const { numberFormat } = useLiveModel()
         :layers="layers"
         :reserve="reserve"
         :height="256"
-        :number-format="numberFormat"
+        :number-format="numberFormat" :units="units"
         hover
         class="w-full px-3"
       />
@@ -49,8 +49,8 @@ const { numberFormat } = useLiveModel()
       <div class="live-controls">
         <LiveResultSwitch v-model="result" />
         <div class="live-ranges">
-          <LiveRangeField v-model="span" symbol="L" unit="m" :label="t('components.spanLength')" :min="1" :max="10" :step="0.5" />
-          <LiveRangeField v-model="q" symbol="q" unit="kN/m" :label="t('components.loadIntensity')" :min="1" :max="20" :step="1" />
+          <LiveRangeField v-model="span" symbol="L" :unit="units.length.symbol" :label="t('components.spanLength')" :min="1" :max="10" :step="0.5" />
+          <LiveRangeField v-model="q" symbol="q" :unit="units.distributed.symbol" :label="t('components.loadIntensity')" :min="1" :max="20" :step="1" />
         </div>
       </div>
     </template>

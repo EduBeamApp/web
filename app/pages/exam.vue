@@ -137,6 +137,7 @@ interface Paper {
 // The paper draws the unknown reactions, named and pointing the way they count as positive
 const SHEET: PlotLayer[] = ['members', 'supports', 'loads', 'reactions', 'nodeLabels', 'dimensions']
 const keyLayers = (s: Solved): PlotLayer[] => ['members', 'supports', 'reactions', 'nodeLabels', s.problem.family === 'truss' ? 'N' : 'M']
+const { units } = useLiveModel()
 // In the language of the problems' words: 2.5 in English, 2,5 in Czech
 const numberFormat = computed(
   () => new Intl.NumberFormat(words.locale.value, { maximumSignificantDigits: 4, maximumFractionDigits: 0, roundingPriority: 'morePrecision' })
@@ -148,6 +149,7 @@ const svgOptions = (title: string, layers: PlotLayer[], reactionLabels: 'values'
   width: 640,
   maxHeight: 280,
   numberFormat: numberFormat.value,
+  units: units.value,
   colors: PRINT_COLORS,
   background: false,
   fontFamily: "'IBM Plex Sans', Arial, sans-serif",

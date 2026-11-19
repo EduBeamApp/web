@@ -1,5 +1,8 @@
 <script setup lang="ts">
 const { t, locale } = useI18n()
+const { units } = useLiveModel()
+/** A unit's symbol as the page writes it: kN, or кН on Russian pages */
+const unit = (kind: 'force' | 'moment' | 'distributed' | 'length' | 'displacement') => units.value[kind].symbol
 import { DofID, LinearStaticSolver, type Beam2D } from '@edubeam/fem'
 import { useElementSize, useWindowSize } from '@vueuse/core'
 import { createExampleLibrary } from '~/lib/examples'
@@ -222,12 +225,12 @@ const cursorMarks = computed(() => {
   const r = readout.value
   if (!r) return []
   const right = r.x < LENGTH * 0.7
-  const vText = r.V2 === null ? `${fmt(r.V)} kN` : `${fmt(r.V)} → ${fmt(r.V2)} kN`
+  const vText = r.V2 === null ? `${fmt(r.V)} ${unit('force')}` : `${fmt(r.V)} → ${fmt(r.V2)} ${unit('force')}`
   const vY = rows.value.V.axis - (r.V2 === null ? r.V : Math.max(r.V, r.V2)) * rows.value.V.scale
   return [
     { key: 'V', y: vY, color: 'var(--color-shear)', text: vText },
-    { key: 'M', y: rows.value.M.axis + r.M * rows.value.M.scale, color: 'var(--color-moment)', text: `${fmt(r.M)} kNm` },
-    { key: 'w', y: rows.value.w.axis + r.w * rows.value.w.scale, color: 'var(--ink)', text: `${fmt(r.w)} mm` },
+    { key: 'M', y: rows.value.M.axis + r.M * rows.value.M.scale, color: 'var(--color-moment)', text: `${fmt(r.M)} ${unit('moment')}` },
+    { key: 'w', y: rows.value.w.axis + r.w * rows.value.w.scale, color: 'var(--ink)', text: `${fmt(r.w)} ${unit('displacement')}` },
   ].map((m) => {
     const width = m.text.length * 7.1 + 14
     return { ...m, width, left: right ? sx(r.x) + 8 : sx(r.x) - 8 - width, top: m.y - 30 }
@@ -337,9 +340,9 @@ const udlArrows = computed(() => {
       </g>
       <!-- Each diagram's unit, once, under its name; the values on the diagrams are plain numbers -->
       <g class="hf-num" font-size="12.5" fill="var(--muted)" text-anchor="end">
-        <text :x="LEFT - 12" :y="rows.V.axis + 21">[kN]</text>
-        <text :x="LEFT - 12" :y="rows.M.axis + 21">[kNm]</text>
-        <text :x="LEFT - 12" :y="rows.w.axis + 21">[mm]</text>
+        <text :x="LEFT - 12" :y="rows.V.axis + 21">[{{ unit('force') }}]</text>
+        <text :x="LEFT - 12" :y="rows.M.axis + 21">[{{ unit('moment') }}]</text>
+        <text :x="LEFT - 12" :y="rows.w.axis + 21">[{{ unit('displacement') }}]</text>
       </g>
 
       <!-- The load row, loads in the app's load colour: uniform load, the movable point load, the beam -->
@@ -357,7 +360,7 @@ const udlArrows = computed(() => {
           stroke="none"
           font-size="12.5"
           class="hf-num"
-        >q = {{ Q }} kN/m</text>
+        >q = {{ Q }} {{ unit('distributed') }}</text>
       </g>
 
       <!-- Dashed guide from the load down through every diagram -->
@@ -381,7 +384,7 @@ const udlArrows = computed(() => {
           stroke-width="1.75"
           marker-end="url(#hf-reaction-tip)"
         />
-        <text :x="sx(r.x) + 8" :y="beamY + 70" class="hf-num" font-size="12.5" fill="var(--color-reaction)">{{ fmt(Math.abs(r.value)) }} kN</text>
+        <text :x="sx(r.x) + 8" :y="beamY + 70" class="hf-num" font-size="12.5" fill="var(--color-reaction)">{{ fmt(Math.abs(r.value)) }} {{ unit('force') }}</text>
       </g>
 
       <!-- The point load: grab it anywhere on the load row, or focus it and use the arrow keys -->
@@ -403,7 +406,7 @@ const udlArrows = computed(() => {
         <circle class="hf-grip" :cx="sx(at)" :cy="beamY - 80" r="9" fill="var(--color-load)" />
         <!-- The keyboard focus ring, around the grip -->
         <circle class="hf-focus" :cx="sx(at)" :cy="beamY - 80" r="16" fill="none" stroke="var(--brand)" stroke-width="2" />
-        <text :x="sx(at) + (at > LENGTH - 1.2 ? -16 : 16)" :y="beamY - 76" :text-anchor="at > LENGTH - 1.2 ? 'end' : 'start'" font-size="12.5" class="hf-num" fill="var(--color-load)" font-weight="600">P = {{ P }} kN</text>
+        <text :x="sx(at) + (at > LENGTH - 1.2 ? -16 : 16)" :y="beamY - 76" :text-anchor="at > LENGTH - 1.2 ? 'end' : 'start'" font-size="12.5" class="hf-num" fill="var(--color-load)" font-weight="600">P = {{ P }} {{ unit('force') }}</text>
       </g>
 
       <!-- V(x) -->
@@ -429,7 +432,7 @@ const udlArrows = computed(() => {
       <!-- The reading cursor: the value of each diagram written beside its point -->
       <g v-if="readout && !dragging" pointer-events="none" class="hf-num" font-size="12.5" font-weight="600">
         <line :x1="sx(readout.x)" :x2="sx(readout.x)" :y1="rows.V.top - 14" :y2="rows.w.top + rows.w.height" stroke="currentColor" class="text-figure" opacity=".3" />
-        <text :x="sx(readout.x)" :y="rows.V.top - 20" text-anchor="middle" class="hf-halo text-ink" fill="currentColor"><tspan font-style="italic" class="hf-math">x</tspan> = {{ fmt(readout.x, 2) }} m</text>
+        <text :x="sx(readout.x)" :y="rows.V.top - 20" text-anchor="middle" class="hf-halo text-ink" fill="currentColor"><tspan font-style="italic" class="hf-math">x</tspan> = {{ fmt(readout.x, 2) }} {{ unit('length') }}</text>
         <circle :cx="sx(readout.x)" :cy="rows.V.axis - readout.V * rows.V.scale" r="4" fill="var(--color-shear)" stroke="var(--paper)" stroke-width="1.5" />
         <circle v-if="readout.V2 !== null" :cx="sx(readout.x)" :cy="rows.V.axis - readout.V2 * rows.V.scale" r="4" fill="var(--color-shear)" stroke="var(--paper)" stroke-width="1.5" />
         <circle :cx="sx(readout.x)" :cy="rows.M.axis + readout.M * rows.M.scale" r="4" fill="var(--color-moment)" stroke="var(--paper)" stroke-width="1.5" />

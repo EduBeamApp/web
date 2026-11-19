@@ -10,7 +10,7 @@ import { PLOT, SOLVER } from '~/data/products'
  */
 const { t, locale } = useI18n()
 // Values on the figure as the page's language writes them (12,5 in Czech)
-const { numberFormat } = useLiveModel()
+const { numberFormat, units } = useLiveModel()
 const { sitePath } = useSitePages()
 const redirecting = useEnglishFallback()
 useProductSeo(SOLVER)
@@ -49,11 +49,11 @@ onMounted(() => {
   s.solve()
   const f = (v: number) => v.toLocaleString(locale.value, { minimumFractionDigits: 2, maximumFractionDigits: 2 })
   results.value = [
-    { label: 'beam.computeBendingMomentAt(lc, 3)', value: `${f(beam.computeBendingMomentAt(lc, 3) / 1000)} kNm`, check: `qL²/8 = ${f(54)}` },
-    { label: 'beam.computeShearForceAt(lc, 0)', value: `${f(beam.computeShearForceAt(lc, 0) / 1000)} kN`, check: `qL/2 = ${f(36)}` },
+    { label: 'beam.computeBendingMomentAt(lc, 3)', value: `${f(beam.computeBendingMomentAt(lc, 3) / 1000)} ${units.value.moment.symbol}`, check: `qL²/8 = ${f(54)}` },
+    { label: 'beam.computeShearForceAt(lc, 0)', value: `${f(beam.computeShearForceAt(lc, 0) / 1000)} ${units.value.force.symbol}`, check: `qL/2 = ${f(36)}` },
     {
       label: 'beam.computeLocalDefl(lc, 2).w[1]',
-      value: `${f(beam.computeLocalDefl(lc, 2).w[1] * 1000)} mm`,
+      value: `${f(beam.computeLocalDefl(lc, 2).w[1] * 1000)} ${units.value.displacement.symbol}`,
       check: t('solver.run.plusShear', { formula: `5qL⁴/384EI = ${f(49.63)}` }),
     },
   ]
@@ -79,7 +79,7 @@ const FEATURES = ['analyses', 'elements', 'loads', 'results'] as const
         <div class="flex flex-col gap-6 lg:col-span-5">
           <div class="rounded-xl border border-rule bg-paper p-4">
             <ClientOnly>
-              <StructurePlot v-if="solver" :solver="solver" :number-format="numberFormat" :layers="['members', 'supports', 'loads', 'reactions', 'M']" :height="170" />
+              <StructurePlot v-if="solver" :solver="solver" :number-format="numberFormat" :units="units" :layers="['members', 'supports', 'loads', 'reactions', 'M']" :height="170" />
             </ClientOnly>
           </div>
           <dl class="sheet">

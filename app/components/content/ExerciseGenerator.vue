@@ -29,7 +29,7 @@ const key = computed<PlotLayer[]>(() => ['members', 'supports', 'reactions', 'no
 // Both sides lay out the same layers, so the sheet and its key draw the structure at one scale, in line
 const reserve: PlotLayer[] = [...sheet, 'reactions', 'N', 'V', 'M']
 
-const { numberFormat } = useLiveModel()
+const { numberFormat, units } = useLiveModel()
 </script>
 
 <template>
@@ -43,7 +43,7 @@ const { numberFormat } = useLiveModel()
         <p class="mt-1 text-sm leading-relaxed text-ink-soft">{{ words.statement(solved.problem) + words.gap() + words.text(solved.problem.task) }}</p>
         <div class="mt-auto pt-3">
           <ClientOnly>
-            <StructurePlot :solver="solved.solver" :layers="sheet" :reserve="reserve" reaction-labels="names" :reserve-reaction-labels="['names', 'values']" :max-height="320" :number-format="numberFormat" :title="t('exerciseGenerator.exercise')" class="w-full" />
+            <StructurePlot :solver="solved.solver" :layers="sheet" :reserve="reserve" reaction-labels="names" :reserve-reaction-labels="['names', 'values']" :max-height="320" :number-format="numberFormat" :units="units" :title="t('exerciseGenerator.exercise')" class="w-full" />
           </ClientOnly>
         </div>
       </section>
@@ -60,7 +60,7 @@ const { numberFormat } = useLiveModel()
               :reserve-reaction-labels="['names', 'values']"
               :reserve="reserve"
               :max-height="320"
-              :number-format="numberFormat"
+              :number-format="numberFormat" :units="units"
               :title="t('exerciseGenerator.solution')"
               class="w-full"
             />

@@ -1,5 +1,5 @@
 import type { LinearStaticSolver } from '@edubeam/fem'
-import type { ResultLayer } from '@edubeam/plot'
+import { KN_UNITS, type ResultLayer, type Units } from '@edubeam/plot'
 import { encodeLayers, LAYER_LETTERS, serializeModel, type Layers } from '~/lib/share-link'
 
 /** The app's view layer for each of the plot's result diagrams. */
@@ -23,6 +23,19 @@ export const showOnly = (result: ResultLayer, labels = false) => {
   return encodeLayers(layers)
 }
 
+/** Unit symbols where the page's language writes them in its own script: Russian pages write кН and кН·м */
+const LOCAL_UNITS: Readonly<Record<string, Units>> = {
+  ru: {
+    force: { symbol: 'кН', scale: 1e-3 },
+    moment: { symbol: 'кН·м', scale: 1e-3 },
+    distributed: { symbol: 'кН/м', scale: 1e-3 },
+    length: { symbol: 'м', scale: 1 },
+    displacement: { symbol: 'мм', scale: 1e3 },
+    rotation: { symbol: 'мрад', scale: 1e3 },
+    temperature: { symbol: 'К', scale: 1 },
+  },
+}
+
 /**
  * What every live model on the site shares: numbers written the way the page's language writes
  * them (12,5 in Czech, 12.5 in English), and a link that opens the model in the app as it stands.
@@ -43,11 +56,14 @@ export const useLiveModel = () => {
       })
   )
 
+  /** The figures' unit symbols: kN and kNm, or the page's own script where it has one */
+  const units = computed(() => LOCAL_UNITS[locale.value] ?? KN_UNITS)
+
   /** The `?model=` share link the app reads, in the page's language; `show` picks what it displays. */
   const openUrl = (solver: LinearStaticSolver, show?: string) => {
     const model = encodeURIComponent(serializeModel(solver))
     return `https://run.edubeam.app/?model=${model}&lang=${appLocale.value}${show ? `&show=${show}` : ''}`
   }
 
-  return { numberFormat, openUrl }
+  return { numberFormat, units, openUrl }
 }

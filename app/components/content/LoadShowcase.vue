@@ -67,7 +67,7 @@ const build = (sample: Sample) => {
 }
 
 const { t } = useI18n()
-const { openUrl, numberFormat } = useLiveModel()
+const { openUrl, numberFormat, units } = useLiveModel()
 const solvers = shallowRef<LinearStaticSolver[]>([])
 onMounted(() => (solvers.value = SAMPLES.map(build)))
 </script>
@@ -86,7 +86,7 @@ onMounted(() => (solvers.value = SAMPLES.map(build)))
                 :solver="solvers[i]"
                 :layers="['members', 'supports', 'loads', 'reactions', sample.result]"
                 :height="170"
-                :number-format="numberFormat"
+                :number-format="numberFormat" :units="units"
                 compact
                 class="w-full px-2"
               />

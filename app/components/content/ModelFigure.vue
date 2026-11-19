@@ -161,7 +161,7 @@ const switchValue = computed({
 })
 
 const { t } = useI18n()
-const { openUrl, numberFormat } = useLiveModel()
+const { openUrl, numberFormat, units } = useLiveModel()
 const href = computed(() => openUrl(solver.value, result.value ? showOnly(result.value, props.show.includes('nodeLabels')) : undefined))
 </script>
 
@@ -181,7 +181,7 @@ import type { Result } from '../live/ResultSwitch.vue'
           :max-height="440"
           :width="680"
           :result-label-mode="labels"
-          :number-format="numberFormat"
+          :number-format="numberFormat" :units="units"
           :title="caption"
           hover
           class="w-full"

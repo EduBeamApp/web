@@ -104,6 +104,11 @@ const CASES: Case[] = [
 ]
 
 const { t, locale } = useI18n()
+const { units } = useLiveModel()
+/** A unit's symbol as the page writes it: kN, or кН on Russian pages */
+const unit = (kind: 'force' | 'moment' | 'distributed' | 'length' | 'displacement') => units.value[kind].symbol
+const KIND = { kN: 'force', kNm: 'moment', mm: 'displacement' } as const
+const unitOf = (u: string) => (u in KIND ? unit(KIND[u as keyof typeof KIND]) : u)
 const formula = (tex: string) => katex.renderToString(tex, { throwOnError: false })
 const fmt = (v: number) => v.toLocaleString(locale.value, { minimumFractionDigits: 2, maximumFractionDigits: 2 }).replace('-', '−')
 
@@ -141,10 +146,10 @@ const matches = (i: number) => solved.value !== null && Math.abs(solved.value[i]
             </td>
             <!-- eslint-disable-next-line vue/no-v-html -- KaTeX's markup of our own formula -->
             <td class="hidden py-3 pr-4 text-ink sm:table-cell" v-html="formula(c.tex)" />
-            <td class="whitespace-nowrap py-3 pr-4 text-right tabular-nums text-muted">{{ fmt(c.hand) }} {{ c.unit }}</td>
+            <td class="whitespace-nowrap py-3 pr-4 text-right tabular-nums text-muted">{{ fmt(c.hand) }} {{ unitOf(c.unit) }}</td>
             <td class="whitespace-nowrap py-3 text-right tabular-nums">
               <span v-if="solved" class="inline-flex items-center gap-2 font-medium text-ink">
-                {{ fmt(solved[i]) }} {{ c.unit }}
+                {{ fmt(solved[i]) }} {{ unitOf(c.unit) }}
                 <Icon v-if="matches(i)" name="lucide:check" class="size-4 text-[var(--color-shear)]" />
               </span>
               <span v-else class="text-muted">…</span>
