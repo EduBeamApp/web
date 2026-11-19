@@ -1799,6 +1799,8 @@
     "sidebar": [
       {
         "text": "เริ่มต้นใช้งาน",
+        "icon": "lucide:flag",
+        "section": "guide",
         "items": [
           {
             "text": "บทนำ",
@@ -1807,28 +1809,13 @@
           {
             "text": "เริ่มต้นใช้งานด่วน (10 นาที)",
             "link": "/th/guide/quick-start"
-          },
-          {
-            "text": "ตัวอย่าง",
-            "link": "/th/examples/"
-          }
-        ]
-      },
-      {
-        "text": "บทเรียน",
-        "items": [
-          {
-            "text": "โครงข้อแข็งสามจุดหมุน",
-            "link": "/th/tutorials/three-hinged-frame"
-          },
-          {
-            "text": "โครงถักในระนาบ",
-            "link": "/th/tutorials/truss"
           }
         ]
       },
       {
         "text": "การสร้างโมเดล",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
         "items": [
           {
             "text": "ส่วนติดต่อผู้ใช้",
@@ -1853,7 +1840,9 @@
         ]
       },
       {
-        "text": "ผลลัพธ์",
+        "text": "การอ่านผลลัพธ์",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
         "items": [
           {
             "text": "ผลลัพธ์และแผนภาพ",
@@ -1866,10 +1855,12 @@
         ]
       },
       {
-        "text": "ไฟล์และการแชร์",
+        "text": "แชร์และใช้สอน",
+        "icon": "lucide:presentation",
+        "section": "guide",
         "items": [
           {
-            "text": "นำเข้า ส่งออก และแชร์",
+            "text": "ไฟล์ ลิงก์ และการส่งออก",
             "link": "/th/essentials/import-export"
           },
           {
@@ -1879,7 +1870,9 @@
         ]
       },
       {
-        "text": "ข้อมูลอ้างอิง",
+        "text": "ความช่วยเหลือ",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
         "items": [
           {
             "text": "แป้นพิมพ์ เมาส์ และระบบสัมผัส",
@@ -1896,7 +1889,51 @@
         ]
       },
       {
+        "text": "บทเรียน",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
+        "items": [
+          {
+            "text": "คานเอียง",
+            "link": "/th/tutorials/inclined-beam"
+          },
+          {
+            "text": "โครงข้อแข็งสามจุดหมุน",
+            "link": "/th/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "โครงถักในระนาบ",
+            "link": "/th/tutorials/truss"
+          },
+          {
+            "text": "คานต่อเนื่องและการทรุดตัวของจุดรองรับ",
+            "link": "/th/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "ฝึกฝน",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "ฝึกทำโจทย์",
+            "link": "/th/practice"
+          },
+          {
+            "text": "เครื่องมือสร้างข้อสอบ",
+            "link": "/th/exam"
+          },
+          {
+            "text": "ตัวอย่าง",
+            "link": "/th/examples/"
+          }
+        ]
+      },
+      {
         "text": "คู่มือทฤษฎี",
+        "icon": "lucide:sigma",
+        "section": "theory",
         "items": [
           {
             "text": "ระบบพิกัดและข้อตกลงเรื่องเครื่องหมาย",
@@ -1909,9 +1946,12 @@
           {
             "text": "เอลิเมนต์โครงถัก",
             "link": "/th/elements/truss"
+          },
+          {
+            "text": "EduBeam คำนวณอย่างไร",
+            "link": "/th/elements/analysis"
           }
-        ],
-        "collapsed": true
+        ]
       }
     ]
   },
