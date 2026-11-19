@@ -5,3 +5,17 @@
 
 /_nuxt/builds/*
   ! Cache-Control
+
+# Not pages: the empty app shell and the data the pages load. Search engines index the pages.
+/200
+  X-Robots-Tag: noindex
+/200.html
+  X-Robots-Tag: noindex
+/_payload.json
+  X-Robots-Tag: noindex
+/*/_payload.json
+  X-Robots-Tag: noindex
+/__nuxt_content/*
+  X-Robots-Tag: noindex
+/search/*
+  X-Robots-Tag: noindex
