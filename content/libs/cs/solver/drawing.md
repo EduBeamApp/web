@@ -85,7 +85,7 @@ const svg = structureSvg(modelFromSolver(solver), {
 writeFileSync('beam.svg', svg)
 ```
 
-Soubor ukazuje totéž co živý obrázek výše, jen v barvách pro tisk. `width` určuje jeho šířku v pixelech, protože tu není žádný prvek stránky, podle kterého by se velikost změřila. Celou stránku obrázků k tisku získáte vykreslením Vue komponenty do HTML na serveru, jak to dělá [generátor písemek](/cs/plot/exercises#print-a-test) v dokumentaci @edubeam/plot. Volby funkce `structureSvg` popisuje stránka [Funkce](/cs/plot/functions#a-standalone-svg-file).
+Soubor ukazuje totéž co živý obrázek výše, jen v barvách pro tisk. `width` určuje jeho šířku v pixelech, protože tu není žádný prvek stránky, podle kterého by se velikost změřila. Celou stránku obrázků k tisku získáte tak, že několik takových souborů vložíte do jedné HTML stránky, jak to dělá [generátor písemek](/cs/plot/exercises#print-a-test) v dokumentaci @edubeam/plot, bez Vue i bez prohlížeče. Volby funkce `structureSvg` popisuje stránka [Funkce](/cs/plot/functions#a-standalone-svg-file).
 
 ## Posílejte výkres, ne řešič {#ship-the-drawing-not-the-solver}
 

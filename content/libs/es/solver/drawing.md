@@ -86,7 +86,7 @@ const svg = structureSvg(modelFromSolver(solver), {
 writeFileSync('beam.svg', svg)
 ```
 
-El archivo muestra lo mismo que la figura interactiva de arriba, con colores de impresión. `width` fija su tamaño en píxeles, ya que no hay ningún contenedor que medir. Para una página entera de figuras lista para imprimir, renderiza el componente de Vue a HTML en el servidor, como hace el [script que imprime un examen](/es/plot/exercises#print-a-test) de @edubeam/plot. Las opciones de `structureSvg` están en [Funciones](/es/plot/functions#a-standalone-svg-file).
+El archivo muestra lo mismo que la figura interactiva de arriba, con colores de impresión. `width` fija su tamaño en píxeles, ya que no hay ningún contenedor que medir. Para una página entera de figuras lista para imprimir, reúne varios de estos archivos en una sola página HTML, como hace el [script que imprime un examen](/es/plot/exercises#print-a-test) de @edubeam/plot, sin Vue y sin navegador. Las opciones de `structureSvg` están en [Funciones](/es/plot/functions#a-standalone-svg-file).
 
 ## Entregar el dibujo, no el solver {#ship-the-drawing-not-the-solver}
 

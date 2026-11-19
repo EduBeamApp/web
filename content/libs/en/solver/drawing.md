@@ -86,7 +86,7 @@ const svg = structureSvg(modelFromSolver(solver), {
 writeFileSync('beam.svg', svg)
 ```
 
-The file shows what the live figure above shows, in print colours. `width` sets its size in pixels, since there is no box to measure. For a whole printable page of figures, render the Vue component to HTML on the server, as the [test generator](/plot/exercises#print-a-test) of @edubeam/plot does. The options of `structureSvg` are in [Functions](/plot/functions#a-standalone-svg-file).
+The file shows what the live figure above shows, in print colours. `width` sets its size in pixels, since there is no box to measure. For a whole printable page of figures, put several such files into one HTML page, as the [test generator](/plot/exercises#print-a-test) of @edubeam/plot does, with neither Vue nor a browser. The options of `structureSvg` are in [Functions](/plot/functions#a-standalone-svg-file).
 
 ## Ship the drawing, not the solver {#ship-the-drawing-not-the-solver}
 
