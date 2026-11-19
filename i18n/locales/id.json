@@ -636,7 +636,7 @@
     "docs": "Dokumentasi",
     "elementSketch": "Elemen dalam sumbu lokalnya"
   },
-  "heroFigure": {
+  "beamFigure": {
     "aria": "Balok dengan overstek yang memikul beban merata dan beban terpusat yang dapat dipindahkan, beserta diagram gaya geser, momen lentur, dan lendutannya",
     "slider": "Posisi beban terpusat 20 kN",
     "loadAt": "pada {x} m",

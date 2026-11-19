@@ -636,7 +636,7 @@
     "docs": "文档",
     "elementSketch": "局部坐标系中的单元"
   },
-  "heroFigure": {
+  "beamFigure": {
     "aria": "外伸梁承受均布荷载和一个可移动的集中荷载，以及它的剪力图、弯矩图和挠度图",
     "slider": "20 kN 集中荷载的位置",
     "loadAt": "位于 {x} m 处",

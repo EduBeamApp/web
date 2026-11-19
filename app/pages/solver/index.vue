@@ -65,7 +65,15 @@ const FEATURES = ['analyses', 'elements', 'loads', 'results'] as const
 
 <template>
   <main v-if="!redirecting">
-    <LibraryHero :product="SOLVER" :docs="sitePath('/solver/getting-started')" />
+    <LibraryHero :product="SOLVER" :docs="sitePath('/solver/getting-started')">
+      <!-- The solver at work: every number in the figure is solved again as the load is dragged -->
+      <ClientOnly>
+        <LiveBeamFigure compact />
+        <template #fallback>
+          <div class="aspect-[4/3] w-full" />
+        </template>
+      </ClientOnly>
+    </LibraryHero>
 
     <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
       <h2 class="section-title text-ink">{{ t('solver.run.title') }}</h2>

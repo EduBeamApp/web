@@ -636,7 +636,7 @@
     "docs": "Dokumentace",
     "elementSketch": "Prvek v lokálních osách"
   },
-  "heroFigure": {
+  "beamFigure": {
     "aria": "Nosník s převislým koncem pod rovnoměrným zatížením a posuvnou osamělou silou, s průběhy posouvajících sil, ohybových momentů a průhybu",
     "slider": "Poloha osamělé síly 20 kN",
     "loadAt": "{x} m od A",

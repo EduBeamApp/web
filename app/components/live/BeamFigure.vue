@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const props = defineProps<{ compact?: boolean }>()
 const { t, locale } = useI18n()
 const { units } = useLiveModel()
 /** A unit's symbol as the page writes it: kN, or кН on Russian pages */
@@ -112,9 +113,12 @@ const narrow = computed(() => W.value < 560)
 /*
  * Beside the headline the whole figure should fit the screen's height under the header, so on a
  * short laptop screen the diagrams are drawn lower. The load row and the text keep their size.
+ * On a phone the window's height does not limit it, as the figure sits below the text.
  */
 const { height: windowHeight } = useWindowSize()
 const k = computed(() => {
+  // Compact, the figure is no taller than the few lines of text beside it
+  if (props.compact) return 0.55
   if (narrow.value || !windowHeight.value) return 1
   const available = windowHeight.value - 64 - 72 - 30 // header, padding, the line under the figure
   return Math.min(1, Math.max(0.6, (available - 180) / 392))
@@ -126,16 +130,16 @@ const xOf = (px: number) => ((px - LEFT.value) / (W.value - LEFT.value - RIGHT))
 
 /** Each row: where it starts, how tall, and where its zero line sits for the envelope's range. */
 const rows = computed(() => {
-  const gap = narrow.value ? 18 : Math.round(24 * k.value)
+  const gap = Math.round((narrow.value ? 18 : 24) * k.value)
   const load = { top: 28, height: narrow.value ? 142 : 154 }
   const make = (top: number, height: number, max: number, min: number) => {
     const span = max - min || 1
     return { top, height, axis: top + (max / span) * height, scale: height / span }
   }
   // Sagging moment and downward deflection plot below the axis, as on the tension side
-  const vH = narrow.value ? 96 : Math.round(116 * k.value)
-  const mH = narrow.value ? 104 : Math.round(128 * k.value)
-  const wH = narrow.value ? 64 : Math.round(76 * k.value)
+  const vH = Math.round((narrow.value ? 96 : 116) * k.value)
+  const mH = Math.round((narrow.value ? 104 : 128) * k.value)
+  const wH = Math.round((narrow.value ? 64 : 76) * k.value)
   const vTop = load.top + load.height + gap
   const V = make(vTop, vH, envelope.vMax, envelope.vMin)
   const mTop = vTop + vH + gap
@@ -186,10 +190,10 @@ const fmt = (v: number, digits = 1) => {
 /** What the figure shows for this load position, in words, for a screen reader on the slider */
 const valueText = computed(() => {
   const { mSag, mHog } = peaks.value
-  const moments = [mSag.M > 0.5 && t('heroFigure.sagging', { m: fmt(mSag.M) }), mHog.M < -0.5 && t('heroFigure.hogging', { m: fmt(Math.abs(mHog.M)) })]
+  const moments = [mSag.M > 0.5 && t('beamFigure.sagging', { m: fmt(mSag.M) }), mHog.M < -0.5 && t('beamFigure.hogging', { m: fmt(Math.abs(mHog.M)) })]
   return [
-    t('heroFigure.fromA', { x: fmt(at.value, 2) }),
-    t('heroFigure.reactions', { a: fmt(state.value.ra), b: fmt(state.value.rb) }),
+    t('beamFigure.fromA', { x: fmt(at.value, 2) }),
+    t('beamFigure.reactions', { a: fmt(state.value.ra), b: fmt(state.value.rb) }),
     ...moments.filter((m): m is string => !!m),
   ].join(', ')
 })
@@ -312,7 +316,7 @@ const udlArrows = computed(() => {
       :height="rows.height"
       class="block h-auto w-full touch-pan-y"
       role="group"
-      :aria-label="t('heroFigure.aria')"
+      :aria-label="t('beamFigure.aria')"
       @pointerdown="onDown"
       @pointermove="onMove"
       @pointerup="onUp"
@@ -393,7 +397,7 @@ const udlArrows = computed(() => {
         :class="{ 'is-dragging': dragging }"
         tabindex="0"
         role="slider"
-        :aria-label="t('heroFigure.slider')"
+        :aria-label="t('beamFigure.slider')"
         :aria-valuemin="0"
         :aria-valuemax="LENGTH"
         :aria-valuenow="at"
@@ -445,8 +449,8 @@ const udlArrows = computed(() => {
     </svg>
 
     <p class="hf-readout">
-      <span class="hf-num text-[var(--color-load)]"><i>P</i> {{ t('heroFigure.loadAt', { x: fmt(at, 2) }) }}</span>
-      <span class="text-muted">{{ t('heroFigure.hint') }}</span>
+      <span class="hf-num text-[var(--color-load)]"><i>P</i> {{ t('beamFigure.loadAt', { x: fmt(at, 2) }) }}</span>
+      <span class="text-muted">{{ t('beamFigure.hint') }}</span>
     </p>
   </div>
 </template>

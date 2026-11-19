@@ -636,7 +636,7 @@
     "docs": "문서",
     "elementSketch": "국부 좌표계에 놓인 요소"
   },
-  "heroFigure": {
+  "beamFigure": {
     "aria": "등분포하중과 움직일 수 있는 집중하중을 받는 내민보와 그 전단력도, 휨모멘트도, 처짐곡선",
     "slider": "20 kN 집중하중의 위치",
     "loadAt": "{x} m 위치",

@@ -636,7 +636,7 @@
     "docs": "Documentación",
     "elementSketch": "Un elemento en sus ejes locales"
   },
-  "heroFigure": {
+  "beamFigure": {
     "aria": "Una viga biapoyada con voladizo bajo una carga uniforme y una carga puntual móvil, con sus diagramas de cortantes y de momentos flectores y su elástica",
     "slider": "Posición de la carga puntual de 20 kN",
     "loadAt": "a {x} m",

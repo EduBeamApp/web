@@ -636,7 +636,7 @@
     "docs": "Dokumentation",
     "elementSketch": "Ein Element in seinen lokalen Achsen"
   },
-  "heroFigure": {
+  "beamFigure": {
     "aria": "Ein Einfeldträger mit Kragarm unter Gleichlast und einer verschiebbaren Einzellast, mit Querkraft- und Momentenverlauf und Biegelinie",
     "slider": "Position der Einzellast von 20 kN",
     "loadAt": "bei {x} m",

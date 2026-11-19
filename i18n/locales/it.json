@@ -636,7 +636,7 @@
     "docs": "Documentazione",
     "elementSketch": "Un elemento nei suoi assi locali"
   },
-  "heroFigure": {
+  "beamFigure": {
     "aria": "Una trave appoggiata con sbalzo soggetta a un carico uniforme e a un carico concentrato mobile, con i diagrammi del taglio e del momento flettente e la linea elastica",
     "slider": "Posizione del carico concentrato di 20 kN",
     "loadAt": "a {x} m",

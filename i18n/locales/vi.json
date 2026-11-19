@@ -636,7 +636,7 @@
     "docs": "Tài liệu",
     "elementSketch": "Phần tử trong hệ trục địa phương"
   },
-  "heroFigure": {
+  "beamFigure": {
     "aria": "Dầm có đầu thừa chịu tải phân bố đều và một lực tập trung di chuyển được, cùng biểu đồ lực cắt, mô men uốn và độ võng",
     "slider": "Vị trí của lực tập trung 20 kN",
     "loadAt": "tại {x} m",

@@ -636,7 +636,7 @@
     "docs": "Belgeler",
     "elementSketch": "Yerel eksenlerinde bir eleman"
   },
-  "heroFigure": {
+  "beamFigure": {
     "aria": "Düzgün yayılı yük ve kaydırılabilen bir tekil yük altındaki konsollu kiriş; kesme kuvveti, eğilme momenti ve sehim diyagramlarıyla birlikte",
     "slider": "20 kN'luk tekil yükün konumu",
     "loadAt": "{x} m'de",

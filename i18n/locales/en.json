@@ -636,7 +636,7 @@
     "docs": "Docs",
     "elementSketch": "An element in its local axes"
   },
-  "heroFigure": {
+  "beamFigure": {
     "aria": "A beam with an overhang under a uniform load and a movable point load, with its shear force, bending moment and deflection diagrams",
     "slider": "Position of the 20 kN point load",
     "loadAt": "at {x} m",

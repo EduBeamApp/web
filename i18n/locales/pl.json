@@ -636,7 +636,7 @@
     "docs": "Dokumentacja",
     "elementSketch": "Element w osiach lokalnych"
   },
-  "heroFigure": {
+  "beamFigure": {
     "aria": "Belka ze wspornikiem pod obciążeniem równomiernym i przesuwaną siłą skupioną, z wykresami sił tnących, momentów zginających i ugięć",
     "slider": "Położenie siły skupionej 20 kN",
     "loadAt": "{x} m od A",

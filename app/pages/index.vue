@@ -12,6 +12,8 @@ const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const { appUrl } = useDocsNav()
 const { sitePath } = useSitePages()
+/** The app in this page's language, shot by `npm run screenshots home-hero` */
+const heroShot = computed(() => (locale.value === 'en' ? '/screenshots/home-hero.webp' : `/screenshots/${locale.value}/home-hero.webp`))
 
 const path = computed(() => normalizePath(route.path))
 const { data: page } = await useAsyncData(`home:${path.value}`, () => queryCollection('docs').path(path.value).first(), {
@@ -76,7 +78,7 @@ const teachingIcons = {
 
 <template>
   <main>
-    <!-- Hero: the textbook figure, solved live -->
+    <!-- Hero: what the product says and what it looks like -->
     <!-- Slides up under the header, which is clear at the top of this page, so the grid runs to the top -->
     <section class="relative -mt-16 overflow-hidden border-b border-rule">
       <div class="pointer-events-none absolute inset-0 blueprint-bg mask-fade-radial" aria-hidden="true" />
@@ -94,13 +96,19 @@ const teachingIcons = {
           </div>
           <p class="mt-5 text-sm text-muted">{{ t('home.hero.note') }}</p>
         </div>
+        <!-- The app itself, shot in a narrow window so its labels stay legible at the column's width; on a
+             phone the frame keeps the canvas and crops the rest -->
         <div class="lg:col-span-7">
-          <ClientOnly>
-            <HomeHeroFigure />
-            <template #fallback>
-              <div class="aspect-[4/3] w-full" />
-            </template>
-          </ClientOnly>
+          <div class="app-shot aspect-[3/2] overflow-hidden lg:aspect-auto">
+            <img
+              :src="heroShot"
+              :alt="t('meta.imageAlt')"
+              width="2080"
+              height="1300"
+              fetchpriority="high"
+              class="block h-auto w-[165%] max-w-none -translate-x-[24%] lg:w-full lg:translate-x-0"
+            />
+          </div>
         </div>
       </div>
     </section>

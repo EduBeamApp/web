@@ -636,7 +636,7 @@
     "docs": "Documentação",
     "elementSketch": "Um elemento nos seus eixos locais"
   },
-  "heroFigure": {
+  "beamFigure": {
     "aria": "Uma viga biapoiada com balanço sob carga uniforme e uma carga concentrada móvel, com os diagramas de esforço cortante e de momento fletor e a linha elástica",
     "slider": "Posição da carga concentrada de 20 kN",
     "loadAt": "a {x} m",

@@ -233,6 +233,20 @@ input[type='range'] {
   filter: blur(8px);
 }
 
+/* A screenshot of the app as a window lying on the page */
+.app-shot {
+  border: 1px solid oklch(0.3 0.05 272 / 0.16);
+  border-radius: 12px;
+  background: white;
+  box-shadow:
+    0 40px 80px -30px oklch(0.25 0.06 272 / 0.4),
+    0 16px 32px -16px oklch(0.25 0.06 272 / 0.25);
+}
+.dark .app-shot {
+  border-color: rgb(255 255 255 / 0.14);
+  box-shadow: 0 40px 80px -30px rgb(0 0 0 / 0.7);
+}
+
 /* A band lit from two corners: indigo at the top left, violet at the bottom right */
 .band-light {
   background-image:

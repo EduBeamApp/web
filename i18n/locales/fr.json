@@ -636,7 +636,7 @@
     "docs": "Documentation",
     "elementSketch": "Un élément et ses axes locaux"
   },
-  "heroFigure": {
+  "beamFigure": {
     "aria": "Une poutre sur deux appuis avec porte-à-faux, sous une charge uniforme et une charge ponctuelle mobile, avec ses diagrammes d’effort tranchant et de moment fléchissant et sa déformée",
     "slider": "Position de la charge ponctuelle de 20 kN",
     "loadAt": "à {x} m",

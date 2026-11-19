@@ -423,6 +423,15 @@ export const shots = [
     viewer: { settingsOpen: false },
     setup: fit,
   },
+  {
+    // The home page's hero: a narrower window than `hero`, so the app stays legible at the hero's size
+    name: 'home-hero',
+    model: 'three-hinged-frame',
+    width: 1040,
+    height: 650,
+    viewer: { settingsOpen: false },
+    setup: fit,
+  },
 
   // ---------------------------------------------------------------- getting started
   {
