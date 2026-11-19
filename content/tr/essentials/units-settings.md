@@ -1,38 +1,43 @@
 ---
-description: "Dili, SI veya ABD birimlerini, sayı biçimini, y yukarı ya da z aşağı eksenleri, görüntüleyici ve kontrol ayarlarını seçin; EduBeam'in tarayıcınızda neler sakladığını görün."
+description: "EduBeam ayarları: dil, SI ya da ABD birimleri, sayı biçimi, z aşağı/y yukarı eksenler, ızgara, diyagram stili ve renkler, kaydırma tuşu, tarayıcıda saklananlar."
+source: site
 ---
 
 # Birimler ve ayarlar
 
+Çalışacağınız dili, birimleri ve eksenleri, çizimin de nasıl görüneceğini seçin. Ayarlar yalnızca modelin nasıl gösterildiğini ve değerlerin nasıl girildiğini değiştirir: modelin kendisi her zaman SI birimlerinde ve z ekseni aşağı doğru olacak şekilde saklanır; bu yüzden bir proje veya bağlantı hangi ayarlarla açılırsa açılsın aynıdır.
+
 Ayarlara üç yoldan ulaşabilirsiniz:
 
-- görüntüleyicinin üstündeki **Ayarlar** sekmesi, ayarları tam ekran gösterir;
-- görüntüleyicinin sağ altındaki **birim göstergesi**, ayarları *Dil ve bölge* bölümünde açar;
-- görünüm seçeneklerinin altındaki **Diğer ayarlar**, ayarları *Görüntüleyici ayarları* bölümünde açar.
+- görüntüleyicinin üstündeki **Ayarlar** sekmesi, ayarları modelin yerine tam boyutta, *Dil ve bölge* bölümünde açar; **Görüntüleyici** sekmesi sizi modele geri götürür;
+- görüntüleyicinin sağ altındaki **birim göstergesi** (`m m² kN kNm MPa`), ayarları bir pencere olarak *Dil ve bölge* bölümünde açar;
+- [görünüm seçeneklerinin](/tr/essentials/user-interface#display-options) altındaki **Diğer ayarlar**, pencereyi *Görüntüleyici ayarları* bölümünde açar.
 
-Ayarlar tarayıcınızda saklanır ve sayfa yenilendiğinde kaybolmaz. **Ayarları sıfırla**; görüntüleyici varsayılanlarını, sayı biçimini, eksenleri, kaydırma tuşunu ve bölgenize uygun birimleri geri yükler; dil korunur.
+Ayarlar tarayıcınızda saklanır ve sayfa yenilendiğinde kaybolmaz. Bölüm listesinin altındaki **Ayarları sıfırla** varsayılanları geri yükler: sayı biçimi, eksenler, kaydırma tuşu, bölgenize uygun birimler ve tüm görüntüleyici ayarları ile görünüm seçenekleri. Diliniz korunur. Sıfırlama geri alınamaz.
 
 ## Dil ve bölge {#language-locale}
 
 ![Ayarlar → Dil ve bölge](/screenshots/tr/settings-language.webp)
 
-**Dil.** Arayüz 18 dilde kullanılabilir. Uygulamayı `?lang=<kod>` parametresiyle de açabilirsiniz: `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn`, `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`.
+**Dil.** 18 dil vardır; ilk açılışta EduBeam tarayıcınızın dilini kullanır. Ondalık ayırıcı dile göre belirlenir. Bir bağlantı, okuyucu için dili de seçebilir: `?lang=` parametresini şu kodlardan biriyle ekleyin: `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (Çince), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`.
 
-**Sayı biçimi.** Sonuç değerlerinin nasıl yazılacağı: *Otomatik*, *Bilimsel* (varsayılan) veya *Mühendislik*. Bkz. [Sayı biçimi](/tr/essentials/results#number-format).
+**Sayı biçimi.** Sonuç değerlerinin tablolarda ve bilgi kutularında nasıl yazılacağı: *Bilimsel* (1,5 · 10⁴, varsayılan), *Mühendislik* (15 · 10³) veya *Otomatik*. Bkz. [Sayı biçimi](/tr/essentials/results#number-format).
 
-**Koordinat sistemi.** *x sağa, z aşağı* (varsayılan) veya *x sağa, y yukarı*. y yukarı seçeneği düşey değerlerin ve mesnet açılarının işaretini çevirir ve eksenleri tüm girdilerde, tablolarda, araç ipuçlarında ve dışa aktarımlarda yeniden adlandırır. Model ve kaydedilen dosyalar değişmez. Bkz. [y yukarı eksenler](/tr/elements/conventions#y-up-axes).
+**Koordinat sistemi.** *x sağa, z aşağı* (varsayılan) veya *x sağa, y yukarı*. *x sağa, y yukarı* seçildiğinde düşey eksenin adı y olur ve yukarı doğru bakar; momentler z eksenine göre alınır. Düşey koordinatların, kuvvetlerin, yer değiştirmelerin, mesnet tepkilerinin ve mesnet açılarının işareti değişir; her girdi, tablo, bilgi kutusu ve dışa aktarma yeni adları kullanır. Model, çizim ve kaydedilen dosyalar tamamen aynı kalır. Bkz. [y yukarı eksenler](/tr/elements/conventions#y-up-axes).
 
 ![y yukarı eksenlerle üç mafsallı çerçeve: köşedeki eksen göstergesi y'yi yukarı gösteriyor](/screenshots/tr/settings-y-up.webp){.shot-lg}
 
-**Birim sistemi.** *SI (metrik)* veya *ABD (emperyal)*, aşağıdaki tüm birimleri tek adımda ayarlar. Sonradan herhangi bir birimi tek başına değiştirirseniz sistem *Özel* olarak görünür. İlk ziyarette seçimi karşılama penceresinde yaparsınız; o zamana kadar EduBeam, ABD birimlerini yalnızca tarayıcı ABD bölge ayarındaysa *ve* bilgisayar bir ABD saat dilimindeyse tahmin eder.
+**Birim sistemi.** *SI (metrik)* veya *ABD (emperyal)*, bütün birimleri tek adımda ayarlar. İlk ziyarette seçimi karşılama penceresinde yaparsınız. EduBeam, ABD birimlerini yalnızca tarayıcı ABD bölge ayarındaysa *ve* bilgisayar bir ABD saat dilimindeyse önerir; diğer her durumda SI'yı önerir. Sonradan herhangi bir birimi tek başına değiştirirseniz sistem *Özel* olarak görünür.
 
-**Birimler.** Her büyüklüğün kendi birimi vardır. Girdiler, tablolar, araç ipuçları ve diyagram etiketleri seçilen birimi kullanır; bir birimi değiştirmek gösterilen değerleri dönüştürür. Modelin kendisi SI'da saklanır; bu yüzden birimler arasında gidip gelmekle hiçbir şey kaybolmaz ve paylaşılan bir bağlantı aynı modeli hangi birimlerle olursa olsun açar.
+### Birimler {#units}
+
+Her büyüklüğün kendi birimi vardır. Giriş alanları (birimi alanın sonunda gösterirler), tablolar, bilgi kutuları ve diyagram etiketleri bu birimi kullanır; bir birimi değiştirmek gösterilen değerleri dönüştürür. Modelde hiçbir şey değişmez; bu yüzden birimler arasında gidip gelmekle hiçbir şey kaybolmaz.
 
 | Büyüklük | Seçenekler | SI | ABD |
 | --- | --- | --- | --- |
-| Uzunluk (geometri) | m, cm, mm, ft, in | m | ft |
+| Uzunluk (geometri, yük konumları) | m, cm, mm, ft, in | m | ft |
 | Kesit boyutları | m, cm, mm, ft, in | m | in |
-| Yer değiştirme | m, cm, mm, ft, in | m | in |
+| Yer değiştirme (sonuçlar, öngörülen mesnet çökmeleri) | m, cm, mm, ft, in | m | in |
 | Alan | m², cm², mm², ft², in² | m² | in² |
 | Atalet momenti | m⁴, cm⁴, mm⁴, ft⁴, in⁴ | m⁴ | in⁴ |
 | Kütle | kg, lb | kg | lb |
@@ -41,43 +46,55 @@ Ayarlar tarayıcınızda saklanır ve sayfa yenilendiğinde kaybolmaz. **Ayarlar
 | Basınç (E, G) | Pa, kPa, MPa, GPa, ksc, psi, ksi, psf, ksf | MPa | ksi |
 | Sıcaklık | °C, °F | °C | °F |
 
-Yayılı yükler seçilen birimlerle *kuvvet / uzunluk* (SI'da kN/m, ABD birimlerinde kip/ft), yoğunluk ise *kütle / uzunluk³* cinsindendir. Isıl genleşme katsayısı sıcaklık birimini izler (1/K veya 1/°F). Sıcaklık yüklemeleri sıcaklık *değişimleridir*; bu yüzden 10 °C, 18 °F'ye karşılık gelir. Dönmeler her zaman radyan cinsindendir.
+Bazı birimler diğerlerinden türetilir:
 
-Tonf, ABD kısa tonu (short ton) değil, metrik ton-kuvvettir (1000 kgf). ABD birimleri tam tanımlarıyla dönüştürülür (1 ft = 0,3048 m, 1 kip = 4448,2216 N). Fit cinsinden `5,5` gibi ondalık değerler yazın; cetveller ve artı imleci fit ve inç cinsinden okur (5′-6″).
+- **Yayılı yükler** uzunluk başına kuvvettir: SI'da kN/m, ABD birimlerinde kip/ft.
+- **Yoğunluk** uzunluk³ başına kütledir: kg/m³ veya lb/ft³.
+- **Isıl genleşme katsayısı** sıcaklık birimini izler: 1/K veya 1/°F. Sıcaklık yüklemeleri sıcaklık *değişimleridir*; bu yüzden 10 °C'lik bir değişim 18 °F demektir.
+- **Dönmeler** her zaman radyan, mesnet açıları ise derece cinsindendir.
+
+Tonf, ABD kısa tonu değil, metrik ton-kuvvettir (1000 kgf). ABD birimleri tam tanımlarıyla kullanılır: 1 ft = 0,3048 m, 1 kip = 4448,2216 N. Fit değerlerini `5.5` gibi ondalık sayı olarak yazın; cetveller ve artı imleci ise fit ve inç cinsinden gösterir (5′-6″).
 
 ## Görüntüleyici ayarları {#viewer-settings}
 
-![Ayarlar → Görüntüleyici ayarları, sağda canlı önizleme](/screenshots/tr/settings-viewer.webp)
+Bu bölüm çizimin nasıl görüneceğini belirler. Sağdaki **Görüntüleyici önizlemesi**, her değişikliği anında gösteren küçük, eğik bir kiriştir; altındaki düğmeler hangi sonucun gösterileceğini seçer. Bir diyagram ayarını veya bir rengi değiştirdiğinizde önizleme o sonuca geçer.
 
-Ayarların yanındaki **Görüntüleyici önizlemesi**, her değişikliğe anında tepki veren küçük bir model gösterir. Altındaki etiketler hangi sonucun gösterileceğini seçer; bir renge tıklamak önizlemeyi o sonuca geçirir.
+![Ayarlar → Görüntüleyici ayarları, sağda canlı önizleme ve diyagram ayarları](/screenshots/tr/b-settings-viewer.webp)
 
-**Izgara**
-- **Izgarayı göster** (<kbd>G</kbd>) ızgarayı ve cetvelleri çizer.
-- **Izgaraya yakala** (<kbd>S</kbd>) yerleştirdiğiniz veya sürüklediğiniz düğümleri ızgara adımına yakalar.
-- **Artı imlecini göster** imlecin konumunu cetveller üzerinde işaretler, böylece koordinatlarını okuyabilirsiniz (yalnızca fareyle).
-- **Izgara adımı**, uzunluk birimindeki aralıktır: varsayılan 0,1 m, ABD birimlerinde 0,5 ft. Metrik ve ABD birimleri arasında geçiş yaptığınızda varsayılan değerde kalmış bir adım diğer sistemin varsayılanına geçer; kendi belirlediğiniz adım korunur.
+Sol sütun, yukarıdan aşağıya:
 
-**Boyutlar**
-- **Sonuç ölçeği** (8–120 px, varsayılan 48), en büyük diyagram ordinatının veya sehimin ekrandaki yüksekliğidir. Diyagramlar kendi maksimumlarına göre ölçeklenir, bu yüzden ayar tamamen görseldir; çizimler çok büyük veya çok küçükse değiştirin.
-- **Mesnet boyutu** (%50–150) ve **Yazı boyutu** (10–20 px). Projeksiyonda daha büyük yazı işe yarar.
+- *Izgara*: **Izgarayı göster** (<kbd>G</kbd>) ızgarayı ve cetvelleri çizer; **Izgaraya yakala** (<kbd>S</kbd>) yerleştirdiğiniz veya sürüklediğiniz düğümleri ızgaraya oturtur; **Artı imlecini göster** fareyle çalışırken imlecin konumunu cetvellerde işaretler. Üçü de başlangıçta açıktır. **Izgara adımı** 0,1 m, ABD birimlerinde 0,5 ft'tir. Metrik ve ABD birimleri arasında geçiş yaptığınızda, hâlâ varsayılan değerde olan bir adım diğer sistemin varsayılanına geçer; kendi belirlediğiniz adım korunur.
+- *Boyutlar*: **Sonuç ölçeği** 8 ile 120 px arasındadır (başlangıçta 48 px) ve bir diyagramın en büyük ordinatının veya en büyük sehimin ne kadar yüksek çizileceğini belirler. Ayar tamamen görseldir, çünkü her diyagram kendi en büyük değerine göre ölçeklenir. **Mesnet boyutu** %50 ile %150 (%100), **Yazı boyutu** 10 ile 20 px (14 px) arasındadır; projeksiyonla gösterirken büyük değerler işe yarar.
+- *Sonuç etiketlerinin yönü*: değerler ya ordinat doğrultusunda (*Diyagrama dik*, varsayılan) ya da *Her zaman yatay* yazılır.
+- *Model denetimi*: **Kararsız yapının nasıl hareket edebileceğini göster** mekanizmayı kesikli çizgiyle çizer, **Hareketi canlandır** ise yapıyı bu mekanizmaya göre ileri geri hareket ettirir. İkisi de başlangıçta açıktır.
 
-**Sonuç etiketlerinin yönü**: *Diyagrama dik* (etiketler diyagramı izler) veya *Her zaman yatay*.
+### İç kuvvet diyagramları {#internal-force-diagrams}
 
-**Model denetimi**
-- **Kararsız yapının nasıl hareket edebileceğini göster**, mekanizmanın kesikli çizgili hâlini çizer.
-- **Hareketi canlandır**, bu hâli ileri geri sallar.
+Diyagram çizme alışkanlıkları okuldan okula değişir; bu yüzden EduBeam seçimi size bırakır. Bu ayarlar yalnızca çizimi değiştirir, değerleri asla değiştirmez. Her eleman boyunca uzanan **kesikli çizgi**, elemanın alt liflerini, yani yerel z ekseninin baktığı tarafı gösterir (bkz. [Eleman yönü](/tr/essentials/elements#element-direction)).
 
-**Renkler**: düğümler, elemanlar, yükler, deforme şekil, normal kuvvet, kesme kuvveti, eğilme momenti ve mesnet tepkileri için ayrı renkler. Varsayılanlar: N mavi, V yeşil, M kırmızı, mesnet tepkileri mor, yükler turuncu.
+| Ayar | Seçenekler | Varsayılan |
+| --- | --- | --- |
+| **Eğilme momenti** | *Çekme tarafı* veya *Basınç tarafı* üzerine çizilir | *Çekme tarafı* |
+| **Pozitif kesme kuvveti** | kesikli çizginin karşısına (*Karşı taraf*) veya kesikli çizginin olduğu tarafa (*Kesikli taraf*) çizilir | *Karşı taraf* |
+| **Pozitif normal kuvvet** | *Karşı taraf* veya *Kesikli taraf* | *Karşı taraf* |
+| **Dolgu** | *Düz*, *Taralı* (elle çizildiği gibi çubuğa dik çizgiler) veya *Yok* | *Düz* |
+| **Her bölgenin derecesi** | diyagramın her bölgesine polinom derecesini, 0° ile 3° arasında, yazar | kapalı |
+
+İşaretlerin nasıl okunacağı [Sonuçlar ve diyagramlar](/tr/essentials/results#reading-the-sign) sayfasında açıklanır.
+
+### Renkler {#colors}
+
+Düğümler, elemanlar, yükler, deforme şekil, normal kuvvet, kesme kuvveti, eğilme momenti ve mesnet tepkileri için ayrı renkler. Bir renk seçmek için renk örneğine tıklayın. Varsayılanlar: yükler turuncu, deforme şekil gri, N mavi, V yeşil, M kırmızı, mesnet tepkileri mor, düğümler ve elemanlar siyah.
 
 ## Kontroller ve kısayollar {#controls-shortcuts}
 
-**Kaydırma tuşu**, tuvali hangi fare tuşuyla kaydıracağınızı belirler: *Fare tekerleği veya sağ tuş* (varsayılan), *Fare tekerleği* veya *Sağ tuş*. Kısayolların tam listesi [Klavye, fare ve dokunmatik](/tr/reference/shortcuts) sayfasındadır.
+**Kaydırma tuşu**, tuvali hangi fare tuşuyla sürükleyeceğinizi belirler: *Fare tekerleği veya sağ tuş* (varsayılan), *Fare tekerleği* (tekerleğe basıp sürükleyin) veya *Sağ tuş*. Bütün kısayollar [Klavye, fare ve dokunmatik](/tr/reference/shortcuts) sayfasındadır.
 
 ## Tarayıcınızda neler saklanır {#what-is-stored-in-your-browser}
 
-EduBeam, ayarların yanı sıra tarayıcının yerel depolamasında şunları tutar:
+EduBeam, ayarların yanı sıra tarayıcı belleğinde şunları tutar:
 
-- **mevcut model**: her değişiklikten sonra kaydedilir, böylece sekmeyi yenilediğinizde veya uygulamayı yeniden açtığınızda geri gelir;
-- **Son modeller**: temizlediğiniz veya değiştirdiğiniz son 10 model.
+- **mevcut model**: her değişiklikten sonra kaydedilir; böylece sekmeyi yenilediğinizde veya uygulamayı yeniden açtığınızda geri gelir;
+- **Son modeller**: temizlediğiniz veya yerine başkasını açtığınız son 10 model; ☰ menüsünden geri yüklenmeye hazırdır.
 
-İkisi de tarayıcıya ve cihaza özeldir; site verilerini temizlemek onları siler. Bir modeli saklamak veya başka bir yere taşımak için [Projeyi kaydet veya Modeli paylaş](/tr/essentials/import-export) seçeneklerini kullanın.
+İkisi de bu cihazdaki bu tarayıcıya aittir; site verilerini temizlerseniz ikisi de silinir. Bir modeli saklamak veya başka bir cihaza taşımak için [Projeyi kaydet veya Modeli paylaş](/tr/essentials/import-export) seçeneklerini kullanın.

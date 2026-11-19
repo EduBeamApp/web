@@ -1842,6 +1842,8 @@
     "sidebar": [
       {
         "text": "Başlarken",
+        "icon": "lucide:flag",
+        "section": "guide",
         "items": [
           {
             "text": "Giriş",
@@ -1850,28 +1852,13 @@
           {
             "text": "Hızlı başlangıç (10 dk)",
             "link": "/tr/guide/quick-start"
-          },
-          {
-            "text": "Örnekler",
-            "link": "/tr/examples/"
-          }
-        ]
-      },
-      {
-        "text": "Eğitimler",
-        "items": [
-          {
-            "text": "Üç mafsallı çerçeve",
-            "link": "/tr/tutorials/three-hinged-frame"
-          },
-          {
-            "text": "Düzlem kafes sistem",
-            "link": "/tr/tutorials/truss"
           }
         ]
       },
       {
         "text": "Modelleme",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
         "items": [
           {
             "text": "Kullanıcı arayüzü",
@@ -1897,6 +1884,8 @@
       },
       {
         "text": "Sonuçlar",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
         "items": [
           {
             "text": "Sonuçlar ve diyagramlar",
@@ -1909,10 +1898,12 @@
         ]
       },
       {
-        "text": "Dosyalar ve paylaşım",
+        "text": "Paylaşım ve öğretim",
+        "icon": "lucide:presentation",
+        "section": "guide",
         "items": [
           {
-            "text": "İçe aktarma, dışa aktarma ve paylaşım",
+            "text": "Dosyalar, bağlantılar ve dışa aktarma",
             "link": "/tr/essentials/import-export"
           },
           {
@@ -1922,7 +1913,9 @@
         ]
       },
       {
-        "text": "Başvuru",
+        "text": "Yardım",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
         "items": [
           {
             "text": "Klavye, fare ve dokunmatik",
@@ -1939,7 +1932,51 @@
         ]
       },
       {
+        "text": "Eğitimler",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Eğik kiriş",
+            "link": "/tr/tutorials/inclined-beam"
+          },
+          {
+            "text": "Üç mafsallı çerçeve",
+            "link": "/tr/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Düzlem kafes sistem",
+            "link": "/tr/tutorials/truss"
+          },
+          {
+            "text": "Sürekli kiriş ve mesnet çökmesi",
+            "link": "/tr/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "Alıştırma",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Statik alıştırmaları",
+            "link": "/tr/practice"
+          },
+          {
+            "text": "Sınav oluşturucu",
+            "link": "/tr/exam"
+          },
+          {
+            "text": "Örnekler",
+            "link": "/tr/examples/"
+          }
+        ]
+      },
+      {
         "text": "Teori kılavuzu",
+        "icon": "lucide:sigma",
+        "section": "theory",
         "items": [
           {
             "text": "Koordinat sistemi ve işaret kabulü",
@@ -1952,9 +1989,12 @@
           {
             "text": "Kafes çubuğu",
             "link": "/tr/elements/truss"
+          },
+          {
+            "text": "EduBeam modeli nasıl çözer",
+            "link": "/tr/elements/analysis"
           }
-        ],
-        "collapsed": true
+        ]
       }
     ]
   },

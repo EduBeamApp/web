@@ -1,13 +1,16 @@
 {
   "meta": {
-    "description": "Çevrim içi yapı analizi – düzlem kirişler, çerçeveler ve kafes sistemler doğrudan tarayıcıda."
+    "description": "Ücretsiz çevrim içi 2B yapı analizi: kirişler, çerçeveler ve kafes sistemler tarayıcınızda anında çözülür."
   },
   "nav": {
     "guide": "Kılavuz",
     "tutorials": "Eğitimler",
     "examples": "Örnekler",
     "faq": "SSS",
-    "openApp": "Uygulamayı aç"
+    "theory": "Teori",
+    "openApp": "Uygulamayı aç",
+    "libraries": "Kütüphaneler",
+    "practice": "Alıştırmalar"
   },
   "docs": {
     "onThisPage": "Bu sayfada",
@@ -16,17 +19,17 @@
     "lastUpdated": "Son güncelleme"
   },
   "footer": {
-    "copyright": "EduBeam katkıda bulunanları"
+    "copyright": "EduBeam'e katkıda bulunanlar"
   },
   "components": {
-    "loadsTitle": "Yük türlerine ön bakış",
-    "loadsLede": "Yaygın yük türleri EduBeam'de böyle görünür. Her kart çözülmüş, canlı bir modeldir ve uygulamada tam olarak kurulduğu gibi açılır.",
+    "loadsTitle": "Yük türlerinden örnekler",
+    "loadsLede": "Yaygın yük türleri EduBeam'de böyle görünür. Her kart çözülmüş, canlı bir modeldir ve uygulamada tam olarak burada kurulduğu gibi açılır.",
     "openInApp": "EduBeam'de aç",
     "simplySupportedBeam": "Basit mesnetli kiriş",
-    "udlBlurb": "Mafsallı ve kayıcı mesnetli kiriş, 12 kN/m yük altında: klasik kesme kuvveti ve eğilme momenti diyagramları.",
-    "trapezoidalBlurb": "Sağ açıklık boyunca 4 kN/m'den 14 kN/m'ye artan bir yük.",
-    "concentratedBlurb": "Açıklık ortasında aşağı yönlü tek bir 18 kN'lik yük, ek düğüm gerekmeden.",
-    "nodalBlurb": "Mesnet tepkilerini ve sehimleri kontrol etmek için ara mesnete etkiyen 20 kN'lik yük.",
+    "udlBlurb": "12 kN/m yük altında mafsallı ve kayıcı mesnetli kiriş: klasik kesme kuvveti ve eğilme momenti diyagramları.",
+    "trapezoidalBlurb": "Sağ açıklık boyunca 4 kN/m'den 14 kN/m'ye artan bir yük.",
+    "concentratedBlurb": "Sol açıklıkta, mesnetten 2 m uzakta 18 kN büyüklüğünde bir yük; altında düğüm yok.",
+    "nodalBlurb": "İki açıklık arasındaki düğüme etkiyen 20 kN büyüklüğünde bir yük: moment diyagramı bu noktada kırılır.",
     "temperatureBlurb": "Kesit yüksekliği boyunca sıcaklık farkı (üst taraf alttan daha sıcak) ve bunun oluşturduğu eğrilik.",
     "promoTitle": "Çerçevelerinizi",
     "promoAccent": "3B'ye taşıyın.",
@@ -35,7 +38,7 @@
     "spanLength": "Açıklık",
     "loadIntensity": "Yük şiddeti",
     "loadPosition": "Yük konumu",
-    "heroHint": "Yükü kaydırın, diyagramlar onu izlesin."
+    "heroHint": "Yükü kaydırın, diyagramlar onu izler."
   },
   "common": {
     "deformedShape": "Deforme şekil",
@@ -85,6 +88,585 @@
   "search": {
     "label": "Ara",
     "placeholder": "Belgelerde ara",
-    "noResults": "“{query}” için sonuç yok"
+    "noResults": "“{query}” için sonuç yok",
+    "shortcut": "Ctrl K"
+  },
+  "home": {
+    "seo": {
+      "title": "EduBeam: ücretsiz çevrim içi yapı analizi",
+      "description": "Tarayıcınızda ücretsiz 2B yapı analizi. Kiriş, çerçeve ve kafes sistemleri çizin, yükleri ekleyin; N, V, M diyagramlarını, mesnet tepkilerini ve sehimleri anında görün."
+    },
+    "hero": {
+      "title": "Kirişler, çerçeveler, kafes sistemler.",
+      "lede": "EduBeam kirişler, çerçeveler ve kafes sistemler için ücretsiz bir yapı analizi uygulamasıdır. Modeli tarayıcınızda çizin; diyagramlar, mesnet tepkileri ve sehimler her değişiklikte güncellenir.",
+      "launch": "EduBeam'i başlatın",
+      "guide": "Kılavuzu okuyun",
+      "note": "Ücretsiz ve açık kaynaklı. Kurulum ve hesap gerekmez."
+    },
+    "steps": {
+      "title": "Taslaktan diyagramlara dört adımda",
+      "lede": "Kâğıt üzerinde çözerken izleyeceğiniz sırayla. Hızlı başlangıç, gerçek bir kiriş üzerinden yaklaşık on dakikada sizi baştan sona götürür.",
+      "link": "Hızlı başlangıcı izleyin",
+      "items": {
+        "nodes": {
+          "label": "Düğümler",
+          "title": "Düğümleri yerleştirin",
+          "body": "Izgaraya tıklayın ya da koordinatları yazın. Burada 6 m genişliğinde ve 4 m yüksekliğinde bir portal çerçevenin dört köşesi."
+        },
+        "elements": {
+          "label": "Elemanlar",
+          "title": "Düğümleri elemanlarla birleştirin",
+          "body": "Düğümleri kiriş elemanlarıyla birleştirin ve elemanlara bir malzeme ile bir kesit atayın: kütüphaneden birini ya da kendi çizdiğiniz bir çokgeni."
+        },
+        "loads": {
+          "label": "Mesnetler ve yükler",
+          "title": "Mesnetleri ve yükleri ekleyin",
+          "body": "İki kolon ayağında mafsallı mesnet, kiriş boyunca 10 kN/m ve sol üst köşeyi iten 15 kN'luk yatay bir kuvvet."
+        },
+        "results": {
+          "label": "Sonuçlar",
+          "title": "Sonuçları okuyun",
+          "body": "Çerçeve ayakta durabildiği anda, çekme tarafına çizilen moment diyagramı ve mesnet tepkileri belirir. Bu sayılar EduBeam'in kendi sonuçlarıdır ve bu sayfada hesaplandı."
+        }
+      }
+    },
+    "examples": {
+      "title": "Çözülmüş bir modeli tek tıkla açın",
+      "lede": "Bunların her biri, uygulamanın kullandığı çözücüyle bu sayfada çözüldü. Birini EduBeam'de açın ve değiştirin.",
+      "link": "Tüm örnekler"
+    },
+    "verify": {
+      "title": "Ders kitabıyla karşılaştırıldı",
+      "lede": "EduBeam her modeli sonlu elemanlar yöntemiyle çözer. Klasik durumlarda kapalı form çözümü son basamağına kadar verir. Sağdaki sütun, bu sayfa yüklenirken tarayıcınızda hesaplandı.",
+      "case": "Durum",
+      "formula": "Kapalı form",
+      "hand": "El hesabı",
+      "edubeam": "EduBeam",
+      "link": "Diğer karşılaştırma örnekleri",
+      "steel": "Çelik IPE 200: E = 210 GPa, I = 1943 cm⁴. Kapalı form çözümlerde olduğu gibi kayma şekil değiştirmesi ihmal edildi.",
+      "cases": {
+        "ssMoment": "Basit mesnetli kiriş, 6 m açıklıkta 12 kN/m: en büyük moment",
+        "ssDeflection": "Aynı kiriş: en büyük sehim",
+        "cantilever": "4 m'lik konsol, ucunda 18 kN: ankastre mesnetteki moment",
+        "fixed": "İki ucu ankastre kiriş, 6 m açıklıkta 10 kN/m: mesnet momenti",
+        "propped": "Ankastre–kayıcı mesnetli kiriş, 6 m açıklıkta 10 kN/m: kayıcı mesnetteki tepki"
+      }
+    },
+    "teaching": {
+      "title": "Derslik için tasarlandı",
+      "lede": "Bir modeli slaytlarınıza ya da ders notlarınıza koyun; her öğrenci tam olarak aynı modeli açar.",
+      "link": "EduBeam ile öğretim",
+      "slideCourse": "Statik",
+      "slideTitle": "7. ders: Kafes sistemler",
+      "slideBody": "Üç düğümüne 8 kN'luk yük etkiyen bir Warren kafes kirişi. Hangi çubuklar çekmede?",
+      "shareLabel": "Paylaşım bağlantısı",
+      "copy": "Kopyala",
+      "copied": "Kopyalandı",
+      "items": {
+        "share": {
+          "title": "Model tek bir bağlantıda",
+          "body": "Modelin tamamı URL'nin içinde taşınır. Bağlantıyı bir ödeve koyun; yıllar sonra bile tam bıraktığınız gibi açılır."
+        },
+        "embed": {
+          "title": "Slaytlarınızda",
+          "body": "Görüntüleyici modu, çözülmüş modeli düzenleme araçları olmadan gösterir; slaytlar ve web sayfaları için yapılmıştır."
+        },
+        "mechanism": {
+          "title": "Neyin yanlış gittiğini açıklar",
+          "body": "Yapı bir mekanizma olduğunda EduBeam çözmeyi reddetmekle kalmaz, yapının nasıl hareket edeceğini gösterir."
+        },
+        "languages": {
+          "title": "Kendi dilleri, kendi birimleri",
+          "body": "Öğrenciler 18 dilden birinde, SI ya da ABD birimleriyle ve ders kitaplarının kullandığı eksenlerle çalışır."
+        }
+      },
+      "answerTitle": "Cevap: çubuk kuvvetleri",
+      "answerBody": "Çekme pozitiftir. Alt başlık çekmede; üst başlık ve iki uç dikmesi basınçta; iç diyagonaller sırayla çekme ve basınç alır.",
+      "prevSlide": "Önceki slayt",
+      "nextSlide": "Sonraki slayt"
+    },
+    "final": {
+      "title": "İlk kirişinizi çizin.",
+      "lede": "EduBeam'i açın ve “İlk kirişinizi çizin” seçeneğine tıklayın. Kısa bir rehberli görev, sizi boş bir ekrandan mesnetleri ve yükleri tanımlanmış bir kirişe ve onun diyagramlarına adım adım götürür.",
+      "paths": {
+        "quickStart": {
+          "title": "Hızlı başlangıç",
+          "body": "Adım adım bir kiriş modelleyin ve sonucu elle kontrol edin. 10 dakika."
+        },
+        "examples": {
+          "title": "Örnekler",
+          "body": "Açıp değiştirebileceğiniz ve üzerinde çalışarak öğrenebileceğiniz çözülmüş modeller."
+        },
+        "teaching": {
+          "title": "Öğretim",
+          "body": "Dersiniz için paylaşım bağlantıları, slaytlar ve alıştırmalar."
+        }
+      }
+    },
+    "model": {
+      "title": "Neleri modelleyebilirsiniz",
+      "lede": "Sonlu elemanlar yöntemiyle çözülen düzlem yapılar; bir statik dersinin mesnetleri, yükleri ve sonuçlarıyla.",
+      "supports": {
+        "title": "Mesnetler",
+        "items": {
+          "pin": "Mafsallı",
+          "roller": "Kayıcı",
+          "fixed": "Ankastre",
+          "slider": "Kayar ankastre",
+          "angled": "İstenen açıda eğik"
+        },
+        "note": "Ayrıca öngörülen mesnet çökmeleri ve dönmeleri."
+      },
+      "loads": {
+        "title": "Yükler",
+        "items": {
+          "point": "Tekil",
+          "uniform": "Düzgün yayılı",
+          "trapezoidal": "Trapez",
+          "moment": "Moment",
+          "temperature": "Sıcaklık"
+        },
+        "note": "Düğümlerde ya da eleman boyunca herhangi bir noktada, yerel veya global eksenlerde."
+      },
+      "sections": {
+        "title": "Kesitler",
+        "items": {
+          "i": "I ve H",
+          "hollow": "Kutu",
+          "solid": "Dolu",
+          "tube": "Boru",
+          "polygon": "Kendi çokgeniniz"
+        },
+        "note": "Kütüphaneden IPE, HEA, AISC W ve HSS ya da kendi çizdiğiniz herhangi bir çokgen."
+      },
+      "results": {
+        "title": "Sonuçlar",
+        "note": "Normal kuvvet, kesme kuvveti, eğilme momenti ve deforme şekil; mesnet tepkileri ve herhangi bir noktadaki değerle birlikte."
+      },
+      "facts": {
+        "elements": {
+          "title": "Timoshenko kirişleri",
+          "body": "Önemli olduğu yerde kayma şekil değiştirmesi; narin elemanlarda sonuçlar Euler–Bernoulli teorisiyle örtüşür."
+        },
+        "structures": {
+          "title": "Kirişler, çerçeveler, kafes sistemler",
+          "body": "Düzlemde; herhangi bir eleman ucuna mafsal konabilir."
+        },
+        "sharing": {
+          "title": "Bağlantılar ve dosyalar",
+          "body": "Tüm model tek bir bağlantıda ya da proje dosyasında; çizimler PNG veya SVG, tablolar CSV olarak."
+        },
+        "settings": {
+          "title": "18 dil",
+          "body": "SI ya da ABD birimleri; z aşağı ya da ders kitaplarındaki gibi y yukarı eksenler."
+        }
+      }
+    },
+    "heritage": {
+      "title": "Açık kaynaklı, kökleri derslikte",
+      "body": "EduBeam, Prag Çek Teknik Üniversitesi (ČVUT) İnşaat Fakültesi Mekanik Bölümünde geliştirilen masaüstü EduBeam'in devamıdır ve o programın oturum dosyalarını hâlâ açar. Web sürümü ücretsiz ve açık kaynaklıdır; bu sayfadaki her sayının arkasındaki çözücü {'@'}edubeam/fem de öyle.",
+      "github": "GitHub'da EduBeam",
+      "solver": "GitHub'da {'@'}edubeam/fem",
+      "team": "EduBeam'i kimler geliştiriyor"
+    }
+  },
+  "error": {
+    "notFoundTitle": "Sayfa bulunamadı",
+    "notFound": "Bu adreste bir sayfa yok. Sayfa taşınmış ya da bağlantıda bir yazım hatası olabilir.",
+    "otherTitle": "Bir şeyler ters gitti",
+    "other": "Bu sayfa gösterilemedi. Sayfayı yeniden yüklemek genellikle işe yarar.",
+    "home": "Ana sayfa",
+    "guide": "Kılavuzu okuyun",
+    "message": "Mesnetler yapıyı tutmuyor: yapı hâlâ serbestçe dönebiliyor.",
+    "figure": "Tek bir mafsallı mesnete oturan, ikinci mesnedi eksik bir kiriş; yükünün etkisiyle mafsal çevresinde serbestçe dönüyor"
+  },
+  "problems": {
+    "families": {
+      "simple": {
+        "name": "Basit mesnetli kiriş",
+        "skill": "Kirişte denge",
+        "hint": "B'deki mesnet tepkisini bulmak için A'ya göre moment alın, ardından A'daki tepki için düşey kuvvetleri toplayın. En büyük moment, kesme kuvvetinin sıfırdan geçtiği yerde ya da bir tekil yükün altındadır."
+      },
+      "cantilever": {
+        "name": "Konsol kiriş",
+        "skill": "Ankastre mesnet",
+        "hint": "Mesnet tepkilerinin hepsi ankastre uçtadır: düşey kuvvetleri toplayın, sonra A'ya göre moment alın. Konsolda en büyük moment ankastre uçta oluşur."
+      },
+      "overhang": {
+        "name": "Konsollu kiriş",
+        "skill": "Mesnet üzerinde negatif moment",
+        "hint": "B'deki tepki için A'ya göre moment alın. Sonra en büyük moment için iki adayı karşılaştırın: açıklıkta V = 0 olan nokta ve konsolun negatif moment oluşturduğu B mesnedi."
+      },
+      "gerber": {
+        "name": "Gerber kirişi",
+        "skill": "Ara mafsal",
+        "hint": "GC parçasıyla başlayın: G mafsalına ve C kayıcı mesnedine oturur ve mafsal moment aktarmaz. Sonra ABG parçasını mafsalın aktardığı kuvvetle yükleyin ve konsollu kiriş olarak çözün."
+      },
+      "threeHinged": {
+        "name": "Üç mafsallı çerçeve",
+        "skill": "Yatay itki ve tepe mafsalı",
+        "hint": "A'ya ve E'ye göre alınan momentler düşey mesnet tepkilerini verir. Sonra M = 0 olan C tepe mafsalından kesin ve yarılardan biri için C'ye göre moment alın: bu da yatay itkiyi verir."
+      },
+      "truss": {
+        "name": "Warren kafes kirişi",
+        "skill": "Düğüm noktası ve kesim yöntemleri",
+        "hint": "Mesnet tepkilerini kafes sistemin bütününden bulun. Sonra biri aradığınız çubuk olmak üzere üç çubuğu kesin ve diğer ikisinin birleştiği düğüme göre moment alın; diyagonal için bunun yerine düşey kuvvetleri toplayın."
+      },
+      "continuous": {
+        "name": "İki açıklıklı sürekli kiriş",
+        "skill": "Bir derece hiperstatik",
+        "hint": "Sistem bir derece hiperstatiktir: B üzerindeki momenti bilinmeyen olarak seçin. A ve C'de M = 0 alınarak yazılan üç moment denklemi onu doğrudan verir; mesnet tepkileri de ardından açıklık açıklık bulunur."
+      },
+      "portal": {
+        "name": "Portal çerçeve",
+        "skill": "Rijit düğümlü çerçeve",
+        "hint": "Sistem bir derece hiperstatiktir: D'deki yatay mesnet tepkisini serbest bırakın, D'nin yatay yer değiştirmesini yükler altında ve orada etkiyen birim kuvvet altında bulun (virtüel iş ilkesi, M diyagramlarıyla) ve toplam yer değiştirmeyi sıfıra eşitleyin."
+      }
+    },
+    "statement": {
+      "simple": "Açıklığı {L} m olan kiriş A'da mafsallı, B'de kayıcı mesnetlidir. Kirişe {loads} etkimektedir.",
+      "cantilever": "{L} m uzunluğundaki konsol kiriş A'da ankastredir. Kirişin tamamına q = {q} kN/m yayılı yük, B serbest ucuna F = {F} kN tekil yük etkimektedir.",
+      "cantileverMoment": "{L} m uzunluğundaki konsol kiriş A'da ankastredir. Kirişin tamamına q = {q} kN/m yayılı yük, B serbest ucuna ise F = {F} kN tekil yük ve saat yönünün tersine {M} kNm'lik bir moment etkimektedir.",
+      "overhang": "AB açıklığı {L} m olan kiriş A'da mafsallı, B'de kayıcı mesnetlidir ve B'den sonra {c} m'lik bir konsolla C'ye kadar uzanır. AB açıklığına q = {q} kN/m yayılı yük, C konsol ucuna F = {F} kN tekil yük etkimektedir.",
+      "overhangAll": "AB açıklığı {L} m olan kiriş A'da mafsallı, B'de kayıcı mesnetlidir ve B'den sonra {c} m'lik bir konsolla C'ye kadar uzanır. Kirişin tamamına q = {q} kN/m yayılı yük, C konsol ucuna F = {F} kN tekil yük etkimektedir.",
+      "gerber": "Kiriş A'da mafsallı, B ve C'de kayıcı mesnetlidir; B'nin {g} m sağındaki G noktasında bir ara mafsal vardır: AB = {L1} m, GC = {L3} m.",
+      "gerberLoad": "Kirişin tamamına q = {q} kN/m yayılı yük etkimektedir.",
+      "gerberLoadForce": "Kirişin tamamına q = {q} kN/m yayılı yük, AB açıklığının ortasına F = {F} kN tekil yük etkimektedir.",
+      "threeHinged": "Genişliği {L} m, yüksekliği {H} m olan çerçeve A ve E'de mafsallı mesnetlidir; C tepe noktasında bir mafsal vardır.",
+      "threeHingedWhole": "Kirişin tamamına q = {q} kN/m yayılı yük etkimektedir.",
+      "threeHingedHalf": "Kirişin sol yarısına q = {q} kN/m yayılı yük etkimektedir.",
+      "threeHingedWholeForce": "Kirişin tamamına q = {q} kN/m yayılı yük, B düğümüne sağa doğru F = {F} kN yatay kuvvet etkimektedir.",
+      "threeHingedHalfForce": "Kirişin sol yarısına q = {q} kN/m yayılı yük, B düğümüne sağa doğru F = {F} kN yatay kuvvet etkimektedir.",
+      "truss": "{panels} Warren kafes kirişi A düğümünde mafsallı, {end} düğümünde kayıcı mesnetlidir; her gözün uzunluğu {d} m, yüksekliği {h} m'dir.",
+      "panels": "{n} gözlü",
+      "trussLoadAll": "Üst başlığın her düğümüne aşağı doğru F = {F} kN yük etkimektedir.",
+      "trussLoad": "{joints} düğümlerinin her birine aşağı doğru F = {F} kN yük etkimektedir.",
+      "continuous": "Kiriş A'da mafsallı, B ve C'de kayıcı mesnetlidir ve B üzerinde süreklidir; açıklıklar {L1} m ve {L2} m'dir. Sol açıklığa q = {q} kN/m yayılı yük etkimektedir.",
+      "continuousBoth": "Kiriş A'da mafsallı, B ve C'de kayıcı mesnetlidir ve B üzerinde süreklidir; açıklıklar {L1} m ve {L2} m'dir. Her iki açıklığa q = {q} kN/m yayılı yük etkimektedir.",
+      "portal": "Genişliği {L} m, yüksekliği {H} m olan rijit düğümlü çerçeve A ve D'de mafsallı mesnetlidir. BC kirişine q = {q} kN/m yayılı yük etkimektedir.",
+      "portalForce": "Genişliği {L} m, yüksekliği {H} m olan rijit düğümlü çerçeve A ve D'de mafsallı mesnetlidir. BC kirişine q = {q} kN/m yayılı yük, B düğümüne sağa doğru F = {F} kN yatay kuvvet etkimektedir.",
+      "advancedNote": "EI sabittir; kayma şekil değiştirmesini ihmal ediniz."
+    },
+    "load": {
+      "udlSpan": "tüm açıklık boyunca q = {q} kN/m yayılı yük",
+      "pointFromA": "A'dan {a} m uzaklıkta F = {F} kN tekil yük",
+      "momentAtB": "B ucunda saat yönünün tersine {M} kNm'lik bir moment"
+    },
+    "task": {
+      "beam": "Mesnet tepkilerini ve en büyük eğilme momentini hesaplayınız.",
+      "bar": "Mesnet tepkilerini ve {bar} çubuğundaki kuvveti hesaplayınız."
+    },
+    "answer": {
+      "horizontal": "{node} mesnedindeki yatay tepki",
+      "vertical": "{node} mesnedindeki düşey tepki",
+      "fixingMoment": "{node} mesnedindeki ankastrelik momenti",
+      "bar": "{bar} çubuğundaki kuvvet",
+      "largestMoment": "Mutlak değerce en büyük eğilme momenti"
+    },
+    "unit": {
+      "kN": "kN",
+      "kNm": "kNm"
+    }
+  },
+  "library": {
+    "getStarted": "Başlarken",
+    "by": "Yazar: {author}",
+    "fromRepo": "Henüz npm'de değil: yukarıdaki satır kütüphaneyi GitHub'dan kurar.",
+    "comingToNpm": "Yakında npm'de. Kaynak kodu GitHub'da."
+  },
+  "solver": {
+    "tagline": "Düzlem çerçeveler için TypeScript ile yazılmış bir sonlu elemanlar çözücüsü.",
+    "seo": {
+      "title": "{'@'}edubeam/fem: TypeScript ile yazılmış 2B çerçeve çözücüsü (SEY)",
+      "description": "Düzlem kirişler, çerçeveler ve kafes sistemler için TypeScript ile yazılmış sonlu elemanlar çözücüsü: mafsallar, çubuk, sıcaklık ve mesnet çökmesi yükleri, yükleme durumları, mesnet tepkileri ve kesin iç kuvvetler. EduBeam'in hesap motoru."
+    },
+    "run": {
+      "title": "Bu sayfada hesaplandı",
+      "lede": "Solda kod; sayfa yüklenirken tarayıcınızda çalıştırıldı. Sağda kodun döndürdüğü değerler var; şekli de aynı çözücünün sonuçlarından {plot} çiziyor.",
+      "plusShear": "{formula}, artı kayma katkısı"
+    },
+    "features": {
+      "title": "İçinde neler var",
+      "analyses": {
+        "title": "Analizler",
+        "body": "İstediğiniz kadar yükleme durumuyla doğrusal statik analiz. Diyagramlar düğümler arasında kesindir: sıklaştırılacak bir ağ yoktur."
+      },
+      "elements": {
+        "title": "Elemanlar",
+        "body": "x–z düzleminde iki düğümlü bir Timoshenko kirişi. İki ucu mafsallı olduğunda kafes çubuğu olur."
+      },
+      "loads": {
+        "title": "Yükler",
+        "body": "Düğüm kuvvetleri ve momentleri; çubuklar boyunca tekil, düzgün yayılı ve trapez yükler; sıcaklık; mesnet çökmeleri."
+      },
+      "results": {
+        "title": "Sonuçlar",
+        "body": "Çubuk boyunca her noktada N, V ve M; elastik eğriler, uç kuvvetleri, yer değiştirmeler ve mesnet tepkileri."
+      },
+      "reference": "Tüm sınıflar ve metotlar"
+    },
+    "behind": {
+      "title": "EduBeam'in arkasındaki çözücü",
+      "body": "EduBeam'deki her diyagram, mesnet tepkisi ve sehim ile bu sitedeki her şekil {name} ile hesaplanır.",
+      "link": "EduBeam'e göz atın"
+    }
+  },
+  "plot": {
+    "tagline": "Düzlem yapıları ve sonuçlarını bu sitedeki şekillerin üslubuyla çizen Vue bileşenleri.",
+    "seo": {
+      "title": "{'@'}edubeam/plot: Vue için yapı diyagramları",
+      "description": "Düzlem yapıları, yükleri, mesnet tepkilerini ve N, V, M diyagramlarını ders kitaplarındaki gibi çizen Vue bileşenleri; ders sayfaları, slaytlar, föyler ve bağımsız SVG dosyaları için."
+    },
+    "try": {
+      "title": "Deneyin",
+      "lede": "Bu sayfada {'@'}edubeam/fem ile çözülmüş bir çerçeve. Neyin çizileceğini değiştirin; kod da ona göre değişir.",
+      "labelStyle": "Etiket stili",
+      "horizontal": "Yatay",
+      "axis": "Ordinat boyunca"
+    },
+    "teaching": {
+      "title": "Ders materyali için tasarlandı",
+      "lede": "Kodla tanımlanan bir model, hiç eskimeyen bir şekildir: bir sayıyı değiştirin, çizim, mesnet tepkileri ve diyagramlar da onunla birlikte değişir. Tohum değeri (rastgele sayı üretecinin başlangıç değeri) yeni bir soru seçer; aynı tohum değeri her zaman aynı soruyu verir. Bu sitedeki {practice} ve {exam} bu şekilde hazırlandı.",
+      "practice": "alıştırmalar",
+      "exam": "sınav oluşturucu"
+    },
+    "uses": {
+      "exercises": {
+        "title": "Alıştırmalar ve sınavlar",
+        "body": "Tohum değerinden her öğrenciye ayrı bir soru ve cevap anahtarı; basılı olarak ya da LaTeX ve Word için şekiller olarak."
+      },
+      "slides": {
+        "title": "Slaytlar ve ders notları",
+        "body": "Slidev, Vue veya Beamer'da tıkladıkça adım adım oluşan, canlı çözülen şekiller."
+      },
+      "embedding": {
+        "title": "Belgelerinizde ve uygulamalarınızda",
+        "body": "Vite, VitePress veya Nuxt ile; sunucuda oluşturulur ya da önceden çözülmüş JSON'dan çizilir."
+      },
+      "print": {
+        "title": "Baskı için dosyalar",
+        "body": "Word, LaTeX ve Inkscape için sabit renkli, bağımsız bir SVG."
+      }
+    },
+    "features": {
+      "title": "Neler yapar",
+      "style": {
+        "title": "Şekillerin üslubunda",
+        "body": "Bu sitedeki gibi çubuklar, mesnetler, yükler, mesnet tepkileri ve taralı diyagramlar; föyler için zincir ölçüler ve adlandırılmış bilinmeyen mesnet tepkileriyle."
+      },
+      "readable": {
+        "title": "Her boyutta okunaklı",
+        "body": "Metin ve çizgiler piksel boyutlarını korur; çakışacak değerler kaydırılır ya da çıkarılır, asla kırpılmaz."
+      },
+      "exact": {
+        "title": "Kesin",
+        "body": "Diyagramlar çözücünün kendi polinomlarıdır: ekstremumlar tam olarak bulunur, tekil yüklerdeki sıçramalar sıçrama olarak çizilir."
+      },
+      "fits": {
+        "title": "Sayfanıza uyar",
+        "body": "Renkler CSS'inizden gelir, açık ve koyu temada. Sunucuda oluşturulur ve sayfa kaydırmasını asla engellemez."
+      },
+      "components": "Tüm prop'lar"
+    }
+  },
+  "practice": {
+    "seo": {
+      "title": "Statik alıştırmaları: cevabınızı anında kontrol edin {'|'} EduBeam",
+      "description": "Ücretsiz statik alıştırmaları: her seferinde yeni sayılarla kirişler, çerçeveler ve kafes sistemler. Mesnet tepkilerini ve en büyük momenti ya da çubuk kuvvetini hesaplayın, cevaplarınızı anında kontrol edin, ardından diyagramlara bakın.",
+      "ogTitle": "Statik alıştırmaları: cevabınızı anında kontrol edin",
+      "ogDescription": "Her seferinde yeni sayılarla kirişler, çerçeveler ve kafes sistemler. Mesnet tepkilerinizi ve momentlerinizi anında kontrol edin, ardından diyagramlara bakın."
+    },
+    "title": "Statik alıştırmaları",
+    "lede": "Her seferinde yeni bir soru ve kendi sonucunuzu karşılaştırabileceğiniz kesin cevaplar. Soruyu kâğıt üzerinde çözün, bulduğunuz değerleri girin, ardından diyagramlara bakın.",
+    "codes": "Her sorunun {code} gibi bir kodu vardır. Aynı kod her zaman aynı soruyu verir: kodu bir arkadaşınızla paylaşın ya da öğretim elemanınızın verdiği soruyu açın.",
+    "announce": "Yeni soru: {structure}, {code}.",
+    "structures": {
+      "title": "Yapılar",
+      "count": "{picked}/{total}",
+      "legend": "“Yeni soru” düğmesinin seçebileceği yapılar",
+      "determinate": "İzostatik",
+      "indeterminate": "Hiperstatik",
+      "note": "“Yeni soru” bunlardan birini rastgele seçer."
+    },
+    "code": {
+      "label": "Soru kodu",
+      "placeholder": "Kod",
+      "open": "Aç",
+      "error": "Bu bir soru kodu değil. Kod, H2048 gibi bir harf ve bir sayıdan oluşur."
+    },
+    "newProblem": "Yeni soru",
+    "copyLink": "Bağlantıyı kopyala",
+    "linkCopied": "Bağlantı kopyalandı",
+    "barForces": "Çubuk kuvvetleri, çekme pozitif",
+    "answers": {
+      "title": "Cevaplarınız",
+      "note": "Mesnet tepkileri soruda pozitif sayıldıkları yönde çizilmiştir. Bir tepki ters yönde etkiyorsa cevabı negatiftir.",
+      "field": "{label}, {direction}, {unit} cinsinden",
+      "fieldMagnitude": "{label}, {unit} cinsinden"
+    },
+    "positive": {
+      "right": "sağa doğru pozitif",
+      "up": "yukarı doğru pozitif",
+      "counterClockwise": "saat yönünün tersine pozitif",
+      "tension": "çekmede pozitif",
+      "magnitude": "mutlak değer"
+    },
+    "mark": {
+      "correct": "doğru",
+      "exact": "kesin cevap",
+      "sign": "işaret?",
+      "signLong": "büyüklük doğru, işaret yanlış",
+      "wrong": "doğru değil"
+    },
+    "verdict": {
+      "allRight": "Hepsi doğru. Diyagramlar artık sorunun şekli üzerinde çizili.",
+      "sign": "Doğru cevap: {right}/{total}. “{sign}” yazan yerlerde büyüklük doğru, yön yanlış.",
+      "some": "Doğru cevap: {right}/{total}. Kesin değerden en fazla %1 sapan cevaplar doğru sayılır.",
+      "revealed": "Kesin cevaplar alanlarınızın yanında; diyagramlar da sorunun şekli üzerinde çizili."
+    },
+    "check": "Kontrol et",
+    "nextProblem": "Sonraki soru",
+    "hint": "İpucu",
+    "showAnswers": "Cevapları göster",
+    "solved": "Bu cihazda çözülen: {n} soru.",
+    "about": {
+      "answers": {
+        "title": "Cevaplar nereden geliyor",
+        "body": "Her soru tarayıcınızda, EduBeam'in arkasındaki çözücü olan {solver} ile çözülür ve {plot} ile çizilir. En büyük moment, örneklenmiş bir eğriden okunmaz; tam olarak bulunur."
+      },
+      "signs": {
+        "title": "İşaretler ve birimler",
+        "body": "Cevaplar kN ve kNm cinsindendir. Soruda aksi belirtilmedikçe yükler aşağı doğru etkir. Mesnet tepkileri, her alanda gösterildiği gibi sağa, yukarı ve saat yönünün tersine pozitiftir; çubuk kuvvetleri çekmede pozitiftir. Diyagramlar EduBeam'in {conventions} uyar.",
+        "conventions": "işaret kabullerine"
+      },
+      "teachers": {
+        "title": "Öğretim elemanları için",
+        "body": "{exam} bu soruları, her öğrenciye ayrı bir grup olmak üzere, cevap anahtarlı sınav kâğıtları olarak yazdırır. Öğrenciler her sorunun kodu sayesinde cevaplarını sonradan burada kendileri kontrol edebilir.",
+        "exam": "Sınav oluşturucu"
+      }
+    }
+  },
+  "exam": {
+    "seo": {
+      "title": "Statik sınav oluşturucu: cevap anahtarlı, yazdırılabilir sınavlar {'|'} EduBeam",
+      "description": "Statik sınavlarını tarayıcınızda hazırlayın: üretilmiş sayılarla kirişler, çerçeveler ve kafes sistemler, her öğrenciye ayrı bir grup, cevap anahtarı ve LaTeX ile Word için SVG şekiller. Ücretsiz, kurulum gerektirmez.",
+      "ogTitle": "Statik sınav oluşturucu: cevap anahtarlı, yazdırılabilir sınavlar",
+      "ogDescription": "Üretilmiş kirişler, çerçeveler ve kafes sistemler, öğrenci başına bir grup, cevap anahtarı ve SVG şekiller. Ücretsiz, tarayıcıda."
+    },
+    "title": "Sınav oluşturucu",
+    "lede": "Her öğrenciye ayrı bir grup olmak üzere, cevap anahtarlı statik sınav kâğıtları. Her şey tarayıcınızda hazırlanır ve hiçbir yere gönderilmez; ayarlar sayfanın adresinde durur, böylece bir yer imi aynı kâğıtları geri getirir.",
+    "defaultTitle": "Statik sınavı",
+    "settings": {
+      "title": "Başlık",
+      "subtitle": "İkinci satır",
+      "subtitlePlaceholder": "Ders, tarih, süre",
+      "problems": "Sorular",
+      "problem": "{n}. soru",
+      "determinate": "İzostatik",
+      "indeterminate": "Hiperstatik",
+      "remove": "{n}. soruyu kaldır",
+      "add": "Soru ekle",
+      "problemsNote": "Her grupta bu sorular bu sırayla yer alır, her biri kendi sayılarıyla. En fazla {max} soru.",
+      "versions": "Gruplar",
+      "versionsNote": "Her öğrenciye bir grup; en fazla {max} grup.",
+      "number": "Sınav numarası",
+      "newNumber": "Yeni",
+      "newNumberTitle": "Tüm sorular için yeni sayılar",
+      "numberNote": "Aynı numara her zaman aynı kâğıtları üretir.",
+      "onPapers": "Kâğıtlarda",
+      "nameLine": "Öğrencinin adı için bir satır",
+      "working": "Çözüm için boşluk",
+      "key": "Sonda cevap anahtarı",
+      "codes": "Soru kodları",
+      "codesNote": "Ödevler için: öğrenciler cevaplarını {practice} kontrol eder; orada çözüm de gösterilir. Sınavda kapalı bırakın.",
+      "practicePage": "Alıştırmalar sayfasında"
+    },
+    "zipNote": ".zip dosyası, LaTeX ve Word için tüm şekilleri ve cevap anahtarlarını SVG olarak, notlandırma için de cevapları CSV tablosu olarak içerir.",
+    "summary": {
+      "papers": "{n} sınav kâğıdı",
+      "problems": "{n} sorulu",
+      "plain": "{problems} {papers}",
+      "withKey": "{problems} {papers} ve cevap anahtarı",
+      "withKeys": "{problems} {papers} ve cevap anahtarları"
+    },
+    "jump": {
+      "label": "Bir kâğıda git",
+      "placeholder": "Git…",
+      "papers": "Sınav kâğıtları",
+      "keys": "Cevap anahtarları",
+      "key": "Cevap anahtarı, Grup {n}"
+    },
+    "version": "Grup {n}",
+    "download": ".zip indir",
+    "downloadTitle": "LaTeX ve Word için tüm şekiller ve cevap anahtarları SVG olarak, notlandırma için cevaplar CSV tablosu olarak",
+    "print": "Yazdır",
+    "printLong": "Yazdır veya PDF olarak kaydet",
+    "paper": {
+      "name": "Ad Soyad",
+      "rules": "Kuvvetler kN, momentler kNm cinsindendir. Soruda aksi belirtilmedikçe yükler aşağı doğru etkir. Mesnet tepkileri, mesnetlerin yapıya uyguladığı kuvvetlerdir ve pozitif sayıldıkları yönde çizilmiştir: sağa, yukarı ve saat yönünün tersine. Negatif bir cevap ters yönde etkir. Çubuk kuvvetleri çekmede pozitiftir.",
+      "check": "Cevaplarınızı kontrol edin: {url}"
+    },
+    "key": {
+      "title": "Cevap anahtarı",
+      "version": "{title}, Grup {n}",
+      "exam": "Sınav no. {n}"
+    },
+    "tension": "çekme +",
+    "solutionFigure": "{name}: çözüm"
+  },
+  "exerciseGenerator": {
+    "solveIt": "Alıştırmalar sayfasında çözün",
+    "exercise": "Soru",
+    "key": "Cevap anahtarı",
+    "solution": "Çözüm",
+    "caption": "Tarayıcınızda üretildi: tohum değeri yapıyı ve sayılarını seçer, {'@'}edubeam/fem yapıyı çözer, {'@'}edubeam/plot da iki tarafı çizer. Tam sınav kâğıtlarını {exam} hazırlar.",
+    "exam": "sınav oluşturucu",
+    "newExercise": "Yeni soru"
+  },
+  "ui": {
+    "menu": "Menü",
+    "darkMode": "Koyu tema",
+    "lightMode": "Açık tema",
+    "language": "Dil: {name}",
+    "guideNav": "Kılavuz",
+    "copy": "Kopyala",
+    "copied": "Kopyalandı",
+    "copyCode": "Kodu kopyala",
+    "docs": "Belgeler",
+    "elementSketch": "Yerel eksenlerinde bir eleman"
+  },
+  "heroFigure": {
+    "aria": "Düzgün yayılı yük ve kaydırılabilen bir tekil yük altındaki konsollu kiriş; kesme kuvveti, eğilme momenti ve sehim diyagramlarıyla birlikte",
+    "slider": "20 kN'luk tekil yükün konumu",
+    "loadAt": "{x} m'de",
+    "hint": "Yükü sürükleyin ya da değerini okumak için imleci bir diyagramın üzerine getirin.",
+    "fromA": "A'dan {x} m",
+    "reactions": "mesnet tepkileri: A'da {a} kN, B'de {b} kN",
+    "sagging": "en büyük pozitif moment {m} kNm",
+    "hogging": "B mesnedi üzerindeki negatif moment {m} kNm"
+  },
+  "plotTexts": {
+    "structure": "Yapı",
+    "structureWith": "Yapı, {parts} ile birlikte",
+    "layers": {
+      "N": "normal kuvvet diyagramı",
+      "V": "kesme kuvveti diyagramı",
+      "M": "eğilme momenti diyagramı",
+      "w": "deforme şekil",
+      "reactions": "mesnet tepkileri",
+      "loads": "yükler"
+    },
+    "loadHandle": "{load} yükünün konumu",
+    "loadPosition": "kirişin başından {metres} m",
+    "stack": "Yükleriyle bir kiriş",
+    "stackWith": "Yükleriyle bir kiriş; altında diyagramlar: {rows}",
+    "rows": {
+      "N": "normal kuvvet",
+      "V": "kesme kuvveti",
+      "M": "eğilme momenti",
+      "w": "sehim"
+    },
+    "temperatureUniform": "ΔT",
+    "temperatureGradient": "ΔTb − ΔTt"
   }
 }

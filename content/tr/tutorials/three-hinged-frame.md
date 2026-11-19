@@ -1,118 +1,204 @@
 ---
-description: "Adım adım eğitim: EduBeam'de düzgün yayılı yüklü üç mafsallı bir çerçeve modelleyin, mesnet tepkilerini ve eğilme momentlerini elle kontrol edin. Yaklaşık 15 dakika."
+description: "Eğitim: EduBeam'de üç mafsallı bir çerçeve modelleyin; mesnet tepkilerini, yatay itkiyi, iç kuvvetleri ve mafsalın sehimini elle kontrol edin. Yaklaşık 15 dakika."
+source: site
 ---
 
 # Eğitim: üç mafsallı çerçeve
 
-Üç mafsallı çerçeve izostatiktir: üç denge denklemi ve mafsaldaki $M = 0$ koşulu, dört mesnet tepkisinin tamamını verir. Bu yüzden EduBeam'in çizdiği her sayıyı kontrol etmek için mükemmel bir modeldir. Yaklaşık 15 dakika ayırın.
+Açıklık ortasında mafsalı olan bir portal çerçeve modelleyin, mesnet tepkilerini ve diyagramlarını okuyun ve her sayıyı, mafsalın sehimine kadar, elle kontrol edin.
 
-![Tamamlanmış çerçeve: eğilme momenti ve mesnet tepkileri](/screenshots/tr/tut-frame-moment.webp)
+- **Süre:** yaklaşık 15 dakika.
+- **Gerekenler:** ikinci bir tarayıcı sekmesinde açık EduBeam; fare ve klavyesi olan bir bilgisayar. EduBeam'i daha önce kullanmadıysanız önce [Hızlı başlangıç](/tr/guide/quick-start) sayfasını ya da [eğik kiriş](/tr/tutorials/inclined-beam) eğitimini yapın.
+- **Ön bilgi:** bir çerçevenin dengesi ve serbest cisim diyagramları. İsteğe bağlı sehim kontrolü birim yük yöntemini (virtüel iş ilkesi) kullanır.
+- **Birimler:** SI. Görüntüleyicinin sağ altındaki birim göstergesinde `m m² kN kNm MPa` yazmalıdır. Fit ve kip görüyorsanız göstergeye tıklayın ve **Birim sistemi** olarak **SI (metrik)** seçin.
 
-Modeli yalnızca incelemek mi istiyorsunuz? [Hazır modeli açın](https://run.edubeam.app/?model=eyJuIjpbWyJBIixbMCwwLDBdLFswLDJdLG51bGxdLFsiQiIsWzAsMCwtNF0sW10sbnVsbF0sWyJDIixbNCwwLC00XSxbXSxudWxsXSxbIkQiLFs4LDAsLTRdLFtdLG51bGxdLFsiRSIsWzgsMCwwXSxbMCwyXSxudWxsXV0sImUiOltbIjEiLFsiQSIsIkIiXSwiMSIsIjEiLFtmYWxzZSxmYWxzZV1dLFsiMiIsWyJCIiwiQyJdLCIxIiwiMSIsW2ZhbHNlLHRydWVdXSxbIjMiLFsiQyIsIkQiXSwiMSIsIjEiLFtmYWxzZSxmYWxzZV1dLFsiNCIsWyJEIiwiRSJdLCIxIiwiMSIsW2ZhbHNlLGZhbHNlXV1dLCJtIjpbWyIxIiw3ODUwLDIxMDAwMDAwMDAwMCw4MTAwMDAwMDAwMCwwLjAwMDAxMl1dLCJjcyI6W1siMSIsMC4wMDUzOCwwLjAwMDA4MzU2LDAuMywxXV0sImVsIjpbWyIyIixbMCwxMDAwMF0sZmFsc2VdLFsiMyIsWzAsMTAwMDBdLGZhbHNlXV0sImQiOltdfQ%3D%3D&lang=tr){target="_blank"}.
+**Neler öğreneceksiniz**
+
+- bir çerçeveyi fareyle tek bir çoklu çizgi olarak çizmeyi,
+- **Uç mafsalları** kutularıyla bir çubuğun içine mafsal yerleştirmeyi,
+- yatay itkiyi mafsaldaki $M = 0$ koşulundan bulmayı ve farklı yönlerde çizilmiş çubuklarda $V$'nin işaretini okumayı.
+
+::div{.actions}
+[EduBeam'i açın ↗](https://run.edubeam.app/?lang=tr){target="_blank"} [El hesabına geçin](#_6-check-by-hand)
+::
+
+::model-figure{caption="Tamamlanmış çerçeve: kirişte 10 kN/m, 1 ve 5 düğümlerinde mafsallı mesnet, 3 düğümünde mafsal"}
+---
+nodes: { 1: [0, 0], 2: [0, -4], 3: [4, -4], 4: [8, -4], 5: [8, 0] }
+supports: { 1: pin, 5: pin }
+members: [[1, 2], { nodes: [2, 3], hinges: [false, true] }, [3, 4], [4, 5]]
+loads:
+  - { member: 2, qz: 10 }
+  - { member: 3, qz: 10 }
+results: [M, N, V, w]
+show: [nodeLabels, dimensions]
+---
+::
 
 ## Problem {#the-problem}
 
-- Ayakları A ve E noktalarında mafsallı mesnetli, aralarında 8 m bulunan, 4 m yüksekliğinde iki kolon.
-- Kolonların üstünde, açıklık ortasındaki C noktasında mafsallı yatay bir B–D kirişi.
-- Kirişin tamamında $q = 10$ kN/m'lik düzgün yayılı yük.
-- Çelik ($E = 210$ GPa, $G = 81$ GPa), IPE 300 ($A = 53{,}8$ cm², $I_y = 8356$ cm⁴, $h = 300$ mm).
+- 4 m yüksekliğinde iki kolon; ayakları 1 ve 5 düğümlerinde mafsallı mesnetli, aralarındaki uzaklık 8 m.
+- Üstte 2 düğümünden 4 düğümüne uzanan yatay bir kiriş; açıklık ortasında, 3 düğümünde bir mafsal var.
+- Kirişin tamamında düzgün yayılı yük $q = 10$ kN/m.
+- Çelik, $E = 210$ GPa; bütün çubuklarda $I_y = 8{,}356 \times 10^{-5}$ m⁴ (bir IPE 300).
 
-| Düğüm | X [m] | Z [m] | Mesnet |
+| Düğüm | x (m) | z (m) | |
 | --- | --- | --- | --- |
-| A | 0 | 0 | mafsallı mesnet |
-| B | 0 | −4 | |
-| C | 4 | −4 | (kirişteki mafsal) |
-| D | 8 | −4 | |
-| E | 8 | 0 | mafsallı mesnet |
+| 1 | 0 | 0 | mafsallı mesnet |
+| 2 | 0 | −4 | köşe |
+| 3 | 4 | −4 | kirişteki mafsal |
+| 4 | 8 | −4 | köşe |
+| 5 | 8 | 0 | mafsallı mesnet |
 
-**z ekseninin aşağı doğru** olduğunu unutmayın; bu yüzden kolonların üst ucu `Z = −4`'tedir.
+z ekseni **aşağı** doğrudur; bu yüzden kolonların üst uçları $z = -4$'tedir.
 
-## 1. Malzeme ve kesit {#_1-material-and-section}
+**Sistem izostatik mi?** İki mafsallı mesnet dört mesnet tepkisi verir. Üç denge denklemiyle mafsaldaki $M_3 = 0$ koşulu dört denklem eder: evet.
 
-1. **Modeli temizle** (*Malzemeleri sil* ve *Kesitleri sil* seçeneklerini işaretleyin).
-2. *Malzemeler* → **Malzeme kütüphanesi** → **Steel (S235)**.
-3. *Kesitler* → **Kesit ekle**: `Alan = 0,00538`, `Iy = 8,356e-5`, `Yükseklik = 0,3`, `Kayma düzeltme katsayısı = 1`.
+## Modeli kurun {#model-it}
 
-Kesit yalnızca yer değiştirmeleri etkiler. Bu çerçeve izostatik olduğundan iç kuvvetleri $E$, $A$ veya $I$'ya hiç bağlı değildir.
+::div{.steps}
 
-## 2. Çerçeveyi çizin {#_2-draw-the-frame}
+### Malzeme ve kesit {#_1-material-and-section}
 
-En hızlı yol, fareyle tek bir çoklu çizgi çizmektir:
+1. Üst araç çubuğunda **Modeli temizle** düğmesine tıklayın, **Malzemeleri sil** ve **Kesitleri sil** kutularını işaretleyin ve **Onayla** düğmesine tıklayın. Düğümler ve elemanlar yeniden 1'den başlayarak numaralanır.
+2. **Malzemeler** sekmesi → **Malzeme kütüphanesi** → **Çelik (S235)** satırındaki **+**; ardından kütüphaneyi **İptal** ile kapatın.
+3. **Kesitler** sekmesi → **Kesit ekle**. **Iy** için `8.356e-5` girin; **Alan**, **Yükseklik** ve **Kayma düzeltme katsayısı** değerlerini `1` olarak bırakın ve **Kesit ekle** düğmesine tıklayın.
 
-1. **Izgaraya yakala**'nın açık olduğundan emin olun (**S** düğmesi).
-2. *Elemanlar* sekmesi → ikinci **Eleman ekle** düğmesi (imleç simgeli).
-3. Sırasıyla (0, 0), (0, −4), (4, −4), (8, −4) ve (8, 0) noktalarına tıklayın. Noktaları bulmak için cetvellerden ve artı imlecinden yararlanın. Her tıklama bir düğüm ekler ve onu bir öncekine bağlar.
-4. Bitirmek için <kbd>Esc</kbd>'ye, ardından çerçeveyi ekrana sığdırmak için <kbd>F</kbd>'ye basın.
+1 m²'lik alan sayesinde çubuklar fark edilir ölçüde kısalmaz ve kayma şekil değiştirmesi yapmaz; sehimin el hesabı da bunu varsayar. İzostatik bir çerçevenin iç kuvvetleri ise $E$'ye, $A$'ya ve $I_y$'ye hiç bağlı değildir.
 
-Artık beş düğümünüz ve dört elemanınız var. Buradaki resimlerde düğümler A–E olarak etiketlidir; isterseniz kendi düğümlerinizi *Düğümler* tablosunda yeniden adlandırın ya da 1–5 olarak bırakın. Tablodaki koordinatları kontrol edin ve ızgaraya oturmamış olanları düzeltin.
+### Çerçeveyi çizin {#_2-draw-the-frame}
 
-## 3. Mesnetler ve mafsal {#_3-supports-and-the-hinge}
+1. **Elemanlar** sekmesi → ikinci **Eleman ekle** düğmesi, imleç simgeli olan.
+2. Sırasıyla (0, 0), (0, −4), (4, −4), (8, −4) ve (8, 0) noktalarına tıklayın. Her tıklama bir sonraki düğümü ekler ve onu bir öncekine bağlar; tıklamalar ızgaraya yakalanır.
+3. Çizimi bitirmek için <kbd>Esc</kbd> tuşuna, ardından görünümü ekrana sığdırmak için <kbd>F</kbd> tuşuna basın.
 
-1. A düğümüne tıklayın, **Düğüm mesnetleri**'ni açın ve **Mafsallı mesnet**'i seçin. Aynısını E düğümü için yapın.
-2. *Elemanlar* tablosunda B'den C'ye giden elemanı bulun ve **bitiş** mafsalını işaretleyin (*Uç mafsalları* sütunundaki ikinci kutu).
+Artık 1–5 düğümleri ve 1–4 elemanları var; buradaki şekillerde olduğu gibi çizim sıranıza göre numaralanmışlardır. **Düğümler** tablosunu yukarıdaki tabloyla karşılaştırın ve tutmayan koordinatların üzerine doğrusunu yazın.
 
-![Elemanlar tablosu: mafsal, 2 numaralı elemanın ucunda, C düğümünde](/screenshots/tr/elements-table.webp)
+### Mesnetler ve mafsal {#_3-supports-and-the-hinge}
 
-::callout{type="tip" title="İki değil, tek mafsal"}
-B–C elemanının ucunu mafsallamak yeterlidir: C'deki moment bu durumda sıfırdır, çünkü C–D, yalnızca kendisinin rijit olarak bağlandığı bir düğüme moment aktaramaz. C–D'nin başlangıcını da işaretlerseniz hiçbir şey değişmez. Ancak B'ye de bir mafsal koyarsanız çerçeve mekanizmaya dönüşür. Deneyin: EduBeam nasıl hareket ettiğini size gösterir.
-::
+1. 1 düğümüne tıklayın → **Düğüm mesnetleri** → **Mafsallı mesnet** simgesi. Aynısını 5 düğümü için yapın.
+2. **Elemanlar** tablosunda 2 düğümünden 3 düğümüne giden 2 numaralı elemanı bulun ve **Uç mafsalları** kutularından ikincisini işaretleyin: bu, elemanın bitişindeki, yani 3 düğümündeki mafsaldır.
 
-## 4. Yük {#_4-load}
+![Elemanlar tablosu: 2 numaralı elemanın bitiş mafsalı, 3 düğümünde, işaretli](/screenshots/tr/p2t-frame-elements-table.webp)
 
-*Yükler* → **Eleman yükü ekle** → *Düzgün yayılı yük*, B–C elemanı, `fz = 10` kN/m. Aynısını C–D elemanı için tekrarlayın. Kiriş yatay olduğundan LCS kutusu burada fark yaratmaz.
+Tek mafsal yeterlidir. Bu durumda 3 düğümüne rijit olarak bağlı tek çubuk 3 numaralı elemandır; bu yüzden ona orada hiçbir moment aktarılamaz. 3 numaralı elemanın başlangıcını da işaretlemek hiçbir şeyi değiştirmez.
 
-## 5. Sonuçlar {#_5-results}
+### Yük {#_4-load}
 
-Görünüm seçeneklerinde başlangıçta deforme şekil, eğilme momenti ve mesnet tepkileri açıktır. Diğerlerini görmek için **N (x)** ve **V<sub>z</sub> (x)** seçeneklerini işaretleyin.
+1. **Yükler** sekmesi → **Eleman yükü ekle**.
+2. **Yük türü** *Düzgün yayılı yük*, **Eleman** `2`, `fz = 10`. **Eleman yükü ekle** düğmesine tıklayın.
+3. Aynısını 3 numaralı eleman için tekrarlayın.
 
-::div{.shots}
-
-![Eğilme momenti ve mesnet tepkileri](/screenshots/tr/tut-frame-moment.webp)
-
-![Normal kuvvet](/screenshots/tr/tut-frame-normal.webp)
-
-![Kesme kuvveti](/screenshots/tr/results-shear.webp)
-
-![Deforme şekil](/screenshots/tr/results-deformed.webp)
+`fz` aşağı doğru pozitiftir. Kiriş yatay olduğundan **LCS** (yerel koordinat sistemi) kutusu burada fark yaratmaz.
 
 ::
 
-## 6. Elle kontrol edin {#_6-check-by-hand}
+## Sonuçlar {#_5-results}
 
-**Düşey mesnet tepkileri.** Simetri nedeniyle her ayak yükün yarısını taşır:
+Görüntüleyicinin sağ üstündeki görünüm seçeneklerinde (dişli simgesi onları gösterir ve gizler) **Deforme şekil**, **M<sub>y</sub> (x)** ve **Mesnet tepkileri** baştan açıktır. Diğer diyagramlar için **N (x)** ve **V<sub>z</sub> (x)** seçeneklerini işaretleyin ya da diyagramları tek tek görmek için bazılarının işaretini kaldırın. EduBeam bunları kN ve kNm cinsinden, iki ondalık basamakla etiketler.
 
-$$V_A = V_E = \frac{q \cdot 8}{2} = 40\ \text{kN}$$
+- Her kolon ayağında yukarı doğru `40,00` ve içe doğru `20,00` görürsünüz.
+- Eğilme momenti iki köşede de `-80,00` gösterir; sıfır olduğu mafsalda etiketi yoktur. EduBeam momenti çekme tarafına, burada çerçevenin dışına çizer.
+- Normal kuvvet her yerde negatiftir: kolonlarda `-40,00`, kirişte `-20,00`. Dört çubuğun hepsi basınç altındadır.
+- **Sonuçlar** sekmesi → **Düğüm sonuçları**: mafsal, yani 3 düğümü, $D_z$ = `4,2554 · 10⁻² m` kadar, yani 42,55 mm aşağı iner. Yukarıdaki şeklin $w(x)$ görünümünde mafsalda okunan değer de budur.
 
-**Yatay mesnet tepkileri.** Çerçevenin sol yarısı için C mafsalına göre moment alın. Mafsaldaki moment sıfır olmalıdır:
+## Elle kontrol edin {#_6-check-by-hand}
 
-$$V_A \cdot 4 - H_A \cdot 4 - q \cdot 4 \cdot 2 = 0 \quad\Rightarrow\quad H_A = \frac{160 - 80}{4} = 20\ \text{kN}$$
+**Düşey mesnet tepkileri.** Simetri nedeniyle her kolon ayağı 80 kN'un yarısını taşır:
 
-İki ayaktaki yatay tepkiler de 20 kN büyüklüğünde ve içe doğrudur; üç mafsallı çerçeveyi verimli kılan da bu yatay itkidir.
+$$
+V_1 = V_5 = \frac{q \cdot 8}{2} = 40\ \text{kN}
+$$
 
-**İç kuvvetler.**
+**Yatay mesnet tepkileri.** Çerçeveyi mafsaldan kesin ve sol yarı için, momentin sıfır olduğu 3 düğümüne göre moment alın:
+
+$$
+V_1 \cdot 4 - H_1 \cdot 4 - q \cdot 4 \cdot 2 = 0 \quad\Rightarrow\quad H_1 = \frac{160 - 80}{4} = 20\ \text{kN}
+$$
+
+İki kolon ayağı da 20 kN'luk bir kuvvetle içe doğru iter. Birbirinden uzaklaşamayan mafsallı mesnetlerin sağladığı bu yatay itki olmasaydı çerçeve ayakta duramazdı: kolonlar iki yana açılır, mafsal da aşağı düşerdi.
 
 | Büyüklük | Formül | El hesabı | EduBeam |
 | --- | --- | --- | --- |
-| Düşey mesnet tepkileri | $qL/2$ | 40 kN | 40 kN |
-| Yatay mesnet tepkileri | $M_C = 0$ koşulundan | 20 kN | 20 kN |
-| B ve D köşelerindeki moment | $H \cdot h$ | 80 kNm, dış lifler çekmede | −80 kNm |
-| C mafsalındaki moment | | 0 | 0 |
-| Kolonlardaki normal kuvvet | $-V_A$ | −40 kN | −40 kN |
-| Kirişteki normal kuvvet | $-H_A$ | −20 kN | −20 kN |
-| Kolonlardaki kesme kuvveti | $H_A$ | 20 kN | −20 kN (A–B), +20 kN (D–E) |
-| Kirişte B'deki kesme kuvveti | $V_A$ | 40 kN | 40 kN |
-| Kirişte C'deki kesme kuvveti | $V_A - 4q$ | 0 | 0 |
-| Kirişte D'deki kesme kuvveti | $V_A - 8q$ | −40 kN | −40 kN |
+| Düşey mesnet tepkileri | $q \cdot 8/2$ | 40 kN | 40,00 |
+| Yatay mesnet tepkileri | $M_3 = 0$ koşulundan | 20 kN | 20,00 |
+| Köşe momentleri, 2 ve 4 düğümleri | $H_1 \cdot 4$ | 80 kNm, dış lifler çekmede | −80,00 |
+| Mafsaldaki moment, 3 düğümü | | 0 | etiket yok |
+| Kolonlarda $N$ | $-V_1$ | −40 kN | −40,00 |
+| Kirişte $N$ | $-H_1$ | −20 kN | −20,00 |
+| Kolonlarda $V$ | $\pm H_1$ | ±20 kN | −20,00; 20,00 |
+| Kirişte 2, 3, 4 düğümlerinde $V$ | $V_1 - q\,x$ | 40; 0; −40 kN | 40,00; etiket yok; −40,00 |
 
-İki kolon aynı kuvveti taşıdığı hâlde kesme kuvvetlerinin işaretleri zıttır, çünkü her elemanın yerel eksenleri kendi yönünü izler: A–B yukarı, D–E aşağı doğru çizilmiştir. Kolonlardan birinin düğüm sırasını ters çevirirseniz işareti de değişir.
+İki kolon aynı kesme kuvvetini zıt işaretlerle taşır: 1 numaralı elemanda −20 kN, 4 numaralı elemanda +20 kN. Bunun nedeni, her elemanın yerel eksenlerinin o elemanın çizildiği yönü izlemesidir: 1 numaralı eleman yukarı, 4 numaralı eleman aşağı doğru çizildi. Kolonlardan birinin düğüm sırasını ters çevirirseniz işareti de değişir. Nedenini [Koordinat sistemi ve işaret kabulü](/tr/elements/conventions#internal-forces) sayfası açıklıyor.
 
-Kirişte $M(x) = -80 + 40x - 5x^2$ kNm'dir (x, B'den ölçülür). Moment mafsalda sıfırdır ve hiçbir yerde pozitif değildir: kirişin tamamı negatif moment altındadır (üst lifler çekmede). Kesme kuvveti $V(x) = 40 - 10x$ tam C'de sıfıra iner, dolayısıyla momentin ekstremumu da mafsaldadır.
+Kirişte, $x$ 2 düğümünden ölçülmek üzere, $M(x) = -80 + 40x - 5x^2$ kNm'dir. Moment mafsalda sıfırdır ve hiçbir yerde pozitif değildir: kirişin tamamı negatif moment altındadır (üst lifler çekmede). Kesme kuvveti $V(x) = 40 - 10x$ tam mafsalda sıfır olur; momentin ekstremumu da bu yüzden oradadır.
 
-**Yer değiştirme.** C mafsalı 43,1 mm aşağı iner (*Sonuçlar → Düğüm sonuçları*, C'nin `Dz` değeri). Bu değer dört çubuğun hepsinin eğilmesinden gelir ve virtüel iş ilkesi için iyi bir alıştırmadır.
+::callout{type="details" title="Mafsalın sehimi, virtüel iş ilkesiyle"}
+3 düğümüne aşağı doğru bir birim yük koyun. Bu yük $\bar V = \bar H = 1/2$ tepkilerini ve bir $\bar m$ momentini oluşturur: $\bar m$ kolon ayağında 0'dan köşede 2'ye çıkar, mafsalda yeniden 0'a iner ve gerçek moment $M$ gibi dış liflerde çekme oluşturur. $M \bar m$ çarpımını dört çubuk boyunca integre edin:
 
-## 7. Deneyin {#_7-experiment}
+$$
+\text{kolonlar: } 2\int_0^4 (20\,y)(0{,}5\,y)\,dy = 426{,}7
+$$
 
-- C'deki **mafsalın işaretini kaldırın**. Çerçeve bir derece hiperstatik olur; köşe momentleri azalır ve açıklık ortasında pozitif moment oluşur. Artık kesit önemlidir: daha rijit bir kiriş deneyin.
-- **Ayakları ankastre yapın** (**Ankastre** mesneti seçin). A ve E'de moment oluşur.
-- **Yatay bir yük ekleyin**: B'ye `Fx = 10` kN'lik bir düğüm yükü. Çerçeve yanal olarak ötelenir ve mesnet tepkileri artık simetrik değildir. Bunları aynı üç denklem ve $M_C = 0$ koşuluyla kontrol edin.
-- **B'ye de bir mafsal koyun.** Çerçeve artık bir mekanizmadır ve EduBeam nasıl hareket edebileceğini animasyonla gösterir.
+$$
+\text{kiriş: } 2\int_0^4 (80 - 40x + 5x^2)(2 - 0{,}5x)\,dx = 320
+$$
+
+$EI = 210 \times 10^6 \cdot 8{,}356 \times 10^{-5} = 17\,548$ kNm² ile:
+
+$$
+\delta_3 = \frac{1}{EI}\int M \bar m\,dx = \frac{746{,}7}{17\,548} = 0{,}04255\ \text{m}
+$$
+
+Bu, EduBeam'in `4,2554 · 10⁻²` m olarak verdiği 42,55 mm'dir. Son basamaktaki 4, 1 m²'lik alanın hâlâ izin verdiği çok küçük kısalma ve kayma şekil değiştirmesinden gelir; el hesabı bunları hesaba katmaz. IPE 300'ün gerçek alanı $A = 53{,}8$ cm² girilir ve kayma alanı olarak gövdesi alınırsa (kayma düzeltme katsayısı 0,40), çubuklar daha çok kısalır, kayma şekil değiştirmesi de artar; mafsal 43,7 mm, yani yaklaşık %3 daha fazla iner.
+::
+
+## Deneyin {#_7-experiment}
+
+Her seferinde tek bir şeyi değiştirin, sonucu önce tahmin edin, sonra bakın. Her değişikliği <kbd>Ctrl</kbd>+<kbd>Z</kbd> ile geri alabilirsiniz.
+
+**Mafsalın işaretini kaldırın.** Çerçeve bir derece hiperstatik olur. Yatay itki yarıya, 10 kN'a iner; köşe momentleri −40 kNm'ye düşer ve kiriş açıklık ortasında 40 kNm'lik pozitif moment taşır. 3 düğümü artık 42,55 mm yerine yalnızca 12,16 mm aşağı iner. Artık kesitler de önemlidir: kirişe kolonlardan daha rijit bir kesit verirseniz köşe momentleri büyür.
+
+::model-figure{caption="Mafsal olmadan: daha küçük yatay itki, yarıya inen köşe momentleri ve açıklık ortasında pozitif moment"}
+---
+nodes: { 1: [0, 0], 2: [0, -4], 3: [4, -4], 4: [8, -4], 5: [8, 0] }
+supports: { 1: pin, 5: pin }
+members: [[1, 2], [2, 3], [3, 4], [4, 5]]
+loads:
+  - { member: 2, qz: 10 }
+  - { member: 3, qz: 10 }
+results: [M, w]
+show: [nodeLabels]
+---
+::
+
+**Kolon ayaklarını ankastre yapın.** 1 ve 5 düğümlerine **Ankastre** simgesini verin. Yatay itki 30 kN'a çıkar ve kolon ayaklarında 40 kNm'lik momentler oluşur (kolonlar çok az kısaldığı için EduBeam `39,99` gösterir); köşe momentleri ise 80 kNm'de kalır. Simetri nedeniyle mafsaldaki kesme kuvveti sıfırdır; dolayısıyla kirişin her yarısı yine köşesinden çıkan 4 m'lik bir konsol gibi çalışır: $q \cdot 4^2/2 = 80$ kNm.
+
+**Yandan itin.** Mafsallı mesnetlere geri dönün ve 2 düğümüne `Fx = 10` kN büyüklüğünde bir düğüm yükü ekleyin. Mesnet tepkilerinin simetrisi bozulur: düşeyde 35 kN ve 45 kN, yatayda 15 kN ve 25 kN. Bunları aynı üç denge denklemi ve $M_3 = 0$ koşuluyla kontrol edin; 2 düğümündeki yükün 3 düğümüne göre moment kolu yoktur. Sol köşe momenti −60 kNm'ye iner ve kirişin sol yarısında artık küçük bir pozitif moment oluşur: mafsaldan 0,5 m uzakta 1,25 kNm.
+
+::model-figure{caption="2 düğümünde 10 kN'luk yatay yük: sağ köşe artık 100 kNm alıyor"}
+---
+nodes: { 1: [0, 0], 2: [0, -4], 3: [4, -4], 4: [8, -4], 5: [8, 0] }
+supports: { 1: pin, 5: pin }
+members: [[1, 2], { nodes: [2, 3], hinges: [false, true] }, [3, 4], [4, 5]]
+loads:
+  - { member: 2, qz: 10 }
+  - { member: 3, qz: 10 }
+  - { node: 2, fx: 10 }
+results: [M, N]
+show: [nodeLabels]
+---
+::
+
+**İkinci bir mafsal ekleyin.** 2 numaralı elemanın 2 düğümündeki başlangıç mafsalını da işaretleyin. Mafsallı mesnetli iki kolonun taşıdığı kirişte iki mafsal olunca sistem mekanizmaya dönüşür. EduBeam sonuç göstermez, *Mafsallar yapının hareket etmesine izin veriyor (düğümler: 2, 3).* mesajını verir ve hareketi animasyonla gösterir.
+
+## Sonraki adımlar {#next-steps}
+
+::card-grid{cols="2"}
+:::card{title="Alıştırma: üç mafsallı çerçeveler" icon="lucide:dices" to="/tr/practice?p=H2048"}
+Aynı çerçeve, aralarında yatay bir yükün de bulunduğu yeni yüklemeler altında; cevaplarınız anında kontrol edilir. H2048 ile başlayın; daha fazlası için yalnızca **Üç mafsallı çerçeve** seçili kalsın ve **Yeni soru** düğmesine basın.
+:::
+:::card{title="Sonraki: düzlem kafes sistem" icon="lucide:git-fork" to="/tr/tutorials/truss"}
+Dokuz mafsallı çubuk: düğüm noktası yöntemi, kesim yöntemi, sıfır kuvvetli çubuk ve virtüel iş ilkesiyle sehim.
+:::
+::
