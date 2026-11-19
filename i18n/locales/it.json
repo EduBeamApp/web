@@ -98,7 +98,7 @@
       "description": "Analisi strutturale 2D gratuita nel browser. Disegna travi, telai e travature reticolari, aggiungi i carichi e ottieni subito i diagrammi di N, V, M, le reazioni e le frecce."
     },
     "hero": {
-      "title": "Travi, telai, travature reticolari.",
+      "title": "Analisi strutturale online.",
       "lede": "EduBeam è un’app gratuita di analisi strutturale per travi, telai e travature reticolari. Disegna un modello nel browser: diagrammi, reazioni e frecce si aggiornano a ogni modifica.",
       "launch": "Avvia EduBeam",
       "guide": "Leggi la guida",

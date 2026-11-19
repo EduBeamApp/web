@@ -98,7 +98,7 @@
       "description": "2D-Statik kostenlos im Browser: Balken, Rahmen und Fachwerke zeichnen, belasten und sofort Verläufe von N, V und M, Auflagerreaktionen und Durchbiegungen sehen."
     },
     "hero": {
-      "title": "Balken, Rahmen, Fachwerke.",
+      "title": "Baustatik online.",
       "lede": "EduBeam ist ein kostenloses Programm zur Berechnung von Balken, Rahmen und Fachwerken. Sie zeichnen das Modell im Browser, und Schnittgrößenverläufe, Auflagerreaktionen und Durchbiegungen werden bei jeder Änderung neu berechnet.",
       "launch": "EduBeam starten",
       "guide": "Anleitung lesen",

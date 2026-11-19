@@ -98,7 +98,7 @@
       "description": "Calcul des structures 2D gratuit dans le navigateur : dessinez poutres, portiques et treillis, chargez-les et obtenez aussitôt N, V, M, réactions et flèches."
     },
     "hero": {
-      "title": "Poutres, portiques, treillis.",
+      "title": "Calcul de structures en ligne.",
       "lede": "EduBeam est une application gratuite de calcul des structures pour poutres, portiques et treillis. Dessinez un modèle dans votre navigateur : ses diagrammes, ses réactions et ses flèches se mettent à jour à chaque modification.",
       "launch": "Lancer EduBeam",
       "guide": "Lire le guide",

@@ -98,7 +98,7 @@
       "description": "Free 2D structural analysis in your browser. Draw beams, frames and trusses, add loads and get N, V, M diagrams, reactions and deflections instantly."
     },
     "hero": {
-      "title": "Structural analysis as you draw.",
+      "title": "Structural analysis online.",
       "lede": "EduBeam is a free structural analysis app for beams, frames and trusses. Draw a model in your browser and its diagrams, reactions and deflections update with every edit.",
       "launch": "Launch EduBeam",
       "guide": "Read the guide",

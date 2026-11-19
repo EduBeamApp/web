@@ -98,7 +98,7 @@
       "description": "Análisis estructural 2D gratuito en el navegador: dibuja vigas, pórticos y celosías, aplica cargas y obtén al instante diagramas N, V, M, reacciones y flechas."
     },
     "hero": {
-      "title": "Vigas, pórticos, celosías.",
+      "title": "Análisis estructural online.",
       "lede": "EduBeam es una aplicación gratuita de análisis estructural para vigas, pórticos y celosías. Dibuja un modelo en el navegador: sus diagramas, reacciones y flechas se actualizan con cada cambio.",
       "launch": "Abrir EduBeam",
       "guide": "Leer la guía",

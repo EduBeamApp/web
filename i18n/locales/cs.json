@@ -98,7 +98,7 @@
       "description": "Statický výpočet 2D konstrukcí zdarma v prohlížeči. Nakreslete nosník, rám nebo příhradovou konstrukci, zadejte zatížení a hned uvidíte průběhy N, V, M, reakce a průhyby."
     },
     "hero": {
-      "title": "Nosníky, rámy, příhrady.",
+      "title": "Stavební mechanika online.",
       "lede": "EduBeam je bezplatná aplikace pro statický výpočet nosníků, rámů a příhradových konstrukcí. Model nakreslíte v prohlížeči a průběhy vnitřních sil, reakce i průhyby se přepočítají při každé úpravě.",
       "launch": "Spustit EduBeam",
       "guide": "Přečíst příručku",

@@ -98,7 +98,7 @@
       "description": "Análise estrutural 2D gratuita no navegador. Desenhe vigas, pórticos e treliças, aplique cargas e veja na hora os diagramas N, V, M, as reações e as flechas."
     },
     "hero": {
-      "title": "Vigas, pórticos, treliças.",
+      "title": "Análise estrutural online.",
       "lede": "O EduBeam é um aplicativo gratuito de análise estrutural para vigas, pórticos e treliças. Desenhe o modelo no navegador: os diagramas, as reações e as flechas se atualizam a cada alteração.",
       "launch": "Abrir o EduBeam",
       "guide": "Ler o guia",
