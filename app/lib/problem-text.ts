@@ -36,10 +36,9 @@ const keepTogether = (text: string) => text.replace(/ = /g, ' = ').replace(/(\
 /** Languages that write sentences one after another with no space: 「…4 m。梁の…」 */
 const NO_SPACE_BETWEEN_SENTENCES = new Set(['ja', 'zh'])
 
+/** What goes between two sentences of a paragraph in this language */
+export const sentenceGap = (locale: string): string => (NO_SPACE_BETWEEN_SENTENCES.has(locale.split('-')[0]) ? '' : ' ')
+
 /** The structure and its loads, its sentences in one paragraph */
 export const renderStatement = (problem: Problem, language: TextLanguage): string =>
-  keepTogether(
-    problem.statement
-      .map((s) => renderText(s, language))
-      .join(NO_SPACE_BETWEEN_SENTENCES.has(language.locale.split('-')[0]) ? '' : ' ')
-  )
+  keepTogether(problem.statement.map((s) => renderText(s, language)).join(sentenceGap(language.locale)))

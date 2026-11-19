@@ -388,7 +388,7 @@ const download = () => {
                     {{ words.family(p.solved.problem.family) }}
                     <span v-if="settings.codes" class="problem-code">{{ p.solved.problem.code }}</span>
                   </h3>
-                  <p>{{ words.statement(p.solved.problem) }} <strong>{{ words.text(p.solved.problem.task) }}</strong></p>
+                  <p>{{ words.statement(p.solved.problem) + words.gap() }}<strong>{{ words.text(p.solved.problem.task) }}</strong></p>
                   <!-- eslint-disable-next-line vue/no-v-html -- our own SVG, made by structureSvg from numbers -->
                   <div class="problem-figure" v-html="p.sheet" />
                   <div v-if="settings.working" class="problem-working" aria-hidden="true" />

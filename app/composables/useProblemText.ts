@@ -1,5 +1,5 @@
 import { familyText, type FamilyId, type Problem, type Text } from '~/lib/problems'
-import { renderStatement, renderText, type TextLanguage } from '~/lib/problem-text'
+import { renderStatement, renderText, sentenceGap, type TextLanguage } from '~/lib/problem-text'
 
 /**
  * The generated problems' words (`problems.*`) in the page's language, or in English where that
@@ -18,5 +18,8 @@ export const useProblemText = () => {
   const statement = (problem: Problem): string => renderStatement(problem, language.value)
   const family = (id: FamilyId, field: 'name' | 'skill' | 'hint' = 'name'): string => text(familyText(id, field))
 
-  return { locale, text, statement, family }
+  /** The space between the statement and the task, or none in Japanese and Chinese */
+  const gap = (): string => sentenceGap(locale.value)
+
+  return { locale, text, statement, family, gap }
 }

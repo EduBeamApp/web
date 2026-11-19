@@ -40,7 +40,7 @@ const { numberFormat } = useLiveModel()
           <h4 class="font-display text-lg font-semibold text-ink">{{ words.family(solved.problem.family) }}</h4>
           <NuxtLink :to="`${sitePath('/practice')}?p=${solved.problem.code}`" class="font-mono text-xs text-muted hover:text-ink" :title="t('exerciseGenerator.solveIt')">{{ solved.problem.code }}</NuxtLink>
         </header>
-        <p class="mt-1 text-sm leading-relaxed text-ink-soft">{{ words.statement(solved.problem) }} {{ words.text(solved.problem.task) }}</p>
+        <p class="mt-1 text-sm leading-relaxed text-ink-soft">{{ words.statement(solved.problem) + words.gap() + words.text(solved.problem.task) }}</p>
         <div class="mt-auto pt-3">
           <ClientOnly>
             <StructurePlot :solver="solved.solver" :layers="sheet" :reserve="reserve" reaction-labels="names" :reserve-reaction-labels="['names', 'values']" :max-height="320" :number-format="numberFormat" :title="t('exerciseGenerator.exercise')" class="w-full" />
