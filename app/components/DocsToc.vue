@@ -31,7 +31,7 @@ onMounted(() => {
 
 <template>
   <nav v-if="flat.length" class="text-sm">
-    <h3 class="mb-3 font-display text-[0.95rem] font-semibold text-ink">{{ t('docs.onThisPage') }}</h3>
+    <p class="mb-3 font-display text-[0.95rem] font-semibold text-ink">{{ t('docs.onThisPage') }}</p>
     <ul class="space-y-1.5 border-l border-rule">
       <li v-for="l in flat" :key="l.id">
         <a

@@ -18,10 +18,10 @@ watch(() => route.fullPath, () => (menu.value = false))
     <div v-if="menu" class="fixed inset-0 top-16 z-30 overflow-y-auto bg-paper px-6 py-6" :class="squeeze > 3 ? '' : 'lg:hidden'">
       <DocsSidebar all @navigate="menu = false" />
       <section class="mt-7 text-[0.9rem]">
-        <h3 class="mb-2 flex items-center gap-2 font-display text-[0.95rem] font-semibold text-ink">
+        <p class="mb-2 flex items-center gap-2 font-display text-[0.95rem] font-semibold text-ink">
           <Icon name="lucide:package" class="size-4 shrink-0 text-brand" />
           {{ t('nav.libraries') }}
-        </h3>
+        </p>
         <ul class="ml-2 border-l border-rule">
           <li v-for="lib in LIBRARIES" :key="lib.path">
             <NuxtLink :to="sitePath(lib.path)" class="-ml-px block border-l-2 border-transparent py-1.5 pl-4 font-mono text-[0.82rem] text-muted">

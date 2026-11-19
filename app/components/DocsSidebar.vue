@@ -14,10 +14,10 @@ defineEmits<{ navigate: [] }>()
 <template>
   <nav class="space-y-7 text-[0.9rem]" :aria-label="t('ui.guideNav')">
     <section v-for="group in shown" :key="group.text">
-      <h3 class="mb-2 flex items-center gap-2 font-display text-[0.95rem] font-semibold text-ink">
+      <p class="mb-2 flex items-center gap-2 font-display text-[0.95rem] font-semibold text-ink">
         <Icon v-if="group.icon" :name="group.icon" class="size-4 shrink-0 text-brand" />
         {{ group.text }}
-      </h3>
+      </p>
       <ul class="ml-2 border-l border-rule">
         <li v-for="item in group.items" :key="item.link">
           <NuxtLink

@@ -40,7 +40,7 @@ const years = `2023–${new Date().getFullYear()}`
 
       <div class="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4">
         <div>
-          <h3 class="mb-3 font-display text-[0.95rem] font-semibold text-ink">{{ t('nav.libraries') }}</h3>
+          <p class="mb-3 font-display text-[0.95rem] font-semibold text-ink">{{ t('nav.libraries') }}</p>
           <ul class="space-y-2">
             <li v-for="lib in LIBRARIES" :key="lib.path">
               <NuxtLink :to="sitePath(lib.path)" class="font-mono text-[0.85rem] text-muted transition hover:text-ink">{{ lib.name }}</NuxtLink>
@@ -48,7 +48,7 @@ const years = `2023–${new Date().getFullYear()}`
           </ul>
         </div>
         <div v-for="column in columns" :key="column.title">
-          <h3 class="mb-3 font-display text-[0.95rem] font-semibold text-ink">{{ column.title }}</h3>
+          <p class="mb-3 font-display text-[0.95rem] font-semibold text-ink">{{ column.title }}</p>
           <ul class="space-y-2">
             <li v-for="item in column.items" :key="item.link">
               <NuxtLink :to="item.link" class="text-[0.9rem] text-muted transition hover:text-ink">{{ item.text }}</NuxtLink>
