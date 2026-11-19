@@ -23,7 +23,7 @@ const listFormat = (locale: string) => new Intl.ListFormat(locale === 'en' ? 'en
  * but puts a space between Han and Latin ("F 和 H"); Hindi writes no comma before और ("H, J और L"); Thai
  * glues และ to both items ("AและB").
  */
-const writtenList = (text: string, locale: string) => {
+export const writtenList = (text: string, locale: string) => {
   if (locale.startsWith('zh')) return text.replace(/([A-Za-z0-9])(和)/g, '$1 $2').replace(/(和)([A-Za-z0-9])/g, '$1 $2')
   if (locale.startsWith('hi')) return text.replace(', और ', ' और ')
   // Thai puts a space before และ, and after it only before a Latin label ("A และ B", "จาก A และโมเมนต์")
