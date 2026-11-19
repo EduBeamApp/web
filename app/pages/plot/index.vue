@@ -11,6 +11,8 @@ import type { Result } from '~/components/live/ResultSwitch.vue'
  * language they are not translated into, its URL redirects to the English page.
  */
 const { t } = useI18n()
+// Values on the figure as the page's language writes them (12,5 in Czech)
+const { numberFormat } = useLiveModel()
 const { sitePath } = useSitePages()
 const redirecting = useEnglishFallback()
 useProductSeo(PLOT)
@@ -68,7 +70,7 @@ const FEATURES = ['style', 'readable', 'exact', 'fits'] as const
         <div class="lg:col-span-7">
           <div class="rounded-xl border border-rule bg-paper p-4">
             <ClientOnly>
-              <StructurePlot v-if="solver" :solver="solver" :layers="layers" :reserve="['members', 'supports', 'loads', 'reactions', 'N', 'V', 'M', 'w']" :result-label-mode="mode" :reserve-label-modes="['horizontal', 'axis']" :height="380" />
+              <StructurePlot v-if="solver" :solver="solver" :number-format="numberFormat" :layers="layers" :reserve="['members', 'supports', 'loads', 'reactions', 'N', 'V', 'M', 'w']" :result-label-mode="mode" :reserve-label-modes="['horizontal', 'axis']" :height="380" />
             </ClientOnly>
           </div>
           <div class="mt-4 flex flex-wrap items-center gap-3">

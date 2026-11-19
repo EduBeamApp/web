@@ -9,6 +9,8 @@ import { PLOT, SOLVER } from '~/data/products'
  * files; in a language they are not translated into, its URL redirects to the English page.
  */
 const { t, locale } = useI18n()
+// Values on the figure as the page's language writes them (12,5 in Czech)
+const { numberFormat } = useLiveModel()
 const { sitePath } = useSitePages()
 const redirecting = useEnglishFallback()
 useProductSeo(SOLVER)
@@ -77,7 +79,7 @@ const FEATURES = ['analyses', 'elements', 'loads', 'results'] as const
         <div class="flex flex-col gap-6 lg:col-span-5">
           <div class="rounded-xl border border-rule bg-paper p-4">
             <ClientOnly>
-              <StructurePlot v-if="solver" :solver="solver" :layers="['members', 'supports', 'loads', 'reactions', 'M']" :height="170" />
+              <StructurePlot v-if="solver" :solver="solver" :number-format="numberFormat" :layers="['members', 'supports', 'loads', 'reactions', 'M']" :height="170" />
             </ClientOnly>
           </div>
           <dl class="sheet">

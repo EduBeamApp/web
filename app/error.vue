@@ -15,6 +15,8 @@ const localePath = useLocalePath()
 const notFound = computed(() => props.error.statusCode === 404)
 const title = computed(() => t(notFound.value ? 'error.notFoundTitle' : 'error.otherTitle'))
 useSeoMeta({ title: () => `${title.value} | EduBeam`, robots: 'noindex' })
+// The pages set the document language through useSiteHead; this frame has to say it itself
+useHead({ htmlAttrs: { lang: () => (navigation[locale.value as keyof typeof navigation] ?? navigation.en).lang } })
 
 /** The pages most people come for, named as this language's sidebar names them */
 const POPULAR = ['/guide/quick-start', '/examples/', '/elements/conventions', '/reference/troubleshooting']
