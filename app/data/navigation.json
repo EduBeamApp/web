@@ -2374,6 +2374,8 @@
     "sidebar": [
       {
         "text": "入門",
+        "icon": "lucide:flag",
+        "section": "guide",
         "items": [
           {
             "text": "はじめに",
@@ -2382,28 +2384,13 @@
           {
             "text": "クイックスタート（10 分）",
             "link": "/ja/guide/quick-start"
-          },
-          {
-            "text": "例題",
-            "link": "/ja/examples/"
-          }
-        ]
-      },
-      {
-        "text": "チュートリアル",
-        "items": [
-          {
-            "text": "3 ヒンジラーメン",
-            "link": "/ja/tutorials/three-hinged-frame"
-          },
-          {
-            "text": "平面トラス",
-            "link": "/ja/tutorials/truss"
           }
         ]
       },
       {
         "text": "モデル化",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
         "items": [
           {
             "text": "ユーザーインターフェース",
@@ -2428,7 +2415,9 @@
         ]
       },
       {
-        "text": "結果",
+        "text": "結果の読み取り",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
         "items": [
           {
             "text": "結果と断面力図",
@@ -2441,10 +2430,12 @@
         ]
       },
       {
-        "text": "ファイルと共有",
+        "text": "共有と授業",
+        "icon": "lucide:presentation",
+        "section": "guide",
         "items": [
           {
-            "text": "インポート・エクスポート・共有",
+            "text": "ファイル・リンク・エクスポート",
             "link": "/ja/essentials/import-export"
           },
           {
@@ -2454,7 +2445,9 @@
         ]
       },
       {
-        "text": "リファレンス",
+        "text": "ヘルプ",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
         "items": [
           {
             "text": "キーボード・マウス・タッチ",
@@ -2471,7 +2464,51 @@
         ]
       },
       {
+        "text": "チュートリアル",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
+        "items": [
+          {
+            "text": "傾斜梁",
+            "link": "/ja/tutorials/inclined-beam"
+          },
+          {
+            "text": "3 ヒンジラーメン",
+            "link": "/ja/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "平面トラス",
+            "link": "/ja/tutorials/truss"
+          },
+          {
+            "text": "連続梁と支点沈下",
+            "link": "/ja/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "演習",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "練習問題",
+            "link": "/ja/practice"
+          },
+          {
+            "text": "試験問題作成ツール",
+            "link": "/ja/exam"
+          },
+          {
+            "text": "例題",
+            "link": "/ja/examples/"
+          }
+        ]
+      },
+      {
         "text": "理論マニュアル",
+        "icon": "lucide:sigma",
+        "section": "theory",
         "items": [
           {
             "text": "座標系と符号規約",
@@ -2484,9 +2521,12 @@
           {
             "text": "トラス要素",
             "link": "/ja/elements/truss"
+          },
+          {
+            "text": "EduBeam がモデルを解く仕組み",
+            "link": "/ja/elements/analysis"
           }
-        ],
-        "collapsed": true
+        ]
       }
     ]
   },
