@@ -79,11 +79,14 @@
   --grid-line: oklch(0.97 0.006 270 / 5%);
   --grid-line-strong: oklch(0.97 0.006 270 / 9%);
   /* Figures are drawn by @edubeam/plot in the page's own colours, so their canvas goes dark too */
-  --canvas: oklch(0.185 0.04 274);
+  /* The app's own dark canvas, so a figure here and the app look alike */
+  --canvas: #090b14;
   --canvas-grid: oklch(0.97 0.006 270 / 5%);
   --figure-ink: oklch(0.78 0.025 270);
   /* The app's normal-force blue is too dark to read on the night page; a lighter shade of it */
   --color-normal: #7d7dff;
+  /* The reactions' purple, too dark on the night page; lifted as the app lifts it */
+  --color-reaction: #bd6bff;
   --glow-a: color-mix(in oklab, var(--brand), transparent 84%);
   --glow-b: color-mix(in oklab, #a020f0, transparent 90%);
   --sheen: oklch(1 0 0 / 3.5%);
@@ -243,6 +246,8 @@ input[type='range'] {
     0 16px 32px -16px oklch(0.25 0.06 272 / 0.25);
 }
 .dark .app-shot {
+  /* The app's dark page, under the dark shot while it loads */
+  background: #0b0e19;
   border-color: rgb(255 255 255 / 0.14);
   box-shadow: 0 40px 80px -30px rgb(0 0 0 / 0.7);
 }

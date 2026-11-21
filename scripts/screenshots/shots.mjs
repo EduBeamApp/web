@@ -432,6 +432,16 @@ export const shots = [
     viewer: { settingsOpen: false },
     setup: fit,
   },
+  {
+    // The same in the app's dark theme, which the home page shows when it is dark itself
+    name: 'home-hero-dark',
+    model: 'three-hinged-frame',
+    width: 1040,
+    height: 650,
+    app: { theme: 'dark' },
+    viewer: { settingsOpen: false },
+    setup: fit,
+  },
 
   // ---------------------------------------------------------------- getting started
   {
