@@ -112,7 +112,10 @@ const fitLoose = async (page) => {
   await wait(page, 500);
 };
 
-/** Numbered markers drawn over the app, for images whose text refers to their parts by number. */
+/**
+ * Numbered markers drawn over the app, for images whose text refers to their parts by number: in the
+ * website's violet, as orange is what the app draws its loads in, lighter over the dark theme.
+ */
 const callouts = async (page, items) => {
   for (const { selector, n, at = 'left', box: given } of items) {
     const box = given ?? (await page.locator(selector).first().boundingBox());
@@ -120,6 +123,7 @@ const callouts = async (page, items) => {
     await page.evaluate(
       ({ box, n, at }) => {
         const size = 26;
+        const mark = document.documentElement.style.colorScheme === 'dark' ? '#6f73f2' : '#4f46e5';
         const outline = document.createElement('div');
         Object.assign(outline.style, {
           position: 'fixed',
@@ -127,7 +131,7 @@ const callouts = async (page, items) => {
           top: `${box.y - 3}px`,
           width: `${box.width + 6}px`,
           height: `${box.height + 6}px`,
-          border: '2px solid #ff4f00',
+          border: `2px solid ${mark}`,
           borderRadius: '6px',
           zIndex: 100000,
           pointerEvents: 'none',
@@ -149,7 +153,7 @@ const callouts = async (page, items) => {
           width: `${size}px`,
           height: `${size}px`,
           borderRadius: '50%',
-          background: '#ff4f00',
+          background: mark,
           color: 'white',
           font: '700 15px/26px system-ui, sans-serif',
           textAlign: 'center',
