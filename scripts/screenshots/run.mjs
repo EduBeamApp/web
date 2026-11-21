@@ -10,6 +10,8 @@
 //   npm run screenshots -- --lang all     # every language of the guide
 //   npm run screenshots -- --missing      # only shots that do not exist yet, e.g. after a crash
 //   npm run screenshots -- --out /tmp/s   # into another folder instead, e.g. to compare before replacing
+//   npm run screenshots -- --dark         # the app's dark theme, for the site's dark mode, in screenshots/dark/
+//   SHOT_DEBUG=/tmp/d npm run screenshots # the page as it was when a shot failed, into /tmp/d
 //
 // English shots go to screenshots/, every other language to screenshots/<docs language>/ (the same
 // layout under the --out folder), with the app in that language. Buttons are found by their labels
@@ -18,7 +20,7 @@
 // model files in ./models. Shots are written as WebP, encoded by Chromium itself, so no image
 // tooling is needed besides Playwright.
 import { chromium } from 'playwright';
-import { access, mkdir, readFile, writeFile } from 'node:fs/promises';
+import { access, mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { setMessages, shots } from './shots.mjs';
@@ -57,10 +59,15 @@ if (langArg !== 'all' && !(langArg in APP_LANGUAGE)) {
 const outAt = args.indexOf('--out');
 const outArg = outAt >= 0 ? args.splice(outAt, 2)[1] : undefined;
 if (outAt >= 0 && !outArg) throw new Error('--out takes a folder');
-const SCREENSHOTS = outArg ? resolve(outArg) : resolve(here, '../../public/screenshots');
+const SCREENSHOTS_ROOT = outArg ? resolve(outArg) : resolve(here, '../../public/screenshots');
+// The app in its dark theme, under dark/: a page shows the shot of its own colour mode (ProseImg)
+const darkAt = args.indexOf('--dark');
+const dark = darkAt >= 0;
+if (dark) args.splice(darkAt, 1);
 const missingAt = args.indexOf('--missing');
 const onlyMissing = missingAt >= 0;
 if (onlyMissing) args.splice(missingAt, 1);
+const SCREENSHOTS = dark ? resolve(SCREENSHOTS_ROOT, 'dark') : SCREENSHOTS_ROOT;
 const languages = langArg === 'all' ? Object.keys(APP_LANGUAGE) : [langArg];
 const filter = args[0] ?? '';
 const browser = await chromium.launch();
@@ -119,22 +126,26 @@ async function openApp({
     viewport: { width, height },
     deviceScaleFactor: scale,
     locale: lang === 'cn' ? 'zh-CN' : lang,
+    // A first visit follows the system's colour scheme; the others are seeded with the theme below
+    colorScheme: dark ? 'dark' : 'light',
   });
   context.setDefaultTimeout(5000);
   context.setDefaultNavigationTimeout(60000);
   const page = await context.newPage();
   await page.addInitScript(
-    ([lang, app, viewer, version, firstVisit]) => {
+    ([lang, app, viewer, version, firstVisit, theme]) => {
       // Seed storage only on the first load, so reloads inside a shot behave like a returning user.
       if (sessionStorage.getItem('docs-seeded')) return;
       sessionStorage.setItem('docs-seeded', '1');
       localStorage.clear();
+      // The drawing someone new gets, the plot renderer with hatched diagrams, in every shot: a shot
+      // seeded with drawing settings of its own was taken for a returning user, who keeps the classic one
+      localStorage.setItem('viewer', JSON.stringify({ renderer: 'plot', diagramStyle: { fill: 'hatch' }, ...viewer }));
       if (firstVisit) return;
-      const settings = { onboardingFinished: true, lastSeenChangelogVersion: version, locale: lang, ...app };
+      const settings = { onboardingFinished: true, lastSeenChangelogVersion: version, locale: lang, ...app, theme };
       localStorage.setItem('app', JSON.stringify(settings));
-      if (Object.keys(viewer).length > 0) localStorage.setItem('viewer', JSON.stringify(viewer));
     },
-    [lang, app, viewer, version, firstVisit]
+    [lang, app, viewer, version, firstVisit, dark ? 'dark' : 'light']
   );
   await page.goto(new URL(url, APP).href);
   await page.waitForSelector('#viewerControls', { timeout: 60000 });
@@ -213,6 +224,7 @@ for (const docsLanguage of languages) {
     } catch (e) {
       failed++;
       console.error(`✗ ${docsLanguage}/${shot.name}: ${e.message.split('\n')[0]}`);
+      if (process.env.SHOT_DEBUG) await page.screenshot({ path: `${process.env.SHOT_DEBUG}/${shot.name}.png` }).catch(() => {});
     } finally {
       await context.close();
     }
@@ -220,4 +232,14 @@ for (const docsLanguage of languages) {
 }
 
 await browser.close();
+
+// The dark shots there are, for the pages to show where they exist (ProseImg): not every picture of
+// the guide is taken here, and a page would otherwise ask for a dark one that is not
+if (!outArg) {
+  const darkRoot = resolve(SCREENSHOTS_ROOT, 'dark');
+  const found = await readdir(darkRoot, { recursive: true }).catch(() => []);
+  const list = found.filter((f) => f.endsWith('.webp')).map((f) => f.split('\\').join('/')).sort();
+  await writeFile(resolve(here, '../../app/data/dark-screenshots.json'), `${JSON.stringify(list, null, 0)}\n`);
+}
+
 process.exitCode = failed > 0 ? 1 : 0;

@@ -12,8 +12,8 @@ const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const { appUrl } = useDocsNav()
 const { sitePath } = useSitePages()
-/** The app in this page's language, light and dark, shot by `npm run screenshots home-hero` */
-const heroShot = (name: string) => (locale.value === 'en' ? `/screenshots/${name}.webp` : `/screenshots/${locale.value}/${name}.webp`)
+/** The app in this page's language, shot by `npm run screenshots home-hero`, the dark one with `--dark` */
+const heroShot = (dark: boolean) => `/screenshots/${dark ? 'dark/' : ''}${locale.value === 'en' ? '' : `${locale.value}/`}home-hero.webp`
 
 const path = computed(() => normalizePath(route.path))
 const { data: page } = await useAsyncData(`home:${path.value}`, () => queryCollection('docs').path(path.value).first(), {
@@ -102,7 +102,7 @@ const teachingIcons = {
           <div class="app-shot aspect-[3/2] overflow-hidden lg:aspect-auto">
             <!-- The app as light or dark as the page: the colour mode is a class, so both are in the page -->
             <img
-              :src="heroShot('home-hero')"
+              :src="heroShot(false)"
               :alt="t('meta.imageAlt')"
               width="2080"
               height="1300"
@@ -110,7 +110,7 @@ const teachingIcons = {
               class="block h-auto w-[165%] max-w-none -translate-x-[24%] dark:hidden lg:w-full lg:translate-x-0"
             />
             <img
-              :src="heroShot('home-hero-dark')"
+              :src="heroShot(true)"
               :alt="t('meta.imageAlt')"
               width="2080"
               height="1300"

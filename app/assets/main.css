@@ -920,13 +920,6 @@ input[type='range'] {
   margin: 0;
 }
 
-/* The app's support icons are drawn black on white: turned for the night page */
-.dark .doc img[src*='/screenshots/b-support-'] {
-  filter: invert(1) hue-rotate(180deg);
-  /* The inverted white tile turns black: screened onto the page it disappears, leaving the symbol */
-  mix-blend-mode: screen;
-}
-
 /* A fenced block in a page (ProsePre): the panel draws the frame, the pre only scrolls. Nuxt
    Content's lines carry no newlines, so each is a block. */
 .doc .code-panel pre.md-code {

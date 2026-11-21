@@ -35,7 +35,11 @@ const menuItem = async (page, label) => {
 };
 
 const bottomTab = async (page, label) => {
-  await page.locator('#bottomBar .v-tab').filter({ hasText: label }).first().click();
+  const tab = page.locator('#bottomBar .v-tab').filter({ hasText: label }).first();
+  // The open tab of an open bar is left alone: pressed again, it puts the bar away
+  const open = (await page.locator('#bottomBar .v-window').boundingBox())?.height > 0;
+  if (open && (await tab.getAttribute('class'))?.includes('v-tab--selected')) return;
+  await tab.click();
   await wait(page, 300);
 };
 
@@ -45,7 +49,7 @@ const toolbarButton = async (page, label, n = 0) => {
   await wait(page, 700);
 };
 
-/** Read from the DOM, because a node is a zero-height polyline that Playwright counts as hidden. */
+/** Read from the DOM, because a node is a zero-height line that Playwright counts as hidden. */
 const rectOf = (page, selector) =>
   page.evaluate((selector) => {
     const el = document.querySelector(selector);
@@ -59,8 +63,9 @@ const centerOf = async (page, selector) => {
   return { x: box.x + box.width / 2, y: box.y + box.height / 2 };
 };
 
-const nodeSel = (label) => `polyline[data-label="${label}"]`;
-const elementSel = (label) => `[data-element-id="${label}"]`;
+// The plot renderer's hit targets: a node's, and a member's line (its label carries the id too)
+const nodeSel = (label) => `.plot-hits .hit.node[data-node-id="${label}"]`;
+const elementSel = (label) => `.plot-hits .element-handles [data-element-id="${label}"]`;
 
 const clickNode = async (page, label) => {
   const { x, y } = await centerOf(page, nodeSel(label));
@@ -182,7 +187,10 @@ const viewerArea = async (page) => {
 const contentArea = async (page) => {
   const area = await viewerArea(page);
   const box = await page.evaluate(() => {
-    const r = document.querySelector('.elements-layer').parentElement.getBoundingClientRect();
+    // The plot renderer's picture, or the classic drawing's layers
+    const drawn = document.querySelector('.plot-picture') ?? document.querySelector('.elements-layer')?.parentElement;
+    if (!drawn) throw new Error('No drawing to crop to');
+    const r = drawn.getBoundingClientRect();
     return { x: r.x, y: r.y, width: r.width, height: r.height };
   });
   const margin = 32;
@@ -196,8 +204,10 @@ const contentArea = async (page) => {
 /** The page under the Viewer / Settings tabs, down to the bottom bar. */
 const settingsArea = async (page) => {
   const tabs = await page.locator('.v-tabs').first().boundingBox();
-  const bottom = await page.locator('#bottomBar').boundingBox();
-  return { x: 0, y: tabs.y + tabs.height, width: page.viewportSize().width, height: bottom.y - tabs.y - tabs.height };
+  // Down to the bottom bar, or to the window's foot where the Settings tab hides the bar
+  const bar = await page.locator('#bottomBar').boundingBox();
+  const bottom = bar && bar.height > 0 ? bar.y : page.viewportSize().height;
+  return { x: 0, y: tabs.y + tabs.height, width: page.viewportSize().width, height: bottom - tabs.y - tabs.height };
 };
 
 const fitAndCrop = (name, model, flags, size = {}) => ({
@@ -290,6 +300,7 @@ const quickStart = async (page, step) => {
   await bottomTab(page, t('tabs.nodes'));
   for (const x of [0, 6]) {
     await page
+      .locator('#bottomBar')
       .getByRole('button', { name: t('nodes.addNode') })
       .first()
       .click();
@@ -300,6 +311,7 @@ const quickStart = async (page, step) => {
   }
   await bottomTab(page, t('tabs.elements'));
   await page
+    .locator('#bottomBar')
     .getByRole('button', { name: t('elements.addElement') })
     .first()
     .click();
@@ -320,6 +332,7 @@ const quickStart = async (page, step) => {
   await chooseSupport(t('supports.roller'));
   await bottomTab(page, t('tabs.loads'));
   await page
+    .locator('#bottomBar')
     .getByRole('button', { name: t('loads.addElementLoad') })
     .first()
     .click();
@@ -340,6 +353,7 @@ const quickStart = async (page, step) => {
   // A node in the middle of the beam, placed by mouse on the element, which splits it in two
   await bottomTab(page, t('tabs.nodes'));
   await page
+    .locator('#bottomBar')
     .getByRole('button', { name: t('nodes.addNode') })
     .nth(1)
     .click();
@@ -429,16 +443,6 @@ export const shots = [
     model: 'three-hinged-frame',
     width: 1040,
     height: 650,
-    viewer: { settingsOpen: false },
-    setup: fit,
-  },
-  {
-    // The same in the app's dark theme, which the home page shows when it is dark itself
-    name: 'home-hero-dark',
-    model: 'three-hinged-frame',
-    width: 1040,
-    height: 650,
-    app: { theme: 'dark' },
     viewer: { settingsOpen: false },
     setup: fit,
   },
