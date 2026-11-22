@@ -113,7 +113,7 @@ The exam builder keeps its settings, including the **Exam number** that picks th
 The diagrams on this site are drawn by [@edubeam/plot](/plot), a library of Vue components that draws any plane beam, frame or truss solved by [@edubeam/fem](/solver), the solver behind EduBeam. If you can write a little JavaScript, it turns a few lines of code into course material:
 
 - **Your own kinds of problem.** When the exam builder's structures are not the ones you teach, write your own: a seed picks the structure and its numbers, so the same seed always gives the same exercise, and the answer key is drawn from the same seed.
-- **Slides that build up.** Show the structure, then the supports and loads, then the reactions, then the moment diagram, step by step, without the drawing moving between steps.
+- **Slides that build up.** Show the structure, then the supports and loads, then the reactions, then the moment diagram, step by step, without the drawing moving between steps. [An example lecture on trusses](https://edubeam-slides.pages.dev) is made this way.
 - **Figures for notes and course pages.** Sharp SVG that follows the page's light or dark theme and, unlike an embedded app, never touches the student's own model.
 
 Try it. Each press of **New exercise** draws a new problem and its answer key:

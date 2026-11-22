@@ -11,6 +11,12 @@ Show a structure the way you explain it: first the geometry, then the supports a
 
 ![A Slidev slide at clicks 0, 2 and 4: the nodes of a portal frame with its dimensions, then the frame on its supports with its loads, then the reactions and the bending moment](/screenshots/p2p-plot-slidev-steps.webp){.shot-md}
 
+## A whole lecture {#a-whole-lecture}
+
+[An example lecture on plane trusses](https://edubeam-slides.pages.dev) puts it all in one deck: 23 slides as a course would give them, with a worked example solved joint by joint, each joint drawn cut free beside its equations, figures that build up click by click, and an exercise whose answer appears on a click. Open it in the browser, or start your own deck from [its source](https://github.com/EduBeamApp/slides): the logo, names and colours of its made-up university are in three files.
+
+![Four slides of the example lecture: the title slide of Plane trusses with a Warren truss and its bar forces, joint A cut free beside its two equations, every bar force of the truss with a table of them, and Pratt, Howe and Warren bridge trusses side by side](/screenshots/plot-example-lecture.webp){.shot-lg}
+
 ## A figure that builds up
 
 Two files. `frame.ts` builds and solves the structure:
