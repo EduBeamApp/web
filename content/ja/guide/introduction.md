@@ -68,7 +68,7 @@ SI 単位と米国慣用単位をワンクリックで切り替え、物理量�
 手計算の結果をすぐに確かめられます。練習問題では、解きながら答え合わせができます。
 :::
 :::card{title="教員" icon="lucide:presentation" to="/ja/guide/teaching"}
-支点、ヒンジ、荷重によって断面力がどう変わるかを、教室のプロジェクターでその場で示せます（18 言語に対応）。学生ごとに異なる試験問題も印刷できます。
+支点、ヒンジ、荷重によって断面力がどう変わるかを、教室のプロジェクターでその場で示せます（22 言語に対応）。学生ごとに異なる試験問題も印刷できます。
 :::
 :::card{title="技術者" icon="lucide:hard-hat" to="/ja/elements/analysis"}
 本格的なデスクトップソフトを開く前の、手早い検算に。解析の手順はすべてドキュメントで説明しています。
@@ -124,7 +124,7 @@ EduBeam を支える TypeScript 製の有限要素法ソルバー。ブラウザ
 
 ## 言語 {#languages}
 
-EduBeam は 18 言語に対応し、ブラウザの言語設定に合わせた言語で起動します。**設定 → 言語と地域**で切り替えるか、ここから選んでください。
+EduBeam は 22 言語に対応し、ブラウザの言語設定に合わせた言語で起動します。**設定 → 言語と地域**で切り替えるか、ここから選んでください。
 
 ::div{.chips}
 - [:icon{name="circle-flags:lang-en"} English](https://run.edubeam.app/?lang=en){target="_blank"}
@@ -134,9 +134,13 @@ EduBeam は 18 言語に対応し、ブラウザの言語設定に合わせた�
 - [:icon{name="circle-flags:lang-es"} Español](https://run.edubeam.app/?lang=es){target="_blank"}
 - [:icon{name="circle-flags:lang-fr"} Français](https://run.edubeam.app/?lang=fr){target="_blank"}
 - [:icon{name="circle-flags:lang-it"} Italiano](https://run.edubeam.app/?lang=it){target="_blank"}
+- [:icon{name="circle-flags:lang-hu"} Magyar](https://run.edubeam.app/?lang=hu){target="_blank"}
 - [:icon{name="circle-flags:lang-pl"} Polski](https://run.edubeam.app/?lang=pl){target="_blank"}
 - [:icon{name="circle-flags:lang-pt-br"} Português](https://run.edubeam.app/?lang=pt){target="_blank"}
+- [:icon{name="circle-flags:lang-ro"} Română](https://run.edubeam.app/?lang=ro){target="_blank"}
+- [:icon{name="circle-flags:lang-sk"} Slovenčina](https://run.edubeam.app/?lang=sk){target="_blank"}
 - [:icon{name="circle-flags:lang-vi"} Tiếng Việt](https://run.edubeam.app/?lang=vi){target="_blank"}
+- [:icon{name="circle-flags:lang-el"} Ελληνικά](https://run.edubeam.app/?lang=el){target="_blank"}
 - [:icon{name="circle-flags:lang-ru"} Русский](https://run.edubeam.app/?lang=ru){target="_blank"}
 - [:icon{name="circle-flags:lang-tr"} Türkçe](https://run.edubeam.app/?lang=tr){target="_blank"}
 - [:icon{name="circle-flags:lang-uk"} Українська](https://run.edubeam.app/?lang=uk){target="_blank"}

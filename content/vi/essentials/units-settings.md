@@ -19,7 +19,7 @@ Cài đặt được lưu trong trình duyệt và vẫn còn sau khi tải lạ
 
 ![Cài đặt → Ngôn ngữ và khu vực](/screenshots/vi/settings-language.webp)
 
-**Ngôn ngữ.** Có 18 ngôn ngữ; lần đầu mở, EduBeam dùng ngôn ngữ của trình duyệt. Dấu thập phân đi theo ngôn ngữ. Một liên kết có thể chọn sẵn ngôn ngữ cho người đọc: thêm `?lang=` với một trong các mã `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (tiếng Trung), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`.
+**Ngôn ngữ.** Có 22 ngôn ngữ; lần đầu mở, EduBeam dùng ngôn ngữ của trình duyệt. Dấu thập phân đi theo ngôn ngữ. Một liên kết có thể chọn sẵn ngôn ngữ cho người đọc: thêm `?lang=` với một trong các mã `en`, `cs`, `sk`, `de`, `fr`, `es`, `pt`, `pl`, `hu`, `ro`, `el`, `cn` (tiếng Trung), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`.
 
 **Định dạng số.** Cách ghi giá trị kết quả trong bảng và chú thích: *Khoa học* (1,5 · 10⁴, mặc định), *Kỹ thuật* (15 · 10³) hoặc *Tự động*. Xem [Định dạng số](/vi/essentials/results#number-format).
 

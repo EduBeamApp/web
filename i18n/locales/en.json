@@ -178,7 +178,7 @@
         },
         "languages": {
           "title": "Their language, their units",
-          "body": "Students work in one of 18 languages, in SI or US units, with the axes their textbook uses."
+          "body": "Students work in one of 22 languages, in SI or US units, with the axes their textbook uses."
         }
       },
       "answerTitle": "Answer: the member forces",
@@ -258,7 +258,7 @@
           "body": "A whole model in one link or a project file; drawings as PNG or SVG, tables as CSV."
         },
         "settings": {
-          "title": "18 languages",
+          "title": "22 languages",
           "body": "SI or US units, z-down or textbook y-up axes."
         }
       }

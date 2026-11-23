@@ -178,7 +178,7 @@
         },
         "languages": {
           "title": "W ich języku i jednostkach",
-          "body": "Studenci pracują w jednym z 18 języków, w jednostkach SI lub amerykańskich, z takimi osiami, jak w ich podręczniku."
+          "body": "Studenci pracują w jednym z 22 języków, w jednostkach SI lub amerykańskich, z takimi osiami, jak w ich podręczniku."
         }
       },
       "answerTitle": "Odpowiedź: siły w prętach",
@@ -258,7 +258,7 @@
           "body": "Cały model w jednym linku lub pliku projektu; rysunki jako PNG lub SVG, tabele jako CSV."
         },
         "settings": {
-          "title": "18 języków",
+          "title": "22 języki",
           "body": "Jednostki SI lub amerykańskie, oś z w dół albo podręcznikowa oś y w górę."
         }
       }

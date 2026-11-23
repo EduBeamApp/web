@@ -1,5 +1,5 @@
 /**
- * Czech counts in three forms, written `jeden | dva až čtyři | pět a více` in a message: 1 papír,
+ * Czech and Slovak count in three forms, written `jeden | dva až čtyři | pět a více` in a message: 1 papír,
  * 2–4 papíry, 0 and 5+ papírů. A message with two forms (English, before it is translated) picks
  * between them as English does.
  */
@@ -69,6 +69,19 @@ const ukrainianPlural = (choice: number, choicesLength: number): number => {
 }
 
 /**
+ * Romanian: one (1 problemă), few (0, 2–19 and their hundreds: 2 probleme, 102 probleme) and the rest
+ * with "de" (20 de probleme). A fraction takes the second form (2,5 probleme).
+ */
+const romanianPlural = (choice: number, choicesLength: number): number => {
+  const n = Math.abs(choice)
+  if (choicesLength < 3) return n === 1 ? 0 : 1
+  if (n === 1) return 0
+  if (!Number.isInteger(n) || n === 0) return 1
+  const tens = n % 100
+  return tens >= 1 && tens <= 19 ? 1 : 2
+}
+
+/**
  * Text not yet translated shows in English. New copy is written in English first and translated
  * once it is settled.
  */
@@ -76,5 +89,14 @@ export default defineI18nConfig(() => ({
   fallbackLocale: 'en',
   missingWarn: false,
   fallbackWarn: false,
-  pluralRules: { cs: czechPlural, fr: frenchPlural, pt: frenchPlural, pl: polishPlural, ru: russianPlural, uk: ukrainianPlural },
+  pluralRules: {
+    cs: czechPlural,
+    sk: czechPlural,
+    fr: frenchPlural,
+    pt: frenchPlural,
+    pl: polishPlural,
+    ro: romanianPlural,
+    ru: russianPlural,
+    uk: ukrainianPlural,
+  },
 }))

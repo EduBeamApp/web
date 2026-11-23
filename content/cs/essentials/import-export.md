@@ -75,7 +75,7 @@ Pro obrázek, ke kterému aplikaci vůbec nepotřebujete, například statický 
 | `model=<data>` | Načte zakódovaný model a přizpůsobí ho obrazovce. Zapisuje ho **Sdílet konstrukci**. |
 | `viewer=1` | [Režim prohlížeče](#embed-a-read-only-viewer). |
 | `show=<písmena>` | Otevře model se zapnutými právě těmito vrstvami, každá má jedno písmeno: `N` normálová síla, `V` posouvající síla, `M` ohybový moment, `U` deformovaný tvar, `R` reakce, `L` zatížení, `S` podpory, `n` popisky uzlů, `e` popisky prvků. `show=MRLS` zobrazí ohybový moment, reakce, zatížení a podpory. Zapisuje ho **Zobrazit to, co vidím já**. |
-| `lang=<kód>` | Přepne jazyk rozhraní: `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (čínština), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`. |
+| `lang=<kód>` | Přepne jazyk rozhraní: `en`, `cs`, `sk`, `de`, `fr`, `es`, `pt`, `pl`, `hu`, `ro`, `el`, `cn` (čínština), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`. |
 | `panel=examples` | Rovnou otevře galerii příkladů. |
 
 Parametry se spojují znakem `&`, například `?lang=de&viewer=1&model=…`. Jakmile je EduBeam přečte, z adresního řádku je odstraní. `lang` a `show` si zapamatuje jako nastavení návštěvníka, stejně jako kdyby je zvolil přímo v aplikaci.

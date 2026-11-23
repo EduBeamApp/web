@@ -19,7 +19,7 @@ Les paramètres sont enregistrés dans votre navigateur et restent en place quan
 
 ![Paramètres → Langue et paramètres régionaux](/screenshots/fr/settings-language.webp)
 
-**Langue.** 18 langues ; à la première ouverture, EduBeam suit la langue de votre navigateur. Le séparateur décimal suit la langue. Un lien peut imposer la langue à la personne qui l’ouvre : ajoutez `?lang=` suivi de l’un des codes `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (chinois), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`.
+**Langue.** 22 langues ; à la première ouverture, EduBeam suit la langue de votre navigateur. Le séparateur décimal suit la langue. Un lien peut imposer la langue à la personne qui l’ouvre : ajoutez `?lang=` suivi de l’un des codes `en`, `cs`, `sk`, `de`, `fr`, `es`, `pt`, `pl`, `hu`, `ro`, `el`, `cn` (chinois), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`.
 
 **Format des nombres.** La façon dont les valeurs des résultats sont écrites dans les tableaux et les infobulles : *Scientifique* (1,5 · 10⁴, par défaut), *Ingénierie* (15 · 10³) ou *Automatique*. Voir [Format des nombres](/fr/essentials/results#number-format).
 

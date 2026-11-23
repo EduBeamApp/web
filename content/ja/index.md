@@ -34,7 +34,7 @@ features:
     linkText: EduBeam を使った授業
   - icon: 🌍
     title: 言語も単位も選べる
-    details: 画面表示は 18 言語に対応。単位は SI 単位系と米国慣用単位から、座標軸は z 下向きと教科書どおりの y 上向きから選べます。
+    details: 画面表示は 22 言語に対応。単位は SI 単位系と米国慣用単位から、座標軸は z 下向きと教科書どおりの y 上向きから選べます。
     link: /ja/essentials/units-settings
     linkText: 単位と設定
   - icon: 🔗

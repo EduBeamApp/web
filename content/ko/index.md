@@ -34,7 +34,7 @@ features:
     linkText: EduBeam으로 가르치기
   - icon: 🌍
     title: 원하는 언어와 단위
-    details: 인터페이스 언어 18개, SI 또는 미국 단위, 그리고 z 아래 방향 좌표축과 교과서식 y 위 방향 좌표축 중 선택.
+    details: 인터페이스 언어 22개, SI 또는 미국 단위, 그리고 z 아래 방향 좌표축과 교과서식 y 위 방향 좌표축 중 선택.
     link: /ko/essentials/units-settings
     linkText: 단위 및 설정
   - icon: 🔗

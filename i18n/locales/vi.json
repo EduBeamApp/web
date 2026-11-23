@@ -178,7 +178,7 @@
         },
         "languages": {
           "title": "Ngôn ngữ và đơn vị của sinh viên",
-          "body": "Sinh viên làm việc bằng một trong 18 ngôn ngữ, với đơn vị SI hoặc đơn vị Mỹ, và với hệ trục mà giáo trình của họ dùng."
+          "body": "Sinh viên làm việc bằng một trong 22 ngôn ngữ, với đơn vị SI hoặc đơn vị Mỹ, và với hệ trục mà giáo trình của họ dùng."
         }
       },
       "answerTitle": "Đáp án: lực dọc trong các thanh",
@@ -258,7 +258,7 @@
           "body": "Cả mô hình trong một liên kết hoặc một tệp dự án; hình vẽ dạng PNG hoặc SVG, bảng dạng CSV."
         },
         "settings": {
-          "title": "18 ngôn ngữ",
+          "title": "22 ngôn ngữ",
           "body": "Đơn vị SI hoặc đơn vị Mỹ, trục z hướng xuống hoặc trục y hướng lên như trong giáo trình."
         }
       }

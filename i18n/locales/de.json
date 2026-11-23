@@ -178,7 +178,7 @@
         },
         "languages": {
           "title": "Eigene Sprache, eigene Einheiten",
-          "body": "Studierende arbeiten in einer von 18 Sprachen, in SI- oder US-Einheiten und mit den Achsen, die ihr Lehrbuch verwendet."
+          "body": "Studierende arbeiten in einer von 22 Sprachen, in SI- oder US-Einheiten und mit den Achsen, die ihr Lehrbuch verwendet."
         }
       },
       "answerTitle": "Lösung: die Stabkräfte",
@@ -258,7 +258,7 @@
           "body": "Ein ganzes Modell in einem Link oder einer Projektdatei; Zeichnungen als PNG oder SVG, Tabellen als CSV."
         },
         "settings": {
-          "title": "18 Sprachen",
+          "title": "22 Sprachen",
           "body": "SI- oder US-Einheiten, z nach unten oder y nach oben wie im Lehrbuch."
         }
       }

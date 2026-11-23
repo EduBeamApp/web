@@ -68,7 +68,7 @@ x–z 평면의 보, 연속보, 라멘, 트러스를 Timoshenko 보 요소로 �
 손 계산 결과를 바로 확인할 수 있고, 풀어 가는 동안 답을 채점해 주는 연습 문제가 있습니다.
 :::
 :::card{title="교수자" icon="lucide:presentation" to="/ko/guide/teaching"}
-지점, 힌지, 하중에 따라 부재력이 어떻게 달라지는지 프로젝터로 실시간으로 보여 줄 수 있고(18개 언어 지원), 학생마다 다른 시험지를 인쇄할 수 있습니다.
+지점, 힌지, 하중에 따라 부재력이 어떻게 달라지는지 프로젝터로 실시간으로 보여 줄 수 있고(22개 언어 지원), 학생마다 다른 시험지를 인쇄할 수 있습니다.
 :::
 :::card{title="엔지니어" icon="lucide:hard-hat" to="/ko/elements/analysis"}
 무거운 데스크톱 프로그램을 열기 전에 빠르게 검산할 수 있으며, 풀이의 모든 단계가 문서로 정리되어 있습니다.
@@ -124,7 +124,7 @@ EduBeam의 유한요소 솔버를 TypeScript로 제공합니다. 브라우저나
 
 ## 언어 {#languages}
 
-EduBeam은 18개 언어를 지원하며, 처음에는 브라우저의 언어로 열립니다. **설정 → 언어 및 지역**에서 바꾸거나 여기에서 고르세요.
+EduBeam은 22개 언어를 지원하며, 처음에는 브라우저의 언어로 열립니다. **설정 → 언어 및 지역**에서 바꾸거나 여기에서 고르세요.
 
 ::div{.chips}
 - [:icon{name="circle-flags:lang-en"} English](https://run.edubeam.app/?lang=en){target="_blank"}
@@ -134,9 +134,13 @@ EduBeam은 18개 언어를 지원하며, 처음에는 브라우저의 언어로 
 - [:icon{name="circle-flags:lang-es"} Español](https://run.edubeam.app/?lang=es){target="_blank"}
 - [:icon{name="circle-flags:lang-fr"} Français](https://run.edubeam.app/?lang=fr){target="_blank"}
 - [:icon{name="circle-flags:lang-it"} Italiano](https://run.edubeam.app/?lang=it){target="_blank"}
+- [:icon{name="circle-flags:lang-hu"} Magyar](https://run.edubeam.app/?lang=hu){target="_blank"}
 - [:icon{name="circle-flags:lang-pl"} Polski](https://run.edubeam.app/?lang=pl){target="_blank"}
 - [:icon{name="circle-flags:lang-pt-br"} Português](https://run.edubeam.app/?lang=pt){target="_blank"}
+- [:icon{name="circle-flags:lang-ro"} Română](https://run.edubeam.app/?lang=ro){target="_blank"}
+- [:icon{name="circle-flags:lang-sk"} Slovenčina](https://run.edubeam.app/?lang=sk){target="_blank"}
 - [:icon{name="circle-flags:lang-vi"} Tiếng Việt](https://run.edubeam.app/?lang=vi){target="_blank"}
+- [:icon{name="circle-flags:lang-el"} Ελληνικά](https://run.edubeam.app/?lang=el){target="_blank"}
 - [:icon{name="circle-flags:lang-ru"} Русский](https://run.edubeam.app/?lang=ru){target="_blank"}
 - [:icon{name="circle-flags:lang-tr"} Türkçe](https://run.edubeam.app/?lang=tr){target="_blank"}
 - [:icon{name="circle-flags:lang-uk"} Українська](https://run.edubeam.app/?lang=uk){target="_blank"}

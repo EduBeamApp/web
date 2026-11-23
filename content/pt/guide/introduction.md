@@ -68,7 +68,7 @@ Se falta algum recurso importante para você, [abra uma issue](https://github.co
 Retorno imediato sobre os cálculos feitos à mão e exercícios que conferem as suas respostas à medida que você avança.
 :::
 :::card{title="Professores" icon="lucide:presentation" to="/pt/guide/teaching"}
-Mostre ao vivo no projetor, em 18 idiomas, como apoios, rótulas e cargas alteram os esforços, e imprima uma prova diferente para cada aluno.
+Mostre ao vivo no projetor, em 22 idiomas, como apoios, rótulas e cargas alteram os esforços, e imprima uma prova diferente para cada aluno.
 :::
 :::card{title="Engenheiros" icon="lucide:hard-hat" to="/pt/elements/analysis"}
 Uma verificação rápida antes de abrir um programa de desktop mais pesado, com cada passo da solução documentado.
@@ -124,7 +124,7 @@ Componentes Vue 3 que desenham uma estrutura resolvida em SVG, com as cargas, as
 
 ## Idiomas {#languages}
 
-O EduBeam fala 18 idiomas e abre no idioma do seu navegador. Para mudar, use **Configurações → Idioma e localidade** ou escolha um aqui:
+O EduBeam fala 22 idiomas e abre no idioma do seu navegador. Para mudar, use **Configurações → Idioma e localidade** ou escolha um aqui:
 
 ::div{.chips}
 - [:icon{name="circle-flags:lang-en"} English](https://run.edubeam.app/?lang=en){target="_blank"}
@@ -134,9 +134,13 @@ O EduBeam fala 18 idiomas e abre no idioma do seu navegador. Para mudar, use **C
 - [:icon{name="circle-flags:lang-es"} Español](https://run.edubeam.app/?lang=es){target="_blank"}
 - [:icon{name="circle-flags:lang-fr"} Français](https://run.edubeam.app/?lang=fr){target="_blank"}
 - [:icon{name="circle-flags:lang-it"} Italiano](https://run.edubeam.app/?lang=it){target="_blank"}
+- [:icon{name="circle-flags:lang-hu"} Magyar](https://run.edubeam.app/?lang=hu){target="_blank"}
 - [:icon{name="circle-flags:lang-pl"} Polski](https://run.edubeam.app/?lang=pl){target="_blank"}
 - [:icon{name="circle-flags:lang-pt-br"} Português](https://run.edubeam.app/?lang=pt){target="_blank"}
+- [:icon{name="circle-flags:lang-ro"} Română](https://run.edubeam.app/?lang=ro){target="_blank"}
+- [:icon{name="circle-flags:lang-sk"} Slovenčina](https://run.edubeam.app/?lang=sk){target="_blank"}
 - [:icon{name="circle-flags:lang-vi"} Tiếng Việt](https://run.edubeam.app/?lang=vi){target="_blank"}
+- [:icon{name="circle-flags:lang-el"} Ελληνικά](https://run.edubeam.app/?lang=el){target="_blank"}
 - [:icon{name="circle-flags:lang-ru"} Русский](https://run.edubeam.app/?lang=ru){target="_blank"}
 - [:icon{name="circle-flags:lang-tr"} Türkçe](https://run.edubeam.app/?lang=tr){target="_blank"}
 - [:icon{name="circle-flags:lang-uk"} Українська](https://run.edubeam.app/?lang=uk){target="_blank"}

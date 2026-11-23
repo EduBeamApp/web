@@ -178,7 +178,7 @@
         },
         "languages": {
           "title": "Bahasa dan satuan mahasiswa sendiri",
-          "body": "Mahasiswa bekerja dalam salah satu dari 18 bahasa, dengan satuan SI atau satuan AS, dan dengan arah sumbu seperti di buku teks mereka."
+          "body": "Mahasiswa bekerja dalam salah satu dari 22 bahasa, dengan satuan SI atau satuan AS, dan dengan arah sumbu seperti di buku teks mereka."
         }
       },
       "answerTitle": "Jawaban: gaya batang",
@@ -258,7 +258,7 @@
           "body": "Seluruh model dalam satu tautan atau file proyek; gambar sebagai PNG atau SVG, tabel sebagai CSV."
         },
         "settings": {
-          "title": "18 bahasa",
+          "title": "22 bahasa",
           "body": "Satuan SI atau AS, sumbu z ke bawah atau y ke atas seperti di buku teks."
         }
       }

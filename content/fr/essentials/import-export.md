@@ -75,7 +75,7 @@ Pour une figure qui n’a pas du tout besoin de l’application, comme un diagra
 | `model=<data>` | Charge le modèle encodé et l’ajuste à l’écran. Écrit par **Partager le modèle**. |
 | `viewer=1` | [Mode visionneuse](#embed-a-read-only-viewer). |
 | `show=<lettres>` | Ouvre avec exactement ces couches activées, une lettre chacune : `N` effort normal, `V` effort tranchant, `M` moment fléchissant, `U` déformée, `R` réactions, `L` charges, `S` appuis, `n` étiquettes des nœuds, `e` étiquettes des éléments. `show=MRLS` affiche le moment fléchissant, les réactions, les charges et les appuis. Écrit par **Montrer ce que je vois**. |
-| `lang=<code>` | Change la langue de l’interface : `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (chinois), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`. |
+| `lang=<code>` | Change la langue de l’interface : `en`, `cs`, `sk`, `de`, `fr`, `es`, `pt`, `pl`, `hu`, `ro`, `el`, `cn` (chinois), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`. |
 | `panel=examples` | Ouvre directement la galerie d’exemples. |
 
 Les paramètres se combinent avec `&`, comme dans `?lang=de&viewer=1&model=…`. EduBeam les retire de la barre d’adresse une fois qu’il les a lus. `lang` et `show` sont conservés comme paramètres du visiteur, exactement comme s’il les avait choisis dans l’application.

@@ -178,7 +178,7 @@
         },
         "languages": {
           "title": "Ve vlastním jazyce a jednotkách",
-          "body": "Studenti pracují v jednom z 18 jazyků, v jednotkách SI nebo amerických a s osami, jaké používá jejich učebnice."
+          "body": "Studenti pracují v jednom z 22 jazyků, v jednotkách SI nebo amerických a s osami, jaké používá jejich učebnice."
         }
       },
       "answerTitle": "Řešení: síly v prutech",
@@ -258,7 +258,7 @@
           "body": "Celý model v jednom odkazu nebo v souboru projektu; výkresy jako PNG nebo SVG, tabulky jako CSV."
         },
         "settings": {
-          "title": "18 jazyků",
+          "title": "22 jazyků",
           "body": "Jednotky SI nebo americké, osa z dolů nebo učebnicová osa y nahoru."
         }
       }

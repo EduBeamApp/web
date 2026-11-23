@@ -977,6 +977,169 @@
       }
     ]
   },
+  "sk": {
+    "label": "Slovenčina",
+    "lang": "sk",
+    "appLocale": "sk",
+    "sidebar": [
+      {
+        "text": "Začíname",
+        "icon": "lucide:flag",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Úvod",
+            "link": "/sk/guide/introduction"
+          },
+          {
+            "text": "Rýchly štart (10 min)",
+            "link": "/sk/guide/quick-start"
+          }
+        ]
+      },
+      {
+        "text": "Zostavenie modelu",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Používateľské rozhranie",
+            "link": "/sk/essentials/user-interface"
+          },
+          {
+            "text": "Uzly a podpery",
+            "link": "/sk/essentials/nodes-supports"
+          },
+          {
+            "text": "Prvky, materiály a prierezy",
+            "link": "/sk/essentials/elements"
+          },
+          {
+            "text": "Zaťaženie",
+            "link": "/sk/essentials/loads"
+          },
+          {
+            "text": "Jednotky a nastavenia",
+            "link": "/sk/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "Čítanie výsledkov",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Výsledky a priebehy",
+            "link": "/sk/essentials/results"
+          },
+          {
+            "text": "Ručné overenie výsledkov",
+            "link": "/sk/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "Zdieľanie a výučba",
+        "icon": "lucide:presentation",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Súbory, odkazy a export",
+            "link": "/sk/essentials/import-export"
+          },
+          {
+            "text": "Výučba s EduBeamom",
+            "link": "/sk/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "Pomocník",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Klávesnica, myš a dotyk",
+            "link": "/sk/reference/shortcuts"
+          },
+          {
+            "text": "Riešenie problémov",
+            "link": "/sk/reference/troubleshooting"
+          },
+          {
+            "text": "Časté otázky",
+            "link": "/sk/faq/"
+          }
+        ]
+      },
+      {
+        "text": "Návody",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Šikmý nosník",
+            "link": "/sk/tutorials/inclined-beam"
+          },
+          {
+            "text": "Trojkĺbový rám",
+            "link": "/sk/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Rovinná priehradová konštrukcia",
+            "link": "/sk/tutorials/truss"
+          },
+          {
+            "text": "Spojitý nosník a pokles podpery",
+            "link": "/sk/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "Precvičovanie",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Úlohy na precvičenie",
+            "link": "/sk/practice"
+          },
+          {
+            "text": "Generátor písomiek",
+            "link": "/sk/exam"
+          },
+          {
+            "text": "Príklady",
+            "link": "/sk/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Teoretická príručka",
+        "icon": "lucide:sigma",
+        "section": "theory",
+        "items": [
+          {
+            "text": "Súradný systém a znamienková konvencia",
+            "link": "/sk/elements/conventions"
+          },
+          {
+            "text": "Nosníkový prvok",
+            "link": "/sk/elements/beam"
+          },
+          {
+            "text": "Priehradový prút",
+            "link": "/sk/elements/truss"
+          },
+          {
+            "text": "Ako EduBeam rieši model",
+            "link": "/sk/elements/analysis"
+          }
+        ]
+      }
+    ]
+  },
   "zh": {
     "label": "中文",
     "lang": "zh",
@@ -1461,6 +1624,495 @@
           {
             "text": "Jak EduBeam rozwiązuje model",
             "link": "/pl/elements/analysis"
+          }
+        ]
+      }
+    ]
+  },
+  "hu": {
+    "label": "Magyar",
+    "lang": "hu",
+    "appLocale": "hu",
+    "sidebar": [
+      {
+        "text": "Első lépések",
+        "icon": "lucide:flag",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Bevezetés",
+            "link": "/hu/guide/introduction"
+          },
+          {
+            "text": "Gyors kezdés (10 perc)",
+            "link": "/hu/guide/quick-start"
+          }
+        ]
+      },
+      {
+        "text": "Modellezés",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Felhasználói felület",
+            "link": "/hu/essentials/user-interface"
+          },
+          {
+            "text": "Csomópontok és támaszok",
+            "link": "/hu/essentials/nodes-supports"
+          },
+          {
+            "text": "Elemek, anyagok és keresztmetszetek",
+            "link": "/hu/essentials/elements"
+          },
+          {
+            "text": "Terhek",
+            "link": "/hu/essentials/loads"
+          },
+          {
+            "text": "Mértékegységek és beállítások",
+            "link": "/hu/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "Eredmények",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Eredmények és igénybevételi ábrák",
+            "link": "/hu/essentials/results"
+          },
+          {
+            "text": "Eredmények ellenőrzése kézi számítással",
+            "link": "/hu/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "Megosztás és tanítás",
+        "icon": "lucide:presentation",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Fájlok, linkek és exportálás",
+            "link": "/hu/essentials/import-export"
+          },
+          {
+            "text": "Tanítás az EduBeammel",
+            "link": "/hu/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "Súgó",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Billentyűzet, egér és érintés",
+            "link": "/hu/reference/shortcuts"
+          },
+          {
+            "text": "Hibaelhárítás",
+            "link": "/hu/reference/troubleshooting"
+          },
+          {
+            "text": "GYIK",
+            "link": "/hu/faq/"
+          }
+        ]
+      },
+      {
+        "text": "Oktatóanyagok",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Ferde tartó",
+            "link": "/hu/tutorials/inclined-beam"
+          },
+          {
+            "text": "Háromcsuklós keret",
+            "link": "/hu/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Síkbeli rácsos tartó",
+            "link": "/hu/tutorials/truss"
+          },
+          {
+            "text": "Többtámaszú tartó és támaszsüllyedés",
+            "link": "/hu/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "Feladatok és példák",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Statika gyakorló feladatok",
+            "link": "/hu/practice"
+          },
+          {
+            "text": "Dolgozatkészítő",
+            "link": "/hu/exam"
+          },
+          {
+            "text": "Példák",
+            "link": "/hu/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Elméleti háttér",
+        "icon": "lucide:sigma",
+        "section": "theory",
+        "items": [
+          {
+            "text": "Tengelyek és előjelszabály",
+            "link": "/hu/elements/conventions"
+          },
+          {
+            "text": "Gerendaelem",
+            "link": "/hu/elements/beam"
+          },
+          {
+            "text": "Rácsrúdelem",
+            "link": "/hu/elements/truss"
+          },
+          {
+            "text": "Hogyan számít az EduBeam",
+            "link": "/hu/elements/analysis"
+          }
+        ]
+      }
+    ]
+  },
+  "ro": {
+    "label": "Română",
+    "lang": "ro",
+    "appLocale": "ro",
+    "sidebar": [
+      {
+        "text": "Primii pași",
+        "icon": "lucide:flag",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Introducere",
+            "link": "/ro/guide/introduction"
+          },
+          {
+            "text": "Ghid de început (10 min)",
+            "link": "/ro/guide/quick-start"
+          }
+        ]
+      },
+      {
+        "text": "Modelare",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Interfața aplicației",
+            "link": "/ro/essentials/user-interface"
+          },
+          {
+            "text": "Noduri și reazeme",
+            "link": "/ro/essentials/nodes-supports"
+          },
+          {
+            "text": "Elemente, materiale și secțiuni",
+            "link": "/ro/essentials/elements"
+          },
+          {
+            "text": "Încărcări",
+            "link": "/ro/essentials/loads"
+          },
+          {
+            "text": "Unități și setări",
+            "link": "/ro/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "Rezultate",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Rezultate și diagrame de eforturi",
+            "link": "/ro/essentials/results"
+          },
+          {
+            "text": "Verificarea rezultatelor prin calcul manual",
+            "link": "/ro/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "Partajare și predare",
+        "icon": "lucide:presentation",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Fișiere, linkuri și export",
+            "link": "/ro/essentials/import-export"
+          },
+          {
+            "text": "Predarea cu EduBeam",
+            "link": "/ro/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "Ajutor",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Tastatură, mouse și ecran tactil",
+            "link": "/ro/reference/shortcuts"
+          },
+          {
+            "text": "Depanare",
+            "link": "/ro/reference/troubleshooting"
+          },
+          {
+            "text": "Întrebări frecvente",
+            "link": "/ro/faq/"
+          }
+        ]
+      },
+      {
+        "text": "Tutoriale",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Grindă înclinată",
+            "link": "/ro/tutorials/inclined-beam"
+          },
+          {
+            "text": "Cadru cu trei articulații",
+            "link": "/ro/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Grindă cu zăbrele plană",
+            "link": "/ro/tutorials/truss"
+          },
+          {
+            "text": "Grindă continuă și cedare de reazem",
+            "link": "/ro/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "Probleme și exemple",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Probleme de statică",
+            "link": "/ro/practice"
+          },
+          {
+            "text": "Generator de teste",
+            "link": "/ro/exam"
+          },
+          {
+            "text": "Exemple",
+            "link": "/ro/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Teorie",
+        "icon": "lucide:sigma",
+        "section": "theory",
+        "items": [
+          {
+            "text": "Axe și convenții de semne",
+            "link": "/ro/elements/conventions"
+          },
+          {
+            "text": "Elementul de bară",
+            "link": "/ro/elements/beam"
+          },
+          {
+            "text": "Elementul de bară articulată",
+            "link": "/ro/elements/truss"
+          },
+          {
+            "text": "Cum calculează EduBeam modelul",
+            "link": "/ro/elements/analysis"
+          }
+        ]
+      }
+    ]
+  },
+  "el": {
+    "label": "Ελληνικά",
+    "lang": "el",
+    "appLocale": "el",
+    "sidebar": [
+      {
+        "text": "Ξεκινώντας",
+        "icon": "lucide:flag",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Εισαγωγή",
+            "link": "/el/guide/introduction"
+          },
+          {
+            "text": "Γρήγορη εκκίνηση (10 λεπτά)",
+            "link": "/el/guide/quick-start"
+          }
+        ]
+      },
+      {
+        "text": "Μοντελοποίηση",
+        "icon": "lucide:pencil-ruler",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Το περιβάλλον εργασίας",
+            "link": "/el/essentials/user-interface"
+          },
+          {
+            "text": "Κόμβοι και στηρίξεις",
+            "link": "/el/essentials/nodes-supports"
+          },
+          {
+            "text": "Στοιχεία, υλικά και διατομές",
+            "link": "/el/essentials/elements"
+          },
+          {
+            "text": "Φορτία",
+            "link": "/el/essentials/loads"
+          },
+          {
+            "text": "Μονάδες και ρυθμίσεις",
+            "link": "/el/essentials/units-settings"
+          }
+        ]
+      },
+      {
+        "text": "Αποτελέσματα",
+        "icon": "lucide:chart-spline",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Αποτελέσματα και διαγράμματα",
+            "link": "/el/essentials/results"
+          },
+          {
+            "text": "Έλεγχος αποτελεσμάτων με το χέρι",
+            "link": "/el/guide/verification"
+          }
+        ]
+      },
+      {
+        "text": "Κοινή χρήση και διδασκαλία",
+        "icon": "lucide:presentation",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Αρχεία, σύνδεσμοι και εξαγωγή",
+            "link": "/el/essentials/import-export"
+          },
+          {
+            "text": "Διδασκαλία με το EduBeam",
+            "link": "/el/guide/teaching"
+          }
+        ]
+      },
+      {
+        "text": "Βοήθεια",
+        "icon": "lucide:life-buoy",
+        "section": "guide",
+        "items": [
+          {
+            "text": "Πληκτρολόγιο, ποντίκι και αφή",
+            "link": "/el/reference/shortcuts"
+          },
+          {
+            "text": "Επίλυση προβλημάτων",
+            "link": "/el/reference/troubleshooting"
+          },
+          {
+            "text": "Συχνές ερωτήσεις",
+            "link": "/el/faq/"
+          }
+        ]
+      },
+      {
+        "text": "Βήμα προς βήμα",
+        "icon": "lucide:graduation-cap",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Κεκλιμένη δοκός",
+            "link": "/el/tutorials/inclined-beam"
+          },
+          {
+            "text": "Τριαρθρωτό πλαίσιο",
+            "link": "/el/tutorials/three-hinged-frame"
+          },
+          {
+            "text": "Επίπεδο δικτύωμα",
+            "link": "/el/tutorials/truss"
+          },
+          {
+            "text": "Συνεχής δοκός και υποχώρηση στήριξης",
+            "link": "/el/tutorials/continuous-beam"
+          }
+        ]
+      },
+      {
+        "text": "Ασκήσεις και παραδείγματα",
+        "icon": "lucide:library",
+        "section": "learn",
+        "items": [
+          {
+            "text": "Ασκήσεις Στατικής",
+            "link": "/el/practice"
+          },
+          {
+            "text": "Δημιουργός διαγωνισμάτων",
+            "link": "/el/exam"
+          },
+          {
+            "text": "Παραδείγματα",
+            "link": "/el/examples/"
+          }
+        ]
+      },
+      {
+        "text": "Θεωρητικό εγχειρίδιο",
+        "icon": "lucide:sigma",
+        "section": "theory",
+        "items": [
+          {
+            "text": "Άξονες και συμβάσεις προσήμων",
+            "link": "/el/elements/conventions"
+          },
+          {
+            "text": "Στοιχείο δοκού",
+            "link": "/el/elements/beam"
+          },
+          {
+            "text": "Στοιχείο δικτυώματος",
+            "link": "/el/elements/truss"
+          },
+          {
+            "text": "Πώς επιλύει το EduBeam",
+            "link": "/el/elements/analysis"
           }
         ]
       }

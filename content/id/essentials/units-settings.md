@@ -19,7 +19,7 @@ Pengaturan disimpan di browser Anda dan tetap ada setelah halaman dimuat ulang. 
 
 ![Pengaturan → Bahasa & Wilayah](/screenshots/id/settings-language.webp)
 
-**Bahasa.** 18 bahasa; pada kunjungan pertama, EduBeam mengikuti bahasa browser Anda. Pemisah desimal mengikuti bahasa. Sebuah tautan dapat memilihkan bahasa untuk pembacanya: tambahkan `?lang=` dengan salah satu kode `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (Tionghoa), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`.
+**Bahasa.** 22 bahasa; pada kunjungan pertama, EduBeam mengikuti bahasa browser Anda. Pemisah desimal mengikuti bahasa. Sebuah tautan dapat memilihkan bahasa untuk pembacanya: tambahkan `?lang=` dengan salah satu kode `en`, `cs`, `sk`, `de`, `fr`, `es`, `pt`, `pl`, `hu`, `ro`, `el`, `cn` (Tionghoa), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`.
 
 **Format angka.** Cara nilai hasil ditulis di tabel dan tooltip: *Ilmiah* (1,5 · 10⁴, bawaan), *Teknik* (15 · 10³), atau *Otomatis*. Lihat [Format angka](/id/essentials/results#number-format).
 

@@ -1,0 +1,673 @@
+{
+  "meta": {
+    "description": "Statický výpočet 2D konštrukcií online a zadarmo – nosníky, rámy a priehradové konštrukcie vyriešené okamžite v prehliadači.",
+    "imageAlt": "EduBeam, bezplatná 2D statika online: aplikácia s rámom a priebehom jeho ohybových momentov"
+  },
+  "nav": {
+    "guide": "Príručka",
+    "tutorials": "Návody",
+    "examples": "Príklady",
+    "faq": "Časté otázky",
+    "theory": "Teória",
+    "openApp": "Otvoriť aplikáciu",
+    "libraries": "Knižnice",
+    "practice": "Precvičovanie"
+  },
+  "docs": {
+    "onThisPage": "Na tejto stránke",
+    "prev": "Predchádzajúca stránka",
+    "next": "Ďalšia stránka",
+    "lastUpdated": "Naposledy upravené"
+  },
+  "footer": {
+    "copyright": "Prispievatelia EduBeamu"
+  },
+  "components": {
+    "loadsTitle": "Ukážky typov zaťaženia",
+    "loadsLede": "Ako vyzerajú bežné typy zaťaženia v EduBeame. Každá karta je živý, vyriešený model a v aplikácii sa otvorí presne tak, ako je nastavená.",
+    "openInApp": "Otvoriť v EduBeame",
+    "simplySupportedBeam": "Prostý nosník",
+    "udlBlurb": "Nosník na pevnom a posuvnom kĺbe so zaťažením 12 kN/m: klasické priebehy priečnych síl a ohybových momentov.",
+    "trapezoidalBlurb": "Zaťaženie, ktoré po celom pravom poli rastie zo 4 na 14 kN/m.",
+    "concentratedBlurb": "Sila 18 kN v ľavom poli, 2 m od podpery, a pod ňou nie je žiadny uzol.",
+    "nodalBlurb": "Sila 20 kN v uzle medzi oboma poľami: priebeh ohybových momentov sa pod ňou láme.",
+    "temperatureBlurb": "Rozdiel teplôt po výške prierezu (hore teplejšie ako dole) a zakrivenie, ktoré spôsobí.",
+    "promoTitle": "Preneste svoje rámy",
+    "promoAccent": "do 3D.",
+    "promoSubtitle": "dosky, škrupiny a posúdenie oceľových prvkov v prehliadači",
+    "promoCta": "Vyskúšať zadarmo",
+    "spanLength": "Rozpätie poľa",
+    "loadIntensity": "Intenzita zaťaženia",
+    "loadPosition": "Poloha sily",
+    "heroHint": "Posuňte silu. Priebehy sa menia spolu s ňou."
+  },
+  "common": {
+    "deformedShape": "Deformovaný tvar",
+    "normalForce": "Normálová sila",
+    "shearForce": "Priečna sila",
+    "bendingMoment": "Ohybový moment"
+  },
+  "loadType": {
+    "udl": "Rovnomerné spojité zaťaženie",
+    "trapezoidal": "Lineárne sa meniace zaťaženie",
+    "concentrated": "Osamelá sila",
+    "temperature": "Zmena teploty"
+  },
+  "loads": {
+    "nodalLoad": "Uzlové zaťaženie",
+    "temperatureDeltaTbtNoHTML": "ΔTd-ΔTh",
+    "temperatureDeltaTsNoHTML": "ΔTs"
+  },
+  "examples": {
+    "items": {
+      "welcome": {
+        "title": "Staticky neurčitý nosník",
+        "blurb": "Staticky neurčitý nosník dĺžky 3 m (votknutie – posuvný kĺb) s rovnomerným spojitým zaťažením 10 kN/m."
+      },
+      "cantilever": {
+        "title": "Konzola",
+        "blurb": "Konzola dĺžky 4 m zaťažená zvislou uzlovou silou 18 kN smerom nadol – ukazuje krivosť a priehyb voľného konca."
+      },
+      "pratt": {
+        "title": "Warrenov priehradový nosník",
+        "blurb": "Jednoduchý Warrenov priehradový nosník so silami 8 kN v uzloch – ukazuje rozdelenie normálových síl a posunutia."
+      },
+      "continuous": {
+        "title": "Spojitý nosník s tromi poľami",
+        "blurb": "Polia 5 + 6 + 5 m so spojitým, osamelým a opäť spojitým zaťažením na porovnanie krivosti a pootočení nad podperami."
+      },
+      "portal": {
+        "title": "Rámová konštrukcia",
+        "blurb": "Nosník dĺžky 8 m na stĺpoch výšky 6 m, zaťažený rovnomerným zaťažením strechy a vodorovnými a zvislými silami v rohoch rámu – na posúdenie vodorovného posunu a ohybu."
+      },
+      "temperature": {
+        "title": "Teplotné zaťaženie",
+        "blurb": "Prostý nosník dĺžky 8 m s rovnomernou a nerovnomernou zmenou teploty."
+      }
+    }
+  },
+  "search": {
+    "label": "Hľadať",
+    "placeholder": "Hľadať v príručke",
+    "noResults": "Pre „{query}“ sa nič nenašlo",
+    "shortcut": "Ctrl K"
+  },
+  "home": {
+    "seo": {
+      "title": "EduBeam: statický výpočet konštrukcií online zadarmo",
+      "description": "Statický výpočet 2D konštrukcií zadarmo v prehliadači. Nakreslite nosník, rám alebo priehradovú konštrukciu, zadajte zaťaženie a hneď uvidíte priebehy N, V, M, reakcie a priehyby."
+    },
+    "hero": {
+      "title": "Stavebná mechanika online.",
+      "lede": "EduBeam je bezplatná aplikácia na statický výpočet nosníkov, rámov a priehradových konštrukcií. Model nakreslíte v prehliadači a priebehy vnútorných síl, reakcie aj priehyby sa prepočítajú pri každej úprave.",
+      "launch": "Spustiť EduBeam",
+      "guide": "Prečítať príručku",
+      "note": "Zadarmo a open source. Bez inštalácie a bez registrácie."
+    },
+    "steps": {
+      "title": "Od náčrtu k priebehom v štyroch krokoch",
+      "lede": "V rovnakom poradí, v akom by ste úlohu riešili na papieri. Rýchly štart vás prevedie výpočtom skutočného nosníka asi za desať minút.",
+      "link": "Prejsť Rýchly štart",
+      "items": {
+        "nodes": {
+          "label": "Uzly",
+          "title": "Rozmiestnite uzly",
+          "body": "Kliknite do mriežky alebo zadajte súradnice. Tu sú to štyri rohy rámu so šírkou 6 m a výškou 4 m."
+        },
+        "elements": {
+          "label": "Prvky",
+          "title": "Spojte ich prvkami",
+          "body": "Prepojte uzly nosníkovými prvkami a priraďte im materiál a prierez: z knižnice alebo ako polygón, ktorý si sami nakreslíte."
+        },
+        "loads": {
+          "label": "Podpery a zaťaženie",
+          "title": "Podoprite a zaťažte",
+          "body": "Pevné kĺby pod oboma stĺpmi, 10 kN/m na nosníku a vodorovná sila 15 kN v ľavom hornom rohu."
+        },
+        "results": {
+          "label": "Výsledky",
+          "title": "Odčítajte výsledky",
+          "body": "Priebeh ohybových momentov, vykreslený na strane ťahaných vlákien, a reakcie sa objavia, len čo je rám dostatočne podopretý. Čísla nie sú prevzaté odinakiaľ: vypočítal ich EduBeam priamo na tejto stránke."
+        }
+      }
+    },
+    "examples": {
+      "title": "Vyriešený model otvoríte jedným kliknutím",
+      "lede": "Všetky sa počítajú priamo na tejto stránke, tým istým riešičom, aký používa aplikácia. Ktorýkoľvek otvorte v EduBeame a upravte si ho.",
+      "link": "Všetky príklady"
+    },
+    "verify": {
+      "title": "Overené podľa učebnice",
+      "lede": "EduBeam rieši každý model metódou konečných prvkov. Pri klasických prípadoch dáva presne analytické riešenie, a to na poslednú číslicu. Pravý stĺpec vypočítal váš prehliadač pri načítaní tejto stránky.",
+      "case": "Úloha",
+      "formula": "Vzorec",
+      "hand": "Ručne",
+      "edubeam": "EduBeam",
+      "link": "Ďalšie overovacie príklady",
+      "steel": "Oceľový nosník IPE 200: E = 210 GPa, I = 1943 cm⁴. Šmykové deformácie sa zanedbávajú, rovnako ako v analytických vzorcoch.",
+      "cases": {
+        "ssMoment": "Prostý nosník s rozpätím 6 m, 12 kN/m: najväčší moment",
+        "ssDeflection": "Ten istý nosník: najväčší priehyb",
+        "cantilever": "Konzola dĺžky 4 m, 18 kN na voľnom konci: moment vo votknutí",
+        "fixed": "Obojstranne votknutý nosník s rozpätím 6 m, 10 kN/m: moment vo votknutí",
+        "propped": "Jednostranne votknutý nosník s rozpätím 6 m, 10 kN/m: reakcia v posuvnom kĺbe"
+      }
+    },
+    "teaching": {
+      "title": "Vytvorený pre poslucháreň",
+      "lede": "Vložte model do prezentácie alebo do skrípt a každý študent otvorí presne ten istý.",
+      "link": "Výučba s EduBeamom",
+      "slideCourse": "Stavebná mechanika",
+      "slideTitle": "Prednáška 7: Priehradové konštrukcie",
+      "slideBody": "Warrenov priehradový nosník s tromi silami 8 kN v uzloch. Ktoré prúty sú ťahané?",
+      "shareLabel": "Odkaz na zdieľanie",
+      "copy": "Kopírovať",
+      "copied": "Skopírované",
+      "items": {
+        "share": {
+          "title": "Model ako odkaz",
+          "body": "Celý model je uložený priamo v adrese URL. Dajte ho do zadania a otvorí sa presne tak, ako ste ho nechali, aj o niekoľko rokov."
+        },
+        "embed": {
+          "title": "Priamo v prezentácii",
+          "body": "Režim iba na prezeranie ukáže vyriešený model bez nástrojov na úpravy. Hodí sa na snímku prezentácie aj na webovú stránku."
+        },
+        "mechanism": {
+          "title": "Vysvetlí, čo je zle",
+          "body": "Keď je konštrukcia mechanizmom, EduBeam ukáže, ako by sa pohybovala, namiesto toho, aby výpočet len odmietol."
+        },
+        "languages": {
+          "title": "Vo vlastnom jazyku a jednotkách",
+          "body": "Študenti pracujú v jednom z 22 jazykov, v jednotkách SI alebo amerických a s osami, aké používa ich učebnica."
+        }
+      },
+      "answerTitle": "Riešenie: sily v prútoch",
+      "answerBody": "Ťah je kladný. Dolný pás je ťahaný, horný pás a oba krajné prúty sú tlačené a vo vnútorných diagonálach sa ťah a tlak striedajú.",
+      "prevSlide": "Predchádzajúca snímka",
+      "nextSlide": "Ďalšia snímka"
+    },
+    "final": {
+      "title": "Nakreslite svoj prvý nosník.",
+      "lede": "Otvorte EduBeam a zvoľte „Nakresliť prvý nosník“. Krátky sprievodca vás dovedie od prázdnej obrazovky k podopretému, zaťaženému nosníku a jeho priebehom.",
+      "paths": {
+        "quickStart": {
+          "title": "Rýchly štart",
+          "body": "Vymodelujte nosník krok za krokom a overte ho ručným výpočtom. Zaberie to 10 minút."
+        },
+        "examples": {
+          "title": "Príklady",
+          "body": "Vyriešené modely, ktoré môžete otvoriť, upraviť a učiť sa z nich."
+        },
+        "teaching": {
+          "title": "Výučba",
+          "body": "Odkazy na zdieľanie, prezentácie a cvičenia pre váš predmet."
+        }
+      }
+    },
+    "model": {
+      "title": "Čo v EduBeame namodelujete",
+      "lede": "Rovinné konštrukcie riešené metódou konečných prvkov, s podperami, zaťaženiami a výsledkami, aké poznáte z výučby statiky.",
+      "supports": {
+        "title": "Podpery",
+        "items": {
+          "pin": "Pevný kĺb",
+          "roller": "Posuvný kĺb",
+          "fixed": "Votknutie",
+          "slider": "Posuvné votknutie",
+          "angled": "Šikmá podpera"
+        },
+        "note": "K tomu predpísané poklesy a pootočenia podpier."
+      },
+      "loads": {
+        "title": "Zaťaženie",
+        "items": {
+          "point": "Osamelá sila",
+          "uniform": "Rovnomerné",
+          "trapezoidal": "Lichobežníkové",
+          "moment": "Moment",
+          "temperature": "Teplota"
+        },
+        "note": "V uzloch aj kdekoľvek na prvku, v lokálnych alebo globálnych osiach."
+      },
+      "sections": {
+        "title": "Prierezy",
+        "items": {
+          "i": "I a H",
+          "hollow": "Dutý",
+          "solid": "Plný",
+          "tube": "Rúra",
+          "polygon": "Vlastný polygón"
+        },
+        "note": "IPE, HEA, AISC W a HSS z knižnice alebo ľubovoľný polygón, ktorý nakreslíte."
+      },
+      "results": {
+        "title": "Výsledky",
+        "note": "Normálové sily, priečne sily, ohybové momenty a deformovaný tvar, k tomu reakcie a hodnoty v ľubovoľnom bode."
+      },
+      "facts": {
+        "elements": {
+          "title": "Timošenkove nosníky",
+          "body": "Šmykové deformácie tam, kde na nich záleží. Pri štíhlych prvkoch sa výsledky zhodujú s Bernoulliho–Navierovou teóriou."
+        },
+        "structures": {
+          "title": "Nosníky, rámy, priehradové konštrukcie",
+          "body": "V rovine, s kĺbmi na ľubovoľnom konci prvku."
+        },
+        "sharing": {
+          "title": "Odkazy a súbory",
+          "body": "Celý model v jednom odkaze alebo v súbore projektu; výkresy ako PNG alebo SVG, tabuľky ako CSV."
+        },
+        "settings": {
+          "title": "22 jazykov",
+          "body": "Jednotky SI alebo americké, os z nadol alebo učebnicová os y nahor."
+        }
+      }
+    },
+    "heritage": {
+      "title": "Open source s koreňmi vo výučbe",
+      "body": "EduBeam nadväzuje na rovnomenný desktopový program, ktorý vznikol na Katedre mechaniky Fakulty stavebnej ČVUT v Prahe, a dodnes otvorí jeho uložené relácie. Webová verzia je zadarmo a open source, rovnako ako {'@'}edubeam/fem, riešič, ktorý stojí za každým číslom na tejto stránke.",
+      "github": "EduBeam na GitHube",
+      "solver": "{'@'}edubeam/fem na GitHube",
+      "team": "Kto vyvíja EduBeam"
+    }
+  },
+  "error": {
+    "notFoundTitle": "Stránka sa nenašla",
+    "notFound": "Na tejto adrese žiadna stránka nie je. Možno sa presunula alebo je v odkaze preklep.",
+    "otherTitle": "Niečo sa pokazilo",
+    "other": "Stránku sa nepodarilo zobraziť. Zvyčajne pomôže načítať ju znova.",
+    "home": "Úvodná stránka",
+    "guide": "Prečítať príručku",
+    "message": "Podpery konštrukciu nezaisťujú: stále sa môže voľne otáčať.",
+    "figure": "Nosník iba na jednej pevnej kĺbovej podpere, bez druhej podpery, sa pod zaťažením voľne otáča okolo kĺbu"
+  },
+  "problems": {
+    "families": {
+      "simple": {
+        "name": "Prostý nosník",
+        "skill": "Rovnováha nosníka",
+        "hint": "Z momentovej podmienky k bodu A určte reakciu v B, zo súčtu zvislých síl potom reakciu v A. Najväčší moment je tam, kde priečna sila prechádza nulou, alebo pod osamelou silou."
+      },
+      "cantilever": {
+        "name": "Konzola",
+        "skill": "Votknutie",
+        "hint": "Všetky reakcie sú vo votknutí: sčítajte zvislé sily a potom zostavte momentovú podmienku k bodu A. Konzola má najväčší moment vo votknutí."
+      },
+      "overhang": {
+        "name": "Nosník s previslým koncom",
+        "skill": "Záporný moment nad podperou",
+        "hint": "Reakciu v B určte z momentovej podmienky k bodu A. Potom porovnajte dve miesta, kde môže byť moment najväčší: v poli, kde V = 0, a nad podperou B, kde previslý koniec vyvolá záporný moment."
+      },
+      "gerber": {
+        "name": "Gerberov nosník",
+        "skill": "Vnútorný kĺb",
+        "hint": "Začnite úsekom GC. Leží na kĺbe G a na posuvnej kĺbovej podpere C; kĺb neprenáša moment. Potom zaťažte úsek ABG silou, ktorú mu kĺb odovzdáva, a riešte ho ako nosník s previslým koncom."
+      },
+      "threeHinged": {
+        "name": "Trojkĺbový rám",
+        "skill": "Vodorovná reakcia a vrcholový kĺb",
+        "hint": "Momentové podmienky k bodom A a E dajú zvislé reakcie. Potom rám rozdeľte vo vrcholovom kĺbe C, kde M = 0, a z momentovej podmienky k bodu C pre jednu polovicu určte vodorovnú reakciu."
+      },
+      "truss": {
+        "name": "Warrenov priehradový nosník",
+        "skill": "Uzlová a priesečná metóda",
+        "hint": "Reakcie určte z rovnováhy celej konštrukcie. Potom veďte rez tromi prútmi, z ktorých jeden je ten hľadaný, a napíšte momentovú podmienku k uzlu, v ktorom sa pretínajú zvyšné dva. Pri diagonále namiesto toho sčítajte zvislé sily."
+      },
+      "continuous": {
+        "name": "Spojitý nosník s dvoma poľami",
+        "skill": "Jedenkrát staticky neurčitý nosník",
+        "hint": "Konštrukcia je jedenkrát staticky neurčitá: ako neznámu zvoľte moment nad podperou B. Rovnica troch momentov s M = 0 v A a v C ho dá priamo, reakcie potom určíte pole po poli."
+      },
+      "portal": {
+        "name": "Dvojkĺbový rám",
+        "skill": "Rám s tuhými rohmi",
+        "hint": "Rám je jedenkrát staticky neurčitý: uvoľnite vodorovnú reakciu v D, určte vodorovný posun bodu D od zaťaženia a od jednotkovej sily v tomto bode (princípom virtuálnych prác z priebehov M) a z podmienky nulového posunu dopočítajte reakciu."
+      }
+    },
+    "statement": {
+      "simple": "Prostý nosník s rozpätím {L} m s pevnou kĺbovou podperou v A a posuvnou kĺbovou podperou v B. Zaťaženie: {loads}.",
+      "cantilever": "Na konzolu dĺžky {L} m votknutú v A pôsobí po celej dĺžke spojité zaťaženie q = {q} kN/m a na voľnom konci B sila F = {F} kN.",
+      "cantileverMoment": "Na konzolu dĺžky {L} m votknutú v A pôsobí po celej dĺžke spojité zaťaženie q = {q} kN/m, na voľnom konci B sila F = {F} kN a moment {M} kNm proti smeru hodinových ručičiek.",
+      "overhang": "Nosník s rozpätím {L} m medzi pevnou kĺbovou podperou A a posuvnou kĺbovou podperou B má previslý koniec BC dĺžky {c} m. V poli AB pôsobí q = {q} kN/m a na konci C sila F = {F} kN.",
+      "overhangAll": "Nosník s rozpätím {L} m medzi pevnou kĺbovou podperou A a posuvnou kĺbovou podperou B má previslý koniec BC dĺžky {c} m. Po celej dĺžke pôsobí q = {q} kN/m a na konci C sila F = {F} kN.",
+      "gerber": "Nosník s vnútorným kĺbom G vo vzdialenosti {g} m za podperou B leží na pevnej kĺbovej podpere A a na posuvných kĺbových podperách B a C: AB = {L1} m, GC = {L3} m.",
+      "gerberLoad": "Po celej dĺžke naň pôsobí q = {q} kN/m.",
+      "gerberLoadForce": "Po celej dĺžke naň pôsobí q = {q} kN/m a uprostred úseku AB sila F = {F} kN.",
+      "threeHinged": "Rám s rozpätím {L} m a výškou {H} m je uložený na pevných kĺbových podperách A a E a vo vrchole C má kĺb.",
+      "threeHingedWhole": "Na nosník pôsobí po celej dĺžke q = {q} kN/m.",
+      "threeHingedHalf": "Na ľavú polovicu nosníka pôsobí q = {q} kN/m.",
+      "threeHingedWholeForce": "Na nosník pôsobí po celej dĺžke q = {q} kN/m a v bode B vodorovná sila F = {F} kN doprava.",
+      "threeHingedHalfForce": "Na ľavú polovicu nosníka pôsobí q = {q} kN/m a v bode B vodorovná sila F = {F} kN doprava.",
+      "truss": "Warrenov priehradový nosník výšky {h} m má {panels} dĺžky {d} m a je uložený na pevnej kĺbovej podpere A a posuvnej kĺbovej podpere {end}.",
+      "panels": "{n} pole | {n} polia | {n} polí",
+      "trussLoadAll": "V každom uzle horného pásu pôsobí zvislá sila F = {F} kN nadol.",
+      "trussLoad": "V uzloch {joints} pôsobia zvislé sily F = {F} kN nadol.",
+      "continuous": "Spojitý nosník s dvoma poľami s rozpätiami {L1} m a {L2} m je uložený na pevnej kĺbovej podpere A a posuvných kĺbových podperách B a C. V ľavom poli pôsobí q = {q} kN/m.",
+      "continuousBoth": "Spojitý nosník s dvoma poľami s rozpätiami {L1} m a {L2} m je uložený na pevnej kĺbovej podpere A a posuvných kĺbových podperách B a C. V oboch poliach pôsobí q = {q} kN/m.",
+      "portal": "Rám s tuhými rohmi s rozpätím {L} m a výškou {H} m je uložený na pevných kĺbových podperách A a D. Na nosníku BC pôsobí q = {q} kN/m.",
+      "portalForce": "Rám s tuhými rohmi s rozpätím {L} m a výškou {H} m je uložený na pevných kĺbových podperách A a D. Na nosníku BC pôsobí q = {q} kN/m a v bode B vodorovná sila F = {F} kN doprava.",
+      "advancedNote": "EI je konštantné, vplyv šmyku zanedbajte."
+    },
+    "load": {
+      "udlSpan": "q = {q} kN/m po celom rozpätí",
+      "pointFromA": "F = {F} kN vo vzdialenosti {a} m od A",
+      "momentAtB": "moment {M} kNm v bode B proti smeru hodinových ručičiek"
+    },
+    "task": {
+      "beam": "Určte reakcie v podperách a najväčší ohybový moment.",
+      "bar": "Určte reakcie v podperách a silu v prúte {bar}."
+    },
+    "answer": {
+      "horizontal": "Vodorovná reakcia v {node}",
+      "vertical": "Zvislá reakcia v {node}",
+      "fixingMoment": "Moment vo votknutí v {node}",
+      "bar": "Sila v prúte {bar}",
+      "largestMoment": "Najväčší ohybový moment v absolútnej hodnote"
+    },
+    "unit": {
+      "kN": "kN",
+      "kNm": "kNm"
+    }
+  },
+  "library": {
+    "getStarted": "Začíname",
+    "by": "Autor: {author}",
+    "fromRepo": "Na npm zatiaľ nie je: riadok vyššie ju nainštaluje z GitHubu.",
+    "comingToNpm": "Čoskoro na npm. Zdrojový kód je na GitHube."
+  },
+  "solver": {
+    "tagline": "Riešič metódou konečných prvkov pre rovinné rámy, napísaný v TypeScripte.",
+    "seo": {
+      "title": "{'@'}edubeam/fem: riešič MKP pre rovinné rámy v TypeScripte",
+      "description": "Riešič metódou konečných prvkov pre rovinné nosníky, rámy a priehradové konštrukcie v TypeScripte: kĺby, zmena teploty a poklesy podpier, zaťažovacie stavy, presné vnútorné sily."
+    },
+    "run": {
+      "title": "Vypočítané priamo na tejto stránke",
+      "lede": "Vľavo je kód, ktorý sa spustil vo vašom prehliadači pri načítaní stránky. Vpravo sú hodnoty, ktoré vrátil, a obrázok z výsledkov toho istého riešiča vykreslila knižnica {plot}.",
+      "plusShear": "{formula} plus vplyv šmyku"
+    },
+    "features": {
+      "title": "Čo obsahuje",
+      "analyses": {
+        "title": "Výpočty",
+        "body": "Lineárna statika s ľubovoľným počtom zaťažovacích stavov. Priebehy sú medzi uzlami presné, sieť netreba zjemňovať."
+      },
+      "elements": {
+        "title": "Prvky",
+        "body": "Dvojuzlový Timošenkov nosníkový prvok v rovine x–z. S kĺbmi na oboch koncoch sa z neho stane priehradový prút."
+      },
+      "loads": {
+        "title": "Zaťaženie",
+        "body": "Uzlové sily a momenty, osamelé, rovnomerné a lineárne sa meniace zaťaženie prvkov, zmena teploty a poklesy podpier."
+      },
+      "results": {
+        "title": "Výsledky",
+        "body": "N, V a M v ľubovoľnom mieste prvku, deformovaný tvar, koncové sily, posunutia a reakcie."
+      },
+      "reference": "Všetky triedy a metódy"
+    },
+    "behind": {
+      "title": "Riešič, na ktorom stojí EduBeam",
+      "body": "Každý priebeh, reakciu a priehyb v EduBeame aj každý obrázok na tomto webe počíta {name}.",
+      "link": "Prejsť na EduBeam"
+    }
+  },
+  "plot": {
+    "tagline": "Komponenty pre Vue, ktoré kreslia rovinné konštrukcie a ich výsledky v štýle obrázkov z tohto webu.",
+    "seo": {
+      "title": "{'@'}edubeam/plot: obrázky konštrukcií pre Vue",
+      "description": "Komponenty pre Vue, ktoré kreslia rovinné konštrukcie, zaťaženie, reakcie a priebehy N, V, M ako v učebnici: pre stránky predmetov, prezentácie, zadania príkladov aj súbory SVG."
+    },
+    "try": {
+      "title": "Vyskúšajte si to",
+      "lede": "Rám vypočítaný knižnicou {'@'}edubeam/fem priamo na tejto stránke. Zmeňte, čo sa má kresliť, a kód sa podľa toho upraví.",
+      "labelStyle": "Popisy hodnôt",
+      "horizontal": "Vodorovne",
+      "axis": "Pozdĺž poradnice"
+    },
+    "teaching": {
+      "title": "Pre výučbové materiály",
+      "lede": "Model zapísaný v kóde je obrázok, ktorý nikdy nezastará: zmeníte číslo a výkres, reakcie aj priebehy sa prepočítajú. Nové zadanie vyberie seed (počiatočná hodnota generátora) a rovnaký seed dá vždy rovnaké zadanie. Takto vznikli aj {practice} a {exam} na tomto webe.",
+      "practice": "precvičovanie",
+      "exam": "generátor písomiek"
+    },
+    "uses": {
+      "exercises": {
+        "title": "Príklady a písomky",
+        "body": "Pre každého študenta vlastné zadanie zo seedu aj s kľúčom riešení, na tlač alebo ako obrázky pre LaTeX a Word."
+      },
+      "slides": {
+        "title": "Prezentácie a skriptá",
+        "body": "Obrázky, ktoré sa v Slideve, Vue alebo Beameri skladajú klik po kliku a počítajú sa naživo."
+      },
+      "embedding": {
+        "title": "Vo vašej dokumentácii a aplikáciách",
+        "body": "Vite, VitePress alebo Nuxt, vykreslenie na serveri alebo z vopred vypočítaného JSON-u."
+      },
+      "print": {
+        "title": "Súbory na tlač",
+        "body": "Samostatné SVG s pevne zadanými farbami pre Word, LaTeX a Inkscape."
+      }
+    },
+    "features": {
+      "title": "Čo dokáže",
+      "style": {
+        "title": "V štýle obrázkov z tohto webu",
+        "body": "Prúty, podpery, zaťaženie, reakcie a šrafované priebehy ako na tomto webe, s reťazovými kótami a s pomenovanými neznámymi reakciami pre zadania príkladov."
+      },
+      "readable": {
+        "title": "Čitateľné v každej veľkosti",
+        "body": "Text a čiary si držia svoju veľkosť v pixeloch. Hodnoty, ktoré by sa prekrývali, sa posunú alebo vynechajú, nikdy sa neorežú."
+      },
+      "exact": {
+        "title": "Presné",
+        "body": "Priebehy sú priamo polynómy z riešiča: extrémy sa hľadajú presne a skoky pod osamelými silami sa kreslia ako skoky."
+      },
+      "fits": {
+        "title": "Zapadne do stránky",
+        "body": "Farby z vášho CSS, svetlý aj tmavý režim. Vykreslí sa aj na serveri a nikdy neblokuje posúvanie stránky."
+      },
+      "components": "Všetky props"
+    }
+  },
+  "practice": {
+    "seo": {
+      "title": "Precvičovanie statiky s okamžitou kontrolou {'|'} EduBeam",
+      "description": "Precvičovanie statiky zadarmo: nosníky, rámy a priehradové konštrukcie zakaždým s novými číslami. Vypočítajte reakcie a najväčší moment alebo silu v prúte a hneď si ich skontrolujte.",
+      "ogTitle": "Precvičovanie statiky s okamžitou kontrolou",
+      "ogDescription": "Nosníky, rámy a priehradové konštrukcie zakaždým s novými číslami. Reakcie a momenty si hneď skontrolujete a potom uvidíte priebehy."
+    },
+    "title": "Precvičovanie statiky",
+    "lede": "Zakaždým nová úloha s presnými výsledkami, s ktorými porovnáte tie svoje. Vypočítajte ju na papieri, zadajte, čo vám vyšlo, a potom si pozrite priebehy.",
+    "codes": "Každá úloha má kód, napríklad {code}. Rovnaký kód znamená vždy rovnakú úlohu: pošlite ho spolužiakovi alebo otvorte ten, ktorý vám dal vyučujúci.",
+    "announce": "Nová úloha: {structure}, {code}.",
+    "structures": {
+      "title": "Konštrukcie",
+      "count": "{picked} z {total}",
+      "legend": "Konštrukcie, z ktorých vyberá tlačidlo Nová úloha",
+      "determinate": "Staticky určité",
+      "indeterminate": "Staticky neurčité",
+      "note": "Tlačidlo Nová úloha z nich náhodne vyberie jednu."
+    },
+    "code": {
+      "label": "Kód úlohy",
+      "placeholder": "Kód",
+      "open": "Otvoriť",
+      "error": "Toto nie je kód úlohy. Kód tvorí písmeno a číslo, napríklad H2048."
+    },
+    "newProblem": "Nová úloha",
+    "copyLink": "Kopírovať odkaz",
+    "linkCopied": "Odkaz skopírovaný",
+    "barForces": "Sily v prútoch, ťah kladný",
+    "answers": {
+      "title": "Vaše výsledky",
+      "note": "Reakcie sú v zadaní nakreslené v smere, v ktorom sú kladné. Ak niektorá pôsobí opačne, jej výsledok je záporný.",
+      "field": "{label}, {direction}, v {unit}",
+      "fieldMagnitude": "{label}, v {unit}"
+    },
+    "positive": {
+      "right": "kladne doprava",
+      "up": "kladne nahor",
+      "counterClockwise": "kladne proti smeru hodinových ručičiek",
+      "tension": "ťah kladný",
+      "magnitude": "absolútna hodnota"
+    },
+    "mark": {
+      "correct": "správne",
+      "exact": "presný výsledok",
+      "sign": "znamienko?",
+      "signLong": "veľkosť sedí, znamienko nie",
+      "wrong": "nesprávne"
+    },
+    "verdict": {
+      "allRight": "Všetko správne. Do zadania sa teraz nakreslili priebehy.",
+      "sign": "Správne {right} z {total}. Kde je „{sign}“, sedí veľkosť, ale nie smer.",
+      "some": "Správne {right} z {total}. Uznáva sa odchýlka do 1 %.",
+      "revealed": "Presné výsledky sú vedľa vašich políčok a do zadania sa nakreslili priebehy."
+    },
+    "check": "Skontrolovať",
+    "nextProblem": "Ďalšia úloha",
+    "hint": "Nápoveď",
+    "showAnswers": "Ukázať výsledky",
+    "solved": "Vyriešené na tomto zariadení: {n} úloha. | Vyriešené na tomto zariadení: {n} úlohy. | Vyriešené na tomto zariadení: {n} úloh.",
+    "about": {
+      "answers": {
+        "title": "Odkiaľ sú výsledky",
+        "body": "Každú úlohu vypočíta priamo vo vašom prehliadači {solver}, riešič, na ktorom stojí EduBeam, a vykreslí ju {plot}. Najväčší moment sa hľadá presne, nie odčítaním z navzorkovanej krivky."
+      },
+      "signs": {
+        "title": "Znamienka a jednotky",
+        "body": "Výsledky sú v kN a kNm. Zaťaženie pôsobí nadol, ak zadanie neuvádza inak. Reakcie sú kladné doprava, nahor a proti smeru hodinových ručičiek, ako ukazuje každé políčko; sily v prútoch sú kladné v ťahu. Priebehy sa riadia {conventions} EduBeamu.",
+        "conventions": "znamienkovou konvenciou"
+      },
+      "teachers": {
+        "title": "Pre vyučujúcich",
+        "body": "{exam} vytlačí tieto úlohy ako písomky, pre každého študenta iný variant, aj s kľúčom riešení. Podľa kódu úlohy si potom študenti svoje výsledky skontrolujú tu.",
+        "exam": "Generátor písomiek"
+      }
+    }
+  },
+  "exam": {
+    "seo": {
+      "title": "Generátor písomiek zo statiky s kľúčom riešení {'|'} EduBeam",
+      "description": "Písomky zo statiky priamo v prehliadači: nosníky, rámy a priehradové konštrukcie s generovanými číslami, pre každého študenta iný variant, kľúč riešení a obrázky SVG. Zadarmo.",
+      "ogTitle": "Generátor písomiek zo statiky s kľúčom riešení",
+      "ogDescription": "Generované nosníky, rámy a priehradové konštrukcie, variant pre každého študenta, kľúč riešení a obrázky SVG. Zadarmo, v prehliadači."
+    },
+    "title": "Generátor písomiek",
+    "lede": "Písomky s úlohami zo statiky, pre každého študenta iný variant, aj s kľúčom riešení. Všetko vzniká vo vašom prehliadači a nikam sa neodosiela. Nastavenia sú uložené v adrese stránky, takže záložka vráti tie isté písomky.",
+    "defaultTitle": "Písomka zo statiky",
+    "settings": {
+      "title": "Nadpis",
+      "subtitle": "Druhý riadok",
+      "subtitlePlaceholder": "Predmet, dátum, čas na vypracovanie",
+      "problems": "Úlohy",
+      "problem": "Úloha {n}",
+      "determinate": "Staticky určité",
+      "indeterminate": "Staticky neurčité",
+      "remove": "Odobrať úlohu {n}",
+      "add": "Pridať úlohu",
+      "problemsNote": "Každý variant má tieto úlohy v tomto poradí, každú s vlastnými číslami. Najviac {max}.",
+      "versions": "Varianty",
+      "versionsNote": "Jeden pre každého študenta, najviac {max}.",
+      "number": "Číslo písomky",
+      "newNumber": "Nové",
+      "newNumberTitle": "Nové čísla vo všetkých úlohách",
+      "numberNote": "Rovnaké číslo dá vždy rovnaké písomky.",
+      "onPapers": "Na písomkách",
+      "nameLine": "Riadok na meno študenta",
+      "working": "Miesto na výpočet",
+      "key": "Kľúč riešení na konci",
+      "codes": "Kódy úloh",
+      "codesNote": "Na domáce úlohy: študenti si výsledky skontrolujú na stránke {practice}, ktorá ukáže aj riešenie. Pri písomke ich nechajte vypnuté.",
+      "practicePage": "Precvičovanie"
+    },
+    "zipNote": "Súbor .zip obsahuje všetky obrázky a kľúče ako SVG pre LaTeX a Word a výsledky ako tabuľku CSV na opravovanie.",
+    "summary": {
+      "papers": "{n} písomka | {n} písomky | {n} písomiek",
+      "problems": "{n} úloha | {n} úlohy | {n} úloh",
+      "plain": "{papers}, v každej {problems}",
+      "withKey": "{papers}, v každej {problems}, s kľúčom riešení",
+      "withKeys": "{papers}, v každej {problems}, s kľúčmi riešení"
+    },
+    "jump": {
+      "label": "Prejsť na písomku",
+      "placeholder": "Prejsť na…",
+      "papers": "Písomky",
+      "keys": "Kľúče riešení",
+      "key": "Kľúč, variant {n}"
+    },
+    "version": "Variant {n}",
+    "download": "Stiahnuť .zip",
+    "downloadTitle": "Všetky obrázky a kľúče ako SVG pre LaTeX a Word a výsledky ako tabuľku CSV na opravovanie",
+    "print": "Tlačiť",
+    "printLong": "Vytlačiť alebo uložiť ako PDF",
+    "paper": {
+      "name": "Meno",
+      "rules": "Sily v kN, momenty v kNm. Zaťaženie pôsobí nadol, ak úloha neuvádza inak. Reakcie sú sily, ktorými podpery pôsobia na konštrukciu, a sú nakreslené v smere, v ktorom sú kladné: doprava, nahor a proti smeru hodinových ručičiek. Záporný výsledok znamená opačný smer. Sily v prútoch sú kladné v ťahu.",
+      "check": "Výsledky si skontrolujte na {url}"
+    },
+    "key": {
+      "title": "Kľúč riešení",
+      "version": "{title}, variant {n}",
+      "exam": "Písomka č. {n}"
+    },
+    "tension": "ťah +",
+    "solutionFigure": "{name}: riešenie"
+  },
+  "exerciseGenerator": {
+    "solveIt": "Vyriešiť na stránke Precvičovanie",
+    "exercise": "Zadanie",
+    "key": "Kľúč riešení",
+    "solution": "Riešenie",
+    "caption": "Vygenerované vo vašom prehliadači: seed vyberie konštrukciu a jej čísla, {'@'}edubeam/fem ju vypočíta a {'@'}edubeam/plot nakreslí zadanie aj riešenie. Celé písomky pripraví {exam}.",
+    "exam": "generátor písomiek",
+    "newExercise": "Nový príklad"
+  },
+  "ui": {
+    "menu": "Ponuka",
+    "darkMode": "Tmavý režim",
+    "lightMode": "Svetlý režim",
+    "language": "Jazyk: {name}",
+    "guideNav": "Príručka",
+    "copy": "Kopírovať",
+    "copied": "Skopírované",
+    "copyCode": "Kopírovať kód",
+    "docs": "Dokumentácia",
+    "elementSketch": "Prvok v lokálnych osiach"
+  },
+  "beamFigure": {
+    "aria": "Nosník s previslým koncom s rovnomerným zaťažením a pohyblivou osamelou silou, s priebehmi priečnych síl, ohybových momentov a priehybu",
+    "slider": "Poloha osamelej sily 20 kN",
+    "loadAt": "{x} m od A",
+    "hint": "Presuňte silu alebo ukážte na priebeh a odčítajte hodnotu.",
+    "fromA": "{x} m od A",
+    "reactions": "reakcie {a} kN v A a {b} kN v B",
+    "sagging": "najväčší kladný moment {m} kNm",
+    "hogging": "záporný moment nad B {m} kNm"
+  },
+  "plotTexts": {
+    "structure": "Konštrukcia",
+    "structureWith": "Konštrukcia: {parts}",
+    "layers": {
+      "N": "normálové sily",
+      "V": "priečne sily",
+      "M": "ohybové momenty",
+      "w": "deformovaný tvar",
+      "reactions": "reakcie",
+      "loads": "zaťaženie"
+    },
+    "loadHandle": "Poloha zaťaženia {load}",
+    "loadPosition": "{metres} m od začiatku nosníka",
+    "stack": "Nosník so zaťažením",
+    "stackWith": "Nosník so zaťažením a pod ním priebehy: {rows}",
+    "rows": {
+      "N": "normálové sily",
+      "V": "priečne sily",
+      "M": "ohybové momenty",
+      "w": "priehyb"
+    },
+    "temperatureUniform": "ΔTs",
+    "temperatureGradient": "ΔTd − ΔTh"
+  }
+}

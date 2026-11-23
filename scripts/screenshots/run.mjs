@@ -32,6 +32,7 @@ const APP = process.env.APP ?? 'http://localhost:5173/';
 const APP_LANGUAGE = {
   en: 'en',
   cs: 'cs',
+  sk: 'sk',
   de: 'de',
   es: 'es',
   fr: 'fr',
@@ -48,6 +49,9 @@ const APP_LANGUAGE = {
   id: 'id',
   ja: 'ja',
   ko: 'ko',
+  hu: 'hu',
+  ro: 'ro',
+  el: 'el',
 };
 
 const args = process.argv.slice(2);

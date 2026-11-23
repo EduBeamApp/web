@@ -75,7 +75,7 @@ Uygulamaya hiç gerek duymayan bir şekil için, örneğin bir sayfadaki, slaytt
 | `model=<veri>` | Kodlanmış modeli yükler ve ekrana sığdırır. Bu parametreyi **Modeli paylaş** yazar. |
 | `viewer=1` | [Görüntüleyici modu](#embed-a-read-only-viewer). |
 | `show=<harfler>` | Uygulamayı yalnızca bu katmanlar açık olacak şekilde açar; her katman bir harfle gösterilir: `N` normal kuvvet, `V` kesme kuvveti, `M` eğilme momenti, `U` deforme şekil, `R` mesnet tepkileri, `L` yükler, `S` mesnetler, `n` düğüm etiketleri, `e` eleman etiketleri. `show=MRLS` eğilme momentini, mesnet tepkilerini, yükleri ve mesnetleri gösterir. Bu parametreyi **Gördüğümü göster** yazar. |
-| `lang=<kod>` | Arayüz dilini değiştirir: `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (Çince), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`. |
+| `lang=<kod>` | Arayüz dilini değiştirir: `en`, `cs`, `sk`, `de`, `fr`, `es`, `pt`, `pl`, `hu`, `ro`, `el`, `cn` (Çince), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`. |
 | `panel=examples` | Örnek galerisini hemen açar. |
 
 Parametreler `&` ile birleştirilir: `?lang=de&viewer=1&model=…` gibi. EduBeam parametreleri okuduktan sonra adres çubuğundan kaldırır. `lang` ve `show` değerleri, ziyaretçi bunları uygulamada kendisi seçmiş gibi onun ayarlarına kaydedilir.

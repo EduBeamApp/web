@@ -68,7 +68,7 @@ x–z समतल में बीम, सतत बीम, फ्रेम औ
 हाथ से की गई गणना की तुरंत जाँच, और अभ्यास प्रश्न जो आपके उत्तर साथ-साथ जाँचते हैं।
 :::
 :::card{title="शिक्षक" icon="lucide:presentation" to="/hi/guide/teaching"}
-प्रोजेक्टर पर लाइव दिखाएँ कि सपोर्ट, हिंज और भार बलों को कैसे बदलते हैं, 18 भाषाओं में; और हर विद्यार्थी के लिए अलग प्रश्नपत्र छापें।
+प्रोजेक्टर पर लाइव दिखाएँ कि सपोर्ट, हिंज और भार बलों को कैसे बदलते हैं, 22 भाषाओं में; और हर विद्यार्थी के लिए अलग प्रश्नपत्र छापें।
 :::
 :::card{title="इंजीनियर" icon="lucide:hard-hat" to="/hi/elements/analysis"}
 किसी भारी डेस्कटॉप पैकेज को खोलने से पहले एक त्वरित जाँच; हल का हर चरण इस साइट पर समझाया गया है।
@@ -124,7 +124,7 @@ Vue 3 कंपोनेंट जो हल की गई संरचना �
 
 ## भाषाएँ {#languages}
 
-EduBeam 18 भाषाओं में उपलब्ध है और आपके ब्राउज़र की भाषा में शुरू होता है। भाषा **सेटिंग्स → भाषा और लोकेल** में बदलें, या यहाँ से चुनें:
+EduBeam 22 भाषाओं में उपलब्ध है और आपके ब्राउज़र की भाषा में शुरू होता है। भाषा **सेटिंग्स → भाषा और लोकेल** में बदलें, या यहाँ से चुनें:
 
 ::div{.chips}
 - [:icon{name="circle-flags:lang-en"} English](https://run.edubeam.app/?lang=en){target="_blank"}
@@ -134,9 +134,13 @@ EduBeam 18 भाषाओं में उपलब्ध है और आप�
 - [:icon{name="circle-flags:lang-es"} Español](https://run.edubeam.app/?lang=es){target="_blank"}
 - [:icon{name="circle-flags:lang-fr"} Français](https://run.edubeam.app/?lang=fr){target="_blank"}
 - [:icon{name="circle-flags:lang-it"} Italiano](https://run.edubeam.app/?lang=it){target="_blank"}
+- [:icon{name="circle-flags:lang-hu"} Magyar](https://run.edubeam.app/?lang=hu){target="_blank"}
 - [:icon{name="circle-flags:lang-pl"} Polski](https://run.edubeam.app/?lang=pl){target="_blank"}
 - [:icon{name="circle-flags:lang-pt-br"} Português](https://run.edubeam.app/?lang=pt){target="_blank"}
+- [:icon{name="circle-flags:lang-ro"} Română](https://run.edubeam.app/?lang=ro){target="_blank"}
+- [:icon{name="circle-flags:lang-sk"} Slovenčina](https://run.edubeam.app/?lang=sk){target="_blank"}
 - [:icon{name="circle-flags:lang-vi"} Tiếng Việt](https://run.edubeam.app/?lang=vi){target="_blank"}
+- [:icon{name="circle-flags:lang-el"} Ελληνικά](https://run.edubeam.app/?lang=el){target="_blank"}
 - [:icon{name="circle-flags:lang-ru"} Русский](https://run.edubeam.app/?lang=ru){target="_blank"}
 - [:icon{name="circle-flags:lang-tr"} Türkçe](https://run.edubeam.app/?lang=tr){target="_blank"}
 - [:icon{name="circle-flags:lang-uk"} Українська](https://run.edubeam.app/?lang=uk){target="_blank"}

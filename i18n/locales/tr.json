@@ -178,7 +178,7 @@
         },
         "languages": {
           "title": "Kendi dilleri, kendi birimleri",
-          "body": "Öğrenciler 18 dilden birinde, SI ya da ABD birimleriyle ve ders kitaplarının kullandığı eksenlerle çalışır."
+          "body": "Öğrenciler 22 dilden birinde, SI ya da ABD birimleriyle ve ders kitaplarının kullandığı eksenlerle çalışır."
         }
       },
       "answerTitle": "Cevap: çubuk kuvvetleri",
@@ -258,7 +258,7 @@
           "body": "Tüm model tek bir bağlantıda ya da proje dosyasında; çizimler PNG veya SVG, tablolar CSV olarak."
         },
         "settings": {
-          "title": "18 dil",
+          "title": "22 dil",
           "body": "SI ya da ABD birimleri; z aşağı ya da ders kitaplarındaki gibi y yukarı eksenler."
         }
       }

@@ -19,7 +19,7 @@ Ayarlar tarayıcınızda saklanır ve sayfa yenilendiğinde kaybolmaz. Bölüm l
 
 ![Ayarlar → Dil ve bölge](/screenshots/tr/settings-language.webp)
 
-**Dil.** 18 dil vardır; ilk açılışta EduBeam tarayıcınızın dilini kullanır. Ondalık ayırıcı dile göre belirlenir. Bir bağlantı, okuyucu için dili de seçebilir: `?lang=` parametresini şu kodlardan biriyle ekleyin: `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (Çince), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`.
+**Dil.** 22 dil vardır; ilk açılışta EduBeam tarayıcınızın dilini kullanır. Ondalık ayırıcı dile göre belirlenir. Bir bağlantı, okuyucu için dili de seçebilir: `?lang=` parametresini şu kodlardan biriyle ekleyin: `en`, `cs`, `sk`, `de`, `fr`, `es`, `pt`, `pl`, `hu`, `ro`, `el`, `cn` (Çince), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`.
 
 **Sayı biçimi.** Sonuç değerlerinin tablolarda ve bilgi kutularında nasıl yazılacağı: *Bilimsel* (1,5 · 10⁴, varsayılan), *Mühendislik* (15 · 10³) veya *Otomatik*. Bkz. [Sayı biçimi](/tr/essentials/results#number-format).
 

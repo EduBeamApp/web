@@ -19,7 +19,7 @@ Die Einstellungen werden in Ihrem Browser gespeichert und überstehen ein Neulad
 
 ![Einstellungen → Sprache & Region](/screenshots/de/settings-language.webp)
 
-**Sprache.** 18 Sprachen; beim ersten Besuch richtet sich EduBeam nach Ihrem Browser. Das Dezimaltrennzeichen folgt der Sprache. Ein Link kann die Sprache für die Lesenden festlegen: Hängen Sie `?lang=` mit einem der Codes `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (Chinesisch), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko` an.
+**Sprache.** 22 Sprachen; beim ersten Besuch richtet sich EduBeam nach Ihrem Browser. Das Dezimaltrennzeichen folgt der Sprache. Ein Link kann die Sprache für die Lesenden festlegen: Hängen Sie `?lang=` mit einem der Codes `en`, `cs`, `sk`, `de`, `fr`, `es`, `pt`, `pl`, `hu`, `ro`, `el`, `cn` (Chinesisch), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko` an.
 
 **Zahlenformat.** Wie Ergebniswerte in den Tabellen und Tooltips geschrieben werden: *Wissenschaftlich* (1,5 · 10⁴, Standard), *Technisch* (15 · 10³) oder *Automatisch*. Siehe [Zahlenformat](/de/essentials/results#number-format).
 

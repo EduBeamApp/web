@@ -75,7 +75,7 @@ Untuk gambar yang sama sekali tidak memerlukan aplikasi, misalnya diagram statis
 | `model=<data>` | Memuat model yang disandikan dan menyesuaikannya dengan layar. Ditulis oleh **Bagikan model**. |
 | `viewer=1` | [Mode penampil](#embed-a-read-only-viewer). |
 | `show=<letters>` | Membuka aplikasi dengan hanya lapisan-lapisan ini yang aktif, masing-masing ditandai satu huruf: `N` gaya normal, `V` gaya geser, `M` momen lentur, `U` bentuk deformasi, `R` reaksi, `L` beban, `S` tumpuan, `n` label joint, `e` label elemen. `show=MRLS` menampilkan momen lentur, reaksi, beban, dan tumpuan. Ditulis oleh **Tampilkan yang saya lihat**. |
-| `lang=<code>` | Mengganti bahasa antarmuka: `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (Tionghoa), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`. |
+| `lang=<code>` | Mengganti bahasa antarmuka: `en`, `cs`, `sk`, `de`, `fr`, `es`, `pt`, `pl`, `hu`, `ro`, `el`, `cn` (Tionghoa), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`. |
 | `panel=examples` | Langsung membuka galeri contoh. |
 
 Parameter digabungkan dengan `&`, misalnya `?lang=id&viewer=1&model=…`. Setelah membacanya, EduBeam menghapus parameter dari bilah alamat. `lang` dan `show` disimpan sebagai pengaturan pengunjung, seolah-olah ia memilihnya sendiri di aplikasi.

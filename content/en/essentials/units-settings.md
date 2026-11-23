@@ -19,7 +19,7 @@ Settings are saved in your browser and survive reloads. **Reset settings**, belo
 
 ![Settings → Language & Locale](/screenshots/settings-language.webp)
 
-**Language.** 18 languages; the first time, EduBeam follows your browser. The decimal separator follows the language. A link can choose the language for the reader: add `?lang=` with one of `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (Chinese), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`.
+**Language.** 22 languages; the first time, EduBeam follows your browser. The decimal separator follows the language. A link can choose the language for the reader: add `?lang=` with one of `en`, `cs`, `sk`, `de`, `fr`, `es`, `pt`, `pl`, `hu`, `ro`, `el`, `cn` (Chinese), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`.
 
 **Number format.** How result values are written in the tables and tooltips: *Scientific* (1.5 · 10⁴, the default), *Engineering* (15 · 10³) or *Automatic*. See [Number format](/essentials/results#number-format).
 

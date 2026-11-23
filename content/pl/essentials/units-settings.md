@@ -19,7 +19,7 @@ Ustawienia zapisują się w przeglądarce i przetrwają przeładowanie strony.
 
 ![Ustawienia → Język i ustawienia regionalne](/screenshots/pl/settings-language.webp)
 
-**Język.** 18 języków; za pierwszym razem EduBeam przejmuje język przeglądarki. Separator dziesiętny zależy od języka. W linku możesz wybrać język dla odbiorcy: dodaj `?lang=` z jednym z kodów `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (chiński), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`.
+**Język.** 22 języki; za pierwszym razem EduBeam przejmuje język przeglądarki. Separator dziesiętny zależy od języka. W linku możesz wybrać język dla odbiorcy: dodaj `?lang=` z jednym z kodów `en`, `cs`, `sk`, `de`, `fr`, `es`, `pt`, `pl`, `hu`, `ro`, `el`, `cn` (chiński), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`.
 
 **Format liczb.** Sposób zapisu wyników w tabelach i podpowiedziach: *Naukowy* (1,5 · 10⁴, domyślnie), *Inżynierski* (15 · 10³) lub *Automatyczny*. Zob. [Format liczb](/pl/essentials/results#number-format).
 

@@ -1,0 +1,673 @@
+{
+  "meta": {
+    "description": "Calcul structural 2D gratuit online – grinzi, cadre și grinzi cu zăbrele calculate instantaneu în browser.",
+    "imageAlt": "EduBeam, calcul structural 2D gratuit online: aplicația cu un cadru și diagrama lui de moment încovoietor"
+  },
+  "nav": {
+    "guide": "Ghid",
+    "tutorials": "Tutoriale",
+    "examples": "Exemple",
+    "faq": "Întrebări frecvente",
+    "theory": "Teorie",
+    "openApp": "Deschide aplicația",
+    "libraries": "Biblioteci",
+    "practice": "Exerciții"
+  },
+  "docs": {
+    "onThisPage": "Pe această pagină",
+    "prev": "Pagina anterioară",
+    "next": "Pagina următoare",
+    "lastUpdated": "Ultima actualizare"
+  },
+  "footer": {
+    "copyright": "Contribuitorii EduBeam"
+  },
+  "components": {
+    "loadsTitle": "Tipuri de încărcări",
+    "loadsLede": "Cum arată în EduBeam tipurile obișnuite de încărcări. Fiecare card este un model real, calculat, și se deschide în aplicație exact așa cum este definit.",
+    "openInApp": "Deschide în EduBeam",
+    "simplySupportedBeam": "Grindă simplu rezemată",
+    "udlBlurb": "Deschidere articulată și simplu rezemată, încărcată cu 12 kN/m: diagramele clasice de forță tăietoare și moment încovoietor.",
+    "trapezoidalBlurb": "O încărcare care crește de la 4 la 14 kN/m pe deschiderea din dreapta.",
+    "concentratedBlurb": "O forță de 18 kN în deschiderea din stânga, la 2 m de reazem, fără nod sub ea.",
+    "nodalBlurb": "O forță de 20 kN în nodul dintre cele două deschideri: diagrama de moment are o frântură sub ea.",
+    "temperatureBlurb": "O diferență de temperatură pe înălțimea secțiunii (sus mai cald decât jos) și curbura pe care o produce.",
+    "promoTitle": "Du-ți cadrele",
+    "promoAccent": "în 3D.",
+    "promoSubtitle": "plăci, învelitori și verificări de oțel în browser",
+    "promoCta": "Încearcă gratuit",
+    "spanLength": "Deschidere",
+    "loadIntensity": "Intensitatea încărcării",
+    "loadPosition": "Poziția încărcării",
+    "heroHint": "Mută încărcarea. Diagramele o urmează."
+  },
+  "common": {
+    "deformedShape": "Deformata",
+    "normalForce": "Forță axială",
+    "shearForce": "Forță tăietoare",
+    "bendingMoment": "Moment încovoietor"
+  },
+  "loadType": {
+    "udl": "Încărcare uniform distribuită",
+    "trapezoidal": "Încărcare trapezoidală",
+    "concentrated": "Forță concentrată",
+    "temperature": "Variație de temperatură"
+  },
+  "loads": {
+    "nodalLoad": "Încărcare nodală",
+    "temperatureDeltaTbtNoHTML": "ΔTb-ΔTt",
+    "temperatureDeltaTsNoHTML": "ΔTc"
+  },
+  "examples": {
+    "items": {
+      "welcome": {
+        "title": "Grindă static nedeterminată",
+        "blurb": "Grindă static nedeterminată de 3 m, încastrată și simplu rezemată, încărcată cu 10 kN/m uniform distribuit."
+      },
+      "cantilever": {
+        "title": "Consolă",
+        "blurb": "Consolă de 4 m încărcată cu o forță nodală de 18 kN în jos, cu curbura și săgeata la capăt."
+      },
+      "pratt": {
+        "title": "Grindă cu zăbrele Warren",
+        "blurb": "Grindă cu zăbrele Warren simplă, cu forțe de 8 kN în noduri, care arată distribuția forțelor axiale și deplasările."
+      },
+      "continuous": {
+        "title": "Grindă continuă cu trei deschideri",
+        "blurb": "Deschideri de 5+6+5 m cu încărcare uniform distribuită + forță concentrată + încărcare uniform distribuită, pentru a compara curbura și rotirile din reazeme."
+      },
+      "portal": {
+        "title": "Cadru portal",
+        "blurb": "Grindă de 8 m pe stâlpi de 6 m, cu încărcare uniform distribuită pe acoperiș și forțe laterale și verticale la colțuri, pentru verificarea deplasării laterale și a încovoierii."
+      },
+      "temperature": {
+        "title": "Variație de temperatură",
+        "blurb": "Grindă simplu rezemată de 8 m cu variație de temperatură uniformă și neuniformă."
+      }
+    }
+  },
+  "search": {
+    "label": "Căutare",
+    "placeholder": "Caută în documentație",
+    "noResults": "Niciun rezultat pentru „{query}”",
+    "shortcut": "Ctrl K"
+  },
+  "home": {
+    "seo": {
+      "title": "EduBeam: calcul structural gratuit online",
+      "description": "Calcul structural 2D gratuit în browser. Desenează grinzi, cadre și grinzi cu zăbrele, adaugă încărcări și obține imediat diagramele N, V, M, reacțiunile și săgețile."
+    },
+    "hero": {
+      "title": "Calcul structural online.",
+      "lede": "EduBeam este o aplicație gratuită de calcul structural pentru grinzi, cadre și grinzi cu zăbrele. Desenezi modelul în browser, iar diagramele, reacțiunile și săgețile se actualizează la fiecare modificare.",
+      "launch": "Pornește EduBeam",
+      "guide": "Citește ghidul",
+      "note": "Gratuit și open source. Fără instalare, fără cont."
+    },
+    "steps": {
+      "title": "De la schiță la diagrame în patru pași",
+      "lede": "În ordinea în care ai rezolva pe hârtie. Ghidul de început te duce printr-o grindă reală în aproximativ zece minute.",
+      "link": "Urmează ghidul de început",
+      "items": {
+        "nodes": {
+          "label": "Noduri",
+          "title": "Plasează nodurile",
+          "body": "Dă clic pe grilă sau introdu coordonatele. Aici, cele patru colțuri ale unui cadru portal cu deschiderea de 6 m și înălțimea de 4 m."
+        },
+        "elements": {
+          "label": "Bare",
+          "title": "Leagă-le prin bare",
+          "body": "Unește nodurile cu bare și dă-le un material și o secțiune transversală: una din bibliotecă sau un poligon desenat de tine."
+        },
+        "loads": {
+          "label": "Reazeme și încărcări",
+          "title": "Rezemă-l și încarcă-l",
+          "body": "Articulații la ambele baze, 10 kN/m pe riglă și o forță de 15 kN care împinge colțul din stânga sus."
+        },
+        "results": {
+          "label": "Rezultate",
+          "title": "Citește rezultatele",
+          "body": "Diagrama de moment, trasată pe fibra întinsă, și reacțiunile apar de îndată ce cadrul este stabil. Aceste valori sunt calculate chiar de EduBeam, pe această pagină."
+        }
+      }
+    },
+    "examples": {
+      "title": "Deschide un model calculat cu un singur clic",
+      "lede": "Fiecare dintre ele este calculat pe această pagină, de același program de calcul pe care îl folosește aplicația. Deschide unul în EduBeam și modifică-l.",
+      "link": "Toate exemplele"
+    },
+    "verify": {
+      "title": "Verificat cu manualul",
+      "lede": "EduBeam calculează orice model prin metoda elementelor finite. Pentru cazurile clasice dă soluția exactă, până la ultima zecimală. Coloana din dreapta a fost calculată în browserul tău la încărcarea paginii.",
+      "case": "Caz",
+      "formula": "Formulă exactă",
+      "hand": "Calcul manual",
+      "edubeam": "EduBeam",
+      "link": "Mai multe cazuri de referință",
+      "steel": "Oțel IPE 200: E = 210 GPa, I = 1943 cm⁴. Deformațiile din forfecare sunt neglijate, așa cum presupun formulele exacte.",
+      "cases": {
+        "ssMoment": "Grindă simplu rezemată, 12 kN/m pe 6 m: momentul maxim",
+        "ssDeflection": "Aceeași grindă: săgeata maximă",
+        "cantilever": "Consolă de 4 m, 18 kN la capătul liber: momentul în încastrare",
+        "fixed": "Încastrată la ambele capete, 10 kN/m pe 6 m: momentul de capăt",
+        "propped": "Încastrată și simplu rezemată, 10 kN/m pe 6 m: reacțiunea din reazemul simplu"
+      }
+    },
+    "teaching": {
+      "title": "Făcut pentru sala de curs",
+      "lede": "Pune un model în slide-uri sau în notele de curs, iar fiecare student deschide exact același model.",
+      "link": "Predarea cu EduBeam",
+      "slideCourse": "Statica construcțiilor",
+      "slideTitle": "Curs 7: Grinzi cu zăbrele",
+      "slideBody": "O grindă cu zăbrele Warren încărcată cu trei forțe de 8 kN în noduri. Care bare sunt întinse?",
+      "shareLabel": "Link de partajare",
+      "copy": "Copiază",
+      "copied": "Copiat",
+      "items": {
+        "share": {
+          "title": "Un model este un link",
+          "body": "Întregul model se află în URL. Pune-l într-o temă, iar el se deschide exact cum l-ai lăsat, chiar și peste ani."
+        },
+        "embed": {
+          "title": "În slide-uri",
+          "body": "Un mod doar pentru vizualizare arată modelul calculat fără instrumentele de editare, potrivit pentru un slide sau o pagină web."
+        },
+        "mechanism": {
+          "title": "Explică ce nu e în regulă",
+          "body": "Când o structură este un mecanism, EduBeam arată cum s-ar mișca, în loc să refuze pur și simplu calculul."
+        },
+        "languages": {
+          "title": "Limba și unitățile lor",
+          "body": "Studenții pot lucra în oricare dintre cele 22 de limbi, în unități SI sau americane, cu axele din manualul lor."
+        }
+      },
+      "answerTitle": "Răspuns: eforturile din bare",
+      "answerBody": "Întinderea este pozitivă. Talpa inferioară este întinsă; talpa superioară și ambii montanți de capăt sunt comprimați; diagonalele interioare alternează.",
+      "prevSlide": "Slide-ul anterior",
+      "nextSlide": "Slide-ul următor"
+    },
+    "final": {
+      "title": "Desenează prima ta grindă.",
+      "lede": "Deschide EduBeam și alege Desenează prima grindă. Un scurt exercițiu ghidat te duce de la un ecran gol la o grindă rezemată și încărcată, cu diagramele ei.",
+      "paths": {
+        "quickStart": {
+          "title": "Ghid de început",
+          "body": "Modelează pas cu pas o grindă și verific-o prin calcul manual. 10 minute."
+        },
+        "examples": {
+          "title": "Exemple",
+          "body": "Modele calculate pe care le deschizi, le modifici și din care înveți."
+        },
+        "teaching": {
+          "title": "Predare",
+          "body": "Linkuri de partajare, slide-uri și exerciții pentru cursul tău."
+        }
+      }
+    },
+    "model": {
+      "title": "Ce poți modela",
+      "lede": "Structuri plane calculate prin metoda elementelor finite, cu reazemele, încărcările și rezultatele dintr-un curs de statică.",
+      "supports": {
+        "title": "Reazeme",
+        "items": {
+          "pin": "Articulație",
+          "roller": "Reazem simplu",
+          "fixed": "Încastrare",
+          "slider": "Încastrare glisantă",
+          "angled": "Sub orice unghi"
+        },
+        "note": "Plus cedări de reazem și rotiri impuse."
+      },
+      "loads": {
+        "title": "Încărcări",
+        "items": {
+          "point": "Concentrată",
+          "uniform": "Uniform distribuită",
+          "trapezoidal": "Trapezoidală",
+          "moment": "Moment",
+          "temperature": "Temperatură"
+        },
+        "note": "În noduri sau oriunde de-a lungul unei bare, în axe locale sau globale."
+      },
+      "sections": {
+        "title": "Secțiuni transversale",
+        "items": {
+          "i": "I și H",
+          "hollow": "Casetate",
+          "solid": "Pline",
+          "tube": "Țevi",
+          "polygon": "Poligonul tău"
+        },
+        "note": "IPE, HEA, AISC W și HSS din bibliotecă sau orice poligon pe care îl desenezi."
+      },
+      "results": {
+        "title": "Rezultate",
+        "note": "Forța axială, forța tăietoare, momentul încovoietor și deformata, cu reacțiunile și valoarea în orice punct."
+      },
+      "facts": {
+        "elements": {
+          "title": "Bare Timoshenko",
+          "body": "Deformațiile din forfecare acolo unde contează; la barele zvelte rezultatele coincid cu teoria Euler–Bernoulli."
+        },
+        "structures": {
+          "title": "Grinzi, cadre, grinzi cu zăbrele",
+          "body": "În plan, cu articulații la orice capăt de bară."
+        },
+        "sharing": {
+          "title": "Linkuri și fișiere",
+          "body": "Un model întreg într-un singur link sau într-un fișier de proiect; desene ca PNG sau SVG, tabele ca CSV."
+        },
+        "settings": {
+          "title": "22 de limbi",
+          "body": "Unități SI sau americane, axa z în jos sau axa y în sus, ca în manuale."
+        }
+      }
+    },
+    "heritage": {
+      "title": "Open source, cu rădăcini în sala de curs",
+      "body": "EduBeam continuă programul desktop EduBeam, creat la Departamentul de Mecanică al Facultății de Construcții a Universității Tehnice Cehe din Praga (ČVUT), și deschide în continuare fișierele de sesiune ale acestuia. Versiunea web este gratuită și open source, la fel ca {'@'}edubeam/fem, programul de calcul din spatele fiecărei valori de pe această pagină.",
+      "github": "EduBeam pe GitHub",
+      "solver": "{'@'}edubeam/fem pe GitHub",
+      "team": "Cine face EduBeam"
+    }
+  },
+  "error": {
+    "notFoundTitle": "Pagina nu a fost găsită",
+    "notFound": "La această adresă nu există nicio pagină. Poate a fost mutată sau linkul conține o greșeală.",
+    "otherTitle": "Ceva nu a mers bine",
+    "other": "Această pagină nu a putut fi afișată. De obicei ajută reîncărcarea ei.",
+    "home": "Pagina principală",
+    "guide": "Citește ghidul",
+    "message": "Reazemele nu fixează structura: încă se poate roti liber.",
+    "figure": "O grindă pe o singură articulație, fără al doilea reazem, care se rotește liber în jurul articulației sub încărcare"
+  },
+  "problems": {
+    "families": {
+      "simple": {
+        "name": "Grindă simplu rezemată",
+        "skill": "Echilibrul unei grinzi",
+        "hint": "Scrie suma momentelor față de A pentru reacțiunea din B, apoi suma proiecțiilor pe verticală pentru A. Momentul maxim se află acolo unde forța tăietoare trece prin zero sau sub o forță concentrată."
+      },
+      "cantilever": {
+        "name": "Consolă",
+        "skill": "Încastrarea",
+        "hint": "Toate reacțiunile sunt în încastrare: scrie suma proiecțiilor pe verticală, apoi suma momentelor față de A. La o consolă momentul maxim este în încastrare."
+      },
+      "overhang": {
+        "name": "Grindă cu consolă",
+        "skill": "Moment negativ pe reazem",
+        "hint": "Scrie suma momentelor față de A pentru reacțiunea din B. Apoi compară doi candidați pentru momentul maxim: în deschidere, unde V = 0, și pe reazemul B, unde consola produce moment negativ."
+      },
+      "gerber": {
+        "name": "Grindă Gerber",
+        "skill": "Articulația interioară",
+        "hint": "Începe cu GC: se sprijină pe articulația G și pe reazemul simplu C, iar o articulație nu transmite moment. Apoi încarcă ABG cu forța transmisă prin articulație și rezolv-o ca pe o grindă cu consolă."
+      },
+      "threeHinged": {
+        "name": "Cadru cu trei articulații",
+        "skill": "Împingerea și articulația de la cheie",
+        "hint": "Momentele față de A și față de E dau reacțiunile verticale. Apoi secționează prin articulația de la cheie C, unde M = 0, și scrie momentele față de C pentru o jumătate: obții împingerea orizontală."
+      },
+      "truss": {
+        "name": "Grindă cu zăbrele Warren",
+        "skill": "Noduri și secțiuni",
+        "hint": "Află reacțiunile din echilibrul întregii grinzi cu zăbrele. Apoi secționează trei bare, dintre care una este bara căutată, și scrie momentele față de nodul în care se întâlnesc celelalte două; pentru o diagonală, scrie în schimb suma proiecțiilor pe verticală."
+      },
+      "continuous": {
+        "name": "Grindă continuă cu două deschideri",
+        "skill": "O dată static nedeterminată",
+        "hint": "Grinda este o dată static nedeterminată: ia ca necunoscută momentul de pe reazemul B. Ecuația celor trei momente, cu M = 0 în A și C, îl dă direct; reacțiunile rezultă apoi deschidere cu deschidere."
+      },
+      "portal": {
+        "name": "Cadru portal",
+        "skill": "Cadru cu noduri rigide",
+        "hint": "Cadrul este o dată static nedeterminat: eliberează reacțiunea orizontală din D, află deplasarea orizontală a lui D din încărcări și dintr-o forță unitară aplicată acolo (lucru mecanic virtual, cu diagramele M) și impune ca ea să fie zero."
+      }
+    },
+    "statement": {
+      "simple": "Grindă cu deschiderea de {L} m, articulată în A și simplu rezemată în B, încărcată cu {loads}.",
+      "cantilever": "Consolă de {L} m încastrată în A, încărcată cu q = {q} kN/m pe toată lungimea și cu F = {F} kN la capătul liber B.",
+      "cantileverMoment": "Consolă de {L} m încastrată în A, încărcată cu q = {q} kN/m pe toată lungimea, cu F = {F} kN la capătul liber B și cu un moment de {M} kNm în sens antiorar în B.",
+      "overhang": "Grindă cu deschiderea de {L} m, articulată în A și simplu rezemată în B, cu o consolă de {c} m până în C, încărcată cu q = {q} kN/m pe deschidere și cu F = {F} kN la capătul C.",
+      "overhangAll": "Grindă cu deschiderea de {L} m, articulată în A și simplu rezemată în B, cu o consolă de {c} m până în C, încărcată cu q = {q} kN/m pe toată lungimea și cu F = {F} kN la capătul C.",
+      "gerber": "Grindă cu o articulație interioară în G, la {g} m după B, rezemată pe o articulație în A și pe reazeme simple în B și C: AB = {L1} m, GC = {L3} m.",
+      "gerberLoad": "Grinda este încărcată cu q = {q} kN/m pe toată lungimea.",
+      "gerberLoadForce": "Grinda este încărcată cu q = {q} kN/m pe toată lungimea și cu F = {F} kN la mijlocul lui AB.",
+      "threeHinged": "Cadru cu deschiderea de {L} m și înălțimea de {H} m, articulat în A și E, cu o articulație la cheie în C.",
+      "threeHingedWhole": "Rigla este încărcată cu q = {q} kN/m pe toată lungimea.",
+      "threeHingedHalf": "Rigla este încărcată cu q = {q} kN/m pe jumătatea din stânga.",
+      "threeHingedWholeForce": "Rigla este încărcată cu q = {q} kN/m pe toată lungimea, iar forța F = {F} kN împinge nodul B spre dreapta.",
+      "threeHingedHalfForce": "Rigla este încărcată cu q = {q} kN/m pe jumătatea din stânga, iar forța F = {F} kN împinge nodul B spre dreapta.",
+      "truss": "Grindă cu zăbrele Warren cu {panels}, fiecare lung de {d} m și înalt de {h} m, articulată în A și simplu rezemată în {end}.",
+      "panels": "{n} panou | {n} panouri | {n} de panouri",
+      "trussLoadAll": "În fiecare nod al tălpii superioare acționează în jos o forță F = {F} kN.",
+      "trussLoad": "În nodurile {joints} acționează în jos câte o forță F = {F} kN.",
+      "continuous": "Grindă continuă peste B, articulată în A și simplu rezemată în B și C, cu deschiderile de {L1} m și {L2} m și cu q = {q} kN/m pe deschiderea din stânga.",
+      "continuousBoth": "Grindă continuă peste B, articulată în A și simplu rezemată în B și C, cu deschiderile de {L1} m și {L2} m și cu q = {q} kN/m pe ambele deschideri.",
+      "portal": "Cadru cu noduri rigide, cu deschiderea de {L} m și înălțimea de {H} m, articulat în A și D, cu q = {q} kN/m pe rigla BC.",
+      "portalForce": "Cadru cu noduri rigide, cu deschiderea de {L} m și înălțimea de {H} m, articulat în A și D, cu q = {q} kN/m pe rigla BC și cu forța F = {F} kN care împinge nodul B spre dreapta.",
+      "advancedNote": "EI este constant; deformațiile din forfecare se neglijează."
+    },
+    "load": {
+      "udlSpan": "q = {q} kN/m pe toată deschiderea",
+      "pointFromA": "F = {F} kN la {a} m de A",
+      "momentAtB": "un moment de {M} kNm în sens antiorar în B"
+    },
+    "task": {
+      "beam": "Să se determine reacțiunile și momentul încovoietor maxim.",
+      "bar": "Să se determine reacțiunile și forța axială din bara {bar}."
+    },
+    "answer": {
+      "horizontal": "Reacțiunea orizontală în {node}",
+      "vertical": "Reacțiunea verticală în {node}",
+      "fixingMoment": "Momentul de încastrare în {node}",
+      "bar": "Forța axială din bara {bar}",
+      "largestMoment": "Momentul încovoietor maxim, în valoare absolută"
+    },
+    "unit": {
+      "kN": "kN",
+      "kNm": "kNm"
+    }
+  },
+  "library": {
+    "getStarted": "Primii pași",
+    "by": "Autor: {author}",
+    "fromRepo": "Încă nu este pe npm: linia de mai sus îl instalează din GitHub.",
+    "comingToNpm": "În curând pe npm. Codul sursă este pe GitHub."
+  },
+  "solver": {
+    "tagline": "Un program de calcul cu elemente finite pentru cadre plane, scris în TypeScript.",
+    "seo": {
+      "title": "{'@'}edubeam/fem: calcul MEF al cadrelor 2D în TypeScript",
+      "description": "Un program de calcul cu elemente finite pentru grinzi, cadre și grinzi cu zăbrele plane, în TypeScript: articulații, variații de temperatură și cedări de reazem, cazuri de încărcare, eforturi exacte."
+    },
+    "run": {
+      "title": "Rulat pe această pagină",
+      "lede": "Codul din stânga, rulat în browserul tău la încărcarea paginii. Valorile din dreapta sunt cele pe care le întoarce, iar figura este desenată din același calcul de {plot}.",
+      "plusShear": "{formula}, plus forfecarea"
+    },
+    "features": {
+      "title": "Ce conține",
+      "analyses": {
+        "title": "Calcule",
+        "body": "Calcul static liniar cu oricâte cazuri de încărcare ai nevoie. Diagramele sunt exacte între noduri: nu trebuie îndesită nicio rețea de discretizare."
+      },
+      "elements": {
+        "title": "Elemente",
+        "body": "O bară Timoshenko cu două noduri în planul x–z. Articulată la ambele capete devine o bară de grindă cu zăbrele."
+      },
+      "loads": {
+        "title": "Încărcări",
+        "body": "Forțe și momente nodale, încărcări concentrate, uniform distribuite și trapezoidale pe bare, variații de temperatură, cedări de reazem."
+      },
+      "results": {
+        "title": "Rezultate",
+        "body": "N, V și M în orice punct al unei bare, deformate, forțe la capete, deplasări și reacțiuni."
+      },
+      "reference": "Toate clasele și metodele"
+    },
+    "behind": {
+      "title": "Programul de calcul din spatele EduBeam",
+      "body": "Fiecare diagramă, reacțiune și săgeată din EduBeam și fiecare figură de pe acest site este calculată de {name}.",
+      "link": "Vezi EduBeam"
+    }
+  },
+  "plot": {
+    "tagline": "Componente Vue care desenează structuri plane și rezultatele lor, în stilul figurilor de pe acest site.",
+    "seo": {
+      "title": "{'@'}edubeam/plot: diagrame de eforturi pentru Vue",
+      "description": "Componente Vue care desenează structuri plane, încărcări, reacțiuni și diagramele N, V, M ca într-un manual, pentru pagini de curs, slide-uri, exerciții și fișiere SVG."
+    },
+    "try": {
+      "title": "Încearcă",
+      "lede": "Un cadru calculat de {'@'}edubeam/fem pe această pagină. Schimbă ce se desenează; codul se actualizează și el.",
+      "labelStyle": "Stilul etichetelor",
+      "horizontal": "Orizontal",
+      "axis": "În lungul ordonatei"
+    },
+    "teaching": {
+      "title": "Făcut pentru materiale didactice",
+      "lede": "Un model scris în cod este o figură care nu se învechește: schimbi un număr, iar desenul, reacțiunile și diagramele se actualizează. Un seed alege un exercițiu nou; același seed dă mereu același exercițiu. {practice} și {exam} de pe acest site sunt făcute astfel.",
+      "practice": "Problemele de statică",
+      "exam": "generatorul de teste"
+    },
+    "uses": {
+      "exercises": {
+        "title": "Exerciții și teste",
+        "body": "Câte un exercițiu pentru fiecare student, dintr-un seed, cu baremul lui, tipărit sau ca figuri pentru LaTeX și Word."
+      },
+      "slides": {
+        "title": "Slide-uri și note de curs",
+        "body": "Figuri care se construiesc clic cu clic în Slidev, Vue sau Beamer, calculate în timp real."
+      },
+      "embedding": {
+        "title": "În documentația și aplicațiile tale",
+        "body": "Vite, VitePress sau Nuxt, randat pe server sau din JSON precalculat."
+      },
+      "print": {
+        "title": "Fișiere pentru tipar",
+        "body": "Un SVG de sine stătător, cu culori simple, pentru Word, LaTeX și Inkscape."
+      }
+    },
+    "features": {
+      "title": "Ce face",
+      "style": {
+        "title": "În stilul figurilor",
+        "body": "Bare, reazeme, încărcări, reacțiuni și diagrame hașurate ca pe acest site, cu cote în lanț și reacțiuni necunoscute denumite, pentru fișe de exerciții."
+      },
+      "readable": {
+        "title": "Lizibil la orice mărime",
+        "body": "Textul și liniile își păstrează mărimea în pixeli; valorile care s-ar suprapune sunt mutate sau omise, niciodată tăiate."
+      },
+      "exact": {
+        "title": "Exact",
+        "body": "Diagramele sunt chiar polinoamele calculate: extremele sunt găsite exact, iar salturile de sub forțele concentrate sunt desenate ca salturi."
+      },
+      "fits": {
+        "title": "Se potrivește în pagină",
+        "body": "Culori din CSS-ul tău, pentru tema deschisă și pentru cea întunecată. Se randează pe server și nu blochează niciodată derularea."
+      },
+      "components": "Toate props-urile"
+    }
+  },
+  "practice": {
+    "seo": {
+      "title": "Probleme de statică cu răspuns imediat {'|'} EduBeam",
+      "description": "Probleme de statică gratuite: grinzi, cadre și grinzi cu zăbrele, de fiecare dată cu alte valori. Determină reacțiunile și momentul maxim sau efortul dintr-o bară și verifică imediat.",
+      "ogTitle": "Probleme de statică cu răspuns imediat",
+      "ogDescription": "Grinzi, cadre și grinzi cu zăbrele, de fiecare dată cu alte valori. Verifică imediat reacțiunile și momentele, apoi vezi diagramele."
+    },
+    "title": "Exerciții de statică",
+    "lede": "De fiecare dată o problemă nouă, cu răspunsurile exacte cu care îți compari rezultatele. Rezolv-o pe hârtie, introdu ce ai obținut și apoi vezi diagramele.",
+    "codes": "Fiecare problemă are un cod, de exemplu {code}. Același cod înseamnă mereu aceeași problemă: trimite-l unui coleg sau deschide-o pe cea primită de la profesor.",
+    "announce": "Problemă nouă: {structure}, {code}.",
+    "structures": {
+      "title": "Structuri",
+      "count": "{picked} din {total}",
+      "legend": "Structurile din care alege Problemă nouă",
+      "determinate": "Static determinate",
+      "indeterminate": "Static nedeterminate",
+      "note": "Problemă nouă alege la întâmplare una dintre acestea."
+    },
+    "code": {
+      "label": "Codul problemei",
+      "placeholder": "Cod",
+      "open": "Deschide",
+      "error": "Acesta nu este un cod de problemă. Un cod este o literă urmată de un număr, de exemplu H2048."
+    },
+    "newProblem": "Problemă nouă",
+    "copyLink": "Copiază linkul",
+    "linkCopied": "Link copiat",
+    "barForces": "Eforturi în bare, pozitive la întindere",
+    "answers": {
+      "title": "Răspunsurile tale",
+      "note": "Reacțiunile sunt desenate pe problemă în sensul în care se consideră pozitive. Dacă una acționează în sens invers, răspunsul ei este negativ.",
+      "field": "{label}, {direction}, în {unit}",
+      "fieldMagnitude": "{label}, în {unit}"
+    },
+    "positive": {
+      "right": "sens pozitiv spre dreapta",
+      "up": "sens pozitiv în sus",
+      "counterClockwise": "sens pozitiv antiorar",
+      "tension": "întinderea pozitivă",
+      "magnitude": "valoare absolută"
+    },
+    "mark": {
+      "correct": "corect",
+      "exact": "răspuns exact",
+      "sign": "semn?",
+      "signLong": "valoare corectă, semn greșit",
+      "wrong": "greșit"
+    },
+    "verdict": {
+      "allRight": "Totul este corect. Diagramele sunt acum desenate pe problemă.",
+      "sign": "{right} din {total} corecte. Unde scrie {sign}, valoarea este corectă, dar sensul nu.",
+      "some": "{right} din {total} corecte. Se acceptă răspunsurile cu o abatere de cel mult 1 %.",
+      "revealed": "Răspunsurile exacte sunt lângă câmpurile tale, iar diagramele sunt desenate pe problemă."
+    },
+    "check": "Verifică",
+    "nextProblem": "Problema următoare",
+    "hint": "Indiciu",
+    "showAnswers": "Arată răspunsurile",
+    "solved": "Rezolvate pe acest dispozitiv: {n} problemă. | Rezolvate pe acest dispozitiv: {n} probleme. | Rezolvate pe acest dispozitiv: {n} de probleme.",
+    "about": {
+      "answers": {
+        "title": "De unde vin răspunsurile",
+        "body": "Fiecare problemă este calculată în browserul tău de {solver}, programul de calcul din spatele EduBeam, și desenată de {plot}. Momentul maxim este găsit exact, nu citit de pe o curbă eșantionată."
+      },
+      "signs": {
+        "title": "Semne și unități",
+        "body": "Răspunsurile sunt în kN și kNm. Încărcările acționează în jos, dacă problema nu spune altfel. Reacțiunile sunt pozitive spre dreapta, în sus și în sens antiorar, după cum arată fiecare câmp; eforturile din bare sunt pozitive la întindere. Diagramele urmează {conventions} din EduBeam.",
+        "conventions": "convențiile de semne"
+      },
+      "teachers": {
+        "title": "Pentru profesori",
+        "body": "{exam} tipărește aceste probleme ca lucrări de verificare, cu o variantă diferită pentru fiecare student și cu barem. Cu codul fiecărei probleme, studenții își pot verifica ulterior singuri răspunsurile aici.",
+        "exam": "Generatorul de teste"
+      }
+    }
+  },
+  "exam": {
+    "seo": {
+      "title": "Generator de teste de statică: lucrări de tipărit cu barem {'|'} EduBeam",
+      "description": "Creează teste de statică în browser: grinzi, cadre și grinzi cu zăbrele cu valori generate, câte o variantă pentru fiecare student, barem și figuri SVG. Gratuit.",
+      "ogTitle": "Generator de teste de statică: lucrări de tipărit cu barem",
+      "ogDescription": "Grinzi, cadre și grinzi cu zăbrele generate, câte o variantă pentru fiecare student, barem și figuri SVG. Gratuit, în browser."
+    },
+    "title": "Generator de teste",
+    "lede": "Lucrări cu probleme de statică, cu o variantă diferită pentru fiecare student și cu barem. Totul se creează în browserul tău și nu se trimite nimic nicăieri; setările sunt în adresa paginii, așa că un marcaj readuce aceleași lucrări.",
+    "defaultTitle": "Test de statică",
+    "settings": {
+      "title": "Titlu",
+      "subtitle": "Al doilea rând",
+      "subtitlePlaceholder": "Disciplina, data, timpul de lucru",
+      "problems": "Probleme",
+      "problem": "Problema {n}",
+      "determinate": "Static determinată",
+      "indeterminate": "Static nedeterminată",
+      "remove": "Elimină problema {n}",
+      "add": "Adaugă o problemă",
+      "problemsNote": "Fiecare variantă are aceste probleme, în această ordine, fiecare cu propriile valori. Cel mult {max}.",
+      "versions": "Variante",
+      "versionsNote": "Câte una pentru fiecare student: cel mult {max}.",
+      "number": "Numărul testului",
+      "newNumber": "Nou",
+      "newNumberTitle": "Valori noi pentru fiecare problemă",
+      "numberNote": "Același număr dă mereu aceleași lucrări.",
+      "onPapers": "Pe lucrări",
+      "nameLine": "Un rând pentru numele studentului",
+      "working": "Spațiu pentru rezolvare",
+      "key": "Barem la final",
+      "codes": "Codurile problemelor",
+      "codesNote": "Pentru teme: studenții își verifică răspunsurile pe {practice}, care arată rezolvarea. Pentru un test, dezactivează-le.",
+      "practicePage": "pagina de exerciții"
+    },
+    "zipNote": "Arhiva .zip conține fiecare figură și barem ca SVG, pentru LaTeX și Word, iar răspunsurile ca tabel CSV pentru corectare.",
+    "summary": {
+      "papers": "{n} lucrare | {n} lucrări | {n} de lucrări",
+      "problems": "{n} problemă | {n} probleme | {n} de probleme",
+      "plain": "{papers} cu câte {problems}",
+      "withKey": "{papers} cu câte {problems}, cu barem",
+      "withKeys": "{papers} cu câte {problems}, cu bareme"
+    },
+    "jump": {
+      "label": "Mergi la o lucrare",
+      "placeholder": "Mergi la…",
+      "papers": "Lucrări",
+      "keys": "Bareme",
+      "key": "Barem, varianta {n}"
+    },
+    "version": "Varianta {n}",
+    "download": "Descarcă .zip",
+    "downloadTitle": "Fiecare figură și barem ca SVG, pentru LaTeX și Word, iar răspunsurile ca tabel CSV pentru corectare",
+    "print": "Tipărește",
+    "printLong": "Tipărește sau salvează ca PDF",
+    "paper": {
+      "name": "Nume",
+      "rules": "Forțele în kN, momentele în kNm. Încărcările acționează în jos, dacă problema nu spune altfel. Reacțiunile sunt forțele cu care reazemele acționează asupra structurii, desenate în sensul în care se consideră pozitive: spre dreapta, în sus și în sens antiorar. Un răspuns negativ acționează în sens invers. Eforturile din bare sunt pozitive la întindere.",
+      "check": "Verifică-ți răspunsurile pe {url}"
+    },
+    "key": {
+      "title": "Barem",
+      "version": "{title}, varianta {n}",
+      "exam": "Testul {n}"
+    },
+    "tension": "întindere +",
+    "solutionFigure": "{name}: rezolvare"
+  },
+  "exerciseGenerator": {
+    "solveIt": "Rezolv-o pe pagina de exerciții",
+    "exercise": "Exercițiul",
+    "key": "Barem",
+    "solution": "Rezolvarea",
+    "caption": "Generat în browserul tău: seedul alege structura și valorile, {'@'}edubeam/fem o calculează, {'@'}edubeam/plot desenează ambele părți. Lucrări întregi se obțin cu {exam}.",
+    "exam": "generatorul de teste",
+    "newExercise": "Exercițiu nou"
+  },
+  "ui": {
+    "menu": "Meniu",
+    "darkMode": "Mod întunecat",
+    "lightMode": "Mod luminos",
+    "language": "Limbă: {name}",
+    "guideNav": "Ghid",
+    "copy": "Copiază",
+    "copied": "Copiat",
+    "copyCode": "Copiază codul",
+    "docs": "Documentație",
+    "elementSketch": "Un element în axele lui locale"
+  },
+  "beamFigure": {
+    "aria": "O grindă cu consolă încărcată cu o încărcare uniform distribuită și o forță concentrată mobilă, cu diagramele de forță tăietoare, moment încovoietor și săgeată",
+    "slider": "Poziția forței concentrate de 20 kN",
+    "loadAt": "la {x} m",
+    "hint": "Trage forța sau arată cu cursorul spre o diagramă ca s-o citești.",
+    "fromA": "la {x} m de A",
+    "reactions": "reacțiuni de {a} kN în A și {b} kN în B",
+    "sagging": "moment pozitiv maxim {m} kNm",
+    "hogging": "moment negativ pe reazemul B {m} kNm"
+  },
+  "plotTexts": {
+    "structure": "Structură",
+    "structureWith": "Structură cu {parts}",
+    "layers": {
+      "N": "diagrama de forță axială",
+      "V": "diagrama de forță tăietoare",
+      "M": "diagrama de moment încovoietor",
+      "w": "deformata",
+      "reactions": "reacțiunile",
+      "loads": "încărcările"
+    },
+    "loadHandle": "Poziția încărcării {load}",
+    "loadPosition": "la {metres} m de începutul grinzii",
+    "stack": "O grindă cu încărcările ei",
+    "stackWith": "O grindă cu încărcările ei și, dedesubt, diagramele de {rows}",
+    "rows": {
+      "N": "forță axială",
+      "V": "forță tăietoare",
+      "M": "moment încovoietor",
+      "w": "săgeată"
+    },
+    "temperatureUniform": "ΔT",
+    "temperatureGradient": "ΔTb − ΔTt"
+  }
+}

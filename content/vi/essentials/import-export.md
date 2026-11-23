@@ -75,7 +75,7 @@ Với hình minh họa không cần đến ứng dụng, chẳng hạn một bi�
 | `model=<data>` | Tải mô hình đã mã hóa và thu phóng cho vừa màn hình. **Chia sẻ mô hình** tự thêm tham số này. |
 | `viewer=1` | [Chế độ trình xem](#embed-a-read-only-viewer). |
 | `show=<letters>` | Mở với đúng các lớp hiển thị này được bật, mỗi lớp một chữ cái: `N` lực dọc, `V` lực cắt, `M` mô men uốn, `U` sơ đồ biến dạng, `R` phản lực, `L` tải trọng, `S` gối tựa, `n` nhãn nút, `e` nhãn phần tử. `show=MRLS` hiện mô men uốn, phản lực, tải trọng và gối tựa. **Hiện đúng những gì tôi thấy** tự thêm tham số này. |
-| `lang=<code>` | Đổi ngôn ngữ giao diện: `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (tiếng Trung), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`. |
+| `lang=<code>` | Đổi ngôn ngữ giao diện: `en`, `cs`, `sk`, `de`, `fr`, `es`, `pt`, `pl`, `hu`, `ro`, `el`, `cn` (tiếng Trung), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`. |
 | `panel=examples` | Mở ngay thư viện ví dụ. |
 
 Các tham số nối với nhau bằng `&`, như trong `?lang=de&viewer=1&model=…`. Sau khi đọc xong, EduBeam xóa chúng khỏi thanh địa chỉ. `lang` và `show` được giữ lại làm cài đặt của người xem, như thể họ đã tự chọn trong ứng dụng.

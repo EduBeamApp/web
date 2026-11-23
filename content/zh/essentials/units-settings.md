@@ -19,7 +19,7 @@ source: site
 
 ![设置 → 语言与区域](/screenshots/zh/settings-language.webp)
 
-**语言**：共 18 种语言；首次使用时，EduBeam 跟随浏览器的语言。小数分隔符随语言而定。链接可以为读者指定语言：加上 `?lang=`，取值为 `en`、`cs`、`de`、`fr`、`es`、`pt`、`pl`、`cn`（中文）、`th`、`uk`、`ru`、`tr`、`hi`、`vi`、`it`、`id`、`ja`、`ko` 之一。
+**语言**：共 22 种语言；首次使用时，EduBeam 跟随浏览器的语言。小数分隔符随语言而定。链接可以为读者指定语言：加上 `?lang=`，取值为 `en`、`cs`、`sk`、`de`、`fr`、`es`、`pt`、`pl`、`hu`、`ro`、`el`、`cn`（中文）、`th`、`uk`、`ru`、`tr`、`hi`、`vi`、`it`、`id`、`ja`、`ko` 之一。
 
 **数字格式**：表格和提示信息中结果数值的写法：*科学计数 (1.5 · 10⁴)*（默认）、*工程计数 (15 · 10³)* 或*自动*。见[数字格式](/zh/essentials/results#number-format)。
 

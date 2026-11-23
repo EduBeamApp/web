@@ -1,0 +1,673 @@
+{
+  "meta": {
+    "description": "Ingyenes online statikai program síkbeli szerkezetekhez – tartók, keretek és rácsos tartók számítása azonnal, a böngészőben.",
+    "imageAlt": "EduBeam, ingyenes online statikai program: az alkalmazás egy kerettel és a hajlítónyomatéki ábrájával"
+  },
+  "nav": {
+    "guide": "Útmutató",
+    "tutorials": "Oktatóanyagok",
+    "examples": "Példák",
+    "faq": "GYIK",
+    "theory": "Elmélet",
+    "openApp": "Az alkalmazás megnyitása",
+    "libraries": "Könyvtárak",
+    "practice": "Gyakorlás"
+  },
+  "docs": {
+    "onThisPage": "Ezen az oldalon",
+    "prev": "Előző oldal",
+    "next": "Következő oldal",
+    "lastUpdated": "Utolsó frissítés"
+  },
+  "footer": {
+    "copyright": "Az EduBeam közreműködői"
+  },
+  "components": {
+    "loadsTitle": "Tehertípusok előnézete",
+    "loadsLede": "Így néznek ki a gyakori tehertípusok az EduBeamben. Minden kártya élő, kiszámított modell, és pontosan így nyílik meg az alkalmazásban.",
+    "openInApp": "Megnyitás az EduBeamben",
+    "simplySupportedBeam": "Kéttámaszú tartó",
+    "udlBlurb": "Csuklós és görgős támaszú tartó 12 kN/m teherrel: a klasszikus nyíróerő- és nyomatéki ábra.",
+    "trapezoidalBlurb": "A jobb oldali támaszközön 4-ről 14 kN/m-re növekvő teher.",
+    "concentratedBlurb": "18 kN-os teher a bal oldali támaszközben, 2 m-re a támasztól, alatta nincs csomópont.",
+    "nodalBlurb": "20 kN-os teher a két támaszköz közötti csomóponton: alatta megtörik a nyomatéki ábra.",
+    "temperatureBlurb": "Hőmérséklet-különbség a keresztmetszet magassága mentén (a felső szál melegebb az alsónál) és az általa okozott görbület.",
+    "promoTitle": "Vidd a kereteidet",
+    "promoAccent": "3D-be.",
+    "promoSubtitle": "lemezek, héjak és acélszerkezeti ellenőrzések a böngészőben",
+    "promoCta": "Próbáld ki ingyen",
+    "spanLength": "Támaszköz",
+    "loadIntensity": "Teher intenzitása",
+    "loadPosition": "Teher helye",
+    "heroHint": "Mozgasd a terhet. Az ábrák követik."
+  },
+  "common": {
+    "deformedShape": "Deformált alak",
+    "normalForce": "Normálerő",
+    "shearForce": "Nyíróerő",
+    "bendingMoment": "Hajlítónyomaték"
+  },
+  "loadType": {
+    "udl": "Egyenletesen megoszló teher",
+    "trapezoidal": "Trapéz alakú teher",
+    "concentrated": "Koncentrált teher",
+    "temperature": "Hőmérsékleti teher"
+  },
+  "loads": {
+    "nodalLoad": "Csomóponti teher",
+    "temperatureDeltaTbtNoHTML": "ΔTb-ΔTt",
+    "temperatureDeltaTsNoHTML": "ΔTc"
+  },
+  "examples": {
+    "items": {
+      "welcome": {
+        "title": "Statikailag határozatlan tartó",
+        "blurb": "Statikailag határozatlan, 3 m-es tartó befogással és görgős támasszal, 10 kN/m egyenletesen megoszló teherrel."
+      },
+      "cantilever": {
+        "title": "Konzol",
+        "blurb": "4 m-es konzol 18 kN-os lefelé mutató csomóponti teherrel; jól látható a görbület és a konzolvég lehajlása."
+      },
+      "pratt": {
+        "title": "Warren-rendszerű rácsos tartó",
+        "blurb": "Egyszerű Warren-rendszerű rácsos tartó 8 kN-os csomóponti terhekkel: a rúderők eloszlása és az elmozdulások."
+      },
+      "continuous": {
+        "title": "Háromtámaszközű többtámaszú tartó",
+        "blurb": "5 + 6 + 5 m-es támaszközök megoszló, koncentrált és ismét megoszló teherrel, a görbület és a támaszok feletti elfordulások összevetéséhez."
+      },
+      "portal": {
+        "title": "Keret terhelési esete",
+        "blurb": "8 m-es gerenda 6 m-es oszlopokon, egyenletesen megoszló tetőteherrel, valamint vízszintes és függőleges sarokterhekkel az oldalirányú elmozdulás és a hajlítás vizsgálatához."
+      },
+      "temperature": {
+        "title": "Hőmérsékleti teher",
+        "blurb": "8 m-es kéttámaszú tartó egyenletes és egyenlőtlen hőmérsékleti teherrel."
+      }
+    }
+  },
+  "search": {
+    "label": "Keresés",
+    "placeholder": "Keresés a dokumentációban",
+    "noResults": "Nincs találat erre: „{query}”",
+    "shortcut": "Ctrl K"
+  },
+  "home": {
+    "seo": {
+      "title": "EduBeam: ingyenes online statikai program",
+      "description": "Ingyenes síkbeli statikai számítás a böngészőben. Rajzolj tartókat, kereteket és rácsos tartókat, add meg a terheket, és azonnal megkapod az N, V, M ábrákat, a támaszerőket és a lehajlásokat."
+    },
+    "hero": {
+      "title": "Tartószerkezetek számítása online.",
+      "lede": "Az EduBeam ingyenes statikai program tartókhoz, keretekhez és rácsos tartókhoz. A modellt a böngészőben rajzolod meg, az ábrák, a támaszerők és a lehajlások pedig minden módosítással frissülnek.",
+      "launch": "Az EduBeam indítása",
+      "guide": "Az útmutató olvasása",
+      "note": "Ingyenes és nyílt forráskódú. Nincs telepítés, nincs regisztráció."
+    },
+    "steps": {
+      "title": "A vázlattól az ábrákig négy lépésben",
+      "lede": "Abban a sorrendben, ahogy papíron is megoldanád. A gyors kezdés körülbelül tíz perc alatt végigvezet egy valódi tartó számításán.",
+      "link": "Tovább a gyors kezdéshez",
+      "items": {
+        "nodes": {
+          "label": "Csomópontok",
+          "title": "Helyezd el a csomópontokat",
+          "body": "Kattints a rácsra, vagy írd be a koordinátákat. Itt egy 6 m széles és 4 m magas keret négy sarokpontja."
+        },
+        "elements": {
+          "label": "Rudak",
+          "title": "Kösd össze őket rudakkal",
+          "body": "Kösd össze a csomópontokat gerendaelemekkel, és adj meg hozzájuk anyagot és keresztmetszetet: a könyvtárból, vagy egy általad rajzolt sokszöget."
+        },
+        "loads": {
+          "label": "Támaszok és terhek",
+          "title": "Támaszd meg és terheld meg",
+          "body": "Csuklós támasz mindkét oszloplábnál, 10 kN/m a gerendán és 15 kN-os vízszintes erő a bal felső sarokban."
+        },
+        "results": {
+          "label": "Eredmények",
+          "title": "Nézd meg az eredményeket",
+          "body": "A húzott oldalra rajzolt nyomatéki ábra és a támaszerők megjelennek, amint a keret állékony. Ezeket a számokat maga az EduBeam számolta ki, itt, ezen az oldalon."
+        }
+      }
+    },
+    "examples": {
+      "title": "Nyiss meg egy kiszámított modellt egyetlen kattintással",
+      "lede": "Mindegyiket ezen az oldalon számítja ki ugyanaz a számítómag, amelyet az alkalmazás is használ. Nyisd meg bármelyiket az EduBeamben, és módosítsd.",
+      "link": "Összes példa"
+    },
+    "verify": {
+      "title": "A tankönyvvel összevetve",
+      "lede": "Az EduBeam minden modellt végeselem-módszerrel számít. A klasszikus esetekben az utolsó számjegyig a zárt alakú megoldást adja. A jobb oldali oszlopot a böngésződ számolta ki az oldal betöltésekor.",
+      "case": "Eset",
+      "formula": "Képlet",
+      "hand": "Kézi számítás",
+      "edubeam": "EduBeam",
+      "link": "További ellenőrző esetek",
+      "steel": "Acél IPE 200: E = 210 GPa, I = 1943 cm⁴. A nyírási alakváltozást elhanyagoljuk, ahogy a zárt alakú képletek is.",
+      "cases": {
+        "ssMoment": "Kéttámaszú tartó, 12 kN/m 6 m-en: legnagyobb nyomaték",
+        "ssDeflection": "Ugyanez a tartó: legnagyobb lehajlás",
+        "cantilever": "Konzol, 18 kN a 4 m-es konzol végén: nyomaték a befogásnál",
+        "fixed": "Mindkét végén befogott tartó, 10 kN/m 6 m-en: végnyomaték",
+        "propped": "Befogott–görgős tartó, 10 kN/m 6 m-en: a görgős támasz támaszereje"
+      }
+    },
+    "teaching": {
+      "title": "Az előadóterembe készült",
+      "lede": "Tegyél egy modellt a diáidba vagy a jegyzetedbe, és minden hallgató pontosan ugyanazt nyitja meg.",
+      "link": "Tanítás az EduBeammel",
+      "slideCourse": "Statika",
+      "slideTitle": "7. előadás: Rácsos tartók",
+      "slideBody": "Warren-rendszerű rácsos tartó három 8 kN-os csomóponti teherrel. Melyik rudak húzottak?",
+      "shareLabel": "Megosztási link",
+      "copy": "Másolás",
+      "copied": "Másolva",
+      "items": {
+        "share": {
+          "title": "A modell egy link",
+          "body": "A teljes modellt maga az URL tartalmazza. Tedd bele egy feladatba, és pontosan úgy nyílik meg, ahogy hagytad – évek múlva is."
+        },
+        "embed": {
+          "title": "A diáidban",
+          "body": "A megtekintő mód a kiszámított modellt szerkesztőeszközök nélkül mutatja, diához vagy weboldalhoz igazítva."
+        },
+        "mechanism": {
+          "title": "Megmutatja, mi a hiba",
+          "body": "Ha a szerkezet mechanizmus, az EduBeam megmutatja, hogyan mozdulna el, ahelyett hogy egyszerűen megtagadná a számítást."
+        },
+        "languages": {
+          "title": "A saját nyelvükön, a saját mértékegységeikkel",
+          "body": "A hallgatók 22 nyelv egyikén dolgozhatnak, SI vagy amerikai mértékegységekkel, a tankönyvük szerinti tengelyekkel."
+        }
+      },
+      "answerTitle": "Megoldás: a rúderők",
+      "answerBody": "A húzás pozitív. Az alsó öv húzott; a felső öv és a két szélső oszlop nyomott; a belső ferde rácsrudak felváltva húzottak és nyomottak.",
+      "prevSlide": "Előző dia",
+      "nextSlide": "Következő dia"
+    },
+    "final": {
+      "title": "Rajzold meg az első tartódat.",
+      "lede": "Nyisd meg az EduBeamet, és válaszd a Rajzold meg az első tartódat lehetőséget. Egy rövid, vezetett feladat az üres képernyőtől a megtámasztott, megterhelt tartóig és az ábráiig visz.",
+      "paths": {
+        "quickStart": {
+          "title": "Gyors kezdés",
+          "body": "Modellezz egy tartót lépésről lépésre, és ellenőrizd kézi számítással. 10 perc."
+        },
+        "examples": {
+          "title": "Példák",
+          "body": "Kiszámított modellek, amelyeket megnyithatsz, módosíthatsz, és amelyekből tanulhatsz."
+        },
+        "teaching": {
+          "title": "Tanítás",
+          "body": "Megosztási linkek, diák és feladatok a kurzusodhoz."
+        }
+      }
+    },
+    "model": {
+      "title": "Mit modellezhetsz",
+      "lede": "Síkbeli szerkezetek végeselem-módszerrel számítva, a statika kurzusok támaszaival, terheivel és eredményeivel.",
+      "supports": {
+        "title": "Támaszok",
+        "items": {
+          "pin": "Csuklós",
+          "roller": "Görgős",
+          "fixed": "Befogás",
+          "slider": "Görgős befogás",
+          "angled": "Tetszőleges szögben"
+        },
+        "note": "Továbbá előírt süllyedések és elfordulások."
+      },
+      "loads": {
+        "title": "Terhek",
+        "items": {
+          "point": "Koncentrált",
+          "uniform": "Megoszló",
+          "trapezoidal": "Trapéz alakú",
+          "moment": "Nyomaték",
+          "temperature": "Hőmérsékleti"
+        },
+        "note": "Csomópontokon vagy a rúd mentén bárhol, lokális vagy globális tengelyekben."
+      },
+      "sections": {
+        "title": "Keresztmetszetek",
+        "items": {
+          "i": "I és H",
+          "hollow": "Zártszelvény",
+          "solid": "Tömör",
+          "tube": "Cső",
+          "polygon": "Saját sokszög"
+        },
+        "note": "IPE, HEA, AISC W és HSS szelvények a könyvtárból, vagy bármilyen általad rajzolt sokszög."
+      },
+      "results": {
+        "title": "Eredmények",
+        "note": "Normálerő, nyíróerő, hajlítónyomaték és deformált alak, a támaszerőkkel és bármely pont értékével."
+      },
+      "facts": {
+        "elements": {
+          "title": "Timoshenko-gerendák",
+          "body": "Nyírási alakváltozás ott, ahol számít; karcsú rudaknál az eredmények megegyeznek az Euler–Bernoulli-elmélettel."
+        },
+        "structures": {
+          "title": "Tartók, keretek, rácsos tartók",
+          "body": "Síkban, bármely rúdvégen csuklóval."
+        },
+        "sharing": {
+          "title": "Linkek és fájlok",
+          "body": "Egy teljes modell egyetlen linkben vagy projektfájlban; rajzok PNG vagy SVG formátumban, táblázatok CSV-ben."
+        },
+        "settings": {
+          "title": "22 nyelv",
+          "body": "SI vagy amerikai mértékegységek, lefelé mutató z vagy tankönyvi, felfelé mutató y tengely."
+        }
+      }
+    },
+    "heritage": {
+      "title": "Nyílt forráskód, az oktatásban gyökerezve",
+      "body": "Az EduBeam az asztali EduBeam folytatása, amely a prágai Cseh Műszaki Egyetem (ČVUT) Építőmérnöki Karának Mechanika Tanszékén született, és ma is megnyitja annak munkamenet-fájljait. A webes kiadás ingyenes és nyílt forráskódú, akárcsak a {'@'}edubeam/fem, az oldal minden száma mögött álló számítómag.",
+      "github": "Az EduBeam a GitHubon",
+      "solver": "A {'@'}edubeam/fem a GitHubon",
+      "team": "Kik készítik az EduBeamet"
+    }
+  },
+  "error": {
+    "notFoundTitle": "Az oldal nem található",
+    "notFound": "Ezen a címen nincs oldal. Lehet, hogy áthelyezték, vagy elírás van a linkben.",
+    "otherTitle": "Valami hiba történt",
+    "other": "Az oldalt nem sikerült megjeleníteni. Az újratöltés általában segít.",
+    "home": "Kezdőlap",
+    "guide": "Az útmutató olvasása",
+    "message": "A támaszok nem rögzítik a szerkezetet: még mindig képes szabadon elfordulni.",
+    "figure": "Egyetlen csuklós támaszon álló tartó, amelynek hiányzik a második támasza, és a terhe alatt szabadon elfordul a csukló körül"
+  },
+  "problems": {
+    "families": {
+      "simple": {
+        "name": "Kéttámaszú tartó",
+        "skill": "A tartó egyensúlya",
+        "hint": "A B támaszerőt az A pontra felírt nyomatéki egyenletből kapod, az A támaszerőt a függőleges vetületi egyenletből. A legnagyobb nyomaték ott van, ahol a nyíróerő előjelet vált, vagy egy koncentrált erő alatt."
+      },
+      "cantilever": {
+        "name": "Konzol",
+        "skill": "Befogás",
+        "hint": "Minden támaszerő a befogásban ébred: írd fel a függőleges vetületi egyenletet, majd a nyomatéki egyenletet az A pontra. A konzol legnagyobb nyomatéka a befogásnál van."
+      },
+      "overhang": {
+        "name": "Konzolos kéttámaszú tartó",
+        "skill": "Negatív nyomaték a támasz felett",
+        "hint": "A B támaszerőt az A pontra felírt nyomatéki egyenletből kapod. A legnagyobb nyomatékhoz két helyet kell összevetni: a támaszközben, ahol V = 0, és a B támasz felett, ahol a konzol negatív nyomatékot okoz."
+      },
+      "gerber": {
+        "name": "Gerber-tartó",
+        "skill": "Belső csukló",
+        "hint": "Kezdd a GC résszel: a G csuklón és a C görgős támaszon nyugszik, és a csukló nem visz át nyomatékot. Ezután terheld az ABG részt a csuklón átadódó erővel, és oldd meg konzolos kéttámaszú tartóként."
+      },
+      "threeHinged": {
+        "name": "Háromcsuklós keret",
+        "skill": "Vízszintes támaszerő és kulcscsukló",
+        "hint": "Az A és az E pontra felírt nyomatéki egyenletből kapod a függőleges támaszerőket. Ezután vágd el a szerkezetet a C kulcscsuklónál, ahol M = 0, és írd fel az egyik fél nyomatéki egyenletét a C pontra: ebből adódik a vízszintes támaszerő."
+      },
+      "truss": {
+        "name": "Warren-rendszerű rácsos tartó",
+        "skill": "Csomóponti és átmetsző módszer",
+        "hint": "Határozd meg a támaszerőket a teljes rácsos tartóból. Ezután vágj át három rudat, köztük a keresettet, és írj fel nyomatéki egyenletet arra a csomópontra, ahol a másik kettő találkozik; ferde rácsrúd esetén inkább a függőleges vetületi egyenletet használd."
+      },
+      "continuous": {
+        "name": "Kéttámaszközű többtámaszú tartó",
+        "skill": "Egyszeresen határozatlan",
+        "hint": "Egyszeresen határozatlan: legyen az ismeretlen a B támasz feletti nyomaték. A háromnyomatéki egyenlet, M = 0 értékkel az A és a C pontban, közvetlenül megadja; a támaszerők ezután támaszközönként adódnak."
+      },
+      "portal": {
+        "name": "Keret",
+        "skill": "Merev sarkú keret",
+        "hint": "Egyszeresen határozatlan: szüntesd meg a D pont vízszintes támaszerejét, határozd meg a D pont vízszintes elmozdulását a terhekből és az ott működő egységerőből (virtuális munka elve, M ábrákkal), majd tedd egyenlővé nullával."
+      }
+    },
+    "statement": {
+      "simple": "Kéttámaszú tartó, támaszköze {L} m, az A pontban csuklós, a B pontban görgős támasszal. Terhei: {loads}.",
+      "cantilever": "Az A pontban befogott, {L} m hosszú konzol. Teljes hosszán q = {q} kN/m megoszló teher, a B szabad végén F = {F} kN koncentrált erő hat.",
+      "cantileverMoment": "Az A pontban befogott, {L} m hosszú konzol. Teljes hosszán q = {q} kN/m megoszló teher, a B szabad végén F = {F} kN koncentrált erő és {M} kNm nagyságú, az óramutató járásával ellentétes nyomaték hat.",
+      "overhang": "Konzolos kéttámaszú tartó: az A pontban csuklós, a B pontban görgős támasz, a támaszköz {L} m, a konzol a C pontig {c} m-rel nyúlik túl. A támaszközön q = {q} kN/m megoszló teher, a C konzolvégen F = {F} kN koncentrált erő hat.",
+      "overhangAll": "Konzolos kéttámaszú tartó: az A pontban csuklós, a B pontban görgős támasz, a támaszköz {L} m, a konzol a C pontig {c} m-rel nyúlik túl. A teljes hosszon q = {q} kN/m megoszló teher, a C konzolvégen F = {F} kN koncentrált erő hat.",
+      "gerber": "Tartó az A pontban csuklós, a B és a C pontban görgős támasszal, a G belső csukló a B támaszon túl {g} m-re van: AB = {L1} m, GC = {L3} m.",
+      "gerberLoad": "Teljes hosszán q = {q} kN/m megoszló teher hat.",
+      "gerberLoadForce": "Teljes hosszán q = {q} kN/m megoszló teher, az AB szakasz közepén F = {F} kN koncentrált erő hat.",
+      "threeHinged": "A keret {L} m széles és {H} m magas, az A és az E pontban csuklós támaszon áll, a C pontban kulcscsukló van.",
+      "threeHingedWhole": "A gerenda teljes hosszán q = {q} kN/m megoszló teher hat.",
+      "threeHingedHalf": "A gerenda bal felén q = {q} kN/m megoszló teher hat.",
+      "threeHingedWholeForce": "A gerenda teljes hosszán q = {q} kN/m megoszló teher hat, a B pontot pedig F = {F} kN erő tolja jobbra.",
+      "threeHingedHalfForce": "A gerenda bal felén q = {q} kN/m megoszló teher hat, a B pontot pedig F = {F} kN erő tolja jobbra.",
+      "truss": "Warren-rendszerű rácsos tartó, amely {panels} áll; minden mező {d} m hosszú és {h} m magas. Támaszai: csuklós (A) és görgős ({end}).",
+      "panels": "{n} mezőből | {n} mezőből",
+      "trussLoadAll": "A felső öv minden csomópontjára F = {F} kN lefelé mutató erő hat.",
+      "trussLoad": "F = {F} kN lefelé mutató erő hat ezekre a csomópontokra: {joints}.",
+      "continuous": "A B támasz felett folytatólagos többtámaszú tartó, az A pontban csuklós, a B és a C pontban görgős támasszal. A támaszközök {L1} m és {L2} m, a bal oldali támaszközön q = {q} kN/m megoszló teher hat.",
+      "continuousBoth": "A B támasz felett folytatólagos többtámaszú tartó, az A pontban csuklós, a B és a C pontban görgős támasszal. A támaszközök {L1} m és {L2} m, mindkét támaszközön q = {q} kN/m megoszló teher hat.",
+      "portal": "Merev sarkú keret, {L} m széles és {H} m magas, az A és a D pontban csuklós támasszal. A BC gerendán q = {q} kN/m megoszló teher hat.",
+      "portalForce": "Merev sarkú keret, {L} m széles és {H} m magas, az A és a D pontban csuklós támasszal. A BC gerendán q = {q} kN/m megoszló teher hat, a B pontot pedig F = {F} kN erő tolja jobbra.",
+      "advancedNote": "EI állandó; a nyírási alakváltozást hanyagold el."
+    },
+    "load": {
+      "udlSpan": "q = {q} kN/m a teljes támaszközön",
+      "pointFromA": "F = {F} kN az A ponttól {a} m-re",
+      "momentAtB": "{M} kNm nagyságú, az óramutató járásával ellentétes nyomaték a B pontban"
+    },
+    "task": {
+      "beam": "Határozd meg a támaszerőket és a legnagyobb hajlítónyomatékot.",
+      "bar": "Határozd meg a támaszerőket és ennek a rúdnak a rúderejét: {bar}."
+    },
+    "answer": {
+      "horizontal": "Vízszintes támaszerő ({node})",
+      "vertical": "Függőleges támaszerő ({node})",
+      "fixingMoment": "Befogási nyomaték ({node})",
+      "bar": "Rúderő ({bar})",
+      "largestMoment": "Legnagyobb hajlítónyomaték, abszolút értékben"
+    },
+    "unit": {
+      "kN": "kN",
+      "kNm": "kNm"
+    }
+  },
+  "library": {
+    "getStarted": "Első lépések",
+    "by": "Szerző: {author}",
+    "fromRepo": "Még nincs az npm-en: a fenti sor a GitHubról telepíti.",
+    "comingToNpm": "Hamarosan az npm-en is. A forráskód a GitHubon van."
+  },
+  "solver": {
+    "tagline": "Végeselemes számítómag síkbeli keretekhez, TypeScriptben írva.",
+    "seo": {
+      "title": "{'@'}edubeam/fem: síkbeli végeselemes keretszámítás TypeScriptben",
+      "description": "Végeselemes számítómag síkbeli tartókhoz, keretekhez és rácsos tartókhoz TypeScriptben: csuklók, hőmérsékleti teher és támaszsüllyedés, terhelési esetek, pontos igénybevételek."
+    },
+    "run": {
+      "title": "Futtatás ezen az oldalon",
+      "lede": "Bal oldalon a kód, amelyet a böngésződ az oldal betöltésekor lefuttatott. Jobb oldalon az általa visszaadott értékek, az ábrát pedig ugyanebből a számításból a {plot} rajzolja.",
+      "plusShear": "{formula}, plusz nyírás"
+    },
+    "features": {
+      "title": "Mit tartalmaz",
+      "analyses": {
+        "title": "Számítások",
+        "body": "Lineáris statika tetszőleges számú terhelési esettel. Az ábrák a csomópontok között is pontosak: nincs finomítandó háló."
+      },
+      "elements": {
+        "title": "Elemek",
+        "body": "Kétcsomópontos Timoshenko-gerendaelem az x–z síkban. Mindkét végén csuklósan rácsrúdként működik."
+      },
+      "loads": {
+        "title": "Terhek",
+        "body": "Csomóponti erők és nyomatékok, koncentrált, egyenletesen megoszló és trapéz alakú terhek a rudak mentén, hőmérsékleti teher, támaszsüllyedés."
+      },
+      "results": {
+        "title": "Eredmények",
+        "body": "N, V és M a rúd bármely pontjában, deformált alak, rúdvégi erők, elmozdulások és támaszerők."
+      },
+      "reference": "Minden osztály és metódus"
+    },
+    "behind": {
+      "title": "Az EduBeam számítómagja",
+      "body": "Az EduBeam minden ábráját, támaszerejét és lehajlását, valamint ennek az oldalnak minden ábráját a {name} számítja.",
+      "link": "Az EduBeam megtekintése"
+    }
+  },
+  "plot": {
+    "tagline": "Vue-komponensek, amelyek síkbeli szerkezeteket és eredményeiket rajzolják meg, az oldal ábráinak stílusában.",
+    "seo": {
+      "title": "{'@'}edubeam/plot: statikai ábrák Vue-hoz",
+      "description": "Vue-komponensek, amelyek tankönyvi módon rajzolják meg a síkbeli szerkezeteket, a terheket, a támaszerőket és az N, V, M ábrákat kurzusoldalakhoz, diákhoz, feladatokhoz és SVG-fájlokhoz."
+    },
+    "try": {
+      "title": "Próbáld ki",
+      "lede": "Egy keret, amelyet a {'@'}edubeam/fem számított ki ezen az oldalon. Változtasd meg, mi jelenjen meg; a kód követi.",
+      "labelStyle": "Feliratok stílusa",
+      "horizontal": "Vízszintes",
+      "axis": "Az ordináta mentén"
+    },
+    "teaching": {
+      "title": "Oktatási anyagokhoz készült",
+      "lede": "A kódban megadott modell olyan ábra, amely nem évülhet el: ha megváltoztatsz egy számot, a rajz, a támaszerők és az ábrák követik. Egy seed új feladatot választ; ugyanaz a seed mindig ugyanazt adja. Az oldal {practice} és {exam} is így készül.",
+      "practice": "gyakorló feladatai",
+      "exam": "dolgozatkészítője"
+    },
+    "uses": {
+      "exercises": {
+        "title": "Feladatok és dolgozatok",
+        "body": "Hallgatónként egy feladat egy seedből, megoldókulccsal, nyomtatva vagy ábrákként LaTeX-hez és Wordhöz."
+      },
+      "slides": {
+        "title": "Diák és jegyzetek",
+        "body": "Kattintásról kattintásra felépülő ábrák Slidevben, Vue-ban vagy Beamerben, élőben számítva."
+      },
+      "embedding": {
+        "title": "Dokumentációban és alkalmazásokban",
+        "body": "Vite, VitePress vagy Nuxt, szerveroldali megjelenítéssel vagy előre kiszámított JSON-ból."
+      },
+      "print": {
+        "title": "Fájlok nyomtatáshoz",
+        "body": "Önálló SVG egyszerű színekkel Wordhöz, LaTeX-hez és Inkscape-hez."
+      }
+    },
+    "features": {
+      "title": "Mit tud",
+      "style": {
+        "title": "Az oldal ábráinak stílusában",
+        "body": "Rudak, támaszok, terhek, támaszerők és vonalkázott ábrák, mint ezen az oldalon, láncméretezéssel és megnevezett ismeretlen támaszerőkkel a feladatlapokhoz."
+      },
+      "readable": {
+        "title": "Bármilyen méretben olvasható",
+        "body": "A szöveg és a vonalak megtartják pixelméretüket; az egymást átfedő értékek odébb kerülnek vagy elmaradnak, de sosem vágódnak le."
+      },
+      "exact": {
+        "title": "Pontos",
+        "body": "Az ábrák a számítómag saját polinomjai: a szélsőértékek pontosan, a koncentrált erőknél lévő ugrások ugrásként jelennek meg."
+      },
+      "fits": {
+        "title": "Illeszkedik az oldalhoz",
+        "body": "Színek a CSS-edből, világos és sötét módban. Szerveroldalon is megjelenik, és sosem akasztja meg a görgetést."
+      },
+      "components": "Minden prop"
+    }
+  },
+  "practice": {
+    "seo": {
+      "title": "Statika gyakorló feladatok azonnali megoldással {'|'} EduBeam",
+      "description": "Ingyenes statika gyakorlás: tartók, keretek és rácsos tartók mindig új számokkal. Határozd meg a támaszerőket és a legnagyobb nyomatékot vagy rúderőt, és azonnal ellenőrizd.",
+      "ogTitle": "Statika gyakorló feladatok azonnali megoldással",
+      "ogDescription": "Tartók, keretek és rácsos tartók mindig új számokkal. Ellenőrizd azonnal a támaszerőket és a nyomatékokat, majd nézd meg az ábrákat."
+    },
+    "title": "Statika gyakorlás",
+    "lede": "Minden alkalommal új feladat, pontos megoldással, amellyel összevetheted a sajátodat. Oldd meg papíron, írd be az eredményeidet, majd nézd meg az ábrákat.",
+    "codes": "Minden feladatnak van kódja, például {code}. Ugyanaz a kód mindig ugyanazt a feladatot jelenti: oszd meg egy évfolyamtársaddal, vagy nyisd meg azt, amelyet a tanárodtól kaptál.",
+    "announce": "Új feladat: {structure}, {code}.",
+    "structures": {
+      "title": "Szerkezetek",
+      "count": "{picked}/{total}",
+      "legend": "Szerkezetek, amelyek közül az Új feladat választ",
+      "determinate": "Statikailag határozott",
+      "indeterminate": "Statikailag határozatlan",
+      "note": "Az Új feladat ezek közül választ véletlenszerűen."
+    },
+    "code": {
+      "label": "Feladatkód",
+      "placeholder": "Kód",
+      "open": "Megnyitás",
+      "error": "Ez nem feladatkód. A kód egy betűből és egy számból áll, például H2048."
+    },
+    "newProblem": "Új feladat",
+    "copyLink": "Link másolása",
+    "linkCopied": "Link másolva",
+    "barForces": "Rúderők, húzás pozitív",
+    "answers": {
+      "title": "A válaszaid",
+      "note": "A támaszerők a feladaton pozitív irányukban vannak berajzolva. Ha valamelyik ellenkező irányban hat, a válasz negatív.",
+      "field": "{label}, {direction} ({unit})",
+      "fieldMagnitude": "{label} ({unit})"
+    },
+    "positive": {
+      "right": "jobbra pozitív",
+      "up": "felfelé pozitív",
+      "counterClockwise": "az óramutató járásával ellentétesen pozitív",
+      "tension": "húzásra pozitív",
+      "magnitude": "nagyság"
+    },
+    "mark": {
+      "correct": "helyes",
+      "exact": "pontos érték",
+      "sign": "előjel?",
+      "signLong": "jó nagyság, rossz előjel",
+      "wrong": "nem helyes"
+    },
+    "verdict": {
+      "allRight": "Minden helyes. Az ábrák most már a feladaton láthatók.",
+      "sign": "Helyes válaszok: {right}/{total}. Ahol „{sign}” áll, a nagyság jó, az irány nem.",
+      "some": "Helyes válaszok: {right}/{total}. Az 1%-on belüli eltérés helyesnek számít.",
+      "revealed": "A pontos értékek a mezőid mellett vannak, az ábrák pedig a feladaton láthatók."
+    },
+    "check": "Ellenőrzés",
+    "nextProblem": "Következő feladat",
+    "hint": "Tipp",
+    "showAnswers": "Megoldás mutatása",
+    "solved": "Ezen az eszközön megoldva: {n} feladat. | Ezen az eszközön megoldva: {n} feladat.",
+    "about": {
+      "answers": {
+        "title": "Honnan származnak a megoldások",
+        "body": "Minden feladatot a böngésződben számít ki a {solver}, az EduBeam számítómagja, és a {plot} rajzolja meg. A legnagyobb nyomatékot pontosan határozza meg, nem egy mintavételezett görbéről olvassa le."
+      },
+      "signs": {
+        "title": "Előjelek és mértékegységek",
+        "body": "A válaszok kN-ban és kNm-ben értendők. A terhek lefelé hatnak, hacsak a feladat mást nem mond. A támaszerők jobbra, felfelé és az óramutató járásával ellentétesen pozitívak, ahogy az egyes mezők is mutatják; a rúderők húzásra pozitívak. Az ábrák az EduBeam {conventions} követik.",
+        "conventions": "előjelszabályait"
+      },
+      "teachers": {
+        "title": "Tanároknak",
+        "body": "A {exam} ezeket a feladatokat dolgozatként nyomtatja ki, minden hallgatónak más változatban, megoldókulccsal. A feladatkód alapján a hallgatók utólag itt ellenőrizhetik a válaszaikat.",
+        "exam": "dolgozatkészítő"
+      }
+    }
+  },
+  "exam": {
+    "seo": {
+      "title": "Statika dolgozatkészítő: nyomtatható dolgozatok megoldókulccsal {'|'} EduBeam",
+      "description": "Készíts statika dolgozatokat a böngésződben: tartók, keretek és rácsos tartók generált számokkal, minden hallgatónak külön változat, megoldókulcs és SVG-ábrák. Ingyenes.",
+      "ogTitle": "Statika dolgozatkészítő: nyomtatható dolgozatok megoldókulccsal",
+      "ogDescription": "Generált tartók, keretek és rácsos tartók, hallgatónként külön változat, megoldókulcs és SVG-ábrák. Ingyenes, a böngészőben."
+    },
+    "title": "Dolgozatkészítő",
+    "lede": "Statikai feladatokból álló dolgozatok, minden hallgatónak más változatban, megoldókulccsal. Minden a böngésződben készül, és semmi sem megy el sehova; a beállítások az oldal címében vannak, így egy könyvjelző ugyanazokat a dolgozatokat hozza vissza.",
+    "defaultTitle": "Statika zárthelyi",
+    "settings": {
+      "title": "Cím",
+      "subtitle": "Második sor",
+      "subtitlePlaceholder": "Tantárgy, dátum, rendelkezésre álló idő",
+      "problems": "Feladatok",
+      "problem": "{n}. feladat",
+      "determinate": "Statikailag határozott",
+      "indeterminate": "Statikailag határozatlan",
+      "remove": "{n}. feladat törlése",
+      "add": "Feladat hozzáadása",
+      "problemsNote": "Minden változat ezeket a feladatokat tartalmazza, ebben a sorrendben, mindegyiket saját számokkal. Legfeljebb {max}.",
+      "versions": "Változatok",
+      "versionsNote": "Hallgatónként egy: legfeljebb {max}.",
+      "number": "Dolgozat száma",
+      "newNumber": "Új",
+      "newNumberTitle": "Új számok minden feladathoz",
+      "numberNote": "Ugyanaz a szám mindig ugyanazokat a dolgozatokat adja.",
+      "onPapers": "A lapokon",
+      "nameLine": "Sor a hallgató nevének",
+      "working": "Hely a számításhoz",
+      "key": "Megoldókulcs a végén",
+      "codes": "Feladatkódok",
+      "codesNote": "Házi feladathoz: a hallgatók a {practice} ellenőrizhetik a válaszaikat, amely a megoldást is megmutatja. Zárthelyinél hagyd ki.",
+      "practicePage": "gyakorló oldalon"
+    },
+    "zipNote": "A .zip minden ábrát és megoldókulcsot SVG-ként tartalmaz LaTeX-hez és Wordhöz, a válaszokat pedig CSV-táblázatként a javításhoz.",
+    "summary": {
+      "papers": "{n} dolgozat | {n} dolgozat",
+      "problems": "{n} feladat | {n} feladat",
+      "plain": "{papers}, mindegyikben {problems}",
+      "withKey": "{papers}, mindegyikben {problems}, megoldókulccsal",
+      "withKeys": "{papers}, mindegyikben {problems}, megoldókulcsokkal"
+    },
+    "jump": {
+      "label": "Ugrás egy dolgozathoz",
+      "placeholder": "Ugrás…",
+      "papers": "Dolgozatok",
+      "keys": "Megoldókulcsok",
+      "key": "Megoldókulcs, {n}. változat"
+    },
+    "version": "{n}. változat",
+    "download": ".zip letöltése",
+    "downloadTitle": "Minden ábra és megoldókulcs SVG-ként LaTeX-hez és Wordhöz, a válaszok pedig CSV-táblázatként a javításhoz",
+    "print": "Nyomtatás",
+    "printLong": "Nyomtatás vagy mentés PDF-be",
+    "paper": {
+      "name": "Név",
+      "rules": "Az erők kN-ban, a nyomatékok kNm-ben. A terhek lefelé hatnak, hacsak a feladat mást nem mond. A támaszerők a támaszok által a szerkezetre kifejtett erők, pozitív irányukban berajzolva: jobbra, felfelé és az óramutató járásával ellentétesen. A negatív eredmény ellenkező irányú erőt jelent. A rúderők húzásra pozitívak.",
+      "check": "Ellenőrizd a válaszaidat itt: {url}"
+    },
+    "key": {
+      "title": "Megoldókulcs",
+      "version": "{title}, {n}. változat",
+      "exam": "Dolgozatszám: {n}"
+    },
+    "tension": "húzás +",
+    "solutionFigure": "{name}: megoldás"
+  },
+  "exerciseGenerator": {
+    "solveIt": "Oldd meg a gyakorló oldalon",
+    "exercise": "A feladat",
+    "key": "Megoldókulcs",
+    "solution": "A megoldása",
+    "caption": "A böngésződben generálva: a seed választja ki a szerkezetet és a számait, a {'@'}edubeam/fem kiszámítja, a {'@'}edubeam/plot pedig mindkét oldalt megrajzolja. Teljes dolgozatokat a {exam} készít.",
+    "exam": "dolgozatkészítő",
+    "newExercise": "Új feladat"
+  },
+  "ui": {
+    "menu": "Menü",
+    "darkMode": "Sötét mód",
+    "lightMode": "Világos mód",
+    "language": "Nyelv: {name}",
+    "guideNav": "Útmutató",
+    "copy": "Másolás",
+    "copied": "Másolva",
+    "copyCode": "Kód másolása",
+    "docs": "Dokumentáció",
+    "elementSketch": "Egy elem a lokális tengelyeiben"
+  },
+  "beamFigure": {
+    "aria": "Konzolos kéttámaszú tartó egyenletesen megoszló teherrel és egy mozgatható koncentrált erővel, a nyíróerő-, nyomatéki és lehajlási ábrájával",
+    "slider": "A 20 kN-os koncentrált erő helye",
+    "loadAt": "{x} m-nél",
+    "hint": "Húzd a terhet, vagy mutass egy ábrára az értékek leolvasásához.",
+    "fromA": "az A ponttól {x} m-re",
+    "reactions": "támaszerők: {a} kN az A pontban és {b} kN a B pontban",
+    "sagging": "legnagyobb pozitív nyomaték {m} kNm",
+    "hogging": "negatív nyomaték a B támasz felett {m} kNm"
+  },
+  "plotTexts": {
+    "structure": "Szerkezet",
+    "structureWith": "Szerkezet és ábrái: {parts}",
+    "layers": {
+      "N": "normálerő",
+      "V": "nyíróerő",
+      "M": "hajlítónyomaték",
+      "w": "deformált alak",
+      "reactions": "támaszerők",
+      "loads": "terhek"
+    },
+    "loadHandle": "Teher helye: {load}",
+    "loadPosition": "{metres} m-re a tartó elejétől",
+    "stack": "Tartó a terheivel",
+    "stackWith": "Tartó a terheivel, alatta: {rows}",
+    "rows": {
+      "N": "normálerő",
+      "V": "nyíróerő",
+      "M": "hajlítónyomaték",
+      "w": "lehajlás"
+    },
+    "temperatureUniform": "ΔT",
+    "temperatureGradient": "ΔTb − ΔTt"
+  }
+}

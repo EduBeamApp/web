@@ -178,7 +178,7 @@
         },
         "languages": {
           "title": "O idioma e as unidades de cada aluno",
-          "body": "Os alunos trabalham em um de 18 idiomas, em unidades SI ou americanas, com os eixos do livro que eles usam."
+          "body": "Os alunos trabalham em um de 22 idiomas, em unidades SI ou americanas, com os eixos do livro que eles usam."
         }
       },
       "answerTitle": "Resposta: os esforços nas barras",
@@ -258,7 +258,7 @@
           "body": "Um modelo inteiro num link ou num arquivo de projeto; desenhos em PNG ou SVG, tabelas em CSV."
         },
         "settings": {
-          "title": "18 idiomas",
+          "title": "22 idiomas",
           "body": "Unidades SI ou americanas; eixo z para baixo ou, como nos livros, y para cima."
         }
       }

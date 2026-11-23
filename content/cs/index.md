@@ -35,7 +35,7 @@ features:
     linkText: Výuka s EduBeamem
   - icon: 🌍
     title: Váš jazyk, vaše jednotky
-    details: 18 jazyků rozhraní, jednotky SI nebo americké a na výběr osa z mířící dolů, nebo učebnicová osa y nahoru.
+    details: 22 jazyků rozhraní, jednotky SI nebo americké a na výběr osa z mířící dolů, nebo učebnicová osa y nahoru.
     link: /cs/essentials/units-settings
     linkText: Jednotky a nastavení
   - icon: 🔗

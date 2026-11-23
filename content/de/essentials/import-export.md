@@ -75,7 +75,7 @@ Für eine Abbildung, die die App gar nicht braucht, etwa einen statischen Verlau
 | `model=<data>` | Lädt das kodierte Modell und passt es an den Bildschirm an. Wird von **Modell teilen** geschrieben. |
 | `viewer=1` | [Viewer-Modus](#embed-a-read-only-viewer). |
 | `show=<letters>` | Öffnet mit genau diesen eingeschalteten Ebenen, je ein Buchstabe: `N` Normalkraft, `V` Querkraft, `M` Biegemoment, `U` Verformungsfigur, `R` Auflagerreaktionen, `L` Lasten, `S` Lager, `n` Knotenbeschriftung, `e` Elementbeschriftung. `show=MRLS` zeigt Biegemoment, Auflagerreaktionen, Lasten und Lager. Wird von **Zeigen, was ich sehe** geschrieben. |
-| `lang=<code>` | Schaltet die Sprache der Oberfläche um: `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (Chinesisch), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`. |
+| `lang=<code>` | Schaltet die Sprache der Oberfläche um: `en`, `cs`, `sk`, `de`, `fr`, `es`, `pt`, `pl`, `hu`, `ro`, `el`, `cn` (Chinesisch), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`. |
 | `panel=examples` | Öffnet sofort die Beispielgalerie. |
 
 Parameter werden mit `&` verknüpft, etwa `?lang=de&viewer=1&model=…`. Sobald EduBeam sie gelesen hat, entfernt es sie aus der Adresszeile. `lang` und `show` bleiben als Einstellungen der Besuchenden erhalten, so als hätten sie sie selbst in der App gewählt.

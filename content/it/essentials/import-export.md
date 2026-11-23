@@ -75,7 +75,7 @@ Per una figura che non ha bisogno dell’app, ad esempio un diagramma statico in
 | `model=<data>` | Carica il modello codificato e lo adatta allo schermo. Lo scrive **Condividi modello**. |
 | `viewer=1` | [Modalità visualizzatore](#embed-a-read-only-viewer). |
 | `show=<letters>` | Apre con attivi esattamente questi livelli, una lettera ciascuno: `N` sforzo normale, `V` taglio, `M` momento flettente, `U` deformata, `R` reazioni, `L` carichi, `S` vincoli, `n` etichette dei nodi, `e` etichette degli elementi. `show=MRLS` mostra il momento flettente, le reazioni, i carichi e i vincoli. Lo scrive **Mostra ciò che vedo**. |
-| `lang=<code>` | Cambia la lingua dell’interfaccia: `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (cinese), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`. |
+| `lang=<code>` | Cambia la lingua dell’interfaccia: `en`, `cs`, `sk`, `de`, `fr`, `es`, `pt`, `pl`, `hu`, `ro`, `el`, `cn` (cinese), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`. |
 | `panel=examples` | Apre subito la galleria degli esempi. |
 
 I parametri si combinano con `&`, come in `?lang=it&viewer=1&model=…`. Dopo averli letti, EduBeam li rimuove dalla barra degli indirizzi. `lang` e `show` restano come impostazioni del visitatore, come se le avesse scelte nell’app.

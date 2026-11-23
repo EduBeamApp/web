@@ -34,7 +34,7 @@ features:
     linkText: Nauczanie z EduBeamem
   - icon: 🌍
     title: Twój język, Twoje jednostki
-    details: 18 języków interfejsu, jednostki SI lub amerykańskie a do wyboru oś z skierowana w dół albo – jak w podręcznikach – oś y w górę.
+    details: 22 języki interfejsu, jednostki SI lub amerykańskie a do wyboru oś z skierowana w dół albo – jak w podręcznikach – oś y w górę.
     link: /pl/essentials/units-settings
     linkText: Jednostki i ustawienia
   - icon: 🔗

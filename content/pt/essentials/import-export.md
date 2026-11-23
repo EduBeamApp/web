@@ -75,7 +75,7 @@ Para uma figura que não precisa do aplicativo, como um diagrama estático numa 
 | `model=<dados>` | Carrega o modelo codificado e o ajusta à tela. Gravado por **Compartilhar modelo**. |
 | `viewer=1` | [Modo de visualização](#embed-a-read-only-viewer). |
 | `show=<letras>` | Abre com exatamente estas camadas ligadas, uma letra para cada: `N` esforço normal, `V` esforço cortante, `M` momento fletor, `U` forma deformada, `R` reações, `L` cargas, `S` apoios, `n` rótulos dos nós, `e` rótulos dos elementos. `show=MRLS` mostra o momento fletor, as reações, as cargas e os apoios. Gravado por **Mostrar o que eu vejo**. |
-| `lang=<código>` | Troca o idioma da interface: `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (chinês), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`. |
+| `lang=<código>` | Troca o idioma da interface: `en`, `cs`, `sk`, `de`, `fr`, `es`, `pt`, `pl`, `hu`, `ro`, `el`, `cn` (chinês), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`. |
 | `panel=examples` | Abre de imediato a galeria de exemplos. |
 
 Os parâmetros se combinam com `&`, como em `?lang=pt&viewer=1&model=…`. Depois de lê-los, o EduBeam os remove da barra de endereço. `lang` e `show` ficam guardados como configurações do visitante, como se ele os tivesse escolhido no aplicativo.

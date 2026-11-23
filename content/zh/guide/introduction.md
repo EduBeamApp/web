@@ -68,7 +68,7 @@ x–z 平面内的梁、连续梁、刚架和桁架，由 Timoshenko 梁单元�
 手算结果立即得到验证，练习题边做边核对答案。
 :::
 :::card{title="教师" icon="lucide:presentation" to="/zh/guide/teaching"}
-在投影仪上现场演示支座、铰和荷载如何改变内力，支持 18 种语言，还能给每名学生打印一份不同的试卷。
+在投影仪上现场演示支座、铰和荷载如何改变内力，支持 22 种语言，还能给每名学生打印一份不同的试卷。
 :::
 :::card{title="工程师" icon="lucide:hard-hat" to="/zh/elements/analysis"}
 打开更大型的桌面软件之前，先快速做一次合理性校核，求解的每一步都有文档说明。
@@ -124,7 +124,7 @@ Vue 3 组件，把已求解的结构连同荷载、支反力以及 N、V、M 图
 
 ## 语言 {#languages}
 
-EduBeam 支持 18 种语言，默认使用浏览器的语言。可以在**设置 → 语言与区域**中切换，也可以在这里选择：
+EduBeam 支持 22 种语言，默认使用浏览器的语言。可以在**设置 → 语言与区域**中切换，也可以在这里选择：
 
 ::div{.chips}
 - [:icon{name="circle-flags:lang-en"} English](https://run.edubeam.app/?lang=en){target="_blank"}
@@ -134,9 +134,13 @@ EduBeam 支持 18 种语言，默认使用浏览器的语言。可以在**设置
 - [:icon{name="circle-flags:lang-es"} Español](https://run.edubeam.app/?lang=es){target="_blank"}
 - [:icon{name="circle-flags:lang-fr"} Français](https://run.edubeam.app/?lang=fr){target="_blank"}
 - [:icon{name="circle-flags:lang-it"} Italiano](https://run.edubeam.app/?lang=it){target="_blank"}
+- [:icon{name="circle-flags:lang-hu"} Magyar](https://run.edubeam.app/?lang=hu){target="_blank"}
 - [:icon{name="circle-flags:lang-pl"} Polski](https://run.edubeam.app/?lang=pl){target="_blank"}
 - [:icon{name="circle-flags:lang-pt-br"} Português](https://run.edubeam.app/?lang=pt){target="_blank"}
+- [:icon{name="circle-flags:lang-ro"} Română](https://run.edubeam.app/?lang=ro){target="_blank"}
+- [:icon{name="circle-flags:lang-sk"} Slovenčina](https://run.edubeam.app/?lang=sk){target="_blank"}
 - [:icon{name="circle-flags:lang-vi"} Tiếng Việt](https://run.edubeam.app/?lang=vi){target="_blank"}
+- [:icon{name="circle-flags:lang-el"} Ελληνικά](https://run.edubeam.app/?lang=el){target="_blank"}
 - [:icon{name="circle-flags:lang-ru"} Русский](https://run.edubeam.app/?lang=ru){target="_blank"}
 - [:icon{name="circle-flags:lang-tr"} Türkçe](https://run.edubeam.app/?lang=tr){target="_blank"}
 - [:icon{name="circle-flags:lang-uk"} Українська](https://run.edubeam.app/?lang=uk){target="_blank"}

@@ -34,7 +34,7 @@ features:
     linkText: EduBeam ile öğretim
   - icon: 🌍
     title: Sizin diliniz, sizin birimleriniz
-    details: 18 arayüz dili, SI veya ABD birimleri ve z ekseni aşağı ya da ders kitaplarındaki gibi y ekseni yukarı seçeneği.
+    details: 22 arayüz dili, SI veya ABD birimleri ve z ekseni aşağı ya da ders kitaplarındaki gibi y ekseni yukarı seçeneği.
     link: /tr/essentials/units-settings
     linkText: Birimler ve ayarlar
   - icon: 🔗

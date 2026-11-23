@@ -75,7 +75,7 @@ Do rysunku, który w ogóle nie potrzebuje aplikacji, np. statycznego wykresu 
 | `model=<data>` | Wczytuje zakodowany model i dopasowuje go do ekranu. Zapisuje go **Udostępnij model**. |
 | `viewer=1` | [Tryb podglądu](#embed-a-read-only-viewer). |
 | `show=<letters>` | Otwiera model z włączonymi dokładnie tymi warstwami, po jednej literze na warstwę: `N` siła normalna, `V` siła tnąca, `M` moment zginający, `U` postać odkształcona, `R` reakcje, `L` obciążenia, `S` podpory, `n` etykiety węzłów, `e` etykiety elementów. `show=MRLS` pokazuje moment zginający, reakcje, obciążenia i podpory. Zapisuje go **Pokaż to, co widzę**. |
-| `lang=<code>` | Przełącza język interfejsu: `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (chiński), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`. |
+| `lang=<code>` | Przełącza język interfejsu: `en`, `cs`, `sk`, `de`, `fr`, `es`, `pt`, `pl`, `hu`, `ro`, `el`, `cn` (chiński), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`. |
 | `panel=examples` | Od razu otwiera galerię przykładów. |
 
 Parametry łączy się znakiem `&`, np. `?lang=pl&viewer=1&model=…`. Po ich odczytaniu EduBeam usuwa je z paska adresu. `lang` i `show` zostają zapamiętane jako ustawienia odwiedzającego, tak jakby wybrał je w aplikacji.

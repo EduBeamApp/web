@@ -19,7 +19,7 @@ Nastavení se ukládá v prohlížeči, takže vydrží i obnovení stránky. 
 
 ![Nastavení → Jazyk a prostředí](/screenshots/cs/settings-language.webp)
 
-**Jazyk.** Rozhraní je k dispozici v 18 jazycích; při první návštěvě se EduBeam řídí jazykem prohlížeče. Desetinný oddělovač se řídí zvoleným jazykem. Jazyk můžete čtenáři určit i odkazem: přidejte parametr `?lang=` s jedním z kódů `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (čínština), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`.
+**Jazyk.** Rozhraní je k dispozici v 22 jazycích; při první návštěvě se EduBeam řídí jazykem prohlížeče. Desetinný oddělovač se řídí zvoleným jazykem. Jazyk můžete čtenáři určit i odkazem: přidejte parametr `?lang=` s jedním z kódů `en`, `cs`, `sk`, `de`, `fr`, `es`, `pt`, `pl`, `hu`, `ro`, `el`, `cn` (čínština), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`.
 
 **Formát čísel.** Určuje, jak se zapisují výsledky v tabulkách a v popiscích po najetí myší: *Vědecký* (1,5 · 10⁴, výchozí), *Inženýrský* (15 · 10³) nebo *Automatický*. Viz [Formát čísel](/cs/essentials/results#number-format).
 

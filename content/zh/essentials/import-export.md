@@ -75,7 +75,7 @@ PNG 或 SVG 用于报告，CSV 用于电子表格。
 | `model=<data>` | 加载编码的模型，并缩放到适配屏幕。由**分享模型**写入。 |
 | `viewer=1` | [查看器模式](#embed-a-read-only-viewer)。 |
 | `show=<letters>` | 打开时只开启这些图层，每层一个字母：`N` 轴力、`V` 剪力、`M` 弯矩、`U` 变形图、`R` 支反力、`L` 荷载、`S` 支座、`n` 节点标签、`e` 单元标签。`show=MRLS` 显示弯矩、支反力、荷载和支座。由**显示我看到的内容**写入。 |
-| `lang=<code>` | 切换界面语言：`en`、`cs`、`de`、`fr`、`es`、`pt`、`pl`、`cn`（中文）、`th`、`uk`、`ru`、`tr`、`hi`、`vi`、`it`、`id`、`ja`、`ko`。 |
+| `lang=<code>` | 切换界面语言：`en`、`cs`、`sk`、`de`、`fr`、`es`、`pt`、`pl`、`hu`、`ro`、`el`、`cn`（中文）、`th`、`uk`、`ru`、`tr`、`hi`、`vi`、`it`、`id`、`ja`、`ko`。 |
 | `panel=examples` | 直接打开示例库。 |
 
 多个参数用 `&` 连接，例如 `?lang=cn&viewer=1&model=…`。EduBeam 读取参数后，会把它们从地址栏中移除。`lang` 和 `show` 会保存为访问者的设置，就像访问者在应用中自己选择的一样。

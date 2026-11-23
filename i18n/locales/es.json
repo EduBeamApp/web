@@ -178,7 +178,7 @@
         },
         "languages": {
           "title": "Su idioma, sus unidades",
-          "body": "Los estudiantes trabajan en uno de 18 idiomas, en unidades SI o estadounidenses, con los ejes que usa su libro de texto."
+          "body": "Los estudiantes trabajan en uno de 22 idiomas, en unidades SI o estadounidenses, con los ejes que usa su libro de texto."
         }
       },
       "answerTitle": "Solución: los axiles de las barras",
@@ -258,7 +258,7 @@
           "body": "Un modelo entero en un enlace o en un archivo de proyecto; dibujos en PNG o SVG, tablas en CSV."
         },
         "settings": {
-          "title": "18 idiomas",
+          "title": "22 idiomas",
           "body": "Unidades SI o estadounidenses, eje z hacia abajo o y hacia arriba como en los libros."
         }
       }

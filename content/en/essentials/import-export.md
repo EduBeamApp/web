@@ -75,7 +75,7 @@ For a figure that doesn't need the app at all, such as a static diagram in a pag
 | `model=<data>` | Load the encoded model and fit it to the screen. Written by **Share model**. |
 | `viewer=1` | [Viewer mode](#embed-a-read-only-viewer). |
 | `show=<letters>` | Open with exactly these layers on, one letter each: `N` normal force, `V` shear force, `M` bending moment, `U` deformed shape, `R` reactions, `L` loads, `S` supports, `n` node labels, `e` element labels. `show=MRLS` shows the bending moment, reactions, loads and supports. Written by **Show what I see**. |
-| `lang=<code>` | Switch the interface language: `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (Chinese), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`. |
+| `lang=<code>` | Switch the interface language: `en`, `cs`, `sk`, `de`, `fr`, `es`, `pt`, `pl`, `hu`, `ro`, `el`, `cn` (Chinese), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`. |
 | `panel=examples` | Open the examples gallery straight away. |
 
 Parameters combine with `&`, as in `?lang=de&viewer=1&model=…`. EduBeam removes them from the address bar once it has read them. `lang` and `show` are kept as the visitor's settings, just as if they had chosen them in the app.

@@ -178,7 +178,7 @@
         },
         "languages": {
           "title": "La loro lingua, le loro unità",
-          "body": "Gli studenti lavorano in una delle 18 lingue, con unità SI o statunitensi e con gli assi del loro libro di testo."
+          "body": "Gli studenti lavorano in una delle 22 lingue, con unità SI o statunitensi e con gli assi del loro libro di testo."
         }
       },
       "answerTitle": "Soluzione: gli sforzi nelle aste",
@@ -258,7 +258,7 @@
           "body": "Un intero modello in un link o in un file di progetto; disegni in PNG o SVG, tabelle in CSV."
         },
         "settings": {
-          "title": "18 lingue",
+          "title": "22 lingue",
           "body": "Unità SI o statunitensi, asse z verso il basso o asse y verso l’alto come nei libri di testo."
         }
       }

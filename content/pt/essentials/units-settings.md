@@ -19,7 +19,7 @@ As configurações ficam salvas no navegador e continuam valendo quando você re
 
 ![Configurações → Idioma e localidade](/screenshots/pt/settings-language.webp)
 
-**Idioma.** São 18 idiomas; na primeira visita, o EduBeam segue o idioma do navegador. O separador decimal acompanha o idioma. Um link pode escolher o idioma para quem o abre: acrescente `?lang=` com um destes códigos: `en`, `cs`, `de`, `fr`, `es`, `pt`, `pl`, `cn` (chinês), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`.
+**Idioma.** São 22 idiomas; na primeira visita, o EduBeam segue o idioma do navegador. O separador decimal acompanha o idioma. Um link pode escolher o idioma para quem o abre: acrescente `?lang=` com um destes códigos: `en`, `cs`, `sk`, `de`, `fr`, `es`, `pt`, `pl`, `hu`, `ro`, `el`, `cn` (chinês), `th`, `uk`, `ru`, `tr`, `hi`, `vi`, `it`, `id`, `ja`, `ko`.
 
 **Formato numérico.** Como os valores dos resultados são escritos nas tabelas e nas dicas: *Científico* (1,5 · 10⁴, o padrão), *Engenharia* (15 · 10³) ou *Automático*. Veja [Formato numérico](/pt/essentials/results#number-format).
 

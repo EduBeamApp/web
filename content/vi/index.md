@@ -34,7 +34,7 @@ features:
     linkText: Giảng dạy với EduBeam
   - icon: 🌍
     title: Ngôn ngữ của bạn, đơn vị của bạn
-    details: Giao diện bằng 18 ngôn ngữ, đơn vị SI hoặc hệ Mỹ, trục z hướng xuống hoặc trục y hướng lên như trong giáo trình.
+    details: Giao diện bằng 22 ngôn ngữ, đơn vị SI hoặc hệ Mỹ, trục z hướng xuống hoặc trục y hướng lên như trong giáo trình.
     link: /vi/essentials/units-settings
     linkText: Đơn vị và cài đặt
   - icon: 🔗

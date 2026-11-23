@@ -178,7 +178,7 @@
         },
         "languages": {
           "title": "Leur langue, leurs unités",
-          "body": "Les étudiants travaillent dans l’une des 18 langues proposées, en unités SI ou américaines, avec les axes de leur manuel."
+          "body": "Les étudiants travaillent dans l’une des 22 langues proposées, en unités SI ou américaines, avec les axes de leur manuel."
         }
       },
       "answerTitle": "Réponse : les efforts dans les barres",
@@ -258,7 +258,7 @@
           "body": "Un modèle entier dans un lien ou un fichier projet ; les dessins en PNG ou SVG, les tableaux en CSV."
         },
         "settings": {
-          "title": "18 langues",
+          "title": "22 langues",
           "body": "Unités SI ou américaines, axe z vers le bas ou axe y vers le haut des manuels."
         }
       }
